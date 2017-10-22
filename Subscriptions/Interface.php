@@ -1,21 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Subscriptions Service
- * @version  2013-07-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:27:20 GMT 2015
- */
+
+namespace Amazon\MWS\Subscriptions;
 
 interface  MWSSubscriptionsService_Interface
 {
@@ -24,9 +9,9 @@ interface  MWSSubscriptionsService_Interface
      * Create Subscription
      * Create a new subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_CreateSubscription request or MWSSubscriptionsService_Model_CreateSubscription object itself
-     * @see MWSSubscriptionsService_Model_CreateSubscriptionInput
-     * @return MWSSubscriptionsService_Model_CreateSubscriptionResponse
+     * @param mixed $request array of parameters for CreateSubscription request or CreateSubscription object itself
+     * @see CreateSubscriptionInput
+     * @return CreateSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -37,9 +22,9 @@ interface  MWSSubscriptionsService_Interface
      * Delete Subscription
      * Delete a subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_DeleteSubscription request or MWSSubscriptionsService_Model_DeleteSubscription object itself
-     * @see MWSSubscriptionsService_Model_DeleteSubscriptionInput
-     * @return MWSSubscriptionsService_Model_DeleteSubscriptionResponse
+     * @param mixed $request array of parameters for DeleteSubscription request or DeleteSubscription object itself
+     * @see DeleteSubscriptionInput
+     * @return DeleteSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -50,9 +35,9 @@ interface  MWSSubscriptionsService_Interface
      * Deregister Destination
      * Delete a destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_DeregisterDestination request or MWSSubscriptionsService_Model_DeregisterDestination object itself
-     * @see MWSSubscriptionsService_Model_DeregisterDestinationInput
-     * @return MWSSubscriptionsService_Model_DeregisterDestinationResponse
+     * @param mixed $request array of parameters for DeregisterDestination request or DeregisterDestination object itself
+     * @see DeregisterDestinationInput
+     * @return DeregisterDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -63,9 +48,9 @@ interface  MWSSubscriptionsService_Interface
      * Get Subscription
      * Retrieve subscription information.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_GetSubscription request or MWSSubscriptionsService_Model_GetSubscription object itself
-     * @see MWSSubscriptionsService_Model_GetSubscriptionInput
-     * @return MWSSubscriptionsService_Model_GetSubscriptionResponse
+     * @param mixed $request array of parameters for GetSubscription request or GetSubscription object itself
+     * @see GetSubscriptionInput
+     * @return GetSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -76,9 +61,9 @@ interface  MWSSubscriptionsService_Interface
      * List Registered Destinations
      * List all the destinations for the specified seller created by the developer.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_ListRegisteredDestinations request or MWSSubscriptionsService_Model_ListRegisteredDestinations object itself
-     * @see MWSSubscriptionsService_Model_ListRegisteredDestinationsInput
-     * @return MWSSubscriptionsService_Model_ListRegisteredDestinationsResponse
+     * @param mixed $request array of parameters for ListRegisteredDestinations request or ListRegisteredDestinations object itself
+     * @see ListRegisteredDestinationsInput
+     * @return ListRegisteredDestinationsResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -89,9 +74,9 @@ interface  MWSSubscriptionsService_Interface
      * List Subscriptions
      * List all the subscriptions for the specified seller created by the current developer.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_ListSubscriptions request or MWSSubscriptionsService_Model_ListSubscriptions object itself
-     * @see MWSSubscriptionsService_Model_ListSubscriptionsInput
-     * @return MWSSubscriptionsService_Model_ListSubscriptionsResponse
+     * @param mixed $request array of parameters for ListSubscriptions request or ListSubscriptions object itself
+     * @see ListSubscriptionsInput
+     * @return ListSubscriptionsResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -102,9 +87,9 @@ interface  MWSSubscriptionsService_Interface
      * Register Destination
      * Create a new destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_RegisterDestination request or MWSSubscriptionsService_Model_RegisterDestination object itself
-     * @see MWSSubscriptionsService_Model_RegisterDestinationInput
-     * @return MWSSubscriptionsService_Model_RegisterDestinationResponse
+     * @param mixed $request array of parameters for RegisterDestination request or RegisterDestination object itself
+     * @see RegisterDestinationInput
+     * @return RegisterDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -115,9 +100,9 @@ interface  MWSSubscriptionsService_Interface
      * Send Test Notification To Destination
      * Send a test Notification to the specified destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_SendTestNotificationToDestination request or MWSSubscriptionsService_Model_SendTestNotificationToDestination object itself
-     * @see MWSSubscriptionsService_Model_SendTestNotificationToDestinationInput
-     * @return MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse
+     * @param mixed $request array of parameters for SendTestNotificationToDestination request or SendTestNotificationToDestination object itself
+     * @see SendTestNotificationToDestinationInput
+     * @return SendTestNotificationToDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -128,9 +113,9 @@ interface  MWSSubscriptionsService_Interface
      * Update Subscription
      * Update a subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_UpdateSubscription request or MWSSubscriptionsService_Model_UpdateSubscription object itself
-     * @see MWSSubscriptionsService_Model_UpdateSubscriptionInput
-     * @return MWSSubscriptionsService_Model_UpdateSubscriptionResponse
+     * @param mixed $request array of parameters for UpdateSubscription request or UpdateSubscription object itself
+     * @see UpdateSubscriptionInput
+     * @return UpdateSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
@@ -139,11 +124,11 @@ interface  MWSSubscriptionsService_Interface
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_GetServiceStatus request or MWSSubscriptionsService_Model_GetServiceStatus object itself
-     * @see MWSSubscriptionsService_Model_GetServiceStatusRequest
-     * @return MWSSubscriptionsService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */

@@ -1,62 +1,41 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\MerchantFulfillment\Model;
+
+
+/**
+ * ShipmentRequestDetails
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Merchant Fulfillment Service
- * @version  2015-06-01
- * Library Version: 2016-03-30
- * Generated: Tue Mar 29 19:00:01 UTC 2016
- */
-
-/**
- *  @see MWSMerchantFulfillmentService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSMerchantFulfillmentService_Model_ShipmentRequestDetails
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>ItemList: array</li>
- * <li>ShipFromAddress: MWSMerchantFulfillmentService_Model_Address</li>
- * <li>PackageDimensions: MWSMerchantFulfillmentService_Model_PackageDimensions</li>
- * <li>Weight: MWSMerchantFulfillmentService_Model_Weight</li>
+ * <li>ShipFromAddress: Address</li>
+ * <li>PackageDimensions: PackageDimensions</li>
+ * <li>Weight: Weight</li>
  * <li>MustArriveByDate: string</li>
  * <li>ShipDate: string</li>
- * <li>ShippingServiceOptions: MWSMerchantFulfillmentService_Model_ShippingServiceOptions</li>
+ * <li>ShippingServiceOptions: ShippingServiceOptions</li>
  *
  * </ul>
  */
 
- class MWSMerchantFulfillmentService_Model_ShipmentRequestDetails extends MWSMerchantFulfillmentService_Model {
+ class ShipmentRequestDetails extends MWSMerchantFulfillmentService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_Item'), 'ListMemberName' => 'Item'),
-    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Address'),
-    'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_PackageDimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Weight'),
+    'ItemList' => array('FieldValue' => array(), 'FieldType' => array('Item'), 'ListMemberName' => 'Item'),
+    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
+    'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'PackageDimensions'),
+    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
     'MustArriveByDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingServiceOptions' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_ShippingServiceOptions'),
+    'ShippingServiceOptions' => array('FieldValue' => null, 'FieldType' => 'ShippingServiceOptions'),
     );
     parent::__construct($data);
     }
@@ -230,7 +209,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShipFromAddress property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Address shipFromAddress
+     * @param Address shipFromAddress
      * @return this instance
      */
     public function setShipFromAddress($value)
@@ -276,7 +255,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PackageDimensions property.
      *
-     * @param MWSMerchantFulfillmentService_Model_PackageDimensions packageDimensions
+     * @param PackageDimensions packageDimensions
      * @return this instance
      */
     public function setPackageDimensions($value)
@@ -322,7 +301,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Weight property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Weight weight
+     * @param Weight weight
      * @return this instance
      */
     public function setWeight($value)
@@ -460,7 +439,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingServiceOptions property.
      *
-     * @param MWSMerchantFulfillmentService_Model_ShippingServiceOptions shippingServiceOptions
+     * @param ShippingServiceOptions shippingServiceOptions
      * @return this instance
      */
     public function setShippingServiceOptions($value)

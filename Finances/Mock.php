@@ -1,28 +1,8 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
 
-/**
- *  @see MWSFinancesService_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php'); 
+namespace Amazon\MWS\Finances;
 
-class MWSFinancesService_Mock implements MWSFinancesService_Interface
+class Mock implements FinancesInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -30,16 +10,16 @@ class MWSFinancesService_Mock implements MWSFinancesService_Interface
      * List Financial Event Groups
      * ListFinancialEventGroups can be used to find financial event groups that meet filter criteria.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventGroups request or MWSFinancesService_Model_ListFinancialEventGroups object itself
-     * @see MWSFinancesService_Model_ListFinancialEventGroups
-     * @return MWSFinancesService_Model_ListFinancialEventGroupsResponse
+     * @param mixed $request array of parameters for ListFinancialEventGroups request or ListFinancialEventGroups object itself
+     * @see ListFinancialEventGroups
+     * @return ListFinancialEventGroupsResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventGroups($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsResponse.php');
-        return MWSFinancesService_Model_ListFinancialEventGroupsResponse::fromXML($this->_invoke('ListFinancialEventGroups'));
+        return ListFinancialEventGroupsResponse::fromXML($this->_invoke('ListFinancialEventGroups'));
     }
 
     /**
@@ -48,32 +28,32 @@ class MWSFinancesService_Mock implements MWSFinancesService_Interface
      *         than returned that matched the given filter criteria, ListFinancialEventGroupsByNextToken
      *         can be used to retrieve those groups using that nextToken.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventGroupsByNextToken request or MWSFinancesService_Model_ListFinancialEventGroupsByNextToken object itself
-     * @see MWSFinancesService_Model_ListFinancialEventGroupsByNextToken
-     * @return MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse
+     * @param mixed $request array of parameters for ListFinancialEventGroupsByNextToken request or ListFinancialEventGroupsByNextToken object itself
+     * @see ListFinancialEventGroupsByNextToken
+     * @return ListFinancialEventGroupsByNextTokenResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventGroupsByNextToken($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenResponse.php');
-        return MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventGroupsByNextToken'));
+        return ListFinancialEventGroupsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventGroupsByNextToken'));
     }
 
     /**
      * List Financial Events
      * ListFinancialEvents can be used to find financial events that meet the specified criteria.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEvents request or MWSFinancesService_Model_ListFinancialEvents object itself
-     * @see MWSFinancesService_Model_ListFinancialEvents
-     * @return MWSFinancesService_Model_ListFinancialEventsResponse
+     * @param mixed $request array of parameters for ListFinancialEvents request or ListFinancialEvents object itself
+     * @see ListFinancialEvents
+     * @return ListFinancialEventsResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEvents($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventsResponse.php');
-        return MWSFinancesService_Model_ListFinancialEventsResponse::fromXML($this->_invoke('ListFinancialEvents'));
+        return ListFinancialEventsResponse::fromXML($this->_invoke('ListFinancialEvents'));
     }
 
     /**
@@ -82,32 +62,32 @@ class MWSFinancesService_Mock implements MWSFinancesService_Interface
      *         than returned that matched the given filter criteria, ListFinancialEventsByNextToken
      *         can be used to retrieve those events using that nextToken.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventsByNextToken request or MWSFinancesService_Model_ListFinancialEventsByNextToken object itself
-     * @see MWSFinancesService_Model_ListFinancialEventsByNextToken
-     * @return MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse
+     * @param mixed $request array of parameters for ListFinancialEventsByNextToken request or ListFinancialEventsByNextToken object itself
+     * @see ListFinancialEventsByNextToken
+     * @return ListFinancialEventsByNextTokenResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventsByNextToken($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenResponse.php');
-        return MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventsByNextToken'));
+        return ListFinancialEventsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventsByNextToken'));
     }
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_GetServiceStatus request or MWSFinancesService_Model_GetServiceStatus object itself
-     * @see MWSFinancesService_Model_GetServiceStatus
-     * @return MWSFinancesService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatus
+     * @return GetServiceStatusResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function getServiceStatus($request)
     {
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        return MWSFinancesService_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
+        return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
     // Private API ------------------------------------------------------------//

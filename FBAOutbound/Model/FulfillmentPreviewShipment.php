@@ -1,45 +1,24 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * FulfillmentPreviewShipment
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_FulfillmentPreviewShipment
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>EarliestShipDate: string</li>
  * <li>LatestShipDate: string</li>
  * <li>EarliestArrivalDate: string</li>
  * <li>LatestArrivalDate: string</li>
- * <li>FulfillmentPreviewItems: FBAOutboundServiceMWS_Model_FulfillmentPreviewItemList</li>
+ * <li>FulfillmentPreviewItems: FulfillmentPreviewItemList</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_FulfillmentPreviewShipment extends FBAOutboundServiceMWS_Model {
+ class FulfillmentPreviewShipment extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -48,7 +27,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'LatestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'EarliestArrivalDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'LatestArrivalDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentPreviewItemList'),
+    'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewItemList'),
     );
     parent::__construct($data);
     }
@@ -250,7 +229,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentPreviewItems property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentPreviewItemList fulfillmentPreviewItems
+     * @param FulfillmentPreviewItemList fulfillmentPreviewItems
      * @return this instance
      */
     public function setFulfillmentPreviewItems($value)

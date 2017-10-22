@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * UpdateFulfillmentOrderRequest
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderRequest
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
@@ -39,18 +18,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>DisplayableOrderDateTime: string</li>
  * <li>DisplayableOrderComment: string</li>
  * <li>ShippingSpeedCategory: string</li>
- * <li>DestinationAddress: FBAOutboundServiceMWS_Model_Address</li>
+ * <li>DestinationAddress: Address</li>
  * <li>FulfillmentAction: string</li>
  * <li>FulfillmentPolicy: string</li>
  * <li>FulfillmentMethod: string</li>
  * <li>ShipFromCountryCode: string</li>
- * <li>NotificationEmailList: FBAOutboundServiceMWS_Model_NotificationEmailList</li>
- * <li>Items: FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderItemList</li>
+ * <li>NotificationEmailList: NotificationEmailList</li>
+ * <li>Items: UpdateFulfillmentOrderItemList</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderRequest extends FBAOutboundServiceMWS_Model {
+ class UpdateFulfillmentOrderRequest extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -64,13 +43,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
     'DisplayableOrderComment' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShippingSpeedCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DestinationAddress' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Address'),
+    'DestinationAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
     'FulfillmentAction' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentPolicy' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShipFromCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NotificationEmailList' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_NotificationEmailList'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderItemList'),
+    'NotificationEmailList' => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
+    'Items' => array('FieldValue' => null, 'FieldType' => 'UpdateFulfillmentOrderItemList'),
     );
     parent::__construct($data);
     }
@@ -502,7 +481,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the DestinationAddress property.
      *
-     * @param FBAOutboundServiceMWS_Model_Address destinationAddress
+     * @param Address destinationAddress
      * @return this instance
      */
     public function setDestinationAddress($value)
@@ -732,7 +711,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NotificationEmailList property.
      *
-     * @param FBAOutboundServiceMWS_Model_NotificationEmailList notificationEmailList
+     * @param NotificationEmailList notificationEmailList
      * @return this instance
      */
     public function setNotificationEmailList($value)
@@ -778,7 +757,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Items property.
      *
-     * @param FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderItemList items
+     * @param UpdateFulfillmentOrderItemList items
      * @return this instance
      */
     public function setItems($value)

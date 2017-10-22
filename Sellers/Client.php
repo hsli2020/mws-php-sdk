@@ -1,13 +1,9 @@
 <?php
 
-/**
- *  @see MarketplaceWebServiceSellers_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Amazon\MWS\Sellers;
 
 /**
  * MarketplaceWebServiceSellers_Client is an implementation of MarketplaceWebServiceSellers
- *
  */
 class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSellers_Interface
 {
@@ -41,24 +37,24 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      *         takes no input.
      *         All API sections within the API are required to implement this operation.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceSellers_Model_GetServiceStatus request or MarketplaceWebServiceSellers_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceSellers_Model_GetServiceStatusRequest
-     * @return MarketplaceWebServiceSellers_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MarketplaceWebServiceSellers_Exception
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof GetServiceStatusRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MarketplaceWebServiceSellers_Model_GetServiceStatusRequest($request);
+            $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -84,27 +80,27 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
     /**
      * List Marketplace Participations
-     * Returns a list of marketplaces that the seller submitting the request can sell in, 
+     * Returns a list of marketplaces that the seller submitting the request can sell in,
      *         and a list of participations that include seller-specific information in that marketplace.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceSellers_Model_ListMarketplaceParticipations request or MarketplaceWebServiceSellers_Model_ListMarketplaceParticipations object itself
-     * @see MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest
-     * @return MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse
+     * @param mixed $request array of parameters for ListMarketplaceParticipations request or ListMarketplaceParticipations object itself
+     * @see ListMarketplaceParticipationsRequest
+     * @return ListMarketplaceParticipationsResponse
      *
      * @throws MarketplaceWebServiceSellers_Exception
      */
     public function listMarketplaceParticipations($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest)) {
+        if (!($request instanceof ListMarketplaceParticipationsRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsRequest.php');
-            $request = new MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsRequest($request);
+            $request = new ListMarketplaceParticipationsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListMarketplaceParticipations';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListMarketplaceParticipationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -130,28 +126,28 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
     /**
      * List Marketplace Participations By Next Token
-     * Returns the next page of marketplaces and participations using the NextToken value 
+     * Returns the next page of marketplaces and participations using the NextToken value
      *         that was returned by your previous request to either ListMarketplaceParticipations or
      *         ListMarketplaceParticipationsByNextToken.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextToken request or MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextToken object itself
-     * @see MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest
-     * @return MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResponse
+     * @param mixed $request array of parameters for ListMarketplaceParticipationsByNextToken request or ListMarketplaceParticipationsByNextToken object itself
+     * @see ListMarketplaceParticipationsByNextTokenRequest
+     * @return ListMarketplaceParticipationsByNextTokenResponse
      *
      * @throws MarketplaceWebServiceSellers_Exception
      */
     public function listMarketplaceParticipationsByNextToken($request)
     {
-        if (!($request instanceof MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest)) {
+        if (!($request instanceof ListMarketplaceParticipationsByNextTokenRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsByNextTokenRequest.php');
-            $request = new MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenRequest($request);
+            $request = new ListMarketplaceParticipationsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListMarketplaceParticipationsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsByNextTokenResponse.php');
-        $response = MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListMarketplaceParticipationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -219,7 +215,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
             $attributes = array ();
         }
 
-        $this->_config['UserAgent'] = 
+        $this->_config['UserAgent'] =
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
@@ -232,7 +228,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
-        $userAgent = 
+        $userAgent =
             $this->quoteApplicationName($applicationName)
             . '/'
             . $this->quoteApplicationVersion($applicationVersion);
@@ -439,7 +435,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
-        curl_setopt($ch, CURLOPT_HEADER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
         {
@@ -464,11 +460,11 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         curl_close($ch);
         return $this->_extractHeadersAndBody($response);
     }
-    
+
     /**
      * This method will attempt to extract the headers and body of our response.
      * We need to split the raw response string by 2 'CRLF's.  2 'CRLF's should indicate the separation of the response header
-     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in 
+     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in
      * multiple responses concatenated.  We could encounter a response like
      *
      * HTTP/1.1 100 Continue
@@ -488,22 +484,22 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
+        for ($count = 0;
+                $count < count($responseComponents) && $body == null;
                 $count++) {
-            
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
+
+            if($responseStatus != null &&
                     $this->_httpHeadersHaveContent($headers)){
-                
+
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
             require_once (dirname(__FILE__) . '/Exception.php');
@@ -513,11 +509,11 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         }
 
         return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
+                'Status' => $responseStatus,
+                'ResponseBody' => $body,
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-    
+
     /**
      * parse the status line of a header string for the proper format and
      * return the status code
@@ -527,14 +523,14 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * returns String statusCode or null if the status line can't be parsed
      */
     private function _extractHttpStatusCode($headers){
-    	$statusCode = null; 
+    	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2]; 
+            $statusCode = $matches[2];
         }
         return $statusCode;
     }
-    
+
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
@@ -544,7 +540,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
-    
+
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
@@ -569,9 +565,9 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
                 }
             }
         }
- 
+
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MarketplaceWebServiceSellers_Model_ResponseHeaderMetadata(
+        return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -600,7 +596,7 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
             $delay = (int) (pow(4, $retries) * 100000);
             usleep($delay);
             return true;
-        } 
+        }
         return false;
     }
 

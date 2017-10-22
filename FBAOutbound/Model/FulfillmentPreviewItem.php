@@ -1,45 +1,24 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * FulfillmentPreviewItem
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_FulfillmentPreviewItem
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerSKU: string</li>
  * <li>Quantity: int</li>
  * <li>SellerFulfillmentOrderItemId: string</li>
- * <li>EstimatedShippingWeight: FBAOutboundServiceMWS_Model_Weight</li>
+ * <li>EstimatedShippingWeight: Weight</li>
  * <li>ShippingWeightCalculationMethod: string</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_FulfillmentPreviewItem extends FBAOutboundServiceMWS_Model {
+ class FulfillmentPreviewItem extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -47,7 +26,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
     'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Weight'),
+    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
     'ShippingWeightCalculationMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -204,7 +183,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EstimatedShippingWeight property.
      *
-     * @param FBAOutboundServiceMWS_Model_Weight estimatedShippingWeight
+     * @param Weight estimatedShippingWeight
      * @return this instance
      */
     public function setEstimatedShippingWeight($value)

@@ -1,71 +1,53 @@
 <?php
-/** 
- *  PHP Version 5
+
+namespace Amazon\MWS\Reports;
+
+
+
+
+/**
+ * GetFeedSubmissionCountResponse
  *
- *  @category    Amazon
- *  @package     MarketplaceWebService
- *  @copyright   Copyright 2009 Amazon Technologies, Inc.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2009-01-01
- */
-/******************************************************************************* 
-
- *  Marketplace Web Service PHP5 Library
- *  Generated: Thu May 07 13:07:36 PDT 2009
- * 
- */
-
-/**
- *  @see MarketplaceWebService_Model
- */
-require_once ('MarketplaceWebService/Model.php');  
-
-    
-
-/**
- * MarketplaceWebService_Model_GetFeedSubmissionCountResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>GetFeedSubmissionCountResult: MarketplaceWebService_Model_GetFeedSubmissionCountResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ *
+ * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
- */ 
-class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
+ */
+class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionCountResponse
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
+     * Construct new GetFeedSubmissionCountResponse
+     *
+     * @param mixed $data DOMElement or Associative Array to construct from.
+     *
      * Valid properties:
      * <ul>
-     * 
-     * <li>GetFeedSubmissionCountResult: MarketplaceWebService_Model_GetFeedSubmissionCountResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     *
+     * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetFeedSubmissionCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionCountResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
-       
+
     /**
-     * Construct MarketplaceWebService_Model_GetFeedSubmissionCountResponse from XML string
-     * 
+     * Construct GetFeedSubmissionCountResponse from XML string
+     *
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse 
+     * @return GetFeedSubmissionCountResponse
      */
     public static function fromXML($xml)
     {
@@ -75,31 +57,31 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetFeedSubmissionCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetFeedSubmissionCountResponse(($response->item(0))); 
+            return new GetFeedSubmissionCountResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionCountResponse from provided XML. 
+            throw new Exception ("Unable to construct GetFeedSubmissionCountResponse from provided XML.
                                   Make sure that GetFeedSubmissionCountResponse is a root element");
         }
-          
+
     }
-    
+
     /**
      * Gets the value of the GetFeedSubmissionCountResult.
-     * 
+     *
      * @return GetFeedSubmissionCountResult GetFeedSubmissionCountResult
      */
-    public function getGetFeedSubmissionCountResult() 
+    public function getGetFeedSubmissionCountResult()
     {
         return $this->fields['GetFeedSubmissionCountResult']['FieldValue'];
     }
 
     /**
      * Sets the value of the GetFeedSubmissionCountResult.
-     * 
+     *
      * @param GetFeedSubmissionCountResult GetFeedSubmissionCountResult
      * @return void
      */
-    public function setGetFeedSubmissionCountResult($value) 
+    public function setGetFeedSubmissionCountResult($value)
     {
         $this->fields['GetFeedSubmissionCountResult']['FieldValue'] = $value;
         return;
@@ -107,9 +89,9 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * Sets the value of the GetFeedSubmissionCountResult  and returns this instance
-     * 
+     *
      * @param GetFeedSubmissionCountResult $value GetFeedSubmissionCountResult
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse instance
+     * @return GetFeedSubmissionCountResponse instance
      */
     public function withGetFeedSubmissionCountResult($value)
     {
@@ -120,7 +102,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * Checks if GetFeedSubmissionCountResult  is set
-     * 
+     *
      * @return bool true if GetFeedSubmissionCountResult property is set
      */
     public function isSetGetFeedSubmissionCountResult()
@@ -131,21 +113,21 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * Gets the value of the ResponseMetadata.
-     * 
+     *
      * @return ResponseMetadata ResponseMetadata
      */
-    public function getResponseMetadata() 
+    public function getResponseMetadata()
     {
         return $this->fields['ResponseMetadata']['FieldValue'];
     }
 
     /**
      * Sets the value of the ResponseMetadata.
-     * 
+     *
      * @param ResponseMetadata ResponseMetadata
      * @return void
      */
-    public function setResponseMetadata($value) 
+    public function setResponseMetadata($value)
     {
         $this->fields['ResponseMetadata']['FieldValue'] = $value;
         return;
@@ -153,9 +135,9 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * Sets the value of the ResponseMetadata  and returns this instance
-     * 
+     *
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse instance
+     * @return GetFeedSubmissionCountResponse instance
      */
     public function withResponseMetadata($value)
     {
@@ -166,7 +148,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * Checks if ResponseMetadata  is set
-     * 
+     *
      * @return bool true if ResponseMetadata property is set
      */
     public function isSetResponseMetadata()
@@ -179,10 +161,10 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
 
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetFeedSubmissionCountResponse xmlns=\"http://mws.amazonaws.com/doc/2009-01-01/\">";

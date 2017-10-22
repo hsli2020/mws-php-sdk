@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * CompetitivePricingType
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_CompetitivePricingType
- * 
  * Properties:
  * <ul>
- * 
- * <li>CompetitivePrices: MarketplaceWebServiceProducts_Model_CompetitivePriceList</li>
- * <li>NumberOfOfferListings: MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList</li>
- * <li>TradeInValue: MarketplaceWebServiceProducts_Model_MoneyType</li>
+ *
+ * <li>CompetitivePrices: CompetitivePriceList</li>
+ * <li>NumberOfOfferListings: NumberOfOfferListingsList</li>
+ * <li>TradeInValue: MoneyType</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends MarketplaceWebServiceProducts_Model {
+ class CompetitivePricingType extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'CompetitivePrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_CompetitivePriceList'),
-    'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList'),
-    'TradeInValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+    'CompetitivePrices' => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
+    'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
+    'TradeInValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CompetitivePrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_CompetitivePriceList competitivePrices
+     * @param CompetitivePriceList competitivePrices
      * @return this instance
      */
     public function setCompetitivePrices($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NumberOfOfferListings property.
      *
-     * @param MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList numberOfOfferListings
+     * @param NumberOfOfferListingsList numberOfOfferListings
      * @return this instance
      */
     public function setNumberOfOfferListings($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the TradeInValue property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType tradeInValue
+     * @param MoneyType tradeInValue
      * @return this instance
      */
     public function setTradeInValue($value)

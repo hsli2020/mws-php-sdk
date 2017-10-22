@@ -1,48 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+/**
+ * CreateFulfillmentOrderResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>ResponseMetadata: FBAOutboundServiceMWS_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: FBAOutboundServiceMWS_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
+ class CreateFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_ResponseHeaderMetadata'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -60,7 +38,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param FBAOutboundServiceMWS_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -106,7 +84,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param FBAOutboundServiceMWS_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -139,12 +117,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse from XML string
-     * 
+     * Construct CreateFulfillmentOrderResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse 
+     * @return CreateFulfillmentOrderResponse
      */
     public static function fromXML($xml)
     {
@@ -153,18 +131,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='CreateFulfillmentOrderResponse']");
         if ($response->length == 1) {
-            return new FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse(($response->item(0))); 
+            return new CreateFulfillmentOrderResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse from provided XML. 
+            throw new Exception ("Unable to construct CreateFulfillmentOrderResponse from provided XML.
                                   Make sure that CreateFulfillmentOrderResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<CreateFulfillmentOrderResponse xmlns=\"http://mws.amazonaws.com/FulfillmentOutboundShipment/2010-10-01/\">";

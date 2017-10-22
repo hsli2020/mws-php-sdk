@@ -1,42 +1,21 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * ASINOfferDetail
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_ASINOfferDetail
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SubCondition: string</li>
- * <li>SellerFeedbackRating: MarketplaceWebServiceProducts_Model_SellerFeedbackType</li>
- * <li>ShippingTime: MarketplaceWebServiceProducts_Model_DetailedShippingTimeType</li>
- * <li>ListingPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Points: MarketplaceWebServiceProducts_Model_Points</li>
- * <li>Shipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>ShipsFrom: MarketplaceWebServiceProducts_Model_ShipsFromType</li>
+ * <li>SellerFeedbackRating: SellerFeedbackType</li>
+ * <li>ShippingTime: DetailedShippingTimeType</li>
+ * <li>ListingPrice: MoneyType</li>
+ * <li>Points: Points</li>
+ * <li>Shipping: MoneyType</li>
+ * <li>ShipsFrom: ShipsFromType</li>
  * <li>IsFulfilledByAmazon: bool</li>
  * <li>IsBuyBoxWinner: bool</li>
  * <li>IsFeaturedMerchant: bool</li>
@@ -44,18 +23,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_ASINOfferDetail extends MarketplaceWebServiceProducts_Model {
+ class ASINOfferDetail extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'SubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerFeedbackType'),
-    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_DetailedShippingTimeType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'ShipsFrom' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShipsFromType'),
+    'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
+    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
+    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'Points' => array('FieldValue' => null, 'FieldType' => 'Points'),
+    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'ShipsFrom' => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
     'IsFulfilledByAmazon' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'IsBuyBoxWinner' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'IsFeaturedMerchant' => array('FieldValue' => null, 'FieldType' => 'bool'),
@@ -122,7 +101,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SellerFeedbackRating property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerFeedbackType sellerFeedbackRating
+     * @param SellerFeedbackType sellerFeedbackRating
      * @return this instance
      */
     public function setSellerFeedbackRating($value)
@@ -168,7 +147,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingTime property.
      *
-     * @param MarketplaceWebServiceProducts_Model_DetailedShippingTimeType shippingTime
+     * @param DetailedShippingTimeType shippingTime
      * @return this instance
      */
     public function setShippingTime($value)
@@ -214,7 +193,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listingPrice
+     * @param MoneyType listingPrice
      * @return this instance
      */
     public function setListingPrice($value)
@@ -260,7 +239,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Points property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Points points
+     * @param Points points
      * @return this instance
      */
     public function setPoints($value)
@@ -306,7 +285,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Shipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType shipping
+     * @param MoneyType shipping
      * @return this instance
      */
     public function setShipping($value)
@@ -352,7 +331,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShipsFrom property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ShipsFromType shipsFrom
+     * @param ShipsFromType shipsFrom
      * @return this instance
      */
     public function setShipsFrom($value)

@@ -1,58 +1,37 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * Summary
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_Summary
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>TotalOfferCount: int</li>
- * <li>NumberOfOffers: MarketplaceWebServiceProducts_Model_NumberOfOffers</li>
- * <li>LowestPrices: MarketplaceWebServiceProducts_Model_LowestPrices</li>
- * <li>BuyBoxPrices: MarketplaceWebServiceProducts_Model_BuyBoxPrices</li>
- * <li>ListPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>SuggestedLowerPricePlusShipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>BuyBoxEligibleOffers: MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers</li>
+ * <li>NumberOfOffers: NumberOfOffers</li>
+ * <li>LowestPrices: LowestPrices</li>
+ * <li>BuyBoxPrices: BuyBoxPrices</li>
+ * <li>ListPrice: MoneyType</li>
+ * <li>SuggestedLowerPricePlusShipping: MoneyType</li>
+ * <li>BuyBoxEligibleOffers: BuyBoxEligibleOffers</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_Summary extends MarketplaceWebServiceProducts_Model {
+ class Summary extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'TotalOfferCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOffers'),
-    'LowestPrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_LowestPrices'),
-    'BuyBoxPrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxPrices'),
-    'ListPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'BuyBoxEligibleOffers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers'),
+    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
+    'LowestPrices' => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
+    'BuyBoxPrices' => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
+    'ListPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'BuyBoxEligibleOffers' => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
     );
     parent::__construct($data);
     }
@@ -116,7 +95,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NumberOfOffers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_NumberOfOffers numberOfOffers
+     * @param NumberOfOffers numberOfOffers
      * @return this instance
      */
     public function setNumberOfOffers($value)
@@ -162,7 +141,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LowestPrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_LowestPrices lowestPrices
+     * @param LowestPrices lowestPrices
      * @return this instance
      */
     public function setLowestPrices($value)
@@ -208,7 +187,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyBoxPrices property.
      *
-     * @param MarketplaceWebServiceProducts_Model_BuyBoxPrices buyBoxPrices
+     * @param BuyBoxPrices buyBoxPrices
      * @return this instance
      */
     public function setBuyBoxPrices($value)
@@ -254,7 +233,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listPrice
+     * @param MoneyType listPrice
      * @return this instance
      */
     public function setListPrice($value)
@@ -300,7 +279,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SuggestedLowerPricePlusShipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType suggestedLowerPricePlusShipping
+     * @param MoneyType suggestedLowerPricePlusShipping
      * @return this instance
      */
     public function setSuggestedLowerPricePlusShipping($value)
@@ -346,7 +325,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyBoxEligibleOffers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_BuyBoxEligibleOffers buyBoxEligibleOffers
+     * @param BuyBoxEligibleOffers buyBoxEligibleOffers
      * @return this instance
      */
     public function setBuyBoxEligibleOffers($value)

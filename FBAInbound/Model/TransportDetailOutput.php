@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,28 +9,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_TransportDetailOutput
- * 
+ * TransportDetailOutput
+ *
  * Properties:
  * <ul>
- * 
- * <li>PartneredSmallParcelData: FBAInboundServiceMWS_Model_PartneredSmallParcelDataOutput</li>
- * <li>NonPartneredSmallParcelData: FBAInboundServiceMWS_Model_NonPartneredSmallParcelDataOutput</li>
- * <li>PartneredLtlData: FBAInboundServiceMWS_Model_PartneredLtlDataOutput</li>
- * <li>NonPartneredLtlData: FBAInboundServiceMWS_Model_NonPartneredLtlDataOutput</li>
+ *
+ * <li>PartneredSmallParcelData: PartneredSmallParcelDataOutput</li>
+ * <li>NonPartneredSmallParcelData: NonPartneredSmallParcelDataOutput</li>
+ * <li>PartneredLtlData: PartneredLtlDataOutput</li>
+ * <li>NonPartneredLtlData: NonPartneredLtlDataOutput</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_TransportDetailOutput extends FBAInboundServiceMWS_Model {
+ class TransportDetailOutput extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'PartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_PartneredSmallParcelDataOutput'),
-    'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_NonPartneredSmallParcelDataOutput'),
-    'PartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_PartneredLtlDataOutput'),
-    'NonPartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_NonPartneredLtlDataOutput'),
+    'PartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelDataOutput'),
+    'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelDataOutput'),
+    'PartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'PartneredLtlDataOutput'),
+    'NonPartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredLtlDataOutput'),
     );
     parent::__construct($data);
     }
@@ -64,7 +48,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PartneredSmallParcelData property.
      *
-     * @param FBAInboundServiceMWS_Model_PartneredSmallParcelDataOutput partneredSmallParcelData
+     * @param PartneredSmallParcelDataOutput partneredSmallParcelData
      * @return this instance
      */
     public function setPartneredSmallParcelData($value)
@@ -110,7 +94,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NonPartneredSmallParcelData property.
      *
-     * @param FBAInboundServiceMWS_Model_NonPartneredSmallParcelDataOutput nonPartneredSmallParcelData
+     * @param NonPartneredSmallParcelDataOutput nonPartneredSmallParcelData
      * @return this instance
      */
     public function setNonPartneredSmallParcelData($value)
@@ -156,7 +140,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PartneredLtlData property.
      *
-     * @param FBAInboundServiceMWS_Model_PartneredLtlDataOutput partneredLtlData
+     * @param PartneredLtlDataOutput partneredLtlData
      * @return this instance
      */
     public function setPartneredLtlData($value)
@@ -202,7 +186,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NonPartneredLtlData property.
      *
-     * @param FBAInboundServiceMWS_Model_NonPartneredLtlDataOutput nonPartneredLtlData
+     * @param NonPartneredLtlDataOutput nonPartneredLtlData
      * @return this instance
      */
     public function setNonPartneredLtlData($value)

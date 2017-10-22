@@ -1,30 +1,12 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound;
 
 /**
  * FBA Inbound Service MWS Exception provides details of errors
  * returned by FBA Inbound Service MWS service
- *
  */
-class FBAInboundServiceMWS_Exception extends Exception
-
+class FBAInboundException extends \Exception
 {
     /** @var string */
     private $_message = null;
@@ -42,7 +24,7 @@ class FBAInboundServiceMWS_Exception extends Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs FBAInboundServiceMWS_Exception
+     * Constructs Exception
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>
@@ -54,7 +36,6 @@ class FBAInboundServiceMWS_Exception extends Exception
      * <li>XML - (string) compete xml response at the time of exception</li>
      * <li>Exception - (Exception) inner exception if any</li>
      * </ul>
-     *
      */
     public function __construct(array $errorInfo = array())
     {
@@ -62,7 +43,7 @@ class FBAInboundServiceMWS_Exception extends Exception
         parent::__construct($this->_message);
         if (array_key_exists("Exception", $errorInfo)) {
             $exception = $errorInfo["Exception"];
-            if ($exception instanceof FBAInboundServiceMWS_Exception) {
+            if ($exception instanceof Exception) {
                 $this->_statusCode = $exception->getStatusCode();
                 $this->_errorCode = $exception->getErrorCode();
                 $this->_errorType = $exception->getErrorType();

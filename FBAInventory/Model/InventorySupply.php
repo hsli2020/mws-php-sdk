@@ -1,48 +1,23 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAInventory\Model;
+
+/**
+ * InventorySupply
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inventory Service MWS
- * @version  2010-10-01
- * Library Version: 2014-09-30
- * Generated: Wed May 04 17:14:15 UTC 2016
- */
-
-/**
- *  @see FBAInventoryServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAInventoryServiceMWS_Model_InventorySupply
- * 
  * Properties:
  * <ul>
- * 
  * <li>SellerSKU: string</li>
  * <li>FNSKU: string</li>
  * <li>ASIN: string</li>
  * <li>Condition: string</li>
  * <li>TotalSupplyQuantity: int</li>
  * <li>InStockSupplyQuantity: int</li>
- * <li>EarliestAvailability: FBAInventoryServiceMWS_Model_Timepoint</li>
- * <li>SupplyDetail: FBAInventoryServiceMWS_Model_InventorySupplyDetailList</li>
- *
+ * <li>EarliestAvailability: Timepoint</li>
+ * <li>SupplyDetail: InventorySupplyDetailList</li>
  * </ul>
  */
-
- class FBAInventoryServiceMWS_Model_InventorySupply extends FBAInventoryServiceMWS_Model {
+class InventorySupply extends FBAInventoryServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -53,8 +28,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Condition' => array('FieldValue' => null, 'FieldType' => 'string'),
     'TotalSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
     'InStockSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'EarliestAvailability' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_Timepoint'),
-    'SupplyDetail' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_InventorySupplyDetailList'),
+    'EarliestAvailability' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+    'SupplyDetail' => array('FieldValue' => null, 'FieldType' => 'InventorySupplyDetailList'),
     );
     parent::__construct($data);
     }
@@ -348,7 +323,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EarliestAvailability property.
      *
-     * @param FBAInventoryServiceMWS_Model_Timepoint earliestAvailability
+     * @param Timepoint earliestAvailability
      * @return this instance
      */
     public function setEarliestAvailability($value)
@@ -394,7 +369,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SupplyDetail property.
      *
-     * @param FBAInventoryServiceMWS_Model_InventorySupplyDetailList supplyDetail
+     * @param InventorySupplyDetailList supplyDetail
      * @return this instance
      */
     public function setSupplyDetail($value)

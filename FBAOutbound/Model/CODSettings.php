@@ -1,54 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+/**
+ * CODSettings
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_CODSettings
- * 
  * Properties:
  * <ul>
- * 
  * <li>IsCODRequired: bool</li>
- * <li>CODCharge: FBAOutboundServiceMWS_Model_Currency</li>
- * <li>CODChargeTax: FBAOutboundServiceMWS_Model_Currency</li>
- * <li>ShippingCharge: FBAOutboundServiceMWS_Model_Currency</li>
- * <li>ShippingChargeTax: FBAOutboundServiceMWS_Model_Currency</li>
- *
+ * <li>CODCharge: Currency</li>
+ * <li>CODChargeTax: Currency</li>
+ * <li>ShippingCharge: Currency</li>
+ * <li>ShippingChargeTax: Currency</li>
  * </ul>
  */
-
- class FBAOutboundServiceMWS_Model_CODSettings extends FBAOutboundServiceMWS_Model {
+class CODSettings extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'IsCODRequired' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'CODCharge' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Currency'),
-    'CODChargeTax' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Currency'),
-    'ShippingCharge' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Currency'),
-    'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Currency'),
+    'CODCharge' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'CODChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'ShippingCharge' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     );
     parent::__construct($data);
     }
@@ -122,7 +97,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODCharge property.
      *
-     * @param FBAOutboundServiceMWS_Model_Currency codCharge
+     * @param Currency codCharge
      * @return this instance
      */
     public function setCODCharge($value)
@@ -168,7 +143,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODChargeTax property.
      *
-     * @param FBAOutboundServiceMWS_Model_Currency codChargeTax
+     * @param Currency codChargeTax
      * @return this instance
      */
     public function setCODChargeTax($value)
@@ -214,7 +189,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingCharge property.
      *
-     * @param FBAOutboundServiceMWS_Model_Currency shippingCharge
+     * @param Currency shippingCharge
      * @return this instance
      */
     public function setShippingCharge($value)
@@ -260,7 +235,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingChargeTax property.
      *
-     * @param FBAOutboundServiceMWS_Model_Currency shippingChargeTax
+     * @param Currency shippingChargeTax
      * @return this instance
      */
     public function setShippingChargeTax($value)

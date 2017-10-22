@@ -1,21 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
+
+namespace Amazon\MWS\Products;
 
 interface  MarketplaceWebServiceProducts_Interface
 {
@@ -25,9 +10,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets competitive pricing and related information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse
+     * @param mixed $request array of parameters for GetCompetitivePricingForASIN request or GetCompetitivePricingForASIN object itself
+     * @see GetCompetitivePricingForASINRequest
+     * @return GetCompetitivePricingForASINResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -39,9 +24,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets competitive pricing and related information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU request or MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse
+     * @param mixed $request array of parameters for GetCompetitivePricingForSKU request or GetCompetitivePricingForSKU object itself
+     * @see GetCompetitivePricingForSKURequest
+     * @return GetCompetitivePricingForSKUResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -53,9 +38,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets some of the lowest prices based on the product identified by the given
      * MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse
+     * @param mixed $request array of parameters for GetLowestOfferListingsForASIN request or GetLowestOfferListingsForASIN object itself
+     * @see GetLowestOfferListingsForASINRequest
+     * @return GetLowestOfferListingsForASINResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -67,9 +52,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets some of the lowest prices based on the product identified by the given
      * SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU request or MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse
+     * @param mixed $request array of parameters for GetLowestOfferListingsForSKU request or GetLowestOfferListingsForSKU object itself
+     * @see GetLowestOfferListingsForSKURequest
+     * @return GetLowestOfferListingsForSKUResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -81,9 +66,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     * @param mixed $request array of parameters for GetLowestPricedOffersForASIN request or GetLowestPricedOffersForASIN object itself
+     * @see GetLowestPricedOffersForASINRequest
+     * @return GetLowestPricedOffersForASINResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -95,9 +80,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Retrieves the lowest priced offers based on the product identified by the given
      *     SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     * @param mixed $request array of parameters for GetLowestPricedOffersForSKU request or GetLowestPricedOffersForSKU object itself
+     * @see GetLowestPricedOffersForSKURequest
+     * @return GetLowestPricedOffersForSKUResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -109,9 +94,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * GetMatchingProduct will return the details (attributes) for the
      * given ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProduct request or MarketplaceWebServiceProducts_Model_GetMatchingProduct object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse
+     * @param mixed $request array of parameters for GetMatchingProduct request or GetMatchingProduct object itself
+     * @see GetMatchingProductRequest
+     * @return GetMatchingProductResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -123,9 +108,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * GetMatchingProduct will return the details (attributes) for the
      * given Identifier list. Identifer type can be one of [SKU|ASIN|UPC|EAN|ISBN|GTIN|JAN]
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMatchingProductForId request or MarketplaceWebServiceProducts_Model_GetMatchingProductForId object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse
+     * @param mixed $request array of parameters for GetMatchingProductForId request or GetMatchingProductForId object itself
+     * @see GetMatchingProductForIdRequest
+     * @return GetMatchingProductForIdResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -138,9 +123,9 @@ interface  MarketplaceWebServiceProducts_Interface
      *         products identified by the given
      *         ASIN/SKU list.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyFeesEstimate request or MarketplaceWebServiceProducts_Model_GetMyFeesEstimate object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyFeesEstimateRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyFeesEstimateResponse
+     * @param mixed $request array of parameters for GetMyFeesEstimate request or GetMyFeesEstimate object itself
+     * @see GetMyFeesEstimateRequest
+     * @return GetMyFeesEstimateResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -151,9 +136,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Get My Price For ASIN
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForASIN request or MarketplaceWebServiceProducts_Model_GetMyPriceForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse
+     * @param mixed $request array of parameters for GetMyPriceForASIN request or GetMyPriceForASIN object itself
+     * @see GetMyPriceForASINRequest
+     * @return GetMyPriceForASINResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -164,9 +149,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Get My Price For SKU
      * <!-- Wrong doc in current code -->
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetMyPriceForSKU request or MarketplaceWebServiceProducts_Model_GetMyPriceForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse
+     * @param mixed $request array of parameters for GetMyPriceForSKU request or GetMyPriceForSKU object itself
+     * @see GetMyPriceForSKURequest
+     * @return GetMyPriceForSKUResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -178,9 +163,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets categories information for a product identified by
      * the MarketplaceId and ASIN.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForASIN object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
+     * @param mixed $request array of parameters for GetProductCategoriesForASIN request or GetProductCategoriesForASIN object itself
+     * @see GetProductCategoriesForASINRequest
+     * @return GetProductCategoriesForASINResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -192,9 +177,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * Gets categories information for a product identified by
      * the SellerId and SKU.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU request or MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKU object itself
-     * @see MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse
+     * @param mixed $request array of parameters for GetProductCategoriesForSKU request or GetProductCategoriesForSKU object itself
+     * @see GetProductCategoriesForSKURequest
+     * @return GetProductCategoriesForSKUResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -207,9 +192,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * takes no input.
      * All API sections within the API are required to implement this operation.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetServiceStatus request or MarketplaceWebServiceProducts_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceProducts_Model_GetServiceStatusRequest
-     * @return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */
@@ -221,9 +206,9 @@ interface  MarketplaceWebServiceProducts_Interface
      * ListMatchingProducts can be used to
      * find products that match the given criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_ListMatchingProducts request or MarketplaceWebServiceProducts_Model_ListMatchingProducts object itself
-     * @see MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse
+     * @param mixed $request array of parameters for ListMatchingProducts request or ListMatchingProducts object itself
+     * @see ListMatchingProductsRequest
+     * @return ListMatchingProductsResponse
      *
      * @throws MarketplaceWebServiceProducts_Exception
      */

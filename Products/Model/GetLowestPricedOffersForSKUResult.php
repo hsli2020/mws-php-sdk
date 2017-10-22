@@ -1,47 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetLowestPricedOffersForSKUResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>MarketplaceID: string</li>
  * <li>SKU: string</li>
  * <li>ItemCondition: string</li>
  * <li>status: string</li>
- * <li>Identifier: MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier</li>
- * <li>Summary: MarketplaceWebServiceProducts_Model_Summary</li>
- * <li>Offers: MarketplaceWebServiceProducts_Model_SKUOfferDetailList</li>
+ * <li>Identifier: GetLowestPricedOffersSkuIdentifier</li>
+ * <li>Summary: Summary</li>
+ * <li>Offers: SKUOfferDetailList</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResult extends MarketplaceWebServiceProducts_Model {
+ class GetLowestPricedOffersForSKUResult extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
@@ -50,9 +29,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SKU' => array('FieldValue' => null, 'FieldType' => '@string'),
     'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
     'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'Identifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier'),
-    'Summary' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Summary'),
-    'Offers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SKUOfferDetailList'),
+    'Identifier' => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersSkuIdentifier'),
+    'Summary' => array('FieldValue' => null, 'FieldType' => 'Summary'),
+    'Offers' => array('FieldValue' => null, 'FieldType' => 'SKUOfferDetailList'),
     );
     parent::__construct($data);
     }
@@ -254,7 +233,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Identifier property.
      *
-     * @param MarketplaceWebServiceProducts_Model_GetLowestPricedOffersSkuIdentifier identifier
+     * @param GetLowestPricedOffersSkuIdentifier identifier
      * @return this instance
      */
     public function setIdentifier($value)
@@ -300,7 +279,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Summary property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Summary summary
+     * @param Summary summary
      * @return this instance
      */
     public function setSummary($value)
@@ -346,7 +325,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Offers property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SKUOfferDetailList offers
+     * @param SKUOfferDetailList offers
      * @return this instance
      */
     public function setOffers($value)

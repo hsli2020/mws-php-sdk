@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+
+/**
+ * FinancialEvents
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_FinancialEvents
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ShipmentEventList: array</li>
  * <li>RefundEventList: array</li>
  * <li>GuaranteeClaimEventList: array</li>
@@ -47,24 +26,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSFinancesService_Model_FinancialEvents extends MWSFinancesService_Model {
+ class FinancialEvents extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ShipmentEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'RefundEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'GuaranteeClaimEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'ChargebackEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'PayWithAmazonEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_PayWithAmazonEvent'), 'ListMemberName' => 'PayWithAmazonEvent'),
-    'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
-    'RetrochargeEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_RetrochargeEvent'), 'ListMemberName' => 'RetrochargeEvent'),
-    'RentalTransactionEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_RentalTransactionEvent'), 'ListMemberName' => 'RentalTransactionEvent'),
-    'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_PerformanceBondRefundEvent'), 'ListMemberName' => 'PerformanceBondRefundEvent'),
-    'ServiceFeeEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ServiceFeeEvent'), 'ListMemberName' => 'ServiceFeeEvent'),
-    'DebtRecoveryEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_DebtRecoveryEvent'), 'ListMemberName' => 'DebtRecoveryEvent'),
-    'LoanServicingEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_LoanServicingEvent'), 'ListMemberName' => 'LoanServicingEvent'),
-    'AdjustmentEventList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_AdjustmentEvent'), 'ListMemberName' => 'AdjustmentEvent'),
+    'ShipmentEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+    'RefundEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+    'GuaranteeClaimEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+    'ChargebackEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+    'PayWithAmazonEventList' => array('FieldValue' => array(), 'FieldType' => array('PayWithAmazonEvent'), 'ListMemberName' => 'PayWithAmazonEvent'),
+    'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array('SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
+    'RetrochargeEventList' => array('FieldValue' => array(), 'FieldType' => array('RetrochargeEvent'), 'ListMemberName' => 'RetrochargeEvent'),
+    'RentalTransactionEventList' => array('FieldValue' => array(), 'FieldType' => array('RentalTransactionEvent'), 'ListMemberName' => 'RentalTransactionEvent'),
+    'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array('PerformanceBondRefundEvent'), 'ListMemberName' => 'PerformanceBondRefundEvent'),
+    'ServiceFeeEventList' => array('FieldValue' => array(), 'FieldType' => array('ServiceFeeEvent'), 'ListMemberName' => 'ServiceFeeEvent'),
+    'DebtRecoveryEventList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryEvent'), 'ListMemberName' => 'DebtRecoveryEvent'),
+    'LoanServicingEventList' => array('FieldValue' => array(), 'FieldType' => array('LoanServicingEvent'), 'ListMemberName' => 'LoanServicingEvent'),
+    'AdjustmentEventList' => array('FieldValue' => array(), 'FieldType' => array('AdjustmentEvent'), 'ListMemberName' => 'AdjustmentEvent'),
     );
     parent::__construct($data);
     }

@@ -1,50 +1,28 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+/**
+ * DebtRecoveryItem
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_DebtRecoveryItem
- * 
  * Properties:
  * <ul>
- * 
- * <li>RecoveryAmount: MWSFinancesService_Model_Currency</li>
- * <li>OriginalAmount: MWSFinancesService_Model_Currency</li>
+ *
+ * <li>RecoveryAmount: Currency</li>
+ * <li>OriginalAmount: Currency</li>
  * <li>GroupBeginDate: string</li>
  * <li>GroupEndDate: string</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_DebtRecoveryItem extends MWSFinancesService_Model {
+ class DebtRecoveryItem extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'OriginalAmount' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'OriginalAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     'GroupBeginDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'GroupEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
@@ -64,7 +42,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the RecoveryAmount property.
      *
-     * @param MWSFinancesService_Model_Currency recoveryAmount
+     * @param Currency recoveryAmount
      * @return this instance
      */
     public function setRecoveryAmount($value)
@@ -110,7 +88,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OriginalAmount property.
      *
-     * @param MWSFinancesService_Model_Currency originalAmount
+     * @param Currency originalAmount
      * @return this instance
      */
     public function setOriginalAmount($value)

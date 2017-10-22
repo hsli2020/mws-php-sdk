@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Recommendations\Model;
+
+
+/**
+ * ListRecommendationsResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Recommendations Section Service
- * @version  2013-04-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:29:34 GMT 2015
- */
-
-/**
- *  @see MWSRecommendationsSectionService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSRecommendationsSectionService_Model_ListRecommendationsResult
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>InventoryRecommendations: array</li>
  * <li>SelectionRecommendations: array</li>
  * <li>PricingRecommendations: array</li>
@@ -42,18 +21,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSRecommendationsSectionService_Model_ListRecommendationsResult extends MWSRecommendationsSectionService_Model {
+ class ListRecommendationsResult extends MWSRecommendationsSectionService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'InventoryRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_InventoryRecommendation'), 'ListMemberName' => 'member'),
-    'SelectionRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_SelectionRecommendation'), 'ListMemberName' => 'member'),
-    'PricingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_PricingRecommendation'), 'ListMemberName' => 'member'),
-    'FulfillmentRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_FulfillmentRecommendation'), 'ListMemberName' => 'member'),
-    'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_ListingQualityRecommendation'), 'ListMemberName' => 'member'),
-    'GlobalSellingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
-    'AdvertisingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('MWSRecommendationsSectionService_Model_AdvertisingRecommendation'), 'ListMemberName' => 'member'),
+    'InventoryRecommendations' => array('FieldValue' => array(), 'FieldType' => array('InventoryRecommendation'), 'ListMemberName' => 'member'),
+    'SelectionRecommendations' => array('FieldValue' => array(), 'FieldType' => array('SelectionRecommendation'), 'ListMemberName' => 'member'),
+    'PricingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('PricingRecommendation'), 'ListMemberName' => 'member'),
+    'FulfillmentRecommendations' => array('FieldValue' => array(), 'FieldType' => array('FulfillmentRecommendation'), 'ListMemberName' => 'member'),
+    'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array('ListingQualityRecommendation'), 'ListMemberName' => 'member'),
+    'GlobalSellingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
+    'AdvertisingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('AdvertisingRecommendation'), 'ListMemberName' => 'member'),
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);

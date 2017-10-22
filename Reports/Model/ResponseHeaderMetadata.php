@@ -1,21 +1,8 @@
 <?php
-/** 
- *  PHP Version 5
- *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
- */
 
-class MarketplaceWebService_Model_ResponseHeaderMetadata {
+namespace Amazon\MWS\Reports;
+
+class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';
   const RESPONSE_CONTEXT = 'x-mws-response-context';
@@ -46,4 +33,3 @@ class MarketplaceWebService_Model_ResponseHeaderMetadata {
     return "RequestId: " . $this->getRequestId() . ", ResponseContext: " . $this->getResponseContext() . ", Timestamp: " . $this->getTimestamp();
   }
 }
-

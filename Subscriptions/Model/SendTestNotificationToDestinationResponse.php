@@ -1,50 +1,28 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Subscriptions\Model;
+
+/**
+ * SendTestNotificationToDestinationResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Subscriptions Service
- * @version  2013-07-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:27:20 GMT 2015
- */
-
-/**
- *  @see MWSSubscriptionsService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>SendTestNotificationToDestinationResult: MWSSubscriptionsService_Model_SendTestNotificationToDestinationResult</li>
- * <li>ResponseMetadata: MWSSubscriptionsService_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MWSSubscriptionsService_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>SendTestNotificationToDestinationResult: SendTestNotificationToDestinationResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse extends MWSSubscriptionsService_Model {
+ class SendTestNotificationToDestinationResponse extends MWSSubscriptionsService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => 'MWSSubscriptionsService_Model_SendTestNotificationToDestinationResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSSubscriptionsService_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSSubscriptionsService_Model_ResponseHeaderMetadata'),
+    'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => 'SendTestNotificationToDestinationResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +40,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SendTestNotificationToDestinationResult property.
      *
-     * @param MWSSubscriptionsService_Model_SendTestNotificationToDestinationResult sendTestNotificationToDestinationResult
+     * @param SendTestNotificationToDestinationResult sendTestNotificationToDestinationResult
      * @return this instance
      */
     public function setSendTestNotificationToDestinationResult($value)
@@ -108,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MWSSubscriptionsService_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MWSSubscriptionsService_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +165,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse from XML string
-     * 
+     * Construct SendTestNotificationToDestinationResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse 
+     * @return SendTestNotificationToDestinationResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +179,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='SendTestNotificationToDestinationResponse']");
         if ($response->length == 1) {
-            return new MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse(($response->item(0))); 
+            return new SendTestNotificationToDestinationResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse from provided XML. 
+            throw new Exception ("Unable to construct SendTestNotificationToDestinationResponse from provided XML.
                                   Make sure that SendTestNotificationToDestinationResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<SendTestNotificationToDestinationResponse xmlns=\"http://mws.amazonservices.com/schema/Subscriptions/2013-07-01\">";

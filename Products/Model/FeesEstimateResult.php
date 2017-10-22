@@ -1,52 +1,31 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * FeesEstimateResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_FeesEstimateResult
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>Status: string</li>
- * <li>FeesEstimateIdentifier: MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier</li>
- * <li>FeesEstimate: MarketplaceWebServiceProducts_Model_FeesEstimate</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ * <li>FeesEstimateIdentifier: FeesEstimateIdentifier</li>
+ * <li>FeesEstimate: FeesEstimate</li>
+ * <li>Error: Error</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_FeesEstimateResult extends MarketplaceWebServiceProducts_Model {
+ class FeesEstimateResult extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier'),
-    'FeesEstimate' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_FeesEstimate'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+    'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
+    'FeesEstimate' => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
+    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
     );
     parent::__construct($data);
     }
@@ -110,7 +89,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FeesEstimateIdentifier property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier feesEstimateIdentifier
+     * @param FeesEstimateIdentifier feesEstimateIdentifier
      * @return this instance
      */
     public function setFeesEstimateIdentifier($value)
@@ -156,7 +135,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FeesEstimate property.
      *
-     * @param MarketplaceWebServiceProducts_Model_FeesEstimate feesEstimate
+     * @param FeesEstimate feesEstimate
      * @return this instance
      */
     public function setFeesEstimate($value)
@@ -202,7 +181,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

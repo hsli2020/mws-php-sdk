@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,22 +9,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_GetTransportContentResult
- * 
+ * GetTransportContentResult
+ *
  * Properties:
  * <ul>
- * 
- * <li>TransportContent: FBAInboundServiceMWS_Model_TransportContent</li>
+ *
+ * <li>TransportContent: TransportContent</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_GetTransportContentResult extends FBAInboundServiceMWS_Model {
+ class GetTransportContentResult extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'TransportContent' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_TransportContent'),
+    'TransportContent' => array('FieldValue' => null, 'FieldType' => 'TransportContent'),
     );
     parent::__construct($data);
     }
@@ -58,7 +42,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the TransportContent property.
      *
-     * @param FBAInboundServiceMWS_Model_TransportContent transportContent
+     * @param TransportContent transportContent
      * @return this instance
      */
     public function setTransportContent($value)

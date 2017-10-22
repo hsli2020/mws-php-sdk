@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,32 +9,32 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_InboundShipmentPlan
- * 
+ * InboundShipmentPlan
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>ShipmentId: string</li>
  * <li>DestinationFulfillmentCenterId: string</li>
- * <li>ShipToAddress: FBAInboundServiceMWS_Model_Address</li>
+ * <li>ShipToAddress: Address</li>
  * <li>LabelPrepType: string</li>
- * <li>Items: FBAInboundServiceMWS_Model_InboundShipmentPlanItemList</li>
- * <li>EstimatedBoxContentsFee: FBAInboundServiceMWS_Model_BoxContentsFeeDetails</li>
+ * <li>Items: InboundShipmentPlanItemList</li>
+ * <li>EstimatedBoxContentsFee: BoxContentsFeeDetails</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_InboundShipmentPlan extends FBAInboundServiceMWS_Model {
+ class InboundShipmentPlan extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_Address'),
+    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
     'LabelPrepType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_InboundShipmentPlanItemList'),
-    'EstimatedBoxContentsFee' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_BoxContentsFeeDetails'),
+    'Items' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanItemList'),
+    'EstimatedBoxContentsFee' => array('FieldValue' => null, 'FieldType' => 'BoxContentsFeeDetails'),
     );
     parent::__construct($data);
     }
@@ -160,7 +144,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShipToAddress property.
      *
-     * @param FBAInboundServiceMWS_Model_Address shipToAddress
+     * @param Address shipToAddress
      * @return this instance
      */
     public function setShipToAddress($value)
@@ -252,7 +236,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Items property.
      *
-     * @param FBAInboundServiceMWS_Model_InboundShipmentPlanItemList items
+     * @param InboundShipmentPlanItemList items
      * @return this instance
      */
     public function setItems($value)
@@ -298,7 +282,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EstimatedBoxContentsFee property.
      *
-     * @param FBAInboundServiceMWS_Model_BoxContentsFeeDetails estimatedBoxContentsFee
+     * @param BoxContentsFeeDetails estimatedBoxContentsFee
      * @return this instance
      */
     public function setEstimatedBoxContentsFee($value)

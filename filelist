@@ -14,6 +14,7 @@ x Off-Amazon Payments
 - Sellers
 - Subscriptions
 
+namespace Amazon\MWS\FBAInbound;
 ./FBAInbound/Client.php
 ./FBAInbound/Exception.php
 ./FBAInbound/Interface.php
@@ -145,6 +146,7 @@ x Off-Amazon Payments
 ./FBAInbound/Model/VoidTransportRequestResult.php
 ./FBAInbound/Model/Weight.php
 
+namespace Amazon\MWS\FBAInventory;
 ./FBAInventory/Client.php
 ./FBAInventory/Exception.php
 ./FBAInventory/Interface.php
@@ -168,6 +170,7 @@ x Off-Amazon Payments
 ./FBAInventory/Model/SellerSkuList.php
 ./FBAInventory/Model/Timepoint.php
 
+namespace Amazon\MWS\FBAOutbound;
 ./FBAOutbound/Client.php
 ./FBAOutbound/Exception.php
 ./FBAOutbound/Interface.php
@@ -240,6 +243,7 @@ x Off-Amazon Payments
 ./FBAOutbound/Model/UpdateFulfillmentOrderResponse.php
 ./FBAOutbound/Model/Weight.php
 
+namespace Amazon\MWS\Feeds;
 ./Feeds/Client.php
 ./Feeds/Exception.php
 ./Feeds/Interface.php
@@ -319,6 +323,7 @@ x Off-Amazon Payments
 ./Feeds/Model.php
 ./Feeds/RequestType.php
 
+namespace Amazon\MWS\Finances;
 ./Finances/Client.php
 ./Finances/Exception.php
 ./Finances/Interface.php
@@ -363,6 +368,7 @@ x Off-Amazon Payments
 ./Finances/Model/ShipmentItem.php
 ./Finances/Model/SolutionProviderCreditEvent.php
 
+namespace Amazon\MWS\MerchantFulfillment;
 ./MerchantFulfillment/Client.php
 ./MerchantFulfillment/Exception.php
 ./MerchantFulfillment/Interface.php
@@ -400,6 +406,7 @@ x Off-Amazon Payments
 ./MerchantFulfillment/Model/TermsAndConditionsNotAcceptedCarrier.php
 ./MerchantFulfillment/Model/Weight.php
 
+namespace Amazon\MWS\Orders;
 ./Orders/Client.php
 ./Orders/Exception.php
 ./Orders/Interface.php
@@ -435,6 +442,7 @@ x Off-Amazon Payments
 ./Orders/Model/ResponseHeaderMetadata.php
 ./Orders/Model/ResponseMetadata.php
 
+namespace Amazon\MWS\Products;
 ./Products/Client.php
 ./Products/Exception.php
 ./Products/Interface.php
@@ -545,6 +553,7 @@ x Off-Amazon Payments
 ./Products/Model/Summary.php
 ./Products/Model.php
 
+namespace Amazon\MWS\Recommendations;
 ./Recommendations/Client.php
 ./Recommendations/Exception.php
 ./Recommendations/Interface.php
@@ -578,6 +587,7 @@ x Off-Amazon Payments
 ./Recommendations/Model/SelectionRecommendation.php
 ./Recommendations/Model/WeightMeasure.php
 
+namespace Amazon\MWS\Reports;
 ./Reports/Client.php
 ./Reports/Exception.php
 ./Reports/Interface.php
@@ -657,6 +667,7 @@ x Off-Amazon Payments
 ./Reports/Model/UpdateReportAcknowledgementsResponse.php
 ./Reports/Model/UpdateReportAcknowledgementsResult.php
 
+namespace Amazon\MWS\Sellers;
 ./Sellers/Client.php
 ./Sellers/Exception.php
 ./Sellers/Interface.php
@@ -680,6 +691,7 @@ x Off-Amazon Payments
 ./Sellers/Model/ResponseHeaderMetadata.php
 ./Sellers/Model/ResponseMetadata.php
 
+namespace Amazon\MWS\Subscriptions;
 ./Subscriptions/Client.php
 ./Subscriptions/Exception.php
 ./Subscriptions/Interface.php

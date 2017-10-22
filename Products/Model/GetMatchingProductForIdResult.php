@@ -1,37 +1,16 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetMatchingProductForIdResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult
- * 
  * Properties:
  * <ul>
- * 
- * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ *
+ * <li>Products: ProductList</li>
+ * <li>Error: Error</li>
  * <li>Id: string</li>
  * <li>IdType: string</li>
  * <li>status: string</li>
@@ -39,13 +18,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResult extends MarketplaceWebServiceProducts_Model {
+ class GetMatchingProductForIdResult extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+    'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
+    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
     'Id' => array('FieldValue' => null, 'FieldType' => '@string'),
     'IdType' => array('FieldValue' => null, 'FieldType' => '@string'),
     'status' => array('FieldValue' => null, 'FieldType' => '@string'),
@@ -66,7 +45,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Products property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ProductList products
+     * @param ProductList products
      * @return this instance
      */
     public function setProducts($value)
@@ -112,7 +91,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

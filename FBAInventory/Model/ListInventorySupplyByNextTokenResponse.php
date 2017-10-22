@@ -1,50 +1,25 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAInventory\Model;
+
+/**
+ * ListInventorySupplyByNextTokenResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inventory Service MWS
- * @version  2010-10-01
- * Library Version: 2014-09-30
- * Generated: Wed May 04 17:14:15 UTC 2016
- */
-
-/**
- *  @see FBAInventoryServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>ListInventorySupplyByNextTokenResult: FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResult</li>
- * <li>ResponseMetadata: FBAInventoryServiceMWS_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: FBAInventoryServiceMWS_Model_ResponseHeaderMetadata</li>
- *
+ * <li>ListInventorySupplyByNextTokenResult: ListInventorySupplyByNextTokenResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  * </ul>
  */
-
- class FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Model {
+class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ListInventorySupplyByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_ResponseHeaderMetadata'),
+    'ListInventorySupplyByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyByNextTokenResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +37,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListInventorySupplyByNextTokenResult property.
      *
-     * @param FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResult listInventorySupplyByNextTokenResult
+     * @param ListInventorySupplyByNextTokenResult listInventorySupplyByNextTokenResult
      * @return this instance
      */
     public function setListInventorySupplyByNextTokenResult($value)
@@ -108,7 +83,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param FBAInventoryServiceMWS_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +129,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param FBAInventoryServiceMWS_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +162,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse from XML string
-     * 
+     * Construct ListInventorySupplyByNextTokenResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse 
+     * @return ListInventorySupplyByNextTokenResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +176,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListInventorySupplyByNextTokenResponse']");
         if ($response->length == 1) {
-            return new FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse(($response->item(0))); 
+            return new ListInventorySupplyByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse from provided XML. 
+            throw new Exception ("Unable to construct ListInventorySupplyByNextTokenResponse from provided XML.
                                   Make sure that ListInventorySupplyByNextTokenResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<ListInventorySupplyByNextTokenResponse xmlns=\"http://mws.amazonaws.com/FulfillmentInventory/2010-10-01/\">";

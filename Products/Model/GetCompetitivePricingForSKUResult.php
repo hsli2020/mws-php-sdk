@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetCompetitivePricingForSKUResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResult
- * 
  * Properties:
  * <ul>
- * 
- * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
- * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ *
+ * <li>Product: Product</li>
+ * <li>Error: Error</li>
  * <li>SellerSKU: string</li>
  * <li>status: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResult extends MarketplaceWebServiceProducts_Model {
+ class GetCompetitivePricingForSKUResult extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Product' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+    'Product' => array('FieldValue' => null, 'FieldType' => 'Product'),
+    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
     'SellerSKU' => array('FieldValue' => null, 'FieldType' => '@string'),
     'status' => array('FieldValue' => null, 'FieldType' => '@string'),
     );
@@ -64,7 +43,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Product property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Product product
+     * @param Product product
      * @return this instance
      */
     public function setProduct($value)
@@ -110,7 +89,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Error property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @param Error error
      * @return this instance
      */
     public function setError($value)

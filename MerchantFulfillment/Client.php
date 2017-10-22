@@ -1,26 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Merchant Fulfillment Service
- * @version  2015-06-01
- * Library Version: 2016-03-30
- * Generated: Tue Mar 29 19:00:01 UTC 2016
- */
 
-/**
- *  @see MWSMerchantFulfillmentService_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Amazon\MWS\MerchantFulfillment;
 
 /**
  * MWSMerchantFulfillmentService_Client is an implementation of MWSMerchantFulfillmentService
@@ -57,24 +37,24 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
      * Cancels an existing shipment.  This will only succeed if the cancellation window has not passed and if the shipment
      *     has not been cancelled already.
      *
-     * @param mixed $request array of parameters for MWSMerchantFulfillmentService_Model_CancelShipment request or MWSMerchantFulfillmentService_Model_CancelShipment object itself
-     * @see MWSMerchantFulfillmentService_Model_CancelShipmentRequest
-     * @return MWSMerchantFulfillmentService_Model_CancelShipmentResponse
+     * @param mixed $request array of parameters for CancelShipment request or CancelShipment object itself
+     * @see CancelShipmentRequest
+     * @return CancelShipmentResponse
      *
      * @throws MWSMerchantFulfillmentService_Exception
      */
     public function cancelShipment($request)
     {
-        if (!($request instanceof MWSMerchantFulfillmentService_Model_CancelShipmentRequest)) {
+        if (!($request instanceof CancelShipmentRequest)) {
             require_once (dirname(__FILE__) . '/Model/CancelShipmentRequest.php');
-            $request = new MWSMerchantFulfillmentService_Model_CancelShipmentRequest($request);
+            $request = new CancelShipmentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CancelShipment';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/CancelShipmentResponse.php');
-        $response = MWSMerchantFulfillmentService_Model_CancelShipmentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = CancelShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -106,24 +86,24 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
      * Creates a shipment for the shipping information specified.  Purchases and returns a label for the specified
      *     shipping service or shipping service offering.
      *
-     * @param mixed $request array of parameters for MWSMerchantFulfillmentService_Model_CreateShipment request or MWSMerchantFulfillmentService_Model_CreateShipment object itself
-     * @see MWSMerchantFulfillmentService_Model_CreateShipmentRequest
-     * @return MWSMerchantFulfillmentService_Model_CreateShipmentResponse
+     * @param mixed $request array of parameters for CreateShipment request or CreateShipment object itself
+     * @see CreateShipmentRequest
+     * @return CreateShipmentResponse
      *
      * @throws MWSMerchantFulfillmentService_Exception
      */
     public function createShipment($request)
     {
-        if (!($request instanceof MWSMerchantFulfillmentService_Model_CreateShipmentRequest)) {
+        if (!($request instanceof CreateShipmentRequest)) {
             require_once (dirname(__FILE__) . '/Model/CreateShipmentRequest.php');
-            $request = new MWSMerchantFulfillmentService_Model_CreateShipmentRequest($request);
+            $request = new CreateShipmentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CreateShipment';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/CreateShipmentResponse.php');
-        $response = MWSMerchantFulfillmentService_Model_CreateShipmentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = CreateShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -165,24 +145,24 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
      *     ShippingServiceOfferingId can be used in CreateShipment to specify the shipping service or the specific offer
      *     respectively.  A list of carriers that are temporarily unavailable is also returned.
      *
-     * @param mixed $request array of parameters for MWSMerchantFulfillmentService_Model_GetEligibleShippingServices request or MWSMerchantFulfillmentService_Model_GetEligibleShippingServices object itself
-     * @see MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesRequest
-     * @return MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse
+     * @param mixed $request array of parameters for GetEligibleShippingServices request or GetEligibleShippingServices object itself
+     * @see GetEligibleShippingServicesRequest
+     * @return GetEligibleShippingServicesResponse
      *
      * @throws MWSMerchantFulfillmentService_Exception
      */
     public function getEligibleShippingServices($request)
     {
-        if (!($request instanceof MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesRequest)) {
+        if (!($request instanceof GetEligibleShippingServicesRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetEligibleShippingServicesRequest.php');
-            $request = new MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesRequest($request);
+            $request = new GetEligibleShippingServicesRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetEligibleShippingServices';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetEligibleShippingServicesResponse.php');
-        $response = MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetEligibleShippingServicesResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -216,24 +196,24 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
      * Get Shipment
      * Gets an existing shipment, including the label status, label content, shipping information.
      *
-     * @param mixed $request array of parameters for MWSMerchantFulfillmentService_Model_GetShipment request or MWSMerchantFulfillmentService_Model_GetShipment object itself
-     * @see MWSMerchantFulfillmentService_Model_GetShipmentRequest
-     * @return MWSMerchantFulfillmentService_Model_GetShipmentResponse
+     * @param mixed $request array of parameters for GetShipment request or GetShipment object itself
+     * @see GetShipmentRequest
+     * @return GetShipmentResponse
      *
      * @throws MWSMerchantFulfillmentService_Exception
      */
     public function getShipment($request)
     {
-        if (!($request instanceof MWSMerchantFulfillmentService_Model_GetShipmentRequest)) {
+        if (!($request instanceof GetShipmentRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetShipmentRequest.php');
-            $request = new MWSMerchantFulfillmentService_Model_GetShipmentRequest($request);
+            $request = new GetShipmentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetShipment';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetShipmentResponse.php');
-        $response = MWSMerchantFulfillmentService_Model_GetShipmentResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -262,26 +242,26 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSMerchantFulfillmentService_Model_GetServiceStatus request or MWSMerchantFulfillmentService_Model_GetServiceStatus object itself
-     * @see MWSMerchantFulfillmentService_Model_GetServiceStatusRequest
-     * @return MWSMerchantFulfillmentService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MWSMerchantFulfillmentService_Exception
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSMerchantFulfillmentService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof GetServiceStatusRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MWSMerchantFulfillmentService_Model_GetServiceStatusRequest($request);
+            $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSMerchantFulfillmentService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -346,7 +326,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
             $attributes = array ();
         }
 
-        $this->_config['UserAgent'] = 
+        $this->_config['UserAgent'] =
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
@@ -359,7 +339,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
-        $userAgent = 
+        $userAgent =
             $this->quoteApplicationName($applicationName)
             . '/'
             . $this->quoteApplicationVersion($applicationVersion);
@@ -566,7 +546,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
-        curl_setopt($ch, CURLOPT_HEADER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
         {
@@ -591,11 +571,11 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         curl_close($ch);
         return $this->_extractHeadersAndBody($response);
     }
-    
+
     /**
      * This method will attempt to extract the headers and body of our response.
      * We need to split the raw response string by 2 'CRLF's.  2 'CRLF's should indicate the separation of the response header
-     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in 
+     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in
      * multiple responses concatenated.  We could encounter a response like
      *
      * HTTP/1.1 100 Continue
@@ -615,22 +595,22 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
+        for ($count = 0;
+                $count < count($responseComponents) && $body == null;
                 $count++) {
-            
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
+
+            if($responseStatus != null &&
                     $this->_httpHeadersHaveContent($headers)){
-                
+
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
             require_once (dirname(__FILE__) . '/Exception.php');
@@ -640,11 +620,11 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         }
 
         return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
+                'Status' => $responseStatus,
+                'ResponseBody' => $body,
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-    
+
     /**
      * parse the status line of a header string for the proper format and
      * return the status code
@@ -654,14 +634,14 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
      * returns String statusCode or null if the status line can't be parsed
      */
     private function _extractHttpStatusCode($headers){
-    	$statusCode = null; 
+    	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2]; 
+            $statusCode = $matches[2];
         }
         return $statusCode;
     }
-    
+
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
@@ -671,7 +651,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
-    
+
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
@@ -696,9 +676,9 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
                 }
             }
         }
- 
+
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata(
+        return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -727,7 +707,7 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
             $delay = (int) (pow(4, $retries) * 100000);
             usleep($delay);
             return true;
-        } 
+        }
         return false;
     }
 

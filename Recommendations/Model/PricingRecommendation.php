@@ -1,47 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Recommendations\Model;
+
+
+/**
+ * PricingRecommendation
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Recommendations Section Service
- * @version  2013-04-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:29:34 GMT 2015
- */
-
-/**
- *  @see MWSRecommendationsSectionService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSRecommendationsSectionService_Model_PricingRecommendation
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>LastUpdated: string</li>
- * <li>ItemIdentifier: MWSRecommendationsSectionService_Model_ProductIdentifier</li>
+ * <li>ItemIdentifier: ProductIdentifier</li>
  * <li>ItemName: string</li>
  * <li>Condition: string</li>
  * <li>SubCondition: string</li>
  * <li>FulfillmentChannel: string</li>
- * <li>YourPricePlusShipping: MWSRecommendationsSectionService_Model_Price</li>
- * <li>LowestPricePlusShipping: MWSRecommendationsSectionService_Model_Price</li>
- * <li>PriceDifferenceToLowPrice: MWSRecommendationsSectionService_Model_Price</li>
- * <li>MedianPricePlusShipping: MWSRecommendationsSectionService_Model_Price</li>
- * <li>LowestMerchantFulfilledOfferPrice: MWSRecommendationsSectionService_Model_Price</li>
- * <li>LowestAmazonFulfilledOfferPrice: MWSRecommendationsSectionService_Model_Price</li>
+ * <li>YourPricePlusShipping: Price</li>
+ * <li>LowestPricePlusShipping: Price</li>
+ * <li>PriceDifferenceToLowPrice: Price</li>
+ * <li>MedianPricePlusShipping: Price</li>
+ * <li>LowestMerchantFulfilledOfferPrice: Price</li>
+ * <li>LowestAmazonFulfilledOfferPrice: Price</li>
  * <li>NumberOfOffers: int</li>
  * <li>NumberOfMerchantFulfilledOffers: int</li>
  * <li>NumberOfAmazonFulfilledOffers: int</li>
@@ -51,23 +30,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSRecommendationsSectionService_Model_PricingRecommendation extends MWSRecommendationsSectionService_Model {
+ class PricingRecommendation extends MWSRecommendationsSectionService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ProductIdentifier'),
+    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
     'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Condition' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'YourPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'LowestPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'PriceDifferenceToLowPrice' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'MedianPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'LowestMerchantFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'LowestAmazonFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
+    'YourPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
+    'LowestPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
+    'PriceDifferenceToLowPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
+    'MedianPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
+    'LowestMerchantFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
+    'LowestAmazonFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
     'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
     'NumberOfMerchantFulfilledOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
     'NumberOfAmazonFulfilledOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
@@ -136,7 +115,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemIdentifier property.
      *
-     * @param MWSRecommendationsSectionService_Model_ProductIdentifier itemIdentifier
+     * @param ProductIdentifier itemIdentifier
      * @return this instance
      */
     public function setItemIdentifier($value)
@@ -366,7 +345,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the YourPricePlusShipping property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price yourPricePlusShipping
+     * @param Price yourPricePlusShipping
      * @return this instance
      */
     public function setYourPricePlusShipping($value)
@@ -412,7 +391,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LowestPricePlusShipping property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price lowestPricePlusShipping
+     * @param Price lowestPricePlusShipping
      * @return this instance
      */
     public function setLowestPricePlusShipping($value)
@@ -458,7 +437,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PriceDifferenceToLowPrice property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price priceDifferenceToLowPrice
+     * @param Price priceDifferenceToLowPrice
      * @return this instance
      */
     public function setPriceDifferenceToLowPrice($value)
@@ -504,7 +483,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the MedianPricePlusShipping property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price medianPricePlusShipping
+     * @param Price medianPricePlusShipping
      * @return this instance
      */
     public function setMedianPricePlusShipping($value)
@@ -550,7 +529,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LowestMerchantFulfilledOfferPrice property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price lowestMerchantFulfilledOfferPrice
+     * @param Price lowestMerchantFulfilledOfferPrice
      * @return this instance
      */
     public function setLowestMerchantFulfilledOfferPrice($value)
@@ -596,7 +575,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LowestAmazonFulfilledOfferPrice property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price lowestAmazonFulfilledOfferPrice
+     * @param Price lowestAmazonFulfilledOfferPrice
      * @return this instance
      */
     public function setLowestAmazonFulfilledOfferPrice($value)

@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetProductCategoriesForASINResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>GetProductCategoriesForASINResult: MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceProducts_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>GetProductCategoriesForASINResult: GetProductCategoriesForASINResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse extends MarketplaceWebServiceProducts_Model {
+ class GetProductCategoriesForASINResponse extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata'),
+    'GetProductCategoriesForASINResult' => array('FieldValue' => null, 'FieldType' => 'GetProductCategoriesForASINResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GetProductCategoriesForASINResult property.
      *
-     * @param MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult getProductCategoriesForASINResult
+     * @param GetProductCategoriesForASINResult getProductCategoriesForASINResult
      * @return this instance
      */
     public function setGetProductCategoriesForASINResult($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +166,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse from XML string
-     * 
+     * Construct GetProductCategoriesForASINResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse 
+     * @return GetProductCategoriesForASINResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +180,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetProductCategoriesForASINResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse(($response->item(0))); 
+            return new GetProductCategoriesForASINResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse from provided XML. 
+            throw new Exception ("Unable to construct GetProductCategoriesForASINResponse from provided XML.
                                   Make sure that GetProductCategoriesForASINResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetProductCategoriesForASINResponse xmlns=\"http://mws.amazonservices.com/schema/Products/2011-10-01\">";

@@ -1,42 +1,21 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Recommendations\Model;
+
+
+/**
+ * SelectionRecommendation
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Recommendations Section Service
- * @version  2013-04-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:29:34 GMT 2015
- */
-
-/**
- *  @see MWSRecommendationsSectionService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSRecommendationsSectionService_Model_SelectionRecommendation
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>LastUpdated: string</li>
- * <li>ItemIdentifier: MWSRecommendationsSectionService_Model_ProductIdentifier</li>
+ * <li>ItemIdentifier: ProductIdentifier</li>
  * <li>ItemName: string</li>
  * <li>BrandName: string</li>
  * <li>ProductCategory: string</li>
  * <li>SalesRank: int</li>
- * <li>BuyboxPrice: MWSRecommendationsSectionService_Model_Price</li>
+ * <li>BuyboxPrice: Price</li>
  * <li>NumberOfOffers: int</li>
  * <li>AverageCustomerReview: float</li>
  * <li>NumberOfCustomerReviews: int</li>
@@ -46,18 +25,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSRecommendationsSectionService_Model_SelectionRecommendation extends MWSRecommendationsSectionService_Model {
+ class SelectionRecommendation extends MWSRecommendationsSectionService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ProductIdentifier'),
+    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
     'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
     'BrandName' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ProductCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SalesRank' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'BuyboxPrice' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
+    'BuyboxPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
     'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
     'AverageCustomerReview' => array('FieldValue' => null, 'FieldType' => 'float'),
     'NumberOfCustomerReviews' => array('FieldValue' => null, 'FieldType' => 'int'),
@@ -126,7 +105,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemIdentifier property.
      *
-     * @param MWSRecommendationsSectionService_Model_ProductIdentifier itemIdentifier
+     * @param ProductIdentifier itemIdentifier
      * @return this instance
      */
     public function setItemIdentifier($value)
@@ -356,7 +335,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyboxPrice property.
      *
-     * @param MWSRecommendationsSectionService_Model_Price buyboxPrice
+     * @param Price buyboxPrice
      * @return this instance
      */
     public function setBuyboxPrice($value)

@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Orders\Model;
+
+
+/**
+ * ListOrderItemsByNextTokenResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Orders
- * @version  2013-09-01
- * Library Version: 2015-09-24
- * Generated: Fri Sep 25 20:06:28 GMT 2015
- */
-
-/**
- *  @see MarketplaceWebServiceOrders_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>ListOrderItemsByNextTokenResult: MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceOrders_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>ListOrderItemsByNextTokenResult: ListOrderItemsByNextTokenResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse extends MarketplaceWebServiceOrders_Model {
+ class ListOrderItemsByNextTokenResponse extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ListOrderItemsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'),
+    'ListOrderItemsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListOrderItemsByNextTokenResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListOrderItemsByNextTokenResult property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult listOrderItemsByNextTokenResult
+     * @param ListOrderItemsByNextTokenResult listOrderItemsByNextTokenResult
      * @return this instance
      */
     public function setListOrderItemsByNextTokenResult($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +166,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse from XML string
-     * 
+     * Construct ListOrderItemsByNextTokenResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse 
+     * @return ListOrderItemsByNextTokenResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +180,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListOrderItemsByNextTokenResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse(($response->item(0))); 
+            return new ListOrderItemsByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse from provided XML. 
+            throw new Exception ("Unable to construct ListOrderItemsByNextTokenResponse from provided XML.
                                   Make sure that ListOrderItemsByNextTokenResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<ListOrderItemsByNextTokenResponse xmlns=\"https://mws.amazonservices.com/Orders/2013-09-01\">";

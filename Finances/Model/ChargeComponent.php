@@ -1,48 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+/**
+ * ChargeComponent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_ChargeComponent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ChargeType: string</li>
- * <li>ChargeAmount: MWSFinancesService_Model_Currency</li>
+ * <li>ChargeAmount: Currency</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_ChargeComponent extends MWSFinancesService_Model {
+ class ChargeComponent extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'ChargeType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ChargeAmount' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'ChargeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     );
     parent::__construct($data);
     }
@@ -106,7 +84,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ChargeAmount property.
      *
-     * @param MWSFinancesService_Model_Currency chargeAmount
+     * @param Currency chargeAmount
      * @return this instance
      */
     public function setChargeAmount($value)

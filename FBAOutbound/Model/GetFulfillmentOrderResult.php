@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * GetFulfillmentOrderResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_GetFulfillmentOrderResult
- * 
  * Properties:
  * <ul>
- * 
- * <li>FulfillmentOrder: FBAOutboundServiceMWS_Model_FulfillmentOrder</li>
- * <li>FulfillmentOrderItem: FBAOutboundServiceMWS_Model_FulfillmentOrderItemList</li>
- * <li>FulfillmentShipment: FBAOutboundServiceMWS_Model_FulfillmentShipmentList</li>
+ *
+ * <li>FulfillmentOrder: FulfillmentOrder</li>
+ * <li>FulfillmentOrderItem: FulfillmentOrderItemList</li>
+ * <li>FulfillmentShipment: FulfillmentShipmentList</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_GetFulfillmentOrderResult extends FBAOutboundServiceMWS_Model {
+ class GetFulfillmentOrderResult extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'FulfillmentOrder' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentOrder'),
-    'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentOrderItemList'),
-    'FulfillmentShipment' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentShipmentList'),
+    'FulfillmentOrder' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrder'),
+    'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderItemList'),
+    'FulfillmentShipment' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentList'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentOrder property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentOrder fulfillmentOrder
+     * @param FulfillmentOrder fulfillmentOrder
      * @return this instance
      */
     public function setFulfillmentOrder($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentOrderItem property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentOrderItemList fulfillmentOrderItem
+     * @param FulfillmentOrderItemList fulfillmentOrderItem
      * @return this instance
      */
     public function setFulfillmentOrderItem($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentShipment property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentShipmentList fulfillmentShipment
+     * @param FulfillmentShipmentList fulfillmentShipment
      * @return this instance
      */
     public function setFulfillmentShipment($value)

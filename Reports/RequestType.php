@@ -1,11 +1,7 @@
 <?php
-/**
- * There are three types of requests to MWS to configure:
- *   1. Requests containing feed data. SubmitFeed is the only example of this request type.
- *   2. Requests expecting report data. GetFeedSubmissionResult and GetReport are the only functions
- *      matching the request type.
- *   3. 'Regular' POST requests. This represents the multitude of MWS requests.
- */
+
+namespace Amazon\MWS\Reports;
+
 final class RequestType {
   const POST_UPLOAD = 'POST_UPLOAD';
   const POST_DOWNLOAD = 'POST_DOWNLOAD';
@@ -45,7 +41,7 @@ final class RequestType {
         $requestType = self::UNKNOWN;
         break;
     }
-    
+
     return $requestType;
   }
 }

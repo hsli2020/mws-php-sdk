@@ -1,47 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * FulfillmentShipment
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_FulfillmentShipment
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonShipmentId: string</li>
  * <li>FulfillmentCenterId: string</li>
  * <li>FulfillmentShipmentStatus: string</li>
  * <li>ShippingDateTime: string</li>
  * <li>EstimatedArrivalDateTime: string</li>
- * <li>FulfillmentShipmentItem: FBAOutboundServiceMWS_Model_FulfillmentShipmentItemList</li>
- * <li>FulfillmentShipmentPackage: FBAOutboundServiceMWS_Model_FulfillmentShipmentPackageList</li>
+ * <li>FulfillmentShipmentItem: FulfillmentShipmentItemList</li>
+ * <li>FulfillmentShipmentPackage: FulfillmentShipmentPackageList</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_FulfillmentShipment extends FBAOutboundServiceMWS_Model {
+ class FulfillmentShipment extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -51,8 +30,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'FulfillmentShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShippingDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
     'EstimatedArrivalDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentShipmentItem' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentShipmentItemList'),
-    'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentShipmentPackageList'),
+    'FulfillmentShipmentItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentItemList'),
+    'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentPackageList'),
     );
     parent::__construct($data);
     }
@@ -300,7 +279,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentShipmentItem property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentShipmentItemList fulfillmentShipmentItem
+     * @param FulfillmentShipmentItemList fulfillmentShipmentItem
      * @return this instance
      */
     public function setFulfillmentShipmentItem($value)
@@ -346,7 +325,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentShipmentPackage property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentShipmentPackageList fulfillmentShipmentPackage
+     * @param FulfillmentShipmentPackageList fulfillmentShipmentPackage
      * @return this instance
      */
     public function setFulfillmentShipmentPackage($value)

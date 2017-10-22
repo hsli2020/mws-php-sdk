@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,34 +9,34 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_PartneredLtlDataInput
- * 
+ * PartneredLtlDataInput
+ *
  * Properties:
  * <ul>
- * 
- * <li>Contact: FBAInboundServiceMWS_Model_Contact</li>
+ *
+ * <li>Contact: Contact</li>
  * <li>BoxCount: int</li>
  * <li>SellerFreightClass: string</li>
  * <li>FreightReadyDate: string</li>
- * <li>PalletList: FBAInboundServiceMWS_Model_PalletList</li>
- * <li>TotalWeight: FBAInboundServiceMWS_Model_Weight</li>
- * <li>SellerDeclaredValue: FBAInboundServiceMWS_Model_Amount</li>
+ * <li>PalletList: PalletList</li>
+ * <li>TotalWeight: Weight</li>
+ * <li>SellerDeclaredValue: Amount</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_PartneredLtlDataInput extends FBAInboundServiceMWS_Model {
+ class PartneredLtlDataInput extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Contact' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_Contact'),
+    'Contact' => array('FieldValue' => null, 'FieldType' => 'Contact'),
     'BoxCount' => array('FieldValue' => null, 'FieldType' => 'int'),
     'SellerFreightClass' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FreightReadyDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PalletList' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_PalletList'),
-    'TotalWeight' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_Weight'),
-    'SellerDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_Amount'),
+    'PalletList' => array('FieldValue' => null, 'FieldType' => 'PalletList'),
+    'TotalWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
+    'SellerDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'Amount'),
     );
     parent::__construct($data);
     }
@@ -70,7 +54,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Contact property.
      *
-     * @param FBAInboundServiceMWS_Model_Contact contact
+     * @param Contact contact
      * @return this instance
      */
     public function setContact($value)
@@ -254,7 +238,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PalletList property.
      *
-     * @param FBAInboundServiceMWS_Model_PalletList palletList
+     * @param PalletList palletList
      * @return this instance
      */
     public function setPalletList($value)
@@ -300,7 +284,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the TotalWeight property.
      *
-     * @param FBAInboundServiceMWS_Model_Weight totalWeight
+     * @param Weight totalWeight
      * @return this instance
      */
     public function setTotalWeight($value)
@@ -346,7 +330,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SellerDeclaredValue property.
      *
-     * @param FBAInboundServiceMWS_Model_Amount sellerDeclaredValue
+     * @param Amount sellerDeclaredValue
      * @return this instance
      */
     public function setSellerDeclaredValue($value)

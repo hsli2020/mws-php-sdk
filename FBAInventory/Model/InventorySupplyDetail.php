@@ -1,52 +1,27 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAInventory\Model;
+
+/**
+ * InventorySupplyDetail
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inventory Service MWS
- * @version  2010-10-01
- * Library Version: 2014-09-30
- * Generated: Wed May 04 17:14:15 UTC 2016
- */
-
-/**
- *  @see FBAInventoryServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAInventoryServiceMWS_Model_InventorySupplyDetail
- * 
  * Properties:
  * <ul>
- * 
  * <li>Quantity: int</li>
  * <li>SupplyType: string</li>
- * <li>EarliestAvailableToPick: FBAInventoryServiceMWS_Model_Timepoint</li>
- * <li>LatestAvailableToPick: FBAInventoryServiceMWS_Model_Timepoint</li>
- *
+ * <li>EarliestAvailableToPick: Timepoint</li>
+ * <li>LatestAvailableToPick: Timepoint</li>
  * </ul>
  */
-
- class FBAInventoryServiceMWS_Model_InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
+class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
     'SupplyType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_Timepoint'),
-    'LatestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'FBAInventoryServiceMWS_Model_Timepoint'),
+    'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+    'LatestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
     );
     parent::__construct($data);
     }
@@ -156,7 +131,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EarliestAvailableToPick property.
      *
-     * @param FBAInventoryServiceMWS_Model_Timepoint earliestAvailableToPick
+     * @param Timepoint earliestAvailableToPick
      * @return this instance
      */
     public function setEarliestAvailableToPick($value)
@@ -202,7 +177,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LatestAvailableToPick property.
      *
-     * @param FBAInventoryServiceMWS_Model_Timepoint latestAvailableToPick
+     * @param Timepoint latestAvailableToPick
      * @return this instance
      */
     public function setLatestAvailableToPick($value)

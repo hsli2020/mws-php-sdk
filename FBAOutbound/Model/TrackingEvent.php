@@ -1,49 +1,28 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * TrackingEvent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_TrackingEvent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>EventDate: string</li>
- * <li>EventAddress: FBAOutboundServiceMWS_Model_TrackingAddress</li>
+ * <li>EventAddress: TrackingAddress</li>
  * <li>EventCode: string</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_TrackingEvent extends FBAOutboundServiceMWS_Model {
+ class TrackingEvent extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'EventDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EventAddress' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_TrackingAddress'),
+    'EventAddress' => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
     'EventCode' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EventAddress property.
      *
-     * @param FBAOutboundServiceMWS_Model_TrackingAddress eventAddress
+     * @param TrackingAddress eventAddress
      * @return this instance
      */
     public function setEventAddress($value)

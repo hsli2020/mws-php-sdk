@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Orders\Model;
+
+
+/**
+ * Order
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Orders
- * @version  2013-09-01
- * Library Version: 2015-09-24
- * Generated: Fri Sep 25 20:06:28 GMT 2015
- */
-
-/**
- *  @see MarketplaceWebServiceOrders_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceOrders_Model_Order
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>PurchaseDate: string</li>
@@ -39,8 +18,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>SalesChannel: string</li>
  * <li>OrderChannel: string</li>
  * <li>ShipServiceLevel: string</li>
- * <li>ShippingAddress: MarketplaceWebServiceOrders_Model_Address</li>
- * <li>OrderTotal: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>ShippingAddress: Address</li>
+ * <li>OrderTotal: Money</li>
  * <li>NumberOfItemsShipped: int</li>
  * <li>NumberOfItemsUnshipped: int</li>
  * <li>PaymentExecutionDetail: array</li>
@@ -65,7 +44,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Order extends MarketplaceWebServiceOrders_Model {
+ class Order extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
@@ -79,11 +58,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'OrderChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShipServiceLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Address'),
-    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
+    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'NumberOfItemsShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
     'NumberOfItemsUnshipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
+    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
     'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -532,7 +511,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingAddress property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Address shippingAddress
+     * @param Address shippingAddress
      * @return this instance
      */
     public function setShippingAddress($value)
@@ -578,7 +557,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OrderTotal property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money orderTotal
+     * @param Money orderTotal
      * @return this instance
      */
     public function setOrderTotal($value)

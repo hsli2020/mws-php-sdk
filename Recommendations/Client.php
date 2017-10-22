@@ -1,30 +1,9 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Recommendations Section Service
- * @version  2013-04-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:29:34 GMT 2015
- */
 
-/**
- *  @see MWSRecommendationsSectionService_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Amazon\MWS\Recommendations;
 
 /**
  * MWSRecommendationsSectionService_Client is an implementation of MWSRecommendationsSectionService
- *
  */
 class MWSRecommendationsSectionService_Client implements MWSRecommendationsSectionService_Interface
 {
@@ -54,27 +33,27 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
     /**
      * Get Last Updated Time For Recommendations
-     * Retrieving last updated time for all recommendation categories for the given marketplace and seller. 
+     * Retrieving last updated time for all recommendation categories for the given marketplace and seller.
      *       If last updated time for a category is null, it indicates no active recommendations for this seller in the given marketplace for this category.
      *
-     * @param mixed $request array of parameters for MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendations request or MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendations object itself
-     * @see MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsRequest
-     * @return MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse
+     * @param mixed $request array of parameters for GetLastUpdatedTimeForRecommendations request or GetLastUpdatedTimeForRecommendations object itself
+     * @see GetLastUpdatedTimeForRecommendationsRequest
+     * @return GetLastUpdatedTimeForRecommendationsResponse
      *
      * @throws MWSRecommendationsSectionService_Exception
      */
     public function getLastUpdatedTimeForRecommendations($request)
     {
-        if (!($request instanceof MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsRequest)) {
+        if (!($request instanceof GetLastUpdatedTimeForRecommendationsRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsRequest.php');
-            $request = new MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsRequest($request);
+            $request = new GetLastUpdatedTimeForRecommendationsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLastUpdatedTimeForRecommendations';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsResponse.php');
-        $response = MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetLastUpdatedTimeForRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -105,24 +84,24 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * List Recommendations
      * Retrieving first batch of recommendations.
      *
-     * @param mixed $request array of parameters for MWSRecommendationsSectionService_Model_ListRecommendations request or MWSRecommendationsSectionService_Model_ListRecommendations object itself
-     * @see MWSRecommendationsSectionService_Model_ListRecommendationsRequest
-     * @return MWSRecommendationsSectionService_Model_ListRecommendationsResponse
+     * @param mixed $request array of parameters for ListRecommendations request or ListRecommendations object itself
+     * @see ListRecommendationsRequest
+     * @return ListRecommendationsResponse
      *
      * @throws MWSRecommendationsSectionService_Exception
      */
     public function listRecommendations($request)
     {
-        if (!($request instanceof MWSRecommendationsSectionService_Model_ListRecommendationsRequest)) {
+        if (!($request instanceof ListRecommendationsRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListRecommendationsRequest.php');
-            $request = new MWSRecommendationsSectionService_Model_ListRecommendationsRequest($request);
+            $request = new ListRecommendationsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListRecommendations';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListRecommendationsResponse.php');
-        $response = MWSRecommendationsSectionService_Model_ListRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -159,24 +138,24 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * List Recommendations By Next Token
      * Retrieving recommendation by next token.
      *
-     * @param mixed $request array of parameters for MWSRecommendationsSectionService_Model_ListRecommendationsByNextToken request or MWSRecommendationsSectionService_Model_ListRecommendationsByNextToken object itself
-     * @see MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenRequest
-     * @return MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenResponse
+     * @param mixed $request array of parameters for ListRecommendationsByNextToken request or ListRecommendationsByNextToken object itself
+     * @see ListRecommendationsByNextTokenRequest
+     * @return ListRecommendationsByNextTokenResponse
      *
      * @throws MWSRecommendationsSectionService_Exception
      */
     public function listRecommendationsByNextToken($request)
     {
-        if (!($request instanceof MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenRequest)) {
+        if (!($request instanceof ListRecommendationsByNextTokenRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenRequest.php');
-            $request = new MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenRequest($request);
+            $request = new ListRecommendationsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListRecommendationsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenResponse.php');
-        $response = MWSRecommendationsSectionService_Model_ListRecommendationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListRecommendationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -205,26 +184,26 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSRecommendationsSectionService_Model_GetServiceStatus request or MWSRecommendationsSectionService_Model_GetServiceStatus object itself
-     * @see MWSRecommendationsSectionService_Model_GetServiceStatusRequest
-     * @return MWSRecommendationsSectionService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MWSRecommendationsSectionService_Exception
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSRecommendationsSectionService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof GetServiceStatusRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MWSRecommendationsSectionService_Model_GetServiceStatusRequest($request);
+            $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSRecommendationsSectionService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -289,7 +268,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
             $attributes = array ();
         }
 
-        $this->_config['UserAgent'] = 
+        $this->_config['UserAgent'] =
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
@@ -302,7 +281,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
-        $userAgent = 
+        $userAgent =
             $this->quoteApplicationName($applicationName)
             . '/'
             . $this->quoteApplicationVersion($applicationVersion);
@@ -509,7 +488,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
-        curl_setopt($ch, CURLOPT_HEADER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
         {
@@ -534,11 +513,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         curl_close($ch);
         return $this->_extractHeadersAndBody($response);
     }
-    
+
     /**
      * This method will attempt to extract the headers and body of our response.
      * We need to split the raw response string by 2 'CRLF's.  2 'CRLF's should indicate the separation of the response header
-     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in 
+     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in
      * multiple responses concatenated.  We could encounter a response like
      *
      * HTTP/1.1 100 Continue
@@ -558,22 +537,22 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
+        for ($count = 0;
+                $count < count($responseComponents) && $body == null;
                 $count++) {
-            
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
+
+            if($responseStatus != null &&
                     $this->_httpHeadersHaveContent($headers)){
-                
+
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
             require_once (dirname(__FILE__) . '/Exception.php');
@@ -583,11 +562,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         }
 
         return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
+                'Status' => $responseStatus,
+                'ResponseBody' => $body,
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-    
+
     /**
      * parse the status line of a header string for the proper format and
      * return the status code
@@ -597,14 +576,14 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * returns String statusCode or null if the status line can't be parsed
      */
     private function _extractHttpStatusCode($headers){
-    	$statusCode = null; 
+    	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2]; 
+            $statusCode = $matches[2];
         }
         return $statusCode;
     }
-    
+
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
@@ -614,7 +593,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
-    
+
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
@@ -639,9 +618,9 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
                 }
             }
         }
- 
+
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MWSRecommendationsSectionService_Model_ResponseHeaderMetadata(
+        return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -670,7 +649,7 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
             $delay = (int) (pow(4, $retries) * 100000);
             usleep($delay);
             return true;
-        } 
+        }
         return false;
     }
 

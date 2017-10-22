@@ -1,45 +1,8 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Subscriptions Service
- * @version  2013-07-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:27:20 GMT 2015
- */
 
-/**
- *  @see MWSSubscriptionsService_Model
- */
+namespace Amazon\MWS\Subscriptions\Model;
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSSubscriptionsService_Model_DeleteSubscriptionInput
- * 
- * Properties:
- * <ul>
- * 
- * <li>SellerId: string</li>
- * <li>MWSAuthToken: string</li>
- * <li>MarketplaceId: string</li>
- * <li>NotificationType: string</li>
- * <li>Destination: MWSSubscriptionsService_Model_Destination</li>
- *
- * </ul>
- */
-
- class MWSSubscriptionsService_Model_DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
+class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
 
     public function __construct($data = null)
     {
@@ -48,7 +11,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Destination' => array('FieldValue' => null, 'FieldType' => 'MWSSubscriptionsService_Model_Destination'),
+    'Destination' => array('FieldValue' => null, 'FieldType' => 'Destination'),
     );
     parent::__construct($data);
     }
@@ -250,7 +213,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Destination property.
      *
-     * @param MWSSubscriptionsService_Model_Destination destination
+     * @param Destination destination
      * @return this instance
      */
     public function setDestination($value)

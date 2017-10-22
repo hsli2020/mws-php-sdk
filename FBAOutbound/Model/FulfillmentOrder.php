@@ -1,56 +1,35 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * FulfillmentOrder
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_FulfillmentOrder
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerFulfillmentOrderId: string</li>
  * <li>MarketplaceId: string</li>
  * <li>DisplayableOrderId: string</li>
  * <li>DisplayableOrderDateTime: string</li>
  * <li>DisplayableOrderComment: string</li>
  * <li>ShippingSpeedCategory: string</li>
- * <li>DeliveryWindow: FBAOutboundServiceMWS_Model_DeliveryWindow</li>
- * <li>DestinationAddress: FBAOutboundServiceMWS_Model_Address</li>
+ * <li>DeliveryWindow: DeliveryWindow</li>
+ * <li>DestinationAddress: Address</li>
  * <li>FulfillmentAction: string</li>
  * <li>FulfillmentPolicy: string</li>
  * <li>FulfillmentMethod: string</li>
- * <li>CODSettings: FBAOutboundServiceMWS_Model_CODSettings</li>
+ * <li>CODSettings: CODSettings</li>
  * <li>ReceivedDateTime: string</li>
  * <li>FulfillmentOrderStatus: string</li>
  * <li>StatusUpdatedDateTime: string</li>
- * <li>NotificationEmailList: FBAOutboundServiceMWS_Model_NotificationEmailList</li>
+ * <li>NotificationEmailList: NotificationEmailList</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_FulfillmentOrder extends FBAOutboundServiceMWS_Model {
+ class FulfillmentOrder extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -61,16 +40,16 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
     'DisplayableOrderComment' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ShippingSpeedCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DeliveryWindow' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_DeliveryWindow'),
-    'DestinationAddress' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Address'),
+    'DeliveryWindow' => array('FieldValue' => null, 'FieldType' => 'DeliveryWindow'),
+    'DestinationAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
     'FulfillmentAction' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentPolicy' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CODSettings' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_CODSettings'),
+    'CODSettings' => array('FieldValue' => null, 'FieldType' => 'CODSettings'),
     'ReceivedDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentOrderStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
     'StatusUpdatedDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NotificationEmailList' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_NotificationEmailList'),
+    'NotificationEmailList' => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
     );
     parent::__construct($data);
     }
@@ -364,7 +343,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the DeliveryWindow property.
      *
-     * @param FBAOutboundServiceMWS_Model_DeliveryWindow deliveryWindow
+     * @param DeliveryWindow deliveryWindow
      * @return this instance
      */
     public function setDeliveryWindow($value)
@@ -410,7 +389,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the DestinationAddress property.
      *
-     * @param FBAOutboundServiceMWS_Model_Address destinationAddress
+     * @param Address destinationAddress
      * @return this instance
      */
     public function setDestinationAddress($value)
@@ -594,7 +573,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODSettings property.
      *
-     * @param FBAOutboundServiceMWS_Model_CODSettings codSettings
+     * @param CODSettings codSettings
      * @return this instance
      */
     public function setCODSettings($value)
@@ -778,7 +757,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the NotificationEmailList property.
      *
-     * @param FBAOutboundServiceMWS_Model_NotificationEmailList notificationEmailList
+     * @param NotificationEmailList notificationEmailList
      * @return this instance
      */
     public function setNotificationEmailList($value)

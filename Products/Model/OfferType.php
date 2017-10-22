@@ -1,37 +1,16 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * OfferType
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_OfferType
- * 
  * Properties:
  * <ul>
- * 
- * <li>BuyingPrice: MarketplaceWebServiceProducts_Model_PriceType</li>
- * <li>RegularPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
+ *
+ * <li>BuyingPrice: PriceType</li>
+ * <li>RegularPrice: MoneyType</li>
  * <li>FulfillmentChannel: string</li>
  * <li>ItemCondition: string</li>
  * <li>ItemSubCondition: string</li>
@@ -41,13 +20,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServiceProducts_Model {
+ class OfferType extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'BuyingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
-    'RegularPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+    'BuyingPrice' => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+    'RegularPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
     'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ItemSubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -70,7 +49,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceType buyingPrice
+     * @param PriceType buyingPrice
      * @return this instance
      */
     public function setBuyingPrice($value)
@@ -116,7 +95,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the RegularPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType regularPrice
+     * @param MoneyType regularPrice
      * @return this instance
      */
     public function setRegularPrice($value)

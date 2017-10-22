@@ -1,44 +1,23 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetCompetitivePricingForSKURequest
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
- * <li>SellerSKUList: MarketplaceWebServiceProducts_Model_SellerSKUListType</li>
+ * <li>SellerSKUList: SellerSKUListType</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest extends MarketplaceWebServiceProducts_Model {
+ class GetCompetitivePricingForSKURequest extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
@@ -46,7 +25,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUListType'),
+    'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
     );
     parent::__construct($data);
     }
@@ -202,7 +181,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SellerSKUList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_SellerSKUListType sellerSKUList
+     * @param SellerSKUListType sellerSKUList
      * @return this instance
      */
     public function setSellerSKUList($value)

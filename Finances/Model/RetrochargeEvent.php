@@ -1,46 +1,25 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+
+/**
+ * RetrochargeEvent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_RetrochargeEvent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>RetrochargeEventType: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>PostedDate: string</li>
- * <li>BaseTax: MWSFinancesService_Model_Currency</li>
- * <li>ShippingTax: MWSFinancesService_Model_Currency</li>
+ * <li>BaseTax: Currency</li>
+ * <li>ShippingTax: Currency</li>
  * <li>MarketplaceName: string</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_RetrochargeEvent extends MWSFinancesService_Model {
+ class RetrochargeEvent extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
@@ -48,8 +27,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'RetrochargeEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BaseTax' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'BaseTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     'MarketplaceName' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -206,7 +185,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BaseTax property.
      *
-     * @param MWSFinancesService_Model_Currency baseTax
+     * @param Currency baseTax
      * @return this instance
      */
     public function setBaseTax($value)
@@ -252,7 +231,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingTax property.
      *
-     * @param MWSFinancesService_Model_Currency shippingTax
+     * @param Currency shippingTax
      * @return this instance
      */
     public function setShippingTax($value)

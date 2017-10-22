@@ -1,44 +1,23 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * GetCompetitivePricingForASINRequest
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
- * <li>ASINList: MarketplaceWebServiceProducts_Model_ASINListType</li>
+ * <li>ASINList: ASINListType</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest extends MarketplaceWebServiceProducts_Model {
+ class GetCompetitivePricingForASINRequest extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
@@ -46,7 +25,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASINList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINListType'),
+    'ASINList' => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
     );
     parent::__construct($data);
     }
@@ -202,7 +181,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ASINList property.
      *
-     * @param MarketplaceWebServiceProducts_Model_ASINListType asinList
+     * @param ASINListType asinList
      * @return this instance
      */
     public function setASINList($value)

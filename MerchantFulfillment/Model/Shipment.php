@@ -1,46 +1,25 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\MerchantFulfillment\Model;
+
+
+/**
+ * Shipment
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Merchant Fulfillment Service
- * @version  2015-06-01
- * Library Version: 2016-03-30
- * Generated: Tue Mar 29 19:00:01 UTC 2016
- */
-
-/**
- *  @see MWSMerchantFulfillmentService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSMerchantFulfillmentService_Model_Shipment
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ShipmentId: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>ItemList: array</li>
- * <li>ShipFromAddress: MWSMerchantFulfillmentService_Model_Address</li>
- * <li>ShipToAddress: MWSMerchantFulfillmentService_Model_Address</li>
- * <li>PackageDimensions: MWSMerchantFulfillmentService_Model_PackageDimensions</li>
- * <li>Weight: MWSMerchantFulfillmentService_Model_Weight</li>
- * <li>Insurance: MWSMerchantFulfillmentService_Model_CurrencyAmount</li>
- * <li>ShippingService: MWSMerchantFulfillmentService_Model_ShippingService</li>
- * <li>Label: MWSMerchantFulfillmentService_Model_Label</li>
+ * <li>ShipFromAddress: Address</li>
+ * <li>ShipToAddress: Address</li>
+ * <li>PackageDimensions: PackageDimensions</li>
+ * <li>Weight: Weight</li>
+ * <li>Insurance: CurrencyAmount</li>
+ * <li>ShippingService: ShippingService</li>
+ * <li>Label: Label</li>
  * <li>Status: string</li>
  * <li>TrackingId: string</li>
  * <li>CreatedDate: string</li>
@@ -49,7 +28,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSMerchantFulfillmentService_Model_Shipment extends MWSMerchantFulfillmentService_Model {
+ class Shipment extends MWSMerchantFulfillmentService_Model {
 
     public function __construct($data = null)
     {
@@ -57,14 +36,14 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_Item'), 'ListMemberName' => 'Item'),
-    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Address'),
-    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Address'),
-    'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_PackageDimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Weight'),
-    'Insurance' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_CurrencyAmount'),
-    'ShippingService' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_ShippingService'),
-    'Label' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_Label'),
+    'ItemList' => array('FieldValue' => array(), 'FieldType' => array('Item'), 'ListMemberName' => 'Item'),
+    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
+    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
+    'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'PackageDimensions'),
+    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
+    'Insurance' => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
+    'ShippingService' => array('FieldValue' => null, 'FieldType' => 'ShippingService'),
+    'Label' => array('FieldValue' => null, 'FieldType' => 'Label'),
     'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
     'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CreatedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -288,7 +267,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShipFromAddress property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Address shipFromAddress
+     * @param Address shipFromAddress
      * @return this instance
      */
     public function setShipFromAddress($value)
@@ -334,7 +313,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShipToAddress property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Address shipToAddress
+     * @param Address shipToAddress
      * @return this instance
      */
     public function setShipToAddress($value)
@@ -380,7 +359,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PackageDimensions property.
      *
-     * @param MWSMerchantFulfillmentService_Model_PackageDimensions packageDimensions
+     * @param PackageDimensions packageDimensions
      * @return this instance
      */
     public function setPackageDimensions($value)
@@ -426,7 +405,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Weight property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Weight weight
+     * @param Weight weight
      * @return this instance
      */
     public function setWeight($value)
@@ -472,7 +451,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Insurance property.
      *
-     * @param MWSMerchantFulfillmentService_Model_CurrencyAmount insurance
+     * @param CurrencyAmount insurance
      * @return this instance
      */
     public function setInsurance($value)
@@ -518,7 +497,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingService property.
      *
-     * @param MWSMerchantFulfillmentService_Model_ShippingService shippingService
+     * @param ShippingService shippingService
      * @return this instance
      */
     public function setShippingService($value)
@@ -564,7 +543,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Label property.
      *
-     * @param MWSMerchantFulfillmentService_Model_Label label
+     * @param Label label
      * @return this instance
      */
     public function setLabel($value)

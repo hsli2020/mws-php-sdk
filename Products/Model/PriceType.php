@@ -1,52 +1,31 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * PriceType
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_PriceType
- * 
  * Properties:
  * <ul>
- * 
- * <li>LandedPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>ListingPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Shipping: MarketplaceWebServiceProducts_Model_MoneyType</li>
- * <li>Points: MarketplaceWebServiceProducts_Model_Points</li>
+ *
+ * <li>LandedPrice: MoneyType</li>
+ * <li>ListingPrice: MoneyType</li>
+ * <li>Shipping: MoneyType</li>
+ * <li>Points: Points</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_PriceType extends MarketplaceWebServiceProducts_Model {
+ class PriceType extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'LandedPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Points'),
+    'LandedPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+    'Points' => array('FieldValue' => null, 'FieldType' => 'Points'),
     );
     parent::__construct($data);
     }
@@ -64,7 +43,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the LandedPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType landedPrice
+     * @param MoneyType landedPrice
      * @return this instance
      */
     public function setLandedPrice($value)
@@ -110,7 +89,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListingPrice property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType listingPrice
+     * @param MoneyType listingPrice
      * @return this instance
      */
     public function setListingPrice($value)
@@ -156,7 +135,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Shipping property.
      *
-     * @param MarketplaceWebServiceProducts_Model_MoneyType shipping
+     * @param MoneyType shipping
      * @return this instance
      */
     public function setShipping($value)
@@ -202,7 +181,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Points property.
      *
-     * @param MarketplaceWebServiceProducts_Model_Points points
+     * @param Points points
      * @return this instance
      */
     public function setPoints($value)

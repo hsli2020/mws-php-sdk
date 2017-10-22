@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\MerchantFulfillment\Model;
+
+
+/**
+ * GetEligibleShippingServicesResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Merchant Fulfillment Service
- * @version  2015-06-01
- * Library Version: 2016-03-30
- * Generated: Tue Mar 29 19:00:01 UTC 2016
- */
-
-/**
- *  @see MWSMerchantFulfillmentService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>GetEligibleShippingServicesResult: MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResult</li>
- * <li>ResponseMetadata: MWSMerchantFulfillmentService_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>GetEligibleShippingServicesResult: GetEligibleShippingServicesResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse extends MWSMerchantFulfillmentService_Model {
+ class GetEligibleShippingServicesResponse extends MWSMerchantFulfillmentService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetEligibleShippingServicesResult' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata'),
+    'GetEligibleShippingServicesResult' => array('FieldValue' => null, 'FieldType' => 'GetEligibleShippingServicesResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GetEligibleShippingServicesResult property.
      *
-     * @param MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResult getEligibleShippingServicesResult
+     * @param GetEligibleShippingServicesResult getEligibleShippingServicesResult
      * @return this instance
      */
     public function setGetEligibleShippingServicesResult($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MWSMerchantFulfillmentService_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +166,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse from XML string
-     * 
+     * Construct GetEligibleShippingServicesResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse 
+     * @return GetEligibleShippingServicesResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +180,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetEligibleShippingServicesResponse']");
         if ($response->length == 1) {
-            return new MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse(($response->item(0))); 
+            return new GetEligibleShippingServicesResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResponse from provided XML. 
+            throw new Exception ("Unable to construct GetEligibleShippingServicesResponse from provided XML.
                                   Make sure that GetEligibleShippingServicesResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetEligibleShippingServicesResponse xmlns=\"https://mws.amazonservices.com/MerchantFulfillment/2015-06-01\">";

@@ -1,63 +1,42 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * FulfillmentPreview
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_FulfillmentPreview
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ShippingSpeedCategory: string</li>
- * <li>ScheduledDeliveryInfo: FBAOutboundServiceMWS_Model_ScheduledDeliveryInfo</li>
+ * <li>ScheduledDeliveryInfo: ScheduledDeliveryInfo</li>
  * <li>IsFulfillable: bool</li>
  * <li>IsCODCapable: bool</li>
- * <li>EstimatedShippingWeight: FBAOutboundServiceMWS_Model_Weight</li>
- * <li>EstimatedFees: FBAOutboundServiceMWS_Model_FeeList</li>
- * <li>FulfillmentPreviewShipments: FBAOutboundServiceMWS_Model_FulfillmentPreviewShipmentList</li>
- * <li>UnfulfillablePreviewItems: FBAOutboundServiceMWS_Model_UnfulfillablePreviewItemList</li>
- * <li>OrderUnfulfillableReasons: FBAOutboundServiceMWS_Model_StringList</li>
+ * <li>EstimatedShippingWeight: Weight</li>
+ * <li>EstimatedFees: FeeList</li>
+ * <li>FulfillmentPreviewShipments: FulfillmentPreviewShipmentList</li>
+ * <li>UnfulfillablePreviewItems: UnfulfillablePreviewItemList</li>
+ * <li>OrderUnfulfillableReasons: StringList</li>
  * <li>MarketplaceId: string</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_FulfillmentPreview extends FBAOutboundServiceMWS_Model {
+ class FulfillmentPreview extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'ShippingSpeedCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ScheduledDeliveryInfo' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_ScheduledDeliveryInfo'),
+    'ScheduledDeliveryInfo' => array('FieldValue' => null, 'FieldType' => 'ScheduledDeliveryInfo'),
     'IsFulfillable' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'IsCODCapable' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Weight'),
-    'EstimatedFees' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FeeList'),
-    'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_FulfillmentPreviewShipmentList'),
-    'UnfulfillablePreviewItems' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_UnfulfillablePreviewItemList'),
-    'OrderUnfulfillableReasons' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_StringList'),
+    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
+    'EstimatedFees' => array('FieldValue' => null, 'FieldType' => 'FeeList'),
+    'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewShipmentList'),
+    'UnfulfillablePreviewItems' => array('FieldValue' => null, 'FieldType' => 'UnfulfillablePreviewItemList'),
+    'OrderUnfulfillableReasons' => array('FieldValue' => null, 'FieldType' => 'StringList'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -122,7 +101,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ScheduledDeliveryInfo property.
      *
-     * @param FBAOutboundServiceMWS_Model_ScheduledDeliveryInfo scheduledDeliveryInfo
+     * @param ScheduledDeliveryInfo scheduledDeliveryInfo
      * @return this instance
      */
     public function setScheduledDeliveryInfo($value)
@@ -280,7 +259,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EstimatedShippingWeight property.
      *
-     * @param FBAOutboundServiceMWS_Model_Weight estimatedShippingWeight
+     * @param Weight estimatedShippingWeight
      * @return this instance
      */
     public function setEstimatedShippingWeight($value)
@@ -326,7 +305,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the EstimatedFees property.
      *
-     * @param FBAOutboundServiceMWS_Model_FeeList estimatedFees
+     * @param FeeList estimatedFees
      * @return this instance
      */
     public function setEstimatedFees($value)
@@ -372,7 +351,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FulfillmentPreviewShipments property.
      *
-     * @param FBAOutboundServiceMWS_Model_FulfillmentPreviewShipmentList fulfillmentPreviewShipments
+     * @param FulfillmentPreviewShipmentList fulfillmentPreviewShipments
      * @return this instance
      */
     public function setFulfillmentPreviewShipments($value)
@@ -418,7 +397,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the UnfulfillablePreviewItems property.
      *
-     * @param FBAOutboundServiceMWS_Model_UnfulfillablePreviewItemList unfulfillablePreviewItems
+     * @param UnfulfillablePreviewItemList unfulfillablePreviewItems
      * @return this instance
      */
     public function setUnfulfillablePreviewItems($value)
@@ -464,7 +443,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OrderUnfulfillableReasons property.
      *
-     * @param FBAOutboundServiceMWS_Model_StringList orderUnfulfillableReasons
+     * @param StringList orderUnfulfillableReasons
      * @return this instance
      */
     public function setOrderUnfulfillableReasons($value)

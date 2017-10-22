@@ -1,49 +1,28 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAOutbound\Model;
+
+
+/**
+ * GetFulfillmentPreviewRequest
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Outbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-02-01
- * Generated: Fri Jan 08 13:26:48 PST 2016
- */
-
-/**
- *  @see FBAOutboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAOutboundServiceMWS_Model_GetFulfillmentPreviewRequest
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
  * <li>MarketplaceId: string</li>
- * <li>Address: FBAOutboundServiceMWS_Model_Address</li>
- * <li>Items: FBAOutboundServiceMWS_Model_GetFulfillmentPreviewItemList</li>
- * <li>ShippingSpeedCategories: FBAOutboundServiceMWS_Model_ShippingSpeedCategoryList</li>
+ * <li>Address: Address</li>
+ * <li>Items: GetFulfillmentPreviewItemList</li>
+ * <li>ShippingSpeedCategories: ShippingSpeedCategoryList</li>
  * <li>IncludeCODFulfillmentPreview: bool</li>
  * <li>IncludeDeliveryWindows: bool</li>
  *
  * </ul>
  */
 
- class FBAOutboundServiceMWS_Model_GetFulfillmentPreviewRequest extends FBAOutboundServiceMWS_Model {
+ class GetFulfillmentPreviewRequest extends FBAOutboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -52,9 +31,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Address' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_Address'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_GetFulfillmentPreviewItemList'),
-    'ShippingSpeedCategories' => array('FieldValue' => null, 'FieldType' => 'FBAOutboundServiceMWS_Model_ShippingSpeedCategoryList'),
+    'Address' => array('FieldValue' => null, 'FieldType' => 'Address'),
+    'Items' => array('FieldValue' => null, 'FieldType' => 'GetFulfillmentPreviewItemList'),
+    'ShippingSpeedCategories' => array('FieldValue' => null, 'FieldType' => 'ShippingSpeedCategoryList'),
     'IncludeCODFulfillmentPreview' => array('FieldValue' => null, 'FieldType' => 'bool'),
     'IncludeDeliveryWindows' => array('FieldValue' => null, 'FieldType' => 'bool'),
     );
@@ -258,7 +237,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Address property.
      *
-     * @param FBAOutboundServiceMWS_Model_Address address
+     * @param Address address
      * @return this instance
      */
     public function setAddress($value)
@@ -304,7 +283,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Items property.
      *
-     * @param FBAOutboundServiceMWS_Model_GetFulfillmentPreviewItemList items
+     * @param GetFulfillmentPreviewItemList items
      * @return this instance
      */
     public function setItems($value)
@@ -350,7 +329,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingSpeedCategories property.
      *
-     * @param FBAOutboundServiceMWS_Model_ShippingSpeedCategoryList shippingSpeedCategories
+     * @param ShippingSpeedCategoryList shippingSpeedCategories
      * @return this instance
      */
     public function setShippingSpeedCategories($value)

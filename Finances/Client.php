@@ -1,32 +1,11 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
 
-/**
- *  @see MWSFinancesService_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php');
+namespace Amazon\MWS\Finances;
 
 /**
  * MWSFinancesService_Client is an implementation of MWSFinancesService
- *
  */
-class MWSFinancesService_Client implements MWSFinancesService_Interface
+class Client implements MWSFinancesService_Interface
 {
 
     const SERVICE_VERSION = '2015-05-01';
@@ -56,24 +35,24 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
      * List Financial Event Groups
      * ListFinancialEventGroups can be used to find financial event groups that meet filter criteria.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventGroups request or MWSFinancesService_Model_ListFinancialEventGroups object itself
-     * @see MWSFinancesService_Model_ListFinancialEventGroupsRequest
-     * @return MWSFinancesService_Model_ListFinancialEventGroupsResponse
+     * @param mixed $request array of parameters for ListFinancialEventGroups request or ListFinancialEventGroups object itself
+     * @see ListFinancialEventGroupsRequest
+     * @return ListFinancialEventGroupsResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventGroups($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventGroupsRequest)) {
+        if (!($request instanceof ListFinancialEventGroupsRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsRequest.php');
-            $request = new MWSFinancesService_Model_ListFinancialEventGroupsRequest($request);
+            $request = new ListFinancialEventGroupsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventGroups';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventGroupsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListFinancialEventGroupsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -112,24 +91,24 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
      *         than returned that matched the given filter criteria, ListFinancialEventGroupsByNextToken
      *         can be used to retrieve those groups using that nextToken.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventGroupsByNextToken request or MWSFinancesService_Model_ListFinancialEventGroupsByNextToken object itself
-     * @see MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest
-     * @return MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse
+     * @param mixed $request array of parameters for ListFinancialEventGroupsByNextToken request or ListFinancialEventGroupsByNextToken object itself
+     * @see ListFinancialEventGroupsByNextTokenRequest
+     * @return ListFinancialEventGroupsByNextTokenResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventGroupsByNextToken($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest)) {
+        if (!($request instanceof ListFinancialEventGroupsByNextTokenRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenRequest.php');
-            $request = new MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenRequest($request);
+            $request = new ListFinancialEventGroupsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventGroupsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventGroupsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListFinancialEventGroupsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -160,24 +139,24 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
      * List Financial Events
      * ListFinancialEvents can be used to find financial events that meet the specified criteria.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEvents request or MWSFinancesService_Model_ListFinancialEvents object itself
-     * @see MWSFinancesService_Model_ListFinancialEventsRequest
-     * @return MWSFinancesService_Model_ListFinancialEventsResponse
+     * @param mixed $request array of parameters for ListFinancialEvents request or ListFinancialEvents object itself
+     * @see ListFinancialEventsRequest
+     * @return ListFinancialEventsResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEvents($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventsRequest)) {
+        if (!($request instanceof ListFinancialEventsRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListFinancialEventsRequest.php');
-            $request = new MWSFinancesService_Model_ListFinancialEventsRequest($request);
+            $request = new ListFinancialEventsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEvents';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventsResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListFinancialEventsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -222,24 +201,24 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
      *         than returned that matched the given filter criteria, ListFinancialEventsByNextToken
      *         can be used to retrieve those events using that nextToken.
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_ListFinancialEventsByNextToken request or MWSFinancesService_Model_ListFinancialEventsByNextToken object itself
-     * @see MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest
-     * @return MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse
+     * @param mixed $request array of parameters for ListFinancialEventsByNextToken request or ListFinancialEventsByNextToken object itself
+     * @see ListFinancialEventsByNextTokenRequest
+     * @return ListFinancialEventsByNextTokenResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function listFinancialEventsByNextToken($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest)) {
+        if (!($request instanceof ListFinancialEventsByNextTokenRequest)) {
             require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenRequest.php');
-            $request = new MWSFinancesService_Model_ListFinancialEventsByNextTokenRequest($request);
+            $request = new ListFinancialEventsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenResponse.php');
-        $response = MWSFinancesService_Model_ListFinancialEventsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListFinancialEventsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -268,26 +247,26 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSFinancesService_Model_GetServiceStatus request or MWSFinancesService_Model_GetServiceStatus object itself
-     * @see MWSFinancesService_Model_GetServiceStatusRequest
-     * @return MWSFinancesService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatusRequest
+     * @return GetServiceStatusResponse
      *
      * @throws MWSFinancesService_Exception
      */
     public function getServiceStatus($request)
     {
-        if (!($request instanceof MWSFinancesService_Model_GetServiceStatusRequest)) {
+        if (!($request instanceof GetServiceStatusRequest)) {
             require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
-            $request = new MWSFinancesService_Model_GetServiceStatusRequest($request);
+            $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        $response = MWSFinancesService_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -352,7 +331,7 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
             $attributes = array ();
         }
 
-        $this->_config['UserAgent'] = 
+        $this->_config['UserAgent'] =
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
@@ -365,7 +344,7 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
-        $userAgent = 
+        $userAgent =
             $this->quoteApplicationName($applicationName)
             . '/'
             . $this->quoteApplicationVersion($applicationVersion);
@@ -572,7 +551,7 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
-        curl_setopt($ch, CURLOPT_HEADER, true); 
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
         {
@@ -597,11 +576,11 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
         curl_close($ch);
         return $this->_extractHeadersAndBody($response);
     }
-    
+
     /**
      * This method will attempt to extract the headers and body of our response.
      * We need to split the raw response string by 2 'CRLF's.  2 'CRLF's should indicate the separation of the response header
-     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in 
+     * from the response body.  However in our case we have some circumstances (certain client proxies) that result in
      * multiple responses concatenated.  We could encounter a response like
      *
      * HTTP/1.1 100 Continue
@@ -621,22 +600,22 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
+        for ($count = 0;
+                $count < count($responseComponents) && $body == null;
                 $count++) {
-            
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
+
+            if($responseStatus != null &&
                     $this->_httpHeadersHaveContent($headers)){
-                
+
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
             require_once (dirname(__FILE__) . '/Exception.php');
@@ -646,11 +625,11 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
         }
 
         return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
+                'Status' => $responseStatus,
+                'ResponseBody' => $body,
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-    
+
     /**
      * parse the status line of a header string for the proper format and
      * return the status code
@@ -660,14 +639,14 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
      * returns String statusCode or null if the status line can't be parsed
      */
     private function _extractHttpStatusCode($headers){
-    	$statusCode = null; 
+    	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2]; 
+            $statusCode = $matches[2];
         }
         return $statusCode;
     }
-    
+
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
@@ -677,7 +656,7 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
-    
+
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
@@ -702,9 +681,9 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
                 }
             }
         }
- 
+
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
-        return new MWSFinancesService_Model_ResponseHeaderMetadata(
+        return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
           $headers['x-mws-timestamp'],
@@ -733,7 +712,7 @@ class MWSFinancesService_Client implements MWSFinancesService_Interface
             $delay = (int) (pow(4, $retries) * 100000);
             usleep($delay);
             return true;
-        } 
+        }
         return false;
     }
 

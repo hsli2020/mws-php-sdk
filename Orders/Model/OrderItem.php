@@ -1,68 +1,47 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Orders\Model;
+
+
+/**
+ * OrderItem
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Orders
- * @version  2013-09-01
- * Library Version: 2015-09-24
- * Generated: Fri Sep 25 20:06:28 GMT 2015
- */
-
-/**
- *  @see MarketplaceWebServiceOrders_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceOrders_Model_OrderItem
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ASIN: string</li>
  * <li>SellerSKU: string</li>
  * <li>OrderItemId: string</li>
  * <li>Title: string</li>
  * <li>QuantityOrdered: int</li>
  * <li>QuantityShipped: int</li>
- * <li>PointsGranted: MarketplaceWebServiceOrders_Model_PointsGrantedDetail</li>
- * <li>ItemPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ItemTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingDiscount: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>PromotionDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>PointsGranted: PointsGrantedDetail</li>
+ * <li>ItemPrice: Money</li>
+ * <li>ShippingPrice: Money</li>
+ * <li>GiftWrapPrice: Money</li>
+ * <li>ItemTax: Money</li>
+ * <li>ShippingTax: Money</li>
+ * <li>GiftWrapTax: Money</li>
+ * <li>ShippingDiscount: Money</li>
+ * <li>PromotionDiscount: Money</li>
  * <li>PromotionIds: array</li>
- * <li>CODFee: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>CODFeeDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>CODFee: Money</li>
+ * <li>CODFeeDiscount: Money</li>
  * <li>GiftMessageText: string</li>
  * <li>GiftWrapLevel: string</li>
- * <li>InvoiceData: MarketplaceWebServiceOrders_Model_InvoiceData</li>
+ * <li>InvoiceData: InvoiceData</li>
  * <li>ConditionNote: string</li>
  * <li>ConditionId: string</li>
  * <li>ConditionSubtypeId: string</li>
  * <li>ScheduledDeliveryStartDate: string</li>
  * <li>ScheduledDeliveryEndDate: string</li>
  * <li>PriceDesignation: string</li>
- * <li>BuyerCustomizedInfo: MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail</li>
+ * <li>BuyerCustomizedInfo: BuyerCustomizedInfoDetail</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_OrderItem extends MarketplaceWebServiceOrders_Model {
+ class OrderItem extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
@@ -73,28 +52,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Title' => array('FieldValue' => null, 'FieldType' => 'string'),
     'QuantityOrdered' => array('FieldValue' => null, 'FieldType' => 'int'),
     'QuantityShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_PointsGrantedDetail'),
-    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'PointsGrantedDetail'),
+    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'PromotionIds' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
-    'CODFee' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'CODFee' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'GiftMessageText' => array('FieldValue' => null, 'FieldType' => 'string'),
     'GiftWrapLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_InvoiceData'),
+    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'InvoiceData'),
     'ConditionNote' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionSubtypeId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryStartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PriceDesignation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail'),
+    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'BuyerCustomizedInfoDetail'),
     );
     parent::__construct($data);
     }
@@ -388,7 +367,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PointsGranted property.
      *
-     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail pointsGranted
+     * @param PointsGrantedDetail pointsGranted
      * @return this instance
      */
     public function setPointsGranted($value)
@@ -434,7 +413,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemPrice
+     * @param Money itemPrice
      * @return this instance
      */
     public function setItemPrice($value)
@@ -480,7 +459,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingPrice
+     * @param Money shippingPrice
      * @return this instance
      */
     public function setShippingPrice($value)
@@ -526,7 +505,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapPrice
+     * @param Money giftWrapPrice
      * @return this instance
      */
     public function setGiftWrapPrice($value)
@@ -572,7 +551,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemTax
+     * @param Money itemTax
      * @return this instance
      */
     public function setItemTax($value)
@@ -618,7 +597,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingTax
+     * @param Money shippingTax
      * @return this instance
      */
     public function setShippingTax($value)
@@ -664,7 +643,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapTax
+     * @param Money giftWrapTax
      * @return this instance
      */
     public function setGiftWrapTax($value)
@@ -710,7 +689,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingDiscount
+     * @param Money shippingDiscount
      * @return this instance
      */
     public function setShippingDiscount($value)
@@ -756,7 +735,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PromotionDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money promotionDiscount
+     * @param Money promotionDiscount
      * @return this instance
      */
     public function setPromotionDiscount($value)
@@ -866,7 +845,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFee property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFee
+     * @param Money codFee
      * @return this instance
      */
     public function setCODFee($value)
@@ -912,7 +891,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFeeDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFeeDiscount
+     * @param Money codFeeDiscount
      * @return this instance
      */
     public function setCODFeeDiscount($value)
@@ -1050,7 +1029,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvoiceData property.
      *
-     * @param MarketplaceWebServiceOrders_Model_InvoiceData invoiceData
+     * @param InvoiceData invoiceData
      * @return this instance
      */
     public function setInvoiceData($value)
@@ -1372,7 +1351,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyerCustomizedInfo property.
      *
-     * @param MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail buyerCustomizedInfo
+     * @param BuyerCustomizedInfoDetail buyerCustomizedInfo
      * @return this instance
      */
     public function setBuyerCustomizedInfo($value)

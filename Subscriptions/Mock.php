@@ -1,26 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Subscriptions Service
- * @version  2013-07-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:27:20 GMT 2015
- */
 
-/**
- *  @see MWSSubscriptionsService_Interface
- */
-require_once (dirname(__FILE__) . '/Interface.php'); 
+namespace Amazon\MWS\Subscriptions;
 
 class MWSSubscriptionsService_Mock implements MWSSubscriptionsService_Interface
 {
@@ -30,160 +10,160 @@ class MWSSubscriptionsService_Mock implements MWSSubscriptionsService_Interface
      * Create Subscription
      * Create a new subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_CreateSubscription request or MWSSubscriptionsService_Model_CreateSubscription object itself
-     * @see MWSSubscriptionsService_Model_CreateSubscription
-     * @return MWSSubscriptionsService_Model_CreateSubscriptionResponse
+     * @param mixed $request array of parameters for CreateSubscription request or CreateSubscription object itself
+     * @see CreateSubscription
+     * @return CreateSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function createSubscription($request)
     {
         require_once (dirname(__FILE__) . '/Model/CreateSubscriptionResponse.php');
-        return MWSSubscriptionsService_Model_CreateSubscriptionResponse::fromXML($this->_invoke('CreateSubscription'));
+        return CreateSubscriptionResponse::fromXML($this->_invoke('CreateSubscription'));
     }
 
     /**
      * Delete Subscription
      * Delete a subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_DeleteSubscription request or MWSSubscriptionsService_Model_DeleteSubscription object itself
-     * @see MWSSubscriptionsService_Model_DeleteSubscription
-     * @return MWSSubscriptionsService_Model_DeleteSubscriptionResponse
+     * @param mixed $request array of parameters for DeleteSubscription request or DeleteSubscription object itself
+     * @see DeleteSubscription
+     * @return DeleteSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function deleteSubscription($request)
     {
         require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionResponse.php');
-        return MWSSubscriptionsService_Model_DeleteSubscriptionResponse::fromXML($this->_invoke('DeleteSubscription'));
+        return DeleteSubscriptionResponse::fromXML($this->_invoke('DeleteSubscription'));
     }
 
     /**
      * Deregister Destination
      * Delete a destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_DeregisterDestination request or MWSSubscriptionsService_Model_DeregisterDestination object itself
-     * @see MWSSubscriptionsService_Model_DeregisterDestination
-     * @return MWSSubscriptionsService_Model_DeregisterDestinationResponse
+     * @param mixed $request array of parameters for DeregisterDestination request or DeregisterDestination object itself
+     * @see DeregisterDestination
+     * @return DeregisterDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function deregisterDestination($request)
     {
         require_once (dirname(__FILE__) . '/Model/DeregisterDestinationResponse.php');
-        return MWSSubscriptionsService_Model_DeregisterDestinationResponse::fromXML($this->_invoke('DeregisterDestination'));
+        return DeregisterDestinationResponse::fromXML($this->_invoke('DeregisterDestination'));
     }
 
     /**
      * Get Subscription
      * Retrieve subscription information.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_GetSubscription request or MWSSubscriptionsService_Model_GetSubscription object itself
-     * @see MWSSubscriptionsService_Model_GetSubscription
-     * @return MWSSubscriptionsService_Model_GetSubscriptionResponse
+     * @param mixed $request array of parameters for GetSubscription request or GetSubscription object itself
+     * @see GetSubscription
+     * @return GetSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function getSubscription($request)
     {
         require_once (dirname(__FILE__) . '/Model/GetSubscriptionResponse.php');
-        return MWSSubscriptionsService_Model_GetSubscriptionResponse::fromXML($this->_invoke('GetSubscription'));
+        return GetSubscriptionResponse::fromXML($this->_invoke('GetSubscription'));
     }
 
     /**
      * List Registered Destinations
      * List all the destinations for the specified seller created by the developer.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_ListRegisteredDestinations request or MWSSubscriptionsService_Model_ListRegisteredDestinations object itself
-     * @see MWSSubscriptionsService_Model_ListRegisteredDestinations
-     * @return MWSSubscriptionsService_Model_ListRegisteredDestinationsResponse
+     * @param mixed $request array of parameters for ListRegisteredDestinations request or ListRegisteredDestinations object itself
+     * @see ListRegisteredDestinations
+     * @return ListRegisteredDestinationsResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function listRegisteredDestinations($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsResponse.php');
-        return MWSSubscriptionsService_Model_ListRegisteredDestinationsResponse::fromXML($this->_invoke('ListRegisteredDestinations'));
+        return ListRegisteredDestinationsResponse::fromXML($this->_invoke('ListRegisteredDestinations'));
     }
 
     /**
      * List Subscriptions
      * List all the subscriptions for the specified seller created by the current developer.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_ListSubscriptions request or MWSSubscriptionsService_Model_ListSubscriptions object itself
-     * @see MWSSubscriptionsService_Model_ListSubscriptions
-     * @return MWSSubscriptionsService_Model_ListSubscriptionsResponse
+     * @param mixed $request array of parameters for ListSubscriptions request or ListSubscriptions object itself
+     * @see ListSubscriptions
+     * @return ListSubscriptionsResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function listSubscriptions($request)
     {
         require_once (dirname(__FILE__) . '/Model/ListSubscriptionsResponse.php');
-        return MWSSubscriptionsService_Model_ListSubscriptionsResponse::fromXML($this->_invoke('ListSubscriptions'));
+        return ListSubscriptionsResponse::fromXML($this->_invoke('ListSubscriptions'));
     }
 
     /**
      * Register Destination
      * Create a new destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_RegisterDestination request or MWSSubscriptionsService_Model_RegisterDestination object itself
-     * @see MWSSubscriptionsService_Model_RegisterDestination
-     * @return MWSSubscriptionsService_Model_RegisterDestinationResponse
+     * @param mixed $request array of parameters for RegisterDestination request or RegisterDestination object itself
+     * @see RegisterDestination
+     * @return RegisterDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function registerDestination($request)
     {
         require_once (dirname(__FILE__) . '/Model/RegisterDestinationResponse.php');
-        return MWSSubscriptionsService_Model_RegisterDestinationResponse::fromXML($this->_invoke('RegisterDestination'));
+        return RegisterDestinationResponse::fromXML($this->_invoke('RegisterDestination'));
     }
 
     /**
      * Send Test Notification To Destination
      * Send a test Notification to the specified destination.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_SendTestNotificationToDestination request or MWSSubscriptionsService_Model_SendTestNotificationToDestination object itself
-     * @see MWSSubscriptionsService_Model_SendTestNotificationToDestination
-     * @return MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse
+     * @param mixed $request array of parameters for SendTestNotificationToDestination request or SendTestNotificationToDestination object itself
+     * @see SendTestNotificationToDestination
+     * @return SendTestNotificationToDestinationResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function sendTestNotificationToDestination($request)
     {
         require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationResponse.php');
-        return MWSSubscriptionsService_Model_SendTestNotificationToDestinationResponse::fromXML($this->_invoke('SendTestNotificationToDestination'));
+        return SendTestNotificationToDestinationResponse::fromXML($this->_invoke('SendTestNotificationToDestination'));
     }
 
     /**
      * Update Subscription
      * Update a subscription.
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_UpdateSubscription request or MWSSubscriptionsService_Model_UpdateSubscription object itself
-     * @see MWSSubscriptionsService_Model_UpdateSubscription
-     * @return MWSSubscriptionsService_Model_UpdateSubscriptionResponse
+     * @param mixed $request array of parameters for UpdateSubscription request or UpdateSubscription object itself
+     * @see UpdateSubscription
+     * @return UpdateSubscriptionResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function updateSubscription($request)
     {
         require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionResponse.php');
-        return MWSSubscriptionsService_Model_UpdateSubscriptionResponse::fromXML($this->_invoke('UpdateSubscription'));
+        return UpdateSubscriptionResponse::fromXML($this->_invoke('UpdateSubscription'));
     }
 
     /**
      * Get Service Status
-     * 
      *
-     * @param mixed $request array of parameters for MWSSubscriptionsService_Model_GetServiceStatus request or MWSSubscriptionsService_Model_GetServiceStatus object itself
-     * @see MWSSubscriptionsService_Model_GetServiceStatus
-     * @return MWSSubscriptionsService_Model_GetServiceStatusResponse
+     *
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
+     * @see GetServiceStatus
+     * @return GetServiceStatusResponse
      *
      * @throws MWSSubscriptionsService_Exception
      */
     public function getServiceStatus($request)
     {
         require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
-        return MWSSubscriptionsService_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
+        return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
     // Private API ------------------------------------------------------------//

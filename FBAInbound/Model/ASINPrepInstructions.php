@@ -1,44 +1,22 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAInbound\Model;
+
+/**
+ * ASINPrepInstructions
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
-
-/**
- *  @see FBAInboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAInboundServiceMWS_Model_ASINPrepInstructions
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ASIN: string</li>
  * <li>BarcodeInstruction: string</li>
  * <li>PrepGuidance: string</li>
- * <li>PrepInstructionList: FBAInboundServiceMWS_Model_PrepInstructionList</li>
+ * <li>PrepInstructionList: PrepInstructionList</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceMWS_Model {
+ class ASINPrepInstructions extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
@@ -46,7 +24,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
     'BarcodeInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PrepGuidance' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_PrepInstructionList'),
+    'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => 'PrepInstructionList'),
     );
     parent::__construct($data);
     }
@@ -202,7 +180,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PrepInstructionList property.
      *
-     * @param FBAInboundServiceMWS_Model_PrepInstructionList prepInstructionList
+     * @param PrepInstructionList prepInstructionList
      * @return this instance
      */
     public function setPrepInstructionList($value)

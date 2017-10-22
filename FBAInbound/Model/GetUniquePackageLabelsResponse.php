@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,26 +9,26 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse
- * 
+ * GetUniquePackageLabelsResponse
+ *
  * Properties:
  * <ul>
- * 
- * <li>GetUniquePackageLabelsResult: FBAInboundServiceMWS_Model_GetUniquePackageLabelsResult</li>
- * <li>ResponseMetadata: FBAInboundServiceMWS_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: FBAInboundServiceMWS_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>GetUniquePackageLabelsResult: GetUniquePackageLabelsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse extends FBAInboundServiceMWS_Model {
+ class GetUniquePackageLabelsResponse extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_GetUniquePackageLabelsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_ResponseHeaderMetadata'),
+    'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'GetUniquePackageLabelsResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +46,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GetUniquePackageLabelsResult property.
      *
-     * @param FBAInboundServiceMWS_Model_GetUniquePackageLabelsResult getUniquePackageLabelsResult
+     * @param GetUniquePackageLabelsResult getUniquePackageLabelsResult
      * @return this instance
      */
     public function setGetUniquePackageLabelsResult($value)
@@ -108,7 +92,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param FBAInboundServiceMWS_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +138,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param FBAInboundServiceMWS_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +171,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse from XML string
-     * 
+     * Construct GetUniquePackageLabelsResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse 
+     * @return GetUniquePackageLabelsResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +185,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetUniquePackageLabelsResponse']");
         if ($response->length == 1) {
-            return new FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse(($response->item(0))); 
+            return new GetUniquePackageLabelsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse from provided XML. 
+            throw new Exception ("Unable to construct GetUniquePackageLabelsResponse from provided XML.
                                   Make sure that GetUniquePackageLabelsResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetUniquePackageLabelsResponse xmlns=\"http://mws.amazonaws.com/FulfillmentInboundShipment/2010-10-01/\">";

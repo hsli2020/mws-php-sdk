@@ -1,47 +1,26 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * FeesEstimateIdentifier
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>MarketplaceId: string</li>
  * <li>SellerId: string</li>
  * <li>IdType: string</li>
  * <li>IdValue: string</li>
  * <li>IsAmazonFulfilled: bool</li>
- * <li>PriceToEstimateFees: MarketplaceWebServiceProducts_Model_PriceToEstimateFees</li>
+ * <li>PriceToEstimateFees: PriceToEstimateFees</li>
  * <li>SellerInputIdentifier: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_FeesEstimateIdentifier extends MarketplaceWebServiceProducts_Model {
+ class FeesEstimateIdentifier extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
@@ -51,7 +30,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'IdType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'IdValue' => array('FieldValue' => null, 'FieldType' => 'string'),
     'IsAmazonFulfilled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PriceToEstimateFees' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceToEstimateFees'),
+    'PriceToEstimateFees' => array('FieldValue' => null, 'FieldType' => 'PriceToEstimateFees'),
     'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -310,7 +289,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PriceToEstimateFees property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceToEstimateFees priceToEstimateFees
+     * @param PriceToEstimateFees priceToEstimateFees
      * @return this instance
      */
     public function setPriceToEstimateFees($value)

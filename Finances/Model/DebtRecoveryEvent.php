@@ -1,54 +1,32 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+/**
+ * DebtRecoveryEvent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_DebtRecoveryEvent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>DebtRecoveryType: string</li>
- * <li>RecoveryAmount: MWSFinancesService_Model_Currency</li>
- * <li>OverPaymentCredit: MWSFinancesService_Model_Currency</li>
+ * <li>RecoveryAmount: Currency</li>
+ * <li>OverPaymentCredit: Currency</li>
  * <li>DebtRecoveryItemList: array</li>
  * <li>ChargeInstrumentList: array</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_DebtRecoveryEvent extends MWSFinancesService_Model {
+ class DebtRecoveryEvent extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'DebtRecoveryType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'OverPaymentCredit' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
-    'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
+    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'OverPaymentCredit' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
+    'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
     );
     parent::__construct($data);
     }
@@ -112,7 +90,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the RecoveryAmount property.
      *
-     * @param MWSFinancesService_Model_Currency recoveryAmount
+     * @param Currency recoveryAmount
      * @return this instance
      */
     public function setRecoveryAmount($value)
@@ -158,7 +136,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OverPaymentCredit property.
      *
-     * @param MWSFinancesService_Model_Currency overPaymentCredit
+     * @param Currency overPaymentCredit
      * @return this instance
      */
     public function setOverPaymentCredit($value)

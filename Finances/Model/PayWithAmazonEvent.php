@@ -1,40 +1,19 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+
+/**
+ * PayWithAmazonEvent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_PayWithAmazonEvent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>SellerOrderId: string</li>
  * <li>TransactionPostedDate: string</li>
  * <li>BusinessObjectType: string</li>
  * <li>SalesChannel: string</li>
- * <li>Charge: MWSFinancesService_Model_ChargeComponent</li>
+ * <li>Charge: ChargeComponent</li>
  * <li>FeeList: array</li>
  * <li>PaymentAmountType: string</li>
  * <li>AmountDescription: string</li>
@@ -44,7 +23,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSFinancesService_Model_PayWithAmazonEvent extends MWSFinancesService_Model {
+ class PayWithAmazonEvent extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
@@ -53,8 +32,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'TransactionPostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'BusinessObjectType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Charge' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_ChargeComponent'),
-    'FeeList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+    'Charge' => array('FieldValue' => null, 'FieldType' => 'ChargeComponent'),
+    'FeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
     'PaymentAmountType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmountDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
@@ -260,7 +239,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Charge property.
      *
-     * @param MWSFinancesService_Model_ChargeComponent charge
+     * @param ChargeComponent charge
      * @return this instance
      */
     public function setCharge($value)

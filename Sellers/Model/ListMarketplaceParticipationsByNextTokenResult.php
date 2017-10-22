@@ -1,50 +1,28 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Sellers\Model;
+
+/**
+ * ListMarketplaceParticipationsByNextTokenResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Sellers
- * @version  2011-07-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 20:37:51 GMT 2015
- */
-
-/**
- *  @see MarketplaceWebServiceSellers_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResult
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>NextToken: string</li>
- * <li>ListParticipations: MarketplaceWebServiceSellers_Model_ListParticipations</li>
- * <li>ListMarketplaces: MarketplaceWebServiceSellers_Model_ListMarketplaces</li>
+ * <li>ListParticipations: ListParticipations</li>
+ * <li>ListMarketplaces: ListMarketplaces</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceSellers_Model_ListMarketplaceParticipationsByNextTokenResult extends MarketplaceWebServiceSellers_Model {
+ class ListMarketplaceParticipationsByNextTokenResult extends MarketplaceWebServiceSellers_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ListParticipations' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceSellers_Model_ListParticipations'),
-    'ListMarketplaces' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceSellers_Model_ListMarketplaces'),
+    'ListParticipations' => array('FieldValue' => null, 'FieldType' => 'ListParticipations'),
+    'ListMarketplaces' => array('FieldValue' => null, 'FieldType' => 'ListMarketplaces'),
     );
     parent::__construct($data);
     }
@@ -108,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListParticipations property.
      *
-     * @param MarketplaceWebServiceSellers_Model_ListParticipations listParticipations
+     * @param ListParticipations listParticipations
      * @return this instance
      */
     public function setListParticipations($value)
@@ -154,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListMarketplaces property.
      *
-     * @param MarketplaceWebServiceSellers_Model_ListMarketplaces listMarketplaces
+     * @param ListMarketplaces listMarketplaces
      * @return this instance
      */
     public function setListMarketplaces($value)

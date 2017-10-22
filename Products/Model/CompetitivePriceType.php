@@ -1,37 +1,16 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Products\Model;
+
+
+/**
+ * CompetitivePriceType
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
-
-/**
- *  @see MarketplaceWebServiceProducts_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MarketplaceWebServiceProducts_Model_CompetitivePriceType
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>CompetitivePriceId: string</li>
- * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
+ * <li>Price: PriceType</li>
  * <li>condition: string</li>
  * <li>subcondition: string</li>
  * <li>belongsToRequester: bool</li>
@@ -39,13 +18,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends MarketplaceWebServiceProducts_Model {
+ class CompetitivePriceType extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Price' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+    'Price' => array('FieldValue' => null, 'FieldType' => 'PriceType'),
     'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
     'subcondition' => array('FieldValue' => null, 'FieldType' => '@string'),
     'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
@@ -112,7 +91,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Price property.
      *
-     * @param MarketplaceWebServiceProducts_Model_PriceType price
+     * @param PriceType price
      * @return this instance
      */
     public function setPrice($value)

@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,26 +9,26 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_ConfirmPreorderResponse
- * 
+ * ConfirmPreorderResponse
+ *
  * Properties:
  * <ul>
- * 
- * <li>ConfirmPreorderResult: FBAInboundServiceMWS_Model_ConfirmPreorderResult</li>
- * <li>ResponseMetadata: FBAInboundServiceMWS_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: FBAInboundServiceMWS_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>ConfirmPreorderResult: ConfirmPreorderResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_ConfirmPreorderResponse extends FBAInboundServiceMWS_Model {
+ class ConfirmPreorderResponse extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ConfirmPreorderResult' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_ConfirmPreorderResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_ResponseHeaderMetadata'),
+    'ConfirmPreorderResult' => array('FieldValue' => null, 'FieldType' => 'ConfirmPreorderResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +46,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ConfirmPreorderResult property.
      *
-     * @param FBAInboundServiceMWS_Model_ConfirmPreorderResult confirmPreorderResult
+     * @param ConfirmPreorderResult confirmPreorderResult
      * @return this instance
      */
     public function setConfirmPreorderResult($value)
@@ -108,7 +92,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param FBAInboundServiceMWS_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +138,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param FBAInboundServiceMWS_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +171,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct FBAInboundServiceMWS_Model_ConfirmPreorderResponse from XML string
-     * 
+     * Construct ConfirmPreorderResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return FBAInboundServiceMWS_Model_ConfirmPreorderResponse 
+     * @return ConfirmPreorderResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +185,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ConfirmPreorderResponse']");
         if ($response->length == 1) {
-            return new FBAInboundServiceMWS_Model_ConfirmPreorderResponse(($response->item(0))); 
+            return new ConfirmPreorderResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct FBAInboundServiceMWS_Model_ConfirmPreorderResponse from provided XML. 
+            throw new Exception ("Unable to construct ConfirmPreorderResponse from provided XML.
                                   Make sure that ConfirmPreorderResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<ConfirmPreorderResponse xmlns=\"http://mws.amazonaws.com/FulfillmentInboundShipment/2010-10-01/\">";

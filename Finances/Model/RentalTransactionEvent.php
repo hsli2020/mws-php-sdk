@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+
+/**
+ * RentalTransactionEvent
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_RentalTransactionEvent
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonOrderId: string</li>
  * <li>RentalEventType: string</li>
  * <li>ExtensionLength: int</li>
@@ -37,13 +16,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>RentalChargeList: array</li>
  * <li>RentalFeeList: array</li>
  * <li>MarketplaceName: string</li>
- * <li>RentalInitialValue: MWSFinancesService_Model_Currency</li>
- * <li>RentalReimbursement: MWSFinancesService_Model_Currency</li>
+ * <li>RentalInitialValue: Currency</li>
+ * <li>RentalReimbursement: Currency</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_RentalTransactionEvent extends MWSFinancesService_Model {
+ class RentalTransactionEvent extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
@@ -52,11 +31,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'RentalEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ExtensionLength' => array('FieldValue' => null, 'FieldType' => 'int'),
     'PostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RentalChargeList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-    'RentalFeeList' => array('FieldValue' => array(), 'FieldType' => array('MWSFinancesService_Model_FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+    'RentalChargeList' => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+    'RentalFeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
     'MarketplaceName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RentalInitialValue' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'RentalInitialValue' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     );
     parent::__construct($data);
     }
@@ -432,7 +411,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the RentalInitialValue property.
      *
-     * @param MWSFinancesService_Model_Currency rentalInitialValue
+     * @param Currency rentalInitialValue
      * @return this instance
      */
     public function setRentalInitialValue($value)
@@ -478,7 +457,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the RentalReimbursement property.
      *
-     * @param MWSFinancesService_Model_Currency rentalReimbursement
+     * @param Currency rentalReimbursement
      * @return this instance
      */
     public function setRentalReimbursement($value)

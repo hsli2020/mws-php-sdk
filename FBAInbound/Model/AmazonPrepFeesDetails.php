@@ -1,50 +1,25 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\FBAInbound\Model;
+
+/**
+ * AmazonPrepFeesDetails
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
-
-/**
- *  @see FBAInboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * FBAInboundServiceMWS_Model_AmazonPrepFeesDetails
- * 
  * Properties:
  * <ul>
- * 
  * <li>PrepInstruction: string</li>
- * <li>FeePerUnit: FBAInboundServiceMWS_Model_Amount</li>
- *
+ * <li>FeePerUnit: Amount</li>
  * </ul>
  */
-
- class FBAInboundServiceMWS_Model_AmazonPrepFeesDetails extends FBAInboundServiceMWS_Model {
-
+class AmazonPrepFeesDetails extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_Amount'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'Amount'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -106,7 +81,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the FeePerUnit property.
      *
-     * @param FBAInboundServiceMWS_Model_Amount feePerUnit
+     * @param Amount feePerUnit
      * @return this instance
      */
     public function setFeePerUnit($value)
@@ -122,8 +97,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFeePerUnit()
     {
-                return !is_null($this->_fields['FeePerUnit']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeePerUnit']['FieldValue']);
+    }
 
     /**
      * Set the value of FeePerUnit, return this.
@@ -138,5 +113,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setFeePerUnit($value);
         return $this;
     }
-
 }

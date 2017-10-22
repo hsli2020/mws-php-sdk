@@ -1,35 +1,14 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\MerchantFulfillment\Model;
+
+
+/**
+ * GetEligibleShippingServicesResult
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Merchant Fulfillment Service
- * @version  2015-06-01
- * Library Version: 2016-03-30
- * Generated: Tue Mar 29 19:00:01 UTC 2016
- */
-
-/**
- *  @see MWSMerchantFulfillmentService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResult
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>ShippingServiceList: array</li>
  * <li>TemporarilyUnavailableCarrierList: array</li>
  * <li>TermsAndConditionsNotAcceptedCarrierList: array</li>
@@ -37,14 +16,14 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MWSMerchantFulfillmentService_Model_GetEligibleShippingServicesResult extends MWSMerchantFulfillmentService_Model {
+ class GetEligibleShippingServicesResult extends MWSMerchantFulfillmentService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ShippingServiceList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_ShippingService'), 'ListMemberName' => 'ShippingService'),
-    'TemporarilyUnavailableCarrierList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_TemporarilyUnavailableCarrier'), 'ListMemberName' => 'TemporarilyUnavailableCarrier'),
-    'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array('MWSMerchantFulfillmentService_Model_TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
+    'ShippingServiceList' => array('FieldValue' => array(), 'FieldType' => array('ShippingService'), 'ListMemberName' => 'ShippingService'),
+    'TemporarilyUnavailableCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TemporarilyUnavailableCarrier'), 'ListMemberName' => 'TemporarilyUnavailableCarrier'),
+    'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
     );
     parent::__construct($data);
     }

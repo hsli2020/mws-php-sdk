@@ -1,50 +1,29 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Recommendations\Model;
+
+
+/**
+ * GetLastUpdatedTimeForRecommendationsResponse
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Recommendations Section Service
- * @version  2013-04-01
- * Library Version: 2015-06-18
- * Generated: Thu Jun 18 19:29:34 GMT 2015
- */
-
-/**
- *  @see MWSRecommendationsSectionService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse
- * 
  * Properties:
  * <ul>
- * 
- * <li>GetLastUpdatedTimeForRecommendationsResult: MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResult</li>
- * <li>ResponseMetadata: MWSRecommendationsSectionService_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MWSRecommendationsSectionService_Model_ResponseHeaderMetadata</li>
+ *
+ * <li>GetLastUpdatedTimeForRecommendationsResult: GetLastUpdatedTimeForRecommendationsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse extends MWSRecommendationsSectionService_Model {
+ class GetLastUpdatedTimeForRecommendationsResponse extends MWSRecommendationsSectionService_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'GetLastUpdatedTimeForRecommendationsResult' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ResponseHeaderMetadata'),
+    'GetLastUpdatedTimeForRecommendationsResult' => array('FieldValue' => null, 'FieldType' => 'GetLastUpdatedTimeForRecommendationsResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,7 +41,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GetLastUpdatedTimeForRecommendationsResult property.
      *
-     * @param MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResult getLastUpdatedTimeForRecommendationsResult
+     * @param GetLastUpdatedTimeForRecommendationsResult getLastUpdatedTimeForRecommendationsResult
      * @return this instance
      */
     public function setGetLastUpdatedTimeForRecommendationsResult($value)
@@ -108,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MWSRecommendationsSectionService_Model_ResponseMetadata responseMetadata
+     * @param ResponseMetadata responseMetadata
      * @return this instance
      */
     public function setResponseMetadata($value)
@@ -154,7 +133,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MWSRecommendationsSectionService_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @param ResponseHeaderMetadata responseHeaderMetadata
      * @return this instance
      */
     public function setResponseHeaderMetadata($value)
@@ -187,12 +166,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse from XML string
-     * 
+     * Construct GetLastUpdatedTimeForRecommendationsResponse from XML string
+     *
      * @param $xml
      *        XML string to construct from
      *
-     * @return MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse 
+     * @return GetLastUpdatedTimeForRecommendationsResponse
      */
     public static function fromXML($xml)
     {
@@ -201,18 +180,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetLastUpdatedTimeForRecommendationsResponse']");
         if ($response->length == 1) {
-            return new MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse(($response->item(0))); 
+            return new GetLastUpdatedTimeForRecommendationsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MWSRecommendationsSectionService_Model_GetLastUpdatedTimeForRecommendationsResponse from provided XML. 
+            throw new Exception ("Unable to construct GetLastUpdatedTimeForRecommendationsResponse from provided XML.
                                   Make sure that GetLastUpdatedTimeForRecommendationsResponse is a root element");
         }
     }
     /**
      * XML Representation for this object
-     * 
+     *
      * @return string XML for this object
      */
-    public function toXML() 
+    public function toXML()
     {
         $xml = "";
         $xml .= "<GetLastUpdatedTimeForRecommendationsResponse xmlns=\"https://mws.amazonservices.com/Recommendations/2013-04-01\">";

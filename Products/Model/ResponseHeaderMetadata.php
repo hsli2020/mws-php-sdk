@@ -1,23 +1,8 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  Marketplace Web Service Products
- * @version  2011-10-01
- * Library Version: 2016-06-01
- * Generated: Mon Jun 13 10:07:56 PDT 2016
- */
 
-class MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata {
+namespace Amazon\MWS\Products\Model;
+
+class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';
   const RESPONSE_CONTEXT = 'x-mws-response-context';
@@ -81,7 +66,7 @@ class MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata {
   }
 
   public function __toString() {
-    return "RequestId: " . $this->getRequestId() . ", ResponseContext: " . $this->getResponseContext() . 
+    return "RequestId: " . $this->getRequestId() . ", ResponseContext: " . $this->getResponseContext() .
       ", Timestamp: " . $this->getTimestamp() . ", Quota Max: " . $this->getQuotaMax() .
       ", Quota Remaining: " . $this->getQuotaRemaining() . ", Quota Resets At: " . $this->getQuotaResetsAt();
   }

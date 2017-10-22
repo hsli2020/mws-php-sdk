@@ -1,51 +1,30 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2015 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+
+namespace Amazon\MWS\Finances\Model;
+
+
+/**
+ * FinancialEventGroup
  *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  MWS Finances Service
- * @version  2015-05-01
- * Library Version: 2015-09-03
- * Generated: Thu Sep 03 17:55:25 GMT 2015
- */
-
-/**
- *  @see MWSFinancesService_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
-
-/**
- * MWSFinancesService_Model_FinancialEventGroup
- * 
  * Properties:
  * <ul>
- * 
+ *
  * <li>FinancialEventGroupId: string</li>
  * <li>ProcessingStatus: string</li>
  * <li>FundTransferStatus: string</li>
- * <li>OriginalTotal: MWSFinancesService_Model_Currency</li>
- * <li>ConvertedTotal: MWSFinancesService_Model_Currency</li>
+ * <li>OriginalTotal: Currency</li>
+ * <li>ConvertedTotal: Currency</li>
  * <li>FundTransferDate: string</li>
  * <li>TraceId: string</li>
  * <li>AccountTail: string</li>
- * <li>BeginningBalance: MWSFinancesService_Model_Currency</li>
+ * <li>BeginningBalance: Currency</li>
  * <li>FinancialEventGroupStart: string</li>
  * <li>FinancialEventGroupEnd: string</li>
  *
  * </ul>
  */
 
- class MWSFinancesService_Model_FinancialEventGroup extends MWSFinancesService_Model {
+ class FinancialEventGroup extends MWSFinancesService_Model {
 
     public function __construct($data = null)
     {
@@ -53,12 +32,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'FinancialEventGroupId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FundTransferStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OriginalTotal' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
-    'ConvertedTotal' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'OriginalTotal' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+    'ConvertedTotal' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     'FundTransferDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'TraceId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AccountTail' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BeginningBalance' => array('FieldValue' => null, 'FieldType' => 'MWSFinancesService_Model_Currency'),
+    'BeginningBalance' => array('FieldValue' => null, 'FieldType' => 'Currency'),
     'FinancialEventGroupStart' => array('FieldValue' => null, 'FieldType' => 'string'),
     'FinancialEventGroupEnd' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
@@ -216,7 +195,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the OriginalTotal property.
      *
-     * @param MWSFinancesService_Model_Currency originalTotal
+     * @param Currency originalTotal
      * @return this instance
      */
     public function setOriginalTotal($value)
@@ -262,7 +241,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ConvertedTotal property.
      *
-     * @param MWSFinancesService_Model_Currency convertedTotal
+     * @param Currency convertedTotal
      * @return this instance
      */
     public function setConvertedTotal($value)
@@ -446,7 +425,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BeginningBalance property.
      *
-     * @param MWSFinancesService_Model_Currency beginningBalance
+     * @param Currency beginningBalance
      * @return this instance
      */
     public function setBeginningBalance($value)

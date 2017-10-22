@@ -1,22 +1,6 @@
 <?php
-/*******************************************************************************
- * Copyright 2009-2016 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
- *
- * You may not use this file except in compliance with the License. 
- * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
- * specific language governing permissions and limitations under the License.
- *******************************************************************************
- * PHP Version 5
- * @category Amazon
- * @package  FBA Inbound Service MWS
- * @version  2010-10-01
- * Library Version: 2016-07-01
- * Generated: Thu Jul 07 07:25:57 PDT 2016
- */
 
+namespace Amazon\MWS\FBAInbound\Model;
 /**
  *  @see FBAInboundServiceMWS_Model
  */
@@ -25,24 +9,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * FBAInboundServiceMWS_Model_GetPrepInstructionsForSKUResult
- * 
+ * GetPrepInstructionsForSKUResult
+ *
  * Properties:
  * <ul>
- * 
- * <li>SKUPrepInstructionsList: FBAInboundServiceMWS_Model_SKUPrepInstructionsList</li>
- * <li>InvalidSKUList: FBAInboundServiceMWS_Model_InvalidSKUList</li>
+ *
+ * <li>SKUPrepInstructionsList: SKUPrepInstructionsList</li>
+ * <li>InvalidSKUList: InvalidSKUList</li>
  *
  * </ul>
  */
 
- class FBAInboundServiceMWS_Model_GetPrepInstructionsForSKUResult extends FBAInboundServiceMWS_Model {
+ class GetPrepInstructionsForSKUResult extends FBAInboundServiceMWS_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_SKUPrepInstructionsList'),
-    'InvalidSKUList' => array('FieldValue' => null, 'FieldType' => 'FBAInboundServiceMWS_Model_InvalidSKUList'),
+    'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'SKUPrepInstructionsList'),
+    'InvalidSKUList' => array('FieldValue' => null, 'FieldType' => 'InvalidSKUList'),
     );
     parent::__construct($data);
     }
@@ -60,7 +44,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SKUPrepInstructionsList property.
      *
-     * @param FBAInboundServiceMWS_Model_SKUPrepInstructionsList skuPrepInstructionsList
+     * @param SKUPrepInstructionsList skuPrepInstructionsList
      * @return this instance
      */
     public function setSKUPrepInstructionsList($value)
@@ -106,7 +90,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvalidSKUList property.
      *
-     * @param FBAInboundServiceMWS_Model_InvalidSKUList invalidSKUList
+     * @param InvalidSKUList invalidSKUList
      * @return this instance
      */
     public function setInvalidSKUList($value)

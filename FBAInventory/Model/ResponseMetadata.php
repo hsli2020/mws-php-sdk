@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * ResponseMetadata
  *
@@ -10,14 +12,14 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>RequestId: string</li>
  * </ul>
  */
-class ResponseMetadata extends FBAInventoryServiceMWS_Model {
-
+class ResponseMetadata extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -49,8 +51,8 @@ class ResponseMetadata extends FBAInventoryServiceMWS_Model {
      */
     public function isSetRequestId()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RequestId']['FieldValue']);
+    }
 
     /**
      * Set the value of RequestId, return this.
@@ -65,5 +67,4 @@ class ResponseMetadata extends FBAInventoryServiceMWS_Model {
         $this->setRequestId($value);
         return $this;
     }
-
 }

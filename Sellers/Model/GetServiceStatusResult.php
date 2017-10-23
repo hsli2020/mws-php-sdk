@@ -2,31 +2,30 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * GetServiceStatusResult
  *
  * Properties:
  * <ul>
- *
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
  * <li>MessageId: string</li>
  * <li>Messages: MessageList</li>
- *
  * </ul>
  */
-
- class GetServiceStatusResult extends MarketplaceWebServiceSellers_Model {
-
+class GetServiceStatusResult extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Messages' => array('FieldValue' => null, 'FieldType' => 'MessageList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Messages'  => array('FieldValue' => null, 'FieldType' => 'MessageList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +57,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -104,8 +103,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return !is_null($this->_fields['Timestamp']['FieldValue']);
+    }
 
     /**
      * Set the value of Timestamp, return this.
@@ -150,8 +149,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetMessageId()
     {
-                return !is_null($this->_fields['MessageId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MessageId']['FieldValue']);
+    }
 
     /**
      * Set the value of MessageId, return this.
@@ -196,8 +195,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetMessages()
     {
-                return !is_null($this->_fields['Messages']['FieldValue']);
-            }
+        return !is_null($this->_fields['Messages']['FieldValue']);
+    }
 
     /**
      * Set the value of Messages, return this.
@@ -212,5 +211,4 @@ namespace Amazon\MWS\Sellers\Model;
         $this->setMessages($value);
         return $this;
     }
-
 }

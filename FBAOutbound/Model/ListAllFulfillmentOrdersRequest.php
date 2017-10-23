@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * ListAllFulfillmentOrdersRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
  * <li>QueryStartDateTime: string</li>
  * <li>FulfillmentMethod: FulfillmentMethodList</li>
- *
  * </ul>
  */
-
- class ListAllFulfillmentOrdersRequest extends FBAOutboundServiceMWS_Model {
-
+class ListAllFulfillmentOrdersRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentMethod' => array('FieldValue' => null, 'FieldType' => 'FulfillmentMethodList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentMethod'  => array('FieldValue' => null, 'FieldType' => 'FulfillmentMethodList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetQueryStartDateTime()
     {
-                return !is_null($this->_fields['QueryStartDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['QueryStartDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of QueryStartDateTime, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentMethod()
     {
-                return !is_null($this->_fields['FulfillmentMethod']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentMethod']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentMethod, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentMethod($value);
         return $this;
     }
-
 }

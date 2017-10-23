@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * OfferCountType
  *
  * Properties:
  * <ul>
- *
  * <li>condition: string</li>
  * <li>fulfillmentChannel: string</li>
  * <li>OfferCount: int</li>
- *
  * </ul>
  */
-
- class OfferCountType extends MarketplaceWebServiceProducts_Model {
-
+class OfferCountType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'fulfillmentChannel' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'OfferCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
+            'fulfillmentChannel' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'OfferCount'         => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetcondition()
     {
-                return !is_null($this->_fields['condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['condition']['FieldValue']);
+    }
 
     /**
      * Set the value of condition, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetfulfillmentChannel()
     {
-                return !is_null($this->_fields['fulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['fulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of fulfillmentChannel, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetOfferCount()
     {
-                return !is_null($this->_fields['OfferCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['OfferCount']['FieldValue']);
+    }
 
     /**
      * Set the value of OfferCount, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setOfferCount($value);
         return $this;
     }
-
 }

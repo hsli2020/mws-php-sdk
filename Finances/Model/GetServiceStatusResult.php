@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * GetServiceStatusResult
  *
  * Properties:
  * <ul>
- *
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
- *
  * </ul>
  */
-
- class GetServiceStatusResult extends MWSFinancesService_Model {
-
+class GetServiceStatusResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return !is_null($this->_fields['Timestamp']['FieldValue']);
+    }
 
     /**
      * Set the value of Timestamp, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setTimestamp($value);
         return $this;
     }
-
 }

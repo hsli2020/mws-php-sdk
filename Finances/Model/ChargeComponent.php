@@ -2,27 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * ChargeComponent
  *
  * Properties:
  * <ul>
- *
  * <li>ChargeType: string</li>
  * <li>ChargeAmount: Currency</li>
- *
  * </ul>
  */
-
- class ChargeComponent extends MWSFinancesService_Model {
-
+class ChargeComponent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ChargeType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ChargeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ChargeType'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ChargeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetChargeType()
     {
-                return !is_null($this->_fields['ChargeType']['FieldValue']);
-            }
+        return !is_null($this->_fields['ChargeType']['FieldValue']);
+    }
 
     /**
      * Set the value of ChargeType, return this.
@@ -100,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetChargeAmount()
     {
-                return !is_null($this->_fields['ChargeAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['ChargeAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of ChargeAmount, return this.
@@ -116,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setChargeAmount($value);
         return $this;
     }
-
 }

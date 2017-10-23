@@ -1,38 +1,31 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetPreorderInfoRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
  * <li>ShipmentId: string</li>
- *
  * </ul>
  */
-
- class GetPreorderInfoRequest extends FBAInboundServiceMWS_Model {
-
+class GetPreorderInfoRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentId'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,8 +57,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -110,8 +103,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -156,8 +149,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -202,8 +195,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -218,5 +211,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setShipmentId($value);
         return $this;
     }
-
 }

@@ -7,22 +7,19 @@ namespace Amazon\MWS\Finances\Model;
  *
  * Properties:
  * <ul>
- *
  * <li>CurrencyCode: string</li>
  * <li>CurrencyAmount: float</li>
- *
  * </ul>
  */
-
- class Currency extends MWSFinancesService_Model {
-
+class Currency extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CurrencyAmount' => array('FieldValue' => null, 'FieldType' => 'float'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CurrencyCode'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CurrencyAmount' => array('FieldValue' => null, 'FieldType' => 'float'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +51,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetCurrencyCode()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrencyCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrencyCode, return this.
@@ -100,8 +97,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetCurrencyAmount()
     {
-                return !is_null($this->_fields['CurrencyAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrencyAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrencyAmount, return this.
@@ -116,5 +113,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setCurrencyAmount($value);
         return $this;
     }
-
 }

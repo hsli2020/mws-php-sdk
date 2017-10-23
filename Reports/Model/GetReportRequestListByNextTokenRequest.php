@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListByNextTokenRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>NextToken: string</li>
- *
  * </ul>
  */
-class GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
+class GetReportRequestListByNextTokenRequest extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListByNextTokenRequest
      *
@@ -28,25 +23,23 @@ class GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>NextToken: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NextToken'    => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -170,7 +163,6 @@ class GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if MWSAuthToken is set
      *
@@ -215,7 +207,6 @@ class GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if NextToken is set
      *
@@ -225,8 +216,4 @@ class GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['NextToken']['FieldValue']);
     }
-
-
-
-
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
+
 /**
  * CreateFulfillmentOrderItem
  *
@@ -19,23 +21,23 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>PerUnitTax: Currency</li>
  * </ul>
  */
-class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
-
+class CreateFulfillmentOrderItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'GiftMessage' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DisplayableComment' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItemDisposition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PerUnitDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'PerUnitPrice' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'PerUnitTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'                    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'                     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'GiftMessage'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DisplayableComment'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentNetworkSKU'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderItemDisposition'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PerUnitDeclaredValue'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PerUnitPrice'                 => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PerUnitTax'                   => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -67,8 +69,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -113,8 +115,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetSellerFulfillmentOrderItemId()
     {
-                return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFulfillmentOrderItemId, return this.
@@ -159,8 +161,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -205,8 +207,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetGiftMessage()
     {
-                return !is_null($this->_fields['GiftMessage']['FieldValue']);
-            }
+        return !is_null($this->_fields['GiftMessage']['FieldValue']);
+    }
 
     /**
      * Set the value of GiftMessage, return this.
@@ -251,8 +253,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetDisplayableComment()
     {
-                return !is_null($this->_fields['DisplayableComment']['FieldValue']);
-            }
+        return !is_null($this->_fields['DisplayableComment']['FieldValue']);
+    }
 
     /**
      * Set the value of DisplayableComment, return this.
@@ -297,8 +299,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetFulfillmentNetworkSKU()
     {
-                return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentNetworkSKU, return this.
@@ -343,8 +345,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetOrderItemDisposition()
     {
-                return !is_null($this->_fields['OrderItemDisposition']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderItemDisposition']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderItemDisposition, return this.
@@ -389,8 +391,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetPerUnitDeclaredValue()
     {
-                return !is_null($this->_fields['PerUnitDeclaredValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['PerUnitDeclaredValue']['FieldValue']);
+    }
 
     /**
      * Set the value of PerUnitDeclaredValue, return this.
@@ -435,8 +437,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetPerUnitPrice()
     {
-                return !is_null($this->_fields['PerUnitPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['PerUnitPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of PerUnitPrice, return this.
@@ -481,8 +483,8 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
      */
     public function isSetPerUnitTax()
     {
-                return !is_null($this->_fields['PerUnitTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['PerUnitTax']['FieldValue']);
+    }
 
     /**
      * Set the value of PerUnitTax, return this.
@@ -497,5 +499,4 @@ class CreateFulfillmentOrderItem extends FBAOutboundServiceMWS_Model {
         $this->setPerUnitTax($value);
         return $this;
     }
-
 }

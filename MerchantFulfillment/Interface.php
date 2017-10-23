@@ -13,7 +13,7 @@ interface MerchantFulfillmentInterface
      * @see CancelShipmentRequest
      * @return CancelShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function cancelShipment($request);
 
@@ -27,7 +27,7 @@ interface MerchantFulfillmentInterface
      * @see CreateShipmentRequest
      * @return CreateShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function createShipment($request);
 
@@ -42,7 +42,7 @@ interface MerchantFulfillmentInterface
      * @see GetEligibleShippingServicesRequest
      * @return GetEligibleShippingServicesResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getEligibleShippingServices($request);
 
@@ -55,7 +55,7 @@ interface MerchantFulfillmentInterface
      * @see GetShipmentRequest
      * @return GetShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getShipment($request);
 
@@ -68,7 +68,7 @@ interface MerchantFulfillmentInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getServiceStatus($request);
 

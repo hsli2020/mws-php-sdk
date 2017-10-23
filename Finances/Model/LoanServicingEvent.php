@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * LoanServicingEvent
  *
  * Properties:
  * <ul>
- *
  * <li>LoanAmount: Currency</li>
  * <li>SourceBusinessEventType: string</li>
- *
  * </ul>
  */
-
- class LoanServicingEvent extends MWSFinancesService_Model {
-
+class LoanServicingEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LoanAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'SourceBusinessEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LoanAmount'              => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'SourceBusinessEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetLoanAmount()
     {
-                return !is_null($this->_fields['LoanAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['LoanAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of LoanAmount, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSourceBusinessEventType()
     {
-                return !is_null($this->_fields['SourceBusinessEventType']['FieldValue']);
-            }
+        return !is_null($this->_fields['SourceBusinessEventType']['FieldValue']);
+    }
 
     /**
      * Set the value of SourceBusinessEventType, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setSourceBusinessEventType($value);
         return $this;
     }
-
 }

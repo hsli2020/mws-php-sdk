@@ -1,42 +1,35 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentPlan
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentId: string</li>
  * <li>DestinationFulfillmentCenterId: string</li>
  * <li>ShipToAddress: Address</li>
  * <li>LabelPrepType: string</li>
  * <li>Items: InboundShipmentPlanItemList</li>
  * <li>EstimatedBoxContentsFee: BoxContentsFeeDetails</li>
- *
  * </ul>
  */
-
- class InboundShipmentPlan extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentPlan extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'LabelPrepType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanItemList'),
-    'EstimatedBoxContentsFee' => array('FieldValue' => null, 'FieldType' => 'BoxContentsFeeDetails'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentId'                     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipToAddress'                  => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'LabelPrepType'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Items'                          => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanItemList'),
+            'EstimatedBoxContentsFee'        => array('FieldValue' => null, 'FieldType' => 'BoxContentsFeeDetails'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -68,8 +61,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -114,8 +107,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetDestinationFulfillmentCenterId()
     {
-                return !is_null($this->_fields['DestinationFulfillmentCenterId']['FieldValue']);
-            }
+        return !is_null($this->_fields['DestinationFulfillmentCenterId']['FieldValue']);
+    }
 
     /**
      * Set the value of DestinationFulfillmentCenterId, return this.
@@ -160,8 +153,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipToAddress()
     {
-                return !is_null($this->_fields['ShipToAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipToAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipToAddress, return this.
@@ -206,8 +199,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLabelPrepType()
     {
-                return !is_null($this->_fields['LabelPrepType']['FieldValue']);
-            }
+        return !is_null($this->_fields['LabelPrepType']['FieldValue']);
+    }
 
     /**
      * Set the value of LabelPrepType, return this.
@@ -252,8 +245,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetItems()
     {
-                return !is_null($this->_fields['Items']['FieldValue']);
-            }
+        return !is_null($this->_fields['Items']['FieldValue']);
+    }
 
     /**
      * Set the value of Items, return this.
@@ -298,8 +291,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetEstimatedBoxContentsFee()
     {
-                return !is_null($this->_fields['EstimatedBoxContentsFee']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedBoxContentsFee']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedBoxContentsFee, return this.
@@ -314,5 +307,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setEstimatedBoxContentsFee($value);
         return $this;
     }
-
 }

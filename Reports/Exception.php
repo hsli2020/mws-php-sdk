@@ -10,14 +10,19 @@ class ReportsException extends \Exception
 {
     /** @var string */
     protected $message = null;
+
     /** @var int */
     private $statusCode = -1;
+
     /** @var string */
     private $errorCode = null;
+
     /** @var string */
     private $errorType = null;
+
     /** @var string */
     private $requestId = null;
+
     /** @var string */
     private $xml = null;
 
@@ -68,7 +73,8 @@ class ReportsException extends \Exception
      *
      * @return string Error Code returned by the service
      */
-    public function getErrorCode(){
+    public function getErrorCode()
+    {
         return $this->errorCode;
     }
 
@@ -78,7 +84,8 @@ class ReportsException extends \Exception
      * @return string Error Type returned by the service.
      * Possible types:  Sender, Receiver or Unknown
      */
-    public function getErrorType(){
+    public function getErrorType()
+    {
         return $this->errorType;
     }
 
@@ -88,7 +95,8 @@ class ReportsException extends \Exception
      *
      * @return string Error message
      */
-    public function getErrorMessage() {
+    public function getErrorMessage()
+    {
         return $this->message;
     }
 
@@ -99,7 +107,8 @@ class ReportsException extends \Exception
      *
      * @return int status code returned by the service
      */
-    public function getStatusCode() {
+    public function getStatusCode()
+    {
         return $this->statusCode;
     }
 
@@ -108,7 +117,8 @@ class ReportsException extends \Exception
      *
      * @return string XML returned by the service
      */
-    public function getXML() {
+    public function getXML()
+    {
         return $this->xml;
     }
 
@@ -117,11 +127,13 @@ class ReportsException extends \Exception
      *
      * @return string Request ID returned by the service
      */
-    public function getRequestId() {
+    public function getRequestId()
+    {
         return $this->requestId;
     }
 
-    public function getResponseHeaderMetadata() {
+    public function getResponseHeaderMetadata()
+    {
         return $this->responseHeaderMetadata;
     }
 }

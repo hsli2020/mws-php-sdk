@@ -2,21 +2,19 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionCountResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
+class GetFeedSubmissionCountResponse extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionCountResponse
      *
@@ -24,17 +22,15 @@ class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionCountResult'),
+            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -59,7 +55,6 @@ class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct GetFeedSubmissionCountResponse from provided XML.
                                   Make sure that GetFeedSubmissionCountResponse is a root element");
         }
-
     }
 
     /**
@@ -142,7 +137,6 @@ class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -151,10 +145,7 @@ class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -172,11 +163,13 @@ class GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * ReportSchedule
  *
  * Properties:
  * <ul>
- *
  * <li>ReportType: string</li>
  * <li>Schedule: string</li>
  * <li>ScheduledDate: string</li>
- *
  * </ul>
  */
-class ReportSchedule extends MarketplaceWebService_Model
+class ReportSchedule extends Model
 {
-
-
     /**
      * Construct new ReportSchedule
      *
@@ -28,24 +23,22 @@ class ReportSchedule extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>ReportType: string</li>
      * <li>Schedule: string</li>
      * <li>ScheduledDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ScheduledDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportType'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Schedule'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduledDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportType property.
      *
      * @return string ReportType
@@ -179,8 +172,4 @@ class ReportSchedule extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['ScheduledDate']['FieldValue']);
     }
-
-
-
-
 }

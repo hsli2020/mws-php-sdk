@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentPreviewItem
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: string</li>
  * <li>Quantity: int</li>
  * <li>SellerFulfillmentOrderItemId: string</li>
  * <li>EstimatedShippingWeight: Weight</li>
  * <li>ShippingWeightCalculationMethod: string</li>
- *
  * </ul>
  */
-
- class FulfillmentPreviewItem extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentPreviewItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'ShippingWeightCalculationMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'                       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'                        => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerFulfillmentOrderItemId'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EstimatedShippingWeight'         => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'ShippingWeightCalculationMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerFulfillmentOrderItemId()
     {
-                return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFulfillmentOrderItemId, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedShippingWeight()
     {
-                return !is_null($this->_fields['EstimatedShippingWeight']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedShippingWeight']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedShippingWeight, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShippingWeightCalculationMethod()
     {
-                return !is_null($this->_fields['ShippingWeightCalculationMethod']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingWeightCalculationMethod']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingWeightCalculationMethod, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setShippingWeightCalculationMethod($value);
         return $this;
     }
-
 }

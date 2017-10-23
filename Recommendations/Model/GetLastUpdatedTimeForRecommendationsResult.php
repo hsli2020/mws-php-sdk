@@ -2,36 +2,34 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * GetLastUpdatedTimeForRecommendationsResult
  *
  * Properties:
  * <ul>
- *
  * <li>InventoryRecommendationsLastUpdated: string</li>
  * <li>SelectionRecommendationsLastUpdated: string</li>
  * <li>FulfillmentRecommendationsLastUpdated: string</li>
  * <li>PricingRecommendationsLastUpdated: string</li>
  * <li>GlobalSellingRecommendationsLastUpdated: string</li>
  * <li>AdvertisingRecommendationsLastUpdated: string</li>
- *
  * </ul>
  */
-
- class GetLastUpdatedTimeForRecommendationsResult extends MWSRecommendationsSectionService_Model {
-
+class GetLastUpdatedTimeForRecommendationsResult extends MWSRecommendationsSectionService_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InventoryRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SelectionRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PricingRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'GlobalSellingRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AdvertisingRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InventoryRecommendationsLastUpdated'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SelectionRecommendationsLastUpdated'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentRecommendationsLastUpdated'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PricingRecommendationsLastUpdated'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'GlobalSellingRecommendationsLastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AdvertisingRecommendationsLastUpdated'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +61,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetInventoryRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['InventoryRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['InventoryRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of InventoryRecommendationsLastUpdated, return this.
@@ -109,8 +107,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSelectionRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['SelectionRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['SelectionRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of SelectionRecommendationsLastUpdated, return this.
@@ -155,8 +153,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetFulfillmentRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['FulfillmentRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentRecommendationsLastUpdated, return this.
@@ -201,8 +199,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetPricingRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['PricingRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['PricingRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of PricingRecommendationsLastUpdated, return this.
@@ -247,8 +245,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetGlobalSellingRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['GlobalSellingRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['GlobalSellingRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of GlobalSellingRecommendationsLastUpdated, return this.
@@ -293,8 +291,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetAdvertisingRecommendationsLastUpdated()
     {
-                return !is_null($this->_fields['AdvertisingRecommendationsLastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['AdvertisingRecommendationsLastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of AdvertisingRecommendationsLastUpdated, return this.
@@ -309,5 +307,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setAdvertisingRecommendationsLastUpdated($value);
         return $this;
     }
-
 }

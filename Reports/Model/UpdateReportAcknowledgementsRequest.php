@@ -1,27 +1,22 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * UpdateReportAcknowledgementsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportIdList: IdList</li>
  * <li>Acknowledged: bool</li>
- *
  * </ul>
  */
-class UpdateReportAcknowledgementsRequest extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsRequest extends Model
 {
-
-
     /**
      * Construct new UpdateReportAcknowledgementsRequest
      *
@@ -29,27 +24,25 @@ class UpdateReportAcknowledgementsRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportIdList: IdList</li>
      * <li>Acknowledged: bool</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -274,8 +267,4 @@ class UpdateReportAcknowledgementsRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['Acknowledged']['FieldValue']);
     }
-
-
-
-
 }

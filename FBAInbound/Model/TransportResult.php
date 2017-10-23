@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,24 +10,21 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>TransportStatus: string</li>
  * <li>ErrorCode: string</li>
  * <li>ErrorDescription: string</li>
- *
  * </ul>
  */
-
- class TransportResult extends FBAInboundServiceMWS_Model {
-
+class TransportResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TransportStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ErrorCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ErrorDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TransportStatus'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ErrorCode'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ErrorDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +56,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportStatus()
     {
-                return !is_null($this->_fields['TransportStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportStatus, return this.
@@ -108,8 +102,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetErrorCode()
     {
-                return !is_null($this->_fields['ErrorCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['ErrorCode']['FieldValue']);
+    }
 
     /**
      * Set the value of ErrorCode, return this.
@@ -154,8 +148,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetErrorDescription()
     {
-                return !is_null($this->_fields['ErrorDescription']['FieldValue']);
-            }
+        return !is_null($this->_fields['ErrorDescription']['FieldValue']);
+    }
 
     /**
      * Set the value of ErrorDescription, return this.
@@ -170,5 +164,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setErrorDescription($value);
         return $this;
     }
-
 }

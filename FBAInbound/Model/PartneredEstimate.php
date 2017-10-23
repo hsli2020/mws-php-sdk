@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredEstimate
  *
  * Properties:
  * <ul>
- *
  * <li>Amount: Amount</li>
  * <li>ConfirmDeadline: string</li>
  * <li>VoidDeadline: string</li>
- *
  * </ul>
  */
-
- class PartneredEstimate extends FBAInboundServiceMWS_Model {
-
+class PartneredEstimate extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    'ConfirmDeadline' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'VoidDeadline' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Amount'          => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'ConfirmDeadline' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'VoidDeadline'    => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetConfirmDeadline()
     {
-                return !is_null($this->_fields['ConfirmDeadline']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConfirmDeadline']['FieldValue']);
+    }
 
     /**
      * Set the value of ConfirmDeadline, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetVoidDeadline()
     {
-                return !is_null($this->_fields['VoidDeadline']['FieldValue']);
-            }
+        return !is_null($this->_fields['VoidDeadline']['FieldValue']);
+    }
 
     /**
      * Set the value of VoidDeadline, return this.
@@ -170,5 +163,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setVoidDeadline($value);
         return $this;
     }
-
 }

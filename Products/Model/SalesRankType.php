@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * SalesRankType
  *
  * Properties:
  * <ul>
- *
  * <li>ProductCategoryId: string</li>
  * <li>Rank: int</li>
- *
  * </ul>
  */
-
- class SalesRankType extends MarketplaceWebServiceProducts_Model {
-
+class SalesRankType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ProductCategoryId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Rank' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ProductCategoryId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Rank'              => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProductCategoryId()
     {
-                return !is_null($this->_fields['ProductCategoryId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProductCategoryId']['FieldValue']);
+    }
 
     /**
      * Set the value of ProductCategoryId, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetRank()
     {
-                return !is_null($this->_fields['Rank']['FieldValue']);
-            }
+        return !is_null($this->_fields['Rank']['FieldValue']);
+    }
 
     /**
      * Set the value of Rank, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setRank($value);
         return $this;
     }
-
 }

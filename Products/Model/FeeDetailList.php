@@ -2,26 +2,25 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeeDetailList
  *
  * Properties:
  * <ul>
- *
  * <li>FeeDetail: array</li>
- *
  * </ul>
  */
-
- class FeeDetailList extends MarketplaceWebServiceProducts_Model {
-
+class FeeDetailList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FeeDetail' => array('FieldValue' => array(), 'FieldType' => array('FeeDetail')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FeeDetail' => array('FieldValue' => array(), 'FieldType' => array('FeeDetail')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +30,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getFeeDetail()
     {
-        if ($this->_fields['FeeDetail']['FieldValue'] == null)
-        {
+        if ($this->_fields['FeeDetail']['FieldValue'] == null) {
             $this->_fields['FeeDetail']['FieldValue'] = array();
         }
         return $this->_fields['FeeDetail']['FieldValue'];
@@ -68,8 +66,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeeDetail()
     {
-                return !empty($this->_fields['FeeDetail']['FieldValue']);
-            }
+        return !empty($this->_fields['FeeDetail']['FieldValue']);
+    }
 
     /**
      * Add values for FeeDetail, return this.
@@ -81,11 +79,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withFeeDetail()
     {
-        foreach (func_get_args() as $FeeDetail)
-        {
+        foreach (func_get_args() as $FeeDetail) {
             $this->_fields['FeeDetail']['FieldValue'][] = $FeeDetail;
         }
         return $this;
     }
-
 }

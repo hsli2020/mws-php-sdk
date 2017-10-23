@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * CreateShipmentRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>ShipmentRequestDetails: ShipmentRequestDetails</li>
  * <li>ShippingServiceId: string</li>
  * <li>ShippingServiceOfferId: string</li>
- *
  * </ul>
  */
-
- class CreateShipmentRequest extends MWSMerchantFulfillmentService_Model {
-
+class CreateShipmentRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentRequestDetails' => array('FieldValue' => null, 'FieldType' => 'ShipmentRequestDetails'),
-    'ShippingServiceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingServiceOfferId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentRequestDetails' => array('FieldValue' => null, 'FieldType' => 'ShipmentRequestDetails'),
+            'ShippingServiceId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingServiceOfferId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipmentRequestDetails()
     {
-                return !is_null($this->_fields['ShipmentRequestDetails']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentRequestDetails']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentRequestDetails, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceId()
     {
-                return !is_null($this->_fields['ShippingServiceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceId, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceOfferId()
     {
-                return !is_null($this->_fields['ShippingServiceOfferId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceOfferId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceOfferId, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setShippingServiceOfferId($value);
         return $this;
     }
-
 }

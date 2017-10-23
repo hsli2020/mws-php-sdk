@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * SellerSKUListType
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: array</li>
- *
  * </ul>
  */
-
- class SellerSKUListType extends MarketplaceWebServiceProducts_Model {
-
+class SellerSKUListType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getSellerSKU()
     {
-        if ($this->_fields['SellerSKU']['FieldValue'] == null)
-        {
+        if ($this->_fields['SellerSKU']['FieldValue'] == null) {
             $this->_fields['SellerSKU']['FieldValue'] = array();
         }
         return $this->_fields['SellerSKU']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerSKU()
     {
-                return !empty($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !empty($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Add values for SellerSKU, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withSellerSKU()
     {
-        foreach (func_get_args() as $SellerSKU)
-        {
+        foreach (func_get_args() as $SellerSKU) {
             $this->_fields['SellerSKU']['FieldValue'][] = $SellerSKU;
         }
         return $this;
     }
-
 }

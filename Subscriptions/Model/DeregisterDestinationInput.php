@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * DeregisterDestinationInput
  *
@@ -13,17 +15,17 @@ namespace Amazon\MWS\Subscriptions\Model;
  * <li>Destination: Destination</li>
  * </ul>
  */
-class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
-
+class DeregisterDestinationInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Destination' => array('FieldValue' => null, 'FieldType' => 'Destination'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Destination'   => array('FieldValue' => null, 'FieldType' => 'Destination'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +57,8 @@ class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -101,8 +103,8 @@ class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -147,8 +149,8 @@ class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -193,8 +195,8 @@ class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
      */
     public function isSetDestination()
     {
-                return !is_null($this->_fields['Destination']['FieldValue']);
-            }
+        return !is_null($this->_fields['Destination']['FieldValue']);
+    }
 
     /**
      * Set the value of Destination, return this.
@@ -209,5 +211,4 @@ class DeregisterDestinationInput extends MWSSubscriptionsService_Model {
         $this->setDestination($value);
         return $this;
     }
-
 }

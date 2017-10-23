@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * BuyBoxPrices
  *
  * Properties:
  * <ul>
- *
  * <li>BuyBoxPrice: array</li>
- *
  * </ul>
  */
-
- class BuyBoxPrices extends MarketplaceWebServiceProducts_Model {
-
+class BuyBoxPrices extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'BuyBoxPrice' => array('FieldValue' => array(), 'FieldType' => array('BuyBoxPriceType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'BuyBoxPrice' => array('FieldValue' => array(), 'FieldType' => array('BuyBoxPriceType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getBuyBoxPrice()
     {
-        if ($this->_fields['BuyBoxPrice']['FieldValue'] == null)
-        {
+        if ($this->_fields['BuyBoxPrice']['FieldValue'] == null) {
             $this->_fields['BuyBoxPrice']['FieldValue'] = array();
         }
         return $this->_fields['BuyBoxPrice']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetBuyBoxPrice()
     {
-                return !empty($this->_fields['BuyBoxPrice']['FieldValue']);
-            }
+        return !empty($this->_fields['BuyBoxPrice']['FieldValue']);
+    }
 
     /**
      * Add values for BuyBoxPrice, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withBuyBoxPrice()
     {
-        foreach (func_get_args() as $BuyBoxPrice)
-        {
+        foreach (func_get_args() as $BuyBoxPrice) {
             $this->_fields['BuyBoxPrice']['FieldValue'][] = $BuyBoxPrice;
         }
         return $this;
     }
-
 }

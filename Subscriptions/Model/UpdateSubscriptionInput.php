@@ -2,31 +2,30 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * UpdateSubscriptionInput
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
  * <li>Subscription: Subscription</li>
- *
  * </ul>
  */
-
- class UpdateSubscriptionInput extends MWSSubscriptionsService_Model {
-
+class UpdateSubscriptionInput extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Subscription' => array('FieldValue' => null, 'FieldType' => 'Subscription'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Subscription'  => array('FieldValue' => null, 'FieldType' => 'Subscription'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +57,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -104,8 +103,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -150,8 +149,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -196,8 +195,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetSubscription()
     {
-                return !is_null($this->_fields['Subscription']['FieldValue']);
-            }
+        return !is_null($this->_fields['Subscription']['FieldValue']);
+    }
 
     /**
      * Set the value of Subscription, return this.
@@ -212,5 +211,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setSubscription($value);
         return $this;
     }
-
 }

@@ -2,32 +2,31 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * Error
  *
  * Properties:
  * <ul>
- *
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
  * <li>Detail: ErrorDetail</li>
- *
  * </ul>
  */
-
- class Error extends MarketplaceWebServiceProducts_Model {
-
+class Error extends MarketplaceWebServiceProducts_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Type' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Code' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Detail' => array('FieldValue' => null, 'FieldType' => 'ErrorDetail'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Detail'  => array('FieldValue' => null, 'FieldType' => 'ErrorDetail'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +58,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetType()
     {
-                return !is_null($this->_fields['Type']['FieldValue']);
-            }
+        return !is_null($this->_fields['Type']['FieldValue']);
+    }
 
     /**
      * Set the value of Type, return this.
@@ -105,8 +104,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCode()
     {
-                return !is_null($this->_fields['Code']['FieldValue']);
-            }
+        return !is_null($this->_fields['Code']['FieldValue']);
+    }
 
     /**
      * Set the value of Code, return this.
@@ -151,8 +150,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMessage()
     {
-                return !is_null($this->_fields['Message']['FieldValue']);
-            }
+        return !is_null($this->_fields['Message']['FieldValue']);
+    }
 
     /**
      * Set the value of Message, return this.
@@ -197,8 +196,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetDetail()
     {
-                return !is_null($this->_fields['Detail']['FieldValue']);
-            }
+        return !is_null($this->_fields['Detail']['FieldValue']);
+    }
 
     /**
      * Set the value of Detail, return this.
@@ -213,5 +212,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setDetail($value);
         return $this;
     }
-
 }

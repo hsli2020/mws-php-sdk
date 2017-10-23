@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetFulfillmentPreviewRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
@@ -18,26 +18,24 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>ShippingSpeedCategories: ShippingSpeedCategoryList</li>
  * <li>IncludeCODFulfillmentPreview: bool</li>
  * <li>IncludeDeliveryWindows: bool</li>
- *
  * </ul>
  */
-
- class GetFulfillmentPreviewRequest extends FBAOutboundServiceMWS_Model {
-
+class GetFulfillmentPreviewRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Address' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'GetFulfillmentPreviewItemList'),
-    'ShippingSpeedCategories' => array('FieldValue' => null, 'FieldType' => 'ShippingSpeedCategoryList'),
-    'IncludeCODFulfillmentPreview' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IncludeDeliveryWindows' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'                     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Address'                      => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'Items'                        => array('FieldValue' => null, 'FieldType' => 'GetFulfillmentPreviewItemList'),
+            'ShippingSpeedCategories'      => array('FieldValue' => null, 'FieldType' => 'ShippingSpeedCategoryList'),
+            'IncludeCODFulfillmentPreview' => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IncludeDeliveryWindows'       => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -69,8 +67,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -115,8 +113,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -161,8 +159,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -207,8 +205,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -253,8 +251,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetAddress()
     {
-                return !is_null($this->_fields['Address']['FieldValue']);
-            }
+        return !is_null($this->_fields['Address']['FieldValue']);
+    }
 
     /**
      * Set the value of Address, return this.
@@ -299,8 +297,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetItems()
     {
-                return !is_null($this->_fields['Items']['FieldValue']);
-            }
+        return !is_null($this->_fields['Items']['FieldValue']);
+    }
 
     /**
      * Set the value of Items, return this.
@@ -345,8 +343,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShippingSpeedCategories()
     {
-                return !is_null($this->_fields['ShippingSpeedCategories']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingSpeedCategories']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingSpeedCategories, return this.
@@ -401,8 +399,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetIncludeCODFulfillmentPreview()
     {
-                return !is_null($this->_fields['IncludeCODFulfillmentPreview']['FieldValue']);
-            }
+        return !is_null($this->_fields['IncludeCODFulfillmentPreview']['FieldValue']);
+    }
 
     /**
      * Set the value of IncludeCODFulfillmentPreview, return this.
@@ -457,8 +455,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetIncludeDeliveryWindows()
     {
-                return !is_null($this->_fields['IncludeDeliveryWindows']['FieldValue']);
-            }
+        return !is_null($this->_fields['IncludeDeliveryWindows']['FieldValue']);
+    }
 
     /**
      * Set the value of IncludeDeliveryWindows, return this.
@@ -473,5 +471,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setIncludeDeliveryWindows($value);
         return $this;
     }
-
 }

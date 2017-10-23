@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * Money
  *
  * Properties:
  * <ul>
- *
  * <li>CurrencyCode: string</li>
  * <li>Amount: string</li>
- *
  * </ul>
  */
-
- class Money extends MarketplaceWebServiceOrders_Model {
-
+class Money extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount'       => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCurrencyCode()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrencyCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrencyCode, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setAmount($value);
         return $this;
     }
-
 }

@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * GetSubscriptionResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetSubscriptionResult: GetSubscriptionResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetSubscriptionResponse extends MWSSubscriptionsService_Model {
-
+class GetSubscriptionResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetSubscriptionResult' => array('FieldValue' => null, 'FieldType' => 'GetSubscriptionResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetSubscriptionResult'  => array('FieldValue' => null, 'FieldType' => 'GetSubscriptionResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetGetSubscriptionResult()
     {
-                return !is_null($this->_fields['GetSubscriptionResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['GetSubscriptionResult']['FieldValue']);
+    }
 
     /**
      * Set the value of GetSubscriptionResult, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -148,8 +147,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -164,6 +163,7 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetSubscriptionResponse from XML string
      *
@@ -185,6 +185,7 @@ namespace Amazon\MWS\Subscriptions\Model;
                                   Make sure that GetSubscriptionResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -198,5 +199,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $xml .= "</GetSubscriptionResponse>";
         return $xml;
     }
-
 }

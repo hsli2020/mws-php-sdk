@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetProductCategoriesForSKUResult
  *
  * Properties:
  * <ul>
- *
  * <li>Self: array</li>
- *
  * </ul>
  */
-
- class GetProductCategoriesForSKUResult extends MarketplaceWebServiceProducts_Model {
-
+class GetProductCategoriesForSKUResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Self' => array('FieldValue' => array(), 'FieldType' => array('Categories')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Self' => array('FieldValue' => array(), 'FieldType' => array('Categories')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getSelf()
     {
-        if ($this->_fields['Self']['FieldValue'] == null)
-        {
+        if ($this->_fields['Self']['FieldValue'] == null) {
             $this->_fields['Self']['FieldValue'] = array();
         }
         return $this->_fields['Self']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSelf()
     {
-                return !empty($this->_fields['Self']['FieldValue']);
-            }
+        return !empty($this->_fields['Self']['FieldValue']);
+    }
 
     /**
      * Add values for Self, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withSelf()
     {
-        foreach (func_get_args() as $Self)
-        {
+        foreach (func_get_args() as $Self) {
             $this->_fields['Self']['FieldValue'][] = $Self;
         }
         return $this;
     }
-
 }

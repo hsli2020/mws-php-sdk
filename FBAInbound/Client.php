@@ -7,7 +7,7 @@ namespace Amazon\MWS\FBAInbound;
  */
 class Client implements FBAInboundInterface
 {
-    const SERVICE_VERSION = '2010-10-01';
+    const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2016-07-01';
 
     /** @var string */
@@ -17,18 +17,18 @@ class Client implements FBAInboundInterface
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'FBAInboundServiceMWS PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
-
+    private  $_config = array(
+            'ServiceURL'       => null,
+            'UserAgent'        => 'FBAInboundServiceMWS PHP5 Library',
+            'SignatureVersion' => 2,
+            'SignatureMethod'  => 'HmacSHA256',
+            'ProxyHost'        => null,
+            'ProxyPort'        => -1,
+            'ProxyUsername'    => null,
+            'ProxyPassword'    => null,
+            'MaxErrorRetry'    => 3,
+            'Headers'          => array()
+        );
 
     /**
      * Confirm Preorder
@@ -63,12 +63,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ConfirmPreorderRequest to name value pairs
      */
-    private function _convertConfirmPreorder($request) {
-
+    private function _convertConfirmPreorder($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ConfirmPreorder';
         if ($request->isSetSellerId()) {
@@ -89,7 +88,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Confirm Transport Request
@@ -119,12 +117,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ConfirmTransportInputRequest to name value pairs
      */
-    private function _convertConfirmTransportRequest($request) {
-
+    private function _convertConfirmTransportRequest($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ConfirmTransportRequest';
         if ($request->isSetSellerId()) {
@@ -139,7 +136,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Create Inbound Shipment
@@ -171,12 +167,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert CreateInboundShipmentRequest to name value pairs
      */
-    private function _convertCreateInboundShipment($request) {
-
+    private function _convertCreateInboundShipment($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'CreateInboundShipment';
         if ($request->isSetSellerId()) {
@@ -206,7 +201,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Create Inbound Shipment Plan
@@ -238,12 +232,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert CreateInboundShipmentPlanRequest to name value pairs
      */
-    private function _convertCreateInboundShipmentPlan($request) {
-
+    private function _convertCreateInboundShipmentPlan($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'CreateInboundShipmentPlan';
         if ($request->isSetSellerId()) {
@@ -280,7 +273,6 @@ class Client implements FBAInboundInterface
         return $parameters;
     }
 
-
     /**
      * Estimate Transport Request
      * Initiates the process for requesting an estimated shipping cost based-on the shipment
@@ -309,12 +301,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert EstimateTransportInputRequest to name value pairs
      */
-    private function _convertEstimateTransportRequest($request) {
-
+    private function _convertEstimateTransportRequest($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'EstimateTransportRequest';
         if ($request->isSetSellerId()) {
@@ -329,7 +320,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Bill Of Lading
@@ -359,12 +349,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetBillOfLadingRequest to name value pairs
      */
-    private function _convertGetBillOfLading($request) {
-
+    private function _convertGetBillOfLading($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetBillOfLading';
         if ($request->isSetSellerId()) {
@@ -379,7 +368,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Package Labels
@@ -421,12 +409,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetPackageLabelsRequest to name value pairs
      */
-    private function _convertGetPackageLabels($request) {
-
+    private function _convertGetPackageLabels($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetPackageLabels';
         if ($request->isSetSellerId()) {
@@ -447,7 +434,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Pallet Labels
@@ -480,12 +466,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetPalletLabelsRequest to name value pairs
      */
-    private function _convertGetPalletLabels($request) {
-
+    private function _convertGetPalletLabels($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetPalletLabels';
         if ($request->isSetSellerId()) {
@@ -506,7 +491,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Preorder Info
@@ -541,12 +525,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetPreorderInfoRequest to name value pairs
      */
-    private function _convertGetPreorderInfo($request) {
-
+    private function _convertGetPreorderInfo($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetPreorderInfo';
         if ($request->isSetSellerId()) {
@@ -564,7 +547,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Prep Instructions For ASIN
@@ -596,12 +578,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetPrepInstructionsForASINRequest to name value pairs
      */
-    private function _convertGetPrepInstructionsForASIN($request) {
-
+    private function _convertGetPrepInstructionsForASIN($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetPrepInstructionsForASIN';
         if ($request->isSetSellerId()) {
@@ -622,7 +603,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Prep Instructions For SKU
@@ -654,12 +634,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetPrepInstructionsForSKURequest to name value pairs
      */
-    private function _convertGetPrepInstructionsForSKU($request) {
-
+    private function _convertGetPrepInstructionsForSKU($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetPrepInstructionsForSKU';
         if ($request->isSetSellerId()) {
@@ -680,7 +659,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Service Status
@@ -711,12 +689,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetServiceStatusRequest to name value pairs
      */
-    private function _convertGetServiceStatus($request) {
-
+    private function _convertGetServiceStatus($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetServiceStatus';
         if ($request->isSetSellerId()) {
@@ -731,7 +708,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Transport Content
@@ -761,12 +737,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetTransportContentRequest to name value pairs
      */
-    private function _convertGetTransportContent($request) {
-
+    private function _convertGetTransportContent($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetTransportContent';
         if ($request->isSetSellerId()) {
@@ -781,7 +756,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Get Unique Package Labels
@@ -825,12 +799,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert GetUniquePackageLabelsRequest to name value pairs
      */
-    private function _convertGetUniquePackageLabels($request) {
-
+    private function _convertGetUniquePackageLabels($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetUniquePackageLabels';
         if ($request->isSetSellerId()) {
@@ -854,7 +827,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * List Inbound Shipment Items
@@ -892,12 +864,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ListInboundShipmentItemsRequest to name value pairs
      */
-    private function _convertListInboundShipmentItems($request) {
-
+    private function _convertListInboundShipmentItems($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListInboundShipmentItems';
         if ($request->isSetSellerId()) {
@@ -952,12 +923,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ListInboundShipmentItemsByNextTokenRequest to name value pairs
      */
-    private function _convertListInboundShipmentItemsByNextToken($request) {
-
+    private function _convertListInboundShipmentItemsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListInboundShipmentItemsByNextToken';
         if ($request->isSetSellerId()) {
@@ -975,7 +945,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * List Inbound Shipments
@@ -1011,12 +980,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ListInboundShipmentsRequest to name value pairs
      */
-    private function _convertListInboundShipments($request) {
-
+    private function _convertListInboundShipments($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListInboundShipments';
         if ($request->isSetSellerId()) {
@@ -1050,7 +1018,6 @@ class Client implements FBAInboundInterface
         return $parameters;
     }
 
-
     /**
      * List Inbound Shipments By Next Token
      * Gets the next set of inbound shipments created by a Seller with the
@@ -1079,12 +1046,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert ListInboundShipmentsByNextTokenRequest to name value pairs
      */
-    private function _convertListInboundShipmentsByNextToken($request) {
-
+    private function _convertListInboundShipmentsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListInboundShipmentsByNextToken';
         if ($request->isSetSellerId()) {
@@ -1102,7 +1068,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Put Transport Content
@@ -1131,12 +1096,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert PutTransportContentRequest to name value pairs
      */
-    private function _convertPutTransportContent($request) {
-
+    private function _convertPutTransportContent($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'PutTransportContent';
         if ($request->isSetSellerId()) {
@@ -1163,7 +1127,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Update Inbound Shipment
@@ -1202,12 +1165,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert UpdateInboundShipmentRequest to name value pairs
      */
-    private function _convertUpdateInboundShipment($request) {
-
+    private function _convertUpdateInboundShipment($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'UpdateInboundShipment';
         if ($request->isSetSellerId()) {
@@ -1237,7 +1199,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
 
     /**
      * Void Transport Request
@@ -1270,12 +1231,11 @@ class Client implements FBAInboundInterface
         return $response;
     }
 
-
     /**
      * Convert VoidTransportInputRequest to name value pairs
      */
-    private function _convertVoidTransportRequest($request) {
-
+    private function _convertVoidTransportRequest($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'VoidTransportRequest';
         if ($request->isSetSellerId()) {
@@ -1290,8 +1250,6 @@ class Client implements FBAInboundInterface
 
         return $parameters;
     }
-
-
 
     /**
      * Construct new Client
@@ -1324,11 +1282,8 @@ class Client implements FBAInboundInterface
         $this->setUserAgentHeader($applicationName, $applicationVersion);
     }
 
-    private function setUserAgentHeader(
-        $applicationName,
-        $applicationVersion,
-        $attributes = null) {
-
+    private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($attributes)) {
             $attributes = array ();
         }
@@ -1337,8 +1292,9 @@ class Client implements FBAInboundInterface
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
-    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null) {
-        if (is_null($applicationName) || $applicationName === "") {
+    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
+        if (is_null($applicationName) || $applicationName === ""){
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
 
@@ -1379,9 +1335,10 @@ class Client implements FBAInboundInterface
     * @param $s
     * @return string
     */
-   private function collapseWhitespace($s) {
-       return preg_replace('/ {2,}|\s/', ' ', $s);
-   }
+    private function collapseWhitespace($s)
+    {
+        return preg_replace('/ {2,}|\s/', ' ', $s);
+    }
 
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
@@ -1389,7 +1346,8 @@ class Client implements FBAInboundInterface
      * @param $s
      * @return string
      */
-    private function quoteApplicationName($s) {
+    private function quoteApplicationName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\//', '\\/', $quotedString);
@@ -1404,7 +1362,8 @@ class Client implements FBAInboundInterface
      * @param $s
      * @return string
      */
-    private function quoteApplicationVersion($s) {
+    private function quoteApplicationVersion($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
@@ -1419,7 +1378,8 @@ class Client implements FBAInboundInterface
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeName($s) {
+    private function quoteAttributeName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
@@ -1434,7 +1394,8 @@ class Client implements FBAInboundInterface
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeValue($s) {
+    private function quoteAttributeValue($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
@@ -1442,7 +1403,6 @@ class Client implements FBAInboundInterface
 
         return $quotedString;
     }
-
 
     // Private API ------------------------------------------------------------//
 
@@ -1506,8 +1466,6 @@ class Client implements FBAInboundInterface
         require_once (dirname(__FILE__) . '/Exception.php');
         return new Exception($exProps);
     }
-
-
 
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
@@ -1598,7 +1556,8 @@ class Client implements FBAInboundInterface
      *
      * return [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response)
+    {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
@@ -1640,7 +1599,8 @@ class Client implements FBAInboundInterface
      * ...
      * returns String statusCode or null if the status line can't be parsed
      */
-    private function _extractHttpStatusCode($headers){
+    private function _extractHttpStatusCode($headers)
+    {
     	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
@@ -1654,7 +1614,8 @@ class Client implements FBAInboundInterface
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
      */
-    private function _httpHeadersHaveContent($headers){
+    private function _httpHeadersHaveContent($headers)
+    {
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
@@ -1662,7 +1623,8 @@ class Client implements FBAInboundInterface
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
-    private function _extractResponseHeaderMetadata($rawHeaders){
+    private function _extractResponseHeaderMetadata($rawHeaders)
+    {
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
         $headers['x-mws-request-id'] = null;
@@ -1686,19 +1648,20 @@ class Client implements FBAInboundInterface
 
         require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
-          $headers['x-mws-request-id'],
-          $headers['x-mws-response-context'],
-          $headers['x-mws-timestamp'],
-          $headers['x-mws-quota-max'],
-          $headers['x-mws-quota-remaining'],
-          $headers['x-mws-quota-resetsOn']);
+            $headers['x-mws-request-id'],
+            $headers['x-mws-response-context'],
+            $headers['x-mws-timestamp'],
+            $headers['x-mws-quota-max'],
+            $headers['x-mws-quota-remaining'],
+            $headers['x-mws-quota-resetsOn']);
     }
 
     /**
      * Set curl options relating to SSL. Protected to allow overriding.
      * @param $ch curl handle
      */
-    protected function setSSLCurlOptions($ch) {
+    protected function setSSLCurlOptions($ch)
+    {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
     }
@@ -1747,7 +1710,6 @@ class Client implements FBAInboundInterface
         return implode('&', $queryParameters);
     }
 
-
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -1778,7 +1740,8 @@ class Client implements FBAInboundInterface
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      *
      */
-    private function _signParameters(array $parameters, $key) {
+    private function _signParameters(array $parameters, $key)
+    {
         $signatureVersion = $parameters['SignatureVersion'];
         $algorithm = "HmacSHA1";
         $stringToSign = null;
@@ -1797,7 +1760,8 @@ class Client implements FBAInboundInterface
      * @param array $parameters request parameters
      * @return String to Sign
      */
-    private function _calculateStringToSignV2(array $parameters) {
+    private function _calculateStringToSignV2(array $parameters)
+    {
         $data = 'POST';
         $data .= "\n";
         $endpoint = parse_url ($this->_config['ServiceURL']);
@@ -1815,10 +1779,10 @@ class Client implements FBAInboundInterface
         return $data;
     }
 
-    private function _urlencode($value) {
+    private function _urlencode($value)
+    {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
@@ -1837,7 +1801,6 @@ class Client implements FBAInboundInterface
         );
     }
 
-
     /**
      * Formats date as ISO 8601 timestamp
      */
@@ -1853,5 +1816,4 @@ class Client implements FBAInboundInterface
     {
         return $dateTime->format(DATE_ISO8601);
     }
-
 }

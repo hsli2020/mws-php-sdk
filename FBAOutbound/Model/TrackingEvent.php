@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * TrackingEvent
  *
  * Properties:
  * <ul>
- *
  * <li>EventDate: string</li>
  * <li>EventAddress: TrackingAddress</li>
  * <li>EventCode: string</li>
- *
  * </ul>
  */
-
- class TrackingEvent extends FBAOutboundServiceMWS_Model {
-
+class TrackingEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'EventDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EventAddress' => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
-    'EventCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'EventDate'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EventAddress' => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
+            'EventCode'    => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEventDate()
     {
-                return !is_null($this->_fields['EventDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EventDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EventDate, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEventAddress()
     {
-                return !is_null($this->_fields['EventAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['EventAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of EventAddress, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEventCode()
     {
-                return !is_null($this->_fields['EventCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['EventCode']['FieldValue']);
+    }
 
     /**
      * Set the value of EventCode, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setEventCode($value);
         return $this;
     }
-
 }

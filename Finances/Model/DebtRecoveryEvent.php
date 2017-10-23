@@ -2,33 +2,32 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * DebtRecoveryEvent
  *
  * Properties:
  * <ul>
- *
  * <li>DebtRecoveryType: string</li>
  * <li>RecoveryAmount: Currency</li>
  * <li>OverPaymentCredit: Currency</li>
  * <li>DebtRecoveryItemList: array</li>
  * <li>ChargeInstrumentList: array</li>
- *
  * </ul>
  */
-
- class DebtRecoveryEvent extends MWSFinancesService_Model {
-
+class DebtRecoveryEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DebtRecoveryType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'OverPaymentCredit' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
-    'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DebtRecoveryType'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecoveryAmount'       => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'OverPaymentCredit'    => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
+            'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +59,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDebtRecoveryType()
     {
-                return !is_null($this->_fields['DebtRecoveryType']['FieldValue']);
-            }
+        return !is_null($this->_fields['DebtRecoveryType']['FieldValue']);
+    }
 
     /**
      * Set the value of DebtRecoveryType, return this.
@@ -106,8 +105,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRecoveryAmount()
     {
-                return !is_null($this->_fields['RecoveryAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecoveryAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of RecoveryAmount, return this.
@@ -152,8 +151,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOverPaymentCredit()
     {
-                return !is_null($this->_fields['OverPaymentCredit']['FieldValue']);
-            }
+        return !is_null($this->_fields['OverPaymentCredit']['FieldValue']);
+    }
 
     /**
      * Set the value of OverPaymentCredit, return this.
@@ -176,8 +175,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getDebtRecoveryItemList()
     {
-        if ($this->_fields['DebtRecoveryItemList']['FieldValue'] == null)
-        {
+        if ($this->_fields['DebtRecoveryItemList']['FieldValue'] == null) {
             $this->_fields['DebtRecoveryItemList']['FieldValue'] = array();
         }
         return $this->_fields['DebtRecoveryItemList']['FieldValue'];
@@ -213,8 +211,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDebtRecoveryItemList()
     {
-                return !empty($this->_fields['DebtRecoveryItemList']['FieldValue']);
-            }
+        return !empty($this->_fields['DebtRecoveryItemList']['FieldValue']);
+    }
 
     /**
      * Add values for DebtRecoveryItemList, return this.
@@ -240,8 +238,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getChargeInstrumentList()
     {
-        if ($this->_fields['ChargeInstrumentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ChargeInstrumentList']['FieldValue'] == null) {
             $this->_fields['ChargeInstrumentList']['FieldValue'] = array();
         }
         return $this->_fields['ChargeInstrumentList']['FieldValue'];
@@ -277,8 +274,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetChargeInstrumentList()
     {
-                return !empty($this->_fields['ChargeInstrumentList']['FieldValue']);
-            }
+        return !empty($this->_fields['ChargeInstrumentList']['FieldValue']);
+    }
 
     /**
      * Add values for ChargeInstrumentList, return this.
@@ -290,11 +287,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withChargeInstrumentList()
     {
-        foreach (func_get_args() as $ChargeInstrumentList)
-        {
+        foreach (func_get_args() as $ChargeInstrumentList) {
             $this->_fields['ChargeInstrumentList']['FieldValue'][] = $ChargeInstrumentList;
         }
         return $this;
     }
-
 }

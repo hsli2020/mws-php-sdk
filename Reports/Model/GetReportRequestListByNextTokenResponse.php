@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListByNextTokenResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportRequestListByNextTokenResult: GetReportRequestListByNextTokenResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Model
+class GetReportRequestListByNextTokenResponse extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListByNextTokenResponse
      *
@@ -27,21 +22,18 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetReportRequestListByNextTokenResult: GetReportRequestListByNextTokenResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportRequestListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportRequestListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListByNextTokenResult'),
+            'ResponseMetadata'                      => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct GetReportRequestListByNextTokenResponse from XML string
@@ -62,7 +54,6 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
             throw new Exception ("Unable to construct GetReportRequestListByNextTokenResponse from provided XML.
                                   Make sure that GetReportRequestListByNextTokenResponse is a root element");
         }
-
     }
 
     /**
@@ -99,7 +90,6 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
         return $this;
     }
 
-
     /**
      * Checks if GetReportRequestListByNextTokenResult  is set
      *
@@ -108,7 +98,6 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
     public function isSetGetReportRequestListByNextTokenResult()
     {
         return !is_null($this->fields['GetReportRequestListByNextTokenResult']['FieldValue']);
-
     }
 
     /**
@@ -145,7 +134,6 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +142,7 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +160,13 @@ class GetReportRequestListByNextTokenResponse extends MarketplaceWebService_Mode
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

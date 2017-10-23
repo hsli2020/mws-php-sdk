@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * Address
  *
  * Properties:
  * <ul>
- *
  * <li>Name: string</li>
  * <li>AddressLine1: string</li>
  * <li>AddressLine2: string</li>
@@ -20,28 +20,26 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
  * <li>PostalCode: string</li>
  * <li>CountryCode: string</li>
  * <li>Phone: string</li>
- *
  * </ul>
  */
-
- class Address extends MWSMerchantFulfillmentService_Model {
-
+class Address extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine1' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine2' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine3' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DistrictOrCounty' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Email' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'City' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'StateOrProvinceCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostalCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Name'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AddressLine1'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AddressLine2'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AddressLine3'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DistrictOrCounty'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Email'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'City'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StateOrProvinceCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PostalCode'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CountryCode'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Phone'               => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -73,8 +71,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return !is_null($this->_fields['Name']['FieldValue']);
+    }
 
     /**
      * Set the value of Name, return this.
@@ -119,8 +117,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetAddressLine1()
     {
-                return !is_null($this->_fields['AddressLine1']['FieldValue']);
-            }
+        return !is_null($this->_fields['AddressLine1']['FieldValue']);
+    }
 
     /**
      * Set the value of AddressLine1, return this.
@@ -165,8 +163,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetAddressLine2()
     {
-                return !is_null($this->_fields['AddressLine2']['FieldValue']);
-            }
+        return !is_null($this->_fields['AddressLine2']['FieldValue']);
+    }
 
     /**
      * Set the value of AddressLine2, return this.
@@ -211,8 +209,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetAddressLine3()
     {
-                return !is_null($this->_fields['AddressLine3']['FieldValue']);
-            }
+        return !is_null($this->_fields['AddressLine3']['FieldValue']);
+    }
 
     /**
      * Set the value of AddressLine3, return this.
@@ -257,8 +255,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetDistrictOrCounty()
     {
-                return !is_null($this->_fields['DistrictOrCounty']['FieldValue']);
-            }
+        return !is_null($this->_fields['DistrictOrCounty']['FieldValue']);
+    }
 
     /**
      * Set the value of DistrictOrCounty, return this.
@@ -303,8 +301,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetEmail()
     {
-                return !is_null($this->_fields['Email']['FieldValue']);
-            }
+        return !is_null($this->_fields['Email']['FieldValue']);
+    }
 
     /**
      * Set the value of Email, return this.
@@ -349,8 +347,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCity()
     {
-                return !is_null($this->_fields['City']['FieldValue']);
-            }
+        return !is_null($this->_fields['City']['FieldValue']);
+    }
 
     /**
      * Set the value of City, return this.
@@ -395,8 +393,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetStateOrProvinceCode()
     {
-                return !is_null($this->_fields['StateOrProvinceCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['StateOrProvinceCode']['FieldValue']);
+    }
 
     /**
      * Set the value of StateOrProvinceCode, return this.
@@ -441,8 +439,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetPostalCode()
     {
-                return !is_null($this->_fields['PostalCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostalCode']['FieldValue']);
+    }
 
     /**
      * Set the value of PostalCode, return this.
@@ -487,8 +485,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCountryCode()
     {
-                return !is_null($this->_fields['CountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CountryCode, return this.
@@ -533,8 +531,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetPhone()
     {
-                return !is_null($this->_fields['Phone']['FieldValue']);
-            }
+        return !is_null($this->_fields['Phone']['FieldValue']);
+    }
 
     /**
      * Set the value of Phone, return this.
@@ -549,5 +547,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setPhone($value);
         return $this;
     }
-
 }

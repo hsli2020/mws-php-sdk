@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * ShippingServiceOptions
  *
  * Properties:
  * <ul>
- *
  * <li>DeliveryExperience: string</li>
  * <li>DeclaredValue: CurrencyAmount</li>
  * <li>CarrierWillPickUp: bool</li>
- *
  * </ul>
  */
-
- class ShippingServiceOptions extends MWSMerchantFulfillmentService_Model {
-
+class ShippingServiceOptions extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DeliveryExperience' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DeclaredValue' => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
-    'CarrierWillPickUp' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DeliveryExperience' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DeclaredValue'      => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
+            'CarrierWillPickUp'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetDeliveryExperience()
     {
-                return !is_null($this->_fields['DeliveryExperience']['FieldValue']);
-            }
+        return !is_null($this->_fields['DeliveryExperience']['FieldValue']);
+    }
 
     /**
      * Set the value of DeliveryExperience, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetDeclaredValue()
     {
-                return !is_null($this->_fields['DeclaredValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['DeclaredValue']['FieldValue']);
+    }
 
     /**
      * Set the value of DeclaredValue, return this.
@@ -159,8 +157,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCarrierWillPickUp()
     {
-                return !is_null($this->_fields['CarrierWillPickUp']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierWillPickUp']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierWillPickUp, return this.
@@ -175,5 +173,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setCarrierWillPickUp($value);
         return $this;
     }
-
 }

@@ -1,7 +1,8 @@
 <?php
 
 namespace Amazon\MWS\Sellers\Model;
-namespace Amazon\MWS\Sellers\Model;
+
+use Amazon\MWS\Sellers\Model;
 
 /**
  * GetServiceStatusRequest
@@ -12,15 +13,15 @@ namespace Amazon\MWS\Sellers\Model;
  * <li>MWSAuthToken: string</li>
  * </ul>
  */
-class GetServiceStatusRequest extends MarketplaceWebServiceSellers_Model {
-
+class GetServiceStatusRequest extends MarketplaceWebServiceSellers_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +53,8 @@ class GetServiceStatusRequest extends MarketplaceWebServiceSellers_Model {
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -98,8 +99,8 @@ class GetServiceStatusRequest extends MarketplaceWebServiceSellers_Model {
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -114,5 +115,4 @@ class GetServiceStatusRequest extends MarketplaceWebServiceSellers_Model {
         $this->setMWSAuthToken($value);
         return $this;
     }
-
 }

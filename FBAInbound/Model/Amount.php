@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInbound\Model;
 
+use Amazon\MWS\FBAInbound\Model;
+
 /**
  * Amount
  *
@@ -17,7 +19,7 @@ class Amount extends Model
     {
         $this->_fields = array (
             'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Value' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Value'        => array('FieldValue' => null, 'FieldType' => 'float'),
         );
         parent::__construct($data);
     }
@@ -97,8 +99,8 @@ class Amount extends Model
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return !is_null($this->_fields['Value']['FieldValue']);
+    }
 
     /**
      * Set the value of Value, return this.
@@ -113,5 +115,4 @@ class Amount extends Model
         $this->setValue($value);
         return $this;
     }
-
 }

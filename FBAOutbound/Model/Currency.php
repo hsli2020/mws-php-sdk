@@ -2,27 +2,26 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
+
 /**
  * Currency
  *
  * Properties:
  * <ul>
- *
  * <li>CurrencyCode: string</li>
  * <li>Value: string</li>
- *
  * </ul>
  */
-
- class Currency extends FBAOutboundServiceMWS_Model {
-
+class Currency extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Value'        => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +53,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCurrencyCode()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrencyCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrencyCode, return this.
@@ -116,5 +115,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setValue($value);
         return $this;
     }
-
 }

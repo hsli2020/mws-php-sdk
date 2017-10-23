@@ -11,11 +11,11 @@ interface FBAInventoryInterface
      *     GREEN: The service section is operating normally.
      *     RED: The service section disruption.
      *
-     * @param mixed $request array of parameters for FBAInventoryServiceMWS_Model_GetServiceStatus request or FBAInventoryServiceMWS_Model_GetServiceStatus object itself
+     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see FBAInventoryServiceMWS_Model_GetServiceStatusRequest
-     * @return FBAInventoryServiceMWS_Model_GetServiceStatusResponse
+     * @return GetServiceStatusResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws FBAInventoryException
      */
     public function getServiceStatus($request);
 
@@ -52,14 +52,13 @@ interface FBAInventoryInterface
      *     passing in the NextToken value from the previous result), until the returned NextToken
      *     is null, indicating no further results are available.
      *
-     * @param mixed $request array of parameters for FBAInventoryServiceMWS_Model_ListInventorySupply request or FBAInventoryServiceMWS_Model_ListInventorySupply object itself
+     * @param mixed $request array of parameters for ListInventorySupply request or ListInventorySupply object itself
      * @see FBAInventoryServiceMWS_Model_ListInventorySupplyRequest
      * @return FBAInventoryServiceMWS_Model_ListInventorySupplyResponse
      *
      * @throws FBAInventoryServiceMWS_Exception
      */
     public function listInventorySupply($request);
-
 
     /**
      * List Inventory Supply By Next Token
@@ -69,12 +68,11 @@ interface FBAInventoryInterface
      *     This operation is used in conjunction with ListUpdatedInventorySupply.
      *     Please refer to documentation for that operation for further details.
      *
-     * @param mixed $request array of parameters for FBAInventoryServiceMWS_Model_ListInventorySupplyByNextToken request or FBAInventoryServiceMWS_Model_ListInventorySupplyByNextToken object itself
-     * @see FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenRequest
-     * @return FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse
+     * @param mixed $request array of parameters for ListInventorySupplyByNextToken request or ListInventorySupplyByNextToken object itself
+     * @see ListInventorySupplyByNextTokenRequest
+     * @return ListInventorySupplyByNextTokenResponse
      *
      * @throws FBAInventoryServiceMWS_Exception
      */
     public function listInventorySupplyByNextToken($request);
-
 }

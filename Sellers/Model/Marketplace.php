@@ -2,35 +2,34 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * Marketplace
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>Name: string</li>
  * <li>DefaultCountryCode: string</li>
  * <li>DefaultCurrencyCode: string</li>
  * <li>DefaultLanguageCode: string</li>
  * <li>DomainName: string</li>
- *
  * </ul>
  */
-
- class Marketplace extends MarketplaceWebServiceSellers_Model {
-
+class Marketplace extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DefaultCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DefaultCurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DefaultLanguageCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DomainName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Name'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DefaultCountryCode'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DefaultCurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DefaultLanguageCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DomainName'          => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +61,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -108,8 +107,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return !is_null($this->_fields['Name']['FieldValue']);
+    }
 
     /**
      * Set the value of Name, return this.
@@ -154,8 +153,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetDefaultCountryCode()
     {
-                return !is_null($this->_fields['DefaultCountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['DefaultCountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of DefaultCountryCode, return this.
@@ -200,8 +199,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetDefaultCurrencyCode()
     {
-                return !is_null($this->_fields['DefaultCurrencyCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['DefaultCurrencyCode']['FieldValue']);
+    }
 
     /**
      * Set the value of DefaultCurrencyCode, return this.
@@ -246,8 +245,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetDefaultLanguageCode()
     {
-                return !is_null($this->_fields['DefaultLanguageCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['DefaultLanguageCode']['FieldValue']);
+    }
 
     /**
      * Set the value of DefaultLanguageCode, return this.
@@ -292,8 +291,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetDomainName()
     {
-                return !is_null($this->_fields['DomainName']['FieldValue']);
-            }
+        return !is_null($this->_fields['DomainName']['FieldValue']);
+    }
 
     /**
      * Set the value of DomainName, return this.
@@ -308,5 +307,4 @@ namespace Amazon\MWS\Sellers\Model;
         $this->setDomainName($value);
         return $this;
     }
-
 }

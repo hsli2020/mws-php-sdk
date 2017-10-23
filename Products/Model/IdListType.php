@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * IdListType
  *
  * Properties:
  * <ul>
- *
  * <li>Id: array</li>
- *
  * </ul>
  */
-
- class IdListType extends MarketplaceWebServiceProducts_Model {
-
+class IdListType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getId()
     {
-        if ($this->_fields['Id']['FieldValue'] == null)
-        {
+        if ($this->_fields['Id']['FieldValue'] == null) {
             $this->_fields['Id']['FieldValue'] = array();
         }
         return $this->_fields['Id']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetId()
     {
-                return !empty($this->_fields['Id']['FieldValue']);
-            }
+        return !empty($this->_fields['Id']['FieldValue']);
+    }
 
     /**
      * Add values for Id, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withId()
     {
-        foreach (func_get_args() as $Id)
-        {
+        foreach (func_get_args() as $Id) {
             $this->_fields['Id']['FieldValue'][] = $Id;
         }
         return $this;
     }
-
 }

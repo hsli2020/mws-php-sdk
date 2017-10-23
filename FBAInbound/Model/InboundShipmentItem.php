@@ -1,19 +1,14 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentItem
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentId: string</li>
  * <li>SellerSKU: string</li>
  * <li>FulfillmentNetworkSKU: string</li>
@@ -22,25 +17,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>QuantityInCase: int</li>
  * <li>ReleaseDate: string</li>
  * <li>PrepDetailsList: PrepDetailsList</li>
- *
  * </ul>
  */
-
- class InboundShipmentItem extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'QuantityShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'QuantityReceived' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'QuantityInCase' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'ReleaseDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentId'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKU'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'QuantityShipped'       => array('FieldValue' => null, 'FieldType' => 'int'),
+            'QuantityReceived'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'QuantityInCase'        => array('FieldValue' => null, 'FieldType' => 'int'),
+            'ReleaseDate'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -72,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -118,8 +111,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -164,8 +157,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFulfillmentNetworkSKU()
     {
-                return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentNetworkSKU, return this.
@@ -210,8 +203,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantityShipped()
     {
-                return !is_null($this->_fields['QuantityShipped']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityShipped']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityShipped, return this.
@@ -256,8 +249,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantityReceived()
     {
-                return !is_null($this->_fields['QuantityReceived']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityReceived']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityReceived, return this.
@@ -302,8 +295,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantityInCase()
     {
-                return !is_null($this->_fields['QuantityInCase']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityInCase']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityInCase, return this.
@@ -348,8 +341,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetReleaseDate()
     {
-                return !is_null($this->_fields['ReleaseDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ReleaseDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ReleaseDate, return this.
@@ -394,8 +387,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepDetailsList()
     {
-                return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepDetailsList, return this.
@@ -410,5 +403,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPrepDetailsList($value);
         return $this;
     }
-
 }

@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * PaymentExecutionDetailItem
  *
  * Properties:
  * <ul>
- *
  * <li>Payment: Money</li>
  * <li>PaymentMethod: string</li>
- *
  * </ul>
  */
-
- class PaymentExecutionDetailItem extends MarketplaceWebServiceOrders_Model {
-
+class PaymentExecutionDetailItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Payment' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Payment'       => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPayment()
     {
-                return !is_null($this->_fields['Payment']['FieldValue']);
-            }
+        return !is_null($this->_fields['Payment']['FieldValue']);
+    }
 
     /**
      * Set the value of Payment, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPaymentMethod()
     {
-                return !is_null($this->_fields['PaymentMethod']['FieldValue']);
-            }
+        return !is_null($this->_fields['PaymentMethod']['FieldValue']);
+    }
 
     /**
      * Set the value of PaymentMethod, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setPaymentMethod($value);
         return $this;
     }
-
 }

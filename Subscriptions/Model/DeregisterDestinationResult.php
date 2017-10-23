@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * DeregisterDestinationResult
  *
@@ -9,8 +11,8 @@ namespace Amazon\MWS\Subscriptions\Model;
  * <ul>
  * </ul>
  */
-class DeregisterDestinationResult extends MWSSubscriptionsService_Model {
-
+class DeregisterDestinationResult extends Model
+{
     public function __construct($data = null)
     {
         $this->_fields = array ();

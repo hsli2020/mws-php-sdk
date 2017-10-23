@@ -3,11 +3,10 @@
 namespace Amazon\MWS\Recommendations;
 
 /**
- * MWSRecommendationsSectionService_Client is an implementation of MWSRecommendationsSectionService
+ * Recommendations\Client is an implementation of RecommendationsSectionService
  */
-class MWSRecommendationsSectionService_Client implements MWSRecommendationsSectionService_Interface
+class Client implements RecommendationsInterface
 {
-
     const SERVICE_VERSION = '2013-04-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
@@ -18,18 +17,18 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'MWSRecommendationsSectionService PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
-
+    private  $_config = array (
+            'ServiceURL'       => null,
+            'UserAgent'        => 'MWSRecommendationsSectionService PHP5 Library',
+            'SignatureVersion' => 2,
+            'SignatureMethod'  => 'HmacSHA256',
+            'ProxyHost'        => null,
+            'ProxyPort'        => -1,
+            'ProxyUsername'    => null,
+            'ProxyPassword'    => null,
+            'MaxErrorRetry'    => 3,
+            'Headers'          => array()
+        );
 
     /**
      * Get Last Updated Time For Recommendations
@@ -58,12 +57,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return $response;
     }
 
-
     /**
      * Convert GetLastUpdatedTimeForRecommendationsRequest to name value pairs
      */
-    private function _convertGetLastUpdatedTimeForRecommendations($request) {
-
+    private function _convertGetLastUpdatedTimeForRecommendations($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetLastUpdatedTimeForRecommendations';
         if ($request->isSetMarketplaceId()) {
@@ -78,7 +76,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
         return $parameters;
     }
-
 
     /**
      * List Recommendations
@@ -106,12 +103,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return $response;
     }
 
-
     /**
      * Convert ListRecommendationsRequest to name value pairs
      */
-    private function _convertListRecommendations($request) {
-
+    private function _convertListRecommendations($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListRecommendations';
         if ($request->isSetMarketplaceId()) {
@@ -132,7 +128,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
         return $parameters;
     }
-
 
     /**
      * List Recommendations By Next Token
@@ -160,12 +155,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return $response;
     }
 
-
     /**
      * Convert ListRecommendationsByNextTokenRequest to name value pairs
      */
-    private function _convertListRecommendationsByNextToken($request) {
-
+    private function _convertListRecommendationsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListRecommendationsByNextToken';
         if ($request->isSetSellerId()) {
@@ -180,7 +174,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
         return $parameters;
     }
-
 
     /**
      * Get Service Status
@@ -208,12 +201,11 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return $response;
     }
 
-
     /**
      * Convert GetServiceStatusRequest to name value pairs
      */
-    private function _convertGetServiceStatus($request) {
-
+    private function _convertGetServiceStatus($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetServiceStatus';
         if ($request->isSetSellerId()) {
@@ -225,8 +217,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
         return $parameters;
     }
-
-
 
     /**
      * Construct new Client
@@ -259,11 +249,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         $this->setUserAgentHeader($applicationName, $applicationVersion);
     }
 
-    private function setUserAgentHeader(
-        $applicationName,
-        $applicationVersion,
-        $attributes = null) {
-
+    private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($attributes)) {
             $attributes = array ();
         }
@@ -272,7 +259,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
-    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null) {
+    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($applicationName) || $applicationName === "") {
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
@@ -314,9 +302,10 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
     * @param $s
     * @return string
     */
-   private function collapseWhitespace($s) {
-       return preg_replace('/ {2,}|\s/', ' ', $s);
-   }
+    private function collapseWhitespace($s)
+    {
+        return preg_replace('/ {2,}|\s/', ' ', $s);
+    }
 
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
@@ -324,7 +313,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * @param $s
      * @return string
      */
-    private function quoteApplicationName($s) {
+    private function quoteApplicationName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\//', '\\/', $quotedString);
@@ -339,7 +329,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * @param $s
      * @return string
      */
-    private function quoteApplicationVersion($s) {
+    private function quoteApplicationVersion($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
@@ -354,7 +345,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeName($s) {
+    private function quoteAttributeName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
@@ -369,7 +361,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeValue($s) {
+    private function quoteAttributeValue($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
@@ -377,7 +370,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
 
         return $quotedString;
     }
-
 
     // Private API ------------------------------------------------------------//
 
@@ -441,8 +433,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         require_once (dirname(__FILE__) . '/Exception.php');
         return new MWSRecommendationsSectionService_Exception($exProps);
     }
-
-
 
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
@@ -533,7 +523,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      *
      * return [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response)
+    {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
@@ -575,7 +566,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * ...
      * returns String statusCode or null if the status line can't be parsed
      */
-    private function _extractHttpStatusCode($headers){
+    private function _extractHttpStatusCode($headers)
+    {
     	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
@@ -589,7 +581,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
      */
-    private function _httpHeadersHaveContent($headers){
+    private function _httpHeadersHaveContent($headers)
+    {
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
@@ -597,7 +590,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
-    private function _extractResponseHeaderMetadata($rawHeaders){
+    private function _extractResponseHeaderMetadata($rawHeaders)
+    {
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
         $headers['x-mws-request-id'] = null;
@@ -633,7 +627,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * Set curl options relating to SSL. Protected to allow overriding.
      * @param $ch curl handle
      */
-    protected function setSSLCurlOptions($ch) {
+    protected function setSSLCurlOptions($ch)
+    {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
     }
@@ -682,7 +677,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return implode('&', $queryParameters);
     }
 
-
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -713,7 +707,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      *
      */
-    private function _signParameters(array $parameters, $key) {
+    private function _signParameters(array $parameters, $key)
+    {
         $signatureVersion = $parameters['SignatureVersion'];
         $algorithm = "HmacSHA1";
         $stringToSign = null;
@@ -732,7 +727,8 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
      * @param array $parameters request parameters
      * @return String to Sign
      */
-    private function _calculateStringToSignV2(array $parameters) {
+    private function _calculateStringToSignV2(array $parameters)
+    {
         $data = 'POST';
         $data .= "\n";
         $endpoint = parse_url ($this->_config['ServiceURL']);
@@ -750,10 +746,10 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         return $data;
     }
 
-    private function _urlencode($value) {
+    private function _urlencode($value)
+    {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
@@ -772,7 +768,6 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
         );
     }
 
-
     /**
      * Formats date as ISO 8601 timestamp
      */
@@ -788,5 +783,4 @@ class MWSRecommendationsSectionService_Client implements MWSRecommendationsSecti
     {
         return $dateTime->format(DATE_ISO8601);
     }
-
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInbound\Model;
 
+use Amazon\MWS\FBAInbound\Model;
+
 /**
  * AsinList
  *
@@ -10,15 +12,14 @@ namespace Amazon\MWS\FBAInbound\Model;
  * <li>Id: array</li>
  * </ul>
  */
-
- class AsinList extends FBAInboundServiceMWS_Model {
-
+class AsinList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -28,8 +29,7 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function getId()
     {
-        if ($this->_fields['Id']['FieldValue'] == null)
-        {
+        if ($this->_fields['Id']['FieldValue'] == null) {
             $this->_fields['Id']['FieldValue'] = array();
         }
         return $this->_fields['Id']['FieldValue'];
@@ -65,8 +65,8 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function isSetId()
     {
-                return !empty($this->_fields['Id']['FieldValue']);
-            }
+        return !empty($this->_fields['Id']['FieldValue']);
+    }
 
     /**
      * Add values for Id, return this.
@@ -78,11 +78,9 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function withId()
     {
-        foreach (func_get_args() as $Id)
-        {
+        foreach (func_get_args() as $Id) {
             $this->_fields['Id']['FieldValue'][] = $Id;
         }
         return $this;
     }
-
 }

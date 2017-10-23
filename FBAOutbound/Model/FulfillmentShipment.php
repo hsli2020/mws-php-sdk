@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentShipment
  *
  * Properties:
  * <ul>
- *
  * <li>AmazonShipmentId: string</li>
  * <li>FulfillmentCenterId: string</li>
  * <li>FulfillmentShipmentStatus: string</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>EstimatedArrivalDateTime: string</li>
  * <li>FulfillmentShipmentItem: FulfillmentShipmentItemList</li>
  * <li>FulfillmentShipmentPackage: FulfillmentShipmentPackageList</li>
- *
  * </ul>
  */
-
- class FulfillmentShipment extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentShipment extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EstimatedArrivalDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentShipmentItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentItemList'),
-    'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentPackageList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AmazonShipmentId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentCenterId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentShipmentStatus'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingDateTime'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EstimatedArrivalDateTime'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentShipmentItem'    => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentItemList'),
+            'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentPackageList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetAmazonShipmentId()
     {
-                return !is_null($this->_fields['AmazonShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonShipmentId, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentCenterId()
     {
-                return !is_null($this->_fields['FulfillmentCenterId']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentCenterId']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentCenterId, return this.
@@ -157,8 +155,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentShipmentStatus()
     {
-                return !is_null($this->_fields['FulfillmentShipmentStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentShipmentStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentShipmentStatus, return this.
@@ -203,8 +201,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShippingDateTime()
     {
-                return !is_null($this->_fields['ShippingDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingDateTime, return this.
@@ -249,8 +247,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedArrivalDateTime()
     {
-                return !is_null($this->_fields['EstimatedArrivalDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedArrivalDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedArrivalDateTime, return this.
@@ -295,8 +293,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentShipmentItem()
     {
-                return !is_null($this->_fields['FulfillmentShipmentItem']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentShipmentItem']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentShipmentItem, return this.
@@ -341,8 +339,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentShipmentPackage()
     {
-                return !is_null($this->_fields['FulfillmentShipmentPackage']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentShipmentPackage']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentShipmentPackage, return this.
@@ -357,5 +355,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentShipmentPackage($value);
         return $this;
     }
-
 }

@@ -2,25 +2,24 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * ListRegisteredDestinationsResult
  *
  * Properties:
  * <ul>
- *
  * <li>DestinationList: DestinationList</li>
- *
  * </ul>
  */
-
- class ListRegisteredDestinationsResult extends MWSSubscriptionsService_Model {
-
+class ListRegisteredDestinationsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DestinationList' => array('FieldValue' => null, 'FieldType' => 'DestinationList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DestinationList' => array('FieldValue' => null, 'FieldType' => 'DestinationList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +51,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetDestinationList()
     {
-                return !is_null($this->_fields['DestinationList']['FieldValue']);
-            }
+        return !is_null($this->_fields['DestinationList']['FieldValue']);
+    }
 
     /**
      * Set the value of DestinationList, return this.
@@ -68,5 +67,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setDestinationList($value);
         return $this;
     }
-
 }

@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * SalesRankList
  *
  * Properties:
  * <ul>
- *
  * <li>SalesRank: array</li>
- *
  * </ul>
  */
-
- class SalesRankList extends MarketplaceWebServiceProducts_Model {
-
+class SalesRankList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SalesRank' => array('FieldValue' => array(), 'FieldType' => array('SalesRankType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SalesRank' => array('FieldValue' => array(), 'FieldType' => array('SalesRankType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getSalesRank()
     {
-        if ($this->_fields['SalesRank']['FieldValue'] == null)
-        {
+        if ($this->_fields['SalesRank']['FieldValue'] == null) {
             $this->_fields['SalesRank']['FieldValue'] = array();
         }
         return $this->_fields['SalesRank']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSalesRank()
     {
-                return !empty($this->_fields['SalesRank']['FieldValue']);
-            }
+        return !empty($this->_fields['SalesRank']['FieldValue']);
+    }
 
     /**
      * Add values for SalesRank, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withSalesRank()
     {
-        foreach (func_get_args() as $SalesRank)
-        {
+        foreach (func_get_args() as $SalesRank) {
             $this->_fields['SalesRank']['FieldValue'][] = $SalesRank;
         }
         return $this;
     }
-
 }

@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * ListInboundShipmentsByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentData: InboundShipmentList</li>
  * <li>NextToken: string</li>
- *
  * </ul>
  */
-
- class ListInboundShipmentsByNextTokenResult extends FBAInboundServiceMWS_Model {
-
+class ListInboundShipmentsByNextTokenResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentData' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentList'),
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentData' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentList'),
+            'NextToken'    => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentData()
     {
-                return !is_null($this->_fields['ShipmentData']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentData']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentData, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setNextToken($value);
         return $this;
     }
-
 }

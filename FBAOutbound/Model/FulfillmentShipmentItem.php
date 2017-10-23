@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentShipmentItem
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: string</li>
  * <li>SellerFulfillmentOrderItemId: string</li>
  * <li>Quantity: int</li>
  * <li>PackageNumber: int</li>
- *
  * </ul>
  */
-
- class FulfillmentShipmentItem extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentShipmentItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PackageNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'                    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'                     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PackageNumber'                => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerFulfillmentOrderItemId()
     {
-                return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFulfillmentOrderItemId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFulfillmentOrderItemId, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetPackageNumber()
     {
-                return !is_null($this->_fields['PackageNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageNumber, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setPackageNumber($value);
         return $this;
     }
-
 }

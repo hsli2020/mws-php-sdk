@@ -2,24 +2,24 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * DestinationList
  *
  * Properties:
  * <ul>
- *
  * <li>member: array</li>
- *
  * </ul>
  */
-class DestinationList extends MWSSubscriptionsService_Model {
-
+class DestinationList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'member' => array('FieldValue' => array(), 'FieldType' => array('Destination')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'member' => array('FieldValue' => array(), 'FieldType' => array('Destination')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -29,8 +29,7 @@ class DestinationList extends MWSSubscriptionsService_Model {
      */
     public function getmember()
     {
-        if ($this->_fields['member']['FieldValue'] == null)
-        {
+        if ($this->_fields['member']['FieldValue'] == null) {
             $this->_fields['member']['FieldValue'] = array();
         }
         return $this->_fields['member']['FieldValue'];
@@ -66,8 +65,8 @@ class DestinationList extends MWSSubscriptionsService_Model {
      */
     public function isSetmember()
     {
-                return !empty($this->_fields['member']['FieldValue']);
-            }
+        return !empty($this->_fields['member']['FieldValue']);
+    }
 
     /**
      * Add values for member, return this.
@@ -79,11 +78,9 @@ class DestinationList extends MWSSubscriptionsService_Model {
      */
     public function withmember()
     {
-        foreach (func_get_args() as $member)
-        {
+        foreach (func_get_args() as $member) {
             $this->_fields['member']['FieldValue'][] = $member;
         }
         return $this;
     }
-
 }

@@ -1,42 +1,35 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentPlanRequestItem
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: string</li>
  * <li>ASIN: string</li>
  * <li>Condition: string</li>
  * <li>Quantity: int</li>
  * <li>QuantityInCase: int</li>
  * <li>PrepDetailsList: PrepDetailsList</li>
- *
  * </ul>
  */
-
- class InboundShipmentPlanRequestItem extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentPlanRequestItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'QuantityInCase' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASIN'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Condition'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'        => array('FieldValue' => null, 'FieldType' => 'int'),
+            'QuantityInCase'  => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -68,8 +61,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -114,8 +107,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -160,8 +153,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCondition()
     {
-                return !is_null($this->_fields['Condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['Condition']['FieldValue']);
+    }
 
     /**
      * Set the value of Condition, return this.
@@ -206,8 +199,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -252,8 +245,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantityInCase()
     {
-                return !is_null($this->_fields['QuantityInCase']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityInCase']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityInCase, return this.
@@ -298,8 +291,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepDetailsList()
     {
-                return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepDetailsList, return this.
@@ -314,5 +307,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPrepDetailsList($value);
         return $this;
     }
-
 }

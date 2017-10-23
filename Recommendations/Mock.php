@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Recommendations;
 
-class MWSRecommendationsSectionService_Mock implements MWSRecommendationsSectionService_Interface
+class Mock implements RecommendationsInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -77,5 +77,4 @@ class MWSRecommendationsSectionService_Mock implements MWSRecommendationsSection
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

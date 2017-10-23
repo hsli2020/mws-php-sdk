@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,20 +10,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>Id: array</li>
- *
  * </ul>
  */
-
- class SellerSKUList extends FBAInboundServiceMWS_Model {
-
+class SellerSKUList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +30,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getId()
     {
-        if ($this->_fields['Id']['FieldValue'] == null)
-        {
+        if ($this->_fields['Id']['FieldValue'] == null) {
             $this->_fields['Id']['FieldValue'] = array();
         }
         return $this->_fields['Id']['FieldValue'];
@@ -73,8 +66,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetId()
     {
-                return !empty($this->_fields['Id']['FieldValue']);
-            }
+        return !empty($this->_fields['Id']['FieldValue']);
+    }
 
     /**
      * Add values for Id, return this.
@@ -86,11 +79,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withId()
     {
-        foreach (func_get_args() as $Id)
-        {
+        foreach (func_get_args() as $Id) {
             $this->_fields['Id']['FieldValue'][] = $Id;
         }
         return $this;
     }
-
 }

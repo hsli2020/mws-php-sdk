@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * NumberOfOfferListingsList
  *
  * Properties:
  * <ul>
- *
  * <li>OfferListingCount: array</li>
- *
  * </ul>
  */
-
- class NumberOfOfferListingsList extends MarketplaceWebServiceProducts_Model {
-
+class NumberOfOfferListingsList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('OfferListingCountType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('OfferListingCountType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getOfferListingCount()
     {
-        if ($this->_fields['OfferListingCount']['FieldValue'] == null)
-        {
+        if ($this->_fields['OfferListingCount']['FieldValue'] == null) {
             $this->_fields['OfferListingCount']['FieldValue'] = array();
         }
         return $this->_fields['OfferListingCount']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetOfferListingCount()
     {
-                return !empty($this->_fields['OfferListingCount']['FieldValue']);
-            }
+        return !empty($this->_fields['OfferListingCount']['FieldValue']);
+    }
 
     /**
      * Add values for OfferListingCount, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withOfferListingCount()
     {
-        foreach (func_get_args() as $OfferListingCount)
-        {
+        foreach (func_get_args() as $OfferListingCount) {
             $this->_fields['OfferListingCount']['FieldValue'][] = $OfferListingCount;
         }
         return $this;
     }
-
 }

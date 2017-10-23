@@ -19,7 +19,7 @@ interface FBAInboundInterface
      * @see ConfirmPreorderRequest
      * @return ConfirmPreorderResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function confirmPreorder($request);
 
@@ -34,7 +34,7 @@ interface FBAInboundInterface
      * @see ConfirmTransportInputRequest
      * @return ConfirmTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function confirmTransportRequest($request);
 
@@ -51,7 +51,7 @@ interface FBAInboundInterface
      * @see CreateInboundShipmentRequest
      * @return CreateInboundShipmentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function createInboundShipment($request);
 
@@ -68,7 +68,7 @@ interface FBAInboundInterface
      * @see CreateInboundShipmentPlanRequest
      * @return CreateInboundShipmentPlanResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function createInboundShipmentPlan($request);
 
@@ -83,7 +83,7 @@ interface FBAInboundInterface
      * @see EstimateTransportInputRequest
      * @return EstimateTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function estimateTransportRequest($request);
 
@@ -98,7 +98,7 @@ interface FBAInboundInterface
      * @see GetBillOfLadingRequest
      * @return GetBillOfLadingResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getBillOfLading($request);
 
@@ -125,7 +125,7 @@ interface FBAInboundInterface
      * @see GetPackageLabelsRequest
      * @return GetPackageLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPackageLabels($request);
 
@@ -143,7 +143,7 @@ interface FBAInboundInterface
      * @see GetPalletLabelsRequest
      * @return GetPalletLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPalletLabels($request);
 
@@ -163,7 +163,7 @@ interface FBAInboundInterface
      * @see GetPreorderInfoRequest
      * @return GetPreorderInfoResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPreorderInfo($request);
 
@@ -180,7 +180,7 @@ interface FBAInboundInterface
      * @see GetPrepInstructionsForASINRequest
      * @return GetPrepInstructionsForASINResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPrepInstructionsForASIN($request);
 
@@ -197,7 +197,7 @@ interface FBAInboundInterface
      * @see GetPrepInstructionsForSKURequest
      * @return GetPrepInstructionsForSKUResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPrepInstructionsForSKU($request);
 
@@ -213,7 +213,7 @@ interface FBAInboundInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getServiceStatus($request);
 
@@ -228,7 +228,7 @@ interface FBAInboundInterface
      * @see GetTransportContentRequest
      * @return GetTransportContentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getTransportContent($request);
 
@@ -257,7 +257,7 @@ interface FBAInboundInterface
      * @see GetUniquePackageLabelsRequest
      * @return GetUniquePackageLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getUniquePackageLabels($request);
 
@@ -280,7 +280,7 @@ interface FBAInboundInterface
      * @see ListInboundShipmentItemsRequest
      * @return ListInboundShipmentItemsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentItems($request);
 
@@ -296,7 +296,7 @@ interface FBAInboundInterface
      * @see ListInboundShipmentItemsByNextTokenRequest
      * @return ListInboundShipmentItemsByNextTokenResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentItemsByNextToken($request);
 
@@ -317,7 +317,7 @@ interface FBAInboundInterface
      * @see ListInboundShipmentsRequest
      * @return ListInboundShipmentsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipments($request);
 
@@ -332,7 +332,7 @@ interface FBAInboundInterface
      * @see ListInboundShipmentsByNextTokenRequest
      * @return ListInboundShipmentsByNextTokenResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentsByNextToken($request);
 
@@ -346,7 +346,7 @@ interface FBAInboundInterface
      * @see PutTransportContentRequest
      * @return PutTransportContentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function putTransportContent($request);
 
@@ -370,7 +370,7 @@ interface FBAInboundInterface
      * @see UpdateInboundShipmentRequest
      * @return UpdateInboundShipmentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function updateInboundShipment($request);
 
@@ -388,7 +388,7 @@ interface FBAInboundInterface
      * @see VoidTransportInputRequest
      * @return VoidTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function voidTransportRequest($request);
 

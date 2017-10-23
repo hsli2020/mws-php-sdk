@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * ContentType
  *
@@ -11,54 +13,59 @@ namespace Amazon\MWS\Feeds\Model;
  * @param Associative Array or leave as default types.
  * Valid Properties:
  * <ul>
- *
  * <li>ContentType: string - Possible types: OctetStream</li>
- *
  * </ul>
  */
 
 /*
  * The only content type that MWS currently supports is octet-stream
  */
-
-class ContentType  extends MarketplaceWebService_Model {
-
-	public function __construct($data = null) {
+class ContentType extends Model
+{
+    public function __construct($data = null)
+    {
         $this->fields = array (
-        'ContentType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Parameters' => array('FieldValue' => null, 'FieldType' => array('string')),
+            'ContentType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Parameters'  => array('FieldValue' => null, 'FieldType' => array('string')),
         );
 
         parent::__construct($data);
     }
 
-    public function getContentType() {
+    public function getContentType()
+    {
     	return $this->fields['ContentType']['FieldValue'];
     }
 
-    public function isSetContentType() {
+    public function isSetContentType()
+    {
     	return !is_null($this->fields['ContentType']['FieldValue']);
     }
 
-    public function setContentType($value) {
+    public function setContentType($value)
+    {
     	$this->fields['ContentType']['FieldValue'] = $value;
         return $this;
     }
 
-    public function getParameters() {
+    public function getParameters()
+    {
     	return $this->fields['Parameters']['FieldValue'];
     }
 
-    public function setParameters($parameters) {
+    public function setParameters($parameters)
+    {
     	$this->fields['Parameters']['FieldValue'] = $parameters;
         return $this;
     }
 
-    public function isSetParameters() {
+    public function isSetParameters()
+    {
     	return count ($this->fields['Parameters']['FieldValue']) > 0;
     }
 
-	public function toString() {
+    public function toString()
+    {
 		$contentType = $this->getContentType();
 
 		return $this->isSetParameters() ?

@@ -1,8 +1,8 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
+use Amazon\MWS\Reports\Model;
 
 
 /**
@@ -10,16 +10,12 @@ namespace Amazon\MWS\Reports;
  *
  * Properties:
  * <ul>
- *
  * <li>Count: int</li>
  * <li>ReportRequestInfo: ReportRequestInfo</li>
- *
  * </ul>
  */
-class CancelReportRequestsResult extends MarketplaceWebService_Model
+class CancelReportRequestsResult extends Model
 {
-
-
     /**
      * Construct new CancelReportRequestsResult
      *
@@ -27,22 +23,20 @@ class CancelReportRequestsResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Count: int</li>
      * <li>ReportRequestInfo: ReportRequestInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+            'Count'             => array('FieldValue' => null, 'FieldType' => 'int'),
+            'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -75,7 +69,6 @@ class CancelReportRequestsResult extends MarketplaceWebService_Model
         $this->setCount($value);
         return $this;
     }
-
 
     /**
      * Checks if Count is set
@@ -112,7 +105,6 @@ class CancelReportRequestsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of ReportRequestInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -129,8 +121,6 @@ class CancelReportRequestsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportRequestInfo list is non-empty
      *
@@ -140,8 +130,4 @@ class CancelReportRequestsResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportRequestInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

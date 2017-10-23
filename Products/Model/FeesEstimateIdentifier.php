@@ -2,13 +2,14 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeesEstimateIdentifier
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>SellerId: string</li>
  * <li>IdType: string</li>
@@ -16,24 +17,22 @@ namespace Amazon\MWS\Products\Model;
  * <li>IsAmazonFulfilled: bool</li>
  * <li>PriceToEstimateFees: PriceToEstimateFees</li>
  * <li>SellerInputIdentifier: string</li>
- *
  * </ul>
  */
-
- class FeesEstimateIdentifier extends MarketplaceWebServiceProducts_Model {
-
+class FeesEstimateIdentifier extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IdType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IdValue' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsAmazonFulfilled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PriceToEstimateFees' => array('FieldValue' => null, 'FieldType' => 'PriceToEstimateFees'),
-    'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IdType'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IdValue'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IsAmazonFulfilled'     => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => 'PriceToEstimateFees'),
+            'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +64,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -111,8 +110,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -157,8 +156,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIdType()
     {
-                return !is_null($this->_fields['IdType']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdType']['FieldValue']);
+    }
 
     /**
      * Set the value of IdType, return this.
@@ -203,8 +202,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIdValue()
     {
-                return !is_null($this->_fields['IdValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdValue']['FieldValue']);
+    }
 
     /**
      * Set the value of IdValue, return this.
@@ -259,8 +258,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIsAmazonFulfilled()
     {
-                return !is_null($this->_fields['IsAmazonFulfilled']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsAmazonFulfilled']['FieldValue']);
+    }
 
     /**
      * Set the value of IsAmazonFulfilled, return this.
@@ -305,8 +304,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPriceToEstimateFees()
     {
-                return !is_null($this->_fields['PriceToEstimateFees']['FieldValue']);
-            }
+        return !is_null($this->_fields['PriceToEstimateFees']['FieldValue']);
+    }
 
     /**
      * Set the value of PriceToEstimateFees, return this.
@@ -351,8 +350,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerInputIdentifier()
     {
-                return !is_null($this->_fields['SellerInputIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerInputIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerInputIdentifier, return this.
@@ -367,5 +366,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setSellerInputIdentifier($value);
         return $this;
     }
-
 }

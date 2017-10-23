@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * TrackingAddress
  *
  * Properties:
  * <ul>
- *
  * <li>City: string</li>
  * <li>State: string</li>
  * <li>Country: string</li>
- *
  * </ul>
  */
-
- class TrackingAddress extends FBAOutboundServiceMWS_Model {
-
+class TrackingAddress extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'City' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'State' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Country' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'City'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'State'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Country' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCity()
     {
-                return !is_null($this->_fields['City']['FieldValue']);
-            }
+        return !is_null($this->_fields['City']['FieldValue']);
+    }
 
     /**
      * Set the value of City, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetState()
     {
-                return !is_null($this->_fields['State']['FieldValue']);
-            }
+        return !is_null($this->_fields['State']['FieldValue']);
+    }
 
     /**
      * Set the value of State, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCountry()
     {
-                return !is_null($this->_fields['Country']['FieldValue']);
-            }
+        return !is_null($this->_fields['Country']['FieldValue']);
+    }
 
     /**
      * Set the value of Country, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setCountry($value);
         return $this;
     }
-
 }

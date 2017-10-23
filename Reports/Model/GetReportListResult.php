@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportListResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>ReportInfo: ReportInfo</li>
- *
  * </ul>
  */
-class GetReportListResult extends MarketplaceWebService_Model
+class GetReportListResult extends Model
 {
-
-
     /**
      * Construct new GetReportListResult
      *
@@ -28,19 +23,17 @@ class GetReportListResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>ReportInfo: ReportInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
+            'NextToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'    => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
         );
         parent::__construct($data);
     }
@@ -78,7 +71,6 @@ class GetReportListResult extends MarketplaceWebService_Model
         $this->setNextToken($value);
         return $this;
     }
-
 
     /**
      * Checks if NextToken is set
@@ -177,8 +169,6 @@ class GetReportListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportInfo list is non-empty
      *
@@ -188,8 +178,4 @@ class GetReportListResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

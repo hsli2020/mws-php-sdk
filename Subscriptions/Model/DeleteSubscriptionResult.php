@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * DeleteSubscriptionResult
  *
@@ -9,7 +11,7 @@ namespace Amazon\MWS\Subscriptions\Model;
  * <ul>
  * </ul>
  */
-class DeleteSubscriptionResult extends MWSSubscriptionsService_Model
+class DeleteSubscriptionResult extends Model
 {
     public function __construct($data = null)
     {

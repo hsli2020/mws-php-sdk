@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * ListOrderItemsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>AmazonOrderId: string</li>
- *
  * </ul>
  */
-
- class ListOrderItemsRequest extends MarketplaceWebServiceOrders_Model {
-
+class ListOrderItemsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType'      => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType'  => 'string'),
+            'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setAmazonOrderId($value);
         return $this;
     }
-
 }

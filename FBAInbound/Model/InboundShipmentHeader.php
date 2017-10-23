@@ -1,19 +1,14 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentHeader
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentName: string</li>
  * <li>ShipFromAddress: Address</li>
  * <li>DestinationFulfillmentCenterId: string</li>
@@ -21,24 +16,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>ShipmentStatus: string</li>
  * <li>LabelPrepPreference: string</li>
  * <li>IntendedBoxContentsSource: string</li>
- *
  * </ul>
  */
-
- class InboundShipmentHeader extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentHeader extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AreCasesRequired' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'ShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LabelPrepPreference' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IntendedBoxContentsSource' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipFromAddress'                => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AreCasesRequired'               => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ShipmentStatus'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LabelPrepPreference'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IntendedBoxContentsSource'      => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -70,8 +63,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentName()
     {
-                return !is_null($this->_fields['ShipmentName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentName']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentName, return this.
@@ -116,8 +109,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipFromAddress()
     {
-                return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipFromAddress, return this.
@@ -162,8 +155,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetDestinationFulfillmentCenterId()
     {
-                return !is_null($this->_fields['DestinationFulfillmentCenterId']['FieldValue']);
-            }
+        return !is_null($this->_fields['DestinationFulfillmentCenterId']['FieldValue']);
+    }
 
     /**
      * Set the value of DestinationFulfillmentCenterId, return this.
@@ -218,8 +211,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetAreCasesRequired()
     {
-                return !is_null($this->_fields['AreCasesRequired']['FieldValue']);
-            }
+        return !is_null($this->_fields['AreCasesRequired']['FieldValue']);
+    }
 
     /**
      * Set the value of AreCasesRequired, return this.
@@ -264,8 +257,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentStatus()
     {
-                return !is_null($this->_fields['ShipmentStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentStatus, return this.
@@ -310,8 +303,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLabelPrepPreference()
     {
-                return !is_null($this->_fields['LabelPrepPreference']['FieldValue']);
-            }
+        return !is_null($this->_fields['LabelPrepPreference']['FieldValue']);
+    }
 
     /**
      * Set the value of LabelPrepPreference, return this.
@@ -356,8 +349,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIntendedBoxContentsSource()
     {
-                return !is_null($this->_fields['IntendedBoxContentsSource']['FieldValue']);
-            }
+        return !is_null($this->_fields['IntendedBoxContentsSource']['FieldValue']);
+    }
 
     /**
      * Set the value of IntendedBoxContentsSource, return this.
@@ -372,5 +365,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setIntendedBoxContentsSource($value);
         return $this;
     }
-
 }

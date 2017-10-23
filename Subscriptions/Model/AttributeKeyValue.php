@@ -2,27 +2,26 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * AttributeKeyValue
  *
  * Properties:
  * <ul>
- *
  * <li>Key: string</li>
  * <li>Value: string</li>
- *
  * </ul>
  */
-
- class AttributeKeyValue extends MWSSubscriptionsService_Model {
-
+class AttributeKeyValue extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Key' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Key'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +53,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetKey()
     {
-                return !is_null($this->_fields['Key']['FieldValue']);
-            }
+        return !is_null($this->_fields['Key']['FieldValue']);
+    }
 
     /**
      * Set the value of Key, return this.
@@ -100,8 +99,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return !is_null($this->_fields['Value']['FieldValue']);
+    }
 
     /**
      * Set the value of Value, return this.
@@ -116,5 +115,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setValue($value);
         return $this;
     }
-
 }

@@ -2,31 +2,30 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * DebtRecoveryItem
  *
  * Properties:
  * <ul>
- *
  * <li>RecoveryAmount: Currency</li>
  * <li>OriginalAmount: Currency</li>
  * <li>GroupBeginDate: string</li>
  * <li>GroupEndDate: string</li>
- *
  * </ul>
  */
-
- class DebtRecoveryItem extends MWSFinancesService_Model {
-
+class DebtRecoveryItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'OriginalAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'GroupBeginDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'GroupEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'OriginalAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'GroupBeginDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'GroupEndDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +57,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRecoveryAmount()
     {
-                return !is_null($this->_fields['RecoveryAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecoveryAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of RecoveryAmount, return this.
@@ -104,8 +103,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOriginalAmount()
     {
-                return !is_null($this->_fields['OriginalAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['OriginalAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of OriginalAmount, return this.
@@ -150,8 +149,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetGroupBeginDate()
     {
-                return !is_null($this->_fields['GroupBeginDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['GroupBeginDate']['FieldValue']);
+    }
 
     /**
      * Set the value of GroupBeginDate, return this.
@@ -196,8 +195,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetGroupEndDate()
     {
-                return !is_null($this->_fields['GroupEndDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['GroupEndDate']['FieldValue']);
+    }
 
     /**
      * Set the value of GroupEndDate, return this.
@@ -212,5 +211,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setGroupEndDate($value);
         return $this;
     }
-
 }

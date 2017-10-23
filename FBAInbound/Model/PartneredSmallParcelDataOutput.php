@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredSmallParcelDataOutput
  *
  * Properties:
  * <ul>
- *
  * <li>PackageList: PartneredSmallParcelPackageOutputList</li>
  * <li>PartneredEstimate: PartneredEstimate</li>
- *
  * </ul>
  */
-
- class PartneredSmallParcelDataOutput extends FBAInboundServiceMWS_Model {
-
+class PartneredSmallParcelDataOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PackageList' => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelPackageOutputList'),
-    'PartneredEstimate' => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PackageList'       => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelPackageOutputList'),
+            'PartneredEstimate' => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPackageList()
     {
-                return !is_null($this->_fields['PackageList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageList']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageList, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPartneredEstimate()
     {
-                return !is_null($this->_fields['PartneredEstimate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PartneredEstimate']['FieldValue']);
+    }
 
     /**
      * Set the value of PartneredEstimate, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPartneredEstimate($value);
         return $this;
     }
-
 }

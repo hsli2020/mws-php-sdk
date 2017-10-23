@@ -10,7 +10,7 @@ namespace Amazon\MWS\FBAInbound\Model;
  * <li>AmazonPrepFeesDetails: array</li>
  * </ul>
  */
-class AmazonPrepFeesDetailsList extends FBAInboundServiceMWS_Model
+class AmazonPrepFeesDetailsList extends Model
 {
     public function __construct($data = null)
     {
@@ -27,8 +27,7 @@ class AmazonPrepFeesDetailsList extends FBAInboundServiceMWS_Model
      */
     public function getAmazonPrepFeesDetails()
     {
-        if ($this->_fields['AmazonPrepFeesDetails']['FieldValue'] == null)
-        {
+        if ($this->_fields['AmazonPrepFeesDetails']['FieldValue'] == null) {
             $this->_fields['AmazonPrepFeesDetails']['FieldValue'] = array();
         }
         return $this->_fields['AmazonPrepFeesDetails']['FieldValue'];
@@ -77,8 +76,7 @@ class AmazonPrepFeesDetailsList extends FBAInboundServiceMWS_Model
      */
     public function withAmazonPrepFeesDetails()
     {
-        foreach (func_get_args() as $AmazonPrepFeesDetails)
-        {
+        foreach (func_get_args() as $AmazonPrepFeesDetails) {
             $this->_fields['AmazonPrepFeesDetails']['FieldValue'][] = $AmazonPrepFeesDetails;
         }
         return $this;

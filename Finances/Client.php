@@ -5,9 +5,8 @@ namespace Amazon\MWS\Finances;
 /**
  * MWSFinancesService_Client is an implementation of MWSFinancesService
  */
-class Client implements MWSFinancesService_Interface
+class Client implements FinancesInterface
 {
-
     const SERVICE_VERSION = '2015-05-01';
     const MWS_CLIENT_VERSION = '2015-09-03';
 
@@ -18,18 +17,18 @@ class Client implements MWSFinancesService_Interface
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'MWSFinancesService PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
-
+    private  $_config = array(
+            'ServiceURL'       => null,
+            'UserAgent'        => 'MWSFinancesService PHP5 Library',
+            'SignatureVersion' => 2,
+            'SignatureMethod'  => 'HmacSHA256',
+            'ProxyHost'        => null,
+            'ProxyPort'        => -1,
+            'ProxyUsername'    => null,
+            'ProxyPassword'    => null,
+            'MaxErrorRetry'    => 3,
+            'Headers'          => array()
+        );
 
     /**
      * List Financial Event Groups
@@ -57,12 +56,11 @@ class Client implements MWSFinancesService_Interface
         return $response;
     }
 
-
     /**
      * Convert ListFinancialEventGroupsRequest to name value pairs
      */
-    private function _convertListFinancialEventGroups($request) {
-
+    private function _convertListFinancialEventGroups($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListFinancialEventGroups';
         if ($request->isSetSellerId()) {
@@ -83,7 +81,6 @@ class Client implements MWSFinancesService_Interface
 
         return $parameters;
     }
-
 
     /**
      * List Financial Event Groups By Next Token
@@ -113,12 +110,11 @@ class Client implements MWSFinancesService_Interface
         return $response;
     }
 
-
     /**
      * Convert ListFinancialEventGroupsByNextTokenRequest to name value pairs
      */
-    private function _convertListFinancialEventGroupsByNextToken($request) {
-
+    private function _convertListFinancialEventGroupsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListFinancialEventGroupsByNextToken';
         if ($request->isSetSellerId()) {
@@ -133,7 +129,6 @@ class Client implements MWSFinancesService_Interface
 
         return $parameters;
     }
-
 
     /**
      * List Financial Events
@@ -165,8 +160,8 @@ class Client implements MWSFinancesService_Interface
     /**
      * Convert ListFinancialEventsRequest to name value pairs
      */
-    private function _convertListFinancialEvents($request) {
-
+    private function _convertListFinancialEvents($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListFinancialEvents';
         if ($request->isSetSellerId()) {
@@ -193,7 +188,6 @@ class Client implements MWSFinancesService_Interface
 
         return $parameters;
     }
-
 
     /**
      * List Financial Events By Next Token
@@ -223,12 +217,11 @@ class Client implements MWSFinancesService_Interface
         return $response;
     }
 
-
     /**
      * Convert ListFinancialEventsByNextTokenRequest to name value pairs
      */
-    private function _convertListFinancialEventsByNextToken($request) {
-
+    private function _convertListFinancialEventsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListFinancialEventsByNextToken';
         if ($request->isSetSellerId()) {
@@ -243,7 +236,6 @@ class Client implements MWSFinancesService_Interface
 
         return $parameters;
     }
-
 
     /**
      * Get Service Status
@@ -271,12 +263,11 @@ class Client implements MWSFinancesService_Interface
         return $response;
     }
 
-
     /**
      * Convert GetServiceStatusRequest to name value pairs
      */
-    private function _convertGetServiceStatus($request) {
-
+    private function _convertGetServiceStatus($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetServiceStatus';
         if ($request->isSetSellerId()) {
@@ -288,8 +279,6 @@ class Client implements MWSFinancesService_Interface
 
         return $parameters;
     }
-
-
 
     /**
      * Construct new Client
@@ -322,11 +311,8 @@ class Client implements MWSFinancesService_Interface
         $this->setUserAgentHeader($applicationName, $applicationVersion);
     }
 
-    private function setUserAgentHeader(
-        $applicationName,
-        $applicationVersion,
-        $attributes = null) {
-
+    private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($attributes)) {
             $attributes = array ();
         }
@@ -335,7 +321,8 @@ class Client implements MWSFinancesService_Interface
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
-    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null) {
+    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($applicationName) || $applicationName === "") {
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
@@ -377,9 +364,10 @@ class Client implements MWSFinancesService_Interface
     * @param $s
     * @return string
     */
-   private function collapseWhitespace($s) {
-       return preg_replace('/ {2,}|\s/', ' ', $s);
-   }
+    private function collapseWhitespace($s)
+    {
+        return preg_replace('/ {2,}|\s/', ' ', $s);
+    }
 
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
@@ -387,7 +375,8 @@ class Client implements MWSFinancesService_Interface
      * @param $s
      * @return string
      */
-    private function quoteApplicationName($s) {
+    private function quoteApplicationName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\//', '\\/', $quotedString);
@@ -402,7 +391,8 @@ class Client implements MWSFinancesService_Interface
      * @param $s
      * @return string
      */
-    private function quoteApplicationVersion($s) {
+    private function quoteApplicationVersion($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
@@ -417,7 +407,8 @@ class Client implements MWSFinancesService_Interface
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeName($s) {
+    private function quoteAttributeName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
@@ -432,7 +423,8 @@ class Client implements MWSFinancesService_Interface
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeValue($s) {
+    private function quoteAttributeValue($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
@@ -440,7 +432,6 @@ class Client implements MWSFinancesService_Interface
 
         return $quotedString;
     }
-
 
     // Private API ------------------------------------------------------------//
 
@@ -505,11 +496,8 @@ class Client implements MWSFinancesService_Interface
         return new MWSFinancesService_Exception($exProps);
     }
 
-
-
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
-     *
      */
     private function _httpPost(array $parameters)
     {
@@ -553,12 +541,11 @@ class Client implements MWSFinancesService_Interface
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
-        {
+
+        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
-        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null)
-        {
+        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
 
@@ -596,7 +583,8 @@ class Client implements MWSFinancesService_Interface
      *
      * return [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response)
+    {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
@@ -638,7 +626,8 @@ class Client implements MWSFinancesService_Interface
      * ...
      * returns String statusCode or null if the status line can't be parsed
      */
-    private function _extractHttpStatusCode($headers){
+    private function _extractHttpStatusCode($headers)
+    {
     	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
@@ -652,7 +641,8 @@ class Client implements MWSFinancesService_Interface
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
      */
-    private function _httpHeadersHaveContent($headers){
+    private function _httpHeadersHaveContent($headers)
+    {
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
@@ -660,7 +650,8 @@ class Client implements MWSFinancesService_Interface
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
-    private function _extractResponseHeaderMetadata($rawHeaders){
+    private function _extractResponseHeaderMetadata($rawHeaders)
+    {
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
         $headers['x-mws-request-id'] = null;
@@ -696,7 +687,8 @@ class Client implements MWSFinancesService_Interface
      * Set curl options relating to SSL. Protected to allow overriding.
      * @param $ch curl handle
      */
-    protected function setSSLCurlOptions($ch) {
+    protected function setSSLCurlOptions($ch)
+    {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
     }
@@ -745,7 +737,6 @@ class Client implements MWSFinancesService_Interface
         return implode('&', $queryParameters);
     }
 
-
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -776,7 +767,8 @@ class Client implements MWSFinancesService_Interface
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      *
      */
-    private function _signParameters(array $parameters, $key) {
+    private function _signParameters(array $parameters, $key)
+    {
         $signatureVersion = $parameters['SignatureVersion'];
         $algorithm = "HmacSHA1";
         $stringToSign = null;
@@ -795,7 +787,8 @@ class Client implements MWSFinancesService_Interface
      * @param array $parameters request parameters
      * @return String to Sign
      */
-    private function _calculateStringToSignV2(array $parameters) {
+    private function _calculateStringToSignV2(array $parameters)
+    {
         $data = 'POST';
         $data .= "\n";
         $endpoint = parse_url ($this->_config['ServiceURL']);
@@ -813,10 +806,10 @@ class Client implements MWSFinancesService_Interface
         return $data;
     }
 
-    private function _urlencode($value) {
+    private function _urlencode($value)
+    {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
@@ -835,7 +828,6 @@ class Client implements MWSFinancesService_Interface
         );
     }
 
-
     /**
      * Formats date as ISO 8601 timestamp
      */
@@ -851,5 +843,4 @@ class Client implements MWSFinancesService_Interface
     {
         return $dateTime->format(DATE_ISO8601);
     }
-
 }

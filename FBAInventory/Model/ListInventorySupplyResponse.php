@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use  Amazon\MWS\FBAInventory\Model;
+
 /**
  * ListInventorySupplyResponse
  *
@@ -12,16 +14,16 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  * </ul>
  */
-class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
-
+class ListInventorySupplyResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ListInventorySupplyResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ListInventorySupplyResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyResult'),
+            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +55,8 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
      */
     public function isSetListInventorySupplyResult()
     {
-                return !is_null($this->_fields['ListInventorySupplyResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListInventorySupplyResult']['FieldValue']);
+    }
 
     /**
      * Set the value of ListInventorySupplyResult, return this.
@@ -99,8 +101,8 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -145,8 +147,8 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -161,6 +163,7 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct ListInventorySupplyResponse from XML string
      *
@@ -182,6 +185,7 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
                                   Make sure that ListInventorySupplyResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -195,5 +199,4 @@ class ListInventorySupplyResponse extends FBAInventoryServiceMWS_Model {
         $xml .= "</ListInventorySupplyResponse>";
         return $xml;
     }
-
 }

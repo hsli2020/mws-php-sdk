@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * ListMarketplaceParticipationsResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>ListParticipations: ListParticipations</li>
  * <li>ListMarketplaces: ListMarketplaces</li>
- *
  * </ul>
  */
-
- class ListMarketplaceParticipationsResult extends MarketplaceWebServiceSellers_Model {
-
+class ListMarketplaceParticipationsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ListParticipations' => array('FieldValue' => null, 'FieldType' => 'ListParticipations'),
-    'ListMarketplaces' => array('FieldValue' => null, 'FieldType' => 'ListMarketplaces'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ListParticipations' => array('FieldValue' => null, 'FieldType' => 'ListParticipations'),
+            'ListMarketplaces'   => array('FieldValue' => null, 'FieldType' => 'ListMarketplaces'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetListParticipations()
     {
-                return !is_null($this->_fields['ListParticipations']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListParticipations']['FieldValue']);
+    }
 
     /**
      * Set the value of ListParticipations, return this.
@@ -148,8 +147,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetListMarketplaces()
     {
-                return !is_null($this->_fields['ListMarketplaces']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListMarketplaces']['FieldValue']);
+    }
 
     /**
      * Set the value of ListMarketplaces, return this.
@@ -164,5 +163,4 @@ namespace Amazon\MWS\Sellers\Model;
         $this->setListMarketplaces($value);
         return $this;
     }
-
 }

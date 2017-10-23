@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * RelationshipList
  *
  * Properties:
  * <ul>
- *
  * <li>Any: array</li>
- *
  * </ul>
  */
-
- class RelationshipList extends MarketplaceWebServiceProducts_Model {
-
+class RelationshipList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Any' => array('FieldValue' => array(), 'FieldType' => array('object')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Any' => array('FieldValue' => array(), 'FieldType' => array('object')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getAny()
     {
-        if ($this->_fields['Any']['FieldValue'] == null)
-        {
+        if ($this->_fields['Any']['FieldValue'] == null) {
             $this->_fields['Any']['FieldValue'] = array();
         }
         return $this->_fields['Any']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetAny()
     {
-                return !empty($this->_fields['Any']['FieldValue']);
-            }
+        return !empty($this->_fields['Any']['FieldValue']);
+    }
 
     /**
      * Add values for Any, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withAny()
     {
-        foreach (func_get_args() as $Any)
-        {
+        foreach (func_get_args() as $Any) {
             $this->_fields['Any']['FieldValue'][] = $Any;
         }
         return $this;
     }
-
 }

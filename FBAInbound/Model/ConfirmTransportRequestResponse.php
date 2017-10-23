@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * ConfirmTransportRequestResponse
  *
  * Properties:
  * <ul>
- *
  * <li>ConfirmTransportRequestResult: ConfirmTransportRequestResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class ConfirmTransportRequestResponse extends FBAInboundServiceMWS_Model {
-
+class ConfirmTransportRequestResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ConfirmTransportRequestResult' => array('FieldValue' => null, 'FieldType' => 'ConfirmTransportRequestResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ConfirmTransportRequestResult' => array('FieldValue' => null, 'FieldType' => 'ConfirmTransportRequestResult'),
+            'ResponseMetadata'              => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetConfirmTransportRequestResult()
     {
-                return !is_null($this->_fields['ConfirmTransportRequestResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConfirmTransportRequestResult']['FieldValue']);
+    }
 
     /**
      * Set the value of ConfirmTransportRequestResult, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -170,6 +163,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct ConfirmTransportRequestResponse from XML string
      *
@@ -191,6 +185,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
                                   Make sure that ConfirmTransportRequestResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -204,5 +199,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xml .= "</ConfirmTransportRequestResponse>";
         return $xml;
     }
-
 }

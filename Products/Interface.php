@@ -13,7 +13,7 @@ interface ProductsInterface
      * @see GetCompetitivePricingForASINRequest
      * @return GetCompetitivePricingForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getCompetitivePricingForASIN($request);
 
@@ -27,7 +27,7 @@ interface ProductsInterface
      * @see GetCompetitivePricingForSKURequest
      * @return GetCompetitivePricingForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getCompetitivePricingForSKU($request);
 
@@ -41,7 +41,7 @@ interface ProductsInterface
      * @see GetLowestOfferListingsForASINRequest
      * @return GetLowestOfferListingsForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestOfferListingsForASIN($request);
 
@@ -55,7 +55,7 @@ interface ProductsInterface
      * @see GetLowestOfferListingsForSKURequest
      * @return GetLowestOfferListingsForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestOfferListingsForSKU($request);
 
@@ -69,7 +69,7 @@ interface ProductsInterface
      * @see GetLowestPricedOffersForASINRequest
      * @return GetLowestPricedOffersForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestPricedOffersForASIN($request);
 
@@ -83,7 +83,7 @@ interface ProductsInterface
      * @see GetLowestPricedOffersForSKURequest
      * @return GetLowestPricedOffersForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestPricedOffersForSKU($request);
 
@@ -97,7 +97,7 @@ interface ProductsInterface
      * @see GetMatchingProductRequest
      * @return GetMatchingProductResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMatchingProduct($request);
 
@@ -111,7 +111,7 @@ interface ProductsInterface
      * @see GetMatchingProductForIdRequest
      * @return GetMatchingProductForIdResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMatchingProductForId($request);
 
@@ -126,7 +126,7 @@ interface ProductsInterface
      * @see GetMyFeesEstimateRequest
      * @return GetMyFeesEstimateResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyFeesEstimate($request);
 
@@ -139,7 +139,7 @@ interface ProductsInterface
      * @see GetMyPriceForASINRequest
      * @return GetMyPriceForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyPriceForASIN($request);
 
@@ -152,7 +152,7 @@ interface ProductsInterface
      * @see GetMyPriceForSKURequest
      * @return GetMyPriceForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyPriceForSKU($request);
 
@@ -166,7 +166,7 @@ interface ProductsInterface
      * @see GetProductCategoriesForASINRequest
      * @return GetProductCategoriesForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getProductCategoriesForASIN($request);
 
@@ -180,7 +180,7 @@ interface ProductsInterface
      * @see GetProductCategoriesForSKURequest
      * @return GetProductCategoriesForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getProductCategoriesForSKU($request);
 
@@ -195,7 +195,7 @@ interface ProductsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getServiceStatus($request);
 
@@ -209,7 +209,7 @@ interface ProductsInterface
      * @see ListMatchingProductsRequest
      * @return ListMatchingProductsResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function listMatchingProducts($request);
 

@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetServiceStatusResult
  *
  * Properties:
  * <ul>
- *
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
- *
  * </ul>
  */
-
- class GetServiceStatusResult extends FBAInboundServiceMWS_Model {
-
+class GetServiceStatusResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return !is_null($this->_fields['Timestamp']['FieldValue']);
+    }
 
     /**
      * Set the value of Timestamp, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTimestamp($value);
         return $this;
     }
-
 }

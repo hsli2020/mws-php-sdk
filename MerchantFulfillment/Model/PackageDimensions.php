@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * PackageDimensions
  *
  * Properties:
  * <ul>
- *
  * <li>Length: float</li>
  * <li>Width: float</li>
  * <li>Height: float</li>
  * <li>Unit: string</li>
  * <li>PredefinedPackageDimensions: string</li>
- *
  * </ul>
  */
-
- class PackageDimensions extends MWSMerchantFulfillmentService_Model {
-
+class PackageDimensions extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Length' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Width' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Height' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Unit' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PredefinedPackageDimensions' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Length'                      => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Width'                       => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Height'                      => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Unit'                        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PredefinedPackageDimensions' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetLength()
     {
-                return !is_null($this->_fields['Length']['FieldValue']);
-            }
+        return !is_null($this->_fields['Length']['FieldValue']);
+    }
 
     /**
      * Set the value of Length, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetWidth()
     {
-                return !is_null($this->_fields['Width']['FieldValue']);
-            }
+        return !is_null($this->_fields['Width']['FieldValue']);
+    }
 
     /**
      * Set the value of Width, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetHeight()
     {
-                return !is_null($this->_fields['Height']['FieldValue']);
-            }
+        return !is_null($this->_fields['Height']['FieldValue']);
+    }
 
     /**
      * Set the value of Height, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetUnit()
     {
-                return !is_null($this->_fields['Unit']['FieldValue']);
-            }
+        return !is_null($this->_fields['Unit']['FieldValue']);
+    }
 
     /**
      * Set the value of Unit, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetPredefinedPackageDimensions()
     {
-                return !is_null($this->_fields['PredefinedPackageDimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['PredefinedPackageDimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of PredefinedPackageDimensions, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setPredefinedPackageDimensions($value);
         return $this;
     }
-
 }

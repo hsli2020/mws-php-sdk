@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * Participation
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>SellerId: string</li>
  * <li>HasSellerSuspendedListings: string</li>
- *
  * </ul>
  */
-
- class Participation extends MarketplaceWebServiceSellers_Model {
-
+class Participation extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'HasSellerSuspendedListings' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasSellerSuspendedListings' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -148,8 +147,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetHasSellerSuspendedListings()
     {
-                return !is_null($this->_fields['HasSellerSuspendedListings']['FieldValue']);
-            }
+        return !is_null($this->_fields['HasSellerSuspendedListings']['FieldValue']);
+    }
 
     /**
      * Set the value of HasSellerSuspendedListings, return this.
@@ -164,5 +163,4 @@ namespace Amazon\MWS\Sellers\Model;
         $this->setHasSellerSuspendedListings($value);
         return $this;
     }
-
 }

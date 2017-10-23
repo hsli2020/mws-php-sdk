@@ -2,28 +2,27 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
+
 
 /**
  * CategoryQuery
  *
  * Properties:
  * <ul>
- *
  * <li>RecommendationCategory: string</li>
  * <li>FilterOptions: array</li>
- *
  * </ul>
  */
-
- class CategoryQuery extends MWSRecommendationsSectionService_Model {
-
+class CategoryQuery extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RecommendationCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FilterOptions' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'FilterOption'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RecommendationCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FilterOptions'          => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'FilterOption'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +54,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationCategory()
     {
-                return !is_null($this->_fields['RecommendationCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationCategory, return this.
@@ -79,8 +78,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getFilterOptions()
     {
-        if ($this->_fields['FilterOptions']['FieldValue'] == null)
-        {
+        if ($this->_fields['FilterOptions']['FieldValue'] == null) {
             $this->_fields['FilterOptions']['FieldValue'] = array();
         }
         return $this->_fields['FilterOptions']['FieldValue'];
@@ -116,8 +114,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetFilterOptions()
     {
-                return !empty($this->_fields['FilterOptions']['FieldValue']);
-            }
+        return !empty($this->_fields['FilterOptions']['FieldValue']);
+    }
 
     /**
      * Add values for FilterOptions, return this.
@@ -129,11 +127,9 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withFilterOptions()
     {
-        foreach (func_get_args() as $FilterOptions)
-        {
+        foreach (func_get_args() as $FilterOptions) {
             $this->_fields['FilterOptions']['FieldValue'][] = $FilterOptions;
         }
         return $this;
     }
-
 }

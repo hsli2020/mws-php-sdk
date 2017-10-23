@@ -2,22 +2,20 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionListByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
- *
  * </ul>
  */
-class GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
+class GetFeedSubmissionListByNextTokenResult extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListByNextTokenResult
      *
@@ -25,24 +23,22 @@ class GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+            'NextToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'            => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -157,7 +153,6 @@ class GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of FeedSubmissionInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -174,8 +169,6 @@ class GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if FeedSubmissionInfo list is non-empty
      *
@@ -185,8 +178,4 @@ class GetFeedSubmissionListByNextTokenResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['FeedSubmissionInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

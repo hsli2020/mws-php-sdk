@@ -2,32 +2,31 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * GetCompetitivePricingForASINRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
  * <li>ASINList: ASINListType</li>
- *
  * </ul>
  */
-
- class GetCompetitivePricingForASINRequest extends MarketplaceWebServiceProducts_Model {
-
+class GetCompetitivePricingForASINRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASINList' => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASINList'      => array('FieldValue' => null, 'FieldType' => 'ASINListType'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +58,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -105,8 +104,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -151,8 +150,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -197,8 +196,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetASINList()
     {
-                return !is_null($this->_fields['ASINList']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASINList']['FieldValue']);
+    }
 
     /**
      * Set the value of ASINList, return this.
@@ -213,5 +212,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setASINList($value);
         return $this;
     }
-
 }

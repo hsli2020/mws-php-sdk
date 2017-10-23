@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PrepDetails
  *
  * Properties:
  * <ul>
- *
  * <li>PrepInstruction: string</li>
  * <li>PrepOwner: string</li>
- *
  * </ul>
  */
-
- class PrepDetails extends FBAInboundServiceMWS_Model {
-
+class PrepDetails extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PrepOwner' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PrepOwner'       => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepInstruction()
     {
-                return !is_null($this->_fields['PrepInstruction']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepInstruction']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepInstruction, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepOwner()
     {
-                return !is_null($this->_fields['PrepOwner']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepOwner']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepOwner, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPrepOwner($value);
         return $this;
     }
-
 }

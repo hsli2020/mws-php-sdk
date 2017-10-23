@@ -7,18 +7,13 @@ namespace Amazon\MWS\Subscriptions\Model;
  *
  * Properties:
  * <ul>
- *
- *
  * </ul>
  */
-
- class RegisterDestinationResult extends MWSSubscriptionsService_Model {
-
+class RegisterDestinationResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    );
-    parent::__construct($data);
+        $this->_fields = array ();
+        parent::__construct($data);
     }
-
 }

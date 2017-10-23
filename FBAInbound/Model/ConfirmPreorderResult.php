@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * ConfirmPreorderResult
  *
  * Properties:
  * <ul>
- *
  * <li>ConfirmedNeedByDate: string</li>
  * <li>ConfirmedFulfillableDate: string</li>
- *
  * </ul>
  */
-
- class ConfirmPreorderResult extends FBAInboundServiceMWS_Model {
-
+class ConfirmPreorderResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ConfirmedNeedByDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ConfirmedFulfillableDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ConfirmedNeedByDate'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ConfirmedFulfillableDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetConfirmedNeedByDate()
     {
-                return !is_null($this->_fields['ConfirmedNeedByDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConfirmedNeedByDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ConfirmedNeedByDate, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetConfirmedFulfillableDate()
     {
-                return !is_null($this->_fields['ConfirmedFulfillableDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConfirmedFulfillableDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ConfirmedFulfillableDate, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setConfirmedFulfillableDate($value);
         return $this;
     }
-
 }

@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * UpdateReportAcknowledgementsResult
  *
  * Properties:
  * <ul>
- *
  * <li>Count: int</li>
  * <li>ReportInfo: ReportInfo</li>
- *
  * </ul>
  */
-class UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsResult extends Model
 {
-
-
     /**
      * Construct new UpdateReportAcknowledgementsResult
      *
@@ -27,22 +22,20 @@ class UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Count: int</li>
      * <li>ReportInfo: ReportInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
+            'Count'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -112,7 +105,6 @@ class UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of ReportInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -129,8 +121,6 @@ class UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportInfo list is non-empty
      *
@@ -140,8 +130,4 @@ class UpdateReportAcknowledgementsResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

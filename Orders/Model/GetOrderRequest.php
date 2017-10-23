@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * GetOrderRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>AmazonOrderId: array</li>
- *
  * </ul>
  */
-
- class GetOrderRequest extends MarketplaceWebServiceOrders_Model {
-
+class GetOrderRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Id'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AmazonOrderId' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Id'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -127,8 +125,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getAmazonOrderId()
     {
-        if ($this->_fields['AmazonOrderId']['FieldValue'] == null)
-        {
+        if ($this->_fields['AmazonOrderId']['FieldValue'] == null) {
             $this->_fields['AmazonOrderId']['FieldValue'] = array();
         }
         return $this->_fields['AmazonOrderId']['FieldValue'];
@@ -164,8 +161,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !empty($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !empty($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Add values for AmazonOrderId, return this.
@@ -177,11 +174,9 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withAmazonOrderId()
     {
-        foreach (func_get_args() as $AmazonOrderId)
-        {
+        foreach (func_get_args() as $AmazonOrderId) {
             $this->_fields['AmazonOrderId']['FieldValue'][] = $AmazonOrderId;
         }
         return $this;
     }
-
 }

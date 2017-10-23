@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetMyFeesEstimateResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetMyFeesEstimateResult: GetMyFeesEstimateResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetMyFeesEstimateResponse extends MarketplaceWebServiceProducts_Model {
-
+class GetMyFeesEstimateResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => 'GetMyFeesEstimateResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => 'GetMyFeesEstimateResult'),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetGetMyFeesEstimateResult()
     {
-                return !is_null($this->_fields['GetMyFeesEstimateResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['GetMyFeesEstimateResult']['FieldValue']);
+    }
 
     /**
      * Set the value of GetMyFeesEstimateResult, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -165,6 +163,7 @@ namespace Amazon\MWS\Products\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetMyFeesEstimateResponse from XML string
      *
@@ -186,6 +185,7 @@ namespace Amazon\MWS\Products\Model;
                                   Make sure that GetMyFeesEstimateResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -199,5 +199,4 @@ namespace Amazon\MWS\Products\Model;
         $xml .= "</GetMyFeesEstimateResponse>";
         return $xml;
     }
-
 }

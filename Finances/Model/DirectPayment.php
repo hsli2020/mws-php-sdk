@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * DirectPayment
  *
  * Properties:
  * <ul>
- *
  * <li>DirectPaymentType: string</li>
  * <li>DirectPaymentAmount: Currency</li>
- *
  * </ul>
  */
-
- class DirectPayment extends MWSFinancesService_Model {
-
+class DirectPayment extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DirectPaymentType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DirectPaymentAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DirectPaymentType'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DirectPaymentAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDirectPaymentType()
     {
-                return !is_null($this->_fields['DirectPaymentType']['FieldValue']);
-            }
+        return !is_null($this->_fields['DirectPaymentType']['FieldValue']);
+    }
 
     /**
      * Set the value of DirectPaymentType, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDirectPaymentAmount()
     {
-                return !is_null($this->_fields['DirectPaymentAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['DirectPaymentAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of DirectPaymentAmount, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setDirectPaymentAmount($value);
         return $this;
     }
-
 }

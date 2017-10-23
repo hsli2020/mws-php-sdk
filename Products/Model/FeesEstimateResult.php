@@ -2,32 +2,31 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeesEstimateResult
  *
  * Properties:
  * <ul>
- *
  * <li>Status: string</li>
  * <li>FeesEstimateIdentifier: FeesEstimateIdentifier</li>
  * <li>FeesEstimate: FeesEstimate</li>
  * <li>Error: Error</li>
- *
  * </ul>
  */
-
- class FeesEstimateResult extends MarketplaceWebServiceProducts_Model {
-
+class FeesEstimateResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
-    'FeesEstimate' => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Status'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
+            'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
+            'Error'                  => array('FieldValue' => null, 'FieldType' => 'Error'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +58,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -105,8 +104,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeesEstimateIdentifier()
     {
-                return !is_null($this->_fields['FeesEstimateIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeesEstimateIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of FeesEstimateIdentifier, return this.
@@ -151,8 +150,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeesEstimate()
     {
-                return !is_null($this->_fields['FeesEstimate']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeesEstimate']['FieldValue']);
+    }
 
     /**
      * Set the value of FeesEstimate, return this.
@@ -197,8 +196,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetError()
     {
-                return !is_null($this->_fields['Error']['FieldValue']);
-            }
+        return !is_null($this->_fields['Error']['FieldValue']);
+    }
 
     /**
      * Set the value of Error, return this.
@@ -213,5 +212,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setError($value);
         return $this;
     }
-
 }

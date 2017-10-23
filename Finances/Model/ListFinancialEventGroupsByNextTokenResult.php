@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventGroupsByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>FinancialEventGroupList: array</li>
- *
  * </ul>
  */
-
- class ListFinancialEventGroupsByNextTokenResult extends MWSFinancesService_Model {
-
+class ListFinancialEventGroupsByNextTokenResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FinancialEventGroupList' => array('FieldValue' => array(), 'FieldType' => array('FinancialEventGroup'), 'ListMemberName' => 'FinancialEventGroup'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FinancialEventGroupList' => array('FieldValue' => array(), 'FieldType' => array('FinancialEventGroup'), 'ListMemberName' => 'FinancialEventGroup'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -79,8 +77,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getFinancialEventGroupList()
     {
-        if ($this->_fields['FinancialEventGroupList']['FieldValue'] == null)
-        {
+        if ($this->_fields['FinancialEventGroupList']['FieldValue'] == null) {
             $this->_fields['FinancialEventGroupList']['FieldValue'] = array();
         }
         return $this->_fields['FinancialEventGroupList']['FieldValue'];
@@ -116,8 +113,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupList()
     {
-                return !empty($this->_fields['FinancialEventGroupList']['FieldValue']);
-            }
+        return !empty($this->_fields['FinancialEventGroupList']['FieldValue']);
+    }
 
     /**
      * Add values for FinancialEventGroupList, return this.
@@ -129,11 +126,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withFinancialEventGroupList()
     {
-        foreach (func_get_args() as $FinancialEventGroupList)
-        {
+        foreach (func_get_args() as $FinancialEventGroupList) {
             $this->_fields['FinancialEventGroupList']['FieldValue'][] = $FinancialEventGroupList;
         }
         return $this;
     }
-
 }

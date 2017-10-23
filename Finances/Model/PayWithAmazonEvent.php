@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * PayWithAmazonEvent
  *
  * Properties:
  * <ul>
- *
  * <li>SellerOrderId: string</li>
  * <li>TransactionPostedDate: string</li>
  * <li>BusinessObjectType: string</li>
@@ -19,27 +19,25 @@ namespace Amazon\MWS\Finances\Model;
  * <li>AmountDescription: string</li>
  * <li>FulfillmentChannel: string</li>
  * <li>StoreName: string</li>
- *
  * </ul>
  */
-
- class PayWithAmazonEvent extends MWSFinancesService_Model {
-
+class PayWithAmazonEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TransactionPostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BusinessObjectType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Charge' => array('FieldValue' => null, 'FieldType' => 'ChargeComponent'),
-    'FeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'PaymentAmountType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmountDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'StoreName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerOrderId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TransactionPostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BusinessObjectType'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SalesChannel'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Charge'                => array('FieldValue' => null, 'FieldType' => 'ChargeComponent'),
+            'FeeList'               => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'PaymentAmountType'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AmountDescription'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StoreName'             => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -71,8 +69,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -117,8 +115,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetTransactionPostedDate()
     {
-                return !is_null($this->_fields['TransactionPostedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransactionPostedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of TransactionPostedDate, return this.
@@ -163,8 +161,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetBusinessObjectType()
     {
-                return !is_null($this->_fields['BusinessObjectType']['FieldValue']);
-            }
+        return !is_null($this->_fields['BusinessObjectType']['FieldValue']);
+    }
 
     /**
      * Set the value of BusinessObjectType, return this.
@@ -209,8 +207,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSalesChannel()
     {
-                return !is_null($this->_fields['SalesChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['SalesChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of SalesChannel, return this.
@@ -255,8 +253,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetCharge()
     {
-                return !is_null($this->_fields['Charge']['FieldValue']);
-            }
+        return !is_null($this->_fields['Charge']['FieldValue']);
+    }
 
     /**
      * Set the value of Charge, return this.
@@ -279,8 +277,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getFeeList()
     {
-        if ($this->_fields['FeeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['FeeList']['FieldValue'] == null) {
             $this->_fields['FeeList']['FieldValue'] = array();
         }
         return $this->_fields['FeeList']['FieldValue'];
@@ -316,8 +313,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeList()
     {
-                return !empty($this->_fields['FeeList']['FieldValue']);
-            }
+        return !empty($this->_fields['FeeList']['FieldValue']);
+    }
 
     /**
      * Add values for FeeList, return this.
@@ -329,8 +326,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withFeeList()
     {
-        foreach (func_get_args() as $FeeList)
-        {
+        foreach (func_get_args() as $FeeList) {
             $this->_fields['FeeList']['FieldValue'][] = $FeeList;
         }
         return $this;
@@ -365,8 +361,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPaymentAmountType()
     {
-                return !is_null($this->_fields['PaymentAmountType']['FieldValue']);
-            }
+        return !is_null($this->_fields['PaymentAmountType']['FieldValue']);
+    }
 
     /**
      * Set the value of PaymentAmountType, return this.
@@ -411,8 +407,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmountDescription()
     {
-                return !is_null($this->_fields['AmountDescription']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmountDescription']['FieldValue']);
+    }
 
     /**
      * Set the value of AmountDescription, return this.
@@ -457,8 +453,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -503,8 +499,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetStoreName()
     {
-                return !is_null($this->_fields['StoreName']['FieldValue']);
-            }
+        return !is_null($this->_fields['StoreName']['FieldValue']);
+    }
 
     /**
      * Set the value of StoreName, return this.
@@ -519,5 +515,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setStoreName($value);
         return $this;
     }
-
 }

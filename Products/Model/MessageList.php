@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * MessageList
  *
  * Properties:
  * <ul>
- *
  * <li>Message: array</li>
- *
  * </ul>
  */
-
- class MessageList extends MarketplaceWebServiceProducts_Model {
-
+class MessageList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Message' => array('FieldValue' => array(), 'FieldType' => array('Message')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Message' => array('FieldValue' => array(), 'FieldType' => array('Message')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getMessage()
     {
-        if ($this->_fields['Message']['FieldValue'] == null)
-        {
+        if ($this->_fields['Message']['FieldValue'] == null) {
             $this->_fields['Message']['FieldValue'] = array();
         }
         return $this->_fields['Message']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMessage()
     {
-                return !empty($this->_fields['Message']['FieldValue']);
-            }
+        return !empty($this->_fields['Message']['FieldValue']);
+    }
 
     /**
      * Add values for Message, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withMessage()
     {
-        foreach (func_get_args() as $Message)
-        {
+        foreach (func_get_args() as $Message) {
             $this->_fields['Message']['FieldValue'][] = $Message;
         }
         return $this;
     }
-
 }

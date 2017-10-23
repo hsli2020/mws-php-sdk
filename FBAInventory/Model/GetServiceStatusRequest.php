@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * GetServiceStatusRequest
  *
@@ -16,12 +18,12 @@ class GetServiceStatusRequest extends Model
 {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId' => array('FieldValue' => null, 'FieldType'     => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace' => array('FieldValue' => null, 'FieldType'  => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +55,8 @@ class GetServiceStatusRequest extends Model
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -99,8 +101,8 @@ class GetServiceStatusRequest extends Model
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -145,8 +147,8 @@ class GetServiceStatusRequest extends Model
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -161,5 +163,4 @@ class GetServiceStatusRequest extends Model
         $this->setMarketplace($value);
         return $this;
     }
-
 }

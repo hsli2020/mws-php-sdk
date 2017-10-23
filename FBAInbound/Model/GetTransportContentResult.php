@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetTransportContentResult
  *
  * Properties:
  * <ul>
- *
  * <li>TransportContent: TransportContent</li>
- *
  * </ul>
  */
-
- class GetTransportContentResult extends FBAInboundServiceMWS_Model {
-
+class GetTransportContentResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TransportContent' => array('FieldValue' => null, 'FieldType' => 'TransportContent'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TransportContent' => array('FieldValue' => null, 'FieldType' => 'TransportContent'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportContent()
     {
-                return !is_null($this->_fields['TransportContent']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportContent']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportContent, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTransportContent($value);
         return $this;
     }
-
 }

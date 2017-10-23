@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MaxResultsPerPage: int</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\Finances\Model;
  * <li>FinancialEventGroupId: string</li>
  * <li>PostedAfter: string</li>
  * <li>PostedBefore: string</li>
- *
  * </ul>
  */
-
- class ListFinancialEventsRequest extends MWSFinancesService_Model {
-
+class ListFinancialEventsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MaxResultsPerPage' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FinancialEventGroupId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MaxResultsPerPage'     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'AmazonOrderId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FinancialEventGroupId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PostedAfter'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PostedBefore'          => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -157,8 +155,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMaxResultsPerPage()
     {
-                return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
-            }
+        return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
+    }
 
     /**
      * Set the value of MaxResultsPerPage, return this.
@@ -203,8 +201,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -249,8 +247,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupId()
     {
-                return !is_null($this->_fields['FinancialEventGroupId']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupId']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupId, return this.
@@ -295,8 +293,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPostedAfter()
     {
-                return !is_null($this->_fields['PostedAfter']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostedAfter']['FieldValue']);
+    }
 
     /**
      * Set the value of PostedAfter, return this.
@@ -341,8 +339,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPostedBefore()
     {
-                return !is_null($this->_fields['PostedBefore']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostedBefore']['FieldValue']);
+    }
 
     /**
      * Set the value of PostedBefore, return this.
@@ -357,5 +355,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setPostedBefore($value);
         return $this;
     }
-
 }

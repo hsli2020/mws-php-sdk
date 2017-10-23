@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * ResponseMetadata
  *
  * Properties:
  * <ul>
- *
  * <li>RequestId: string</li>
- *
  * </ul>
  */
-
- class ResponseMetadata extends FBAOutboundServiceMWS_Model {
-
+class ResponseMetadata extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetRequestId()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RequestId']['FieldValue']);
+    }
 
     /**
      * Set the value of RequestId, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setRequestId($value);
         return $this;
     }
-
 }

@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Subscriptions;
 
-class MWSSubscriptionsService_Mock implements MWSSubscriptionsService_Interface
+class Mock implements SubscriptionsInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -172,5 +172,4 @@ class MWSSubscriptionsService_Mock implements MWSSubscriptionsService_Interface
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

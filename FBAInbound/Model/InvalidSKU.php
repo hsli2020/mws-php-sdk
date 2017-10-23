@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,22 +10,19 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: string</li>
  * <li>ErrorReason: string</li>
- *
  * </ul>
  */
-
- class InvalidSKU extends FBAInboundServiceMWS_Model {
-
+class InvalidSKU extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ErrorReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ErrorReason' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +54,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -106,8 +100,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetErrorReason()
     {
-                return !is_null($this->_fields['ErrorReason']['FieldValue']);
-            }
+        return !is_null($this->_fields['ErrorReason']['FieldValue']);
+    }
 
     /**
      * Set the value of ErrorReason, return this.
@@ -122,5 +116,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setErrorReason($value);
         return $this;
     }
-
 }

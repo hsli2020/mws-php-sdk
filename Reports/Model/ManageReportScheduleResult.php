@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * ManageReportScheduleResult
  *
  * Properties:
  * <ul>
- *
  * <li>Count: int</li>
  * <li>ReportSchedule: ReportSchedule</li>
- *
  * </ul>
  */
-class ManageReportScheduleResult extends MarketplaceWebService_Model
+class ManageReportScheduleResult extends Model
 {
-
-
     /**
      * Construct new ManageReportScheduleResult
      *
@@ -27,22 +22,20 @@ class ManageReportScheduleResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Count: int</li>
      * <li>ReportSchedule: ReportSchedule</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+            'Count'          => array('FieldValue' => null, 'FieldType' => 'int'),
+            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -130,7 +123,6 @@ class ManageReportScheduleResult extends MarketplaceWebService_Model
     }
 
 
-
     /**
      * Checks if ReportSchedule list is non-empty
      *
@@ -140,8 +132,4 @@ class ManageReportScheduleResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }

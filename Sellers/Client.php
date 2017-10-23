@@ -5,9 +5,8 @@ namespace Amazon\MWS\Sellers;
 /**
  * MarketplaceWebServiceSellers_Client is an implementation of MarketplaceWebServiceSellers
  */
-class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSellers_Interface
+class Client implements SellersInterface
 {
-
     const SERVICE_VERSION = '2011-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
@@ -18,18 +17,18 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'MarketplaceWebServiceSellers PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
-
+    private  $_config = array(
+            'ServiceURL'       => null,
+            'UserAgent'        => 'MarketplaceWebServiceSellers PHP5 Library',
+            'SignatureVersion' => 2,
+            'SignatureMethod'  => 'HmacSHA256',
+            'ProxyHost'        => null,
+            'ProxyPort'        => -1,
+            'ProxyUsername'    => null,
+            'ProxyPassword'    => null,
+            'MaxErrorRetry'    => 3,
+            'Headers'          => array()
+        );
 
     /**
      * Get Service Status
@@ -59,12 +58,11 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return $response;
     }
 
-
     /**
      * Convert GetServiceStatusRequest to name value pairs
      */
-    private function _convertGetServiceStatus($request) {
-
+    private function _convertGetServiceStatus($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetServiceStatus';
         if ($request->isSetSellerId()) {
@@ -76,7 +74,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
         return $parameters;
     }
-
 
     /**
      * List Marketplace Participations
@@ -105,12 +102,11 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return $response;
     }
 
-
     /**
      * Convert ListMarketplaceParticipationsRequest to name value pairs
      */
-    private function _convertListMarketplaceParticipations($request) {
-
+    private function _convertListMarketplaceParticipations($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListMarketplaceParticipations';
         if ($request->isSetSellerId()) {
@@ -122,7 +118,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
         return $parameters;
     }
-
 
     /**
      * List Marketplace Participations By Next Token
@@ -152,12 +147,11 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return $response;
     }
 
-
     /**
      * Convert ListMarketplaceParticipationsByNextTokenRequest to name value pairs
      */
-    private function _convertListMarketplaceParticipationsByNextToken($request) {
-
+    private function _convertListMarketplaceParticipationsByNextToken($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListMarketplaceParticipationsByNextToken';
         if ($request->isSetSellerId()) {
@@ -172,8 +166,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
         return $parameters;
     }
-
-
 
     /**
      * Construct new Client
@@ -206,11 +198,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         $this->setUserAgentHeader($applicationName, $applicationVersion);
     }
 
-    private function setUserAgentHeader(
-        $applicationName,
-        $applicationVersion,
-        $attributes = null) {
-
+    private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($attributes)) {
             $attributes = array ();
         }
@@ -219,7 +208,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
-    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null) {
+    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($applicationName) || $applicationName === "") {
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
@@ -261,9 +251,10 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
     * @param $s
     * @return string
     */
-   private function collapseWhitespace($s) {
-       return preg_replace('/ {2,}|\s/', ' ', $s);
-   }
+    private function collapseWhitespace($s)
+    {
+        return preg_replace('/ {2,}|\s/', ' ', $s);
+    }
 
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
@@ -271,7 +262,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * @param $s
      * @return string
      */
-    private function quoteApplicationName($s) {
+    private function quoteApplicationName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\//', '\\/', $quotedString);
@@ -286,7 +278,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * @param $s
      * @return string
      */
-    private function quoteApplicationVersion($s) {
+    private function quoteApplicationVersion($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
@@ -301,7 +294,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeName($s) {
+    private function quoteAttributeName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
@@ -316,7 +310,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeValue($s) {
+    private function quoteAttributeValue($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
@@ -324,7 +319,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
 
         return $quotedString;
     }
-
 
     // Private API ------------------------------------------------------------//
 
@@ -388,8 +382,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         require_once (dirname(__FILE__) . '/Exception.php');
         return new MarketplaceWebServiceSellers_Exception($exProps);
     }
-
-
 
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
@@ -480,7 +472,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      *
      * return [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response)
+    {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
@@ -522,7 +515,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * ...
      * returns String statusCode or null if the status line can't be parsed
      */
-    private function _extractHttpStatusCode($headers){
+    private function _extractHttpStatusCode($headers)
+    {
     	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
@@ -536,7 +530,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
      */
-    private function _httpHeadersHaveContent($headers){
+    private function _httpHeadersHaveContent($headers)
+    {
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
@@ -544,7 +539,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
     /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
-    private function _extractResponseHeaderMetadata($rawHeaders){
+    private function _extractResponseHeaderMetadata($rawHeaders)
+    {
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
         $headers['x-mws-request-id'] = null;
@@ -580,7 +576,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * Set curl options relating to SSL. Protected to allow overriding.
      * @param $ch curl handle
      */
-    protected function setSSLCurlOptions($ch) {
+    protected function setSSLCurlOptions($ch)
+    {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
     }
@@ -629,7 +626,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return implode('&', $queryParameters);
     }
 
-
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -660,7 +656,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      *
      */
-    private function _signParameters(array $parameters, $key) {
+    private function _signParameters(array $parameters, $key)
+    {
         $signatureVersion = $parameters['SignatureVersion'];
         $algorithm = "HmacSHA1";
         $stringToSign = null;
@@ -679,7 +676,8 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
      * @param array $parameters request parameters
      * @return String to Sign
      */
-    private function _calculateStringToSignV2(array $parameters) {
+    private function _calculateStringToSignV2(array $parameters)
+    {
         $data = 'POST';
         $data .= "\n";
         $endpoint = parse_url ($this->_config['ServiceURL']);
@@ -697,10 +695,10 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         return $data;
     }
 
-    private function _urlencode($value) {
+    private function _urlencode($value)
+    {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
@@ -719,7 +717,6 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
         );
     }
 
-
     /**
      * Formats date as ISO 8601 timestamp
      */
@@ -735,5 +732,4 @@ class MarketplaceWebServiceSellers_Client implements MarketplaceWebServiceSeller
     {
         return $dateTime->format(DATE_ISO8601);
     }
-
 }

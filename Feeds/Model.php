@@ -26,7 +26,6 @@ abstract class Model
                 throw new Exception ("Unable to construct from provided data.
                                 Please be sure to pass associative array or DOMElement");
             }
-
         }
     }
 
@@ -45,8 +44,8 @@ abstract class Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -64,11 +63,10 @@ abstract class Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
-
 
     /**
      * XML fragment representation of this object
@@ -113,7 +111,6 @@ abstract class Model
         return $xml;
     }
 
-
     /**
      * Escape special XML characters
      * @return string with escaped XML characters
@@ -124,8 +121,6 @@ abstract class Model
         $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
         return str_replace($from, $to, $str);
     }
-
-
 
     /**
      * Construct from DOMElement
@@ -197,7 +192,6 @@ abstract class Model
         }
     }
 
-
     /**
      * Construct from Associative Array
      *
@@ -250,8 +244,6 @@ abstract class Model
         }
     }
 
-
-
     /**
      * Determines if field is complex type
      *
@@ -268,7 +260,8 @@ abstract class Model
     * @param mixed $var
     * @return TRUE if passed variable is an associative array
     */
-    private function isAssociativeArray($var) {
+    private function isAssociativeArray($var)
+    {
         return is_array($var) && array_keys($var) !== range(0, sizeof($var) - 1);
     }
 
@@ -278,7 +271,8 @@ abstract class Model
     * @param mixed $var
     * @return TRUE if passed variable is DOMElement
     */
-    private function isDOMElement($var) {
+    private function isDOMElement($var)
+    {
         return $var instanceof DOMElement;
     }
 
@@ -288,7 +282,8 @@ abstract class Model
     * @param mixed $var
     * @return TRUE if passed variable is an numeric array
     */
-    protected function isNumericArray($var) {
+    protected function isNumericArray($var)
+    {
         return is_array($var) && array_keys($var) === range(0, sizeof($var) - 1);
     }
 }

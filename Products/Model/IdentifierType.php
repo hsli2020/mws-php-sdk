@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * IdentifierType
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceASIN: ASINIdentifier</li>
  * <li>SKUIdentifier: SellerSKUIdentifier</li>
- *
  * </ul>
  */
-
- class IdentifierType extends MarketplaceWebServiceProducts_Model {
-
+class IdentifierType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'ASINIdentifier'),
-    'SKUIdentifier' => array('FieldValue' => null, 'FieldType' => 'SellerSKUIdentifier'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'ASINIdentifier'),
+            'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'SellerSKUIdentifier'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceASIN()
     {
-                return !is_null($this->_fields['MarketplaceASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceASIN, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSKUIdentifier()
     {
-                return !is_null($this->_fields['SKUIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['SKUIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of SKUIdentifier, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setSKUIdentifier($value);
         return $this;
     }
-
 }

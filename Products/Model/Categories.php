@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * Categories
  *
  * Properties:
  * <ul>
- *
  * <li>ProductCategoryId: string</li>
  * <li>ProductCategoryName: string</li>
  * <li>Parent: Categories</li>
- *
  * </ul>
  */
-
- class Categories extends MarketplaceWebServiceProducts_Model {
-
+class Categories extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ProductCategoryId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Parent' => array('FieldValue' => null, 'FieldType' => 'Categories'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ProductCategoryId'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Parent'              => array('FieldValue' => null, 'FieldType' => 'Categories'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProductCategoryId()
     {
-                return !is_null($this->_fields['ProductCategoryId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProductCategoryId']['FieldValue']);
+    }
 
     /**
      * Set the value of ProductCategoryId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProductCategoryName()
     {
-                return !is_null($this->_fields['ProductCategoryName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProductCategoryName']['FieldValue']);
+    }
 
     /**
      * Set the value of ProductCategoryName, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetParent()
     {
-                return !is_null($this->_fields['Parent']['FieldValue']);
-            }
+        return !is_null($this->_fields['Parent']['FieldValue']);
+    }
 
     /**
      * Set the value of Parent, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setParent($value);
         return $this;
     }
-
 }

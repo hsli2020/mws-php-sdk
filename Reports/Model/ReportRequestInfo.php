@@ -1,29 +1,24 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * ReportRequestInfo
  *
  * Properties:
  * <ul>
- *
  * <li>ReportRequestId: string</li>
  * <li>ReportType: string</li>
  * <li>StartDate: string</li>
  * <li>EndDate: string</li>
  * <li>SubmittedDate: string</li>
  * <li>ReportProcessingStatus: string</li>
- *
  * </ul>
  */
-class ReportRequestInfo extends MarketplaceWebService_Model
+class ReportRequestInfo extends Model
 {
-
-
     /**
      * Construct new ReportRequestInfo
      *
@@ -31,7 +26,6 @@ class ReportRequestInfo extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>ReportRequestId: string</li>
      * <li>ReportType: string</li>
      * <li>StartDate: string</li>
@@ -42,22 +36,21 @@ class ReportRequestInfo extends MarketplaceWebService_Model
      * <li>GeneratedReportId: string</li>
      * <li>StartedProcessingDate: string</li>
      * <li>CompletedDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'Scheduled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'ReportProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'GeneratedReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'CompletedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportRequestId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportType'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StartDate'              => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'EndDate'                => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Scheduled'              => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'SubmittedDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'GeneratedReportId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StartedProcessingDate'  => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'CompletedDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
@@ -509,5 +502,4 @@ class ReportRequestInfo extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['CompletedDate']['FieldValue']);
     }
-
 }

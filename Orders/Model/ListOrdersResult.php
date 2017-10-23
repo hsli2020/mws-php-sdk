@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * ListOrdersResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>CreatedBefore: string</li>
  * <li>LastUpdatedBefore: string</li>
  * <li>Orders: array</li>
- *
  * </ul>
  */
-
- class ListOrdersResult extends MarketplaceWebServiceOrders_Model {
-
+class ListOrdersResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CreatedBefore'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Orders'            => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCreatedBefore()
     {
-                return !is_null($this->_fields['CreatedBefore']['FieldValue']);
-            }
+        return !is_null($this->_fields['CreatedBefore']['FieldValue']);
+    }
 
     /**
      * Set the value of CreatedBefore, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetLastUpdatedBefore()
     {
-                return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdatedBefore, return this.
@@ -175,8 +173,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getOrders()
     {
-        if ($this->_fields['Orders']['FieldValue'] == null)
-        {
+        if ($this->_fields['Orders']['FieldValue'] == null) {
             $this->_fields['Orders']['FieldValue'] = array();
         }
         return $this->_fields['Orders']['FieldValue'];
@@ -212,8 +209,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrders()
     {
-                return !empty($this->_fields['Orders']['FieldValue']);
-            }
+        return !empty($this->_fields['Orders']['FieldValue']);
+    }
 
     /**
      * Add values for Orders, return this.
@@ -225,11 +222,9 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withOrders()
     {
-        foreach (func_get_args() as $Orders)
-        {
+        foreach (func_get_args() as $Orders) {
             $this->_fields['Orders']['FieldValue'][] = $Orders;
         }
         return $this;
     }
-
 }

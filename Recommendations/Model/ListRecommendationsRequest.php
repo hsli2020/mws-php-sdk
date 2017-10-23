@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * ListRecommendationsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>SellerId: string</li>
  * <li>RecommendationCategory: string</li>
  * <li>CategoryQueryList: array</li>
- *
  * </ul>
  */
-
- class ListRecommendationsRequest extends MWSRecommendationsSectionService_Model {
-
+class ListRecommendationsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CategoryQueryList' => array('FieldValue' => array(), 'FieldType' => array('CategoryQuery'), 'ListMemberName' => 'CategoryQuery'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecommendationCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CategoryQueryList'      => array('FieldValue' => array(), 'FieldType' => array('CategoryQuery'), 'ListMemberName' => 'CategoryQuery'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationCategory()
     {
-                return !is_null($this->_fields['RecommendationCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationCategory, return this.
@@ -223,8 +221,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getCategoryQueryList()
     {
-        if ($this->_fields['CategoryQueryList']['FieldValue'] == null)
-        {
+        if ($this->_fields['CategoryQueryList']['FieldValue'] == null) {
             $this->_fields['CategoryQueryList']['FieldValue'] = array();
         }
         return $this->_fields['CategoryQueryList']['FieldValue'];
@@ -260,8 +257,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetCategoryQueryList()
     {
-                return !empty($this->_fields['CategoryQueryList']['FieldValue']);
-            }
+        return !empty($this->_fields['CategoryQueryList']['FieldValue']);
+    }
 
     /**
      * Add values for CategoryQueryList, return this.
@@ -273,11 +270,9 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withCategoryQueryList()
     {
-        foreach (func_get_args() as $CategoryQueryList)
-        {
+        foreach (func_get_args() as $CategoryQueryList) {
             $this->_fields['CategoryQueryList']['FieldValue'][] = $CategoryQueryList;
         }
         return $this;
     }
-
 }

@@ -2,36 +2,34 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * RetrochargeEvent
  *
  * Properties:
  * <ul>
- *
  * <li>RetrochargeEventType: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>PostedDate: string</li>
  * <li>BaseTax: Currency</li>
  * <li>ShippingTax: Currency</li>
  * <li>MarketplaceName: string</li>
- *
  * </ul>
  */
-
- class RetrochargeEvent extends MWSFinancesService_Model {
-
+class RetrochargeEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RetrochargeEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BaseTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'MarketplaceName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RetrochargeEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AmazonOrderId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PostedDate'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BaseTax'              => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ShippingTax'          => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'MarketplaceName'      => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +61,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRetrochargeEventType()
     {
-                return !is_null($this->_fields['RetrochargeEventType']['FieldValue']);
-            }
+        return !is_null($this->_fields['RetrochargeEventType']['FieldValue']);
+    }
 
     /**
      * Set the value of RetrochargeEventType, return this.
@@ -109,8 +107,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -155,8 +153,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPostedDate()
     {
-                return !is_null($this->_fields['PostedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PostedDate, return this.
@@ -201,8 +199,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetBaseTax()
     {
-                return !is_null($this->_fields['BaseTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['BaseTax']['FieldValue']);
+    }
 
     /**
      * Set the value of BaseTax, return this.
@@ -247,8 +245,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShippingTax()
     {
-                return !is_null($this->_fields['ShippingTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingTax']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingTax, return this.
@@ -293,8 +291,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceName()
     {
-                return !is_null($this->_fields['MarketplaceName']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceName']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceName, return this.
@@ -309,5 +307,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setMarketplaceName($value);
         return $this;
     }
-
 }

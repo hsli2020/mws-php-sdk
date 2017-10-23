@@ -2,25 +2,24 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * AttributeKeyValueList
  *
  * Properties:
  * <ul>
- *
  * <li>member: array</li>
- *
  * </ul>
  */
-
- class AttributeKeyValueList extends MWSSubscriptionsService_Model {
-
+class AttributeKeyValueList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'member' => array('FieldValue' => array(), 'FieldType' => array('AttributeKeyValue')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'member' => array('FieldValue' => array(), 'FieldType' => array('AttributeKeyValue')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -30,8 +29,7 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function getmember()
     {
-        if ($this->_fields['member']['FieldValue'] == null)
-        {
+        if ($this->_fields['member']['FieldValue'] == null) {
             $this->_fields['member']['FieldValue'] = array();
         }
         return $this->_fields['member']['FieldValue'];
@@ -67,8 +65,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetmember()
     {
-                return !empty($this->_fields['member']['FieldValue']);
-            }
+        return !empty($this->_fields['member']['FieldValue']);
+    }
 
     /**
      * Add values for member, return this.
@@ -80,11 +78,9 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function withmember()
     {
-        foreach (func_get_args() as $member)
-        {
+        foreach (func_get_args() as $member) {
             $this->_fields['member']['FieldValue'][] = $member;
         }
         return $this;
     }
-
 }

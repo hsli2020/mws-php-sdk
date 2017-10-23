@@ -2,27 +2,26 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * Message
  *
  * Properties:
  * <ul>
- *
  * <li>Locale: string</li>
  * <li>Text: string</li>
- *
  * </ul>
  */
-
- class Message extends MarketplaceWebServiceSellers_Model {
-
+class Message extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Locale' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Text' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Locale' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Text'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +53,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetLocale()
     {
-                return !is_null($this->_fields['Locale']['FieldValue']);
-            }
+        return !is_null($this->_fields['Locale']['FieldValue']);
+    }
 
     /**
      * Set the value of Locale, return this.
@@ -100,8 +99,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetText()
     {
-                return !is_null($this->_fields['Text']['FieldValue']);
-            }
+        return !is_null($this->_fields['Text']['FieldValue']);
+    }
 
     /**
      * Set the value of Text, return this.
@@ -116,5 +115,4 @@ namespace Amazon\MWS\Sellers\Model;
         $this->setText($value);
         return $this;
     }
-
 }

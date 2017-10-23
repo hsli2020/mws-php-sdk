@@ -2,25 +2,24 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * ListParticipations
  *
  * Properties:
  * <ul>
- *
  * <li>Participation: array</li>
- *
  * </ul>
  */
-
- class ListParticipations extends MarketplaceWebServiceSellers_Model {
-
+class ListParticipations extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Participation' => array('FieldValue' => array(), 'FieldType' => array('Participation')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Participation' => array('FieldValue' => array(), 'FieldType' => array('Participation')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -30,8 +29,7 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function getParticipation()
     {
-        if ($this->_fields['Participation']['FieldValue'] == null)
-        {
+        if ($this->_fields['Participation']['FieldValue'] == null) {
             $this->_fields['Participation']['FieldValue'] = array();
         }
         return $this->_fields['Participation']['FieldValue'];
@@ -67,8 +65,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetParticipation()
     {
-                return !empty($this->_fields['Participation']['FieldValue']);
-            }
+        return !empty($this->_fields['Participation']['FieldValue']);
+    }
 
     /**
      * Add values for Participation, return this.
@@ -80,11 +78,9 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function withParticipation()
     {
-        foreach (func_get_args() as $Participation)
-        {
+        foreach (func_get_args() as $Participation) {
             $this->_fields['Participation']['FieldValue'][] = $Participation;
         }
         return $this;
     }
-
 }

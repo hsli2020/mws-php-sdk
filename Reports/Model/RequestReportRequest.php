@@ -1,16 +1,14 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * RequestReportRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>MarketplaceIdList: IdList</li>
@@ -18,13 +16,10 @@ namespace Amazon\MWS\Reports;
  * <li>StartDate: string</li>
  * <li>EndDate: string</li>
  * <li>ReportOptions: string</li>
- *
  * </ul>
  */
-class RequestReportRequest extends MarketplaceWebService_Model
+class RequestReportRequest extends Model
 {
-
-
     /**
      * Construct new RequestReportRequest
      *
@@ -32,7 +27,6 @@ class RequestReportRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>MarketplaceIdList: IdList</li>
@@ -40,25 +34,24 @@ class RequestReportRequest extends MarketplaceWebService_Model
      * <li>StartDate: string</li>
      * <li>EndDate: string</li>
      * <li>ReportOptions: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'ReportOptions' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'ReportType'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StartDate'         => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'EndDate'           => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportOptions'     => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -211,8 +204,8 @@ class RequestReportRequest extends MarketplaceWebService_Model
      */
     public function setMarketplaceIdList($value)
     {
-	$marketplaceIdList = new IdList();
-	$marketplaceIdList->setId($value['Id']);
+        $marketplaceIdList = new IdList();
+        $marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
         return;
     }
@@ -420,6 +413,4 @@ class RequestReportRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['ReportOptions']['FieldValue']);
     }
-
-
 }

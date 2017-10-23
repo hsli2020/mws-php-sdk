@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * ShippingService
  *
  * Properties:
  * <ul>
- *
  * <li>ShippingServiceName: string</li>
  * <li>CarrierName: string</li>
  * <li>ShippingServiceId: string</li>
@@ -18,26 +18,24 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
  * <li>LatestEstimatedDeliveryDate: string</li>
  * <li>Rate: CurrencyAmount</li>
  * <li>ShippingServiceOptions: ShippingServiceOptions</li>
- *
  * </ul>
  */
-
- class ShippingService extends MWSMerchantFulfillmentService_Model {
-
+class ShippingService extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShippingServiceName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingServiceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingServiceOfferId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestEstimatedDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestEstimatedDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Rate' => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
-    'ShippingServiceOptions' => array('FieldValue' => null, 'FieldType' => 'ShippingServiceOptions'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShippingServiceName'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CarrierName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingServiceId'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingServiceOfferId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipDate'                      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EarliestEstimatedDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LatestEstimatedDeliveryDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Rate'                          => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
+            'ShippingServiceOptions'        => array('FieldValue' => null, 'FieldType' => 'ShippingServiceOptions'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -69,8 +67,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceName()
     {
-                return !is_null($this->_fields['ShippingServiceName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceName']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceName, return this.
@@ -115,8 +113,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -161,8 +159,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceId()
     {
-                return !is_null($this->_fields['ShippingServiceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceId, return this.
@@ -207,8 +205,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceOfferId()
     {
-                return !is_null($this->_fields['ShippingServiceOfferId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceOfferId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceOfferId, return this.
@@ -253,8 +251,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipDate()
     {
-                return !is_null($this->_fields['ShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipDate, return this.
@@ -299,8 +297,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetEarliestEstimatedDeliveryDate()
     {
-                return !is_null($this->_fields['EarliestEstimatedDeliveryDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestEstimatedDeliveryDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestEstimatedDeliveryDate, return this.
@@ -345,8 +343,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetLatestEstimatedDeliveryDate()
     {
-                return !is_null($this->_fields['LatestEstimatedDeliveryDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestEstimatedDeliveryDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestEstimatedDeliveryDate, return this.
@@ -391,8 +389,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetRate()
     {
-                return !is_null($this->_fields['Rate']['FieldValue']);
-            }
+        return !is_null($this->_fields['Rate']['FieldValue']);
+    }
 
     /**
      * Set the value of Rate, return this.
@@ -437,8 +435,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceOptions()
     {
-                return !is_null($this->_fields['ShippingServiceOptions']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingServiceOptions']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingServiceOptions, return this.
@@ -453,5 +451,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setShippingServiceOptions($value);
         return $this;
     }
-
 }

@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * FinancialEventGroup
  *
  * Properties:
  * <ul>
- *
  * <li>FinancialEventGroupId: string</li>
  * <li>ProcessingStatus: string</li>
  * <li>FundTransferStatus: string</li>
@@ -20,28 +20,26 @@ namespace Amazon\MWS\Finances\Model;
  * <li>BeginningBalance: Currency</li>
  * <li>FinancialEventGroupStart: string</li>
  * <li>FinancialEventGroupEnd: string</li>
- *
  * </ul>
  */
-
- class FinancialEventGroup extends MWSFinancesService_Model {
-
+class FinancialEventGroup extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FinancialEventGroupId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FundTransferStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OriginalTotal' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'ConvertedTotal' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'FundTransferDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TraceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AccountTail' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BeginningBalance' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'FinancialEventGroupStart' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FinancialEventGroupEnd' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FinancialEventGroupId'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProcessingStatus'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FundTransferStatus'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OriginalTotal'            => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ConvertedTotal'           => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'FundTransferDate'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TraceId'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AccountTail'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BeginningBalance'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'FinancialEventGroupStart' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FinancialEventGroupEnd'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -73,8 +71,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupId()
     {
-                return !is_null($this->_fields['FinancialEventGroupId']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupId']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupId, return this.
@@ -119,8 +117,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProcessingStatus()
     {
-                return !is_null($this->_fields['ProcessingStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProcessingStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of ProcessingStatus, return this.
@@ -165,8 +163,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFundTransferStatus()
     {
-                return !is_null($this->_fields['FundTransferStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['FundTransferStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of FundTransferStatus, return this.
@@ -211,8 +209,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOriginalTotal()
     {
-                return !is_null($this->_fields['OriginalTotal']['FieldValue']);
-            }
+        return !is_null($this->_fields['OriginalTotal']['FieldValue']);
+    }
 
     /**
      * Set the value of OriginalTotal, return this.
@@ -257,8 +255,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetConvertedTotal()
     {
-                return !is_null($this->_fields['ConvertedTotal']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConvertedTotal']['FieldValue']);
+    }
 
     /**
      * Set the value of ConvertedTotal, return this.
@@ -303,8 +301,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFundTransferDate()
     {
-                return !is_null($this->_fields['FundTransferDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['FundTransferDate']['FieldValue']);
+    }
 
     /**
      * Set the value of FundTransferDate, return this.
@@ -349,8 +347,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetTraceId()
     {
-                return !is_null($this->_fields['TraceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['TraceId']['FieldValue']);
+    }
 
     /**
      * Set the value of TraceId, return this.
@@ -395,8 +393,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAccountTail()
     {
-                return !is_null($this->_fields['AccountTail']['FieldValue']);
-            }
+        return !is_null($this->_fields['AccountTail']['FieldValue']);
+    }
 
     /**
      * Set the value of AccountTail, return this.
@@ -441,8 +439,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetBeginningBalance()
     {
-                return !is_null($this->_fields['BeginningBalance']['FieldValue']);
-            }
+        return !is_null($this->_fields['BeginningBalance']['FieldValue']);
+    }
 
     /**
      * Set the value of BeginningBalance, return this.
@@ -487,8 +485,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupStart()
     {
-                return !is_null($this->_fields['FinancialEventGroupStart']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupStart']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupStart, return this.
@@ -533,8 +531,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupEnd()
     {
-                return !is_null($this->_fields['FinancialEventGroupEnd']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupEnd']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupEnd, return this.
@@ -549,5 +547,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setFinancialEventGroupEnd($value);
         return $this;
     }
-
 }

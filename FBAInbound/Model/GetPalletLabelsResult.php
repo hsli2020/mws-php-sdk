@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetPalletLabelsResult
  *
  * Properties:
  * <ul>
- *
  * <li>TransportDocument: TransportDocument</li>
- *
  * </ul>
  */
-
- class GetPalletLabelsResult extends FBAInboundServiceMWS_Model {
-
+class GetPalletLabelsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TransportDocument' => array('FieldValue' => null, 'FieldType' => 'TransportDocument'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TransportDocument' => array('FieldValue' => null, 'FieldType' => 'TransportDocument'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportDocument()
     {
-                return !is_null($this->_fields['TransportDocument']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportDocument']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportDocument, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTransportDocument($value);
         return $this;
     }
-
 }

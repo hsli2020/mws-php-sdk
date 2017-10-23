@@ -2,22 +2,20 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionListByNextTokenRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>NextToken: string</li>
- *
  * </ul>
  */
-class GetFeedSubmissionListByNextTokenRequest extends MarketplaceWebService_Model
+class GetFeedSubmissionListByNextTokenRequest extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListByNextTokenRequest
      *
@@ -25,25 +23,23 @@ class GetFeedSubmissionListByNextTokenRequest extends MarketplaceWebService_Mode
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>NextToken: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NextToken'    => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -222,8 +218,4 @@ class GetFeedSubmissionListByNextTokenRequest extends MarketplaceWebService_Mode
     {
         return !is_null($this->fields['NextToken']['FieldValue']);
     }
-
-
-
-
 }

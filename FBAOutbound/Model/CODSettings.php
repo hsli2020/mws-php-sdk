@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
+
 /**
  * CODSettings
  *
@@ -14,18 +16,18 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>ShippingChargeTax: Currency</li>
  * </ul>
  */
-class CODSettings extends FBAOutboundServiceMWS_Model {
-
+class CODSettings extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'IsCODRequired' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'CODCharge' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'CODChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'ShippingCharge' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'IsCODRequired'     => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'CODCharge'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'CODChargeTax'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ShippingCharge'    => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -67,8 +69,8 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
      */
     public function isSetIsCODRequired()
     {
-                return !is_null($this->_fields['IsCODRequired']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsCODRequired']['FieldValue']);
+    }
 
     /**
      * Set the value of IsCODRequired, return this.
@@ -113,8 +115,8 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
      */
     public function isSetCODCharge()
     {
-                return !is_null($this->_fields['CODCharge']['FieldValue']);
-            }
+        return !is_null($this->_fields['CODCharge']['FieldValue']);
+    }
 
     /**
      * Set the value of CODCharge, return this.
@@ -159,8 +161,8 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
      */
     public function isSetCODChargeTax()
     {
-                return !is_null($this->_fields['CODChargeTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['CODChargeTax']['FieldValue']);
+    }
 
     /**
      * Set the value of CODChargeTax, return this.
@@ -205,8 +207,8 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
      */
     public function isSetShippingCharge()
     {
-                return !is_null($this->_fields['ShippingCharge']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingCharge']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingCharge, return this.
@@ -251,8 +253,8 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
      */
     public function isSetShippingChargeTax()
     {
-                return !is_null($this->_fields['ShippingChargeTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingChargeTax']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingChargeTax, return this.
@@ -267,5 +269,4 @@ class CODSettings extends FBAOutboundServiceMWS_Model {
         $this->setShippingChargeTax($value);
         return $this;
     }
-
 }

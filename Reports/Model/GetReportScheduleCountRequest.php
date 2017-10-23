@@ -1,23 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
+
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportScheduleCountRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportTypeList: TypeList</li>
- *
  * </ul>
  */
-class GetReportScheduleCountRequest extends MarketplaceWebService_Model
+class GetReportScheduleCountRequest extends Model
 {
-
-
     /**
      * Construct new GetReportScheduleCountRequest
      *
@@ -25,25 +23,23 @@ class GetReportScheduleCountRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportTypeList: TypeList</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'Marketplace'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -223,8 +219,4 @@ class GetReportScheduleCountRequest extends MarketplaceWebService_Model
         return !is_null($this->fields['ReportTypeList']['FieldValue']);
 
     }
-
-
-
-
 }

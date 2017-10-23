@@ -12,7 +12,7 @@ interface OrdersInterface
      * @see GetOrderRequest
      * @return GetOrderResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function getOrder($request);
 
@@ -26,7 +26,7 @@ interface OrdersInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function getServiceStatus($request);
 
@@ -40,7 +40,7 @@ interface OrdersInterface
      * @see ListOrderItemsRequest
      * @return ListOrderItemsResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrderItems($request);
 
@@ -55,7 +55,7 @@ interface OrdersInterface
      * @see ListOrderItemsByNextTokenRequest
      * @return ListOrderItemsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrderItemsByNextToken($request);
 
@@ -68,7 +68,7 @@ interface OrdersInterface
      * @see ListOrdersRequest
      * @return ListOrdersResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrders($request);
 
@@ -83,7 +83,7 @@ interface OrdersInterface
      * @see ListOrdersByNextTokenRequest
      * @return ListOrdersByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrdersByNextToken($request);
 

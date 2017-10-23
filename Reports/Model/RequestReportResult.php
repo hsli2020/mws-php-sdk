@@ -1,24 +1,19 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * RequestReportResult
  *
  * Properties:
  * <ul>
- *
  * <li>ReportRequestInfo: ReportRequestInfo</li>
- *
  * </ul>
  */
-class RequestReportResult extends MarketplaceWebService_Model
+class RequestReportResult extends Model
 {
-
-
     /**
      * Construct new RequestReportResult
      *
@@ -26,20 +21,18 @@ class RequestReportResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>ReportRequestInfo: ReportRequestInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'ReportRequestInfo'),
+            'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'ReportRequestInfo'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportRequestInfo.
      *
      * @return ReportRequestInfo ReportRequestInfo
@@ -84,8 +77,4 @@ class RequestReportResult extends MarketplaceWebService_Model
         return !is_null($this->fields['ReportRequestInfo']['FieldValue']);
 
     }
-
-
-
-
 }

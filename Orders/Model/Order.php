@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * Order
  *
  * Properties:
  * <ul>
- *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>PurchaseDate: string</li>
@@ -40,48 +40,46 @@ namespace Amazon\MWS\Orders\Model;
  * <li>PurchaseOrderNumber: string</li>
  * <li>IsPrime: bool</li>
  * <li>IsPremiumOrder: bool</li>
- *
  * </ul>
  */
-
- class Order extends MarketplaceWebServiceOrders_Model {
-
+class Order extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PurchaseDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdateDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipServiceLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'NumberOfItemsShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfItemsUnshipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
-    'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentServiceLevelCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippedByAmazonTFM' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'TFMShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CbaDisplayableShippingLabel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsBusinessOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PurchaseOrderNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsPrime' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsPremiumOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AmazonOrderId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerOrderId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PurchaseDate'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LastUpdateDate'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderStatus'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SalesChannel'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderChannel'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipServiceLevel'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingAddress'              => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'OrderTotal'                   => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'NumberOfItemsShipped'         => array('FieldValue' => null, 'FieldType' => 'int'),
+            'NumberOfItemsUnshipped'       => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PaymentExecutionDetail'       => array('FieldValue' => array(), 'FieldType' => array('PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
+            'PaymentMethod'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BuyerEmail'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BuyerName'                    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentServiceLevelCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippedByAmazonTFM'           => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'TFMShipmentStatus'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CbaDisplayableShippingLabel'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderType'                    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EarliestShipDate'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LatestShipDate'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EarliestDeliveryDate'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LatestDeliveryDate'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IsBusinessOrder'              => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'PurchaseOrderNumber'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IsPrime'                      => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsPremiumOrder'               => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -113,8 +111,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -159,8 +157,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -205,8 +203,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPurchaseDate()
     {
-                return !is_null($this->_fields['PurchaseDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PurchaseDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PurchaseDate, return this.
@@ -251,8 +249,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetLastUpdateDate()
     {
-                return !is_null($this->_fields['LastUpdateDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdateDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdateDate, return this.
@@ -297,8 +295,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderStatus()
     {
-                return !is_null($this->_fields['OrderStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderStatus, return this.
@@ -343,8 +341,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -389,8 +387,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetSalesChannel()
     {
-                return !is_null($this->_fields['SalesChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['SalesChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of SalesChannel, return this.
@@ -435,8 +433,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderChannel()
     {
-                return !is_null($this->_fields['OrderChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderChannel, return this.
@@ -481,8 +479,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShipServiceLevel()
     {
-                return !is_null($this->_fields['ShipServiceLevel']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipServiceLevel']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipServiceLevel, return this.
@@ -527,8 +525,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShippingAddress()
     {
-                return !is_null($this->_fields['ShippingAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingAddress, return this.
@@ -573,8 +571,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderTotal()
     {
-                return !is_null($this->_fields['OrderTotal']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderTotal']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderTotal, return this.
@@ -619,8 +617,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetNumberOfItemsShipped()
     {
-                return !is_null($this->_fields['NumberOfItemsShipped']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfItemsShipped']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfItemsShipped, return this.
@@ -665,8 +663,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetNumberOfItemsUnshipped()
     {
-                return !is_null($this->_fields['NumberOfItemsUnshipped']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfItemsUnshipped']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfItemsUnshipped, return this.
@@ -689,8 +687,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getPaymentExecutionDetail()
     {
-        if ($this->_fields['PaymentExecutionDetail']['FieldValue'] == null)
-        {
+        if ($this->_fields['PaymentExecutionDetail']['FieldValue'] == null) {
             $this->_fields['PaymentExecutionDetail']['FieldValue'] = array();
         }
         return $this->_fields['PaymentExecutionDetail']['FieldValue'];
@@ -726,8 +723,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPaymentExecutionDetail()
     {
-                return !empty($this->_fields['PaymentExecutionDetail']['FieldValue']);
-            }
+        return !empty($this->_fields['PaymentExecutionDetail']['FieldValue']);
+    }
 
     /**
      * Add values for PaymentExecutionDetail, return this.
@@ -739,8 +736,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withPaymentExecutionDetail()
     {
-        foreach (func_get_args() as $PaymentExecutionDetail)
-        {
+        foreach (func_get_args() as $PaymentExecutionDetail) {
             $this->_fields['PaymentExecutionDetail']['FieldValue'][] = $PaymentExecutionDetail;
         }
         return $this;
@@ -775,8 +771,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPaymentMethod()
     {
-                return !is_null($this->_fields['PaymentMethod']['FieldValue']);
-            }
+        return !is_null($this->_fields['PaymentMethod']['FieldValue']);
+    }
 
     /**
      * Set the value of PaymentMethod, return this.
@@ -821,8 +817,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -867,8 +863,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetBuyerEmail()
     {
-                return !is_null($this->_fields['BuyerEmail']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyerEmail']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyerEmail, return this.
@@ -913,8 +909,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetBuyerName()
     {
-                return !is_null($this->_fields['BuyerName']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyerName']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyerName, return this.
@@ -959,8 +955,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShipmentServiceLevelCategory()
     {
-                return !is_null($this->_fields['ShipmentServiceLevelCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentServiceLevelCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentServiceLevelCategory, return this.
@@ -1015,8 +1011,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShippedByAmazonTFM()
     {
-                return !is_null($this->_fields['ShippedByAmazonTFM']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippedByAmazonTFM']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippedByAmazonTFM, return this.
@@ -1061,8 +1057,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetTFMShipmentStatus()
     {
-                return !is_null($this->_fields['TFMShipmentStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['TFMShipmentStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of TFMShipmentStatus, return this.
@@ -1107,8 +1103,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCbaDisplayableShippingLabel()
     {
-                return !is_null($this->_fields['CbaDisplayableShippingLabel']['FieldValue']);
-            }
+        return !is_null($this->_fields['CbaDisplayableShippingLabel']['FieldValue']);
+    }
 
     /**
      * Set the value of CbaDisplayableShippingLabel, return this.
@@ -1153,8 +1149,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderType()
     {
-                return !is_null($this->_fields['OrderType']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderType']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderType, return this.
@@ -1199,8 +1195,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetEarliestShipDate()
     {
-                return !is_null($this->_fields['EarliestShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestShipDate, return this.
@@ -1245,8 +1241,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetLatestShipDate()
     {
-                return !is_null($this->_fields['LatestShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestShipDate, return this.
@@ -1291,8 +1287,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetEarliestDeliveryDate()
     {
-                return !is_null($this->_fields['EarliestDeliveryDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestDeliveryDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestDeliveryDate, return this.
@@ -1337,8 +1333,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetLatestDeliveryDate()
     {
-                return !is_null($this->_fields['LatestDeliveryDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestDeliveryDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestDeliveryDate, return this.
@@ -1393,8 +1389,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetIsBusinessOrder()
     {
-                return !is_null($this->_fields['IsBusinessOrder']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsBusinessOrder']['FieldValue']);
+    }
 
     /**
      * Set the value of IsBusinessOrder, return this.
@@ -1439,8 +1435,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPurchaseOrderNumber()
     {
-                return !is_null($this->_fields['PurchaseOrderNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PurchaseOrderNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PurchaseOrderNumber, return this.
@@ -1495,8 +1491,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetIsPrime()
     {
-                return !is_null($this->_fields['IsPrime']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsPrime']['FieldValue']);
+    }
 
     /**
      * Set the value of IsPrime, return this.
@@ -1551,8 +1547,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetIsPremiumOrder()
     {
-                return !is_null($this->_fields['IsPremiumOrder']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsPremiumOrder']['FieldValue']);
+    }
 
     /**
      * Set the value of IsPremiumOrder, return this.
@@ -1567,5 +1563,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setIsPremiumOrder($value);
         return $this;
     }
-
 }

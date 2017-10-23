@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * InventorySupply
  *
@@ -17,21 +19,21 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>SupplyDetail: InventorySupplyDetailList</li>
  * </ul>
  */
-class InventorySupply extends FBAInventoryServiceMWS_Model {
-
+class InventorySupply extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FNSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TotalSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'InStockSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'EarliestAvailability' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
-    'SupplyDetail' => array('FieldValue' => null, 'FieldType' => 'InventorySupplyDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FNSKU'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASIN'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Condition'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TotalSupplyQuantity'   => array('FieldValue' => null, 'FieldType' => 'int'),
+            'InStockSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'EarliestAvailability'  => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+            'SupplyDetail'          => array('FieldValue' => null, 'FieldType' => 'InventorySupplyDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +65,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -109,8 +111,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetFNSKU()
     {
-                return !is_null($this->_fields['FNSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FNSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FNSKU, return this.
@@ -155,8 +157,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -201,8 +203,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetCondition()
     {
-                return !is_null($this->_fields['Condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['Condition']['FieldValue']);
+    }
 
     /**
      * Set the value of Condition, return this.
@@ -247,8 +249,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetTotalSupplyQuantity()
     {
-                return !is_null($this->_fields['TotalSupplyQuantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalSupplyQuantity']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalSupplyQuantity, return this.
@@ -293,8 +295,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetInStockSupplyQuantity()
     {
-                return !is_null($this->_fields['InStockSupplyQuantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['InStockSupplyQuantity']['FieldValue']);
+    }
 
     /**
      * Set the value of InStockSupplyQuantity, return this.
@@ -339,8 +341,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetEarliestAvailability()
     {
-                return !is_null($this->_fields['EarliestAvailability']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestAvailability']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestAvailability, return this.
@@ -385,8 +387,8 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
      */
     public function isSetSupplyDetail()
     {
-                return !is_null($this->_fields['SupplyDetail']['FieldValue']);
-            }
+        return !is_null($this->_fields['SupplyDetail']['FieldValue']);
+    }
 
     /**
      * Set the value of SupplyDetail, return this.
@@ -401,5 +403,4 @@ class InventorySupply extends FBAInventoryServiceMWS_Model {
         $this->setSupplyDetail($value);
         return $this;
     }
-
 }

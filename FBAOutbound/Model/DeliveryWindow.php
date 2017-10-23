@@ -2,27 +2,26 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
+
 /**
  * DeliveryWindow
  *
  * Properties:
  * <ul>
- *
  * <li>StartDateTime: string</li>
  * <li>EndDateTime: string</li>
- *
  * </ul>
  */
-
- class DeliveryWindow extends FBAOutboundServiceMWS_Model {
-
+class DeliveryWindow extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'StartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EndDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'StartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EndDateTime'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -54,8 +53,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetStartDateTime()
     {
-                return !is_null($this->_fields['StartDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['StartDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of StartDateTime, return this.
@@ -100,8 +99,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEndDateTime()
     {
-                return !is_null($this->_fields['EndDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['EndDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of EndDateTime, return this.
@@ -116,5 +115,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setEndDateTime($value);
         return $this;
     }
-
 }

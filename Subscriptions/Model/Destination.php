@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * Destination
  *
@@ -11,15 +13,15 @@ namespace Amazon\MWS\Subscriptions\Model;
  * <li>AttributeList: AttributeKeyValueList</li>
  * </ul>
  */
-class Destination extends MWSSubscriptionsService_Model {
-
+class Destination extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DeliveryChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AttributeList' => array('FieldValue' => null, 'FieldType' => 'AttributeKeyValueList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DeliveryChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AttributeList'   => array('FieldValue' => null, 'FieldType' => 'AttributeKeyValueList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -51,8 +53,8 @@ class Destination extends MWSSubscriptionsService_Model {
      */
     public function isSetDeliveryChannel()
     {
-                return !is_null($this->_fields['DeliveryChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['DeliveryChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of DeliveryChannel, return this.
@@ -97,8 +99,8 @@ class Destination extends MWSSubscriptionsService_Model {
      */
     public function isSetAttributeList()
     {
-                return !is_null($this->_fields['AttributeList']['FieldValue']);
-            }
+        return !is_null($this->_fields['AttributeList']['FieldValue']);
+    }
 
     /**
      * Set the value of AttributeList, return this.
@@ -113,5 +115,4 @@ class Destination extends MWSSubscriptionsService_Model {
         $this->setAttributeList($value);
         return $this;
     }
-
 }

@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * BuyerCustomizedInfoDetail
  *
  * Properties:
  * <ul>
- *
  * <li>CustomizedURL: string</li>
- *
  * </ul>
  */
-
- class BuyerCustomizedInfoDetail extends MarketplaceWebServiceOrders_Model {
-
+class BuyerCustomizedInfoDetail extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CustomizedURL' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CustomizedURL' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCustomizedURL()
     {
-                return !is_null($this->_fields['CustomizedURL']['FieldValue']);
-            }
+        return !is_null($this->_fields['CustomizedURL']['FieldValue']);
+    }
 
     /**
      * Set the value of CustomizedURL, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setCustomizedURL($value);
         return $this;
     }
-
 }

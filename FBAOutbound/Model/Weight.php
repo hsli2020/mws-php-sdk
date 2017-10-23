@@ -2,28 +2,25 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * Weight
- *
  * Properties:
  * <ul>
- *
  * <li>Unit: string</li>
  * <li>Value: string</li>
- *
  * </ul>
  */
-
- class Weight extends FBAOutboundServiceMWS_Model {
-
+class Weight extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Unit' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Unit'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +52,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetUnit()
     {
-                return !is_null($this->_fields['Unit']['FieldValue']);
-            }
+        return !is_null($this->_fields['Unit']['FieldValue']);
+    }
 
     /**
      * Set the value of Unit, return this.
@@ -101,8 +98,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return !is_null($this->_fields['Value']['FieldValue']);
+    }
 
     /**
      * Set the value of Value, return this.
@@ -117,5 +114,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setValue($value);
         return $this;
     }
-
 }

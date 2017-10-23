@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * OffersList
  *
  * Properties:
  * <ul>
- *
  * <li>Offer: array</li>
- *
  * </ul>
  */
-
- class OffersList extends MarketplaceWebServiceProducts_Model {
-
+class OffersList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Offer' => array('FieldValue' => array(), 'FieldType' => array('OfferType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Offer' => array('FieldValue' => array(), 'FieldType' => array('OfferType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getOffer()
     {
-        if ($this->_fields['Offer']['FieldValue'] == null)
-        {
+        if ($this->_fields['Offer']['FieldValue'] == null) {
             $this->_fields['Offer']['FieldValue'] = array();
         }
         return $this->_fields['Offer']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetOffer()
     {
-                return !empty($this->_fields['Offer']['FieldValue']);
-            }
+        return !empty($this->_fields['Offer']['FieldValue']);
+    }
 
     /**
      * Add values for Offer, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withOffer()
     {
-        foreach (func_get_args() as $Offer)
-        {
+        foreach (func_get_args() as $Offer) {
             $this->_fields['Offer']['FieldValue'][] = $Offer;
         }
         return $this;
     }
-
 }

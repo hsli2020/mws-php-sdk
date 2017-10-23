@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Orders;
 
-class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_Interface
+class Mock implements OrdersInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -114,5 +114,4 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

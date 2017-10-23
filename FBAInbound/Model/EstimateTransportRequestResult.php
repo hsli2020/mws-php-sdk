@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * EstimateTransportRequestResult
  *
  * Properties:
  * <ul>
- *
  * <li>TransportResult: TransportResult</li>
- *
  * </ul>
  */
-
- class EstimateTransportRequestResult extends FBAInboundServiceMWS_Model {
-
+class EstimateTransportRequestResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TransportResult' => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TransportResult' => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportResult()
     {
-                return !is_null($this->_fields['TransportResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportResult']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportResult, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTransportResult($value);
         return $this;
     }
-
 }

@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetMyPriceForASINResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetMyPriceForASINResult: array</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetMyPriceForASINResponse extends MarketplaceWebServiceProducts_Model {
-
+class GetMyPriceForASINResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetMyPriceForASINResult' => array('FieldValue' => array(), 'FieldType' => array('GetMyPriceForASINResult')),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetMyPriceForASINResult' => array('FieldValue' => array(), 'FieldType' => array('GetMyPriceForASINResult')),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -35,8 +33,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getGetMyPriceForASINResult()
     {
-        if ($this->_fields['GetMyPriceForASINResult']['FieldValue'] == null)
-        {
+        if ($this->_fields['GetMyPriceForASINResult']['FieldValue'] == null) {
             $this->_fields['GetMyPriceForASINResult']['FieldValue'] = array();
         }
         return $this->_fields['GetMyPriceForASINResult']['FieldValue'];
@@ -72,8 +69,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetGetMyPriceForASINResult()
     {
-                return !empty($this->_fields['GetMyPriceForASINResult']['FieldValue']);
-            }
+        return !empty($this->_fields['GetMyPriceForASINResult']['FieldValue']);
+    }
 
     /**
      * Add values for GetMyPriceForASINResult, return this.
@@ -85,8 +82,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withGetMyPriceForASINResult()
     {
-        foreach (func_get_args() as $GetMyPriceForASINResult)
-        {
+        foreach (func_get_args() as $GetMyPriceForASINResult) {
             $this->_fields['GetMyPriceForASINResult']['FieldValue'][] = $GetMyPriceForASINResult;
         }
         return $this;
@@ -121,8 +117,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -167,8 +163,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -183,6 +179,7 @@ namespace Amazon\MWS\Products\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetMyPriceForASINResponse from XML string
      *
@@ -204,6 +201,7 @@ namespace Amazon\MWS\Products\Model;
                                   Make sure that GetMyPriceForASINResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -217,5 +215,4 @@ namespace Amazon\MWS\Products\Model;
         $xml .= "</GetMyPriceForASINResponse>";
         return $xml;
     }
-
 }

@@ -1,19 +1,14 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * CreateInboundShipmentPlanRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
@@ -22,25 +17,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>ShipToCountryCode: string</li>
  * <li>ShipToCountrySubdivisionCode: string</li>
  * <li>InboundShipmentPlanRequestItems: InboundShipmentPlanRequestItemList</li>
- *
  * </ul>
  */
-
- class CreateInboundShipmentPlanRequest extends FBAInboundServiceMWS_Model {
-
+class CreateInboundShipmentPlanRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'LabelPrepPreference' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipToCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipToCountrySubdivisionCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InboundShipmentPlanRequestItems' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanRequestItemList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'                        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'                    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'                     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipFromAddress'                 => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'LabelPrepPreference'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipToCountryCode'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipToCountrySubdivisionCode'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'InboundShipmentPlanRequestItems' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanRequestItemList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -72,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -118,8 +111,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -164,8 +157,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -210,8 +203,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipFromAddress()
     {
-                return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipFromAddress, return this.
@@ -256,8 +249,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLabelPrepPreference()
     {
-                return !is_null($this->_fields['LabelPrepPreference']['FieldValue']);
-            }
+        return !is_null($this->_fields['LabelPrepPreference']['FieldValue']);
+    }
 
     /**
      * Set the value of LabelPrepPreference, return this.
@@ -302,8 +295,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipToCountryCode()
     {
-                return !is_null($this->_fields['ShipToCountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipToCountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipToCountryCode, return this.
@@ -348,8 +341,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipToCountrySubdivisionCode()
     {
-                return !is_null($this->_fields['ShipToCountrySubdivisionCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipToCountrySubdivisionCode']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipToCountrySubdivisionCode, return this.
@@ -394,8 +387,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInboundShipmentPlanRequestItems()
     {
-                return !is_null($this->_fields['InboundShipmentPlanRequestItems']['FieldValue']);
-            }
+        return !is_null($this->_fields['InboundShipmentPlanRequestItems']['FieldValue']);
+    }
 
     /**
      * Set the value of InboundShipmentPlanRequestItems, return this.
@@ -410,5 +403,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setInboundShipmentPlanRequestItems($value);
         return $this;
     }
-
 }

@@ -2,32 +2,31 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * DetailedShippingTimeType
  *
  * Properties:
  * <ul>
- *
  * <li>minimumHours: int</li>
  * <li>maximumHours: int</li>
  * <li>availableDate: string</li>
  * <li>availabilityType: string</li>
- *
  * </ul>
  */
-
- class DetailedShippingTimeType extends MarketplaceWebServiceProducts_Model {
-
+class DetailedShippingTimeType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'minimumHours' => array('FieldValue' => null, 'FieldType' => '@int'),
-    'maximumHours' => array('FieldValue' => null, 'FieldType' => '@int'),
-    'availableDate' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'minimumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+            'maximumHours'     => array('FieldValue' => null, 'FieldType' => '@int'),
+            'availableDate'    => array('FieldValue' => null, 'FieldType' => '@string'),
+            'availabilityType' => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +58,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetminimumHours()
     {
-                return !is_null($this->_fields['minimumHours']['FieldValue']);
-            }
+        return !is_null($this->_fields['minimumHours']['FieldValue']);
+    }
 
     /**
      * Set the value of minimumHours, return this.
@@ -105,8 +104,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetmaximumHours()
     {
-                return !is_null($this->_fields['maximumHours']['FieldValue']);
-            }
+        return !is_null($this->_fields['maximumHours']['FieldValue']);
+    }
 
     /**
      * Set the value of maximumHours, return this.
@@ -151,8 +150,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetavailableDate()
     {
-                return !is_null($this->_fields['availableDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['availableDate']['FieldValue']);
+    }
 
     /**
      * Set the value of availableDate, return this.
@@ -197,8 +196,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetavailabilityType()
     {
-                return !is_null($this->_fields['availabilityType']['FieldValue']);
-            }
+        return !is_null($this->_fields['availabilityType']['FieldValue']);
+    }
 
     /**
      * Set the value of availabilityType, return this.
@@ -213,5 +212,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setavailabilityType($value);
         return $this;
     }
-
 }

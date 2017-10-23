@@ -3,11 +3,10 @@
 namespace Amazon\MWS\Reports;
 
 /**
- * MarketplaceWebService_Model - base class for all model classes
+ * Reports\Model - base class for all model classes
  */
-abstract class MarketplaceWebService_Model
+abstract class Model
 {
-
     /** @var array */
     protected  $fields = array ();
 
@@ -27,7 +26,6 @@ abstract class MarketplaceWebService_Model
                 throw new Exception ("Unable to construct from provided data.
                                 Please be sure to pass associative array or DOMElement");
             }
-
         }
     }
 
@@ -46,8 +44,8 @@ abstract class MarketplaceWebService_Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -65,11 +63,10 @@ abstract class MarketplaceWebService_Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
-
 
     /**
      * XML fragment representation of this object
@@ -125,8 +122,6 @@ abstract class MarketplaceWebService_Model
         $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
         return str_replace($from, $to, $str);
     }
-
-
 
     /**
      * Construct from DOMElement
@@ -202,7 +197,6 @@ abstract class MarketplaceWebService_Model
     /**
      * Construct from Associative Array
      *
-     *
      * @param array $array associative array to construct from
      */
     private function fromAssociativeArray(array $array)
@@ -252,7 +246,6 @@ abstract class MarketplaceWebService_Model
     }
 
 
-
     /**
      * Determines if field is complex type
      *
@@ -269,7 +262,8 @@ abstract class MarketplaceWebService_Model
     * @param mixed $var
     * @return TRUE if passed variable is an associative array
     */
-    private function isAssociativeArray($var) {
+    private function isAssociativeArray($var)
+    {
         return is_array($var) && array_keys($var) !== range(0, sizeof($var) - 1);
     }
 
@@ -279,7 +273,8 @@ abstract class MarketplaceWebService_Model
     * @param mixed $var
     * @return TRUE if passed variable is DOMElement
     */
-    private function isDOMElement($var) {
+    private function isDOMElement($var)
+    {
         return $var instanceof DOMElement;
     }
 
@@ -289,7 +284,8 @@ abstract class MarketplaceWebService_Model
     * @param mixed $var
     * @return TRUE if passed variable is an numeric array
     */
-    protected function isNumericArray($var) {
+    protected function isNumericArray($var)
+    {
         return is_array($var) && array_keys($var) === range(0, sizeof($var) - 1);
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionListResult
  *
@@ -14,10 +16,8 @@ namespace Amazon\MWS\Feeds\Model;
  *
  * </ul>
  */
-class GetFeedSubmissionListResult extends MarketplaceWebService_Model
+class GetFeedSubmissionListResult extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListResult
      *
@@ -35,14 +35,14 @@ class GetFeedSubmissionListResult extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+            'NextToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'            => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -157,7 +157,6 @@ class GetFeedSubmissionListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of FeedSubmissionInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -174,8 +173,6 @@ class GetFeedSubmissionListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if FeedSubmissionInfo list is non-empty
      *
@@ -185,8 +182,4 @@ class GetFeedSubmissionListResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['FeedSubmissionInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

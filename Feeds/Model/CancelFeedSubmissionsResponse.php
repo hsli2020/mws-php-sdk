@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * CancelFeedSubmissionsResponse
  *
@@ -11,7 +13,7 @@ namespace Amazon\MWS\Feeds\Model;
  * <li>ResponseMetadata: ResponseMetadata</li>
  * </ul>
  */
-class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
+class CancelFeedSubmissionsResponse extends Model
 {
     /**
      * Construct new CancelFeedSubmissionsResponse
@@ -29,12 +31,11 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => 'CancelFeedSubmissionsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => 'CancelFeedSubmissionsResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct CancelFeedSubmissionsResponse from XML string
@@ -55,7 +56,6 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct CancelFeedSubmissionsResponse from provided XML.
                                   Make sure that CancelFeedSubmissionsResponse is a root element");
         }
-
     }
 
     /**
@@ -101,7 +101,6 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
     public function isSetCancelFeedSubmissionsResult()
     {
         return !is_null($this->fields['CancelFeedSubmissionsResult']['FieldValue']);
-
     }
 
     /**
@@ -138,7 +137,6 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -147,10 +145,7 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -168,11 +163,13 @@ class CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

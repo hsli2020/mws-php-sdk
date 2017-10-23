@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * Pallet
  *
  * Properties:
  * <ul>
- *
  * <li>Dimensions: Dimensions</li>
  * <li>Weight: Weight</li>
  * <li>IsStacked: bool</li>
- *
  * </ul>
  */
-
- class Pallet extends FBAInboundServiceMWS_Model {
-
+class Pallet extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'IsStacked' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
+            'Weight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'IsStacked'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetDimensions()
     {
-                return !is_null($this->_fields['Dimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['Dimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of Dimensions, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetWeight()
     {
-                return !is_null($this->_fields['Weight']['FieldValue']);
-            }
+        return !is_null($this->_fields['Weight']['FieldValue']);
+    }
 
     /**
      * Set the value of Weight, return this.
@@ -164,8 +157,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsStacked()
     {
-                return !is_null($this->_fields['IsStacked']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsStacked']['FieldValue']);
+    }
 
     /**
      * Set the value of IsStacked, return this.
@@ -180,5 +173,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setIsStacked($value);
         return $this;
     }
-
 }

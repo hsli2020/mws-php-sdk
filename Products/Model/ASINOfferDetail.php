@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * ASINOfferDetail
  *
  * Properties:
  * <ul>
- *
  * <li>SubCondition: string</li>
  * <li>SellerFeedbackRating: SellerFeedbackType</li>
  * <li>ShippingTime: DetailedShippingTimeType</li>
@@ -19,27 +19,25 @@ namespace Amazon\MWS\Products\Model;
  * <li>IsFulfilledByAmazon: bool</li>
  * <li>IsBuyBoxWinner: bool</li>
  * <li>IsFeaturedMerchant: bool</li>
- *
  * </ul>
  */
-
- class ASINOfferDetail extends MarketplaceWebServiceProducts_Model {
-
+class ASINOfferDetail extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
-    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'Points'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'ShipsFrom' => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
-    'IsFulfilledByAmazon' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsBuyBoxWinner' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsFeaturedMerchant' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
+            'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
+            'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Points'               => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
+            'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -71,8 +69,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSubCondition()
     {
-                return !is_null($this->_fields['SubCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['SubCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of SubCondition, return this.
@@ -117,8 +115,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerFeedbackRating()
     {
-                return !is_null($this->_fields['SellerFeedbackRating']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFeedbackRating']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFeedbackRating, return this.
@@ -163,8 +161,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShippingTime()
     {
-                return !is_null($this->_fields['ShippingTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingTime']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingTime, return this.
@@ -209,8 +207,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetListingPrice()
     {
-                return !is_null($this->_fields['ListingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListingPrice, return this.
@@ -255,8 +253,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPoints()
     {
-                return !is_null($this->_fields['Points']['FieldValue']);
-            }
+        return !is_null($this->_fields['Points']['FieldValue']);
+    }
 
     /**
      * Set the value of Points, return this.
@@ -301,8 +299,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShipping()
     {
-                return !is_null($this->_fields['Shipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipping']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipping, return this.
@@ -347,8 +345,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShipsFrom()
     {
-                return !is_null($this->_fields['ShipsFrom']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipsFrom']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipsFrom, return this.
@@ -403,8 +401,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIsFulfilledByAmazon()
     {
-                return !is_null($this->_fields['IsFulfilledByAmazon']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsFulfilledByAmazon']['FieldValue']);
+    }
 
     /**
      * Set the value of IsFulfilledByAmazon, return this.
@@ -459,8 +457,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIsBuyBoxWinner()
     {
-                return !is_null($this->_fields['IsBuyBoxWinner']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsBuyBoxWinner']['FieldValue']);
+    }
 
     /**
      * Set the value of IsBuyBoxWinner, return this.
@@ -515,8 +513,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIsFeaturedMerchant()
     {
-                return !is_null($this->_fields['IsFeaturedMerchant']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsFeaturedMerchant']['FieldValue']);
+    }
 
     /**
      * Set the value of IsFeaturedMerchant, return this.
@@ -531,5 +529,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setIsFeaturedMerchant($value);
         return $this;
     }
-
 }

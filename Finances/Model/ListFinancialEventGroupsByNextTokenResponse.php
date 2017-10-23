@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventGroupsByNextTokenResponse
  *
  * Properties:
  * <ul>
- *
  * <li>ListFinancialEventGroupsByNextTokenResult: ListFinancialEventGroupsByNextTokenResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class ListFinancialEventGroupsByNextTokenResponse extends MWSFinancesService_Model {
-
+class ListFinancialEventGroupsByNextTokenResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ListFinancialEventGroupsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListFinancialEventGroupsByNextTokenResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ListFinancialEventGroupsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListFinancialEventGroupsByNextTokenResult'),
+            'ResponseMetadata'                          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'                    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetListFinancialEventGroupsByNextTokenResult()
     {
-                return !is_null($this->_fields['ListFinancialEventGroupsByNextTokenResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListFinancialEventGroupsByNextTokenResult']['FieldValue']);
+    }
 
     /**
      * Set the value of ListFinancialEventGroupsByNextTokenResult, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -165,6 +163,7 @@ namespace Amazon\MWS\Finances\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct ListFinancialEventGroupsByNextTokenResponse from XML string
      *
@@ -186,6 +185,7 @@ namespace Amazon\MWS\Finances\Model;
                                   Make sure that ListFinancialEventGroupsByNextTokenResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -199,5 +199,4 @@ namespace Amazon\MWS\Finances\Model;
         $xml .= "</ListFinancialEventGroupsByNextTokenResponse>";
         return $xml;
     }
-
 }

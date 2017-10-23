@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
-class MWSMerchantFulfillmentService_Mock implements MWSMerchantFulfillmentService_Interface
+class Mock implements MerchantFulfillmentInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -96,5 +96,4 @@ class MWSMerchantFulfillmentService_Mock implements MWSMerchantFulfillmentServic
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

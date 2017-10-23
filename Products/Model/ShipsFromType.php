@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * ShipsFromType
  *
  * Properties:
  * <ul>
- *
  * <li>State: string</li>
  * <li>Country: string</li>
- *
  * </ul>
  */
-
- class ShipsFromType extends MarketplaceWebServiceProducts_Model {
-
+class ShipsFromType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'State' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Country' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'State'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Country' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetState()
     {
-                return !is_null($this->_fields['State']['FieldValue']);
-            }
+        return !is_null($this->_fields['State']['FieldValue']);
+    }
 
     /**
      * Set the value of State, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCountry()
     {
-                return !is_null($this->_fields['Country']['FieldValue']);
-            }
+        return !is_null($this->_fields['Country']['FieldValue']);
+    }
 
     /**
      * Set the value of Country, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setCountry($value);
         return $this;
     }
-
 }

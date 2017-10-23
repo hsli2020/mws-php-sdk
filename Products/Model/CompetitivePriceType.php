@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * CompetitivePriceType
  *
  * Properties:
  * <ul>
- *
  * <li>CompetitivePriceId: string</li>
  * <li>Price: PriceType</li>
  * <li>condition: string</li>
  * <li>subcondition: string</li>
  * <li>belongsToRequester: bool</li>
- *
  * </ul>
  */
-
- class CompetitivePriceType extends MarketplaceWebServiceProducts_Model {
-
+class CompetitivePriceType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Price' => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'subcondition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Price'              => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
+            'subcondition'       => array('FieldValue' => null, 'FieldType' => '@string'),
+            'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCompetitivePriceId()
     {
-                return !is_null($this->_fields['CompetitivePriceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['CompetitivePriceId']['FieldValue']);
+    }
 
     /**
      * Set the value of CompetitivePriceId, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPrice()
     {
-                return !is_null($this->_fields['Price']['FieldValue']);
-            }
+        return !is_null($this->_fields['Price']['FieldValue']);
+    }
 
     /**
      * Set the value of Price, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetcondition()
     {
-                return !is_null($this->_fields['condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['condition']['FieldValue']);
+    }
 
     /**
      * Set the value of condition, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetsubcondition()
     {
-                return !is_null($this->_fields['subcondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['subcondition']['FieldValue']);
+    }
 
     /**
      * Set the value of subcondition, return this.
@@ -255,8 +253,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetbelongsToRequester()
     {
-                return !is_null($this->_fields['belongsToRequester']['FieldValue']);
-            }
+        return !is_null($this->_fields['belongsToRequester']['FieldValue']);
+    }
 
     /**
      * Set the value of belongsToRequester, return this.
@@ -271,5 +269,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setbelongsToRequester($value);
         return $this;
     }
-
 }

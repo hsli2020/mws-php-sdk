@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * UpdateReportAcknowledgementsResponse
  *
  * Properties:
  * <ul>
- *
  * <li>UpdateReportAcknowledgementsResult: UpdateReportAcknowledgementsResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsResponse extends Model
 {
-
-
     /**
      * Construct new UpdateReportAcknowledgementsResponse
      *
@@ -36,8 +31,8 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'UpdateReportAcknowledgementsResult' => array('FieldValue' => null, 'FieldType' => 'UpdateReportAcknowledgementsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'UpdateReportAcknowledgementsResult' => array('FieldValue' => null, 'FieldType' => 'UpdateReportAcknowledgementsResult'),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -62,7 +57,6 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct UpdateReportAcknowledgementsResponse from provided XML.
                                   Make sure that UpdateReportAcknowledgementsResponse is a root element");
         }
-
     }
 
     /**
@@ -98,7 +92,6 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
         $this->setUpdateReportAcknowledgementsResult($value);
         return $this;
     }
-
 
     /**
      * Checks if UpdateReportAcknowledgementsResult  is set
@@ -145,7 +138,6 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +146,7 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +164,13 @@ class UpdateReportAcknowledgementsResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

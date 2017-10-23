@@ -2,28 +2,27 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * SellerFeedbackType
  *
  * Properties:
  * <ul>
- *
  * <li>SellerPositiveFeedbackRating: float</li>
  * <li>FeedbackCount: int</li>
- *
  * </ul>
  */
-
- class SellerFeedbackType extends MarketplaceWebServiceProducts_Model {
-
+class SellerFeedbackType extends MarketplaceWebServiceProducts_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'FeedbackCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'FeedbackCount'                => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +54,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerPositiveFeedbackRating()
     {
-                return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerPositiveFeedbackRating, return this.
@@ -101,8 +100,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeedbackCount()
     {
-                return !is_null($this->_fields['FeedbackCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeedbackCount']['FieldValue']);
+    }
 
     /**
      * Set the value of FeedbackCount, return this.
@@ -117,5 +116,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setFeedbackCount($value);
         return $this;
     }
-
 }

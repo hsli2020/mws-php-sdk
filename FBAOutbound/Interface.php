@@ -15,7 +15,7 @@ interface FBAOutboundInterface
      * @see CancelFulfillmentOrderRequest
      * @return CancelFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function cancelFulfillmentOrder($request);
 
@@ -77,7 +77,7 @@ interface FBAOutboundInterface
      * @see CreateFulfillmentOrderRequest
      * @return CreateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function createFulfillmentOrder($request);
 
@@ -93,7 +93,7 @@ interface FBAOutboundInterface
      * @see GetFulfillmentOrderRequest
      * @return GetFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getFulfillmentOrder($request);
 
@@ -115,7 +115,7 @@ interface FBAOutboundInterface
      * @see GetFulfillmentPreviewRequest
      * @return GetFulfillmentPreviewResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getFulfillmentPreview($request);
 
@@ -128,7 +128,7 @@ interface FBAOutboundInterface
      * @see GetPackageTrackingDetailsRequest
      * @return GetPackageTrackingDetailsResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getPackageTrackingDetails($request);
 
@@ -144,7 +144,7 @@ interface FBAOutboundInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getServiceStatus($request);
 
@@ -167,7 +167,7 @@ interface FBAOutboundInterface
      * @see ListAllFulfillmentOrdersRequest
      * @return ListAllFulfillmentOrdersResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function listAllFulfillmentOrders($request);
 
@@ -184,7 +184,7 @@ interface FBAOutboundInterface
      * @see ListAllFulfillmentOrdersByNextTokenRequest
      * @return ListAllFulfillmentOrdersByNextTokenResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function listAllFulfillmentOrdersByNextToken($request);
 
@@ -240,7 +240,7 @@ interface FBAOutboundInterface
      * @see UpdateFulfillmentOrderRequest
      * @return UpdateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function updateFulfillmentOrder($request);
 

@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportScheduleListResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportScheduleListResult: GetReportScheduleListResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportScheduleListResponse extends MarketplaceWebService_Model
+class GetReportScheduleListResponse extends Model
 {
-
-
     /**
      * Construct new GetReportScheduleListResponse
      *
@@ -36,12 +31,11 @@ class GetReportScheduleListResponse extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct GetReportScheduleListResponse from XML string
@@ -62,7 +56,6 @@ class GetReportScheduleListResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct GetReportScheduleListResponse from provided XML.
                                   Make sure that GetReportScheduleListResponse is a root element");
         }
-
     }
 
     /**
@@ -157,8 +150,6 @@ class GetReportScheduleListResponse extends MarketplaceWebService_Model
 
     }
 
-
-
     /**
      * XML Representation for this object
      *
@@ -175,11 +166,13 @@ class GetReportScheduleListResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

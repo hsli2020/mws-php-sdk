@@ -2,6 +2,28 @@
 
 namespace Amazon\MWS\FBAInbound;
 
+use Amazon\MWS\FBAInbound\Model\ConfirmPreorderResponse;
+use Amazon\MWS\FBAInbound\Model\ConfirmTransportRequestResponse;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentResponse;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentPlanResponse;
+use Amazon\MWS\FBAInbound\Model\EstimateTransportRequestResponse;
+use Amazon\MWS\FBAInbound\Model\GetBillOfLadingResponse;
+use Amazon\MWS\FBAInbound\Model\GetPackageLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\GetPalletLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\GetPreorderInfoResponse;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForASINResponse;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForSKUResponse;
+use Amazon\MWS\FBAInbound\Model\GetServiceStatusResponse;
+use Amazon\MWS\FBAInbound\Model\GetTransportContentResponse;
+use Amazon\MWS\FBAInbound\Model\GetUniquePackageLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsByNextTokenResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsByNextTokenResponse;
+use Amazon\MWS\FBAInbound\Model\PutTransportContentResponse;
+use Amazon\MWS\FBAInbound\Model\UpdateInboundShipmentResponse;
+use Amazon\MWS\FBAInbound\Model\VoidTransportRequestResponse;
+
 class Mock implements FBAInboundInterface
 {
     // Public API ------------------------------------------------------------//
@@ -25,7 +47,6 @@ class Mock implements FBAInboundInterface
      */
     public function confirmPreorder($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ConfirmPreorderResponse.php');
         return ConfirmPreorderResponse::fromXML($this->_invoke('ConfirmPreorder'));
     }
 
@@ -43,7 +64,6 @@ class Mock implements FBAInboundInterface
      */
     public function confirmTransportRequest($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ConfirmTransportRequestResponse.php');
         return ConfirmTransportRequestResponse::fromXML($this->_invoke('ConfirmTransportRequest'));
     }
 
@@ -63,7 +83,6 @@ class Mock implements FBAInboundInterface
      */
     public function createInboundShipment($request)
     {
-        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentResponse.php');
         return CreateInboundShipmentResponse::fromXML($this->_invoke('CreateInboundShipment'));
     }
 
@@ -83,7 +102,6 @@ class Mock implements FBAInboundInterface
      */
     public function createInboundShipmentPlan($request)
     {
-        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanResponse.php');
         return Model_CreateInboundShipmentPlanResponse::fromXML($this->_invoke('CreateInboundShipmentPlan'));
     }
 
@@ -101,7 +119,6 @@ class Mock implements FBAInboundInterface
      */
     public function estimateTransportRequest($request)
     {
-        require_once (dirname(__FILE__) . '/Model/EstimateTransportRequestResponse.php');
         return EstimateTransportRequestResponse::fromXML($this->_invoke('EstimateTransportRequest'));
     }
 
@@ -119,7 +136,6 @@ class Mock implements FBAInboundInterface
      */
     public function getBillOfLading($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetBillOfLadingResponse.php');
         return GetBillOfLadingResponse::fromXML($this->_invoke('GetBillOfLading'));
     }
 
@@ -149,7 +165,6 @@ class Mock implements FBAInboundInterface
      */
     public function getPackageLabels($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetPackageLabelsResponse.php');
         return GetPackageLabelsResponse::fromXML($this->_invoke('GetPackageLabels'));
     }
 
@@ -170,7 +185,6 @@ class Mock implements FBAInboundInterface
      */
     public function getPalletLabels($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetPalletLabelsResponse.php');
         return GetPalletLabelsResponse::fromXML($this->_invoke('GetPalletLabels'));
     }
 
@@ -193,7 +207,6 @@ class Mock implements FBAInboundInterface
      */
     public function getPreorderInfo($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetPreorderInfoResponse.php');
         return GetPreorderInfoResponse::fromXML($this->_invoke('GetPreorderInfo'));
     }
 
@@ -213,7 +226,6 @@ class Mock implements FBAInboundInterface
      */
     public function getPrepInstructionsForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINResponse.php');
         return GetPrepInstructionsForASINResponse::fromXML($this->_invoke('GetPrepInstructionsForASIN'));
     }
 
@@ -233,7 +245,6 @@ class Mock implements FBAInboundInterface
      */
     public function getPrepInstructionsForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKUResponse.php');
         return GetPrepInstructionsForSKUResponse::fromXML($this->_invoke('GetPrepInstructionsForSKU'));
     }
 
@@ -252,7 +263,6 @@ class Mock implements FBAInboundInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -270,7 +280,6 @@ class Mock implements FBAInboundInterface
      */
     public function getTransportContent($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetTransportContentResponse.php');
         return GetTransportContentResponse::fromXML($this->_invoke('GetTransportContent'));
     }
 
@@ -302,7 +311,6 @@ class Mock implements FBAInboundInterface
      */
     public function getUniquePackageLabels($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetUniquePackageLabelsResponse.php');
         return GetUniquePackageLabelsResponse::fromXML($this->_invoke('GetUniquePackageLabels'));
     }
 
@@ -328,7 +336,6 @@ class Mock implements FBAInboundInterface
      */
     public function listInboundShipmentItems($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsResponse.php');
         return ListInboundShipmentItemsResponse::fromXML($this->_invoke('ListInboundShipmentItems'));
     }
 
@@ -347,7 +354,6 @@ class Mock implements FBAInboundInterface
      */
     public function listInboundShipmentItemsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenResponse.php');
         return ListInboundShipmentItemsByNextTokenResponse::fromXML($this->_invoke('ListInboundShipmentItemsByNextToken'));
     }
 
@@ -371,7 +377,6 @@ class Mock implements FBAInboundInterface
      */
     public function listInboundShipments($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsResponse.php');
         return ListInboundShipmentsResponse::fromXML($this->_invoke('ListInboundShipments'));
     }
 
@@ -389,7 +394,6 @@ class Mock implements FBAInboundInterface
      */
     public function listInboundShipmentsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenResponse.php');
         return ListInboundShipmentsByNextTokenResponse::fromXML($this->_invoke('ListInboundShipmentsByNextToken'));
     }
 
@@ -406,7 +410,6 @@ class Mock implements FBAInboundInterface
      */
     public function putTransportContent($request)
     {
-        require_once (dirname(__FILE__) . '/Model/PutTransportContentResponse.php');
         return PutTransportContentResponse::fromXML($this->_invoke('PutTransportContent'));
     }
 
@@ -433,7 +436,6 @@ class Mock implements FBAInboundInterface
      */
     public function updateInboundShipment($request)
     {
-        require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentResponse.php');
         return UpdateInboundShipmentResponse::fromXML($this->_invoke('UpdateInboundShipment'));
     }
 
@@ -454,7 +456,6 @@ class Mock implements FBAInboundInterface
      */
     public function voidTransportRequest($request)
     {
-        require_once (dirname(__FILE__) . '/Model/VoidTransportRequestResponse.php');
         return VoidTransportRequestResponse::fromXML($this->_invoke('VoidTransportRequest'));
     }
 

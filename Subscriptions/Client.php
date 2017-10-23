@@ -5,7 +5,7 @@ namespace Amazon\MWS\Subscriptions;
 /**
  * MWSSubscriptionsService_Client is an implementation of MWSSubscriptionsService
  */
-class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interface
+class Client implements SubscriptionsInterface
 {
     const SERVICE_VERSION = '2013-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
@@ -17,18 +17,18 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'MWSSubscriptionsService PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
-
+    private  $_config = array(
+            'ServiceURL'       => null,
+            'UserAgent'        => 'MWSSubscriptionsService PHP5 Library',
+            'SignatureVersion' => 2,
+            'SignatureMethod'  => 'HmacSHA256',
+            'ProxyHost'        => null,
+            'ProxyPort'        => -1,
+            'ProxyUsername'    => null,
+            'ProxyPassword'    => null,
+            'MaxErrorRetry'    => 3,
+            'Headers'          => array()
+        );
 
     /**
      * Create Subscription
@@ -56,12 +56,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert CreateSubscriptionInput to name value pairs
      */
-    private function _convertCreateSubscription($request) {
-
+    private function _convertCreateSubscription($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'CreateSubscription';
         if ($request->isSetSellerId()) {
@@ -82,7 +81,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Delete Subscription
@@ -110,12 +108,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert DeleteSubscriptionInput to name value pairs
      */
-    private function _convertDeleteSubscription($request) {
-
+    private function _convertDeleteSubscription($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'DeleteSubscription';
         if ($request->isSetSellerId()) {
@@ -139,7 +136,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Deregister Destination
@@ -167,12 +163,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert DeregisterDestinationInput to name value pairs
      */
-    private function _convertDeregisterDestination($request) {
-
+    private function _convertDeregisterDestination($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'DeregisterDestination';
         if ($request->isSetSellerId()) {
@@ -193,7 +188,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Get Subscription
@@ -221,12 +215,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert GetSubscriptionInput to name value pairs
      */
-    private function _convertGetSubscription($request) {
-
+    private function _convertGetSubscription($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetSubscription';
         if ($request->isSetSellerId()) {
@@ -250,7 +243,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * List Registered Destinations
@@ -278,12 +270,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert ListRegisteredDestinationsInput to name value pairs
      */
-    private function _convertListRegisteredDestinations($request) {
-
+    private function _convertListRegisteredDestinations($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListRegisteredDestinations';
         if ($request->isSetSellerId()) {
@@ -298,7 +289,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * List Subscriptions
@@ -326,12 +316,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert ListSubscriptionsInput to name value pairs
      */
-    private function _convertListSubscriptions($request) {
-
+    private function _convertListSubscriptions($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'ListSubscriptions';
         if ($request->isSetSellerId()) {
@@ -346,7 +335,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Register Destination
@@ -374,12 +362,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert RegisterDestinationInput to name value pairs
      */
-    private function _convertRegisterDestination($request) {
-
+    private function _convertRegisterDestination($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'RegisterDestination';
         if ($request->isSetSellerId()) {
@@ -400,7 +387,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Send Test Notification To Destination
@@ -428,12 +414,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert SendTestNotificationToDestinationInput to name value pairs
      */
-    private function _convertSendTestNotificationToDestination($request) {
-
+    private function _convertSendTestNotificationToDestination($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'SendTestNotificationToDestination';
         if ($request->isSetSellerId()) {
@@ -454,7 +439,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Update Subscription
@@ -482,12 +466,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert UpdateSubscriptionInput to name value pairs
      */
-    private function _convertUpdateSubscription($request) {
-
+    private function _convertUpdateSubscription($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'UpdateSubscription';
         if ($request->isSetSellerId()) {
@@ -508,7 +491,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
 
     /**
      * Get Service Status
@@ -536,12 +518,11 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $response;
     }
 
-
     /**
      * Convert GetServiceStatusRequest to name value pairs
      */
-    private function _convertGetServiceStatus($request) {
-
+    private function _convertGetServiceStatus($request)
+    {
         $parameters = array();
         $parameters['Action'] = 'GetServiceStatus';
         if ($request->isSetSellerId()) {
@@ -553,8 +534,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $parameters;
     }
-
-
 
     /**
      * Construct new Client
@@ -587,11 +566,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         $this->setUserAgentHeader($applicationName, $applicationVersion);
     }
 
-    private function setUserAgentHeader(
-        $applicationName,
-        $applicationVersion,
-        $attributes = null) {
-
+    private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($attributes)) {
             $attributes = array ();
         }
@@ -600,7 +576,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
             $this->constructUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
-    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null) {
+    private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
+    {
         if (is_null($applicationName) || $applicationName === "") {
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
@@ -642,9 +619,10 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
     * @param $s
     * @return string
     */
-   private function collapseWhitespace($s) {
-       return preg_replace('/ {2,}|\s/', ' ', $s);
-   }
+    private function collapseWhitespace($s)
+    {
+        return preg_replace('/ {2,}|\s/', ' ', $s);
+    }
 
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
@@ -652,7 +630,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * @param $s
      * @return string
      */
-    private function quoteApplicationName($s) {
+    private function quoteApplicationName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\//', '\\/', $quotedString);
@@ -667,7 +646,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * @param $s
      * @return string
      */
-    private function quoteApplicationVersion($s) {
+    private function quoteApplicationVersion($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
@@ -682,7 +662,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeName($s) {
+    private function quoteAttributeName($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
@@ -697,7 +678,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * @param $s
      * @return unknown_type
      */
-    private function quoteAttributeValue($s) {
+    private function quoteAttributeValue($s)
+    {
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
@@ -705,7 +687,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
 
         return $quotedString;
     }
-
 
     // Private API ------------------------------------------------------------//
 
@@ -769,8 +750,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         require_once (dirname(__FILE__) . '/Exception.php');
         return new MWSSubscriptionsService_Exception($exProps);
     }
-
-
 
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
@@ -861,7 +840,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      *
      * return [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response)
+    {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
@@ -903,7 +883,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * ...
      * returns String statusCode or null if the status line can't be parsed
      */
-    private function _extractHttpStatusCode($headers){
+    private function _extractHttpStatusCode($headers)
+    {
     	$statusCode = null;
         if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
         	//The matches array [entireMatchString, protocol, statusCode, the rest]
@@ -917,15 +898,17 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
      */
-    private function _httpHeadersHaveContent($headers){
+    private function _httpHeadersHaveContent($headers)
+    {
         return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
 
-    /**
+   /**
     *  extract a ResponseHeaderMetadata object from the raw headers
     */
-    private function _extractResponseHeaderMetadata($rawHeaders){
+    private function _extractResponseHeaderMetadata($rawHeaders)
+    {
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
         $headers['x-mws-request-id'] = null;
@@ -961,7 +944,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * Set curl options relating to SSL. Protected to allow overriding.
      * @param $ch curl handle
      */
-    protected function setSSLCurlOptions($ch) {
+    protected function setSSLCurlOptions($ch)
+    {
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
     }
@@ -1010,7 +994,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return implode('&', $queryParameters);
     }
 
-
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -1041,7 +1024,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      *
      */
-    private function _signParameters(array $parameters, $key) {
+    private function _signParameters(array $parameters, $key)
+    {
         $signatureVersion = $parameters['SignatureVersion'];
         $algorithm = "HmacSHA1";
         $stringToSign = null;
@@ -1060,7 +1044,8 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
      * @param array $parameters request parameters
      * @return String to Sign
      */
-    private function _calculateStringToSignV2(array $parameters) {
+    private function _calculateStringToSignV2(array $parameters)
+    {
         $data = 'POST';
         $data .= "\n";
         $endpoint = parse_url ($this->_config['ServiceURL']);
@@ -1078,10 +1063,10 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         return $data;
     }
 
-    private function _urlencode($value) {
+    private function _urlencode($value)
+    {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
@@ -1100,7 +1085,6 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
         );
     }
 
-
     /**
      * Formats date as ISO 8601 timestamp
      */
@@ -1116,5 +1100,4 @@ class MWSSubscriptionsService_Client implements MWSSubscriptionsService_Interfac
     {
         return $dateTime->format(DATE_ISO8601);
     }
-
 }

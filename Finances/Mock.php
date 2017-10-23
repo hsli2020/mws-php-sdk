@@ -96,5 +96,4 @@ class Mock implements FinancesInterface
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

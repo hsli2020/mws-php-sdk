@@ -13,7 +13,7 @@ interface RecommendationsInterface
      * @see GetLastUpdatedTimeForRecommendationsRequest
      * @return GetLastUpdatedTimeForRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function getLastUpdatedTimeForRecommendations($request);
 
@@ -26,7 +26,7 @@ interface RecommendationsInterface
      * @see ListRecommendationsRequest
      * @return ListRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function listRecommendations($request);
 
@@ -39,7 +39,7 @@ interface RecommendationsInterface
      * @see ListRecommendationsByNextTokenRequest
      * @return ListRecommendationsByNextTokenResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function listRecommendationsByNextToken($request);
 
@@ -52,7 +52,7 @@ interface RecommendationsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function getServiceStatus($request);
 

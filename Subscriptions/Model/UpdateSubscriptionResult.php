@@ -2,10 +2,12 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * UpdateSubscriptionResult
  */
-class UpdateSubscriptionResult extends MWSSubscriptionsService_Model
+class UpdateSubscriptionResult extends Model
 {
     public function __construct($data = null)
     {

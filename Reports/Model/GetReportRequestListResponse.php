@@ -1,30 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
- *  Marketplace Web Service PHP5 Library
- *  Generated: Thu May 07 13:07:36 PDT 2009
- *
- */
-
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportRequestListResult: GetReportRequestListResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportRequestListResponse extends MarketplaceWebService_Model
+class GetReportRequestListResponse extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListResponse
      *
@@ -32,21 +22,18 @@ class GetReportRequestListResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetReportRequestListResult: GetReportRequestListResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportRequestListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportRequestListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct GetReportRequestListResponse from XML string
@@ -113,7 +100,6 @@ class GetReportRequestListResponse extends MarketplaceWebService_Model
     public function isSetGetReportRequestListResult()
     {
         return !is_null($this->fields['GetReportRequestListResult']['FieldValue']);
-
     }
 
     /**
@@ -159,10 +145,7 @@ class GetReportRequestListResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -180,11 +163,13 @@ class GetReportRequestListResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

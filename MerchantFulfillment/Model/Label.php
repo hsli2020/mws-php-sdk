@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * Label
  *
  * Properties:
  * <ul>
- *
  * <li>Dimensions: LabelDimensions</li>
  * <li>FileContents: FileContents</li>
- *
  * </ul>
  */
-
- class Label extends MWSMerchantFulfillmentService_Model {
-
+class Label extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Dimensions' => array('FieldValue' => null, 'FieldType' => 'LabelDimensions'),
-    'FileContents' => array('FieldValue' => null, 'FieldType' => 'FileContents'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Dimensions'   => array('FieldValue' => null, 'FieldType' => 'LabelDimensions'),
+            'FileContents' => array('FieldValue' => null, 'FieldType' => 'FileContents'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetDimensions()
     {
-                return !is_null($this->_fields['Dimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['Dimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of Dimensions, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetFileContents()
     {
-                return !is_null($this->_fields['FileContents']['FieldValue']);
-            }
+        return !is_null($this->_fields['FileContents']['FieldValue']);
+    }
 
     /**
      * Set the value of FileContents, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setFileContents($value);
         return $this;
     }
-
 }

@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * FeeComponent
  *
  * Properties:
  * <ul>
- *
  * <li>FeeType: string</li>
  * <li>FeeAmount: Currency</li>
- *
  * </ul>
  */
-
- class FeeComponent extends MWSFinancesService_Model {
-
+class FeeComponent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FeeType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FeeType'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeType()
     {
-                return !is_null($this->_fields['FeeType']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeType']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeType, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeAmount()
     {
-                return !is_null($this->_fields['FeeAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeAmount, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setFeeAmount($value);
         return $this;
     }
-
 }

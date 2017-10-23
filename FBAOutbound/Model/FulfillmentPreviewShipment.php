@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentPreviewShipment
  *
  * Properties:
  * <ul>
- *
  * <li>EarliestShipDate: string</li>
  * <li>LatestShipDate: string</li>
  * <li>EarliestArrivalDate: string</li>
  * <li>LatestArrivalDate: string</li>
  * <li>FulfillmentPreviewItems: FulfillmentPreviewItemList</li>
- *
  * </ul>
  */
-
- class FulfillmentPreviewShipment extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentPreviewShipment extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'EarliestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestArrivalDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestArrivalDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewItemList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'EarliestShipDate'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LatestShipDate'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EarliestArrivalDate'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LatestArrivalDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewItemList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEarliestShipDate()
     {
-                return !is_null($this->_fields['EarliestShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestShipDate, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetLatestShipDate()
     {
-                return !is_null($this->_fields['LatestShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestShipDate, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEarliestArrivalDate()
     {
-                return !is_null($this->_fields['EarliestArrivalDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestArrivalDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestArrivalDate, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetLatestArrivalDate()
     {
-                return !is_null($this->_fields['LatestArrivalDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestArrivalDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestArrivalDate, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentPreviewItems()
     {
-                return !is_null($this->_fields['FulfillmentPreviewItems']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentPreviewItems']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentPreviewItems, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentPreviewItems($value);
         return $this;
     }
-
 }

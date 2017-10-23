@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Sellers;
 
-class MarketplaceWebServiceSellers_Mock implements MarketplaceWebServiceSellers_Interface
+class Mock implements SellersInterface
 {
     // Public API ------------------------------------------------------------//
 
@@ -65,5 +65,4 @@ class MarketplaceWebServiceSellers_Mock implements MarketplaceWebServiceSellers_
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

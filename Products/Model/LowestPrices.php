@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * LowestPrices
  *
  * Properties:
  * <ul>
- *
  * <li>LowestPrice: array</li>
- *
  * </ul>
  */
-
- class LowestPrices extends MarketplaceWebServiceProducts_Model {
-
+class LowestPrices extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array('LowestPriceType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array('LowestPriceType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getLowestPrice()
     {
-        if ($this->_fields['LowestPrice']['FieldValue'] == null)
-        {
+        if ($this->_fields['LowestPrice']['FieldValue'] == null) {
             $this->_fields['LowestPrice']['FieldValue'] = array();
         }
         return $this->_fields['LowestPrice']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetLowestPrice()
     {
-                return !empty($this->_fields['LowestPrice']['FieldValue']);
-            }
+        return !empty($this->_fields['LowestPrice']['FieldValue']);
+    }
 
     /**
      * Add values for LowestPrice, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withLowestPrice()
     {
-        foreach (func_get_args() as $LowestPrice)
-        {
+        foreach (func_get_args() as $LowestPrice) {
             $this->_fields['LowestPrice']['FieldValue'][] = $LowestPrice;
         }
         return $this;
     }
-
 }

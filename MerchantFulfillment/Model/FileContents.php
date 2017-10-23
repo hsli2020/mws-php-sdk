@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * FileContents
  *
  * Properties:
  * <ul>
- *
  * <li>Contents: string</li>
  * <li>FileType: string</li>
  * <li>Checksum: string</li>
- *
  * </ul>
  */
-
- class FileContents extends MWSMerchantFulfillmentService_Model {
-
+class FileContents extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Contents' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FileType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Checksum' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Contents' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FileType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Checksum' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetContents()
     {
-                return !is_null($this->_fields['Contents']['FieldValue']);
-            }
+        return !is_null($this->_fields['Contents']['FieldValue']);
+    }
 
     /**
      * Set the value of Contents, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetFileType()
     {
-                return !is_null($this->_fields['FileType']['FieldValue']);
-            }
+        return !is_null($this->_fields['FileType']['FieldValue']);
+    }
 
     /**
      * Set the value of FileType, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetChecksum()
     {
-                return !is_null($this->_fields['Checksum']['FieldValue']);
-            }
+        return !is_null($this->_fields['Checksum']['FieldValue']);
+    }
 
     /**
      * Set the value of Checksum, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setChecksum($value);
         return $this;
     }
-
 }

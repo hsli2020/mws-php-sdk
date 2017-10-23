@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * SendTestNotificationToDestinationResult
  *
@@ -9,7 +11,7 @@ namespace Amazon\MWS\Subscriptions\Model;
  * <ul>
  * </ul>
  */
-class SendTestNotificationToDestinationResult extends MWSSubscriptionsService_Model
+class SendTestNotificationToDestinationResult extends Model
 {
     public function __construct($data = null)
     {

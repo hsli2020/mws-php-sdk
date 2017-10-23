@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * SellerSKUIdentifier
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>SellerId: string</li>
  * <li>SellerSKU: string</li>
- *
  * </ul>
  */
-
- class SellerSKUIdentifier extends MarketplaceWebServiceProducts_Model {
-
+class SellerSKUIdentifier extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKU'     => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setSellerSKU($value);
         return $this;
     }
-
 }

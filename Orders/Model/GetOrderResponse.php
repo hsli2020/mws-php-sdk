@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * GetOrderResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetOrderResult: GetOrderResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetOrderResponse extends MarketplaceWebServiceOrders_Model {
-
+class GetOrderResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetOrderResult' => array('FieldValue' => null, 'FieldType' => 'GetOrderResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetOrderResult'         => array('FieldValue' => null, 'FieldType' => 'GetOrderResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetGetOrderResult()
     {
-                return !is_null($this->_fields['GetOrderResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['GetOrderResult']['FieldValue']);
+    }
 
     /**
      * Set the value of GetOrderResult, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -165,6 +163,7 @@ namespace Amazon\MWS\Orders\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetOrderResponse from XML string
      *
@@ -186,6 +185,7 @@ namespace Amazon\MWS\Orders\Model;
                                   Make sure that GetOrderResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -199,5 +199,4 @@ namespace Amazon\MWS\Orders\Model;
         $xml .= "</GetOrderResponse>";
         return $xml;
     }
-
 }

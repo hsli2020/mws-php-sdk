@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventGroupsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>MaxResultsPerPage: int</li>
  * <li>FinancialEventGroupStartedAfter: string</li>
  * <li>FinancialEventGroupStartedBefore: string</li>
- *
  * </ul>
  */
-
- class ListFinancialEventGroupsRequest extends MWSFinancesService_Model {
-
+class ListFinancialEventGroupsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MaxResultsPerPage' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'FinancialEventGroupStartedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FinancialEventGroupStartedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'                         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'                     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MaxResultsPerPage'                => array('FieldValue' => null, 'FieldType' => 'int'),
+            'FinancialEventGroupStartedAfter'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FinancialEventGroupStartedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMaxResultsPerPage()
     {
-                return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
-            }
+        return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
+    }
 
     /**
      * Set the value of MaxResultsPerPage, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupStartedAfter()
     {
-                return !is_null($this->_fields['FinancialEventGroupStartedAfter']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupStartedAfter']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupStartedAfter, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEventGroupStartedBefore()
     {
-                return !is_null($this->_fields['FinancialEventGroupStartedBefore']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEventGroupStartedBefore']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEventGroupStartedBefore, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setFinancialEventGroupStartedBefore($value);
         return $this;
     }
-
 }

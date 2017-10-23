@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * GetServiceStatusResult
  *
@@ -11,15 +13,15 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>Timestamp: string</li>
  * </ul>
  */
-class GetServiceStatusResult extends Model {
-
+class GetServiceStatusResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -51,8 +53,8 @@ class GetServiceStatusResult extends Model {
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -97,8 +99,8 @@ class GetServiceStatusResult extends Model {
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return !is_null($this->_fields['Timestamp']['FieldValue']);
+    }
 
     /**
      * Set the value of Timestamp, return this.
@@ -113,5 +115,4 @@ class GetServiceStatusResult extends Model {
         $this->setTimestamp($value);
         return $this;
     }
-
 }

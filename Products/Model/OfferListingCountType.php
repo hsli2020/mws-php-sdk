@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * OfferListingCountType
  *
  * Properties:
  * <ul>
- *
  * <li>Value: int</li>
  * <li>condition: string</li>
- *
  * </ul>
  */
-
- class OfferListingCountType extends MarketplaceWebServiceProducts_Model {
-
+class OfferListingCountType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Value' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Value'     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return !is_null($this->_fields['Value']['FieldValue']);
+    }
 
     /**
      * Set the value of Value, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetcondition()
     {
-                return !is_null($this->_fields['condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['condition']['FieldValue']);
+    }
 
     /**
      * Set the value of condition, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setcondition($value);
         return $this;
     }
-
 }

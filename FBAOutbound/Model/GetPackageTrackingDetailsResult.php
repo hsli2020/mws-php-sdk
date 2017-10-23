@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetPackageTrackingDetailsResult
  *
  * Properties:
  * <ul>
- *
  * <li>PackageNumber: int</li>
  * <li>TrackingNumber: string</li>
  * <li>CarrierCode: string</li>
@@ -21,29 +21,27 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>SignedForBy: string</li>
  * <li>AdditionalLocationInfo: string</li>
  * <li>TrackingEvents: TrackingEventList</li>
- *
  * </ul>
  */
-
- class GetPackageTrackingDetailsResult extends FBAOutboundServiceMWS_Model {
-
+class GetPackageTrackingDetailsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PackageNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'TrackingNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CarrierCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CarrierPhoneNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CarrierURL' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EstimatedArrivalDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
-    'CurrentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SignedForBy' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AdditionalLocationInfo' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TrackingEvents' => array('FieldValue' => null, 'FieldType' => 'TrackingEventList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PackageNumber'          => array('FieldValue' => null, 'FieldType' => 'int'),
+            'TrackingNumber'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CarrierCode'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CarrierPhoneNumber'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CarrierURL'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipDate'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EstimatedArrivalDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipToAddress'          => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
+            'CurrentStatus'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SignedForBy'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AdditionalLocationInfo' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TrackingEvents'         => array('FieldValue' => null, 'FieldType' => 'TrackingEventList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -75,8 +73,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetPackageNumber()
     {
-                return !is_null($this->_fields['PackageNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageNumber, return this.
@@ -121,8 +119,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetTrackingNumber()
     {
-                return !is_null($this->_fields['TrackingNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingNumber, return this.
@@ -167,8 +165,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCarrierCode()
     {
-                return !is_null($this->_fields['CarrierCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierCode, return this.
@@ -213,8 +211,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCarrierPhoneNumber()
     {
-                return !is_null($this->_fields['CarrierPhoneNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierPhoneNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierPhoneNumber, return this.
@@ -259,8 +257,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCarrierURL()
     {
-                return !is_null($this->_fields['CarrierURL']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierURL']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierURL, return this.
@@ -305,8 +303,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShipDate()
     {
-                return !is_null($this->_fields['ShipDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipDate, return this.
@@ -351,8 +349,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedArrivalDate()
     {
-                return !is_null($this->_fields['EstimatedArrivalDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedArrivalDate']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedArrivalDate, return this.
@@ -397,8 +395,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShipToAddress()
     {
-                return !is_null($this->_fields['ShipToAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipToAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipToAddress, return this.
@@ -443,8 +441,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCurrentStatus()
     {
-                return !is_null($this->_fields['CurrentStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrentStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrentStatus, return this.
@@ -489,8 +487,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSignedForBy()
     {
-                return !is_null($this->_fields['SignedForBy']['FieldValue']);
-            }
+        return !is_null($this->_fields['SignedForBy']['FieldValue']);
+    }
 
     /**
      * Set the value of SignedForBy, return this.
@@ -535,8 +533,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetAdditionalLocationInfo()
     {
-                return !is_null($this->_fields['AdditionalLocationInfo']['FieldValue']);
-            }
+        return !is_null($this->_fields['AdditionalLocationInfo']['FieldValue']);
+    }
 
     /**
      * Set the value of AdditionalLocationInfo, return this.
@@ -581,8 +579,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetTrackingEvents()
     {
-                return !is_null($this->_fields['TrackingEvents']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingEvents']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingEvents, return this.
@@ -597,5 +595,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setTrackingEvents($value);
         return $this;
     }
-
 }

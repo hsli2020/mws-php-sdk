@@ -1,38 +1,31 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * Contact
  *
  * Properties:
  * <ul>
- *
  * <li>Name: string</li>
  * <li>Phone: string</li>
  * <li>Email: string</li>
  * <li>Fax: string</li>
- *
  * </ul>
  */
-
- class Contact extends FBAInboundServiceMWS_Model {
-
+class Contact extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Email' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Fax' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Name'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Email' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Fax'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,14 +57,14 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return !is_null($this->_fields['Name']['FieldValue']);
+    }
 
     /**
      * Set the value of Name, return this.
      *
      * @param name
-     *             The new value to set.
+     *        The new value to set.
      *
      * @return This instance.
      */
@@ -110,8 +103,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPhone()
     {
-                return !is_null($this->_fields['Phone']['FieldValue']);
-            }
+        return !is_null($this->_fields['Phone']['FieldValue']);
+    }
 
     /**
      * Set the value of Phone, return this.
@@ -156,8 +149,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetEmail()
     {
-                return !is_null($this->_fields['Email']['FieldValue']);
-            }
+        return !is_null($this->_fields['Email']['FieldValue']);
+    }
 
     /**
      * Set the value of Email, return this.
@@ -202,8 +195,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFax()
     {
-                return !is_null($this->_fields['Fax']['FieldValue']);
-            }
+        return !is_null($this->_fields['Fax']['FieldValue']);
+    }
 
     /**
      * Set the value of Fax, return this.
@@ -218,5 +211,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setFax($value);
         return $this;
     }
-
 }

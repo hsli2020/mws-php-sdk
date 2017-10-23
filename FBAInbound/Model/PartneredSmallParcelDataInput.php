@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredSmallParcelDataInput
  *
  * Properties:
  * <ul>
- *
  * <li>PackageList: PartneredSmallParcelPackageInputList</li>
  * <li>CarrierName: string</li>
- *
  * </ul>
  */
-
- class PartneredSmallParcelDataInput extends FBAInboundServiceMWS_Model {
-
+class PartneredSmallParcelDataInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PackageList' => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelPackageInputList'),
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PackageList' => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelPackageInputList'),
+            'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPackageList()
     {
-                return !is_null($this->_fields['PackageList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageList']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageList, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setCarrierName($value);
         return $this;
     }
-
 }

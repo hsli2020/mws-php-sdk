@@ -1,19 +1,14 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredLtlDataOutput
  *
  * Properties:
  * <ul>
- *
  * <li>Contact: Contact</li>
  * <li>BoxCount: int</li>
  * <li>SellerFreightClass: string</li>
@@ -29,32 +24,30 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>IsBillOfLadingAvailable: bool</li>
  * <li>PartneredEstimate: PartneredEstimate</li>
  * <li>CarrierName: string</li>
- *
  * </ul>
  */
-
- class PartneredLtlDataOutput extends FBAInboundServiceMWS_Model {
-
+class PartneredLtlDataOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Contact' => array('FieldValue' => null, 'FieldType' => 'Contact'),
-    'BoxCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SellerFreightClass' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FreightReadyDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PalletList' => array('FieldValue' => null, 'FieldType' => 'PalletList'),
-    'TotalWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'SellerDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    'AmazonCalculatedValue' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    'PreviewPickupDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PreviewDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PreviewFreightClass' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonReferenceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsBillOfLadingAvailable' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PartneredEstimate' => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Contact'                 => array('FieldValue' => null, 'FieldType' => 'Contact'),
+            'BoxCount'                => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerFreightClass'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FreightReadyDate'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PalletList'              => array('FieldValue' => null, 'FieldType' => 'PalletList'),
+            'TotalWeight'             => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'SellerDeclaredValue'     => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'AmazonCalculatedValue'   => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'PreviewPickupDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PreviewDeliveryDate'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PreviewFreightClass'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AmazonReferenceId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IsBillOfLadingAvailable' => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'PartneredEstimate'       => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
+            'CarrierName'             => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -86,8 +79,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetContact()
     {
-                return !is_null($this->_fields['Contact']['FieldValue']);
-            }
+        return !is_null($this->_fields['Contact']['FieldValue']);
+    }
 
     /**
      * Set the value of Contact, return this.
@@ -132,8 +125,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetBoxCount()
     {
-                return !is_null($this->_fields['BoxCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['BoxCount']['FieldValue']);
+    }
 
     /**
      * Set the value of BoxCount, return this.
@@ -178,8 +171,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerFreightClass()
     {
-                return !is_null($this->_fields['SellerFreightClass']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFreightClass']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFreightClass, return this.
@@ -224,8 +217,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFreightReadyDate()
     {
-                return !is_null($this->_fields['FreightReadyDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['FreightReadyDate']['FieldValue']);
+    }
 
     /**
      * Set the value of FreightReadyDate, return this.
@@ -270,8 +263,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPalletList()
     {
-                return !is_null($this->_fields['PalletList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PalletList']['FieldValue']);
+    }
 
     /**
      * Set the value of PalletList, return this.
@@ -316,8 +309,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalWeight()
     {
-                return !is_null($this->_fields['TotalWeight']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalWeight']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalWeight, return this.
@@ -362,8 +355,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerDeclaredValue()
     {
-                return !is_null($this->_fields['SellerDeclaredValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerDeclaredValue']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerDeclaredValue, return this.
@@ -408,8 +401,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetAmazonCalculatedValue()
     {
-                return !is_null($this->_fields['AmazonCalculatedValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonCalculatedValue']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonCalculatedValue, return this.
@@ -454,8 +447,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPreviewPickupDate()
     {
-                return !is_null($this->_fields['PreviewPickupDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PreviewPickupDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PreviewPickupDate, return this.
@@ -500,8 +493,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPreviewDeliveryDate()
     {
-                return !is_null($this->_fields['PreviewDeliveryDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PreviewDeliveryDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PreviewDeliveryDate, return this.
@@ -546,8 +539,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPreviewFreightClass()
     {
-                return !is_null($this->_fields['PreviewFreightClass']['FieldValue']);
-            }
+        return !is_null($this->_fields['PreviewFreightClass']['FieldValue']);
+    }
 
     /**
      * Set the value of PreviewFreightClass, return this.
@@ -592,8 +585,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetAmazonReferenceId()
     {
-                return !is_null($this->_fields['AmazonReferenceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonReferenceId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonReferenceId, return this.
@@ -648,8 +641,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsBillOfLadingAvailable()
     {
-                return !is_null($this->_fields['IsBillOfLadingAvailable']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsBillOfLadingAvailable']['FieldValue']);
+    }
 
     /**
      * Set the value of IsBillOfLadingAvailable, return this.
@@ -694,8 +687,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPartneredEstimate()
     {
-                return !is_null($this->_fields['PartneredEstimate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PartneredEstimate']['FieldValue']);
+    }
 
     /**
      * Set the value of PartneredEstimate, return this.
@@ -740,8 +733,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -756,5 +749,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setCarrierName($value);
         return $this;
     }
-
 }

@@ -2,24 +2,24 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * ResponseMetadata
  *
  * Properties:
  * <ul>
- *
  * <li>RequestId: string</li>
- *
  * </ul>
  */
-class ResponseMetadata extends MarketplaceWebServiceSellers_Model {
-
+class ResponseMetadata extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -51,8 +51,8 @@ class ResponseMetadata extends MarketplaceWebServiceSellers_Model {
      */
     public function isSetRequestId()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RequestId']['FieldValue']);
+    }
 
     /**
      * Set the value of RequestId, return this.
@@ -67,5 +67,4 @@ class ResponseMetadata extends MarketplaceWebServiceSellers_Model {
         $this->setRequestId($value);
         return $this;
     }
-
 }

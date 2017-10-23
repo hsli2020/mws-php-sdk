@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * SolutionProviderCreditEvent
  *
  * Properties:
  * <ul>
- *
  * <li>ProviderTransactionType: string</li>
  * <li>SellerOrderId: string</li>
  * <li>MarketplaceId: string</li>
@@ -17,25 +17,23 @@ namespace Amazon\MWS\Finances\Model;
  * <li>SellerStoreName: string</li>
  * <li>ProviderId: string</li>
  * <li>ProviderStoreName: string</li>
- *
  * </ul>
  */
-
- class SolutionProviderCreditEvent extends MWSFinancesService_Model {
-
+class SolutionProviderCreditEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ProviderTransactionType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerStoreName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProviderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProviderStoreName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ProviderTransactionType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerOrderId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceCountryCode'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerStoreName'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProviderId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProviderStoreName'       => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -67,8 +65,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProviderTransactionType()
     {
-                return !is_null($this->_fields['ProviderTransactionType']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProviderTransactionType']['FieldValue']);
+    }
 
     /**
      * Set the value of ProviderTransactionType, return this.
@@ -113,8 +111,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -159,8 +157,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -205,8 +203,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceCountryCode()
     {
-                return !is_null($this->_fields['MarketplaceCountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceCountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceCountryCode, return this.
@@ -251,8 +249,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -297,8 +295,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerStoreName()
     {
-                return !is_null($this->_fields['SellerStoreName']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerStoreName']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerStoreName, return this.
@@ -343,8 +341,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProviderId()
     {
-                return !is_null($this->_fields['ProviderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProviderId']['FieldValue']);
+    }
 
     /**
      * Set the value of ProviderId, return this.
@@ -389,8 +387,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProviderStoreName()
     {
-                return !is_null($this->_fields['ProviderStoreName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProviderStoreName']['FieldValue']);
+    }
 
     /**
      * Set the value of ProviderStoreName, return this.
@@ -405,5 +403,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setProviderStoreName($value);
         return $this;
     }
-
 }

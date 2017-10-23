@@ -1,19 +1,14 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * ListInboundShipmentsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
@@ -21,24 +16,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>ShipmentIdList: ShipmentIdList</li>
  * <li>LastUpdatedBefore: string</li>
  * <li>LastUpdatedAfter: string</li>
- *
  * </ul>
  */
-
- class ListInboundShipmentsRequest extends FBAInboundServiceMWS_Model {
-
+class ListInboundShipmentsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentStatusList' => array('FieldValue' => null, 'FieldType' => 'ShipmentStatusList'),
-    'ShipmentIdList' => array('FieldValue' => null, 'FieldType' => 'ShipmentIdList'),
-    'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdatedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentStatusList' => array('FieldValue' => null, 'FieldType' => 'ShipmentStatusList'),
+            'ShipmentIdList'     => array('FieldValue' => null, 'FieldType' => 'ShipmentIdList'),
+            'LastUpdatedBefore'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LastUpdatedAfter'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -70,8 +63,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -116,8 +109,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -162,8 +155,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -208,8 +201,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentStatusList()
     {
-                return !is_null($this->_fields['ShipmentStatusList']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentStatusList']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentStatusList, return this.
@@ -254,8 +247,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentIdList()
     {
-                return !is_null($this->_fields['ShipmentIdList']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentIdList']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentIdList, return this.
@@ -300,8 +293,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLastUpdatedBefore()
     {
-                return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdatedBefore, return this.
@@ -346,8 +339,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLastUpdatedAfter()
     {
-                return !is_null($this->_fields['LastUpdatedAfter']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdatedAfter']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdatedAfter, return this.
@@ -362,5 +355,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setLastUpdatedAfter($value);
         return $this;
     }
-
 }

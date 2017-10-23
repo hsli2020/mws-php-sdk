@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionListResponse
  *
@@ -13,10 +15,8 @@ namespace Amazon\MWS\Feeds\Model;
  *
  * </ul>
  */
-class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
+class GetFeedSubmissionListResponse extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListResponse
      *
@@ -33,8 +33,8 @@ class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -59,7 +59,6 @@ class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct GetFeedSubmissionListResponse from provided XML.
                                   Make sure that GetFeedSubmissionListResponse is a root element");
         }
-
     }
 
     /**
@@ -105,7 +104,6 @@ class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
     public function isSetGetFeedSubmissionListResult()
     {
         return !is_null($this->fields['GetFeedSubmissionListResult']['FieldValue']);
-
     }
 
     /**
@@ -151,9 +149,7 @@ class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
 
 
     /**
@@ -172,11 +168,13 @@ class GetFeedSubmissionListResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportScheduleListByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>ReportSchedule: ReportSchedule</li>
- *
  * </ul>
  */
-class GetReportScheduleListByNextTokenResult extends MarketplaceWebService_Model
+class GetReportScheduleListByNextTokenResult extends Model
 {
-
-
     /**
      * Construct new GetReportScheduleListByNextTokenResult
      *
@@ -28,24 +23,22 @@ class GetReportScheduleListByNextTokenResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>ReportSchedule: ReportSchedule</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+            'NextToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'        => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -78,7 +71,6 @@ class GetReportScheduleListByNextTokenResult extends MarketplaceWebService_Model
         $this->setNextToken($value);
         return $this;
     }
-
 
     /**
      * Checks if NextToken is set
@@ -177,8 +169,6 @@ class GetReportScheduleListByNextTokenResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportSchedule list is non-empty
      *
@@ -188,8 +178,4 @@ class GetReportScheduleListByNextTokenResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }

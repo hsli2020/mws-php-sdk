@@ -82,7 +82,7 @@ class Mock implements FBAInventoryInterface
      * @see ListInventorySupplyByNextToken
      * @return ListInventorySupplyByNextTokenResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws FBAInventoryException
      */
     public function listInventorySupplyByNextToken($request)
     {
@@ -96,5 +96,4 @@ class Mock implements FBAInventoryInterface
     {
         return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
-
 }

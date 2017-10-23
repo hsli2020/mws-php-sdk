@@ -2,25 +2,24 @@
 
 namespace Amazon\MWS\Sellers\Model;
 
+use Amazon\MWS\Sellers\Model;
+
 /**
  * ListMarketplaces
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: array</li>
- *
  * </ul>
  */
-
- class ListMarketplaces extends MarketplaceWebServiceSellers_Model {
-
+class ListMarketplaces extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Marketplace' => array('FieldValue' => array(), 'FieldType' => array('Marketplace')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Marketplace' => array('FieldValue' => array(), 'FieldType' => array('Marketplace')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -30,8 +29,7 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function getMarketplace()
     {
-        if ($this->_fields['Marketplace']['FieldValue'] == null)
-        {
+        if ($this->_fields['Marketplace']['FieldValue'] == null) {
             $this->_fields['Marketplace']['FieldValue'] = array();
         }
         return $this->_fields['Marketplace']['FieldValue'];
@@ -67,8 +65,8 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function isSetMarketplace()
     {
-                return !empty($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !empty($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Add values for Marketplace, return this.
@@ -80,11 +78,9 @@ namespace Amazon\MWS\Sellers\Model;
      */
     public function withMarketplace()
     {
-        foreach (func_get_args() as $Marketplace)
-        {
+        foreach (func_get_args() as $Marketplace) {
             $this->_fields['Marketplace']['FieldValue'][] = $Marketplace;
         }
         return $this;
     }
-
 }

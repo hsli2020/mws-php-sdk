@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * Shipment
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentId: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
@@ -24,32 +24,30 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
  * <li>TrackingId: string</li>
  * <li>CreatedDate: string</li>
  * <li>LastUpdatedDate: string</li>
- *
  * </ul>
  */
-
- class Shipment extends MWSMerchantFulfillmentService_Model {
-
+class Shipment extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemList' => array('FieldValue' => array(), 'FieldType' => array('Item'), 'ListMemberName' => 'Item'),
-    'ShipFromAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'ShipToAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'PackageDimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'Insurance' => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
-    'ShippingService' => array('FieldValue' => null, 'FieldType' => 'ShippingService'),
-    'Label' => array('FieldValue' => null, 'FieldType' => 'Label'),
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CreatedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdatedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AmazonOrderId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerOrderId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemList'          => array('FieldValue' => array(), 'FieldType' => array('Item'), 'ListMemberName' => 'Item'),
+            'ShipFromAddress'   => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'ShipToAddress'     => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'PackageDimensions' => array('FieldValue' => null, 'FieldType' => 'PackageDimensions'),
+            'Weight'            => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'Insurance'         => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
+            'ShippingService'   => array('FieldValue' => null, 'FieldType' => 'ShippingService'),
+            'Label'             => array('FieldValue' => null, 'FieldType' => 'Label'),
+            'Status'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TrackingId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CreatedDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'LastUpdatedDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -81,8 +79,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -127,8 +125,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -173,8 +171,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -197,8 +195,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function getItemList()
     {
-        if ($this->_fields['ItemList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ItemList']['FieldValue'] == null) {
             $this->_fields['ItemList']['FieldValue'] = array();
         }
         return $this->_fields['ItemList']['FieldValue'];
@@ -234,8 +231,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetItemList()
     {
-                return !empty($this->_fields['ItemList']['FieldValue']);
-            }
+        return !empty($this->_fields['ItemList']['FieldValue']);
+    }
 
     /**
      * Add values for ItemList, return this.
@@ -247,8 +244,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function withItemList()
     {
-        foreach (func_get_args() as $ItemList)
-        {
+        foreach (func_get_args() as $ItemList) {
             $this->_fields['ItemList']['FieldValue'][] = $ItemList;
         }
         return $this;
@@ -283,8 +279,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipFromAddress()
     {
-                return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipFromAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipFromAddress, return this.
@@ -329,8 +325,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipToAddress()
     {
-                return !is_null($this->_fields['ShipToAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipToAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipToAddress, return this.
@@ -375,8 +371,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetPackageDimensions()
     {
-                return !is_null($this->_fields['PackageDimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageDimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageDimensions, return this.
@@ -421,8 +417,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetWeight()
     {
-                return !is_null($this->_fields['Weight']['FieldValue']);
-            }
+        return !is_null($this->_fields['Weight']['FieldValue']);
+    }
 
     /**
      * Set the value of Weight, return this.
@@ -467,8 +463,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetInsurance()
     {
-                return !is_null($this->_fields['Insurance']['FieldValue']);
-            }
+        return !is_null($this->_fields['Insurance']['FieldValue']);
+    }
 
     /**
      * Set the value of Insurance, return this.
@@ -513,8 +509,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingService()
     {
-                return !is_null($this->_fields['ShippingService']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingService']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingService, return this.
@@ -559,8 +555,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetLabel()
     {
-                return !is_null($this->_fields['Label']['FieldValue']);
-            }
+        return !is_null($this->_fields['Label']['FieldValue']);
+    }
 
     /**
      * Set the value of Label, return this.
@@ -605,8 +601,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return !is_null($this->_fields['Status']['FieldValue']);
+    }
 
     /**
      * Set the value of Status, return this.
@@ -651,8 +647,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetTrackingId()
     {
-                return !is_null($this->_fields['TrackingId']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingId']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingId, return this.
@@ -697,8 +693,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCreatedDate()
     {
-                return !is_null($this->_fields['CreatedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['CreatedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of CreatedDate, return this.
@@ -743,8 +739,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetLastUpdatedDate()
     {
-                return !is_null($this->_fields['LastUpdatedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdatedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdatedDate, return this.
@@ -759,5 +755,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setLastUpdatedDate($value);
         return $this;
     }
-
 }

@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,20 +10,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>InvalidASIN: array</li>
- *
  * </ul>
  */
-
- class InvalidASINList extends FBAInboundServiceMWS_Model {
+class InvalidASINList extends Model
+{
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InvalidASIN' => array('FieldValue' => array(), 'FieldType' => array('InvalidASIN')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InvalidASIN' => array('FieldValue' => array(), 'FieldType' => array('InvalidASIN')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +31,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getInvalidASIN()
     {
-        if ($this->_fields['InvalidASIN']['FieldValue'] == null)
-        {
+        if ($this->_fields['InvalidASIN']['FieldValue'] == null) {
             $this->_fields['InvalidASIN']['FieldValue'] = array();
         }
         return $this->_fields['InvalidASIN']['FieldValue'];
@@ -73,8 +67,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInvalidASIN()
     {
-                return !empty($this->_fields['InvalidASIN']['FieldValue']);
-            }
+        return !empty($this->_fields['InvalidASIN']['FieldValue']);
+    }
 
     /**
      * Add values for InvalidASIN, return this.
@@ -86,11 +80,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withInvalidASIN()
     {
-        foreach (func_get_args() as $InvalidASIN)
-        {
+        foreach (func_get_args() as $InvalidASIN) {
             $this->_fields['InvalidASIN']['FieldValue'][] = $InvalidASIN;
         }
         return $this;
     }
-
 }

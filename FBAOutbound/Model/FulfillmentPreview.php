@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentPreview
  *
  * Properties:
  * <ul>
- *
  * <li>ShippingSpeedCategory: string</li>
  * <li>ScheduledDeliveryInfo: ScheduledDeliveryInfo</li>
  * <li>IsFulfillable: bool</li>
@@ -19,27 +19,25 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>UnfulfillablePreviewItems: UnfulfillablePreviewItemList</li>
  * <li>OrderUnfulfillableReasons: StringList</li>
  * <li>MarketplaceId: string</li>
- *
  * </ul>
  */
-
- class FulfillmentPreview extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentPreview extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShippingSpeedCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ScheduledDeliveryInfo' => array('FieldValue' => null, 'FieldType' => 'ScheduledDeliveryInfo'),
-    'IsFulfillable' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsCODCapable' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'EstimatedShippingWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'EstimatedFees' => array('FieldValue' => null, 'FieldType' => 'FeeList'),
-    'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewShipmentList'),
-    'UnfulfillablePreviewItems' => array('FieldValue' => null, 'FieldType' => 'UnfulfillablePreviewItemList'),
-    'OrderUnfulfillableReasons' => array('FieldValue' => null, 'FieldType' => 'StringList'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShippingSpeedCategory'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduledDeliveryInfo'       => array('FieldValue' => null, 'FieldType' => 'ScheduledDeliveryInfo'),
+            'IsFulfillable'               => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'IsCODCapable'                => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'EstimatedShippingWeight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'EstimatedFees'               => array('FieldValue' => null, 'FieldType' => 'FeeList'),
+            'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewShipmentList'),
+            'UnfulfillablePreviewItems'   => array('FieldValue' => null, 'FieldType' => 'UnfulfillablePreviewItemList'),
+            'OrderUnfulfillableReasons'   => array('FieldValue' => null, 'FieldType' => 'StringList'),
+            'MarketplaceId'               => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -71,8 +69,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShippingSpeedCategory()
     {
-                return !is_null($this->_fields['ShippingSpeedCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingSpeedCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingSpeedCategory, return this.
@@ -117,8 +115,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetScheduledDeliveryInfo()
     {
-                return !is_null($this->_fields['ScheduledDeliveryInfo']['FieldValue']);
-            }
+        return !is_null($this->_fields['ScheduledDeliveryInfo']['FieldValue']);
+    }
 
     /**
      * Set the value of ScheduledDeliveryInfo, return this.
@@ -173,8 +171,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetIsFulfillable()
     {
-                return !is_null($this->_fields['IsFulfillable']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsFulfillable']['FieldValue']);
+    }
 
     /**
      * Set the value of IsFulfillable, return this.
@@ -229,8 +227,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetIsCODCapable()
     {
-                return !is_null($this->_fields['IsCODCapable']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsCODCapable']['FieldValue']);
+    }
 
     /**
      * Set the value of IsCODCapable, return this.
@@ -275,8 +273,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedShippingWeight()
     {
-                return !is_null($this->_fields['EstimatedShippingWeight']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedShippingWeight']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedShippingWeight, return this.
@@ -321,8 +319,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedFees()
     {
-                return !is_null($this->_fields['EstimatedFees']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedFees']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedFees, return this.
@@ -367,8 +365,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentPreviewShipments()
     {
-                return !is_null($this->_fields['FulfillmentPreviewShipments']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentPreviewShipments']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentPreviewShipments, return this.
@@ -413,8 +411,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetUnfulfillablePreviewItems()
     {
-                return !is_null($this->_fields['UnfulfillablePreviewItems']['FieldValue']);
-            }
+        return !is_null($this->_fields['UnfulfillablePreviewItems']['FieldValue']);
+    }
 
     /**
      * Set the value of UnfulfillablePreviewItems, return this.
@@ -459,8 +457,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetOrderUnfulfillableReasons()
     {
-                return !is_null($this->_fields['OrderUnfulfillableReasons']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderUnfulfillableReasons']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderUnfulfillableReasons, return this.
@@ -505,8 +503,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -521,5 +519,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setMarketplaceId($value);
         return $this;
     }
-
 }

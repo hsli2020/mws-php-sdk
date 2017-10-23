@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredSmallParcelPackageInput
  *
  * Properties:
  * <ul>
- *
  * <li>Dimensions: Dimensions</li>
  * <li>Weight: Weight</li>
- *
  * </ul>
  */
-
- class PartneredSmallParcelPackageInput extends FBAInboundServiceMWS_Model {
-
+class PartneredSmallParcelPackageInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
+            'Weight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetDimensions()
     {
-                return !is_null($this->_fields['Dimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['Dimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of Dimensions, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetWeight()
     {
-                return !is_null($this->_fields['Weight']['FieldValue']);
-            }
+        return !is_null($this->_fields['Weight']['FieldValue']);
+    }
 
     /**
      * Set the value of Weight, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setWeight($value);
         return $this;
     }
-
 }

@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * ChargeInstrument
  *
  * Properties:
  * <ul>
- *
  * <li>Description: string</li>
  * <li>Tail: string</li>
  * <li>Amount: Currency</li>
- *
  * </ul>
  */
-
- class ChargeInstrument extends MWSFinancesService_Model {
-
+class ChargeInstrument extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Description' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Tail' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Description' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Tail'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDescription()
     {
-                return !is_null($this->_fields['Description']['FieldValue']);
-            }
+        return !is_null($this->_fields['Description']['FieldValue']);
+    }
 
     /**
      * Set the value of Description, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetTail()
     {
-                return !is_null($this->_fields['Tail']['FieldValue']);
-            }
+        return !is_null($this->_fields['Tail']['FieldValue']);
+    }
 
     /**
      * Set the value of Tail, return this.
@@ -148,8 +147,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -164,5 +163,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setAmount($value);
         return $this;
     }
-
 }

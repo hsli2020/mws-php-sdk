@@ -1,40 +1,33 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PartneredSmallParcelPackageOutput
  *
  * Properties:
  * <ul>
- *
  * <li>Dimensions: Dimensions</li>
  * <li>Weight: Weight</li>
  * <li>CarrierName: string</li>
  * <li>TrackingId: string</li>
  * <li>PackageStatus: string</li>
- *
  * </ul>
  */
-
- class PartneredSmallParcelPackageOutput extends FBAInboundServiceMWS_Model {
-
+class PartneredSmallParcelPackageOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PackageStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Dimensions'    => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
+            'Weight'        => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'CarrierName'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TrackingId'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PackageStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -66,8 +59,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetDimensions()
     {
-                return !is_null($this->_fields['Dimensions']['FieldValue']);
-            }
+        return !is_null($this->_fields['Dimensions']['FieldValue']);
+    }
 
     /**
      * Set the value of Dimensions, return this.
@@ -112,8 +105,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetWeight()
     {
-                return !is_null($this->_fields['Weight']['FieldValue']);
-            }
+        return !is_null($this->_fields['Weight']['FieldValue']);
+    }
 
     /**
      * Set the value of Weight, return this.
@@ -158,8 +151,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -204,8 +197,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTrackingId()
     {
-                return !is_null($this->_fields['TrackingId']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingId']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingId, return this.
@@ -250,8 +243,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPackageStatus()
     {
-                return !is_null($this->_fields['PackageStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageStatus, return this.
@@ -266,5 +259,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPackageStatus($value);
         return $this;
     }
-
 }

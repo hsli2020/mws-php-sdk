@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * Item
  *
  * Properties:
  * <ul>
- *
  * <li>OrderItemId: string</li>
  * <li>Quantity: int</li>
- *
  * </ul>
  */
-
- class Item extends MWSMerchantFulfillmentService_Model {
-
+class Item extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'OrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'OrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'    => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetOrderItemId()
     {
-                return !is_null($this->_fields['OrderItemId']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderItemId']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderItemId, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setQuantity($value);
         return $this;
     }
-
 }

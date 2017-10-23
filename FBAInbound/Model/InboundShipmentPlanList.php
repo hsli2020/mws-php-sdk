@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentPlanList
  *
  * Properties:
  * <ul>
- *
  * <li>member: array</li>
- *
  * </ul>
  */
-
- class InboundShipmentPlanList extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentPlanList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'member' => array('FieldValue' => array(), 'FieldType' => array('InboundShipmentPlan')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'member' => array('FieldValue' => array(), 'FieldType' => array('InboundShipmentPlan')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +29,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getmember()
     {
-        if ($this->_fields['member']['FieldValue'] == null)
-        {
+        if ($this->_fields['member']['FieldValue'] == null) {
             $this->_fields['member']['FieldValue'] = array();
         }
         return $this->_fields['member']['FieldValue'];
@@ -73,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetmember()
     {
-                return !empty($this->_fields['member']['FieldValue']);
-            }
+        return !empty($this->_fields['member']['FieldValue']);
+    }
 
     /**
      * Add values for member, return this.
@@ -86,11 +78,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withmember()
     {
-        foreach (func_get_args() as $member)
-        {
+        foreach (func_get_args() as $member) {
             $this->_fields['member']['FieldValue'][] = $member;
         }
         return $this;
     }
-
 }

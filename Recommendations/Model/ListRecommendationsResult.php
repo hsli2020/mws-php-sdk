@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * ListRecommendationsResult
  *
  * Properties:
  * <ul>
- *
  * <li>InventoryRecommendations: array</li>
  * <li>SelectionRecommendations: array</li>
  * <li>PricingRecommendations: array</li>
@@ -17,25 +17,23 @@ namespace Amazon\MWS\Recommendations\Model;
  * <li>GlobalSellingRecommendations: array</li>
  * <li>AdvertisingRecommendations: array</li>
  * <li>NextToken: string</li>
- *
  * </ul>
  */
-
- class ListRecommendationsResult extends MWSRecommendationsSectionService_Model {
-
+class ListRecommendationsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InventoryRecommendations' => array('FieldValue' => array(), 'FieldType' => array('InventoryRecommendation'), 'ListMemberName' => 'member'),
-    'SelectionRecommendations' => array('FieldValue' => array(), 'FieldType' => array('SelectionRecommendation'), 'ListMemberName' => 'member'),
-    'PricingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('PricingRecommendation'), 'ListMemberName' => 'member'),
-    'FulfillmentRecommendations' => array('FieldValue' => array(), 'FieldType' => array('FulfillmentRecommendation'), 'ListMemberName' => 'member'),
-    'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array('ListingQualityRecommendation'), 'ListMemberName' => 'member'),
-    'GlobalSellingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
-    'AdvertisingRecommendations' => array('FieldValue' => array(), 'FieldType' => array('AdvertisingRecommendation'), 'ListMemberName' => 'member'),
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InventoryRecommendations'      => array('FieldValue' => array(), 'FieldType' => array('InventoryRecommendation'), 'ListMemberName' => 'member'),
+            'SelectionRecommendations'      => array('FieldValue' => array(), 'FieldType' => array('SelectionRecommendation'), 'ListMemberName' => 'member'),
+            'PricingRecommendations'        => array('FieldValue' => array(), 'FieldType' => array('PricingRecommendation'), 'ListMemberName' => 'member'),
+            'FulfillmentRecommendations'    => array('FieldValue' => array(), 'FieldType' => array('FulfillmentRecommendation'), 'ListMemberName' => 'member'),
+            'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array('ListingQualityRecommendation'), 'ListMemberName' => 'member'),
+            'GlobalSellingRecommendations'  => array('FieldValue' => array(), 'FieldType' => array('GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
+            'AdvertisingRecommendations'    => array('FieldValue' => array(), 'FieldType' => array('AdvertisingRecommendation'), 'ListMemberName' => 'member'),
+            'NextToken'                     => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -45,8 +43,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getInventoryRecommendations()
     {
-        if ($this->_fields['InventoryRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['InventoryRecommendations']['FieldValue'] == null) {
             $this->_fields['InventoryRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['InventoryRecommendations']['FieldValue'];
@@ -82,8 +79,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetInventoryRecommendations()
     {
-                return !empty($this->_fields['InventoryRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['InventoryRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for InventoryRecommendations, return this.
@@ -95,8 +92,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withInventoryRecommendations()
     {
-        foreach (func_get_args() as $InventoryRecommendations)
-        {
+        foreach (func_get_args() as $InventoryRecommendations) {
             $this->_fields['InventoryRecommendations']['FieldValue'][] = $InventoryRecommendations;
         }
         return $this;
@@ -109,8 +105,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getSelectionRecommendations()
     {
-        if ($this->_fields['SelectionRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['SelectionRecommendations']['FieldValue'] == null) {
             $this->_fields['SelectionRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['SelectionRecommendations']['FieldValue'];
@@ -146,8 +141,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSelectionRecommendations()
     {
-                return !empty($this->_fields['SelectionRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['SelectionRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for SelectionRecommendations, return this.
@@ -159,8 +154,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withSelectionRecommendations()
     {
-        foreach (func_get_args() as $SelectionRecommendations)
-        {
+        foreach (func_get_args() as $SelectionRecommendations) {
             $this->_fields['SelectionRecommendations']['FieldValue'][] = $SelectionRecommendations;
         }
         return $this;
@@ -173,8 +167,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getPricingRecommendations()
     {
-        if ($this->_fields['PricingRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['PricingRecommendations']['FieldValue'] == null) {
             $this->_fields['PricingRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['PricingRecommendations']['FieldValue'];
@@ -210,8 +203,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetPricingRecommendations()
     {
-                return !empty($this->_fields['PricingRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['PricingRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for PricingRecommendations, return this.
@@ -223,8 +216,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withPricingRecommendations()
     {
-        foreach (func_get_args() as $PricingRecommendations)
-        {
+        foreach (func_get_args() as $PricingRecommendations) {
             $this->_fields['PricingRecommendations']['FieldValue'][] = $PricingRecommendations;
         }
         return $this;
@@ -237,8 +229,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getFulfillmentRecommendations()
     {
-        if ($this->_fields['FulfillmentRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['FulfillmentRecommendations']['FieldValue'] == null) {
             $this->_fields['FulfillmentRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['FulfillmentRecommendations']['FieldValue'];
@@ -274,8 +265,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetFulfillmentRecommendations()
     {
-                return !empty($this->_fields['FulfillmentRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['FulfillmentRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for FulfillmentRecommendations, return this.
@@ -287,8 +278,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withFulfillmentRecommendations()
     {
-        foreach (func_get_args() as $FulfillmentRecommendations)
-        {
+        foreach (func_get_args() as $FulfillmentRecommendations) {
             $this->_fields['FulfillmentRecommendations']['FieldValue'][] = $FulfillmentRecommendations;
         }
         return $this;
@@ -301,8 +291,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getListingQualityRecommendations()
     {
-        if ($this->_fields['ListingQualityRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['ListingQualityRecommendations']['FieldValue'] == null) {
             $this->_fields['ListingQualityRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['ListingQualityRecommendations']['FieldValue'];
@@ -338,8 +327,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetListingQualityRecommendations()
     {
-                return !empty($this->_fields['ListingQualityRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['ListingQualityRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for ListingQualityRecommendations, return this.
@@ -351,8 +340,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withListingQualityRecommendations()
     {
-        foreach (func_get_args() as $ListingQualityRecommendations)
-        {
+        foreach (func_get_args() as $ListingQualityRecommendations) {
             $this->_fields['ListingQualityRecommendations']['FieldValue'][] = $ListingQualityRecommendations;
         }
         return $this;
@@ -365,8 +353,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getGlobalSellingRecommendations()
     {
-        if ($this->_fields['GlobalSellingRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['GlobalSellingRecommendations']['FieldValue'] == null) {
             $this->_fields['GlobalSellingRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['GlobalSellingRecommendations']['FieldValue'];
@@ -402,8 +389,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetGlobalSellingRecommendations()
     {
-                return !empty($this->_fields['GlobalSellingRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['GlobalSellingRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for GlobalSellingRecommendations, return this.
@@ -415,8 +402,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withGlobalSellingRecommendations()
     {
-        foreach (func_get_args() as $GlobalSellingRecommendations)
-        {
+        foreach (func_get_args() as $GlobalSellingRecommendations) {
             $this->_fields['GlobalSellingRecommendations']['FieldValue'][] = $GlobalSellingRecommendations;
         }
         return $this;
@@ -429,8 +415,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function getAdvertisingRecommendations()
     {
-        if ($this->_fields['AdvertisingRecommendations']['FieldValue'] == null)
-        {
+        if ($this->_fields['AdvertisingRecommendations']['FieldValue'] == null) {
             $this->_fields['AdvertisingRecommendations']['FieldValue'] = array();
         }
         return $this->_fields['AdvertisingRecommendations']['FieldValue'];
@@ -466,8 +451,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetAdvertisingRecommendations()
     {
-                return !empty($this->_fields['AdvertisingRecommendations']['FieldValue']);
-            }
+        return !empty($this->_fields['AdvertisingRecommendations']['FieldValue']);
+    }
 
     /**
      * Add values for AdvertisingRecommendations, return this.
@@ -479,8 +464,7 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function withAdvertisingRecommendations()
     {
-        foreach (func_get_args() as $AdvertisingRecommendations)
-        {
+        foreach (func_get_args() as $AdvertisingRecommendations) {
             $this->_fields['AdvertisingRecommendations']['FieldValue'][] = $AdvertisingRecommendations;
         }
         return $this;
@@ -515,8 +499,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -531,5 +515,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setNextToken($value);
         return $this;
     }
-
 }

@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * GetOrderResult
  *
  * Properties:
  * <ul>
- *
  * <li>Orders: array</li>
- *
  * </ul>
  */
-
- class GetOrderResult extends MarketplaceWebServiceOrders_Model {
-
+class GetOrderResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getOrders()
     {
-        if ($this->_fields['Orders']['FieldValue'] == null)
-        {
+        if ($this->_fields['Orders']['FieldValue'] == null) {
             $this->_fields['Orders']['FieldValue'] = array();
         }
         return $this->_fields['Orders']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrders()
     {
-                return !empty($this->_fields['Orders']['FieldValue']);
-            }
+        return !empty($this->_fields['Orders']['FieldValue']);
+    }
 
     /**
      * Add values for Orders, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withOrders()
     {
-        foreach (func_get_args() as $Orders)
-        {
+        foreach (func_get_args() as $Orders) {
             $this->_fields['Orders']['FieldValue'][] = $Orders;
         }
         return $this;
     }
-
 }

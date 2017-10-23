@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetMatchingProductForIdResult
  *
  * Properties:
  * <ul>
- *
  * <li>Products: ProductList</li>
  * <li>Error: Error</li>
  * <li>Id: string</li>
  * <li>IdType: string</li>
  * <li>status: string</li>
- *
  * </ul>
  */
-
- class GetMatchingProductForIdResult extends MarketplaceWebServiceProducts_Model {
-
+class GetMatchingProductForIdResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
-    'Id' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'IdType' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
+            'Error'    => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Id'       => array('FieldValue' => null, 'FieldType' => '@string'),
+            'IdType'   => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status'   => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProducts()
     {
-                return !is_null($this->_fields['Products']['FieldValue']);
-            }
+        return !is_null($this->_fields['Products']['FieldValue']);
+    }
 
     /**
      * Set the value of Products, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetError()
     {
-                return !is_null($this->_fields['Error']['FieldValue']);
-            }
+        return !is_null($this->_fields['Error']['FieldValue']);
+    }
 
     /**
      * Set the value of Error, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetId()
     {
-                return !is_null($this->_fields['Id']['FieldValue']);
-            }
+        return !is_null($this->_fields['Id']['FieldValue']);
+    }
 
     /**
      * Set the value of Id, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIdType()
     {
-                return !is_null($this->_fields['IdType']['FieldValue']);
-            }
+        return !is_null($this->_fields['IdType']['FieldValue']);
+    }
 
     /**
      * Set the value of IdType, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setstatus($value);
         return $this;
     }
-
 }

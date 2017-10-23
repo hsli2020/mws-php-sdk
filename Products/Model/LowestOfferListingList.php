@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * LowestOfferListingList
  *
  * Properties:
  * <ul>
- *
  * <li>LowestOfferListing: array</li>
- *
  * </ul>
  */
-
- class LowestOfferListingList extends MarketplaceWebServiceProducts_Model {
-
+class LowestOfferListingList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LowestOfferListing' => array('FieldValue' => array(), 'FieldType' => array('LowestOfferListingType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LowestOfferListing' => array('FieldValue' => array(), 'FieldType' => array('LowestOfferListingType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getLowestOfferListing()
     {
-        if ($this->_fields['LowestOfferListing']['FieldValue'] == null)
-        {
+        if ($this->_fields['LowestOfferListing']['FieldValue'] == null) {
             $this->_fields['LowestOfferListing']['FieldValue'] = array();
         }
         return $this->_fields['LowestOfferListing']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetLowestOfferListing()
     {
-                return !empty($this->_fields['LowestOfferListing']['FieldValue']);
-            }
+        return !empty($this->_fields['LowestOfferListing']['FieldValue']);
+    }
 
     /**
      * Add values for LowestOfferListing, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withLowestOfferListing()
     {
-        foreach (func_get_args() as $LowestOfferListing)
-        {
+        foreach (func_get_args() as $LowestOfferListing) {
             $this->_fields['LowestOfferListing']['FieldValue'][] = $LowestOfferListing;
         }
         return $this;
     }
-
 }

@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetPrepInstructionsForSKUResult
  *
  * Properties:
  * <ul>
- *
  * <li>SKUPrepInstructionsList: SKUPrepInstructionsList</li>
  * <li>InvalidSKUList: InvalidSKUList</li>
- *
  * </ul>
  */
-
- class GetPrepInstructionsForSKUResult extends FBAInboundServiceMWS_Model {
-
+class GetPrepInstructionsForSKUResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'SKUPrepInstructionsList'),
-    'InvalidSKUList' => array('FieldValue' => null, 'FieldType' => 'InvalidSKUList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'SKUPrepInstructionsList'),
+            'InvalidSKUList'          => array('FieldValue' => null, 'FieldType' => 'InvalidSKUList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSKUPrepInstructionsList()
     {
-                return !is_null($this->_fields['SKUPrepInstructionsList']['FieldValue']);
-            }
+        return !is_null($this->_fields['SKUPrepInstructionsList']['FieldValue']);
+    }
 
     /**
      * Set the value of SKUPrepInstructionsList, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInvalidSKUList()
     {
-                return !is_null($this->_fields['InvalidSKUList']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvalidSKUList']['FieldValue']);
+    }
 
     /**
      * Set the value of InvalidSKUList, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setInvalidSKUList($value);
         return $this;
     }
-
 }

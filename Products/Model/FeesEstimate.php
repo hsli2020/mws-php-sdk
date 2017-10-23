@@ -2,30 +2,29 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeesEstimate
  *
  * Properties:
  * <ul>
- *
  * <li>TimeOfFeesEstimation: string</li>
  * <li>TotalFeesEstimate: MoneyType</li>
  * <li>FeeDetailList: FeeDetailList</li>
- *
  * </ul>
  */
-
- class FeesEstimate extends MarketplaceWebServiceProducts_Model {
-
+class FeesEstimate extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TotalFeesEstimate' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'FeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +56,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTimeOfFeesEstimation()
     {
-                return !is_null($this->_fields['TimeOfFeesEstimation']['FieldValue']);
-            }
+        return !is_null($this->_fields['TimeOfFeesEstimation']['FieldValue']);
+    }
 
     /**
      * Set the value of TimeOfFeesEstimation, return this.
@@ -103,8 +102,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTotalFeesEstimate()
     {
-                return !is_null($this->_fields['TotalFeesEstimate']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalFeesEstimate']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalFeesEstimate, return this.
@@ -149,8 +148,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeeDetailList()
     {
-                return !is_null($this->_fields['FeeDetailList']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeDetailList']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeDetailList, return this.
@@ -165,5 +164,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setFeeDetailList($value);
         return $this;
     }
-
 }

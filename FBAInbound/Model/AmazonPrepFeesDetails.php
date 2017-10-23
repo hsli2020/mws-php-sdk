@@ -17,7 +17,7 @@ class AmazonPrepFeesDetails extends Model
     {
         $this->_fields = array (
             'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'FeePerUnit'      => array('FieldValue' => null, 'FieldType' => 'Amount'),
         );
         parent::__construct($data);
     }
@@ -51,8 +51,8 @@ class AmazonPrepFeesDetails extends Model
      */
     public function isSetPrepInstruction()
     {
-                return !is_null($this->_fields['PrepInstruction']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepInstruction']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepInstruction, return this.

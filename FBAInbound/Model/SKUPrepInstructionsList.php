@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * SKUPrepInstructionsList
  *
  * Properties:
  * <ul>
- *
  * <li>SKUPrepInstructions: array</li>
- *
  * </ul>
  */
-
- class SKUPrepInstructionsList extends FBAInboundServiceMWS_Model {
-
+class SKUPrepInstructionsList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SKUPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('SKUPrepInstructions')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SKUPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('SKUPrepInstructions')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +29,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getSKUPrepInstructions()
     {
-        if ($this->_fields['SKUPrepInstructions']['FieldValue'] == null)
-        {
+        if ($this->_fields['SKUPrepInstructions']['FieldValue'] == null) {
             $this->_fields['SKUPrepInstructions']['FieldValue'] = array();
         }
         return $this->_fields['SKUPrepInstructions']['FieldValue'];
@@ -73,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSKUPrepInstructions()
     {
-                return !empty($this->_fields['SKUPrepInstructions']['FieldValue']);
-            }
+        return !empty($this->_fields['SKUPrepInstructions']['FieldValue']);
+    }
 
     /**
      * Add values for SKUPrepInstructions, return this.
@@ -86,11 +78,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withSKUPrepInstructions()
     {
-        foreach (func_get_args() as $SKUPrepInstructions)
-        {
+        foreach (func_get_args() as $SKUPrepInstructions) {
             $this->_fields['SKUPrepInstructions']['FieldValue'][] = $SKUPrepInstructions;
         }
         return $this;
     }
-
 }

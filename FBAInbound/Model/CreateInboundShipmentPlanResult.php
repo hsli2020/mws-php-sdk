@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * CreateInboundShipmentPlanResult
  *
  * Properties:
  * <ul>
- *
  * <li>InboundShipmentPlans: InboundShipmentPlanList</li>
- *
  * </ul>
  */
-
- class CreateInboundShipmentPlanResult extends FBAInboundServiceMWS_Model {
-
+class CreateInboundShipmentPlanResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InboundShipmentPlans' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InboundShipmentPlans' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInboundShipmentPlans()
     {
-                return !is_null($this->_fields['InboundShipmentPlans']['FieldValue']);
-            }
+        return !is_null($this->_fields['InboundShipmentPlans']['FieldValue']);
+    }
 
     /**
      * Set the value of InboundShipmentPlans, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setInboundShipmentPlans($value);
         return $this;
     }
-
 }

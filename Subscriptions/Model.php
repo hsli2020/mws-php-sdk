@@ -3,11 +3,10 @@
 namespace Amazon\MWS\Subscriptions;
 
 /**
- * MWSSubscriptionsService_Model - base class for all model classes
+ * Subscriptions\Model - base class for all model classes
  */
-abstract class MWSSubscriptionsService_Model
+abstract class Model
 {
-
     /** @var array */
     protected $_fields = array ();
 
@@ -44,8 +43,8 @@ abstract class MWSSubscriptionsService_Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -63,9 +62,9 @@ abstract class MWSSubscriptionsService_Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
 
     /**
@@ -346,13 +345,14 @@ abstract class MWSSubscriptionsService_Model
         return $xml;
     }
 
-    protected function _getAttributes() {
+    protected function _getAttributes()
+    {
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
             if (!is_null($fieldValue)) {
                 $fieldType = $field['FieldType'];
-                if($fieldType[0] == "@") {
+                if ($fieldType[0] == "@") {
                     $xml .= " " . $fieldName . "='" . $this->_escapeXML($fieldValue) . "'";
                 }
             }
@@ -381,42 +381,40 @@ abstract class MWSSubscriptionsService_Model
         return preg_match("/^MWSSubscriptionsService_/", $fieldType);
     }
 
-   /**
-    * Checks  whether passed variable is an associative array
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is an associative array
-    */
+    /**
+     * Checks  whether passed variable is an associative array
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is an associative array
+     */
     private function _isAssociativeArray($var)
     {
         return is_array($var) && array_keys($var) !== range(0, sizeof($var) - 1);
     }
 
-   /**
-    * Checks  whether passed variable is DOMElement
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is DOMElement
-    */
+    /**
+     * Checks  whether passed variable is DOMElement
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is DOMElement
+     */
     private function _isDOMElement($var)
     {
         return $var instanceof DOMElement;
     }
 
-   /**
-    * Checks  whether passed variable is numeric array
-    *
-    * @param mixed $var
-    * @return TRUE if passed variable is an numeric array
-    */
+    /**
+     * Checks  whether passed variable is numeric array
+     *
+     * @param mixed $var
+     * @return TRUE if passed variable is an numeric array
+     */
     protected function _isNumericArray($var)
     {
-        if (!is_array($var))
-        {
+        if (!is_array($var)) {
            return false;
         }
         $sz = sizeof($var);
         return ($sz===0 || array_keys($var) === range(0, sizeof($var) - 1));
     }
-
 }

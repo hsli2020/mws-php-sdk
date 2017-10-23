@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * StatusList
  *
@@ -10,7 +12,7 @@ namespace Amazon\MWS\Feeds\Model;
  * <li>Status: string</li>
  * </ul>
  */
-class StatusList extends MarketplaceWebService_Model
+class StatusList extends Model
 {
     /**
      * Construct new StatusList
@@ -19,15 +21,13 @@ class StatusList extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Status: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
+            'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
@@ -84,8 +84,4 @@ class StatusList extends MarketplaceWebService_Model
     {
         return count ($this->fields['Status']['FieldValue']) > 0;
     }
-
-
-
-
 }

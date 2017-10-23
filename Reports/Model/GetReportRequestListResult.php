@@ -1,31 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
- *  Marketplace Web Service PHP5 Library
- *  Generated: Thu May 07 13:07:36 PDT 2009
- *
- */
-
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>ReportRequestInfo: ReportRequestInfo</li>
- *
  * </ul>
  */
-class GetReportRequestListResult extends MarketplaceWebService_Model
+class GetReportRequestListResult extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListResult
      *
@@ -33,24 +23,22 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>ReportRequestInfo: ReportRequestInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+            'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'           => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -83,7 +71,6 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
         $this->setNextToken($value);
         return $this;
     }
-
 
     /**
      * Checks if NextToken is set
@@ -129,7 +116,6 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if HasNext is set
      *
@@ -165,7 +151,6 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of ReportRequestInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -182,8 +167,6 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportRequestInfo list is non-empty
      *
@@ -193,8 +176,4 @@ class GetReportRequestListResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportRequestInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

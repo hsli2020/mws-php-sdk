@@ -1,29 +1,24 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * ReportInfo
  *
  * Properties:
  * <ul>
- *
  * <li>ReportId: string</li>
  * <li>ReportType: string</li>
  * <li>ReportRequestId: string</li>
  * <li>AvailableDate: string</li>
  * <li>Acknowledged: bool</li>
  * <li>AcknowledgedDate: string</li>
- *
  * </ul>
  */
-class ReportInfo extends MarketplaceWebService_Model
+class ReportInfo extends Model
 {
-
-
     /**
      * Construct new ReportInfo
      *
@@ -31,30 +26,28 @@ class ReportInfo extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>ReportId: string</li>
      * <li>ReportType: string</li>
      * <li>ReportRequestId: string</li>
      * <li>AvailableDate: string</li>
      * <li>Acknowledged: bool</li>
      * <li>AcknowledgedDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'AvailableDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'AcknowledgedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportType'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportRequestId'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AvailableDate'    => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Acknowledged'     => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'AcknowledgedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the ReportId property.
      *
      * @return string ReportId
@@ -323,8 +316,4 @@ class ReportInfo extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['AcknowledgedDate']['FieldValue']);
     }
-
-
-
-
 }

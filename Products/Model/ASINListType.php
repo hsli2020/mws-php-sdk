@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * ASINListType
  *
  * Properties:
  * <ul>
- *
  * <li>ASIN: array</li>
- *
  * </ul>
  */
-
- class ASINListType extends MarketplaceWebServiceProducts_Model {
-
+class ASINListType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ASIN' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ASIN' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getASIN()
     {
-        if ($this->_fields['ASIN']['FieldValue'] == null)
-        {
+        if ($this->_fields['ASIN']['FieldValue'] == null) {
             $this->_fields['ASIN']['FieldValue'] = array();
         }
         return $this->_fields['ASIN']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetASIN()
     {
-                return !empty($this->_fields['ASIN']['FieldValue']);
-            }
+        return !empty($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Add values for ASIN, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withASIN()
     {
-        foreach (func_get_args() as $ASIN)
-        {
+        foreach (func_get_args() as $ASIN) {
             $this->_fields['ASIN']['FieldValue'][] = $ASIN;
         }
         return $this;
     }
-
 }

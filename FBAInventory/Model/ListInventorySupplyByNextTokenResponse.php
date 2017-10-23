@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * ListInventorySupplyByNextTokenResponse
  *
@@ -12,16 +14,16 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  * </ul>
  */
-class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Model {
-
+class ListInventorySupplyByNextTokenResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ListInventorySupplyByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyByNextTokenResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ListInventorySupplyByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyByNextTokenResult'),
+            'ResponseMetadata'                     => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'               => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +55,8 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
      */
     public function isSetListInventorySupplyByNextTokenResult()
     {
-                return !is_null($this->_fields['ListInventorySupplyByNextTokenResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListInventorySupplyByNextTokenResult']['FieldValue']);
+    }
 
     /**
      * Set the value of ListInventorySupplyByNextTokenResult, return this.
@@ -99,8 +101,8 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -145,8 +147,8 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -161,6 +163,7 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct ListInventorySupplyByNextTokenResponse from XML string
      *
@@ -182,6 +185,7 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
                                   Make sure that ListInventorySupplyByNextTokenResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -195,5 +199,4 @@ class ListInventorySupplyByNextTokenResponse extends FBAInventoryServiceMWS_Mode
         $xml .= "</ListInventorySupplyByNextTokenResponse>";
         return $xml;
     }
-
 }

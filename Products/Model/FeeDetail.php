@@ -2,36 +2,35 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeeDetail
  *
  * Properties:
  * <ul>
- *
  * <li>FeeType: string</li>
  * <li>FeeAmount: MoneyType</li>
  * <li>FeePromotion: MoneyType</li>
  * <li>TaxAmount: MoneyType</li>
  * <li>FinalFee: MoneyType</li>
  * <li>IncludedFeeDetailList: FeeDetailList</li>
- *
  * </ul>
  */
-
- class FeeDetail extends MarketplaceWebServiceProducts_Model {
-
+class FeeDetail extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FeeType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeeAmount' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'FeePromotion' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'TaxAmount' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'FinalFee' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FeeType'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +62,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeeType()
     {
-                return !is_null($this->_fields['FeeType']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeType']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeType, return this.
@@ -109,8 +108,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeeAmount()
     {
-                return !is_null($this->_fields['FeeAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeAmount, return this.
@@ -155,8 +154,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeePromotion()
     {
-                return !is_null($this->_fields['FeePromotion']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeePromotion']['FieldValue']);
+    }
 
     /**
      * Set the value of FeePromotion, return this.
@@ -201,8 +200,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTaxAmount()
     {
-                return !is_null($this->_fields['TaxAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['TaxAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of TaxAmount, return this.
@@ -247,8 +246,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFinalFee()
     {
-                return !is_null($this->_fields['FinalFee']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinalFee']['FieldValue']);
+    }
 
     /**
      * Set the value of FinalFee, return this.
@@ -293,8 +292,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIncludedFeeDetailList()
     {
-                return !is_null($this->_fields['IncludedFeeDetailList']['FieldValue']);
-            }
+        return !is_null($this->_fields['IncludedFeeDetailList']['FieldValue']);
+    }
 
     /**
      * Set the value of IncludedFeeDetailList, return this.
@@ -309,5 +308,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setIncludedFeeDetailList($value);
         return $this;
     }
-
 }

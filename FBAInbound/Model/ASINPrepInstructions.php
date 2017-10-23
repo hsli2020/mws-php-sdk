@@ -2,31 +2,30 @@
 
 namespace Amazon\MWS\FBAInbound\Model;
 
+use Amazon\MWS\FBAInbound\Model;
+
 /**
  * ASINPrepInstructions
  *
  * Properties:
  * <ul>
- *
  * <li>ASIN: string</li>
  * <li>BarcodeInstruction: string</li>
  * <li>PrepGuidance: string</li>
  * <li>PrepInstructionList: PrepInstructionList</li>
- *
  * </ul>
  */
-
- class ASINPrepInstructions extends FBAInboundServiceMWS_Model {
-
+class ASINPrepInstructions extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BarcodeInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PrepGuidance' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => 'PrepInstructionList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ASIN'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BarcodeInstruction'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PrepGuidance'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => 'PrepInstructionList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +57,8 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -104,8 +103,8 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function isSetBarcodeInstruction()
     {
-                return !is_null($this->_fields['BarcodeInstruction']['FieldValue']);
-            }
+        return !is_null($this->_fields['BarcodeInstruction']['FieldValue']);
+    }
 
     /**
      * Set the value of BarcodeInstruction, return this.
@@ -150,8 +149,8 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function isSetPrepGuidance()
     {
-                return !is_null($this->_fields['PrepGuidance']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepGuidance']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepGuidance, return this.
@@ -196,8 +195,8 @@ namespace Amazon\MWS\FBAInbound\Model;
      */
     public function isSetPrepInstructionList()
     {
-                return !is_null($this->_fields['PrepInstructionList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepInstructionList']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepInstructionList, return this.
@@ -212,5 +211,4 @@ namespace Amazon\MWS\FBAInbound\Model;
         $this->setPrepInstructionList($value);
         return $this;
     }
-
 }

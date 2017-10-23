@@ -2,20 +2,18 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * SubmitFeedResult
  *
  * Properties:
  * <ul>
- *
  * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
- *
  * </ul>
  */
-class SubmitFeedResult extends MarketplaceWebService_Model
+class SubmitFeedResult extends Model
 {
-
-
     /**
      * Construct new SubmitFeedResult
      *
@@ -31,7 +29,7 @@ class SubmitFeedResult extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'FeedSubmissionInfo'),
+            'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'FeedSubmissionInfo'),
         );
         parent::__construct($data);
     }
@@ -81,8 +79,4 @@ class SubmitFeedResult extends MarketplaceWebService_Model
         return !is_null($this->fields['FeedSubmissionInfo']['FieldValue']);
 
     }
-
-
-
-
 }

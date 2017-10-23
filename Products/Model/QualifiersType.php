@@ -2,36 +2,34 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * QualifiersType
  *
  * Properties:
  * <ul>
- *
  * <li>ItemCondition: string</li>
  * <li>ItemSubcondition: string</li>
  * <li>FulfillmentChannel: string</li>
  * <li>ShipsDomestically: string</li>
  * <li>ShippingTime: ShippingTimeType</li>
  * <li>SellerPositiveFeedbackRating: string</li>
- *
  * </ul>
  */
-
- class QualifiersType extends MarketplaceWebServiceProducts_Model {
-
+class QualifiersType extends MarketplaceWebServiceProducts_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemSubcondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipsDomestically' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
-    'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ItemCondition'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
+            'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +61,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemCondition()
     {
-                return !is_null($this->_fields['ItemCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemCondition, return this.
@@ -109,8 +107,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemSubcondition()
     {
-                return !is_null($this->_fields['ItemSubcondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemSubcondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemSubcondition, return this.
@@ -155,8 +153,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -201,8 +199,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShipsDomestically()
     {
-                return !is_null($this->_fields['ShipsDomestically']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipsDomestically']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipsDomestically, return this.
@@ -247,8 +245,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShippingTime()
     {
-                return !is_null($this->_fields['ShippingTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingTime']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingTime, return this.
@@ -293,8 +291,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerPositiveFeedbackRating()
     {
-                return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerPositiveFeedbackRating, return this.
@@ -309,5 +307,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setSellerPositiveFeedbackRating($value);
         return $this;
     }
-
 }

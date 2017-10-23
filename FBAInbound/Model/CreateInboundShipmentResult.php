@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * CreateInboundShipmentResult
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentId: string</li>
- *
  * </ul>
  */
-
- class CreateInboundShipmentResult extends FBAInboundServiceMWS_Model {
-
+class CreateInboundShipmentResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setShipmentId($value);
         return $this;
     }
-
 }

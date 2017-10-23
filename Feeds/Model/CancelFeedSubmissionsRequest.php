@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * CancelFeedSubmissionsRequest
  *
@@ -17,10 +19,8 @@ namespace Amazon\MWS\Feeds\Model;
  *
  * </ul>
  */
-class CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
+class CancelFeedSubmissionsRequest extends Model
 {
-
-
     /**
      * Construct new CancelFeedSubmissionsRequest
      *
@@ -41,13 +41,13 @@ class CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-        'SubmittedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'SubmittedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Marketplace'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'FeedTypeList'         => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'SubmittedFromDate'    => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'SubmittedToDate'      => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
@@ -230,7 +230,6 @@ class CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
     public function isSetFeedSubmissionIdList()
     {
         return !is_null($this->fields['FeedSubmissionIdList']['FieldValue']);
-
     }
 
     /**
@@ -276,7 +275,6 @@ class CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
     public function isSetFeedTypeList()
     {
         return !is_null($this->fields['FeedTypeList']['FieldValue']);
-
     }
 
     /**
@@ -368,8 +366,4 @@ class CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['SubmittedToDate']['FieldValue']);
     }
-
-
-
-
 }

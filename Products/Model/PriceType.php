@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * PriceType
  *
  * Properties:
  * <ul>
- *
  * <li>LandedPrice: MoneyType</li>
  * <li>ListingPrice: MoneyType</li>
  * <li>Shipping: MoneyType</li>
  * <li>Points: Points</li>
- *
  * </ul>
  */
-
- class PriceType extends MarketplaceWebServiceProducts_Model {
-
+class PriceType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LandedPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'Points'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetLandedPrice()
     {
-                return !is_null($this->_fields['LandedPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['LandedPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of LandedPrice, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetListingPrice()
     {
-                return !is_null($this->_fields['ListingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListingPrice, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShipping()
     {
-                return !is_null($this->_fields['Shipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipping']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipping, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPoints()
     {
-                return !is_null($this->_fields['Points']['FieldValue']);
-            }
+        return !is_null($this->_fields['Points']['FieldValue']);
+    }
 
     /**
      * Set the value of Points, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setPoints($value);
         return $this;
     }
-
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
+
 /**
  * CancelFulfillmentOrderResponse
  *
@@ -11,15 +13,15 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  * </ul>
  */
-class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
-
+class CancelFulfillmentOrderResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -51,8 +53,8 @@ class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -97,8 +99,8 @@ class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -113,6 +115,7 @@ class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct CancelFulfillmentOrderResponse from XML string
      *
@@ -134,6 +137,7 @@ class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
                                   Make sure that CancelFulfillmentOrderResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -147,5 +151,4 @@ class CancelFulfillmentOrderResponse extends FBAOutboundServiceMWS_Model {
         $xml .= "</CancelFulfillmentOrderResponse>";
         return $xml;
     }
-
 }

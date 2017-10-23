@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>ReportRequestInfo: ReportRequestInfo</li>
- *
  * </ul>
  */
-class GetReportRequestListByNextTokenResult extends MarketplaceWebService_Model
+class GetReportRequestListByNextTokenResult extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListByNextTokenResult
      *
@@ -28,24 +23,22 @@ class GetReportRequestListByNextTokenResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>ReportRequestInfo: ReportRequestInfo</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+            'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'           => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -177,8 +170,6 @@ class GetReportRequestListByNextTokenResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportRequestInfo list is non-empty
      *
@@ -188,8 +179,4 @@ class GetReportRequestListByNextTokenResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportRequestInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

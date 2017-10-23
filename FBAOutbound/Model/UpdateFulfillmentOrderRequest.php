@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * UpdateFulfillmentOrderRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>Marketplace: string</li>
@@ -25,33 +25,31 @@ namespace Amazon\MWS\FBAOutbound\Model;
  * <li>ShipFromCountryCode: string</li>
  * <li>NotificationEmailList: NotificationEmailList</li>
  * <li>Items: UpdateFulfillmentOrderItemList</li>
- *
  * </ul>
  */
-
- class UpdateFulfillmentOrderRequest extends FBAOutboundServiceMWS_Model {
-
+class UpdateFulfillmentOrderRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerFulfillmentOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DisplayableOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DisplayableOrderComment' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingSpeedCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DestinationAddress' => array('FieldValue' => null, 'FieldType' => 'Address'),
-    'FulfillmentAction' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentPolicy' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipFromCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NotificationEmailList' => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
-    'Items' => array('FieldValue' => null, 'FieldType' => 'UpdateFulfillmentOrderItemList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerFulfillmentOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DisplayableOrderId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DisplayableOrderComment'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShippingSpeedCategory'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DestinationAddress'       => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'FulfillmentAction'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentPolicy'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentMethod'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipFromCountryCode'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NotificationEmailList'    => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
+            'Items'                    => array('FieldValue' => null, 'FieldType' => 'UpdateFulfillmentOrderItemList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -83,8 +81,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -129,8 +127,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -175,8 +173,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -221,8 +219,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -267,8 +265,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerFulfillmentOrderId()
     {
-                return !is_null($this->_fields['SellerFulfillmentOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFulfillmentOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFulfillmentOrderId, return this.
@@ -313,8 +311,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDisplayableOrderId()
     {
-                return !is_null($this->_fields['DisplayableOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['DisplayableOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of DisplayableOrderId, return this.
@@ -359,8 +357,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDisplayableOrderDateTime()
     {
-                return !is_null($this->_fields['DisplayableOrderDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['DisplayableOrderDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of DisplayableOrderDateTime, return this.
@@ -405,8 +403,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDisplayableOrderComment()
     {
-                return !is_null($this->_fields['DisplayableOrderComment']['FieldValue']);
-            }
+        return !is_null($this->_fields['DisplayableOrderComment']['FieldValue']);
+    }
 
     /**
      * Set the value of DisplayableOrderComment, return this.
@@ -451,8 +449,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShippingSpeedCategory()
     {
-                return !is_null($this->_fields['ShippingSpeedCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingSpeedCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingSpeedCategory, return this.
@@ -497,8 +495,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDestinationAddress()
     {
-                return !is_null($this->_fields['DestinationAddress']['FieldValue']);
-            }
+        return !is_null($this->_fields['DestinationAddress']['FieldValue']);
+    }
 
     /**
      * Set the value of DestinationAddress, return this.
@@ -543,8 +541,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentAction()
     {
-                return !is_null($this->_fields['FulfillmentAction']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentAction']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentAction, return this.
@@ -589,8 +587,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentPolicy()
     {
-                return !is_null($this->_fields['FulfillmentPolicy']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentPolicy']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentPolicy, return this.
@@ -635,8 +633,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentMethod()
     {
-                return !is_null($this->_fields['FulfillmentMethod']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentMethod']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentMethod, return this.
@@ -681,8 +679,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetShipFromCountryCode()
     {
-                return !is_null($this->_fields['ShipFromCountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipFromCountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipFromCountryCode, return this.
@@ -727,8 +725,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetNotificationEmailList()
     {
-                return !is_null($this->_fields['NotificationEmailList']['FieldValue']);
-            }
+        return !is_null($this->_fields['NotificationEmailList']['FieldValue']);
+    }
 
     /**
      * Set the value of NotificationEmailList, return this.
@@ -773,8 +771,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetItems()
     {
-                return !is_null($this->_fields['Items']['FieldValue']);
-            }
+        return !is_null($this->_fields['Items']['FieldValue']);
+    }
 
     /**
      * Set the value of Items, return this.
@@ -789,5 +787,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setItems($value);
         return $this;
     }
-
 }

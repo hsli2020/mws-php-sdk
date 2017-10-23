@@ -2,22 +2,20 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 
 /**
  * GetFeedSubmissionListByNextTokenResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetFeedSubmissionListByNextTokenResult: GetFeedSubmissionListByNextTokenResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Model
+class GetFeedSubmissionListByNextTokenResponse extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListByNextTokenResponse
      *
@@ -25,17 +23,15 @@ class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Mod
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetFeedSubmissionListByNextTokenResult: GetFeedSubmissionListByNextTokenResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListByNextTokenResult'),
+            'ResponseMetadata'                       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -60,7 +56,6 @@ class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Mod
             throw new Exception ("Unable to construct GetFeedSubmissionListByNextTokenResponse from provided XML.
                                   Make sure that GetFeedSubmissionListByNextTokenResponse is a root element");
         }
-
     }
 
     /**
@@ -106,7 +101,6 @@ class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Mod
     public function isSetGetFeedSubmissionListByNextTokenResult()
     {
         return !is_null($this->fields['GetFeedSubmissionListByNextTokenResult']['FieldValue']);
-
     }
 
     /**
@@ -152,9 +146,7 @@ class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Mod
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
 
 
     /**
@@ -173,11 +165,13 @@ class GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Mod
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportListByNextTokenRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>NextToken: string</li>
- *
  * </ul>
  */
-class GetReportListByNextTokenRequest extends MarketplaceWebService_Model
+class GetReportListByNextTokenRequest extends Model
 {
-
-
     /**
      * Construct new GetReportListByNextTokenRequest
      *
@@ -28,20 +23,18 @@ class GetReportListByNextTokenRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>NextToken: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NextToken'    => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -225,8 +218,4 @@ class GetReportListByNextTokenRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['NextToken']['FieldValue']);
     }
-
-
-
-
 }

@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * VoidTransportRequestResponse
  *
  * Properties:
  * <ul>
- *
  * <li>VoidTransportRequestResult: VoidTransportRequestResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class VoidTransportRequestResponse extends FBAInboundServiceMWS_Model {
-
+class VoidTransportRequestResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'VoidTransportRequestResult' => array('FieldValue' => null, 'FieldType' => 'VoidTransportRequestResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'VoidTransportRequestResult' => array('FieldValue' => null, 'FieldType' => 'VoidTransportRequestResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetVoidTransportRequestResult()
     {
-                return !is_null($this->_fields['VoidTransportRequestResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['VoidTransportRequestResult']['FieldValue']);
+    }
 
     /**
      * Set the value of VoidTransportRequestResult, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -170,6 +163,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct VoidTransportRequestResponse from XML string
      *
@@ -204,5 +198,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xml .= "</VoidTransportRequestResponse>";
         return $xml;
     }
-
 }

@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * NonPartneredSmallParcelDataOutput
  *
  * Properties:
  * <ul>
- *
  * <li>PackageList: NonPartneredSmallParcelPackageOutputList</li>
- *
  * </ul>
  */
-
- class NonPartneredSmallParcelDataOutput extends FBAInboundServiceMWS_Model {
-
+class NonPartneredSmallParcelDataOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PackageList' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelPackageOutputList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PackageList' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelPackageOutputList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPackageList()
     {
-                return !is_null($this->_fields['PackageList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageList']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageList, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPackageList($value);
         return $this;
     }
-
 }

@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetLowestPricedOffersAsinIdentifier
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>ASIN: string</li>
  * <li>ItemCondition: string</li>
  * <li>TimeOfOfferChange: string</li>
- *
  * </ul>
  */
-
- class GetLowestPricedOffersAsinIdentifier extends MarketplaceWebServiceProducts_Model {
-
+class GetLowestPricedOffersAsinIdentifier extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TimeOfOfferChange' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASIN'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemCondition'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TimeOfOfferChange' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemCondition()
     {
-                return !is_null($this->_fields['ItemCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemCondition, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTimeOfOfferChange()
     {
-                return !is_null($this->_fields['TimeOfOfferChange']['FieldValue']);
-            }
+        return !is_null($this->_fields['TimeOfOfferChange']['FieldValue']);
+    }
 
     /**
      * Set the value of TimeOfOfferChange, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setTimeOfOfferChange($value);
         return $this;
     }
-
 }

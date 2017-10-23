@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * ListOrderItemsByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>OrderItems: array</li>
- *
  * </ul>
  */
-
- class ListOrderItemsByNextTokenResult extends MarketplaceWebServiceOrders_Model {
-
+class ListOrderItemsByNextTokenResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'OrderItem'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'     => array('FieldValue' => null, 'FieldType'  => 'string'),
+            'AmazonOrderId' => array('FieldValue' => null, 'FieldType'  => 'string'),
+            'OrderItems'    => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'OrderItem'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -127,8 +125,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getOrderItems()
     {
-        if ($this->_fields['OrderItems']['FieldValue'] == null)
-        {
+        if ($this->_fields['OrderItems']['FieldValue'] == null) {
             $this->_fields['OrderItems']['FieldValue'] = array();
         }
         return $this->_fields['OrderItems']['FieldValue'];
@@ -164,8 +161,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderItems()
     {
-                return !empty($this->_fields['OrderItems']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderItems']['FieldValue']);
+    }
 
     /**
      * Add values for OrderItems, return this.
@@ -177,11 +174,9 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withOrderItems()
     {
-        foreach (func_get_args() as $OrderItems)
-        {
+        foreach (func_get_args() as $OrderItems) {
             $this->_fields['OrderItems']['FieldValue'][] = $OrderItems;
         }
         return $this;
     }
-
 }

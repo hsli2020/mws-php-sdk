@@ -1,16 +1,14 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequestListRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportRequestIdList: IdList</li>
@@ -19,13 +17,10 @@ namespace Amazon\MWS\Reports;
  * <li>MaxCount: Count</li>
  * <li>RequestedFromDate: string</li>
  * <li>RequestedToDate: string</li>
- *
  * </ul>
  */
-class GetReportRequestListRequest extends MarketplaceWebService_Model
+class GetReportRequestListRequest extends Model
 {
-
-
     /**
      * Construct new GetReportRequestListRequest
      *
@@ -33,7 +28,6 @@ class GetReportRequestListRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportRequestIdList: IdList</li>
@@ -42,26 +36,25 @@ class GetReportRequestListRequest extends MarketplaceWebService_Model
      * <li>MaxCount: Count</li>
      * <li>RequestedFromDate: string</li>
      * <li>RequestedToDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-        'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
-        'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'RequestedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'RequestedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Marketplace'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'               => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportRequestIdList'        => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'ReportTypeList'             => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
+            'MaxCount'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RequestedFromDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'RequestedToDate'            => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -458,7 +451,6 @@ class GetReportRequestListRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if RequestedToDate is set
      *
@@ -468,8 +460,4 @@ class GetReportRequestListRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['RequestedToDate']['FieldValue']);
     }
-
-
-
-
 }

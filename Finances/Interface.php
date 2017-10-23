@@ -12,7 +12,7 @@ interface FinancesInterface
      * @see ListFinancialEventGroupsRequest
      * @return ListFinancialEventGroupsResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventGroups($request);
 
@@ -27,7 +27,7 @@ interface FinancesInterface
      * @see ListFinancialEventGroupsByNextTokenRequest
      * @return ListFinancialEventGroupsByNextTokenResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventGroupsByNextToken($request);
 
@@ -40,7 +40,7 @@ interface FinancesInterface
      * @see ListFinancialEventsRequest
      * @return ListFinancialEventsResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEvents($request);
 
@@ -55,7 +55,7 @@ interface FinancesInterface
      * @see ListFinancialEventsByNextTokenRequest
      * @return ListFinancialEventsByNextTokenResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventsByNextToken($request);
 
@@ -68,7 +68,7 @@ interface FinancesInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function getServiceStatus($request);
 

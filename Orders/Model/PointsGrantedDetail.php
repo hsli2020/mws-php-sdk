@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * PointsGrantedDetail
  *
  * Properties:
  * <ul>
- *
  * <li>PointsNumber: int</li>
  * <li>PointsMonetaryValue: Money</li>
- *
  * </ul>
  */
-
- class PointsGrantedDetail extends MarketplaceWebServiceOrders_Model {
-
+class PointsGrantedDetail extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PointsNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Money'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPointsNumber()
     {
-                return !is_null($this->_fields['PointsNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PointsNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PointsNumber, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPointsMonetaryValue()
     {
-                return !is_null($this->_fields['PointsMonetaryValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['PointsMonetaryValue']['FieldValue']);
+    }
 
     /**
      * Set the value of PointsMonetaryValue, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setPointsMonetaryValue($value);
         return $this;
     }
-
 }

@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * Weight
  *
  * Properties:
  * <ul>
- *
  * <li>Value: float</li>
  * <li>Unit: string</li>
- *
  * </ul>
  */
-
- class Weight extends MWSMerchantFulfillmentService_Model {
-
+class Weight extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Value' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Unit' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Value' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Unit'  => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return !is_null($this->_fields['Value']['FieldValue']);
+    }
 
     /**
      * Set the value of Value, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetUnit()
     {
-                return !is_null($this->_fields['Unit']['FieldValue']);
-            }
+        return !is_null($this->_fields['Unit']['FieldValue']);
+    }
 
     /**
      * Set the value of Unit, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setUnit($value);
         return $this;
     }
-
 }

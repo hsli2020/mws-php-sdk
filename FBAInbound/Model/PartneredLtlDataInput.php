@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,7 +10,6 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>Contact: Contact</li>
  * <li>BoxCount: int</li>
  * <li>SellerFreightClass: string</li>
@@ -21,24 +17,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>PalletList: PalletList</li>
  * <li>TotalWeight: Weight</li>
  * <li>SellerDeclaredValue: Amount</li>
- *
  * </ul>
  */
-
- class PartneredLtlDataInput extends FBAInboundServiceMWS_Model {
-
+class PartneredLtlDataInput extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Contact' => array('FieldValue' => null, 'FieldType' => 'Contact'),
-    'BoxCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SellerFreightClass' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FreightReadyDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PalletList' => array('FieldValue' => null, 'FieldType' => 'PalletList'),
-    'TotalWeight' => array('FieldValue' => null, 'FieldType' => 'Weight'),
-    'SellerDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Contact'             => array('FieldValue' => null, 'FieldType' => 'Contact'),
+            'BoxCount'            => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerFreightClass'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FreightReadyDate'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PalletList'          => array('FieldValue' => null, 'FieldType' => 'PalletList'),
+            'TotalWeight'         => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'SellerDeclaredValue' => array('FieldValue' => null, 'FieldType' => 'Amount'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -70,8 +64,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetContact()
     {
-                return !is_null($this->_fields['Contact']['FieldValue']);
-            }
+        return !is_null($this->_fields['Contact']['FieldValue']);
+    }
 
     /**
      * Set the value of Contact, return this.
@@ -116,8 +110,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetBoxCount()
     {
-                return !is_null($this->_fields['BoxCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['BoxCount']['FieldValue']);
+    }
 
     /**
      * Set the value of BoxCount, return this.
@@ -162,8 +156,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerFreightClass()
     {
-                return !is_null($this->_fields['SellerFreightClass']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFreightClass']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFreightClass, return this.
@@ -208,8 +202,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFreightReadyDate()
     {
-                return !is_null($this->_fields['FreightReadyDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['FreightReadyDate']['FieldValue']);
+    }
 
     /**
      * Set the value of FreightReadyDate, return this.
@@ -254,8 +248,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPalletList()
     {
-                return !is_null($this->_fields['PalletList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PalletList']['FieldValue']);
+    }
 
     /**
      * Set the value of PalletList, return this.
@@ -300,8 +294,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalWeight()
     {
-                return !is_null($this->_fields['TotalWeight']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalWeight']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalWeight, return this.
@@ -346,8 +340,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerDeclaredValue()
     {
-                return !is_null($this->_fields['SellerDeclaredValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerDeclaredValue']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerDeclaredValue, return this.
@@ -362,5 +356,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setSellerDeclaredValue($value);
         return $this;
     }
-
 }

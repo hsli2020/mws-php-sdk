@@ -1,38 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
-
-require_once (dirname(__FILE__) . '/../Model.php');
-
 
 /**
  * Dimensions
  *
  * Properties:
  * <ul>
- *
  * <li>Length: float</li>
  * <li>Width: float</li>
  * <li>Height: float</li>
  * <li>Unit: string</li>
- *
  * </ul>
  */
-
- class Dimensions extends FBAInboundServiceMWS_Model {
-
+class Dimensions extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Length' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Width' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Height' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Unit' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Length' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Width'  => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Height' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Unit'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetLength()
     {
-                return !is_null($this->_fields['Length']['FieldValue']);
-            }
+        return !is_null($this->_fields['Length']['FieldValue']);
+    }
 
     /**
      * Set the value of Length, return this.
@@ -110,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetWidth()
     {
-                return !is_null($this->_fields['Width']['FieldValue']);
-            }
+        return !is_null($this->_fields['Width']['FieldValue']);
+    }
 
     /**
      * Set the value of Width, return this.
@@ -156,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetHeight()
     {
-                return !is_null($this->_fields['Height']['FieldValue']);
-            }
+        return !is_null($this->_fields['Height']['FieldValue']);
+    }
 
     /**
      * Set the value of Height, return this.
@@ -202,8 +193,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetUnit()
     {
-                return !is_null($this->_fields['Unit']['FieldValue']);
-            }
+        return !is_null($this->_fields['Unit']['FieldValue']);
+    }
 
     /**
      * Set the value of Unit, return this.
@@ -218,5 +209,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setUnit($value);
         return $this;
     }
-
 }

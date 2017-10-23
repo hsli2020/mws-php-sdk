@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * GetEligibleShippingServicesResult
  *
  * Properties:
  * <ul>
- *
  * <li>ShippingServiceList: array</li>
  * <li>TemporarilyUnavailableCarrierList: array</li>
  * <li>TermsAndConditionsNotAcceptedCarrierList: array</li>
- *
  * </ul>
  */
-
- class GetEligibleShippingServicesResult extends MWSMerchantFulfillmentService_Model {
-
+class GetEligibleShippingServicesResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShippingServiceList' => array('FieldValue' => array(), 'FieldType' => array('ShippingService'), 'ListMemberName' => 'ShippingService'),
-    'TemporarilyUnavailableCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TemporarilyUnavailableCarrier'), 'ListMemberName' => 'TemporarilyUnavailableCarrier'),
-    'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShippingServiceList'                      => array('FieldValue' => array(), 'FieldType' => array('ShippingService'), 'ListMemberName' => 'ShippingService'),
+            'TemporarilyUnavailableCarrierList'        => array('FieldValue' => array(), 'FieldType' => array('TemporarilyUnavailableCarrier'), 'ListMemberName' => 'TemporarilyUnavailableCarrier'),
+            'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -35,8 +33,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function getShippingServiceList()
     {
-        if ($this->_fields['ShippingServiceList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShippingServiceList']['FieldValue'] == null) {
             $this->_fields['ShippingServiceList']['FieldValue'] = array();
         }
         return $this->_fields['ShippingServiceList']['FieldValue'];
@@ -72,8 +69,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShippingServiceList()
     {
-                return !empty($this->_fields['ShippingServiceList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShippingServiceList']['FieldValue']);
+    }
 
     /**
      * Add values for ShippingServiceList, return this.
@@ -85,8 +82,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function withShippingServiceList()
     {
-        foreach (func_get_args() as $ShippingServiceList)
-        {
+        foreach (func_get_args() as $ShippingServiceList) {
             $this->_fields['ShippingServiceList']['FieldValue'][] = $ShippingServiceList;
         }
         return $this;
@@ -99,8 +95,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function getTemporarilyUnavailableCarrierList()
     {
-        if ($this->_fields['TemporarilyUnavailableCarrierList']['FieldValue'] == null)
-        {
+        if ($this->_fields['TemporarilyUnavailableCarrierList']['FieldValue'] == null) {
             $this->_fields['TemporarilyUnavailableCarrierList']['FieldValue'] = array();
         }
         return $this->_fields['TemporarilyUnavailableCarrierList']['FieldValue'];
@@ -136,8 +131,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetTemporarilyUnavailableCarrierList()
     {
-                return !empty($this->_fields['TemporarilyUnavailableCarrierList']['FieldValue']);
-            }
+        return !empty($this->_fields['TemporarilyUnavailableCarrierList']['FieldValue']);
+    }
 
     /**
      * Add values for TemporarilyUnavailableCarrierList, return this.
@@ -149,8 +144,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function withTemporarilyUnavailableCarrierList()
     {
-        foreach (func_get_args() as $TemporarilyUnavailableCarrierList)
-        {
+        foreach (func_get_args() as $TemporarilyUnavailableCarrierList) {
             $this->_fields['TemporarilyUnavailableCarrierList']['FieldValue'][] = $TemporarilyUnavailableCarrierList;
         }
         return $this;
@@ -163,8 +157,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function getTermsAndConditionsNotAcceptedCarrierList()
     {
-        if ($this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue'] == null)
-        {
+        if ($this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue'] == null) {
             $this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue'] = array();
         }
         return $this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue'];
@@ -200,8 +193,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetTermsAndConditionsNotAcceptedCarrierList()
     {
-                return !empty($this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue']);
-            }
+        return !empty($this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue']);
+    }
 
     /**
      * Add values for TermsAndConditionsNotAcceptedCarrierList, return this.
@@ -213,11 +206,9 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function withTermsAndConditionsNotAcceptedCarrierList()
     {
-        foreach (func_get_args() as $TermsAndConditionsNotAcceptedCarrierList)
-        {
+        foreach (func_get_args() as $TermsAndConditionsNotAcceptedCarrierList) {
             $this->_fields['TermsAndConditionsNotAcceptedCarrierList']['FieldValue'][] = $TermsAndConditionsNotAcceptedCarrierList;
         }
         return $this;
     }
-
 }

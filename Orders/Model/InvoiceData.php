@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * InvoiceData
  *
  * Properties:
  * <ul>
- *
  * <li>InvoiceRequirement: string</li>
  * <li>BuyerSelectedInvoiceCategory: string</li>
  * <li>InvoiceTitle: string</li>
  * <li>InvoiceInformation: string</li>
- *
  * </ul>
  */
-
- class InvoiceData extends MarketplaceWebServiceOrders_Model {
-
+class InvoiceData extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InvoiceRequirement' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerSelectedInvoiceCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceTitle' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceInformation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InvoiceRequirement'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BuyerSelectedInvoiceCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'InvoiceTitle'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'InvoiceInformation'           => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetInvoiceRequirement()
     {
-                return !is_null($this->_fields['InvoiceRequirement']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvoiceRequirement']['FieldValue']);
+    }
 
     /**
      * Set the value of InvoiceRequirement, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetBuyerSelectedInvoiceCategory()
     {
-                return !is_null($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyerSelectedInvoiceCategory, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetInvoiceTitle()
     {
-                return !is_null($this->_fields['InvoiceTitle']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvoiceTitle']['FieldValue']);
+    }
 
     /**
      * Set the value of InvoiceTitle, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetInvoiceInformation()
     {
-                return !is_null($this->_fields['InvoiceInformation']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvoiceInformation']['FieldValue']);
+    }
 
     /**
      * Set the value of InvoiceInformation, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setInvoiceInformation($value);
         return $this;
     }
-
 }

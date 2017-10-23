@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * ListInventorySupplyRequest
  *
@@ -16,20 +18,20 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>ResponseGroup: string</li>
  * </ul>
  */
-class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
-
+class ListInventorySupplyRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSkus' => array('FieldValue' => null, 'FieldType' => 'SellerSkuList'),
-    'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ResponseGroup' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSkus'         => array('FieldValue' => null, 'FieldType' => 'SellerSkuList'),
+            'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ResponseGroup'      => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +63,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -107,8 +109,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -153,8 +155,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -199,8 +201,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -245,8 +247,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetSellerSkus()
     {
-                return !is_null($this->_fields['SellerSkus']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSkus']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSkus, return this.
@@ -291,8 +293,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetQueryStartDateTime()
     {
-                return !is_null($this->_fields['QueryStartDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['QueryStartDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of QueryStartDateTime, return this.
@@ -337,8 +339,8 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
      */
     public function isSetResponseGroup()
     {
-                return !is_null($this->_fields['ResponseGroup']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseGroup']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseGroup, return this.
@@ -353,5 +355,4 @@ class ListInventorySupplyRequest extends FBAInventoryServiceMWS_Model {
         $this->setResponseGroup($value);
         return $this;
     }
-
 }

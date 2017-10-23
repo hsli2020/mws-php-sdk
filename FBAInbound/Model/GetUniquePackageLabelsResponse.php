@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetUniquePackageLabelsResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetUniquePackageLabelsResult: GetUniquePackageLabelsResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetUniquePackageLabelsResponse extends FBAInboundServiceMWS_Model {
-
+class GetUniquePackageLabelsResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'GetUniquePackageLabelsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'GetUniquePackageLabelsResult'),
+            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetGetUniquePackageLabelsResult()
     {
-                return !is_null($this->_fields['GetUniquePackageLabelsResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['GetUniquePackageLabelsResult']['FieldValue']);
+    }
 
     /**
      * Set the value of GetUniquePackageLabelsResult, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -170,6 +163,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetUniquePackageLabelsResponse from XML string
      *
@@ -191,6 +185,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
                                   Make sure that GetUniquePackageLabelsResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -204,5 +199,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $xml .= "</GetUniquePackageLabelsResponse>";
         return $xml;
     }
-
 }

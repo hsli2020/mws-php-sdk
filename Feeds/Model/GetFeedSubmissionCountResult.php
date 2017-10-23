@@ -2,20 +2,18 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionCountResult
  *
  * Properties:
  * <ul>
- *
  * <li>Count: int</li>
- *
  * </ul>
  */
-class GetFeedSubmissionCountResult extends MarketplaceWebService_Model
+class GetFeedSubmissionCountResult extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionCountResult
      *
@@ -31,7 +29,7 @@ class GetFeedSubmissionCountResult extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         );
         parent::__construct($data);
     }
@@ -80,8 +78,4 @@ class GetFeedSubmissionCountResult extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['Count']['FieldValue']);
     }
-
-
-
-
 }

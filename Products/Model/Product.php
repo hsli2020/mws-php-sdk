@@ -2,13 +2,14 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * Product
  *
  * Properties:
  * <ul>
- *
  * <li>Identifiers: IdentifierType</li>
  * <li>AttributeSets: AttributeSetList</li>
  * <li>Relationships: RelationshipList</li>
@@ -16,24 +17,22 @@ namespace Amazon\MWS\Products\Model;
  * <li>SalesRankings: SalesRankList</li>
  * <li>LowestOfferListings: LowestOfferListingList</li>
  * <li>Offers: OffersList</li>
- *
  * </ul>
  */
-
- class Product extends MarketplaceWebServiceProducts_Model {
-
+class Product extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Identifiers' => array('FieldValue' => null, 'FieldType' => 'IdentifierType'),
-    'AttributeSets' => array('FieldValue' => null, 'FieldType' => 'AttributeSetList'),
-    'Relationships' => array('FieldValue' => null, 'FieldType' => 'RelationshipList'),
-    'CompetitivePricing' => array('FieldValue' => null, 'FieldType' => 'CompetitivePricingType'),
-    'SalesRankings' => array('FieldValue' => null, 'FieldType' => 'SalesRankList'),
-    'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => 'LowestOfferListingList'),
-    'Offers' => array('FieldValue' => null, 'FieldType' => 'OffersList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Identifiers'         => array('FieldValue' => null, 'FieldType' => 'IdentifierType'),
+            'AttributeSets'       => array('FieldValue' => null, 'FieldType' => 'AttributeSetList'),
+            'Relationships'       => array('FieldValue' => null, 'FieldType' => 'RelationshipList'),
+            'CompetitivePricing'  => array('FieldValue' => null, 'FieldType' => 'CompetitivePricingType'),
+            'SalesRankings'       => array('FieldValue' => null, 'FieldType' => 'SalesRankList'),
+            'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => 'LowestOfferListingList'),
+            'Offers'              => array('FieldValue' => null, 'FieldType' => 'OffersList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +64,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIdentifiers()
     {
-                return !is_null($this->_fields['Identifiers']['FieldValue']);
-            }
+        return !is_null($this->_fields['Identifiers']['FieldValue']);
+    }
 
     /**
      * Set the value of Identifiers, return this.
@@ -111,8 +110,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetAttributeSets()
     {
-                return !is_null($this->_fields['AttributeSets']['FieldValue']);
-            }
+        return !is_null($this->_fields['AttributeSets']['FieldValue']);
+    }
 
     /**
      * Set the value of AttributeSets, return this.
@@ -157,8 +156,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetRelationships()
     {
-                return !is_null($this->_fields['Relationships']['FieldValue']);
-            }
+        return !is_null($this->_fields['Relationships']['FieldValue']);
+    }
 
     /**
      * Set the value of Relationships, return this.
@@ -203,8 +202,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCompetitivePricing()
     {
-                return !is_null($this->_fields['CompetitivePricing']['FieldValue']);
-            }
+        return !is_null($this->_fields['CompetitivePricing']['FieldValue']);
+    }
 
     /**
      * Set the value of CompetitivePricing, return this.
@@ -249,8 +248,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSalesRankings()
     {
-                return !is_null($this->_fields['SalesRankings']['FieldValue']);
-            }
+        return !is_null($this->_fields['SalesRankings']['FieldValue']);
+    }
 
     /**
      * Set the value of SalesRankings, return this.
@@ -295,8 +294,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetLowestOfferListings()
     {
-                return !is_null($this->_fields['LowestOfferListings']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestOfferListings']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestOfferListings, return this.
@@ -341,8 +340,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetOffers()
     {
-                return !is_null($this->_fields['Offers']['FieldValue']);
-            }
+        return !is_null($this->_fields['Offers']['FieldValue']);
+    }
 
     /**
      * Set the value of Offers, return this.
@@ -357,5 +356,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setOffers($value);
         return $this;
     }
-
 }

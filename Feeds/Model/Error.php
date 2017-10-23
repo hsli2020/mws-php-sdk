@@ -2,23 +2,21 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * Error
  *
  * Properties:
  * <ul>
- *
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
  * <li>Detail: Object</li>
- *
  * </ul>
  */
-class Error extends MarketplaceWebService_Model
+class Error extends Model
 {
-
-
     /**
      * Construct new Error
      *
@@ -26,26 +24,24 @@ class Error extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Type: string</li>
      * <li>Code: string</li>
      * <li>Message: string</li>
      * <li>Detail: Object</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Type' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Code' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Detail' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Detail'  => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Type property.
      *
      * @return string Type
@@ -223,10 +219,5 @@ class Error extends MarketplaceWebService_Model
     public function isSetDetail()
     {
         return !is_null($this->fields['Detail']['FieldValue']);
-
     }
-
-
-
-
 }

@@ -1,38 +1,31 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * TransportDetailOutput
  *
  * Properties:
  * <ul>
- *
  * <li>PartneredSmallParcelData: PartneredSmallParcelDataOutput</li>
  * <li>NonPartneredSmallParcelData: NonPartneredSmallParcelDataOutput</li>
  * <li>PartneredLtlData: PartneredLtlDataOutput</li>
  * <li>NonPartneredLtlData: NonPartneredLtlDataOutput</li>
- *
  * </ul>
  */
-
- class TransportDetailOutput extends FBAInboundServiceMWS_Model {
-
+class TransportDetailOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelDataOutput'),
-    'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelDataOutput'),
-    'PartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'PartneredLtlDataOutput'),
-    'NonPartneredLtlData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredLtlDataOutput'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PartneredSmallParcelData'    => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelDataOutput'),
+            'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelDataOutput'),
+            'PartneredLtlData'            => array('FieldValue' => null, 'FieldType' => 'PartneredLtlDataOutput'),
+            'NonPartneredLtlData'         => array('FieldValue' => null, 'FieldType' => 'NonPartneredLtlDataOutput'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,8 +57,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPartneredSmallParcelData()
     {
-                return !is_null($this->_fields['PartneredSmallParcelData']['FieldValue']);
-            }
+        return !is_null($this->_fields['PartneredSmallParcelData']['FieldValue']);
+    }
 
     /**
      * Set the value of PartneredSmallParcelData, return this.
@@ -110,8 +103,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetNonPartneredSmallParcelData()
     {
-                return !is_null($this->_fields['NonPartneredSmallParcelData']['FieldValue']);
-            }
+        return !is_null($this->_fields['NonPartneredSmallParcelData']['FieldValue']);
+    }
 
     /**
      * Set the value of NonPartneredSmallParcelData, return this.
@@ -156,8 +149,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPartneredLtlData()
     {
-                return !is_null($this->_fields['PartneredLtlData']['FieldValue']);
-            }
+        return !is_null($this->_fields['PartneredLtlData']['FieldValue']);
+    }
 
     /**
      * Set the value of PartneredLtlData, return this.
@@ -202,8 +195,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetNonPartneredLtlData()
     {
-                return !is_null($this->_fields['NonPartneredLtlData']['FieldValue']);
-            }
+        return !is_null($this->_fields['NonPartneredLtlData']['FieldValue']);
+    }
 
     /**
      * Set the value of NonPartneredLtlData, return this.
@@ -218,5 +211,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setNonPartneredLtlData($value);
         return $this;
     }
-
 }

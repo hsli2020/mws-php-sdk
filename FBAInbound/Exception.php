@@ -10,14 +10,19 @@ class FBAInboundException extends \Exception
 {
     /** @var string */
     private $_message = null;
+
     /** @var int */
     private $_statusCode = -1;
+
     /** @var string */
     private $_errorCode = null;
+
     /** @var string */
     private $_errorType = null;
+
     /** @var string */
     private $_requestId = null;
+
     /** @var string */
     private $_xml = null;
 
@@ -40,7 +45,9 @@ class FBAInboundException extends \Exception
     public function __construct(array $errorInfo = array())
     {
         $this->_message = $errorInfo["Message"];
+
         parent::__construct($this->_message);
+
         if (array_key_exists("Exception", $errorInfo)) {
             $exception = $errorInfo["Exception"];
             if ($exception instanceof Exception) {
@@ -61,7 +68,8 @@ class FBAInboundException extends \Exception
         }
     }
 
-    private function arr_val($arr, $key) {
+    private function arr_val($arr, $key)
+    {
         if(array_key_exists($key, $arr)) {
             return $arr[$key];
         } else {
@@ -74,7 +82,8 @@ class FBAInboundException extends \Exception
      *
      * @return string Error Code returned by the service
      */
-    public function getErrorCode(){
+    public function getErrorCode()
+    {
         return $this->_errorCode;
     }
 
@@ -84,7 +93,8 @@ class FBAInboundException extends \Exception
      * @return string Error Type returned by the service.
      * Possible types:  Sender, Receiver or Unknown
      */
-    public function getErrorType(){
+    public function getErrorType()
+    {
         return $this->_errorType;
     }
 
@@ -93,7 +103,8 @@ class FBAInboundException extends \Exception
      *
      * @return string Error message
      */
-    public function getErrorMessage() {
+    public function getErrorMessage()
+    {
         return $this->_message;
     }
 
@@ -104,7 +115,8 @@ class FBAInboundException extends \Exception
      *
      * @return int status code returned by the service
      */
-    public function getStatusCode() {
+    public function getStatusCode()
+    {
         return $this->_statusCode;
     }
 
@@ -113,7 +125,8 @@ class FBAInboundException extends \Exception
      *
      * @return string XML returned by the service
      */
-    public function getXML() {
+    public function getXML()
+    {
         return $this->_xml;
     }
 
@@ -122,11 +135,13 @@ class FBAInboundException extends \Exception
      *
      * @return string Request ID returned by the service
      */
-    public function getRequestId() {
+    public function getRequestId()
+    {
         return $this->_requestId;
     }
 
-    public function getResponseHeaderMetadata() {
+    public function getResponseHeaderMetadata()
+    {
       return $this->_responseHeaderMetadata;
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * GetFeedSubmissionListRequest
  *
@@ -19,10 +21,8 @@ namespace Amazon\MWS\Feeds\Model;
  *
  * </ul>
  */
-class GetFeedSubmissionListRequest extends MarketplaceWebService_Model
+class GetFeedSubmissionListRequest extends Model
 {
-
-
     /**
      * Construct new GetFeedSubmissionListRequest
      *
@@ -45,15 +45,15 @@ class GetFeedSubmissionListRequest extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-        'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
-        'SubmittedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'SubmittedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Marketplace'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedSubmissionIdList'     => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'MaxCount'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedTypeList'             => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
+            'SubmittedFromDate'        => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'SubmittedToDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
@@ -465,8 +465,4 @@ class GetFeedSubmissionListRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['SubmittedToDate']['FieldValue']);
     }
-
-
-
-
 }

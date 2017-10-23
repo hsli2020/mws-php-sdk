@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * FulfillmentShipmentPackage
  *
  * Properties:
  * <ul>
- *
  * <li>PackageNumber: int</li>
  * <li>CarrierCode: string</li>
  * <li>TrackingNumber: string</li>
  * <li>EstimatedArrivalDateTime: string</li>
- *
  * </ul>
  */
-
- class FulfillmentShipmentPackage extends FBAOutboundServiceMWS_Model {
-
+class FulfillmentShipmentPackage extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PackageNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'CarrierCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TrackingNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EstimatedArrivalDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PackageNumber'            => array('FieldValue' => null, 'FieldType' => 'int'),
+            'CarrierCode'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TrackingNumber'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EstimatedArrivalDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetPackageNumber()
     {
-                return !is_null($this->_fields['PackageNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageNumber, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetCarrierCode()
     {
-                return !is_null($this->_fields['CarrierCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierCode, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetTrackingNumber()
     {
-                return !is_null($this->_fields['TrackingNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingNumber, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetEstimatedArrivalDateTime()
     {
-                return !is_null($this->_fields['EstimatedArrivalDateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['EstimatedArrivalDateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of EstimatedArrivalDateTime, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setEstimatedArrivalDateTime($value);
         return $this;
     }
-
 }

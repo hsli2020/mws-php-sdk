@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetPackageTrackingDetailsResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetPackageTrackingDetailsResult: GetPackageTrackingDetailsResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetPackageTrackingDetailsResponse extends FBAOutboundServiceMWS_Model {
-
+class GetPackageTrackingDetailsResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetPackageTrackingDetailsResult' => array('FieldValue' => null, 'FieldType' => 'GetPackageTrackingDetailsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetPackageTrackingDetailsResult' => array('FieldValue' => null, 'FieldType' => 'GetPackageTrackingDetailsResult'),
+            'ResponseMetadata'                => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**

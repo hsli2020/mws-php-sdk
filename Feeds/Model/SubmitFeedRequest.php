@@ -2,9 +2,7 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
-require_once ('MarketplaceWebService/Model.php');
-require_once ('MarketplaceWebService/Model/ContentType.php');
-
+use Amazon\MWS\Feeds\Model;
 
 /**
  * SubmitFeedRequest
@@ -19,7 +17,7 @@ require_once ('MarketplaceWebService/Model/ContentType.php');
  * <li>PurgeAndReplace: bool</li>
  * </ul>
  */
-class SubmitFeedRequest extends MarketplaceWebService_Model
+class SubmitFeedRequest extends Model
 {
     /**
      * Construct new SubmitFeedRequest
@@ -28,54 +26,51 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>MarketplaceIdList: IdList</li>
      * <li>FeedContent: string</li>
      * <li>FeedType: string</li>
      * <li>PurgeAndReplace: bool</li>
-     *
      * </ul>
      */
-
     private static $DEFAULT_CONTENT_TYPE;
 
     public function __construct($data = null)
     {
-    	self::$DEFAULT_CONTENT_TYPE = new ContentType(
-    		array('ContentType' => 'application/octet-stream'));
+        self::$DEFAULT_CONTENT_TYPE = new ContentType(
+            array('ContentType' => 'application/octet-stream'));
 
         // Here we're setting the content-type field directly to the object, but beware the actual
         // method of construction from associative arrays from the client interface would do something like:
         // $parameters = array ('ContentType' => array('ContentType' => 'application/octet-stream'));
 
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-        'FeedContent' => array ('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'PurgeAndReplace' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ContentMd5' => array ('FieldValue' => null, 'FieldType' => 'string'),
- 	'ContentType' => array ('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'ContentType')
+            'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'FeedContent'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedType'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PurgeAndReplace'   => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ContentMd5'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ContentType'       => array('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'ContentType')
         );
 
         parent::__construct($data);
 
         if (!is_null($this->fields['ContentType']['FieldValue'])) {
-        	$this->verifySupportedContentType($this->fields['ContentType']['FieldValue']);
+            $this->verifySupportedContentType($this->fields['ContentType']['FieldValue']);
         }
-
     }
 
-    private function verifySupportedContentType($supplied) {
-    if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
-    		throw new MarketplaceWebService_Exception(array('Message' =>
-    			"Unsupported ContentType " .  $supplied->getContentType() .
-    			" ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
-    	}
+    private function verifySupportedContentType($supplied)
+    {
+        if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
+            throw new MarketplaceWebService_Exception(array('Message' =>
+                "Unsupported ContentType " .  $supplied->getContentType() .
+                " ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));
+        }
     }
 
     /**
@@ -89,13 +84,15 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
         return $this->fields['ContentType']['FieldValue'];
     }
 
-    public function setContentType($value) {
+    public function setContentType($value)
+    {
     	$this->verifySupportedContentType($value);
     	$this->fields['ContentType']['FieldValue'] = $value;
         return $this;
     }
 
-    public function isSetContentType() {
+    public function isSetContentType()
+    {
     	return !is_null($this->fields['ContentType']['FieldValue']);
     }
 
@@ -252,8 +249,8 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
      */
     public function setMarketplaceIdList($value)
     {
-	$marketplaceIdList = new IdList();
-	$marketplaceIdList->setId($value['Id']);
+        $marketplaceIdList = new IdList();
+        $marketplaceIdList->setId($value['Id']);
         $this->fields['MarketplaceIdList']['FieldValue'] = $marketplaceIdList;
         return;
     }
@@ -279,7 +276,6 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
     public function isSetMarketplaceIdList()
     {
         return !is_null($this->fields['MarketplaceIdList']['FieldValue']);
-
     }
 
     /**
@@ -451,7 +447,6 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ContentMd5 is set
      *
@@ -461,5 +456,4 @@ class SubmitFeedRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['ContentMd5']['FieldValue']);
     }
-
 }

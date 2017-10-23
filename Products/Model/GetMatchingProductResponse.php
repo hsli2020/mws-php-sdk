@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetMatchingProductResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetMatchingProductResult: array</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetMatchingProductResponse extends MarketplaceWebServiceProducts_Model {
-
+class GetMatchingProductResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('GetMatchingProductResult')),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('GetMatchingProductResult')),
+            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -35,8 +33,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getGetMatchingProductResult()
     {
-        if ($this->_fields['GetMatchingProductResult']['FieldValue'] == null)
-        {
+        if ($this->_fields['GetMatchingProductResult']['FieldValue'] == null) {
             $this->_fields['GetMatchingProductResult']['FieldValue'] = array();
         }
         return $this->_fields['GetMatchingProductResult']['FieldValue'];
@@ -72,8 +69,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetGetMatchingProductResult()
     {
-                return !empty($this->_fields['GetMatchingProductResult']['FieldValue']);
-            }
+        return !empty($this->_fields['GetMatchingProductResult']['FieldValue']);
+    }
 
     /**
      * Add values for GetMatchingProductResult, return this.
@@ -85,8 +82,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withGetMatchingProductResult()
     {
-        foreach (func_get_args() as $GetMatchingProductResult)
-        {
+        foreach (func_get_args() as $GetMatchingProductResult) {
             $this->_fields['GetMatchingProductResult']['FieldValue'][] = $GetMatchingProductResult;
         }
         return $this;
@@ -121,8 +117,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -167,8 +163,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -183,6 +179,7 @@ namespace Amazon\MWS\Products\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetMatchingProductResponse from XML string
      *
@@ -204,6 +201,7 @@ namespace Amazon\MWS\Products\Model;
                                   Make sure that GetMatchingProductResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -217,5 +215,4 @@ namespace Amazon\MWS\Products\Model;
         $xml .= "</GetMatchingProductResponse>";
         return $xml;
     }
-
 }

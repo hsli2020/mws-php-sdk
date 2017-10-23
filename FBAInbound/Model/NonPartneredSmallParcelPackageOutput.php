@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * NonPartneredSmallParcelPackageOutput
  *
  * Properties:
  * <ul>
- *
  * <li>CarrierName: string</li>
  * <li>TrackingId: string</li>
  * <li>PackageStatus: string</li>
- *
  * </ul>
  */
-
- class NonPartneredSmallParcelPackageOutput extends FBAInboundServiceMWS_Model {
-
+class NonPartneredSmallParcelPackageOutput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PackageStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CarrierName'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TrackingId'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PackageStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTrackingId()
     {
-                return !is_null($this->_fields['TrackingId']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingId']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingId, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPackageStatus()
     {
-                return !is_null($this->_fields['PackageStatus']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageStatus']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageStatus, return this.
@@ -170,5 +163,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPackageStatus($value);
         return $this;
     }
-
 }

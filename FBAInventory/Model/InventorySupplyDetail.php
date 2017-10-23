@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * InventorySupplyDetail
  *
@@ -13,17 +15,17 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>LatestAvailableToPick: Timepoint</li>
  * </ul>
  */
-class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
-
+class InventorySupplyDetail extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SupplyType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
-    'LatestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Quantity'                => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SupplyType'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+            'LatestAvailableToPick'   => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +57,8 @@ class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -101,8 +103,8 @@ class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
      */
     public function isSetSupplyType()
     {
-                return !is_null($this->_fields['SupplyType']['FieldValue']);
-            }
+        return !is_null($this->_fields['SupplyType']['FieldValue']);
+    }
 
     /**
      * Set the value of SupplyType, return this.
@@ -147,8 +149,8 @@ class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
      */
     public function isSetEarliestAvailableToPick()
     {
-                return !is_null($this->_fields['EarliestAvailableToPick']['FieldValue']);
-            }
+        return !is_null($this->_fields['EarliestAvailableToPick']['FieldValue']);
+    }
 
     /**
      * Set the value of EarliestAvailableToPick, return this.
@@ -193,8 +195,8 @@ class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
      */
     public function isSetLatestAvailableToPick()
     {
-                return !is_null($this->_fields['LatestAvailableToPick']['FieldValue']);
-            }
+        return !is_null($this->_fields['LatestAvailableToPick']['FieldValue']);
+    }
 
     /**
      * Set the value of LatestAvailableToPick, return this.
@@ -209,5 +211,4 @@ class InventorySupplyDetail extends FBAInventoryServiceMWS_Model {
         $this->setLatestAvailableToPick($value);
         return $this;
     }
-
 }

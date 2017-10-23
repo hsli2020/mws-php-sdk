@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportScheduleListByNextTokenResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportScheduleListByNextTokenResult: GetReportScheduleListByNextTokenResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Model
+class GetReportScheduleListByNextTokenResponse extends Model
 {
-
-
     /**
      * Construct new GetReportScheduleListByNextTokenResponse
      *
@@ -27,21 +22,18 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetReportScheduleListByNextTokenResult: GetReportScheduleListByNextTokenResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportScheduleListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportScheduleListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListByNextTokenResult'),
+            'ResponseMetadata'                       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct GetReportScheduleListByNextTokenResponse from XML string
@@ -62,7 +54,6 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
             throw new Exception ("Unable to construct GetReportScheduleListByNextTokenResponse from provided XML.
                                   Make sure that GetReportScheduleListByNextTokenResponse is a root element");
         }
-
     }
 
     /**
@@ -99,7 +90,6 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
         return $this;
     }
 
-
     /**
      * Checks if GetReportScheduleListByNextTokenResult  is set
      *
@@ -108,7 +98,6 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
     public function isSetGetReportScheduleListByNextTokenResult()
     {
         return !is_null($this->fields['GetReportScheduleListByNextTokenResult']['FieldValue']);
-
     }
 
     /**
@@ -145,7 +134,6 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +142,7 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +160,13 @@ class GetReportScheduleListByNextTokenResponse extends MarketplaceWebService_Mod
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

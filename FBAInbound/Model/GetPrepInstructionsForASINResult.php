@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetPrepInstructionsForASINResult
  *
  * Properties:
  * <ul>
- *
  * <li>ASINPrepInstructionsList: ASINPrepInstructionsList</li>
  * <li>InvalidASINList: InvalidASINList</li>
- *
  * </ul>
  */
-
- class GetPrepInstructionsForASINResult extends FBAInboundServiceMWS_Model {
-
+class GetPrepInstructionsForASINResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ASINPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'ASINPrepInstructionsList'),
-    'InvalidASINList' => array('FieldValue' => null, 'FieldType' => 'InvalidASINList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ASINPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'ASINPrepInstructionsList'),
+            'InvalidASINList'          => array('FieldValue' => null, 'FieldType' => 'InvalidASINList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetASINPrepInstructionsList()
     {
-                return !is_null($this->_fields['ASINPrepInstructionsList']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASINPrepInstructionsList']['FieldValue']);
+    }
 
     /**
      * Set the value of ASINPrepInstructionsList, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInvalidASINList()
     {
-                return !is_null($this->_fields['InvalidASINList']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvalidASINList']['FieldValue']);
+    }
 
     /**
      * Set the value of InvalidASINList, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setInvalidASINList($value);
         return $this;
     }
-
 }

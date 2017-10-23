@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportScheduleListResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
  * <li>ReportSchedule: ReportSchedule</li>
- *
  * </ul>
  */
-class GetReportScheduleListResult extends MarketplaceWebService_Model
+class GetReportScheduleListResult extends Model
 {
-
-
     /**
      * Construct new GetReportScheduleListResult
      *
@@ -28,24 +23,22 @@ class GetReportScheduleListResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
      * <li>ReportSchedule: ReportSchedule</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+            'NextToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'HasNext'        => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the NextToken property.
      *
      * @return string NextToken
@@ -160,7 +153,6 @@ class GetReportScheduleListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of ReportSchedule list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -177,8 +169,6 @@ class GetReportScheduleListResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if ReportSchedule list is non-empty
      *
@@ -188,8 +178,4 @@ class GetReportScheduleListResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['ReportSchedule']['FieldValue']) > 0;
     }
-
-
-
-
 }

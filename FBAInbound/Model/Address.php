@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInbound\Model;
 
+use Amazon\MWS\FBAInbound\Model;
+
 /**
  * Address
  *
@@ -21,17 +23,17 @@ class Address extends Model
 {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine1' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine2' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DistrictOrCounty' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'City' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'StateOrProvinceCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostalCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Name'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AddressLine1'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AddressLine2'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DistrictOrCounty'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'City'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StateOrProvinceCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'CountryCode'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PostalCode'          => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -63,8 +65,8 @@ class Address extends Model
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return !is_null($this->_fields['Name']['FieldValue']);
+    }
 
     /**
      * Set the value of Name, return this.
@@ -109,8 +111,8 @@ class Address extends Model
      */
     public function isSetAddressLine1()
     {
-                return !is_null($this->_fields['AddressLine1']['FieldValue']);
-            }
+        return !is_null($this->_fields['AddressLine1']['FieldValue']);
+    }
 
     /**
      * Set the value of AddressLine1, return this.
@@ -155,8 +157,8 @@ class Address extends Model
      */
     public function isSetAddressLine2()
     {
-                return !is_null($this->_fields['AddressLine2']['FieldValue']);
-            }
+        return !is_null($this->_fields['AddressLine2']['FieldValue']);
+    }
 
     /**
      * Set the value of AddressLine2, return this.
@@ -201,8 +203,8 @@ class Address extends Model
      */
     public function isSetDistrictOrCounty()
     {
-                return !is_null($this->_fields['DistrictOrCounty']['FieldValue']);
-            }
+        return !is_null($this->_fields['DistrictOrCounty']['FieldValue']);
+    }
 
     /**
      * Set the value of DistrictOrCounty, return this.
@@ -247,8 +249,8 @@ class Address extends Model
      */
     public function isSetCity()
     {
-                return !is_null($this->_fields['City']['FieldValue']);
-            }
+        return !is_null($this->_fields['City']['FieldValue']);
+    }
 
     /**
      * Set the value of City, return this.
@@ -293,8 +295,8 @@ class Address extends Model
      */
     public function isSetStateOrProvinceCode()
     {
-                return !is_null($this->_fields['StateOrProvinceCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['StateOrProvinceCode']['FieldValue']);
+    }
 
     /**
      * Set the value of StateOrProvinceCode, return this.
@@ -339,8 +341,8 @@ class Address extends Model
      */
     public function isSetCountryCode()
     {
-                return !is_null($this->_fields['CountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CountryCode, return this.
@@ -385,8 +387,8 @@ class Address extends Model
      */
     public function isSetPostalCode()
     {
-                return !is_null($this->_fields['PostalCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostalCode']['FieldValue']);
+    }
 
     /**
      * Set the value of PostalCode, return this.
@@ -401,5 +403,4 @@ class Address extends Model
         $this->setPostalCode($value);
         return $this;
     }
-
 }

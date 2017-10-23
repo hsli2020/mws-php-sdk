@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * BoxContentsFeeDetails
  *
  * Properties:
  * <ul>
- *
  * <li>TotalUnits: int</li>
  * <li>FeePerUnit: Amount</li>
  * <li>TotalFee: Amount</li>
- *
  * </ul>
  */
-
- class BoxContentsFeeDetails extends FBAInboundServiceMWS_Model {
-
+class BoxContentsFeeDetails extends Model 
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TotalUnits' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    'TotalFee' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TotalUnits' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'TotalFee'   => array('FieldValue' => null, 'FieldType' => 'Amount'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalUnits()
     {
-                return !is_null($this->_fields['TotalUnits']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalUnits']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalUnits, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFeePerUnit()
     {
-                return !is_null($this->_fields['FeePerUnit']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeePerUnit']['FieldValue']);
+    }
 
     /**
      * Set the value of FeePerUnit, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTotalFee()
     {
-                return !is_null($this->_fields['TotalFee']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalFee']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalFee, return this.
@@ -170,5 +163,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTotalFee($value);
         return $this;
     }
-
 }

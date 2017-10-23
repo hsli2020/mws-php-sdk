@@ -2,21 +2,19 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * ErrorResponse
  *
  * Properties:
  * <ul>
- *
  * <li>Error: Error</li>
  * <li>RequestId: string</li>
- *
  * </ul>
  */
-class ErrorResponse extends MarketplaceWebService_Model
+class ErrorResponse extends Model
 {
-
-
     /**
      * Construct new ErrorResponse
      *
@@ -24,17 +22,15 @@ class ErrorResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Error: Error</li>
      * <li>RequestId: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Error' => array('FieldValue' => array(), 'FieldType' => 'Error'),
-        'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Error'     => array('FieldValue' => array(), 'FieldType' => 'Error'),
+            'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -59,7 +55,6 @@ class ErrorResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct ErrorResponse from provided XML.
                                   Make sure that ErrorResponse is a root element");
         }
-
     }
 
     /**
@@ -103,8 +98,6 @@ class ErrorResponse extends MarketplaceWebService_Model
         }
         return $this;
     }
-
-
 
     /**
      * Checks if Error list is non-empty
@@ -161,8 +154,6 @@ class ErrorResponse extends MarketplaceWebService_Model
         return !is_null($this->fields['RequestId']['FieldValue']);
     }
 
-
-
     /**
      * XML Representation for this object
      *
@@ -179,11 +170,13 @@ class ErrorResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventsResponse
  *
  * Properties:
  * <ul>
- *
  * <li>ListFinancialEventsResult: ListFinancialEventsResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class ListFinancialEventsResponse extends MWSFinancesService_Model {
-
+class ListFinancialEventsResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ListFinancialEventsResult' => array('FieldValue' => null, 'FieldType' => 'ListFinancialEventsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ListFinancialEventsResult' => array('FieldValue' => null, 'FieldType' => 'ListFinancialEventsResult'),
+            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetListFinancialEventsResult()
     {
-                return !is_null($this->_fields['ListFinancialEventsResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListFinancialEventsResult']['FieldValue']);
+    }
 
     /**
      * Set the value of ListFinancialEventsResult, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -165,6 +163,7 @@ namespace Amazon\MWS\Finances\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct ListFinancialEventsResponse from XML string
      *
@@ -186,6 +185,7 @@ namespace Amazon\MWS\Finances\Model;
                                   Make sure that ListFinancialEventsResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -199,5 +199,4 @@ namespace Amazon\MWS\Finances\Model;
         $xml .= "</ListFinancialEventsResponse>";
         return $xml;
     }
-
 }

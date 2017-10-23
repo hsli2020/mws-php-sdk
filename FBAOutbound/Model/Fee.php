@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * Fee
  *
  * Properties:
  * <ul>
- *
  * <li>Name: string</li>
  * <li>Amount: Currency</li>
- *
  * </ul>
  */
-
- class Fee extends FBAOutboundServiceMWS_Model {
-
+class Fee extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Name'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return !is_null($this->_fields['Name']['FieldValue']);
+    }
 
     /**
      * Set the value of Name, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setAmount($value);
         return $this;
     }
-
 }

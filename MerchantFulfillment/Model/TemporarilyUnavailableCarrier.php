@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * TemporarilyUnavailableCarrier
  *
  * Properties:
  * <ul>
- *
  * <li>CarrierName: string</li>
- *
  * </ul>
  */
-
- class TemporarilyUnavailableCarrier extends MWSMerchantFulfillmentService_Model {
-
+class TemporarilyUnavailableCarrier extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setCarrierName($value);
         return $this;
     }
-
 }

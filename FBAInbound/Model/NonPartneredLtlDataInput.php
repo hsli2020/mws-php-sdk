@@ -1,34 +1,27 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * NonPartneredLtlDataInput
  *
  * Properties:
  * <ul>
- *
  * <li>CarrierName: string</li>
  * <li>ProNumber: string</li>
- *
  * </ul>
  */
-
- class NonPartneredLtlDataInput extends FBAInboundServiceMWS_Model {
-
+class NonPartneredLtlDataInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProNumber'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -60,8 +53,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetCarrierName()
     {
-                return !is_null($this->_fields['CarrierName']['FieldValue']);
-            }
+        return !is_null($this->_fields['CarrierName']['FieldValue']);
+    }
 
     /**
      * Set the value of CarrierName, return this.
@@ -106,8 +99,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetProNumber()
     {
-                return !is_null($this->_fields['ProNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of ProNumber, return this.
@@ -122,5 +115,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setProNumber($value);
         return $this;
     }
-
 }

@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PrepInstructionList
  *
  * Properties:
  * <ul>
- *
  * <li>PrepInstruction: array</li>
- *
  * </ul>
  */
-
- class PrepInstructionList extends FBAInboundServiceMWS_Model {
-
+class PrepInstructionList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PrepInstruction' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PrepInstruction' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +29,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getPrepInstruction()
     {
-        if ($this->_fields['PrepInstruction']['FieldValue'] == null)
-        {
+        if ($this->_fields['PrepInstruction']['FieldValue'] == null) {
             $this->_fields['PrepInstruction']['FieldValue'] = array();
         }
         return $this->_fields['PrepInstruction']['FieldValue'];
@@ -73,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepInstruction()
     {
-                return !empty($this->_fields['PrepInstruction']['FieldValue']);
-            }
+        return !empty($this->_fields['PrepInstruction']['FieldValue']);
+    }
 
     /**
      * Add values for PrepInstruction, return this.
@@ -86,11 +78,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withPrepInstruction()
     {
-        foreach (func_get_args() as $PrepInstruction)
-        {
+        foreach (func_get_args() as $PrepInstruction) {
             $this->_fields['PrepInstruction']['FieldValue'][] = $PrepInstruction;
         }
         return $this;
     }
-
 }

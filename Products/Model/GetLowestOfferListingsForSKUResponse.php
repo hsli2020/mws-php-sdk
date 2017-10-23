@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetLowestOfferListingsForSKUResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetLowestOfferListingsForSKUResult: array</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class GetLowestOfferListingsForSKUResponse extends MarketplaceWebServiceProducts_Model {
-
+class GetLowestOfferListingsForSKUResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetLowestOfferListingsForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('GetLowestOfferListingsForSKUResult')),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetLowestOfferListingsForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('GetLowestOfferListingsForSKUResult')),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -35,8 +33,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getGetLowestOfferListingsForSKUResult()
     {
-        if ($this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue'] == null)
-        {
+        if ($this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue'] == null) {
             $this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue'] = array();
         }
         return $this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue'];
@@ -72,8 +69,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetGetLowestOfferListingsForSKUResult()
     {
-                return !empty($this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue']);
-            }
+        return !empty($this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue']);
+    }
 
     /**
      * Add values for GetLowestOfferListingsForSKUResult, return this.
@@ -85,8 +82,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withGetLowestOfferListingsForSKUResult()
     {
-        foreach (func_get_args() as $GetLowestOfferListingsForSKUResult)
-        {
+        foreach (func_get_args() as $GetLowestOfferListingsForSKUResult) {
             $this->_fields['GetLowestOfferListingsForSKUResult']['FieldValue'][] = $GetLowestOfferListingsForSKUResult;
         }
         return $this;
@@ -121,8 +117,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -167,8 +163,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -183,6 +179,7 @@ namespace Amazon\MWS\Products\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetLowestOfferListingsForSKUResponse from XML string
      *
@@ -204,6 +201,7 @@ namespace Amazon\MWS\Products\Model;
                                   Make sure that GetLowestOfferListingsForSKUResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -217,5 +215,4 @@ namespace Amazon\MWS\Products\Model;
         $xml .= "</GetLowestOfferListingsForSKUResponse>";
         return $xml;
     }
-
 }

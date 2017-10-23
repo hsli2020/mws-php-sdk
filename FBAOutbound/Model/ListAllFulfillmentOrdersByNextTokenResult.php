@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * ListAllFulfillmentOrdersByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>FulfillmentOrders: FulfillmentOrderList</li>
- *
  * </ul>
  */
-
- class ListAllFulfillmentOrdersByNextTokenResult extends FBAOutboundServiceMWS_Model {
-
+class ListAllFulfillmentOrdersByNextTokenResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentOrders' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentOrders' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentOrders()
     {
-                return !is_null($this->_fields['FulfillmentOrders']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentOrders']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentOrders, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentOrders($value);
         return $this;
     }
-
 }

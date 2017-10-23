@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * GetLastUpdatedTimeForRecommendationsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>SellerId: string</li>
- *
  * </ul>
  */
-
- class GetLastUpdatedTimeForRecommendationsRequest extends MWSRecommendationsSectionService_Model {
-
+class GetLastUpdatedTimeForRecommendationsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setSellerId($value);
         return $this;
     }
-
 }

@@ -1,40 +1,33 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * GetPackageLabelsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>ShipmentId: string</li>
  * <li>PageType: string</li>
  * <li>NumberOfPackages: int</li>
- *
  * </ul>
  */
-
- class GetPackageLabelsRequest extends FBAInboundServiceMWS_Model {
-
+class GetPackageLabelsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PageType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NumberOfPackages' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PageType'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NumberOfPackages' => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -66,8 +59,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -112,8 +105,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -158,8 +151,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -204,8 +197,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPageType()
     {
-                return !is_null($this->_fields['PageType']['FieldValue']);
-            }
+        return !is_null($this->_fields['PageType']['FieldValue']);
+    }
 
     /**
      * Set the value of PageType, return this.
@@ -250,8 +243,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetNumberOfPackages()
     {
-                return !is_null($this->_fields['NumberOfPackages']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfPackages']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfPackages, return this.
@@ -266,5 +259,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setNumberOfPackages($value);
         return $this;
     }
-
 }

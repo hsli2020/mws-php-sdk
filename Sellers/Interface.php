@@ -15,7 +15,7 @@ interface SellersInterface
      * @see ListMarketplaceParticipationsRequest
      * @return ListMarketplaceParticipationsResponse
      *
-     * @throws MarketplaceWebServiceSellers_Exception
+     * @throws SellersException
      */
     public function listMarketplaceParticipations($request);
 
@@ -30,7 +30,7 @@ interface SellersInterface
      * @see ListMarketplaceParticipationsByNextTokenRequest
      * @return ListMarketplaceParticipationsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceSellers_Exception
+     * @throws SellersException
      */
     public function listMarketplaceParticipationsByNextToken($request);
 

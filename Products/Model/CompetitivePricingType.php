@@ -2,30 +2,29 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * CompetitivePricingType
  *
  * Properties:
  * <ul>
- *
  * <li>CompetitivePrices: CompetitivePriceList</li>
  * <li>NumberOfOfferListings: NumberOfOfferListingsList</li>
  * <li>TradeInValue: MoneyType</li>
- *
  * </ul>
  */
-
- class CompetitivePricingType extends MarketplaceWebServiceProducts_Model {
-
+class CompetitivePricingType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CompetitivePrices' => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
-    'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
-    'TradeInValue' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
+            'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
+            'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +56,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCompetitivePrices()
     {
-                return !is_null($this->_fields['CompetitivePrices']['FieldValue']);
-            }
+        return !is_null($this->_fields['CompetitivePrices']['FieldValue']);
+    }
 
     /**
      * Set the value of CompetitivePrices, return this.
@@ -103,8 +102,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetNumberOfOfferListings()
     {
-                return !is_null($this->_fields['NumberOfOfferListings']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfOfferListings']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfOfferListings, return this.
@@ -149,8 +148,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTradeInValue()
     {
-                return !is_null($this->_fields['TradeInValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['TradeInValue']['FieldValue']);
+    }
 
     /**
      * Set the value of TradeInValue, return this.
@@ -165,5 +164,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setTradeInValue($value);
         return $this;
     }
-
 }

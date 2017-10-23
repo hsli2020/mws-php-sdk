@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds\Model;
 
+use Amazon\MWS\Feeds\Model;
+
 /**
  * CancelFeedSubmissionsResult
  *
@@ -11,7 +13,7 @@ namespace Amazon\MWS\Feeds\Model;
  * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
  * </ul>
  */
-class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
+class CancelFeedSubmissionsResult extends Model
 {
     /**
      * Construct new CancelFeedSubmissionsResult
@@ -29,8 +31,8 @@ class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+            'Count'              => array('FieldValue' => null, 'FieldType' => 'int'),
+            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
@@ -69,7 +71,6 @@ class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if Count is set
      *
@@ -105,7 +106,6 @@ class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of FeedSubmissionInfo list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -122,8 +122,6 @@ class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
-
     /**
      * Checks if FeedSubmissionInfo list is non-empty
      *
@@ -133,8 +131,4 @@ class CancelFeedSubmissionsResult extends MarketplaceWebService_Model
     {
         return count ($this->fields['FeedSubmissionInfo']['FieldValue']) > 0;
     }
-
-
-
-
 }

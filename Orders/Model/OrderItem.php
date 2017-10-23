@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Orders\Model;
 
+use Amazon\MWS\Orders\Model;
 
 /**
  * OrderItem
  *
  * Properties:
  * <ul>
- *
  * <li>ASIN: string</li>
  * <li>SellerSKU: string</li>
  * <li>OrderItemId: string</li>
@@ -37,45 +37,43 @@ namespace Amazon\MWS\Orders\Model;
  * <li>ScheduledDeliveryEndDate: string</li>
  * <li>PriceDesignation: string</li>
  * <li>BuyerCustomizedInfo: BuyerCustomizedInfoDetail</li>
- *
  * </ul>
  */
-
- class OrderItem extends MarketplaceWebServiceOrders_Model {
-
+class OrderItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Title' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'QuantityOrdered' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'QuantityShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'PointsGrantedDetail'),
-    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'PromotionIds' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
-    'CODFee' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
-    'GiftMessageText' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'GiftWrapLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'InvoiceData'),
-    'ConditionNote' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ConditionId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ConditionSubtypeId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ScheduledDeliveryStartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ScheduledDeliveryEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PriceDesignation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'BuyerCustomizedInfoDetail'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ASIN'                       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKU'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderItemId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Title'                      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'QuantityOrdered'            => array('FieldValue' => null, 'FieldType' => 'int'),
+            'QuantityShipped'            => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PointsGranted'              => array('FieldValue' => null, 'FieldType' => 'PointsGrantedDetail'),
+            'ItemPrice'                  => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'ShippingPrice'              => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'GiftWrapPrice'              => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'ItemTax'                    => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'ShippingTax'                => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'GiftWrapTax'                => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'ShippingDiscount'           => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'PromotionDiscount'          => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'PromotionIds'               => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
+            'CODFee'                     => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'CODFeeDiscount'             => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'GiftMessageText'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'GiftWrapLevel'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'InvoiceData'                => array('FieldValue' => null, 'FieldType' => 'InvoiceData'),
+            'ConditionNote'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ConditionId'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ConditionSubtypeId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduledDeliveryStartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduledDeliveryEndDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PriceDesignation'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'BuyerCustomizedInfo'        => array('FieldValue' => null, 'FieldType' => 'BuyerCustomizedInfoDetail'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetOrderItemId()
     {
-                return !is_null($this->_fields['OrderItemId']['FieldValue']);
-            }
+        return !is_null($this->_fields['OrderItemId']['FieldValue']);
+    }
 
     /**
      * Set the value of OrderItemId, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetTitle()
     {
-                return !is_null($this->_fields['Title']['FieldValue']);
-            }
+        return !is_null($this->_fields['Title']['FieldValue']);
+    }
 
     /**
      * Set the value of Title, return this.
@@ -291,8 +289,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetQuantityOrdered()
     {
-                return !is_null($this->_fields['QuantityOrdered']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityOrdered']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityOrdered, return this.
@@ -337,8 +335,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetQuantityShipped()
     {
-                return !is_null($this->_fields['QuantityShipped']['FieldValue']);
-            }
+        return !is_null($this->_fields['QuantityShipped']['FieldValue']);
+    }
 
     /**
      * Set the value of QuantityShipped, return this.
@@ -383,8 +381,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPointsGranted()
     {
-                return !is_null($this->_fields['PointsGranted']['FieldValue']);
-            }
+        return !is_null($this->_fields['PointsGranted']['FieldValue']);
+    }
 
     /**
      * Set the value of PointsGranted, return this.
@@ -429,8 +427,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetItemPrice()
     {
-                return !is_null($this->_fields['ItemPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemPrice, return this.
@@ -475,8 +473,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShippingPrice()
     {
-                return !is_null($this->_fields['ShippingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingPrice, return this.
@@ -521,8 +519,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetGiftWrapPrice()
     {
-                return !is_null($this->_fields['GiftWrapPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['GiftWrapPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of GiftWrapPrice, return this.
@@ -567,8 +565,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetItemTax()
     {
-                return !is_null($this->_fields['ItemTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemTax']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemTax, return this.
@@ -613,8 +611,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShippingTax()
     {
-                return !is_null($this->_fields['ShippingTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingTax']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingTax, return this.
@@ -659,8 +657,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetGiftWrapTax()
     {
-                return !is_null($this->_fields['GiftWrapTax']['FieldValue']);
-            }
+        return !is_null($this->_fields['GiftWrapTax']['FieldValue']);
+    }
 
     /**
      * Set the value of GiftWrapTax, return this.
@@ -705,8 +703,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetShippingDiscount()
     {
-                return !is_null($this->_fields['ShippingDiscount']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShippingDiscount']['FieldValue']);
+    }
 
     /**
      * Set the value of ShippingDiscount, return this.
@@ -751,8 +749,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPromotionDiscount()
     {
-                return !is_null($this->_fields['PromotionDiscount']['FieldValue']);
-            }
+        return !is_null($this->_fields['PromotionDiscount']['FieldValue']);
+    }
 
     /**
      * Set the value of PromotionDiscount, return this.
@@ -775,8 +773,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function getPromotionIds()
     {
-        if ($this->_fields['PromotionIds']['FieldValue'] == null)
-        {
+        if ($this->_fields['PromotionIds']['FieldValue'] == null) {
             $this->_fields['PromotionIds']['FieldValue'] = array();
         }
         return $this->_fields['PromotionIds']['FieldValue'];
@@ -812,8 +809,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPromotionIds()
     {
-                return !empty($this->_fields['PromotionIds']['FieldValue']);
-            }
+        return !empty($this->_fields['PromotionIds']['FieldValue']);
+    }
 
     /**
      * Add values for PromotionIds, return this.
@@ -825,8 +822,7 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function withPromotionIds()
     {
-        foreach (func_get_args() as $PromotionIds)
-        {
+        foreach (func_get_args() as $PromotionIds) {
             $this->_fields['PromotionIds']['FieldValue'][] = $PromotionIds;
         }
         return $this;
@@ -861,8 +857,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCODFee()
     {
-                return !is_null($this->_fields['CODFee']['FieldValue']);
-            }
+        return !is_null($this->_fields['CODFee']['FieldValue']);
+    }
 
     /**
      * Set the value of CODFee, return this.
@@ -907,8 +903,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetCODFeeDiscount()
     {
-                return !is_null($this->_fields['CODFeeDiscount']['FieldValue']);
-            }
+        return !is_null($this->_fields['CODFeeDiscount']['FieldValue']);
+    }
 
     /**
      * Set the value of CODFeeDiscount, return this.
@@ -953,8 +949,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetGiftMessageText()
     {
-                return !is_null($this->_fields['GiftMessageText']['FieldValue']);
-            }
+        return !is_null($this->_fields['GiftMessageText']['FieldValue']);
+    }
 
     /**
      * Set the value of GiftMessageText, return this.
@@ -999,8 +995,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetGiftWrapLevel()
     {
-                return !is_null($this->_fields['GiftWrapLevel']['FieldValue']);
-            }
+        return !is_null($this->_fields['GiftWrapLevel']['FieldValue']);
+    }
 
     /**
      * Set the value of GiftWrapLevel, return this.
@@ -1045,8 +1041,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetInvoiceData()
     {
-                return !is_null($this->_fields['InvoiceData']['FieldValue']);
-            }
+        return !is_null($this->_fields['InvoiceData']['FieldValue']);
+    }
 
     /**
      * Set the value of InvoiceData, return this.
@@ -1091,8 +1087,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetConditionNote()
     {
-                return !is_null($this->_fields['ConditionNote']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConditionNote']['FieldValue']);
+    }
 
     /**
      * Set the value of ConditionNote, return this.
@@ -1137,8 +1133,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetConditionId()
     {
-                return !is_null($this->_fields['ConditionId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConditionId']['FieldValue']);
+    }
 
     /**
      * Set the value of ConditionId, return this.
@@ -1183,8 +1179,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetConditionSubtypeId()
     {
-                return !is_null($this->_fields['ConditionSubtypeId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ConditionSubtypeId']['FieldValue']);
+    }
 
     /**
      * Set the value of ConditionSubtypeId, return this.
@@ -1229,8 +1225,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetScheduledDeliveryStartDate()
     {
-                return !is_null($this->_fields['ScheduledDeliveryStartDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ScheduledDeliveryStartDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ScheduledDeliveryStartDate, return this.
@@ -1275,8 +1271,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetScheduledDeliveryEndDate()
     {
-                return !is_null($this->_fields['ScheduledDeliveryEndDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['ScheduledDeliveryEndDate']['FieldValue']);
+    }
 
     /**
      * Set the value of ScheduledDeliveryEndDate, return this.
@@ -1321,8 +1317,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetPriceDesignation()
     {
-                return !is_null($this->_fields['PriceDesignation']['FieldValue']);
-            }
+        return !is_null($this->_fields['PriceDesignation']['FieldValue']);
+    }
 
     /**
      * Set the value of PriceDesignation, return this.
@@ -1367,8 +1363,8 @@ namespace Amazon\MWS\Orders\Model;
      */
     public function isSetBuyerCustomizedInfo()
     {
-                return !is_null($this->_fields['BuyerCustomizedInfo']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyerCustomizedInfo']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyerCustomizedInfo, return this.
@@ -1383,5 +1379,4 @@ namespace Amazon\MWS\Orders\Model;
         $this->setBuyerCustomizedInfo($value);
         return $this;
     }
-
 }

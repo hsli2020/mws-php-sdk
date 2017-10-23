@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * RentalTransactionEvent
  *
  * Properties:
  * <ul>
- *
  * <li>AmazonOrderId: string</li>
  * <li>RentalEventType: string</li>
  * <li>ExtensionLength: int</li>
@@ -18,26 +18,24 @@ namespace Amazon\MWS\Finances\Model;
  * <li>MarketplaceName: string</li>
  * <li>RentalInitialValue: Currency</li>
  * <li>RentalReimbursement: Currency</li>
- *
  * </ul>
  */
-
- class RentalTransactionEvent extends MWSFinancesService_Model {
-
+class RentalTransactionEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RentalEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ExtensionLength' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RentalChargeList' => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-    'RentalFeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'MarketplaceName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RentalInitialValue' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AmazonOrderId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RentalEventType'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ExtensionLength'     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PostedDate'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RentalChargeList'    => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'RentalFeeList'       => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'MarketplaceName'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RentalInitialValue'  => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -69,8 +67,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -115,8 +113,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalEventType()
     {
-                return !is_null($this->_fields['RentalEventType']['FieldValue']);
-            }
+        return !is_null($this->_fields['RentalEventType']['FieldValue']);
+    }
 
     /**
      * Set the value of RentalEventType, return this.
@@ -161,8 +159,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetExtensionLength()
     {
-                return !is_null($this->_fields['ExtensionLength']['FieldValue']);
-            }
+        return !is_null($this->_fields['ExtensionLength']['FieldValue']);
+    }
 
     /**
      * Set the value of ExtensionLength, return this.
@@ -207,8 +205,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPostedDate()
     {
-                return !is_null($this->_fields['PostedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PostedDate, return this.
@@ -231,8 +229,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getRentalChargeList()
     {
-        if ($this->_fields['RentalChargeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['RentalChargeList']['FieldValue'] == null) {
             $this->_fields['RentalChargeList']['FieldValue'] = array();
         }
         return $this->_fields['RentalChargeList']['FieldValue'];
@@ -268,8 +265,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalChargeList()
     {
-                return !empty($this->_fields['RentalChargeList']['FieldValue']);
-            }
+        return !empty($this->_fields['RentalChargeList']['FieldValue']);
+    }
 
     /**
      * Add values for RentalChargeList, return this.
@@ -281,8 +278,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withRentalChargeList()
     {
-        foreach (func_get_args() as $RentalChargeList)
-        {
+        foreach (func_get_args() as $RentalChargeList) {
             $this->_fields['RentalChargeList']['FieldValue'][] = $RentalChargeList;
         }
         return $this;
@@ -295,8 +291,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getRentalFeeList()
     {
-        if ($this->_fields['RentalFeeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['RentalFeeList']['FieldValue'] == null) {
             $this->_fields['RentalFeeList']['FieldValue'] = array();
         }
         return $this->_fields['RentalFeeList']['FieldValue'];
@@ -332,8 +327,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalFeeList()
     {
-                return !empty($this->_fields['RentalFeeList']['FieldValue']);
-            }
+        return !empty($this->_fields['RentalFeeList']['FieldValue']);
+    }
 
     /**
      * Add values for RentalFeeList, return this.
@@ -345,8 +340,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withRentalFeeList()
     {
-        foreach (func_get_args() as $RentalFeeList)
-        {
+        foreach (func_get_args() as $RentalFeeList) {
             $this->_fields['RentalFeeList']['FieldValue'][] = $RentalFeeList;
         }
         return $this;
@@ -381,8 +375,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceName()
     {
-                return !is_null($this->_fields['MarketplaceName']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceName']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceName, return this.
@@ -427,8 +421,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalInitialValue()
     {
-                return !is_null($this->_fields['RentalInitialValue']['FieldValue']);
-            }
+        return !is_null($this->_fields['RentalInitialValue']['FieldValue']);
+    }
 
     /**
      * Set the value of RentalInitialValue, return this.
@@ -473,8 +467,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalReimbursement()
     {
-                return !is_null($this->_fields['RentalReimbursement']['FieldValue']);
-            }
+        return !is_null($this->_fields['RentalReimbursement']['FieldValue']);
+    }
 
     /**
      * Set the value of RentalReimbursement, return this.
@@ -489,5 +483,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setRentalReimbursement($value);
         return $this;
     }
-
 }

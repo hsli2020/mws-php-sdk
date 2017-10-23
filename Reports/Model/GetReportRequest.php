@@ -1,26 +1,21 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportId: string</li>
- *
  * </ul>
  */
-class GetReportRequest extends MarketplaceWebService_Model
+class GetReportRequest extends Model
 {
-
-
     /**
      * Construct new GetReportRequest
      *
@@ -28,26 +23,24 @@ class GetReportRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportId: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Report' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Report'       => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -126,7 +119,6 @@ class GetReportRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if Merchant is set
      *
@@ -171,7 +163,6 @@ class GetReportRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if MWSAuthToken is set
      *
@@ -215,7 +206,6 @@ class GetReportRequest extends MarketplaceWebService_Model
         $this->setReportId($value);
         return $this;
     }
-
 
     /**
      * Checks if ReportId is set
@@ -273,7 +263,4 @@ class GetReportRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['Report']['FieldValue']);
     }
-
-
-
 }

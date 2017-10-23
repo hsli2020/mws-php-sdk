@@ -1,29 +1,24 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportCountRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportTypeList: TypeList</li>
  * <li>Acknowledged: bool</li>
  * <li>AvailableFromDate: string</li>
  * <li>AvailableToDate: string</li>
- *
  * </ul>
  */
-class GetReportCountRequest extends MarketplaceWebService_Model
+class GetReportCountRequest extends Model
 {
-
-
     /**
      * Construct new GetReportCountRequest
      *
@@ -31,31 +26,29 @@ class GetReportCountRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportTypeList: TypeList</li>
      * <li>Acknowledged: bool</li>
      * <li>AvailableFromDate: string</li>
      * <li>AvailableToDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-        'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'AvailableToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportTypeList'    => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'Acknowledged'      => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'AvailableToDate'   => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -179,7 +172,6 @@ class GetReportCountRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if MWSAuthToken is set
      *
@@ -223,7 +215,6 @@ class GetReportCountRequest extends MarketplaceWebService_Model
         $this->setReportTypeList($value);
         return $this;
     }
-
 
     /**
      * Checks if ReportTypeList  is set
@@ -315,7 +306,6 @@ class GetReportCountRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if AvailableFromDate is set
      *
@@ -360,7 +350,6 @@ class GetReportCountRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if AvailableToDate is set
      *
@@ -370,8 +359,4 @@ class GetReportCountRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['AvailableToDate']['FieldValue']);
     }
-
-
-
-
 }

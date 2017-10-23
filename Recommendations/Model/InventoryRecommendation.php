@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * InventoryRecommendation
  *
  * Properties:
  * <ul>
- *
  * <li>LastUpdated: string</li>
  * <li>ItemIdentifier: ProductIdentifier</li>
  * <li>ItemName: string</li>
@@ -23,31 +23,29 @@ namespace Amazon\MWS\Recommendations\Model;
  * <li>LostSalesInLast30Days: int</li>
  * <li>RecommendationId: string</li>
  * <li>RecommendationReason: string</li>
- *
  * </ul>
  */
-
- class InventoryRecommendation extends MWSRecommendationsSectionService_Model {
-
+class InventoryRecommendation extends MWSRecommendationsSectionService_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
-    'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SalesForTheLast14Days' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SalesForTheLast30Days' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'AvailableQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'DaysUntilStockRunsOut' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'InboundQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'RecommendedInboundQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'DaysOutOfStockLast30Days' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'LostSalesInLast30Days' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'RecommendationId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LastUpdated'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemIdentifier'             => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SalesForTheLast14Days'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SalesForTheLast30Days'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'AvailableQuantity'          => array('FieldValue' => null, 'FieldType' => 'int'),
+            'DaysUntilStockRunsOut'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'InboundQuantity'            => array('FieldValue' => null, 'FieldType' => 'int'),
+            'RecommendedInboundQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'DaysOutOfStockLast30Days'   => array('FieldValue' => null, 'FieldType' => 'int'),
+            'LostSalesInLast30Days'      => array('FieldValue' => null, 'FieldType' => 'int'),
+            'RecommendationId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecommendationReason'       => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -79,8 +77,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLastUpdated()
     {
-                return !is_null($this->_fields['LastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdated, return this.
@@ -125,8 +123,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemIdentifier()
     {
-                return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemIdentifier, return this.
@@ -171,8 +169,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemName()
     {
-                return !is_null($this->_fields['ItemName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemName']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemName, return this.
@@ -217,8 +215,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -263,8 +261,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSalesForTheLast14Days()
     {
-                return !is_null($this->_fields['SalesForTheLast14Days']['FieldValue']);
-            }
+        return !is_null($this->_fields['SalesForTheLast14Days']['FieldValue']);
+    }
 
     /**
      * Set the value of SalesForTheLast14Days, return this.
@@ -309,8 +307,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSalesForTheLast30Days()
     {
-                return !is_null($this->_fields['SalesForTheLast30Days']['FieldValue']);
-            }
+        return !is_null($this->_fields['SalesForTheLast30Days']['FieldValue']);
+    }
 
     /**
      * Set the value of SalesForTheLast30Days, return this.
@@ -355,8 +353,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetAvailableQuantity()
     {
-                return !is_null($this->_fields['AvailableQuantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['AvailableQuantity']['FieldValue']);
+    }
 
     /**
      * Set the value of AvailableQuantity, return this.
@@ -401,8 +399,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetDaysUntilStockRunsOut()
     {
-                return !is_null($this->_fields['DaysUntilStockRunsOut']['FieldValue']);
-            }
+        return !is_null($this->_fields['DaysUntilStockRunsOut']['FieldValue']);
+    }
 
     /**
      * Set the value of DaysUntilStockRunsOut, return this.
@@ -447,8 +445,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetInboundQuantity()
     {
-                return !is_null($this->_fields['InboundQuantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['InboundQuantity']['FieldValue']);
+    }
 
     /**
      * Set the value of InboundQuantity, return this.
@@ -493,8 +491,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendedInboundQuantity()
     {
-                return !is_null($this->_fields['RecommendedInboundQuantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendedInboundQuantity']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendedInboundQuantity, return this.
@@ -539,8 +537,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetDaysOutOfStockLast30Days()
     {
-                return !is_null($this->_fields['DaysOutOfStockLast30Days']['FieldValue']);
-            }
+        return !is_null($this->_fields['DaysOutOfStockLast30Days']['FieldValue']);
+    }
 
     /**
      * Set the value of DaysOutOfStockLast30Days, return this.
@@ -585,8 +583,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLostSalesInLast30Days()
     {
-                return !is_null($this->_fields['LostSalesInLast30Days']['FieldValue']);
-            }
+        return !is_null($this->_fields['LostSalesInLast30Days']['FieldValue']);
+    }
 
     /**
      * Set the value of LostSalesInLast30Days, return this.
@@ -631,8 +629,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationId()
     {
-                return !is_null($this->_fields['RecommendationId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationId']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationId, return this.
@@ -677,8 +675,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationReason()
     {
-                return !is_null($this->_fields['RecommendationReason']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationReason']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationReason, return this.
@@ -693,5 +691,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setRecommendationReason($value);
         return $this;
     }
-
 }

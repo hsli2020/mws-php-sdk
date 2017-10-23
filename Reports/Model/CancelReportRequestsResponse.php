@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * CancelReportRequestsResponse
  *
  * Properties:
  * <ul>
- *
  * <li>CancelReportRequestsResult: CancelReportRequestsResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class CancelReportRequestsResponse extends MarketplaceWebService_Model
+class CancelReportRequestsResponse extends Model
 {
-
-
     /**
      * Construct new CancelReportRequestsResponse
      *
@@ -27,17 +22,15 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>CancelReportRequestsResult: CancelReportRequestsResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'CancelReportRequestsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'CancelReportRequestsResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -62,7 +55,6 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct CancelReportRequestsResponse from provided XML.
                                   Make sure that CancelReportRequestsResponse is a root element");
         }
-
     }
 
     /**
@@ -99,7 +91,6 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if CancelReportRequestsResult  is set
      *
@@ -108,7 +99,6 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
     public function isSetCancelReportRequestsResult()
     {
         return !is_null($this->fields['CancelReportRequestsResult']['FieldValue']);
-
     }
 
     /**
@@ -145,7 +135,6 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +143,7 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +161,13 @@ class CancelReportRequestsResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

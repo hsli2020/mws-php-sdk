@@ -1,28 +1,23 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * ManageReportScheduleRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>ReportType: string</li>
  * <li>Schedule: string</li>
  * <li>ScheduleDate: string</li>
- *
  * </ul>
  */
-class ManageReportScheduleRequest extends MarketplaceWebService_Model
+class ManageReportScheduleRequest extends Model
 {
-
-
     /**
      * Construct new ManageReportScheduleRequest
      *
@@ -30,29 +25,27 @@ class ManageReportScheduleRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>ReportType: string</li>
      * <li>Schedule: string</li>
      * <li>ScheduleDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Schedule' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ScheduleDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportType'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Schedule'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ScheduleDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -321,8 +314,4 @@ class ManageReportScheduleRequest extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['ScheduleDate']['FieldValue']);
     }
-
-
-
-
 }

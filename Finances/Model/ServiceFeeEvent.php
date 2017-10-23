@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ServiceFeeEvent
  *
  * Properties:
  * <ul>
- *
  * <li>AmazonOrderId: string</li>
  * <li>FeeReason: string</li>
  * <li>FeeList: array</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\Finances\Model;
  * <li>FnSKU: string</li>
  * <li>FeeDescription: string</li>
  * <li>ASIN: string</li>
- *
  * </ul>
  */
-
- class ServiceFeeEvent extends MWSFinancesService_Model {
-
+class ServiceFeeEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeeReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FnSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FeeDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AmazonOrderId'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeReason'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeList'        => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'SellerSKU'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FnSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeeDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASIN'           => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeReason()
     {
-                return !is_null($this->_fields['FeeReason']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeReason']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeReason, return this.
@@ -135,8 +133,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getFeeList()
     {
-        if ($this->_fields['FeeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['FeeList']['FieldValue'] == null) {
             $this->_fields['FeeList']['FieldValue'] = array();
         }
         return $this->_fields['FeeList']['FieldValue'];
@@ -172,8 +169,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeList()
     {
-                return !empty($this->_fields['FeeList']['FieldValue']);
-            }
+        return !empty($this->_fields['FeeList']['FieldValue']);
+    }
 
     /**
      * Add values for FeeList, return this.
@@ -221,8 +218,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -267,8 +264,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFnSKU()
     {
-                return !is_null($this->_fields['FnSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FnSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FnSKU, return this.
@@ -313,8 +310,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFeeDescription()
     {
-                return !is_null($this->_fields['FeeDescription']['FieldValue']);
-            }
+        return !is_null($this->_fields['FeeDescription']['FieldValue']);
+    }
 
     /**
      * Set the value of FeeDescription, return this.
@@ -359,8 +356,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -375,5 +372,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setASIN($value);
         return $this;
     }
-
 }

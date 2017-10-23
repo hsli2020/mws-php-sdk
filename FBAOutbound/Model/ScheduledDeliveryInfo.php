@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * ScheduledDeliveryInfo
  *
  * Properties:
  * <ul>
- *
  * <li>DeliveryTimeZone: string</li>
  * <li>DeliveryWindows: DeliveryWindowList</li>
- *
  * </ul>
  */
-
- class ScheduledDeliveryInfo extends FBAOutboundServiceMWS_Model {
-
+class ScheduledDeliveryInfo extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'DeliveryTimeZone' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DeliveryWindows' => array('FieldValue' => null, 'FieldType' => 'DeliveryWindowList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'DeliveryTimeZone' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DeliveryWindows'  => array('FieldValue' => null, 'FieldType' => 'DeliveryWindowList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDeliveryTimeZone()
     {
-                return !is_null($this->_fields['DeliveryTimeZone']['FieldValue']);
-            }
+        return !is_null($this->_fields['DeliveryTimeZone']['FieldValue']);
+    }
 
     /**
      * Set the value of DeliveryTimeZone, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetDeliveryWindows()
     {
-                return !is_null($this->_fields['DeliveryWindows']['FieldValue']);
-            }
+        return !is_null($this->_fields['DeliveryWindows']['FieldValue']);
+    }
 
     /**
      * Set the value of DeliveryWindows, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setDeliveryWindows($value);
         return $this;
     }
-
 }

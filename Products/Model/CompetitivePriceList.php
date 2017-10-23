@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * CompetitivePriceList
  *
  * Properties:
  * <ul>
- *
  * <li>CompetitivePrice: array</li>
- *
  * </ul>
  */
-
- class CompetitivePriceList extends MarketplaceWebServiceProducts_Model {
-
+class CompetitivePriceList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array('CompetitivePriceType')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array('CompetitivePriceType')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getCompetitivePrice()
     {
-        if ($this->_fields['CompetitivePrice']['FieldValue'] == null)
-        {
+        if ($this->_fields['CompetitivePrice']['FieldValue'] == null) {
             $this->_fields['CompetitivePrice']['FieldValue'] = array();
         }
         return $this->_fields['CompetitivePrice']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetCompetitivePrice()
     {
-                return !empty($this->_fields['CompetitivePrice']['FieldValue']);
-            }
+        return !empty($this->_fields['CompetitivePrice']['FieldValue']);
+    }
 
     /**
      * Add values for CompetitivePrice, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withCompetitivePrice()
     {
-        foreach (func_get_args() as $CompetitivePrice)
-        {
+        foreach (func_get_args() as $CompetitivePrice) {
             $this->_fields['CompetitivePrice']['FieldValue'][] = $CompetitivePrice;
         }
         return $this;
     }
-
 }

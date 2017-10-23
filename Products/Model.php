@@ -1,12 +1,14 @@
 <?php
 
 namespace Amazon\MWS\Products\Model;
+
+use Amazon\MWS\Products\Model;
+
 /**
  * MarketplaceWebServiceProducts_Model - base class for all model classes
  */
 abstract class MarketplaceWebServiceProducts_Model
 {
-
     /** @var array */
     protected $_fields = array ();
 
@@ -43,8 +45,8 @@ abstract class MarketplaceWebServiceProducts_Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -62,9 +64,9 @@ abstract class MarketplaceWebServiceProducts_Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
 
     /**
@@ -158,7 +160,6 @@ abstract class MarketplaceWebServiceProducts_Model
         }
     }
 
-
     /**
      * Construct from Associative Array
      *
@@ -213,14 +214,16 @@ abstract class MarketplaceWebServiceProducts_Model
     }
 
     /**
-    * Convert to query parameters suitable for POSTing.
-    * @return array of query parameters
-    */
-    public function toQueryParameterArray() {
+     * Convert to query parameters suitable for POSTing.
+     * @return array of query parameters
+     */
+    public function toQueryParameterArray()
+    {
         return $this->_toQueryParameterArray("");
     }
 
-    protected function _toQueryParameterArray($prefix) {
+    protected function _toQueryParameterArray($prefix)
+    {
         $arr = array();
         foreach($this->_fields as $fieldName => $fieldAttrs) {
             $fieldType = $fieldAttrs['FieldType'];
@@ -232,7 +235,8 @@ abstract class MarketplaceWebServiceProducts_Model
         return $arr;
     }
 
-    private function __toQueryParameterArray($prefix, $fieldType, $fieldValue, $fieldAttrs) {
+    private function __toQueryParameterArray($prefix, $fieldType, $fieldValue, $fieldAttrs)
+    {
         $arr = array();
         if(is_array($fieldType)) {
             if(isset($fieldAttrs['ListMemberName'])) {
@@ -345,7 +349,8 @@ abstract class MarketplaceWebServiceProducts_Model
         return $xml;
     }
 
-    protected function _getAttributes() {
+    protected function _getAttributes()
+    {
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
@@ -410,12 +415,10 @@ abstract class MarketplaceWebServiceProducts_Model
     */
     protected function _isNumericArray($var)
     {
-        if (!is_array($var))
-        {
+        if (!is_array($var)) {
            return false;
         }
         $sz = sizeof($var);
         return ($sz===0 || array_keys($var) === range(0, sizeof($var) - 1));
     }
-
 }

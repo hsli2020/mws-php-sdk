@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * Summary
  *
  * Properties:
  * <ul>
- *
  * <li>TotalOfferCount: int</li>
  * <li>NumberOfOffers: NumberOfOffers</li>
  * <li>LowestPrices: LowestPrices</li>
@@ -16,24 +16,23 @@ namespace Amazon\MWS\Products\Model;
  * <li>ListPrice: MoneyType</li>
  * <li>SuggestedLowerPricePlusShipping: MoneyType</li>
  * <li>BuyBoxEligibleOffers: BuyBoxEligibleOffers</li>
- *
  * </ul>
  */
 
- class Summary extends MarketplaceWebServiceProducts_Model {
-
+class Summary extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TotalOfferCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
-    'LowestPrices' => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
-    'BuyBoxPrices' => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
-    'ListPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'BuyBoxEligibleOffers' => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TotalOfferCount'                 => array('FieldValue' => null, 'FieldType' => 'int'),
+            'NumberOfOffers'                  => array('FieldValue' => null, 'FieldType' => 'NumberOfOffers'),
+            'LowestPrices'                    => array('FieldValue' => null, 'FieldType' => 'LowestPrices'),
+            'BuyBoxPrices'                    => array('FieldValue' => null, 'FieldType' => 'BuyBoxPrices'),
+            'ListPrice'                       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'SuggestedLowerPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'BuyBoxEligibleOffers'            => array('FieldValue' => null, 'FieldType' => 'BuyBoxEligibleOffers'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +64,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetTotalOfferCount()
     {
-                return !is_null($this->_fields['TotalOfferCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalOfferCount']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalOfferCount, return this.
@@ -111,8 +110,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetNumberOfOffers()
     {
-                return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfOffers, return this.
@@ -157,8 +156,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetLowestPrices()
     {
-                return !is_null($this->_fields['LowestPrices']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestPrices']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestPrices, return this.
@@ -203,8 +202,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetBuyBoxPrices()
     {
-                return !is_null($this->_fields['BuyBoxPrices']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyBoxPrices']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyBoxPrices, return this.
@@ -249,8 +248,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetListPrice()
     {
-                return !is_null($this->_fields['ListPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListPrice, return this.
@@ -295,8 +294,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSuggestedLowerPricePlusShipping()
     {
-                return !is_null($this->_fields['SuggestedLowerPricePlusShipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['SuggestedLowerPricePlusShipping']['FieldValue']);
+    }
 
     /**
      * Set the value of SuggestedLowerPricePlusShipping, return this.
@@ -341,8 +340,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetBuyBoxEligibleOffers()
     {
-                return !is_null($this->_fields['BuyBoxEligibleOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyBoxEligibleOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyBoxEligibleOffers, return this.
@@ -357,5 +356,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setBuyBoxEligibleOffers($value);
         return $this;
     }
-
 }

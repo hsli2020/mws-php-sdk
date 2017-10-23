@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * GetLowestPricedOffersForSKUResult
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceID: string</li>
  * <li>SKU: string</li>
  * <li>ItemCondition: string</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\Products\Model;
  * <li>Identifier: GetLowestPricedOffersSkuIdentifier</li>
  * <li>Summary: Summary</li>
  * <li>Offers: SKUOfferDetailList</li>
- *
  * </ul>
  */
-
- class GetLowestPricedOffersForSKUResult extends MarketplaceWebServiceProducts_Model {
-
+class GetLowestPricedOffersForSKUResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'SKU' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'Identifier' => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersSkuIdentifier'),
-    'Summary' => array('FieldValue' => null, 'FieldType' => 'Summary'),
-    'Offers' => array('FieldValue' => null, 'FieldType' => 'SKUOfferDetailList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceID' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'SKU'           => array('FieldValue' => null, 'FieldType' => '@string'),
+            'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
+            'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersSkuIdentifier'),
+            'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
+            'Offers'        => array('FieldValue' => null, 'FieldType' => 'SKUOfferDetailList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMarketplaceID()
     {
-                return !is_null($this->_fields['MarketplaceID']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceID']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceID, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSKU()
     {
-                return !is_null($this->_fields['SKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SKU, return this.
@@ -157,8 +155,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemCondition()
     {
-                return !is_null($this->_fields['ItemCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemCondition, return this.
@@ -203,8 +201,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.
@@ -249,8 +247,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetIdentifier()
     {
-                return !is_null($this->_fields['Identifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['Identifier']['FieldValue']);
+    }
 
     /**
      * Set the value of Identifier, return this.
@@ -295,8 +293,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSummary()
     {
-                return !is_null($this->_fields['Summary']['FieldValue']);
-            }
+        return !is_null($this->_fields['Summary']['FieldValue']);
+    }
 
     /**
      * Set the value of Summary, return this.
@@ -341,8 +339,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetOffers()
     {
-                return !is_null($this->_fields['Offers']['FieldValue']);
-            }
+        return !is_null($this->_fields['Offers']['FieldValue']);
+    }
 
     /**
      * Set the value of Offers, return this.
@@ -357,5 +355,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setOffers($value);
         return $this;
     }
-
 }

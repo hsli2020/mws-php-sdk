@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PrepDetailsList
  *
  * Properties:
  * <ul>
- *
  * <li>PrepDetails: array</li>
- *
  * </ul>
  */
-
- class PrepDetailsList extends FBAInboundServiceMWS_Model {
-
+class PrepDetailsList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PrepDetails' => array('FieldValue' => array(), 'FieldType' => array('PrepDetails')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PrepDetails' => array('FieldValue' => array(), 'FieldType' => array('PrepDetails')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +29,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getPrepDetails()
     {
-        if ($this->_fields['PrepDetails']['FieldValue'] == null)
-        {
+        if ($this->_fields['PrepDetails']['FieldValue'] == null) {
             $this->_fields['PrepDetails']['FieldValue'] = array();
         }
         return $this->_fields['PrepDetails']['FieldValue'];
@@ -73,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepDetails()
     {
-                return !empty($this->_fields['PrepDetails']['FieldValue']);
-            }
+        return !empty($this->_fields['PrepDetails']['FieldValue']);
+    }
 
     /**
      * Add values for PrepDetails, return this.
@@ -86,11 +78,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withPrepDetails()
     {
-        foreach (func_get_args() as $PrepDetails)
-        {
+        foreach (func_get_args() as $PrepDetails) {
             $this->_fields['PrepDetails']['FieldValue'][] = $PrepDetails;
         }
         return $this;
     }
-
 }

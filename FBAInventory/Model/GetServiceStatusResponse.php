@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * GetServiceStatusResponse
  *
@@ -12,16 +14,16 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  * </ul>
  */
-class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
+class GetServiceStatusResponse extends Model
 {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +55,8 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
      */
     public function isSetGetServiceStatusResult()
     {
-                return !is_null($this->_fields['GetServiceStatusResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['GetServiceStatusResult']['FieldValue']);
+    }
 
     /**
      * Set the value of GetServiceStatusResult, return this.
@@ -99,8 +101,8 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -145,8 +147,8 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -161,6 +163,7 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct GetServiceStatusResponse from XML string
      *
@@ -182,6 +185,7 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
                                   Make sure that GetServiceStatusResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -195,5 +199,4 @@ class GetServiceStatusResponse extends FBAInventoryServiceMWS_Model
         $xml .= "</GetServiceStatusResponse>";
         return $xml;
     }
-
 }

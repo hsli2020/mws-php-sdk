@@ -2,32 +2,31 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * GetCompetitivePricingForASINResult
  *
  * Properties:
  * <ul>
- *
  * <li>Product: Product</li>
  * <li>Error: Error</li>
  * <li>ASIN: string</li>
  * <li>status: string</li>
- *
  * </ul>
  */
-
- class GetCompetitivePricingForASINResult extends MarketplaceWebServiceProducts_Model {
-
+class GetCompetitivePricingForASINResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Product' => array('FieldValue' => null, 'FieldType' => 'Product'),
-    'Error' => array('FieldValue' => null, 'FieldType' => 'Error'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => '@string'),
-    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Product' => array('FieldValue' => null, 'FieldType' => 'Product'),
+            'Error'   => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'ASIN'    => array('FieldValue' => null, 'FieldType' => '@string'),
+            'status'  => array('FieldValue' => null, 'FieldType' => '@string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +58,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProduct()
     {
-                return !is_null($this->_fields['Product']['FieldValue']);
-            }
+        return !is_null($this->_fields['Product']['FieldValue']);
+    }
 
     /**
      * Set the value of Product, return this.
@@ -105,8 +104,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetError()
     {
-                return !is_null($this->_fields['Error']['FieldValue']);
-            }
+        return !is_null($this->_fields['Error']['FieldValue']);
+    }
 
     /**
      * Set the value of Error, return this.
@@ -151,8 +150,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -197,8 +196,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetstatus()
     {
-                return !is_null($this->_fields['status']['FieldValue']);
-            }
+        return !is_null($this->_fields['status']['FieldValue']);
+    }
 
     /**
      * Set the value of status, return this.
@@ -213,5 +212,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setstatus($value);
         return $this;
     }
-
 }

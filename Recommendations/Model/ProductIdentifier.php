@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * ProductIdentifier
  *
  * Properties:
  * <ul>
- *
  * <li>Asin: string</li>
  * <li>Sku: string</li>
  * <li>Upc: string</li>
- *
  * </ul>
  */
-
- class ProductIdentifier extends MWSRecommendationsSectionService_Model {
-
+class ProductIdentifier extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Asin' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Sku' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Upc' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Asin' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Sku'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Upc'  => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetAsin()
     {
-                return !is_null($this->_fields['Asin']['FieldValue']);
-            }
+        return !is_null($this->_fields['Asin']['FieldValue']);
+    }
 
     /**
      * Set the value of Asin, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSku()
     {
-                return !is_null($this->_fields['Sku']['FieldValue']);
-            }
+        return !is_null($this->_fields['Sku']['FieldValue']);
+    }
 
     /**
      * Set the value of Sku, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetUpc()
     {
-                return !is_null($this->_fields['Upc']['FieldValue']);
-            }
+        return !is_null($this->_fields['Upc']['FieldValue']);
+    }
 
     /**
      * Set the value of Upc, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setUpc($value);
         return $this;
     }
-
 }

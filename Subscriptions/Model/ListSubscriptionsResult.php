@@ -2,25 +2,24 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * ListSubscriptionsResult
  *
  * Properties:
  * <ul>
- *
  * <li>SubscriptionList: SubscriptionList</li>
- *
  * </ul>
  */
-
- class ListSubscriptionsResult extends MWSSubscriptionsService_Model {
-
+class ListSubscriptionsResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SubscriptionList' => array('FieldValue' => null, 'FieldType' => 'SubscriptionList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SubscriptionList' => array('FieldValue' => null, 'FieldType' => 'SubscriptionList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -52,8 +51,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetSubscriptionList()
     {
-                return !is_null($this->_fields['SubscriptionList']['FieldValue']);
-            }
+        return !is_null($this->_fields['SubscriptionList']['FieldValue']);
+    }
 
     /**
      * Set the value of SubscriptionList, return this.
@@ -68,5 +67,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setSubscriptionList($value);
         return $this;
     }
-
 }

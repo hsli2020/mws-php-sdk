@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * CancelShipmentResult
  *
  * Properties:
  * <ul>
- *
  * <li>Shipment: Shipment</li>
- *
  * </ul>
  */
-
- class CancelShipmentResult extends MWSMerchantFulfillmentService_Model {
-
+class CancelShipmentResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Shipment' => array('FieldValue' => null, 'FieldType' => 'Shipment'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Shipment' => array('FieldValue' => null, 'FieldType' => 'Shipment'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetShipment()
     {
-                return !is_null($this->_fields['Shipment']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipment']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipment, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setShipment($value);
         return $this;
     }
-
 }

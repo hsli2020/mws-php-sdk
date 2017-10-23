@@ -1,24 +1,19 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * StatusList
  *
  * Properties:
  * <ul>
- *
  * <li>Status: string</li>
- *
  * </ul>
  */
-class StatusList extends MarketplaceWebService_Model
+class StatusList extends Model
 {
-
-
     /**
      * Construct new StatusList
      *
@@ -26,20 +21,18 @@ class StatusList extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Status: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
+            'Status' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Status .
      *
      * @return array of string Status
@@ -64,7 +57,6 @@ class StatusList extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Sets single or multiple values of Status list via variable number of arguments.
      * For example, to set the list with two elements, simply pass two values as arguments to this function
@@ -81,7 +73,6 @@ class StatusList extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if Status list is non-empty
      *
@@ -91,8 +82,4 @@ class StatusList extends MarketplaceWebService_Model
     {
         return count ($this->fields['Status']['FieldValue']) > 0;
     }
-
-
-
-
 }

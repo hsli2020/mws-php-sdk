@@ -2,32 +2,30 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * ItemDimensions
  *
  * Properties:
  * <ul>
- *
  * <li>Height: DimensionMeasure</li>
  * <li>Width: DimensionMeasure</li>
  * <li>Length: DimensionMeasure</li>
  * <li>Weight: WeightMeasure</li>
- *
  * </ul>
  */
-
- class ItemDimensions extends MWSRecommendationsSectionService_Model {
-
+class ItemDimensions extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Height' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-    'Width' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-    'Length' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-    'Weight' => array('FieldValue' => null, 'FieldType' => 'WeightMeasure'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Height' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
+            'Width'  => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
+            'Length' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
+            'Weight' => array('FieldValue' => null, 'FieldType' => 'WeightMeasure'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -59,8 +57,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetHeight()
     {
-                return !is_null($this->_fields['Height']['FieldValue']);
-            }
+        return !is_null($this->_fields['Height']['FieldValue']);
+    }
 
     /**
      * Set the value of Height, return this.
@@ -105,8 +103,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetWidth()
     {
-                return !is_null($this->_fields['Width']['FieldValue']);
-            }
+        return !is_null($this->_fields['Width']['FieldValue']);
+    }
 
     /**
      * Set the value of Width, return this.
@@ -151,8 +149,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLength()
     {
-                return !is_null($this->_fields['Length']['FieldValue']);
-            }
+        return !is_null($this->_fields['Length']['FieldValue']);
+    }
 
     /**
      * Set the value of Length, return this.
@@ -197,8 +195,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetWeight()
     {
-                return !is_null($this->_fields['Weight']['FieldValue']);
-            }
+        return !is_null($this->_fields['Weight']['FieldValue']);
+    }
 
     /**
      * Set the value of Weight, return this.
@@ -213,5 +211,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setWeight($value);
         return $this;
     }
-
 }

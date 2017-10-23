@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * NonPartneredSmallParcelPackageInput
  *
  * Properties:
  * <ul>
- *
  * <li>TrackingId: string</li>
- *
  * </ul>
  */
-
- class NonPartneredSmallParcelPackageInput extends FBAInboundServiceMWS_Model {
-
+class NonPartneredSmallParcelPackageInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TrackingId' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -58,8 +51,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTrackingId()
     {
-                return !is_null($this->_fields['TrackingId']['FieldValue']);
-            }
+        return !is_null($this->_fields['TrackingId']['FieldValue']);
+    }
 
     /**
      * Set the value of TrackingId, return this.
@@ -74,5 +67,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTrackingId($value);
         return $this;
     }
-
 }

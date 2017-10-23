@@ -1,6 +1,7 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound;
+
 /**
  * Model - base class for all model classes
  */
@@ -42,8 +43,8 @@ abstract class Model
      */
     public function __get($propertyName)
     {
-       $getter = "get$propertyName";
-       return $this->$getter();
+        $getter = "get$propertyName";
+        return $this->$getter();
     }
 
     /**
@@ -61,9 +62,9 @@ abstract class Model
      */
     public function __set($propertyName, $propertyValue)
     {
-       $setter = "set$propertyName";
-       $this->$setter($propertyValue);
-       return $this;
+        $setter = "set$propertyName";
+        $this->$setter($propertyValue);
+        return $this;
     }
 
     /**
@@ -161,10 +162,8 @@ abstract class Model
         }
     }
 
-
     /**
      * Construct from Associative Array
-     *
      *
      * @param array $array associative array to construct from
      */
@@ -219,11 +218,13 @@ abstract class Model
     * Convert to query parameters suitable for POSTing.
     * @return array of query parameters
     */
-    public function toQueryParameterArray() {
+    public function toQueryParameterArray()
+    {
         return $this->_toQueryParameterArray("");
     }
 
-    protected function _toQueryParameterArray($prefix) {
+    protected function _toQueryParameterArray($prefix)
+    {
         $arr = array();
         foreach($this->_fields as $fieldName => $fieldAttrs) {
             $fieldType = $fieldAttrs['FieldType'];
@@ -235,9 +236,10 @@ abstract class Model
         return $arr;
     }
 
-    private function __toQueryParameterArray($prefix, $fieldType, $fieldValue, $fieldAttrs) {
+    private function __toQueryParameterArray($prefix, $fieldType, $fieldValue, $fieldAttrs)
+    {
         $arr = array();
-        if(is_array($fieldType)) {
+        if (is_array($fieldType)) {
             if(isset($fieldAttrs['ListMemberName'])) {
                 $listMemberName = $fieldAttrs['ListMemberName'];
                 $itemPrefix = $prefix . $listMemberName . '.';
@@ -350,7 +352,8 @@ abstract class Model
         return $xml;
     }
 
-    protected function _getAttributes() {
+    protected function _getAttributes()
+    {
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
@@ -415,12 +418,10 @@ abstract class Model
     */
     protected function _isNumericArray($var)
     {
-        if (!is_array($var))
-        {
+        if (!is_array($var)) {
            return false;
         }
         $sz = sizeof($var);
         return ($sz===0 || array_keys($var) === range(0, sizeof($var) - 1));
     }
-
 }

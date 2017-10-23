@@ -2,34 +2,32 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * LowestOfferListingType
  *
  * Properties:
  * <ul>
- *
  * <li>Qualifiers: QualifiersType</li>
  * <li>NumberOfOfferListingsConsidered: int</li>
  * <li>SellerFeedbackCount: int</li>
  * <li>Price: PriceType</li>
  * <li>MultipleOffersAtLowestPrice: string</li>
- *
  * </ul>
  */
-
- class LowestOfferListingType extends MarketplaceWebServiceProducts_Model {
-
+class LowestOfferListingType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Qualifiers' => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
-    'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'SellerFeedbackCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'Price' => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-    'MultipleOffersAtLowestPrice' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
+            'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'SellerFeedbackCount'             => array('FieldValue' => null, 'FieldType' => 'int'),
+            'Price'                           => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'MultipleOffersAtLowestPrice'     => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -61,8 +59,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetQualifiers()
     {
-                return !is_null($this->_fields['Qualifiers']['FieldValue']);
-            }
+        return !is_null($this->_fields['Qualifiers']['FieldValue']);
+    }
 
     /**
      * Set the value of Qualifiers, return this.
@@ -107,8 +105,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetNumberOfOfferListingsConsidered()
     {
-                return !is_null($this->_fields['NumberOfOfferListingsConsidered']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfOfferListingsConsidered']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfOfferListingsConsidered, return this.
@@ -153,8 +151,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerFeedbackCount()
     {
-                return !is_null($this->_fields['SellerFeedbackCount']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerFeedbackCount']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerFeedbackCount, return this.
@@ -199,8 +197,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPrice()
     {
-                return !is_null($this->_fields['Price']['FieldValue']);
-            }
+        return !is_null($this->_fields['Price']['FieldValue']);
+    }
 
     /**
      * Set the value of Price, return this.
@@ -245,8 +243,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMultipleOffersAtLowestPrice()
     {
-                return !is_null($this->_fields['MultipleOffersAtLowestPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['MultipleOffersAtLowestPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of MultipleOffersAtLowestPrice, return this.
@@ -261,5 +259,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setMultipleOffersAtLowestPrice($value);
         return $this;
     }
-
 }

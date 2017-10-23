@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * CreateShipmentResponse
  *
  * Properties:
  * <ul>
- *
  * <li>CreateShipmentResult: CreateShipmentResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class CreateShipmentResponse extends MWSMerchantFulfillmentService_Model {
-
+class CreateShipmentResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CreateShipmentResult' => array('FieldValue' => null, 'FieldType' => 'CreateShipmentResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CreateShipmentResult'   => array('FieldValue' => null, 'FieldType' => 'CreateShipmentResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetCreateShipmentResult()
     {
-                return !is_null($this->_fields['CreateShipmentResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['CreateShipmentResult']['FieldValue']);
+    }
 
     /**
      * Set the value of CreateShipmentResult, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -165,6 +163,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct CreateShipmentResponse from XML string
      *
@@ -186,6 +185,7 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
                                   Make sure that CreateShipmentResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -199,5 +199,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $xml .= "</CreateShipmentResponse>";
         return $xml;
     }
-
 }

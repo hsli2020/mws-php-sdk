@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * Price
  *
  * Properties:
  * <ul>
- *
  * <li>CurrencyCode: string</li>
  * <li>Amount: float</li>
- *
  * </ul>
  */
-
- class Price extends MWSRecommendationsSectionService_Model {
-
+class Price extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'float'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount'       => array('FieldValue' => null, 'FieldType' => 'float'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetCurrencyCode()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['CurrencyCode']['FieldValue']);
+    }
 
     /**
      * Set the value of CurrencyCode, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setAmount($value);
         return $this;
     }
-
 }

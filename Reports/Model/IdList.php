@@ -1,24 +1,19 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * IdList
  *
  * Properties:
  * <ul>
- *
  * <li>Id: string</li>
- *
  * </ul>
  */
-class IdList extends MarketplaceWebService_Model
+class IdList extends Model
 {
-
-
     /**
      * Construct new IdList
      *
@@ -26,20 +21,18 @@ class IdList extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Id: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
+            'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Id .
      *
      * @return array of string Id
@@ -91,8 +84,4 @@ class IdList extends MarketplaceWebService_Model
     {
         return count ($this->fields['Id']['FieldValue']) > 0;
     }
-
-
-
-
 }

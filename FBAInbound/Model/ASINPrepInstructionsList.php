@@ -1,32 +1,25 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * ASINPrepInstructionsList
  *
  * Properties:
  * <ul>
- *
  * <li>ASINPrepInstructions: array</li>
- *
  * </ul>
  */
-
- class ASINPrepInstructionsList extends FBAInboundServiceMWS_Model {
-
+class ASINPrepInstructionsList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ASINPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('ASINPrepInstructions')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ASINPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('ASINPrepInstructions')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +29,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getASINPrepInstructions()
     {
-        if ($this->_fields['ASINPrepInstructions']['FieldValue'] == null)
-        {
+        if ($this->_fields['ASINPrepInstructions']['FieldValue'] == null) {
             $this->_fields['ASINPrepInstructions']['FieldValue'] = array();
         }
         return $this->_fields['ASINPrepInstructions']['FieldValue'];
@@ -73,8 +65,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetASINPrepInstructions()
     {
-                return !empty($this->_fields['ASINPrepInstructions']['FieldValue']);
-            }
+        return !empty($this->_fields['ASINPrepInstructions']['FieldValue']);
+    }
 
     /**
      * Add values for ASINPrepInstructions, return this.
@@ -86,11 +78,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withASINPrepInstructions()
     {
-        foreach (func_get_args() as $ASINPrepInstructions)
-        {
+        foreach (func_get_args() as $ASINPrepInstructions) {
             $this->_fields['ASINPrepInstructions']['FieldValue'][] = $ASINPrepInstructions;
         }
         return $this;
     }
-
 }

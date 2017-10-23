@@ -1,8 +1,8 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
+use Amazon\MWS\Reports\Model;
 
 
 /**
@@ -10,15 +10,11 @@ namespace Amazon\MWS\Reports;
  *
  * Properties:
  * <ul>
- *
  * <li>Count: int</li>
- *
  * </ul>
  */
-class GetReportCountResult extends MarketplaceWebService_Model
+class GetReportCountResult extends Model
 {
-
-
     /**
      * Construct new GetReportCountResult
      *
@@ -26,20 +22,18 @@ class GetReportCountResult extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Count: int</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
+            'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Count property.
      *
      * @return int Count
@@ -73,7 +67,6 @@ class GetReportCountResult extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if Count is set
      *
@@ -83,8 +76,4 @@ class GetReportCountResult extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['Count']['FieldValue']);
     }
-
-
-
-
 }

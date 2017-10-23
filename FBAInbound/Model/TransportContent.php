@@ -1,36 +1,29 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * TransportContent
  *
  * Properties:
  * <ul>
- *
  * <li>TransportHeader: TransportHeader</li>
  * <li>TransportDetails: TransportDetailOutput</li>
  * <li>TransportResult: TransportResult</li>
- *
  * </ul>
  */
-
- class TransportContent extends FBAInboundServiceMWS_Model {
-
+class TransportContent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TransportHeader' => array('FieldValue' => null, 'FieldType' => 'TransportHeader'),
-    'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailOutput'),
-    'TransportResult' => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TransportHeader'  => array('FieldValue' => null, 'FieldType' => 'TransportHeader'),
+            'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailOutput'),
+            'TransportResult'  => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -62,8 +55,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportHeader()
     {
-                return !is_null($this->_fields['TransportHeader']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportHeader']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportHeader, return this.
@@ -108,8 +101,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportDetails()
     {
-                return !is_null($this->_fields['TransportDetails']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportDetails']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportDetails, return this.
@@ -154,8 +147,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportResult()
     {
-                return !is_null($this->_fields['TransportResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportResult']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportResult, return this.
@@ -170,5 +163,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTransportResult($value);
         return $this;
     }
-
 }

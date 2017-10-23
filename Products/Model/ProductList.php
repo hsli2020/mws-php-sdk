@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * ProductList
  *
  * Properties:
  * <ul>
- *
  * <li>Product: array</li>
- *
  * </ul>
  */
-
- class ProductList extends MarketplaceWebServiceProducts_Model {
-
+class ProductList extends MarketplaceWebServiceProducts_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Product' => array('FieldValue' => array(), 'FieldType' => array('Product')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Product' => array('FieldValue' => array(), 'FieldType' => array('Product')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +29,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getProduct()
     {
-        if ($this->_fields['Product']['FieldValue'] == null)
-        {
+        if ($this->_fields['Product']['FieldValue'] == null) {
             $this->_fields['Product']['FieldValue'] = array();
         }
         return $this->_fields['Product']['FieldValue'];
@@ -68,8 +65,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetProduct()
     {
-                return !empty($this->_fields['Product']['FieldValue']);
-            }
+        return !empty($this->_fields['Product']['FieldValue']);
+    }
 
     /**
      * Add values for Product, return this.
@@ -81,11 +78,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withProduct()
     {
-        foreach (func_get_args() as $Product)
-        {
+        foreach (func_get_args() as $Product) {
             $this->_fields['Product']['FieldValue'][] = $Product;
         }
         return $this;
     }
-
 }

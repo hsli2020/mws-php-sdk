@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetFulfillmentPreviewResult
  *
  * Properties:
  * <ul>
- *
  * <li>FulfillmentPreviews: FulfillmentPreviewList</li>
- *
  * </ul>
  */
-
- class GetFulfillmentPreviewResult extends FBAOutboundServiceMWS_Model {
-
+class GetFulfillmentPreviewResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FulfillmentPreviews' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FulfillmentPreviews' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentPreviews()
     {
-                return !is_null($this->_fields['FulfillmentPreviews']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentPreviews']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentPreviews, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentPreviews($value);
         return $this;
     }
-
 }

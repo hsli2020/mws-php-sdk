@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * SendTestNotificationToDestinationResponse
  *
  * Properties:
  * <ul>
- *
  * <li>SendTestNotificationToDestinationResult: SendTestNotificationToDestinationResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
- *
  * </ul>
  */
-
- class SendTestNotificationToDestinationResponse extends MWSSubscriptionsService_Model {
-
+class SendTestNotificationToDestinationResponse extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => 'SendTestNotificationToDestinationResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => 'SendTestNotificationToDestinationResult'),
+            'ResponseMetadata'                        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ResponseHeaderMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetSendTestNotificationToDestinationResult()
     {
-                return !is_null($this->_fields['SendTestNotificationToDestinationResult']['FieldValue']);
-            }
+        return !is_null($this->_fields['SendTestNotificationToDestinationResult']['FieldValue']);
+    }
 
     /**
      * Set the value of SendTestNotificationToDestinationResult, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -148,8 +147,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -164,6 +163,7 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
+
     /**
      * Construct SendTestNotificationToDestinationResponse from XML string
      *
@@ -185,6 +185,7 @@ namespace Amazon\MWS\Subscriptions\Model;
                                   Make sure that SendTestNotificationToDestinationResponse is a root element");
         }
     }
+
     /**
      * XML Representation for this object
      *
@@ -198,5 +199,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $xml .= "</SendTestNotificationToDestinationResponse>";
         return $xml;
     }
-
 }

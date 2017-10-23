@@ -1,38 +1,31 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * InboundShipmentPlanItem
  *
  * Properties:
  * <ul>
- *
  * <li>SellerSKU: string</li>
  * <li>FulfillmentNetworkSKU: string</li>
  * <li>Quantity: int</li>
  * <li>PrepDetailsList: PrepDetailsList</li>
- *
  * </ul>
  */
-
- class InboundShipmentPlanItem extends FBAInboundServiceMWS_Model {
-
+class InboundShipmentPlanItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerSKU'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Quantity'              => array('FieldValue' => null, 'FieldType' => 'int'),
+            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,8 +57,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -110,8 +103,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetFulfillmentNetworkSKU()
     {
-                return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentNetworkSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentNetworkSKU, return this.
@@ -156,8 +149,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -202,8 +195,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetPrepDetailsList()
     {
-                return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
-            }
+        return !is_null($this->_fields['PrepDetailsList']['FieldValue']);
+    }
 
     /**
      * Set the value of PrepDetailsList, return this.
@@ -218,5 +211,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setPrepDetailsList($value);
         return $this;
     }
-
 }

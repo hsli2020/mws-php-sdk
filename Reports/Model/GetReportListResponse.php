@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportListResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportListResult: GetReportListResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportListResponse extends MarketplaceWebService_Model
+class GetReportListResponse extends Model
 {
-
-
     /**
      * Construct new GetReportListResponse
      *
@@ -27,17 +22,15 @@ class GetReportListResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetReportListResult: GetReportListResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportListResult'),
+            'ResponseMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
@@ -108,7 +101,6 @@ class GetReportListResponse extends MarketplaceWebService_Model
     public function isSetGetReportListResult()
     {
         return !is_null($this->fields['GetReportListResult']['FieldValue']);
-
     }
 
     /**
@@ -145,7 +137,6 @@ class GetReportListResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +145,7 @@ class GetReportListResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +163,13 @@ class GetReportListResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

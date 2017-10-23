@@ -1,25 +1,20 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportResponse
  *
  * Properties:
  * <ul>
- *
  * <li>GetReportResult: GetReportResult</li>
  * <li>ResponseMetadata: ResponseMetadata</li>
- *
  * </ul>
  */
-class GetReportResponse extends MarketplaceWebService_Model
+class GetReportResponse extends Model
 {
-
-
     /**
      * Construct new GetReportResponse
      *
@@ -27,21 +22,18 @@ class GetReportResponse extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>GetReportResult: GetReportResult</li>
      * <li>ResponseMetadata: ResponseMetadata</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportResult' => array('FieldValue' => null, 'FieldType' => 'GetReportResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportResult'  => array('FieldValue' => null, 'FieldType' => 'GetReportResult'),
+            'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
-
 
     /**
      * Construct GetReportResponse from XML string
@@ -62,7 +54,6 @@ class GetReportResponse extends MarketplaceWebService_Model
             throw new Exception ("Unable to construct GetReportResponse from provided XML.
                                   Make sure that GetReportResponse is a root element");
         }
-
     }
 
     /**
@@ -99,7 +90,6 @@ class GetReportResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if GetReportResult  is set
      *
@@ -108,7 +98,6 @@ class GetReportResponse extends MarketplaceWebService_Model
     public function isSetGetReportResult()
     {
         return !is_null($this->fields['GetReportResult']['FieldValue']);
-
     }
 
     /**
@@ -145,7 +134,6 @@ class GetReportResponse extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ResponseMetadata  is set
      *
@@ -154,10 +142,7 @@ class GetReportResponse extends MarketplaceWebService_Model
     public function isSetResponseMetadata()
     {
         return !is_null($this->fields['ResponseMetadata']['FieldValue']);
-
     }
-
-
 
     /**
      * XML Representation for this object
@@ -175,11 +160,13 @@ class GetReportResponse extends MarketplaceWebService_Model
 
     private $_responseHeaderMetadata = null;
 
-    public function getResponseHeaderMetadata() {
-      return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata()
+    {
+        return $this->_responseHeaderMetadata;
     }
 
-    public function setResponseHeaderMetadata($responseHeaderMetadata) {
-      return $this->_responseHeaderMetadata = $responseHeaderMetadata;
+    public function setResponseHeaderMetadata($responseHeaderMetadata)
+    {
+        return $this->_responseHeaderMetadata = $responseHeaderMetadata;
     }
 }

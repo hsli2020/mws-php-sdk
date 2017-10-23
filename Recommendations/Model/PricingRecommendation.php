@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * PricingRecommendation
  *
  * Properties:
  * <ul>
- *
  * <li>LastUpdated: string</li>
  * <li>ItemIdentifier: ProductIdentifier</li>
  * <li>ItemName: string</li>
@@ -26,34 +26,32 @@ namespace Amazon\MWS\Recommendations\Model;
  * <li>NumberOfAmazonFulfilledOffers: int</li>
  * <li>RecommendationId: string</li>
  * <li>RecommendationReason: string</li>
- *
  * </ul>
  */
-
- class PricingRecommendation extends MWSRecommendationsSectionService_Model {
-
+class PricingRecommendation extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
-    'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'YourPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'LowestPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'PriceDifferenceToLowPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'MedianPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'LowestMerchantFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'LowestAmazonFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
-    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfMerchantFulfilledOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfAmazonFulfilledOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'RecommendationId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'LastUpdated'                       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemIdentifier'                    => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemName'                          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Condition'                         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SubCondition'                      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FulfillmentChannel'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'YourPricePlusShipping'             => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'LowestPricePlusShipping'           => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'PriceDifferenceToLowPrice'         => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'MedianPricePlusShipping'           => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'LowestMerchantFulfilledOfferPrice' => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'LowestAmazonFulfilledOfferPrice'   => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'NumberOfOffers'                    => array('FieldValue' => null, 'FieldType' => 'int'),
+            'NumberOfMerchantFulfilledOffers'   => array('FieldValue' => null, 'FieldType' => 'int'),
+            'NumberOfAmazonFulfilledOffers'     => array('FieldValue' => null, 'FieldType' => 'int'),
+            'RecommendationId'                  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecommendationReason'              => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -85,8 +83,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLastUpdated()
     {
-                return !is_null($this->_fields['LastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdated, return this.
@@ -131,8 +129,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemIdentifier()
     {
-                return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemIdentifier, return this.
@@ -177,8 +175,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemName()
     {
-                return !is_null($this->_fields['ItemName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemName']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemName, return this.
@@ -223,8 +221,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetCondition()
     {
-                return !is_null($this->_fields['Condition']['FieldValue']);
-            }
+        return !is_null($this->_fields['Condition']['FieldValue']);
+    }
 
     /**
      * Set the value of Condition, return this.
@@ -269,8 +267,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetSubCondition()
     {
-                return !is_null($this->_fields['SubCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['SubCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of SubCondition, return this.
@@ -315,8 +313,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -361,8 +359,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetYourPricePlusShipping()
     {
-                return !is_null($this->_fields['YourPricePlusShipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['YourPricePlusShipping']['FieldValue']);
+    }
 
     /**
      * Set the value of YourPricePlusShipping, return this.
@@ -407,8 +405,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLowestPricePlusShipping()
     {
-                return !is_null($this->_fields['LowestPricePlusShipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestPricePlusShipping']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestPricePlusShipping, return this.
@@ -453,8 +451,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetPriceDifferenceToLowPrice()
     {
-                return !is_null($this->_fields['PriceDifferenceToLowPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['PriceDifferenceToLowPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of PriceDifferenceToLowPrice, return this.
@@ -499,8 +497,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetMedianPricePlusShipping()
     {
-                return !is_null($this->_fields['MedianPricePlusShipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['MedianPricePlusShipping']['FieldValue']);
+    }
 
     /**
      * Set the value of MedianPricePlusShipping, return this.
@@ -545,8 +543,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLowestMerchantFulfilledOfferPrice()
     {
-                return !is_null($this->_fields['LowestMerchantFulfilledOfferPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestMerchantFulfilledOfferPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestMerchantFulfilledOfferPrice, return this.
@@ -591,8 +589,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetLowestAmazonFulfilledOfferPrice()
     {
-                return !is_null($this->_fields['LowestAmazonFulfilledOfferPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['LowestAmazonFulfilledOfferPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of LowestAmazonFulfilledOfferPrice, return this.
@@ -637,8 +635,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetNumberOfOffers()
     {
-                return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfOffers, return this.
@@ -683,8 +681,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetNumberOfMerchantFulfilledOffers()
     {
-                return !is_null($this->_fields['NumberOfMerchantFulfilledOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfMerchantFulfilledOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfMerchantFulfilledOffers, return this.
@@ -729,8 +727,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetNumberOfAmazonFulfilledOffers()
     {
-                return !is_null($this->_fields['NumberOfAmazonFulfilledOffers']['FieldValue']);
-            }
+        return !is_null($this->_fields['NumberOfAmazonFulfilledOffers']['FieldValue']);
+    }
 
     /**
      * Set the value of NumberOfAmazonFulfilledOffers, return this.
@@ -775,8 +773,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationId()
     {
-                return !is_null($this->_fields['RecommendationId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationId']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationId, return this.
@@ -821,8 +819,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationReason()
     {
-                return !is_null($this->_fields['RecommendationReason']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationReason']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationReason, return this.
@@ -837,5 +835,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setRecommendationReason($value);
         return $this;
     }
-
 }

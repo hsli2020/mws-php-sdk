@@ -2,29 +2,29 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
+use Amazon\MWS\Subscriptions\Model;
+
 /**
  * Subscription
  *
  * Properties:
  * <ul>
- *
  * <li>NotificationType: string</li>
  * <li>Destination: Destination</li>
  * <li>IsEnabled: bool</li>
- *
  * </ul>
  */
 
- class Subscription extends MWSSubscriptionsService_Model {
-
+class Subscription extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Destination' => array('FieldValue' => null, 'FieldType' => 'Destination'),
-    'IsEnabled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Destination'      => array('FieldValue' => null, 'FieldType' => 'Destination'),
+            'IsEnabled'        => array('FieldValue' => null, 'FieldType' => 'bool'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +56,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetNotificationType()
     {
-                return !is_null($this->_fields['NotificationType']['FieldValue']);
-            }
+        return !is_null($this->_fields['NotificationType']['FieldValue']);
+    }
 
     /**
      * Set the value of NotificationType, return this.
@@ -102,8 +102,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetDestination()
     {
-                return !is_null($this->_fields['Destination']['FieldValue']);
-            }
+        return !is_null($this->_fields['Destination']['FieldValue']);
+    }
 
     /**
      * Set the value of Destination, return this.
@@ -158,8 +158,8 @@ namespace Amazon\MWS\Subscriptions\Model;
      */
     public function isSetIsEnabled()
     {
-                return !is_null($this->_fields['IsEnabled']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsEnabled']['FieldValue']);
+    }
 
     /**
      * Set the value of IsEnabled, return this.
@@ -174,5 +174,4 @@ namespace Amazon\MWS\Subscriptions\Model;
         $this->setIsEnabled($value);
         return $this;
     }
-
 }

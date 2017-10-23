@@ -1,16 +1,14 @@
 <?php
 
-namespace Amazon\MWS\Reports;
+namespace Amazon\MWS\Reports\Model;
 
-
-
+use Amazon\MWS\Reports\Model;
 
 /**
  * GetReportListRequest
  *
  * Properties:
  * <ul>
- *
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
  * <li>MaxCount: int</li>
@@ -19,13 +17,10 @@ namespace Amazon\MWS\Reports;
  * <li>AvailableFromDate: string</li>
  * <li>AvailableToDate: string</li>
  * <li>ReportRequestIdList: IdList</li>
- *
  * </ul>
  */
-class GetReportListRequest extends MarketplaceWebService_Model
+class GetReportListRequest extends Model
 {
-
-
     /**
      * Construct new GetReportListRequest
      *
@@ -33,7 +28,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
      * <li>MaxCount: int</li>
@@ -42,26 +36,25 @@ class GetReportListRequest extends MarketplaceWebService_Model
      * <li>AvailableFromDate: string</li>
      * <li>AvailableToDate: string</li>
      * <li>ReportRequestIdList: IdList</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MaxCount' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-        'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'AvailableToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'Marketplace'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Merchant'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MaxCount'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ReportTypeList'      => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'Acknowledged'        => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'AvailableFromDate'   => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'AvailableToDate'     => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the Marketplace property.
      *
      * @return string Marketplace
@@ -94,7 +87,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         $this->setMarketplace($value);
         return $this;
     }
-
 
     /**
      * Checks if Marketplace is set
@@ -140,7 +132,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if Merchant is set
      *
@@ -184,7 +175,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         $this->setMWSAuthToken($value);
         return $this;
     }
-
 
     /**
      * Checks if MWSAuthToken is set
@@ -230,7 +220,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if MaxCount is set
      *
@@ -274,7 +263,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         $this->setReportTypeList($value);
         return $this;
     }
-
 
     /**
      * Checks if ReportTypeList  is set
@@ -320,7 +308,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         $this->setAcknowledged($value);
         return $this;
     }
-
 
     /**
      * Checks if Acknowledged is set
@@ -456,7 +443,6 @@ class GetReportListRequest extends MarketplaceWebService_Model
         return $this;
     }
 
-
     /**
      * Checks if ReportRequestIdList  is set
      *
@@ -467,8 +453,4 @@ class GetReportListRequest extends MarketplaceWebService_Model
         return !is_null($this->fields['ReportRequestIdList']['FieldValue']);
 
     }
-
-
-
-
 }

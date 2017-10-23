@@ -12,7 +12,7 @@ interface SubscriptionsInterface
      * @see CreateSubscriptionInput
      * @return CreateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function createSubscription($request);
 
@@ -25,7 +25,7 @@ interface SubscriptionsInterface
      * @see DeleteSubscriptionInput
      * @return DeleteSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function deleteSubscription($request);
 
@@ -38,7 +38,7 @@ interface SubscriptionsInterface
      * @see DeregisterDestinationInput
      * @return DeregisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function deregisterDestination($request);
 
@@ -51,7 +51,7 @@ interface SubscriptionsInterface
      * @see GetSubscriptionInput
      * @return GetSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function getSubscription($request);
 
@@ -64,7 +64,7 @@ interface SubscriptionsInterface
      * @see ListRegisteredDestinationsInput
      * @return ListRegisteredDestinationsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function listRegisteredDestinations($request);
 
@@ -77,7 +77,7 @@ interface SubscriptionsInterface
      * @see ListSubscriptionsInput
      * @return ListSubscriptionsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function listSubscriptions($request);
 
@@ -90,7 +90,7 @@ interface SubscriptionsInterface
      * @see RegisterDestinationInput
      * @return RegisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function registerDestination($request);
 
@@ -103,7 +103,7 @@ interface SubscriptionsInterface
      * @see SendTestNotificationToDestinationInput
      * @return SendTestNotificationToDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function sendTestNotificationToDestination($request);
 
@@ -116,7 +116,7 @@ interface SubscriptionsInterface
      * @see UpdateSubscriptionInput
      * @return UpdateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function updateSubscription($request);
 
@@ -129,7 +129,7 @@ interface SubscriptionsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function getServiceStatus($request);
 

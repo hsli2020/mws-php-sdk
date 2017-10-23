@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ShipmentEvent
  *
  * Properties:
  * <ul>
- *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>MarketplaceName: string</li>
@@ -22,30 +22,28 @@ namespace Amazon\MWS\Finances\Model;
  * <li>PostedDate: string</li>
  * <li>ShipmentItemList: array</li>
  * <li>ShipmentItemAdjustmentList: array</li>
- *
  * </ul>
  */
-
- class ShipmentEvent extends MWSFinancesService_Model {
-
+class ShipmentEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderChargeList' => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-    'OrderChargeAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-    'ShipmentFeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'ShipmentFeeAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'OrderFeeList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'OrderFeeAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-    'DirectPaymentList' => array('FieldValue' => array(), 'FieldType' => array('DirectPayment'), 'ListMemberName' => 'DirectPayment'),
-    'PostedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentItemList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
-    'ShipmentItemAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AmazonOrderId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerOrderId'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceName'            => array('FieldValue' => null, 'FieldType' => 'string'),
+            'OrderChargeList'            => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'OrderChargeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'ShipmentFeeList'            => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'ShipmentFeeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'OrderFeeList'               => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'OrderFeeAdjustmentList'     => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'DirectPaymentList'          => array('FieldValue' => array(), 'FieldType' => array('DirectPayment'), 'ListMemberName' => 'DirectPayment'),
+            'PostedDate'                 => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentItemList'           => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
+            'ShipmentItemAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -77,8 +75,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -123,8 +121,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -169,8 +167,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceName()
     {
-                return !is_null($this->_fields['MarketplaceName']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceName']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceName, return this.
@@ -193,8 +191,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getOrderChargeList()
     {
-        if ($this->_fields['OrderChargeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['OrderChargeList']['FieldValue'] == null) {
             $this->_fields['OrderChargeList']['FieldValue'] = array();
         }
         return $this->_fields['OrderChargeList']['FieldValue'];
@@ -230,8 +227,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOrderChargeList()
     {
-                return !empty($this->_fields['OrderChargeList']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderChargeList']['FieldValue']);
+    }
 
     /**
      * Add values for OrderChargeList, return this.
@@ -243,8 +240,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withOrderChargeList()
     {
-        foreach (func_get_args() as $OrderChargeList)
-        {
+        foreach (func_get_args() as $OrderChargeList) {
             $this->_fields['OrderChargeList']['FieldValue'][] = $OrderChargeList;
         }
         return $this;
@@ -257,8 +253,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getOrderChargeAdjustmentList()
     {
-        if ($this->_fields['OrderChargeAdjustmentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['OrderChargeAdjustmentList']['FieldValue'] == null) {
             $this->_fields['OrderChargeAdjustmentList']['FieldValue'] = array();
         }
         return $this->_fields['OrderChargeAdjustmentList']['FieldValue'];
@@ -294,8 +289,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOrderChargeAdjustmentList()
     {
-                return !empty($this->_fields['OrderChargeAdjustmentList']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderChargeAdjustmentList']['FieldValue']);
+    }
 
     /**
      * Add values for OrderChargeAdjustmentList, return this.
@@ -307,8 +302,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withOrderChargeAdjustmentList()
     {
-        foreach (func_get_args() as $OrderChargeAdjustmentList)
-        {
+        foreach (func_get_args() as $OrderChargeAdjustmentList) {
             $this->_fields['OrderChargeAdjustmentList']['FieldValue'][] = $OrderChargeAdjustmentList;
         }
         return $this;
@@ -321,8 +315,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getShipmentFeeList()
     {
-        if ($this->_fields['ShipmentFeeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShipmentFeeList']['FieldValue'] == null) {
             $this->_fields['ShipmentFeeList']['FieldValue'] = array();
         }
         return $this->_fields['ShipmentFeeList']['FieldValue'];
@@ -358,8 +351,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShipmentFeeList()
     {
-                return !empty($this->_fields['ShipmentFeeList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShipmentFeeList']['FieldValue']);
+    }
 
     /**
      * Add values for ShipmentFeeList, return this.
@@ -371,8 +364,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withShipmentFeeList()
     {
-        foreach (func_get_args() as $ShipmentFeeList)
-        {
+        foreach (func_get_args() as $ShipmentFeeList) {
             $this->_fields['ShipmentFeeList']['FieldValue'][] = $ShipmentFeeList;
         }
         return $this;
@@ -385,8 +377,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getShipmentFeeAdjustmentList()
     {
-        if ($this->_fields['ShipmentFeeAdjustmentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShipmentFeeAdjustmentList']['FieldValue'] == null) {
             $this->_fields['ShipmentFeeAdjustmentList']['FieldValue'] = array();
         }
         return $this->_fields['ShipmentFeeAdjustmentList']['FieldValue'];
@@ -422,8 +413,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShipmentFeeAdjustmentList()
     {
-                return !empty($this->_fields['ShipmentFeeAdjustmentList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShipmentFeeAdjustmentList']['FieldValue']);
+    }
 
     /**
      * Add values for ShipmentFeeAdjustmentList, return this.
@@ -435,8 +426,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withShipmentFeeAdjustmentList()
     {
-        foreach (func_get_args() as $ShipmentFeeAdjustmentList)
-        {
+        foreach (func_get_args() as $ShipmentFeeAdjustmentList) {
             $this->_fields['ShipmentFeeAdjustmentList']['FieldValue'][] = $ShipmentFeeAdjustmentList;
         }
         return $this;
@@ -449,8 +439,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getOrderFeeList()
     {
-        if ($this->_fields['OrderFeeList']['FieldValue'] == null)
-        {
+        if ($this->_fields['OrderFeeList']['FieldValue'] == null) {
             $this->_fields['OrderFeeList']['FieldValue'] = array();
         }
         return $this->_fields['OrderFeeList']['FieldValue'];
@@ -486,8 +475,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOrderFeeList()
     {
-                return !empty($this->_fields['OrderFeeList']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderFeeList']['FieldValue']);
+    }
 
     /**
      * Add values for OrderFeeList, return this.
@@ -499,8 +488,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withOrderFeeList()
     {
-        foreach (func_get_args() as $OrderFeeList)
-        {
+        foreach (func_get_args() as $OrderFeeList) {
             $this->_fields['OrderFeeList']['FieldValue'][] = $OrderFeeList;
         }
         return $this;
@@ -513,8 +501,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getOrderFeeAdjustmentList()
     {
-        if ($this->_fields['OrderFeeAdjustmentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['OrderFeeAdjustmentList']['FieldValue'] == null) {
             $this->_fields['OrderFeeAdjustmentList']['FieldValue'] = array();
         }
         return $this->_fields['OrderFeeAdjustmentList']['FieldValue'];
@@ -550,8 +537,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetOrderFeeAdjustmentList()
     {
-                return !empty($this->_fields['OrderFeeAdjustmentList']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderFeeAdjustmentList']['FieldValue']);
+    }
 
     /**
      * Add values for OrderFeeAdjustmentList, return this.
@@ -563,8 +550,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withOrderFeeAdjustmentList()
     {
-        foreach (func_get_args() as $OrderFeeAdjustmentList)
-        {
+        foreach (func_get_args() as $OrderFeeAdjustmentList) {
             $this->_fields['OrderFeeAdjustmentList']['FieldValue'][] = $OrderFeeAdjustmentList;
         }
         return $this;
@@ -577,8 +563,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getDirectPaymentList()
     {
-        if ($this->_fields['DirectPaymentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['DirectPaymentList']['FieldValue'] == null) {
             $this->_fields['DirectPaymentList']['FieldValue'] = array();
         }
         return $this->_fields['DirectPaymentList']['FieldValue'];
@@ -614,8 +599,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDirectPaymentList()
     {
-                return !empty($this->_fields['DirectPaymentList']['FieldValue']);
-            }
+        return !empty($this->_fields['DirectPaymentList']['FieldValue']);
+    }
 
     /**
      * Add values for DirectPaymentList, return this.
@@ -627,8 +612,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withDirectPaymentList()
     {
-        foreach (func_get_args() as $DirectPaymentList)
-        {
+        foreach (func_get_args() as $DirectPaymentList) {
             $this->_fields['DirectPaymentList']['FieldValue'][] = $DirectPaymentList;
         }
         return $this;
@@ -663,8 +647,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPostedDate()
     {
-                return !is_null($this->_fields['PostedDate']['FieldValue']);
-            }
+        return !is_null($this->_fields['PostedDate']['FieldValue']);
+    }
 
     /**
      * Set the value of PostedDate, return this.
@@ -687,8 +671,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getShipmentItemList()
     {
-        if ($this->_fields['ShipmentItemList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShipmentItemList']['FieldValue'] == null) {
             $this->_fields['ShipmentItemList']['FieldValue'] = array();
         }
         return $this->_fields['ShipmentItemList']['FieldValue'];
@@ -724,8 +707,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShipmentItemList()
     {
-                return !empty($this->_fields['ShipmentItemList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShipmentItemList']['FieldValue']);
+    }
 
     /**
      * Add values for ShipmentItemList, return this.
@@ -737,8 +720,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withShipmentItemList()
     {
-        foreach (func_get_args() as $ShipmentItemList)
-        {
+        foreach (func_get_args() as $ShipmentItemList) {
             $this->_fields['ShipmentItemList']['FieldValue'][] = $ShipmentItemList;
         }
         return $this;
@@ -751,8 +733,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getShipmentItemAdjustmentList()
     {
-        if ($this->_fields['ShipmentItemAdjustmentList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShipmentItemAdjustmentList']['FieldValue'] == null) {
             $this->_fields['ShipmentItemAdjustmentList']['FieldValue'] = array();
         }
         return $this->_fields['ShipmentItemAdjustmentList']['FieldValue'];
@@ -788,8 +769,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShipmentItemAdjustmentList()
     {
-                return !empty($this->_fields['ShipmentItemAdjustmentList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShipmentItemAdjustmentList']['FieldValue']);
+    }
 
     /**
      * Add values for ShipmentItemAdjustmentList, return this.
@@ -801,11 +782,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withShipmentItemAdjustmentList()
     {
-        foreach (func_get_args() as $ShipmentItemAdjustmentList)
-        {
+        foreach (func_get_args() as $ShipmentItemAdjustmentList) {
             $this->_fields['ShipmentItemAdjustmentList']['FieldValue'][] = $ShipmentItemAdjustmentList;
         }
         return $this;
     }
-
 }

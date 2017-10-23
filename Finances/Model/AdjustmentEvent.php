@@ -2,29 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * AdjustmentEvent
  *
  * Properties:
  * <ul>
- *
  * <li>AdjustmentType: string</li>
  * <li>AdjustmentAmount: Currency</li>
  * <li>AdjustmentItemList: array</li>
- *
  * </ul>
  */
-
- class AdjustmentEvent extends MWSFinancesService_Model {
-
+class AdjustmentEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AdjustmentType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AdjustmentAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'AdjustmentItemList' => array('FieldValue' => array(), 'FieldType' => array('AdjustmentItem'), 'ListMemberName' => 'AdjustmentItem'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'AdjustmentType'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'AdjustmentAmount'   => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'AdjustmentItemList' => array('FieldValue' => array(), 'FieldType' => array('AdjustmentItem'), 'ListMemberName' => 'AdjustmentItem'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -56,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAdjustmentType()
     {
-                return !is_null($this->_fields['AdjustmentType']['FieldValue']);
-            }
+        return !is_null($this->_fields['AdjustmentType']['FieldValue']);
+    }
 
     /**
      * Set the value of AdjustmentType, return this.
@@ -102,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAdjustmentAmount()
     {
-                return !is_null($this->_fields['AdjustmentAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['AdjustmentAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of AdjustmentAmount, return this.
@@ -126,8 +125,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getAdjustmentItemList()
     {
-        if ($this->_fields['AdjustmentItemList']['FieldValue'] == null)
-        {
+        if ($this->_fields['AdjustmentItemList']['FieldValue'] == null) {
             $this->_fields['AdjustmentItemList']['FieldValue'] = array();
         }
         return $this->_fields['AdjustmentItemList']['FieldValue'];
@@ -163,8 +161,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAdjustmentItemList()
     {
-                return !empty($this->_fields['AdjustmentItemList']['FieldValue']);
-            }
+        return !empty($this->_fields['AdjustmentItemList']['FieldValue']);
+    }
 
     /**
      * Add values for AdjustmentItemList, return this.
@@ -176,11 +174,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withAdjustmentItemList()
     {
-        foreach (func_get_args() as $AdjustmentItemList)
-        {
+        foreach (func_get_args() as $AdjustmentItemList) {
             $this->_fields['AdjustmentItemList']['FieldValue'][] = $AdjustmentItemList;
         }
         return $this;
     }
-
 }

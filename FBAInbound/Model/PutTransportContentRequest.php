@@ -1,42 +1,35 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
-
+use Amazon\MWS\FBAInbound\Model;
 
 /**
  * PutTransportContentRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>ShipmentId: string</li>
  * <li>IsPartnered: bool</li>
  * <li>ShipmentType: string</li>
  * <li>TransportDetails: TransportDetailInput</li>
- *
  * </ul>
  */
-
- class PutTransportContentRequest extends FBAInboundServiceMWS_Model {
-
+class PutTransportContentRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipmentId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsPartnered' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'ShipmentType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailInput'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ShipmentId'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'IsPartnered'      => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'ShipmentType'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailInput'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -68,8 +61,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -114,8 +107,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -160,8 +153,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentId()
     {
-                return !is_null($this->_fields['ShipmentId']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentId']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentId, return this.
@@ -216,8 +209,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetIsPartnered()
     {
-                return !is_null($this->_fields['IsPartnered']['FieldValue']);
-            }
+        return !is_null($this->_fields['IsPartnered']['FieldValue']);
+    }
 
     /**
      * Set the value of IsPartnered, return this.
@@ -262,8 +255,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetShipmentType()
     {
-                return !is_null($this->_fields['ShipmentType']['FieldValue']);
-            }
+        return !is_null($this->_fields['ShipmentType']['FieldValue']);
+    }
 
     /**
      * Set the value of ShipmentType, return this.
@@ -308,8 +301,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetTransportDetails()
     {
-                return !is_null($this->_fields['TransportDetails']['FieldValue']);
-            }
+        return !is_null($this->_fields['TransportDetails']['FieldValue']);
+    }
 
     /**
      * Set the value of TransportDetails, return this.
@@ -324,5 +317,4 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $this->setTransportDetails($value);
         return $this;
     }
-
 }

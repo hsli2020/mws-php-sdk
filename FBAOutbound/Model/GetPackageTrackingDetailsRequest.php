@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetPackageTrackingDetailsRequest
  *
  * Properties:
  * <ul>
- *
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>PackageNumber: int</li>
- *
  * </ul>
  */
-
- class GetPackageTrackingDetailsRequest extends FBAOutboundServiceMWS_Model {
-
+class GetPackageTrackingDetailsRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PackageNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PackageNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetPackageNumber()
     {
-                return !is_null($this->_fields['PackageNumber']['FieldValue']);
-            }
+        return !is_null($this->_fields['PackageNumber']['FieldValue']);
+    }
 
     /**
      * Set the value of PackageNumber, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setPackageNumber($value);
         return $this;
     }
-
 }

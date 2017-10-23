@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * OfferType
  *
  * Properties:
  * <ul>
- *
  * <li>BuyingPrice: PriceType</li>
  * <li>RegularPrice: MoneyType</li>
  * <li>FulfillmentChannel: string</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\Products\Model;
  * <li>ItemSubCondition: string</li>
  * <li>SellerId: string</li>
  * <li>SellerSKU: string</li>
- *
  * </ul>
  */
-
- class OfferType extends MarketplaceWebServiceProducts_Model {
-
+class OfferType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'BuyingPrice' => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-    'RegularPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemSubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemCondition'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemSubCondition'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SellerSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetBuyingPrice()
     {
-                return !is_null($this->_fields['BuyingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['BuyingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of BuyingPrice, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetRegularPrice()
     {
-                return !is_null($this->_fields['RegularPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['RegularPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of RegularPrice, return this.
@@ -157,8 +155,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -203,8 +201,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemCondition()
     {
-                return !is_null($this->_fields['ItemCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemCondition, return this.
@@ -249,8 +247,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetItemSubCondition()
     {
-                return !is_null($this->_fields['ItemSubCondition']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemSubCondition']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemSubCondition, return this.
@@ -295,8 +293,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -341,8 +339,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -357,5 +355,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setSellerSKU($value);
         return $this;
     }
-
 }

@@ -2,18 +2,20 @@
 
 namespace Amazon\MWS\Subscriptions\Model;
 
-class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
+use Amazon\MWS\Subscriptions\Model;
 
+class DeleteSubscriptionInput extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Destination' => array('FieldValue' => null, 'FieldType' => 'Destination'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'         => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MarketplaceId'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Destination'      => array('FieldValue' => null, 'FieldType' => 'Destination'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -45,8 +47,8 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -91,8 +93,8 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -137,8 +139,8 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -183,8 +185,8 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
      */
     public function isSetNotificationType()
     {
-                return !is_null($this->_fields['NotificationType']['FieldValue']);
-            }
+        return !is_null($this->_fields['NotificationType']['FieldValue']);
+    }
 
     /**
      * Set the value of NotificationType, return this.
@@ -229,8 +231,8 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
      */
     public function isSetDestination()
     {
-                return !is_null($this->_fields['Destination']['FieldValue']);
-            }
+        return !is_null($this->_fields['Destination']['FieldValue']);
+    }
 
     /**
      * Set the value of Destination, return this.
@@ -245,5 +247,4 @@ class DeleteSubscriptionInput extends MWSSubscriptionsService_Model {
         $this->setDestination($value);
         return $this;
     }
-
 }

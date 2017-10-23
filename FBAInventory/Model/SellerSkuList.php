@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * SellerSkuList
  *
@@ -10,14 +12,14 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>member: array</li>
  * </ul>
  */
-class SellerSkuList extends FBAInventoryServiceMWS_Model {
-
+class SellerSkuList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'member' => array('FieldValue' => array(), 'FieldType' => array('string')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'member' => array('FieldValue' => array(), 'FieldType' => array('string')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -27,8 +29,7 @@ class SellerSkuList extends FBAInventoryServiceMWS_Model {
      */
     public function getmember()
     {
-        if ($this->_fields['member']['FieldValue'] == null)
-        {
+        if ($this->_fields['member']['FieldValue'] == null) {
             $this->_fields['member']['FieldValue'] = array();
         }
         return $this->_fields['member']['FieldValue'];
@@ -64,8 +65,8 @@ class SellerSkuList extends FBAInventoryServiceMWS_Model {
      */
     public function isSetmember()
     {
-                return !empty($this->_fields['member']['FieldValue']);
-            }
+        return !empty($this->_fields['member']['FieldValue']);
+    }
 
     /**
      * Add values for member, return this.
@@ -77,11 +78,9 @@ class SellerSkuList extends FBAInventoryServiceMWS_Model {
      */
     public function withmember()
     {
-        foreach (func_get_args() as $member)
-        {
+        foreach (func_get_args() as $member) {
             $this->_fields['member']['FieldValue'][] = $member;
         }
         return $this;
     }
-
 }

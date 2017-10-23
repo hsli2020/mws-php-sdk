@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\FBAOutbound\Model;
 
+use Amazon\MWS\FBAOutbound\Model;
 
 /**
  * GetFulfillmentOrderResult
  *
  * Properties:
  * <ul>
- *
  * <li>FulfillmentOrder: FulfillmentOrder</li>
  * <li>FulfillmentOrderItem: FulfillmentOrderItemList</li>
  * <li>FulfillmentShipment: FulfillmentShipmentList</li>
- *
  * </ul>
  */
-
- class GetFulfillmentOrderResult extends FBAOutboundServiceMWS_Model {
-
+class GetFulfillmentOrderResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FulfillmentOrder' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrder'),
-    'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderItemList'),
-    'FulfillmentShipment' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentList'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FulfillmentOrder'     => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrder'),
+            'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderItemList'),
+            'FulfillmentShipment'  => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentList'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentOrder()
     {
-                return !is_null($this->_fields['FulfillmentOrder']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentOrder']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentOrder, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentOrderItem()
     {
-                return !is_null($this->_fields['FulfillmentOrderItem']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentOrderItem']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentOrderItem, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\FBAOutbound\Model;
      */
     public function isSetFulfillmentShipment()
     {
-                return !is_null($this->_fields['FulfillmentShipment']['FieldValue']);
-            }
+        return !is_null($this->_fields['FulfillmentShipment']['FieldValue']);
+    }
 
     /**
      * Set the value of FulfillmentShipment, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\FBAOutbound\Model;
         $this->setFulfillmentShipment($value);
         return $this;
     }
-
 }

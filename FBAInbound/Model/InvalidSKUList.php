@@ -1,11 +1,8 @@
 <?php
 
 namespace Amazon\MWS\FBAInbound\Model;
-/**
- *  @see FBAInboundServiceMWS_Model
- */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+use Amazon\MWS\FBAInbound\Model;
 
 
 /**
@@ -13,20 +10,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * Properties:
  * <ul>
- *
  * <li>InvalidSKU: array</li>
- *
  * </ul>
  */
-
- class InvalidSKUList extends FBAInboundServiceMWS_Model {
+class InvalidSKUList extends Model
+{
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InvalidSKU' => array('FieldValue' => array(), 'FieldType' => array('InvalidSKU')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'InvalidSKU' => array('FieldValue' => array(), 'FieldType' => array('InvalidSKU')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -36,8 +31,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function getInvalidSKU()
     {
-        if ($this->_fields['InvalidSKU']['FieldValue'] == null)
-        {
+        if ($this->_fields['InvalidSKU']['FieldValue'] == null) {
             $this->_fields['InvalidSKU']['FieldValue'] = array();
         }
         return $this->_fields['InvalidSKU']['FieldValue'];
@@ -73,8 +67,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function isSetInvalidSKU()
     {
-                return !empty($this->_fields['InvalidSKU']['FieldValue']);
-            }
+        return !empty($this->_fields['InvalidSKU']['FieldValue']);
+    }
 
     /**
      * Add values for InvalidSKU, return this.
@@ -86,11 +80,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function withInvalidSKU()
     {
-        foreach (func_get_args() as $InvalidSKU)
-        {
+        foreach (func_get_args() as $InvalidSKU) {
             $this->_fields['InvalidSKU']['FieldValue'][] = $InvalidSKU;
         }
         return $this;
     }
-
 }

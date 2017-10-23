@@ -2,28 +2,26 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * ListFinancialEventsByNextTokenResult
  *
  * Properties:
  * <ul>
- *
  * <li>NextToken: string</li>
  * <li>FinancialEvents: FinancialEvents</li>
- *
  * </ul>
  */
-
- class ListFinancialEventsByNextTokenResult extends MWSFinancesService_Model {
-
+class ListFinancialEventsByNextTokenResult extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FinancialEvents' => array('FieldValue' => null, 'FieldType' => 'FinancialEvents'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'NextToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FinancialEvents' => array('FieldValue' => null, 'FieldType' => 'FinancialEvents'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -101,8 +99,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFinancialEvents()
     {
-                return !is_null($this->_fields['FinancialEvents']['FieldValue']);
-            }
+        return !is_null($this->_fields['FinancialEvents']['FieldValue']);
+    }
 
     /**
      * Set the value of FinancialEvents, return this.
@@ -117,5 +115,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setFinancialEvents($value);
         return $this;
     }
-
 }

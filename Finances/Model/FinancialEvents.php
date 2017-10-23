@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * FinancialEvents
  *
  * Properties:
  * <ul>
- *
  * <li>ShipmentEventList: array</li>
  * <li>RefundEventList: array</li>
  * <li>GuaranteeClaimEventList: array</li>
@@ -22,30 +22,28 @@ namespace Amazon\MWS\Finances\Model;
  * <li>DebtRecoveryEventList: array</li>
  * <li>LoanServicingEventList: array</li>
  * <li>AdjustmentEventList: array</li>
- *
  * </ul>
  */
-
- class FinancialEvents extends MWSFinancesService_Model {
-
+class FinancialEvents extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ShipmentEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'RefundEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'GuaranteeClaimEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'ChargebackEventList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-    'PayWithAmazonEventList' => array('FieldValue' => array(), 'FieldType' => array('PayWithAmazonEvent'), 'ListMemberName' => 'PayWithAmazonEvent'),
-    'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array('SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
-    'RetrochargeEventList' => array('FieldValue' => array(), 'FieldType' => array('RetrochargeEvent'), 'ListMemberName' => 'RetrochargeEvent'),
-    'RentalTransactionEventList' => array('FieldValue' => array(), 'FieldType' => array('RentalTransactionEvent'), 'ListMemberName' => 'RentalTransactionEvent'),
-    'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array('PerformanceBondRefundEvent'), 'ListMemberName' => 'PerformanceBondRefundEvent'),
-    'ServiceFeeEventList' => array('FieldValue' => array(), 'FieldType' => array('ServiceFeeEvent'), 'ListMemberName' => 'ServiceFeeEvent'),
-    'DebtRecoveryEventList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryEvent'), 'ListMemberName' => 'DebtRecoveryEvent'),
-    'LoanServicingEventList' => array('FieldValue' => array(), 'FieldType' => array('LoanServicingEvent'), 'ListMemberName' => 'LoanServicingEvent'),
-    'AdjustmentEventList' => array('FieldValue' => array(), 'FieldType' => array('AdjustmentEvent'), 'ListMemberName' => 'AdjustmentEvent'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ShipmentEventList'              => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+            'RefundEventList'                => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+            'GuaranteeClaimEventList'        => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+            'ChargebackEventList'            => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
+            'PayWithAmazonEventList'         => array('FieldValue' => array(), 'FieldType' => array('PayWithAmazonEvent'), 'ListMemberName' => 'PayWithAmazonEvent'),
+            'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array('SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
+            'RetrochargeEventList'           => array('FieldValue' => array(), 'FieldType' => array('RetrochargeEvent'), 'ListMemberName' => 'RetrochargeEvent'),
+            'RentalTransactionEventList'     => array('FieldValue' => array(), 'FieldType' => array('RentalTransactionEvent'), 'ListMemberName' => 'RentalTransactionEvent'),
+            'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array('PerformanceBondRefundEvent'), 'ListMemberName' => 'PerformanceBondRefundEvent'),
+            'ServiceFeeEventList'            => array('FieldValue' => array(), 'FieldType' => array('ServiceFeeEvent'), 'ListMemberName' => 'ServiceFeeEvent'),
+            'DebtRecoveryEventList'          => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryEvent'), 'ListMemberName' => 'DebtRecoveryEvent'),
+            'LoanServicingEventList'         => array('FieldValue' => array(), 'FieldType' => array('LoanServicingEvent'), 'ListMemberName' => 'LoanServicingEvent'),
+            'AdjustmentEventList'            => array('FieldValue' => array(), 'FieldType' => array('AdjustmentEvent'), 'ListMemberName' => 'AdjustmentEvent'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +53,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getShipmentEventList()
     {
-        if ($this->_fields['ShipmentEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ShipmentEventList']['FieldValue'] == null) {
             $this->_fields['ShipmentEventList']['FieldValue'] = array();
         }
         return $this->_fields['ShipmentEventList']['FieldValue'];
@@ -92,8 +89,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetShipmentEventList()
     {
-                return !empty($this->_fields['ShipmentEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['ShipmentEventList']['FieldValue']);
+    }
 
     /**
      * Add values for ShipmentEventList, return this.
@@ -105,8 +102,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withShipmentEventList()
     {
-        foreach (func_get_args() as $ShipmentEventList)
-        {
+        foreach (func_get_args() as $ShipmentEventList) {
             $this->_fields['ShipmentEventList']['FieldValue'][] = $ShipmentEventList;
         }
         return $this;
@@ -119,8 +115,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getRefundEventList()
     {
-        if ($this->_fields['RefundEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['RefundEventList']['FieldValue'] == null) {
             $this->_fields['RefundEventList']['FieldValue'] = array();
         }
         return $this->_fields['RefundEventList']['FieldValue'];
@@ -156,8 +151,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRefundEventList()
     {
-                return !empty($this->_fields['RefundEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['RefundEventList']['FieldValue']);
+    }
 
     /**
      * Add values for RefundEventList, return this.
@@ -169,8 +164,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withRefundEventList()
     {
-        foreach (func_get_args() as $RefundEventList)
-        {
+        foreach (func_get_args() as $RefundEventList) {
             $this->_fields['RefundEventList']['FieldValue'][] = $RefundEventList;
         }
         return $this;
@@ -183,8 +177,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getGuaranteeClaimEventList()
     {
-        if ($this->_fields['GuaranteeClaimEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['GuaranteeClaimEventList']['FieldValue'] == null) {
             $this->_fields['GuaranteeClaimEventList']['FieldValue'] = array();
         }
         return $this->_fields['GuaranteeClaimEventList']['FieldValue'];
@@ -220,8 +213,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetGuaranteeClaimEventList()
     {
-                return !empty($this->_fields['GuaranteeClaimEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['GuaranteeClaimEventList']['FieldValue']);
+    }
 
     /**
      * Add values for GuaranteeClaimEventList, return this.
@@ -233,8 +226,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withGuaranteeClaimEventList()
     {
-        foreach (func_get_args() as $GuaranteeClaimEventList)
-        {
+        foreach (func_get_args() as $GuaranteeClaimEventList) {
             $this->_fields['GuaranteeClaimEventList']['FieldValue'][] = $GuaranteeClaimEventList;
         }
         return $this;
@@ -247,8 +239,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getChargebackEventList()
     {
-        if ($this->_fields['ChargebackEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ChargebackEventList']['FieldValue'] == null) {
             $this->_fields['ChargebackEventList']['FieldValue'] = array();
         }
         return $this->_fields['ChargebackEventList']['FieldValue'];
@@ -284,8 +275,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetChargebackEventList()
     {
-                return !empty($this->_fields['ChargebackEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['ChargebackEventList']['FieldValue']);
+    }
 
     /**
      * Add values for ChargebackEventList, return this.
@@ -297,8 +288,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withChargebackEventList()
     {
-        foreach (func_get_args() as $ChargebackEventList)
-        {
+        foreach (func_get_args() as $ChargebackEventList) {
             $this->_fields['ChargebackEventList']['FieldValue'][] = $ChargebackEventList;
         }
         return $this;
@@ -311,8 +301,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getPayWithAmazonEventList()
     {
-        if ($this->_fields['PayWithAmazonEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['PayWithAmazonEventList']['FieldValue'] == null) {
             $this->_fields['PayWithAmazonEventList']['FieldValue'] = array();
         }
         return $this->_fields['PayWithAmazonEventList']['FieldValue'];
@@ -348,8 +337,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPayWithAmazonEventList()
     {
-                return !empty($this->_fields['PayWithAmazonEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['PayWithAmazonEventList']['FieldValue']);
+    }
 
     /**
      * Add values for PayWithAmazonEventList, return this.
@@ -361,8 +350,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withPayWithAmazonEventList()
     {
-        foreach (func_get_args() as $PayWithAmazonEventList)
-        {
+        foreach (func_get_args() as $PayWithAmazonEventList) {
             $this->_fields['PayWithAmazonEventList']['FieldValue'][] = $PayWithAmazonEventList;
         }
         return $this;
@@ -375,8 +363,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getServiceProviderCreditEventList()
     {
-        if ($this->_fields['ServiceProviderCreditEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ServiceProviderCreditEventList']['FieldValue'] == null) {
             $this->_fields['ServiceProviderCreditEventList']['FieldValue'] = array();
         }
         return $this->_fields['ServiceProviderCreditEventList']['FieldValue'];
@@ -412,8 +399,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetServiceProviderCreditEventList()
     {
-                return !empty($this->_fields['ServiceProviderCreditEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['ServiceProviderCreditEventList']['FieldValue']);
+    }
 
     /**
      * Add values for ServiceProviderCreditEventList, return this.
@@ -425,8 +412,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withServiceProviderCreditEventList()
     {
-        foreach (func_get_args() as $ServiceProviderCreditEventList)
-        {
+        foreach (func_get_args() as $ServiceProviderCreditEventList) {
             $this->_fields['ServiceProviderCreditEventList']['FieldValue'][] = $ServiceProviderCreditEventList;
         }
         return $this;
@@ -439,8 +425,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getRetrochargeEventList()
     {
-        if ($this->_fields['RetrochargeEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['RetrochargeEventList']['FieldValue'] == null) {
             $this->_fields['RetrochargeEventList']['FieldValue'] = array();
         }
         return $this->_fields['RetrochargeEventList']['FieldValue'];
@@ -476,8 +461,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRetrochargeEventList()
     {
-                return !empty($this->_fields['RetrochargeEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['RetrochargeEventList']['FieldValue']);
+    }
 
     /**
      * Add values for RetrochargeEventList, return this.
@@ -489,8 +474,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withRetrochargeEventList()
     {
-        foreach (func_get_args() as $RetrochargeEventList)
-        {
+        foreach (func_get_args() as $RetrochargeEventList) {
             $this->_fields['RetrochargeEventList']['FieldValue'][] = $RetrochargeEventList;
         }
         return $this;
@@ -503,8 +487,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getRentalTransactionEventList()
     {
-        if ($this->_fields['RentalTransactionEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['RentalTransactionEventList']['FieldValue'] == null) {
             $this->_fields['RentalTransactionEventList']['FieldValue'] = array();
         }
         return $this->_fields['RentalTransactionEventList']['FieldValue'];
@@ -540,8 +523,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetRentalTransactionEventList()
     {
-                return !empty($this->_fields['RentalTransactionEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['RentalTransactionEventList']['FieldValue']);
+    }
 
     /**
      * Add values for RentalTransactionEventList, return this.
@@ -553,8 +536,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withRentalTransactionEventList()
     {
-        foreach (func_get_args() as $RentalTransactionEventList)
-        {
+        foreach (func_get_args() as $RentalTransactionEventList) {
             $this->_fields['RentalTransactionEventList']['FieldValue'][] = $RentalTransactionEventList;
         }
         return $this;
@@ -567,8 +549,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getPerformanceBondRefundEventList()
     {
-        if ($this->_fields['PerformanceBondRefundEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['PerformanceBondRefundEventList']['FieldValue'] == null) {
             $this->_fields['PerformanceBondRefundEventList']['FieldValue'] = array();
         }
         return $this->_fields['PerformanceBondRefundEventList']['FieldValue'];
@@ -604,8 +585,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPerformanceBondRefundEventList()
     {
-                return !empty($this->_fields['PerformanceBondRefundEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['PerformanceBondRefundEventList']['FieldValue']);
+    }
 
     /**
      * Add values for PerformanceBondRefundEventList, return this.
@@ -617,8 +598,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withPerformanceBondRefundEventList()
     {
-        foreach (func_get_args() as $PerformanceBondRefundEventList)
-        {
+        foreach (func_get_args() as $PerformanceBondRefundEventList) {
             $this->_fields['PerformanceBondRefundEventList']['FieldValue'][] = $PerformanceBondRefundEventList;
         }
         return $this;
@@ -631,8 +611,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getServiceFeeEventList()
     {
-        if ($this->_fields['ServiceFeeEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ServiceFeeEventList']['FieldValue'] == null) {
             $this->_fields['ServiceFeeEventList']['FieldValue'] = array();
         }
         return $this->_fields['ServiceFeeEventList']['FieldValue'];
@@ -668,8 +647,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetServiceFeeEventList()
     {
-                return !empty($this->_fields['ServiceFeeEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['ServiceFeeEventList']['FieldValue']);
+    }
 
     /**
      * Add values for ServiceFeeEventList, return this.
@@ -681,8 +660,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withServiceFeeEventList()
     {
-        foreach (func_get_args() as $ServiceFeeEventList)
-        {
+        foreach (func_get_args() as $ServiceFeeEventList) {
             $this->_fields['ServiceFeeEventList']['FieldValue'][] = $ServiceFeeEventList;
         }
         return $this;
@@ -695,8 +673,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getDebtRecoveryEventList()
     {
-        if ($this->_fields['DebtRecoveryEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['DebtRecoveryEventList']['FieldValue'] == null) {
             $this->_fields['DebtRecoveryEventList']['FieldValue'] = array();
         }
         return $this->_fields['DebtRecoveryEventList']['FieldValue'];
@@ -732,8 +709,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetDebtRecoveryEventList()
     {
-                return !empty($this->_fields['DebtRecoveryEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['DebtRecoveryEventList']['FieldValue']);
+    }
 
     /**
      * Add values for DebtRecoveryEventList, return this.
@@ -745,8 +722,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withDebtRecoveryEventList()
     {
-        foreach (func_get_args() as $DebtRecoveryEventList)
-        {
+        foreach (func_get_args() as $DebtRecoveryEventList) {
             $this->_fields['DebtRecoveryEventList']['FieldValue'][] = $DebtRecoveryEventList;
         }
         return $this;
@@ -759,8 +735,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getLoanServicingEventList()
     {
-        if ($this->_fields['LoanServicingEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['LoanServicingEventList']['FieldValue'] == null) {
             $this->_fields['LoanServicingEventList']['FieldValue'] = array();
         }
         return $this->_fields['LoanServicingEventList']['FieldValue'];
@@ -796,8 +771,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetLoanServicingEventList()
     {
-                return !empty($this->_fields['LoanServicingEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['LoanServicingEventList']['FieldValue']);
+    }
 
     /**
      * Add values for LoanServicingEventList, return this.
@@ -809,8 +784,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withLoanServicingEventList()
     {
-        foreach (func_get_args() as $LoanServicingEventList)
-        {
+        foreach (func_get_args() as $LoanServicingEventList) {
             $this->_fields['LoanServicingEventList']['FieldValue'][] = $LoanServicingEventList;
         }
         return $this;
@@ -823,8 +797,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getAdjustmentEventList()
     {
-        if ($this->_fields['AdjustmentEventList']['FieldValue'] == null)
-        {
+        if ($this->_fields['AdjustmentEventList']['FieldValue'] == null) {
             $this->_fields['AdjustmentEventList']['FieldValue'] = array();
         }
         return $this->_fields['AdjustmentEventList']['FieldValue'];
@@ -860,8 +833,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAdjustmentEventList()
     {
-                return !empty($this->_fields['AdjustmentEventList']['FieldValue']);
-            }
+        return !empty($this->_fields['AdjustmentEventList']['FieldValue']);
+    }
 
     /**
      * Add values for AdjustmentEventList, return this.
@@ -873,11 +846,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withAdjustmentEventList()
     {
-        foreach (func_get_args() as $AdjustmentEventList)
-        {
+        foreach (func_get_args() as $AdjustmentEventList) {
             $this->_fields['AdjustmentEventList']['FieldValue'][] = $AdjustmentEventList;
         }
         return $this;
     }
-
 }

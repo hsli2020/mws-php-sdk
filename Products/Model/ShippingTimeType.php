@@ -2,26 +2,24 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * ShippingTimeType
  *
  * Properties:
  * <ul>
- *
  * <li>Max: string</li>
- *
  * </ul>
  */
-
- class ShippingTimeType extends MarketplaceWebServiceProducts_Model {
-
+class ShippingTimeType extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Max' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Max' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -53,8 +51,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetMax()
     {
-                return !is_null($this->_fields['Max']['FieldValue']);
-            }
+        return !is_null($this->_fields['Max']['FieldValue']);
+    }
 
     /**
      * Set the value of Max, return this.
@@ -69,5 +67,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setMax($value);
         return $this;
     }
-
 }

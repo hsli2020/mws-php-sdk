@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
 
 /**
  * PriceToEstimateFees
  *
  * Properties:
  * <ul>
- *
  * <li>ListingPrice: MoneyType</li>
  * <li>Shipping: MoneyType</li>
  * <li>Points: Points</li>
- *
  * </ul>
  */
-
- class PriceToEstimateFees extends MarketplaceWebServiceProducts_Model {
-
+class PriceToEstimateFees extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'Shipping' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-    'Points' => array('FieldValue' => null, 'FieldType' => 'Points'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetListingPrice()
     {
-                return !is_null($this->_fields['ListingPrice']['FieldValue']);
-            }
+        return !is_null($this->_fields['ListingPrice']['FieldValue']);
+    }
 
     /**
      * Set the value of ListingPrice, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetShipping()
     {
-                return !is_null($this->_fields['Shipping']['FieldValue']);
-            }
+        return !is_null($this->_fields['Shipping']['FieldValue']);
+    }
 
     /**
      * Set the value of Shipping, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetPoints()
     {
-                return !is_null($this->_fields['Points']['FieldValue']);
-            }
+        return !is_null($this->_fields['Points']['FieldValue']);
+    }
 
     /**
      * Set the value of Points, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Products\Model;
         $this->setPoints($value);
         return $this;
     }
-
 }

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * ListInventorySupplyByNextTokenRequest
  *
@@ -13,17 +15,17 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>NextToken: string</li>
  * </ul>
  */
-class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model {
-
+class ListInventorySupplyByNextTokenRequest extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'SellerId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
+            'NextToken'    => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -55,8 +57,8 @@ class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerId']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerId, return this.
@@ -101,8 +103,8 @@ class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -147,8 +149,8 @@ class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model
      */
     public function isSetMarketplace()
     {
-                return !is_null($this->_fields['Marketplace']['FieldValue']);
-            }
+        return !is_null($this->_fields['Marketplace']['FieldValue']);
+    }
 
     /**
      * Set the value of Marketplace, return this.
@@ -193,8 +195,8 @@ class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return !is_null($this->_fields['NextToken']['FieldValue']);
+    }
 
     /**
      * Set the value of NextToken, return this.
@@ -209,5 +211,4 @@ class ListInventorySupplyByNextTokenRequest extends FBAInventoryServiceMWS_Model
         $this->setNextToken($value);
         return $this;
     }
-
 }

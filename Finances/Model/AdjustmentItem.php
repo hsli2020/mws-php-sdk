@@ -2,12 +2,13 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
+
 /**
  * AdjustmentItem
  *
  * Properties:
  * <ul>
- *
  * <li>Quantity: string</li>
  * <li>PerUnitAmount: Currency</li>
  * <li>TotalAmount: Currency</li>
@@ -15,24 +16,22 @@ namespace Amazon\MWS\Finances\Model;
  * <li>FnSKU: string</li>
  * <li>ProductDescription: string</li>
  * <li>ASIN: string</li>
- *
  * </ul>
  */
-
- class AdjustmentItem extends MWSFinancesService_Model {
-
+class AdjustmentItem extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Quantity' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PerUnitAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'TotalAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FnSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProductDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ASIN' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Quantity'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PerUnitAmount'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'TotalAmount'        => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'SellerSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FnSKU'              => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ProductDescription' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ASIN'               => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -64,8 +63,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetQuantity()
     {
-                return !is_null($this->_fields['Quantity']['FieldValue']);
-            }
+        return !is_null($this->_fields['Quantity']['FieldValue']);
+    }
 
     /**
      * Set the value of Quantity, return this.
@@ -110,8 +109,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPerUnitAmount()
     {
-                return !is_null($this->_fields['PerUnitAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['PerUnitAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of PerUnitAmount, return this.
@@ -156,8 +155,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetTotalAmount()
     {
-                return !is_null($this->_fields['TotalAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['TotalAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of TotalAmount, return this.
@@ -202,8 +201,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetSellerSKU()
     {
-                return !is_null($this->_fields['SellerSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['SellerSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of SellerSKU, return this.
@@ -248,8 +247,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetFnSKU()
     {
-                return !is_null($this->_fields['FnSKU']['FieldValue']);
-            }
+        return !is_null($this->_fields['FnSKU']['FieldValue']);
+    }
 
     /**
      * Set the value of FnSKU, return this.
@@ -294,8 +293,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProductDescription()
     {
-                return !is_null($this->_fields['ProductDescription']['FieldValue']);
-            }
+        return !is_null($this->_fields['ProductDescription']['FieldValue']);
+    }
 
     /**
      * Set the value of ProductDescription, return this.
@@ -340,8 +339,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetASIN()
     {
-                return !is_null($this->_fields['ASIN']['FieldValue']);
-            }
+        return !is_null($this->_fields['ASIN']['FieldValue']);
+    }
 
     /**
      * Set the value of ASIN, return this.
@@ -356,5 +355,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setASIN($value);
         return $this;
     }
-
 }

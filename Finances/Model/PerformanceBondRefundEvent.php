@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * PerformanceBondRefundEvent
  *
  * Properties:
  * <ul>
- *
  * <li>MarketplaceCountryCode: string</li>
  * <li>Amount: Currency</li>
  * <li>ProductGroupList: array</li>
- *
  * </ul>
  */
-
- class PerformanceBondRefundEvent extends MWSFinancesService_Model {
-
+class PerformanceBondRefundEvent extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'MarketplaceCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    'ProductGroupList' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'ProductGroup'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'MarketplaceCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'Amount'                 => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ProductGroupList'       => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'ProductGroup'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetMarketplaceCountryCode()
     {
-                return !is_null($this->_fields['MarketplaceCountryCode']['FieldValue']);
-            }
+        return !is_null($this->_fields['MarketplaceCountryCode']['FieldValue']);
+    }
 
     /**
      * Set the value of MarketplaceCountryCode, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return !is_null($this->_fields['Amount']['FieldValue']);
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -127,8 +125,7 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function getProductGroupList()
     {
-        if ($this->_fields['ProductGroupList']['FieldValue'] == null)
-        {
+        if ($this->_fields['ProductGroupList']['FieldValue'] == null) {
             $this->_fields['ProductGroupList']['FieldValue'] = array();
         }
         return $this->_fields['ProductGroupList']['FieldValue'];
@@ -164,8 +161,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetProductGroupList()
     {
-                return !empty($this->_fields['ProductGroupList']['FieldValue']);
-            }
+        return !empty($this->_fields['ProductGroupList']['FieldValue']);
+    }
 
     /**
      * Add values for ProductGroupList, return this.
@@ -177,11 +174,9 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function withProductGroupList()
     {
-        foreach (func_get_args() as $ProductGroupList)
-        {
+        foreach (func_get_args() as $ProductGroupList) {
             $this->_fields['ProductGroupList']['FieldValue'][] = $ProductGroupList;
         }
         return $this;
     }
-
 }

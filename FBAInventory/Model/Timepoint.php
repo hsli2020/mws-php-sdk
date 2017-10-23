@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory\Model;
 
+use Amazon\MWS\FBAInventory\Model;
+
 /**
  * Timepoint
  *
@@ -11,15 +13,15 @@ namespace Amazon\MWS\FBAInventory\Model;
  * <li>DateTime: string</li>
  * </ul>
  */
-class Timepoint extends FBAInventoryServiceMWS_Model {
-
+class Timepoint extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'TimepointType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'TimepointType' => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DateTime'      => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -51,8 +53,8 @@ class Timepoint extends FBAInventoryServiceMWS_Model {
      */
     public function isSetTimepointType()
     {
-                return !is_null($this->_fields['TimepointType']['FieldValue']);
-            }
+        return !is_null($this->_fields['TimepointType']['FieldValue']);
+    }
 
     /**
      * Set the value of TimepointType, return this.
@@ -97,8 +99,8 @@ class Timepoint extends FBAInventoryServiceMWS_Model {
      */
     public function isSetDateTime()
     {
-                return !is_null($this->_fields['DateTime']['FieldValue']);
-            }
+        return !is_null($this->_fields['DateTime']['FieldValue']);
+    }
 
     /**
      * Set the value of DateTime, return this.
@@ -113,5 +115,4 @@ class Timepoint extends FBAInventoryServiceMWS_Model {
         $this->setDateTime($value);
         return $this;
     }
-
 }

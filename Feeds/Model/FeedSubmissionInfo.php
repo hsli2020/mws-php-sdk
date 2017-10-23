@@ -7,20 +7,16 @@ namespace Amazon\MWS\Feeds\Model;
  *
  * Properties:
  * <ul>
- *
  * <li>FeedSubmissionId: string</li>
  * <li>FeedType: string</li>
  * <li>SubmittedDate: string</li>
  * <li>FeedProcessingStatus: string</li>
  * <li>StartedProcessingDate: string</li>
  * <li>CompletedProcessingDate: string</li>
- *
  * </ul>
  */
-class FeedSubmissionInfo extends MarketplaceWebService_Model
+class FeedSubmissionInfo extends Model
 {
-
-
     /**
      * Construct new FeedSubmissionInfo
      *
@@ -28,30 +24,28 @@ class FeedSubmissionInfo extends MarketplaceWebService_Model
      *
      * Valid properties:
      * <ul>
-     *
      * <li>FeedSubmissionId: string</li>
      * <li>FeedType: string</li>
      * <li>SubmittedDate: string</li>
      * <li>FeedProcessingStatus: string</li>
      * <li>StartedProcessingDate: string</li>
      * <li>CompletedProcessingDate: string</li>
-     *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'FeedSubmissionId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'FeedProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'CompletedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'FeedSubmissionId'        => array('FieldValue' => null, 'FieldType' => 'string'),
+            'FeedType'                => array('FieldValue' => null, 'FieldType' => 'string'),
+            'SubmittedDate'           => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'FeedProcessingStatus'    => array('FieldValue' => null, 'FieldType' => 'string'),
+            'StartedProcessingDate'   => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+            'CompletedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
         parent::__construct($data);
     }
 
-        /**
+    /**
      * Gets the value of the FeedSubmissionId property.
      *
      * @return string FeedSubmissionId
@@ -320,8 +314,4 @@ class FeedSubmissionInfo extends MarketplaceWebService_Model
     {
         return !is_null($this->fields['CompletedProcessingDate']['FieldValue']);
     }
-
-
-
-
 }

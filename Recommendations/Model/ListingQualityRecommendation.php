@@ -2,13 +2,13 @@
 
 namespace Amazon\MWS\Recommendations\Model;
 
+use Amazon\MWS\Recommendations\Model;
 
 /**
  * ListingQualityRecommendation
  *
  * Properties:
  * <ul>
- *
  * <li>QualitySet: string</li>
  * <li>DefectGroup: string</li>
  * <li>DefectAttribute: string</li>
@@ -16,24 +16,22 @@ namespace Amazon\MWS\Recommendations\Model;
  * <li>ItemName: string</li>
  * <li>RecommendationId: string</li>
  * <li>RecommendationReason: string</li>
- *
  * </ul>
  */
-
- class ListingQualityRecommendation extends MWSRecommendationsSectionService_Model {
-
+class ListingQualityRecommendation extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'QualitySet' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DefectGroup' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'DefectAttribute' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
-    'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'QualitySet'           => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DefectGroup'          => array('FieldValue' => null, 'FieldType' => 'string'),
+            'DefectAttribute'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'ItemIdentifier'       => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemName'             => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecommendationId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -65,8 +63,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetQualitySet()
     {
-                return !is_null($this->_fields['QualitySet']['FieldValue']);
-            }
+        return !is_null($this->_fields['QualitySet']['FieldValue']);
+    }
 
     /**
      * Set the value of QualitySet, return this.
@@ -111,8 +109,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetDefectGroup()
     {
-                return !is_null($this->_fields['DefectGroup']['FieldValue']);
-            }
+        return !is_null($this->_fields['DefectGroup']['FieldValue']);
+    }
 
     /**
      * Set the value of DefectGroup, return this.
@@ -157,8 +155,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetDefectAttribute()
     {
-                return !is_null($this->_fields['DefectAttribute']['FieldValue']);
-            }
+        return !is_null($this->_fields['DefectAttribute']['FieldValue']);
+    }
 
     /**
      * Set the value of DefectAttribute, return this.
@@ -203,8 +201,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemIdentifier()
     {
-                return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemIdentifier']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemIdentifier, return this.
@@ -249,8 +247,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetItemName()
     {
-                return !is_null($this->_fields['ItemName']['FieldValue']);
-            }
+        return !is_null($this->_fields['ItemName']['FieldValue']);
+    }
 
     /**
      * Set the value of ItemName, return this.
@@ -295,8 +293,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationId()
     {
-                return !is_null($this->_fields['RecommendationId']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationId']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationId, return this.
@@ -341,8 +339,8 @@ namespace Amazon\MWS\Recommendations\Model;
      */
     public function isSetRecommendationReason()
     {
-                return !is_null($this->_fields['RecommendationReason']['FieldValue']);
-            }
+        return !is_null($this->_fields['RecommendationReason']['FieldValue']);
+    }
 
     /**
      * Set the value of RecommendationReason, return this.
@@ -357,5 +355,4 @@ namespace Amazon\MWS\Recommendations\Model;
         $this->setRecommendationReason($value);
         return $this;
     }
-
 }

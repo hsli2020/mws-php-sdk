@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\Finances\Model;
 
+use Amazon\MWS\Finances\Model;
 
 /**
  * Promotion
  *
  * Properties:
  * <ul>
- *
  * <li>PromotionType: string</li>
  * <li>PromotionId: string</li>
  * <li>PromotionAmount: Currency</li>
- *
  * </ul>
  */
-
- class Promotion extends MWSFinancesService_Model {
-
+class Promotion extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PromotionType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PromotionId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PromotionAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'PromotionType'   => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PromotionId'     => array('FieldValue' => null, 'FieldType' => 'string'),
+            'PromotionAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPromotionType()
     {
-                return !is_null($this->_fields['PromotionType']['FieldValue']);
-            }
+        return !is_null($this->_fields['PromotionType']['FieldValue']);
+    }
 
     /**
      * Set the value of PromotionType, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPromotionId()
     {
-                return !is_null($this->_fields['PromotionId']['FieldValue']);
-            }
+        return !is_null($this->_fields['PromotionId']['FieldValue']);
+    }
 
     /**
      * Set the value of PromotionId, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\Finances\Model;
      */
     public function isSetPromotionAmount()
     {
-                return !is_null($this->_fields['PromotionAmount']['FieldValue']);
-            }
+        return !is_null($this->_fields['PromotionAmount']['FieldValue']);
+    }
 
     /**
      * Set the value of PromotionAmount, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\Finances\Model;
         $this->setPromotionAmount($value);
         return $this;
     }
-
 }

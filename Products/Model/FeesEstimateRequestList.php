@@ -2,26 +2,25 @@
 
 namespace Amazon\MWS\Products\Model;
 
+use Amazon\MWS\Products\Model;
+
 
 /**
  * FeesEstimateRequestList
  *
  * Properties:
  * <ul>
- *
  * <li>FeesEstimateRequest: array</li>
- *
  * </ul>
  */
-
- class FeesEstimateRequestList extends MarketplaceWebServiceProducts_Model {
-
+class FeesEstimateRequestList extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'FeesEstimateRequest' => array('FieldValue' => array(), 'FieldType' => array('FeesEstimateRequest')),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'FeesEstimateRequest' => array('FieldValue' => array(), 'FieldType' => array('FeesEstimateRequest')),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -31,8 +30,7 @@ namespace Amazon\MWS\Products\Model;
      */
     public function getFeesEstimateRequest()
     {
-        if ($this->_fields['FeesEstimateRequest']['FieldValue'] == null)
-        {
+        if ($this->_fields['FeesEstimateRequest']['FieldValue'] == null) {
             $this->_fields['FeesEstimateRequest']['FieldValue'] = array();
         }
         return $this->_fields['FeesEstimateRequest']['FieldValue'];
@@ -68,8 +66,8 @@ namespace Amazon\MWS\Products\Model;
      */
     public function isSetFeesEstimateRequest()
     {
-                return !empty($this->_fields['FeesEstimateRequest']['FieldValue']);
-            }
+        return !empty($this->_fields['FeesEstimateRequest']['FieldValue']);
+    }
 
     /**
      * Add values for FeesEstimateRequest, return this.
@@ -81,11 +79,9 @@ namespace Amazon\MWS\Products\Model;
      */
     public function withFeesEstimateRequest()
     {
-        foreach (func_get_args() as $FeesEstimateRequest)
-        {
+        foreach (func_get_args() as $FeesEstimateRequest) {
             $this->_fields['FeesEstimateRequest']['FieldValue'][] = $FeesEstimateRequest;
         }
         return $this;
     }
-
 }

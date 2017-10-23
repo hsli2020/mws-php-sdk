@@ -2,30 +2,28 @@
 
 namespace Amazon\MWS\MerchantFulfillment\Model;
 
+use Amazon\MWS\MerchantFulfillment\Model;
 
 /**
  * LabelDimensions
  *
  * Properties:
  * <ul>
- *
  * <li>Length: float</li>
  * <li>Width: float</li>
  * <li>Unit: string</li>
- *
  * </ul>
  */
-
- class LabelDimensions extends MWSMerchantFulfillmentService_Model {
-
+class LabelDimensions extends Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Length' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Width' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'Unit' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = array (
+            'Length' => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Width'  => array('FieldValue' => null, 'FieldType' => 'float'),
+            'Unit'   => array('FieldValue' => null, 'FieldType' => 'string'),
+        );
+        parent::__construct($data);
     }
 
     /**
@@ -57,8 +55,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetLength()
     {
-                return !is_null($this->_fields['Length']['FieldValue']);
-            }
+        return !is_null($this->_fields['Length']['FieldValue']);
+    }
 
     /**
      * Set the value of Length, return this.
@@ -103,8 +101,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetWidth()
     {
-                return !is_null($this->_fields['Width']['FieldValue']);
-            }
+        return !is_null($this->_fields['Width']['FieldValue']);
+    }
 
     /**
      * Set the value of Width, return this.
@@ -149,8 +147,8 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
      */
     public function isSetUnit()
     {
-                return !is_null($this->_fields['Unit']['FieldValue']);
-            }
+        return !is_null($this->_fields['Unit']['FieldValue']);
+    }
 
     /**
      * Set the value of Unit, return this.
@@ -165,5 +163,4 @@ namespace Amazon\MWS\MerchantFulfillment\Model;
         $this->setUnit($value);
         return $this;
     }
-
 }

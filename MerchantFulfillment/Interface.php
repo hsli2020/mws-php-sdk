@@ -2,9 +2,8 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
-interface  MWSMerchantFulfillmentService_Interface
+interface MerchantFulfillmentInterface
 {
-
     /**
      * Cancel Shipment
      * Cancels an existing shipment.  This will only succeed if the cancellation window has not passed and if the shipment

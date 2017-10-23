@@ -2,9 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions;
 
-interface  MWSSubscriptionsService_Interface
+interface SubscriptionsInterface
 {
-
     /**
      * Create Subscription
      * Create a new subscription.

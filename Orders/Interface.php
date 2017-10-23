@@ -2,9 +2,8 @@
 
 namespace Amazon\MWS\Orders;
 
-interface  MarketplaceWebServiceOrders_Interface
+interface OrdersInterface
 {
-
     /**
      * Get Order
      * This operation takes up to 50 order ids and returns the corresponding orders.

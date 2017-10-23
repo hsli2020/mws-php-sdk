@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Finances;
 
-interface  FinancesInterface
+interface FinancesInterface
 {
     /**
      * List Financial Event Groups

@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Sellers;
 
-interface  MarketplaceWebServiceSellers_Interface
+interface SellersInterface
 {
     public function getServiceStatus($request);
 

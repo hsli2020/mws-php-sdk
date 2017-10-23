@@ -2,9 +2,8 @@
 
 namespace Amazon\MWS\Recommendations;
 
-interface  MWSRecommendationsSectionService_Interface
+interface RecommendationsInterface
 {
-
     /**
      * Get Last Updated Time For Recommendations
      * Retrieving last updated time for all recommendation categories for the given marketplace and seller.

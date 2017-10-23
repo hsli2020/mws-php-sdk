@@ -5,7 +5,7 @@ namespace Amazon\MWS\Reports;
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
  */
-interface  MarketplaceWebService_Interface
+interface ReportsInterface
 {
     /**
      * Get Report
@@ -23,6 +23,7 @@ interface  MarketplaceWebService_Interface
      */
     public function getReport($request);
 
+
     /**
      * Get Report Schedule Count
      * returns the number of report schedules
@@ -36,7 +37,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getReportScheduleCount($request);
-
 
 
     /**
@@ -54,7 +54,6 @@ interface  MarketplaceWebService_Interface
     public function getReportRequestListByNextToken($request);
 
 
-
     /**
      * Update Report Acknowledgements
      * The UpdateReportAcknowledgements operation updates the acknowledged status of one or more reports.
@@ -68,7 +67,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function updateReportAcknowledgements($request);
-
 
 
     /**
@@ -90,7 +88,6 @@ interface  MarketplaceWebService_Interface
     public function submitFeed($request);
 
 
-
     /**
      * Get Report Count
      * returns a count of reports matching your criteria;
@@ -108,7 +105,6 @@ interface  MarketplaceWebService_Interface
     public function getReportCount($request);
 
 
-
     /**
      * Get Feed Submission List By Next Token
      * retrieve the next batch of list items and if there are more items to retrieve
@@ -122,7 +118,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getFeedSubmissionListByNextToken($request);
-
 
 
     /**
@@ -141,7 +136,6 @@ interface  MarketplaceWebService_Interface
     public function cancelFeedSubmissions($request);
 
 
-
     /**
      * Request Report
      * requests the generation of a report
@@ -157,7 +151,6 @@ interface  MarketplaceWebService_Interface
     public function requestReport($request);
 
 
-
     /**
      * Get Feed Submission Count
      * returns the number of feeds matching all of the specified criteria
@@ -171,7 +164,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getFeedSubmissionCount($request);
-
 
 
     /**
@@ -190,7 +182,6 @@ interface  MarketplaceWebService_Interface
     public function cancelReportRequests($request);
 
 
-
     /**
      * Get Report List
      * returns a list of reports; by default the most recent ten reports,
@@ -205,7 +196,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getReportList($request);
-
 
 
     /**
@@ -223,7 +213,6 @@ interface  MarketplaceWebService_Interface
     public function getFeedSubmissionResult($request);
 
 
-
     /**
      * Get Feed Submission List
      * returns a list of feed submission identifiers and their associated metadata
@@ -237,7 +226,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getFeedSubmissionList($request);
-
 
 
     /**
@@ -255,7 +243,6 @@ interface  MarketplaceWebService_Interface
     public function getReportRequestList($request);
 
 
-
     /**
      * Get Report Schedule List By Next Token
      * retrieve the next batch of list items and if there are more items to retrieve
@@ -271,7 +258,6 @@ interface  MarketplaceWebService_Interface
     public function getReportScheduleListByNextToken($request);
 
 
-
     /**
      * Get Report List By Next Token
      * retrieve the next batch of list items and if there are more items to retrieve
@@ -285,7 +271,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getReportListByNextToken($request);
-
 
 
     /**
@@ -304,7 +289,6 @@ interface  MarketplaceWebService_Interface
     public function manageReportSchedule($request);
 
 
-
     /**
      * Get Report Request Count
      * returns a count of report requests; by default all the report
@@ -319,7 +303,6 @@ interface  MarketplaceWebService_Interface
      * @throws MarketplaceWebService_Exception
      */
     public function getReportRequestCount($request);
-
 
 
     /**

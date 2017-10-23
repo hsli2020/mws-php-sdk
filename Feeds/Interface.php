@@ -5,7 +5,7 @@ namespace Amazon\MWS\Feeds;
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
  */
-interface  FeedsInterface
+interface FeedsInterface
 {
     /**
      * Get Report

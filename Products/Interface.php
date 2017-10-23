@@ -2,9 +2,8 @@
 
 namespace Amazon\MWS\Products;
 
-interface  MarketplaceWebServiceProducts_Interface
+interface ProductsInterface
 {
-
     /**
      * Get Competitive Pricing For ASIN
      * Gets competitive pricing and related information for a product identified by

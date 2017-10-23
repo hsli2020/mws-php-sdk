@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\FBAInbound;
 
-interface  FBAInboundInterface
+interface FBAInboundInterface
 {
     /**
      * Confirm Preorder

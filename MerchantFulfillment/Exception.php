@@ -6,7 +6,7 @@ namespace Amazon\MWS\MerchantFulfillment;
  * MWS Merchant Fulfillment Service Exception provides details of errors
  * returned by MWS Merchant Fulfillment Service service
  */
-class MerchantFulfillmentException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

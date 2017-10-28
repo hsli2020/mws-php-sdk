@@ -6,7 +6,7 @@ namespace Amazon\MWS\Orders;
  * Marketplace Web Service Orders Exception provides details of errors
  * returned by Marketplace Web Service Orders service
  */
-class OrdersException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

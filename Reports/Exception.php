@@ -6,7 +6,7 @@ namespace Amazon\MWS\Reports;
  * Marketplace Web Service  Exception provides details of errors
  * returned by Marketplace Web Service  service
  */
-class ReportsException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     protected $message = null;

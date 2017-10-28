@@ -6,7 +6,7 @@ namespace Amazon\MWS\Sellers;
  * Marketplace Web Service Sellers Exception provides details of errors
  * returned by Marketplace Web Service Sellers service
  */
-class SellersException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

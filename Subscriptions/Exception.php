@@ -6,7 +6,7 @@ namespace Amazon\MWS\Subscriptions;
  * MWS Subscriptions Service Exception provides details of errors
  * returned by MWS Subscriptions Service service
  */
-class SubscriptionsException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

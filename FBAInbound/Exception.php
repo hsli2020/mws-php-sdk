@@ -6,7 +6,7 @@ namespace Amazon\MWS\FBAInbound;
  * FBA Inbound Service MWS Exception provides details of errors
  * returned by FBA Inbound Service MWS service
  */
-class FBAInboundException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

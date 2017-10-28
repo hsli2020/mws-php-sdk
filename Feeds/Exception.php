@@ -6,7 +6,7 @@ namespace Amazon\MWS\Feeds;
  * Marketplace Web Service  Exception provides details of errors
  * returned by Marketplace Web Service  service
  */
-class FeedsException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     protected $message = null;

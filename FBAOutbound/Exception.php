@@ -6,7 +6,7 @@ namespace Amazon\MWS\FBAOutbound;
  * FBA Outbound Service MWS Exception provides details of errors
  * returned by FBA Outbound Service MWS service
  */
-class FBAOutboundException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

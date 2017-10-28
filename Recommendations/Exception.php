@@ -6,7 +6,7 @@ namespace Amazon\MWS\Recommendations;
  * MWS Recommendations Section Service Exception provides details of errors
  * returned by MWS Recommendations Section Service service
  */
-class RecommendationsException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

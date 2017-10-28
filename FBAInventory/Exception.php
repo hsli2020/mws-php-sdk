@@ -6,7 +6,7 @@ namespace Amazon\MWS\FBAInventory;
  * FBA Inventory Service MWS Exception provides details of errors
  * returned by FBA Inventory Service MWS service
  */
-class FBAInventoryException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

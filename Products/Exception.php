@@ -6,7 +6,7 @@ namespace Amazon\MWS\Products;
  * Marketplace Web Service Products Exception provides details of errors
  * returned by Marketplace Web Service Products service
  */
-class ProductsException extends \Exception
+class Exception extends \Exception
 {
     /** @var string */
     private $_message = null;

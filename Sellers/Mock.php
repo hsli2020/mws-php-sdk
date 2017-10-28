@@ -20,7 +20,7 @@ class Mock implements SellersInterface
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceSellers_Exception
+     * @throws SellersException
      */
     public function getServiceStatus($request)
     {
@@ -36,7 +36,7 @@ class Mock implements SellersInterface
      * @see ListMarketplaceParticipations
      * @return ListMarketplaceParticipationsResponse
      *
-     * @throws MarketplaceWebServiceSellers_Exception
+     * @throws SellersException
      */
     public function listMarketplaceParticipations($request)
     {
@@ -53,7 +53,7 @@ class Mock implements SellersInterface
      * @see ListMarketplaceParticipationsByNextToken
      * @return ListMarketplaceParticipationsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceSellers_Exception
+     * @throws SellersException
      */
     public function listMarketplaceParticipationsByNextToken($request)
     {

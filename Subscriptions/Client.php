@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Subscriptions;
 
-use Amazon\MWS\Subscriptions\Exception;
+use Amazon\MWS\Subscriptions\Exception as SubscriptionsException;
 use Amazon\MWS\Subscriptions\Model\CreateSubscriptionInput;
 use Amazon\MWS\Subscriptions\Model\CreateSubscriptionResponse;
 use Amazon\MWS\Subscriptions\Model\DeleteSubscriptionInput;
@@ -30,7 +30,7 @@ use Amazon\MWS\Subscriptions\Model\UpdateSubscriptionResponse;
  */
 class Client implements SubscriptionsInterface
 {
-    const SERVICE_VERSION = '2013-07-01';
+    const SERVICE_VERSION    = '2013-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
     /** @var string */
@@ -61,7 +61,7 @@ class Client implements SubscriptionsInterface
      * @see CreateSubscriptionInput
      * @return CreateSubscriptionResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function createSubscription($request)
     {
@@ -111,7 +111,7 @@ class Client implements SubscriptionsInterface
      * @see DeleteSubscriptionInput
      * @return DeleteSubscriptionResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function deleteSubscription($request)
     {
@@ -164,7 +164,7 @@ class Client implements SubscriptionsInterface
      * @see DeregisterDestinationInput
      * @return DeregisterDestinationResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function deregisterDestination($request)
     {
@@ -214,7 +214,7 @@ class Client implements SubscriptionsInterface
      * @see GetSubscriptionInput
      * @return GetSubscriptionResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function getSubscription($request)
     {
@@ -267,7 +267,7 @@ class Client implements SubscriptionsInterface
      * @see ListRegisteredDestinationsInput
      * @return ListRegisteredDestinationsResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function listRegisteredDestinations($request)
     {
@@ -311,7 +311,7 @@ class Client implements SubscriptionsInterface
      * @see ListSubscriptionsInput
      * @return ListSubscriptionsResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function listSubscriptions($request)
     {
@@ -355,7 +355,7 @@ class Client implements SubscriptionsInterface
      * @see RegisterDestinationInput
      * @return RegisterDestinationResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function registerDestination($request)
     {
@@ -405,7 +405,7 @@ class Client implements SubscriptionsInterface
      * @see SendTestNotificationToDestinationInput
      * @return SendTestNotificationToDestinationResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function sendTestNotificationToDestination($request)
     {
@@ -455,7 +455,7 @@ class Client implements SubscriptionsInterface
      * @see UpdateSubscriptionInput
      * @return UpdateSubscriptionResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function updateSubscription($request)
     {
@@ -500,12 +500,11 @@ class Client implements SubscriptionsInterface
     /**
      * Get Service Status
      *
-     *
      * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws Exception
+     * @throws SubscriptionsException
      */
     public function getServiceStatus($request)
     {
@@ -779,9 +778,9 @@ class Client implements SubscriptionsInterface
         $allHeaders['Content-Type'] = "application/x-www-form-urlencoded; charset=utf-8"; // We need to make sure to set utf-8 encoding here
         $allHeaders['Expect'] = null; // Don't expect 100 Continue
         $allHeadersStr = array();
-        foreach($allHeaders as $name => $val) {
+        foreach ($allHeaders as $name => $val) {
             $str = $name . ": ";
-            if(isset($val)) {
+            if (isset($val)) {
                 $str = $str . $val;
             }
             $allHeadersStr[] = $str;
@@ -797,19 +796,19 @@ class Client implements SubscriptionsInterface
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
-        {
+
+        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
-        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null)
-        {
+
+        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
 
         $response = "";
         $response = curl_exec($ch);
 
-        if($response === false) {
+        if ($response === false) {
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -1073,9 +1072,7 @@ class Client implements SubscriptionsInterface
         } else {
             throw new Exception ("Non-supported signing method specified");
         }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
+        return base64_encode(hash_hmac($hash, $data, $key, true));
     }
 
     /**

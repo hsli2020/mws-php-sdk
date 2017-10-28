@@ -29,7 +29,7 @@ class Mock implements FeedsInterface
      * @see SubmitFeed
      * @return SubmitFeedResponse SubmitFeedResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function submitFeed($request)
     {
@@ -45,7 +45,7 @@ class Mock implements FeedsInterface
      * @see GetFeedSubmissionListByNextToken
      * @return GetFeedSubmissionListByNextTokenResponse GetFeedSubmissionListByNextTokenResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function getFeedSubmissionListByNextToken($request)
     {
@@ -62,7 +62,7 @@ class Mock implements FeedsInterface
      * @see CancelFeedSubmissions
      * @return CancelFeedSubmissionsResponse CancelFeedSubmissionsResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function cancelFeedSubmissions($request)
     {
@@ -78,7 +78,7 @@ class Mock implements FeedsInterface
      * @see GetFeedSubmissionCount
      * @return GetFeedSubmissionCountResponse GetFeedSubmissionCountResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function getFeedSubmissionCount($request)
     {
@@ -94,7 +94,7 @@ class Mock implements FeedsInterface
      * @see GetFeedSubmissionResult
      * @return GetFeedSubmissionResultResponse GetFeedSubmissionResultResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function getFeedSubmissionResult($request)
     {
@@ -110,7 +110,7 @@ class Mock implements FeedsInterface
      * @see GetFeedSubmissionList
      * @return GetFeedSubmissionListResponse GetFeedSubmissionListResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws FeedsException
      */
     public function getFeedSubmissionList($request)
     {

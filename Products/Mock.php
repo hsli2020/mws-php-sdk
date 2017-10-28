@@ -31,7 +31,7 @@ class Mock implements ProductsInterface
      * @see GetCompetitivePricingForASIN
      * @return GetCompetitivePricingForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getCompetitivePricingForASIN($request)
     {
@@ -47,7 +47,7 @@ class Mock implements ProductsInterface
      * @see GetCompetitivePricingForSKU
      * @return GetCompetitivePricingForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getCompetitivePricingForSKU($request)
     {
@@ -63,7 +63,7 @@ class Mock implements ProductsInterface
      * @see GetLowestOfferListingsForASIN
      * @return GetLowestOfferListingsForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestOfferListingsForASIN($request)
     {
@@ -79,7 +79,7 @@ class Mock implements ProductsInterface
      * @see GetLowestOfferListingsForSKU
      * @return GetLowestOfferListingsForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestOfferListingsForSKU($request)
     {
@@ -95,7 +95,7 @@ class Mock implements ProductsInterface
      * @see GetLowestPricedOffersForASIN
      * @return GetLowestPricedOffersForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestPricedOffersForASIN($request)
     {
@@ -111,7 +111,7 @@ class Mock implements ProductsInterface
      * @see GetLowestPricedOffersForSKU
      * @return GetLowestPricedOffersForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getLowestPricedOffersForSKU($request)
     {
@@ -127,7 +127,7 @@ class Mock implements ProductsInterface
      * @see GetMatchingProduct
      * @return GetMatchingProductResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMatchingProduct($request)
     {
@@ -143,7 +143,7 @@ class Mock implements ProductsInterface
      * @see GetMatchingProductForId
      * @return GetMatchingProductForIdResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMatchingProductForId($request)
     {
@@ -160,7 +160,7 @@ class Mock implements ProductsInterface
      * @see GetMyFeesEstimate
      * @return GetMyFeesEstimateResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyFeesEstimate($request)
     {
@@ -175,7 +175,7 @@ class Mock implements ProductsInterface
      * @see GetMyPriceForASIN
      * @return GetMyPriceForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyPriceForASIN($request)
     {
@@ -190,7 +190,7 @@ class Mock implements ProductsInterface
      * @see GetMyPriceForSKU
      * @return GetMyPriceForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getMyPriceForSKU($request)
     {
@@ -206,7 +206,7 @@ class Mock implements ProductsInterface
      * @see GetProductCategoriesForASIN
      * @return GetProductCategoriesForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getProductCategoriesForASIN($request)
     {
@@ -222,7 +222,7 @@ class Mock implements ProductsInterface
      * @see GetProductCategoriesForSKU
      * @return GetProductCategoriesForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getProductCategoriesForSKU($request)
     {
@@ -239,7 +239,7 @@ class Mock implements ProductsInterface
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function getServiceStatus($request)
     {
@@ -255,7 +255,7 @@ class Mock implements ProductsInterface
      * @see ListMatchingProducts
      * @return ListMatchingProductsResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws ProductsException
      */
     public function listMatchingProducts($request)
     {

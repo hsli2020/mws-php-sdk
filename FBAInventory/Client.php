@@ -50,19 +50,17 @@ class Client implements FBAInventoryInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws Exception
+     * @throws FBAInventoryException
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -125,19 +123,17 @@ class Client implements FBAInventoryInterface
      * @see ListInventorySupplyRequest
      * @return ListInventorySupplyResponse
      *
-     * @throws Exception
+     * @throws FBAInventoryException
      */
     public function listInventorySupply($request)
     {
         if (!($request instanceof ListInventorySupplyRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInventorySupplyRequest.php');
             $request = new ListInventorySupplyRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInventorySupply';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyResponse.php');
         $response = ListInventorySupplyResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -190,19 +186,17 @@ class Client implements FBAInventoryInterface
      * @see ListInventorySupplyByNextTokenRequest
      * @return ListInventorySupplyByNextTokenResponse
      *
-     * @throws Exception
+     * @throws FBAInventoryException
      */
     public function listInventorySupplyByNextToken($request)
     {
         if (!($request instanceof ListInventorySupplyByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenRequest.php');
             $request = new ListInventorySupplyByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInventorySupplyByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenResponse.php');
         $response = ListInventorySupplyByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -395,8 +389,7 @@ class Client implements FBAInventoryInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new Exception(
+                throw new FBAInventoryException(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -418,8 +411,7 @@ class Client implements FBAInventoryInterface
         } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new FBAInventoryException(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -445,8 +437,7 @@ class Client implements FBAInventoryInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new Exception($exProps);
+        return new FBAInventoryException($exProps);
     }
 
     /**
@@ -477,9 +468,9 @@ class Client implements FBAInventoryInterface
         $allHeaders['Content-Type'] = "application/x-www-form-urlencoded; charset=utf-8"; // We need to make sure to set utf-8 encoding here
         $allHeaders['Expect'] = null; // Don't expect 100 Continue
         $allHeadersStr = array();
-        foreach($allHeaders as $name => $val) {
+        foreach ($allHeaders as $name => $val) {
             $str = $name . ": ";
-            if(isset($val)) {
+            if (isset($val)) {
                 $str = $str . $val;
             }
             $allHeadersStr[] = $str;
@@ -495,24 +486,23 @@ class Client implements FBAInventoryInterface
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
-        {
+
+        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
-        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null)
-        {
+
+        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
 
         $response = "";
         $response = curl_exec($ch);
 
-        if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
+        if ($response === false) {
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new Exception($exProps);
+            throw new FBAInventoryException($exProps);
         }
 
         curl_close($ch);
@@ -556,11 +546,10 @@ class Client implements FBAInventoryInterface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
+        if ($body == null){
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new Exception($exProps);
+            throw new FBAInventoryException($exProps);
         }
 
         return array(
@@ -624,7 +613,6 @@ class Client implements FBAInventoryInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],
@@ -774,9 +762,7 @@ class Client implements FBAInventoryInterface
         } else {
             throw new Exception ("Non-supported signing method specified");
         }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
+        return base64_encode(hash_hmac($hash, $data, $key, true));
     }
 
     /**

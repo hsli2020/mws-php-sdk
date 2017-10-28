@@ -29,7 +29,7 @@ class Exception extends \Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs MWSSubscriptionsService_Exception
+     * Constructs SubscriptionsException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>

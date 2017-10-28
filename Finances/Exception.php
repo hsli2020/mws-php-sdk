@@ -29,7 +29,7 @@ class Exception extends \Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs MWSFinancesService_Exception
+     * Constructs FinancesException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>
@@ -68,7 +68,7 @@ class Exception extends \Exception
 
     private function arr_val($arr, $key)
     {
-        if(array_key_exists($key, $arr)) {
+        if (array_key_exists($key, $arr)) {
             return $arr[$key];
         } else {
             return null;

@@ -27,7 +27,7 @@ class Mock implements FBAOutboundInterface
      * @see CancelFulfillmentOrder
      * @return CancelFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function cancelFulfillmentOrder($request)
     {
@@ -91,7 +91,7 @@ class Mock implements FBAOutboundInterface
      * @see CreateFulfillmentOrder
      * @return CreateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function createFulfillmentOrder($request)
     {
@@ -109,7 +109,7 @@ class Mock implements FBAOutboundInterface
      * @see GetFulfillmentOrder
      * @return GetFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getFulfillmentOrder($request)
     {
@@ -133,7 +133,7 @@ class Mock implements FBAOutboundInterface
      * @see GetFulfillmentPreview
      * @return GetFulfillmentPreviewResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getFulfillmentPreview($request)
     {
@@ -148,7 +148,7 @@ class Mock implements FBAOutboundInterface
      * @see GetPackageTrackingDetails
      * @return GetPackageTrackingDetailsResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getPackageTrackingDetails($request)
     {
@@ -166,7 +166,7 @@ class Mock implements FBAOutboundInterface
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function getServiceStatus($request)
     {
@@ -191,7 +191,7 @@ class Mock implements FBAOutboundInterface
      * @see ListAllFulfillmentOrders
      * @return ListAllFulfillmentOrdersResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function listAllFulfillmentOrders($request)
     {
@@ -210,7 +210,7 @@ class Mock implements FBAOutboundInterface
      * @see ListAllFulfillmentOrdersByNextToken
      * @return ListAllFulfillmentOrdersByNextTokenResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function listAllFulfillmentOrdersByNextToken($request)
     {
@@ -268,7 +268,7 @@ class Mock implements FBAOutboundInterface
      * @see UpdateFulfillmentOrder
      * @return UpdateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws FBAOutboundException
      */
     public function updateFulfillmentOrder($request)
     {

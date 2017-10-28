@@ -111,7 +111,6 @@ abstract class Model
         return $xml;
     }
 
-
     /**
      * Escape special XML characters
      * @return string with escaped XML characters
@@ -148,7 +147,6 @@ abstract class Model
                 if ($this->isComplexType($fieldType[0])) {
                     $elements = $xpath->query("./a:$fieldName", $dom);
                     if ($elements->length >= 1) {
-                        require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                         foreach ($elements as $element) {
                             $this->fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                         }
@@ -166,7 +164,6 @@ abstract class Model
                 if ($this->isComplexType($fieldType)) {
                     $elements = $xpath->query("./a:$fieldName", $dom);
                     if ($elements->length == 1) {
-                        require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
                     }
                 } else {
@@ -186,7 +183,7 @@ abstract class Model
                     			$data = $element->item(0)->data;
                     			break;
                     	}
-                      $this->fields[$fieldName]['FieldValue'] = $data;
+                        $this->fields[$fieldName]['FieldValue'] = $data;
                     }
                 }
             }
@@ -211,7 +208,6 @@ abstract class Model
                             $elements =  array($elements);
                         }
                         if (count ($elements) >= 1) {
-                            require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                             foreach ($elements as $element) {
                                 $this->fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                             }
@@ -222,7 +218,7 @@ abstract class Model
                         $elements = $array[$fieldName];
                         if (!$this->isNumericArray($elements)) {
                             $elements =  array($elements);
-                            }
+                        }
                         if (count ($elements) >= 1) {
                             foreach ($elements as $element) {
                                 $this->fields[$fieldName]['FieldValue'][] = $element;
@@ -233,7 +229,6 @@ abstract class Model
             } else {
                 if ($this->isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
                     }
                 } else {
@@ -251,9 +246,9 @@ abstract class Model
      *
      * @param string $fieldType field type name
      */
-    private function isComplexType ($fieldType)
+    private function isComplexType($fieldType)
     {
-        return preg_match('/^/', $fieldType);
+        return preg_match('/^Amazon\\MWS\\/', $fieldType);
     }
 
    /**

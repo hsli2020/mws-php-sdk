@@ -29,7 +29,7 @@ class Exception extends \Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs FBAOutboundServiceMWS_Exception
+     * Constructs FBAOutboundException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>

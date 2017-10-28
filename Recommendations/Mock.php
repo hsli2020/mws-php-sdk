@@ -20,7 +20,7 @@ class Mock implements RecommendationsInterface
      * @see GetLastUpdatedTimeForRecommendations
      * @return GetLastUpdatedTimeForRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function getLastUpdatedTimeForRecommendations($request)
     {
@@ -35,7 +35,7 @@ class Mock implements RecommendationsInterface
      * @see ListRecommendations
      * @return ListRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function listRecommendations($request)
     {
@@ -50,7 +50,7 @@ class Mock implements RecommendationsInterface
      * @see ListRecommendationsByNextToken
      * @return ListRecommendationsByNextTokenResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function listRecommendationsByNextToken($request)
     {
@@ -60,12 +60,11 @@ class Mock implements RecommendationsInterface
     /**
      * Get Service Status
      *
-     *
      * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws RecommendationsException
      */
     public function getServiceStatus($request)
     {

@@ -35,7 +35,7 @@ class Mock implements ReportsInterface
      * @see GetReport
      * @return GetReportResponse GetReportResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReport($request)
     {
@@ -51,7 +51,7 @@ class Mock implements ReportsInterface
      * @see GetReportScheduleCount
      * @return GetReportScheduleCountResponse GetReportScheduleCountResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportScheduleCount($request)
     {
@@ -67,7 +67,7 @@ class Mock implements ReportsInterface
      * @see GetReportRequestListByNextToken
      * @return GetReportRequestListByNextTokenResponse GetReportRequestListByNextTokenResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportRequestListByNextToken($request)
     {
@@ -83,7 +83,7 @@ class Mock implements ReportsInterface
      * @see UpdateReportAcknowledgements
      * @return UpdateReportAcknowledgementsResponse UpdateReportAcknowledgementsResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function updateReportAcknowledgements($request)
     {
@@ -101,7 +101,7 @@ class Mock implements ReportsInterface
      * @see GetReportCount
      * @return GetReportCountResponse GetReportCountResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportCount($request)
     {
@@ -117,7 +117,7 @@ class Mock implements ReportsInterface
      * @see RequestReport
      * @return RequestReportResponse RequestReportResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function requestReport($request)
     {
@@ -134,7 +134,7 @@ class Mock implements ReportsInterface
      * @see CancelReportRequests
      * @return CancelReportRequestsResponse CancelReportRequestsResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function cancelReportRequests($request)
     {
@@ -151,7 +151,7 @@ class Mock implements ReportsInterface
      * @see GetReportList
      * @return GetReportListResponse GetReportListResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportList($request)
     {
@@ -167,7 +167,7 @@ class Mock implements ReportsInterface
      * @see GetReportRequestList
      * @return GetReportRequestListResponse GetReportRequestListResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportRequestList($request)
     {
@@ -183,7 +183,7 @@ class Mock implements ReportsInterface
      * @see GetReportScheduleListByNextToken
      * @return GetReportScheduleListByNextTokenResponse GetReportScheduleListByNextTokenResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportScheduleListByNextToken($request)
     {
@@ -199,7 +199,7 @@ class Mock implements ReportsInterface
      * @see GetReportListByNextToken
      * @return GetReportListByNextTokenResponse GetReportListByNextTokenResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportListByNextToken($request)
     {
@@ -216,7 +216,7 @@ class Mock implements ReportsInterface
      * @see ManageReportSchedule
      * @return ManageReportScheduleResponse ManageReportScheduleResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function manageReportSchedule($request)
     {
@@ -233,7 +233,7 @@ class Mock implements ReportsInterface
      * @see GetReportRequestCount
      * @return GetReportRequestCountResponse GetReportRequestCountResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportRequestCount($request)
     {
@@ -249,7 +249,7 @@ class Mock implements ReportsInterface
      * @see GetReportScheduleList
      * @return GetReportScheduleListResponse GetReportScheduleListResponse
      *
-     * @throws MarketplaceWebService_Exception
+     * @throws ReportsException
      */
     public function getReportScheduleList($request)
     {

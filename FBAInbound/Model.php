@@ -90,7 +90,7 @@ abstract class Model
             if (is_array($fieldType)) {
                 if ($fieldType[0] == "object") {
                     $elements = $dom->childNodes;
-                    for($i = 0 ; $i < $elements->length; $i++) {
+                    for ($i = 0 ; $i < $elements->length; $i++) {
                         $this->_fields[$fieldName]['FieldValue'][] = $elements->item($i);
                     }
                 } else if ($this->_isComplexType($fieldType[0])) {
@@ -101,7 +101,6 @@ abstract class Model
                        $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     }
                     if ($elements->length >= 1) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                         foreach ($elements as $element) {
                             $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                         }
@@ -124,11 +123,10 @@ abstract class Model
                 if ($this->_isComplexType($fieldType)) {
                     $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     if ($elements->length == 1) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->_fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
                     }
                 } else {
-                    if($fieldType[0] == "@") {
+                    if ($fieldType[0] == "@") {
                         $attribute = $xpath->query("./@$fieldName", $dom);
                         if ($attribute->length == 1) {
                             $this->_fields[$fieldName]['FieldValue'] = $attribute->item(0)->nodeValue;
@@ -150,13 +148,12 @@ abstract class Model
 
                     $attribute = $xpath->query("./@$fieldName", $dom);
                     if ($attribute->length == 1) {
-                      $this->_fields[$fieldName]['FieldValue'] = $attribute->item(0)->nodeValue;
-                      if (isset ($this->_fields['Value'])) {
-                        $parentNode = $attribute->item(0)->parentNode;
-                        $this->_fields['Value']['FieldValue'] = $parentNode->nodeValue;
-                      }
+                        $this->_fields[$fieldName]['FieldValue'] = $attribute->item(0)->nodeValue;
+                        if (isset ($this->_fields['Value'])) {
+                            $parentNode = $attribute->item(0)->parentNode;
+                            $this->_fields['Value']['FieldValue'] = $parentNode->nodeValue;
+                        }
                     }
-
                 }
             }
         }
@@ -179,8 +176,6 @@ abstract class Model
                             $elements =  array($elements);
                         }
                         if (count ($elements) >= 1) {
-                            require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
-
                             foreach ($elements as $element) {
                                 $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                             }
@@ -202,7 +197,6 @@ abstract class Model
             } else {
                  if ($this->_isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->_fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
                     }
                  } else {
@@ -226,7 +220,7 @@ abstract class Model
     protected function _toQueryParameterArray($prefix)
     {
         $arr = array();
-        foreach($this->_fields as $fieldName => $fieldAttrs) {
+        foreach ($this->_fields as $fieldName => $fieldAttrs) {
             $fieldType = $fieldAttrs['FieldType'];
             $fieldValue = $fieldAttrs['FieldValue'];
             $newPrefix = $prefix . $fieldName . '.';
@@ -240,14 +234,14 @@ abstract class Model
     {
         $arr = array();
         if (is_array($fieldType)) {
-            if(isset($fieldAttrs['ListMemberName'])) {
+            if (isset($fieldAttrs['ListMemberName'])) {
                 $listMemberName = $fieldAttrs['ListMemberName'];
                 $itemPrefix = $prefix . $listMemberName . '.';
             } else {
                 $itemPrefix = $prefix;
             }
 
-            for($i = 1; $i <= count($fieldValue); $i++) {
+            for ($i = 1; $i <= count($fieldValue); $i++) {
                 $indexedPrefix = $itemPrefix . $i . '.';
                 $memberType = $fieldType[0];
                 $arr = array_merge($arr,
@@ -255,9 +249,9 @@ abstract class Model
                     $memberType, $fieldValue[$i - 1], null));
             }
 
-        } else if($this->_isComplexType($fieldType)) {
+        } else if ($this->_isComplexType($fieldType)) {
             // Struct
-            if(isset($fieldValue)) {
+            if (isset($fieldValue)) {
                 $arr = array_merge($arr, $fieldValue->_toQueryParameterArray($prefix));
             }
         } else {
@@ -315,7 +309,7 @@ abstract class Model
                             }
                         }
                     } else {
-                        if(isset($field['ListMemberName'])) {
+                        if (isset($field['ListMemberName'])) {
                             $memberName = $field['ListMemberName'];
                             $xml .= "<$fieldName>";
                             foreach ($fieldValue as $item) {
@@ -339,9 +333,9 @@ abstract class Model
                         $xml .= ">";
                         $xml .= $fieldValue->_toXMLFragment();
                         $xml .= "</$fieldName>";
-                    } else if($fieldType[0] == ".") {
+                    } else if ($fieldType[0] == ".") {
                          $xml .= $this->_escapeXML($fieldValue);
-                    } else if($fieldType[0] != "@") {
+                    } else if ($fieldType[0] != "@") {
                         $xml .= "<$fieldName>";
                         $xml .= $this->_escapeXML($fieldValue);
                         $xml .= "</$fieldName>";
@@ -359,7 +353,7 @@ abstract class Model
             $fieldValue = $field['FieldValue'];
             if (!is_null($fieldValue)) {
                 $fieldType = $field['FieldType'];
-                if($fieldType[0] == "@") {
+                if ($fieldType[0] == "@") {
                     $xml .= " " . $fieldName . "='" . $this->_escapeXML($fieldValue) . "'";
                 }
             }
@@ -383,9 +377,9 @@ abstract class Model
      *
      * @param string $fieldType field type name
      */
-    private function _isComplexType ($fieldType)
+    private function _isComplexType($fieldType)
     {
-        return preg_match("/^FBAInboundServiceMWS_/", $fieldType);
+        return preg_match("/^Amazon\\MWS\\/", $fieldType);
     }
 
    /**

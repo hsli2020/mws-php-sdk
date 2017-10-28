@@ -75,7 +75,6 @@ class Error extends Model
         return $this;
     }
 
-
     /**
      * Checks if Type is set
      *
@@ -119,7 +118,6 @@ class Error extends Model
         $this->setCode($value);
         return $this;
     }
-
 
     /**
      * Checks if Code is set
@@ -165,7 +163,6 @@ class Error extends Model
         return $this;
     }
 
-
     /**
      * Checks if Message is set
      *
@@ -209,7 +206,6 @@ class Error extends Model
         $this->setDetail($value);
         return $this;
     }
-
 
     /**
      * Checks if Detail  is set

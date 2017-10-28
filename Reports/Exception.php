@@ -28,9 +28,8 @@ class Exception extends \Exception
 
     private $responseHeaderMetadata = null;
 
-
     /**
-     * Constructs MarketplaceWebService_Exception
+     * Constructs ReportsException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>
@@ -42,7 +41,6 @@ class Exception extends \Exception
      * <li>XML - (string) compete xml response at the time of exception</li>
      * <li>Exception - (Exception) inner exception if any</li>
      * </ul>
-     *
      */
     public function __construct(array $errorInfo = array())
     {
@@ -59,12 +57,12 @@ class Exception extends \Exception
                 $this->responseHeaderMetadata = $exception->getResponseHeaderMetadata();
             }
         } else {
-            if(isset($errorInfo["StatusCode"])) $this->statusCode = $errorInfo["StatusCode"];
-            if(isset($errorInfo["ErrorCode"])) $this->errorCode = $errorInfo["ErrorCode"];
-            if(isset($errorInfo["ErrorType"])) $this->errorType = $errorInfo["ErrorType"];
-            if(isset($errorInfo["RequestId"])) $this->requestId = $errorInfo["RequestId"];
-            if(isset($errorInfo["XML"])) $this->xml= $errorInfo["XML"];
-            if(isset($errorInfo["ResponseHeaderMetadata"])) $this->xml= $errorInfo["ResponseHeaderMetadata"];
+            if (isset($errorInfo["StatusCode"])) $this->statusCode = $errorInfo["StatusCode"];
+            if (isset($errorInfo["ErrorCode"])) $this->errorCode = $errorInfo["ErrorCode"];
+            if (isset($errorInfo["ErrorType"])) $this->errorType = $errorInfo["ErrorType"];
+            if (isset($errorInfo["RequestId"])) $this->requestId = $errorInfo["RequestId"];
+            if (isset($errorInfo["XML"])) $this->xml= $errorInfo["XML"];
+            if (isset($errorInfo["ResponseHeaderMetadata"])) $this->xml= $errorInfo["ResponseHeaderMetadata"];
         }
     }
 
@@ -88,7 +86,6 @@ class Exception extends \Exception
     {
         return $this->errorType;
     }
-
 
     /**
      * Gets error message

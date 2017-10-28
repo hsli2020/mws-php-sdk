@@ -22,7 +22,7 @@ use Amazon\MWS\Orders\Model\ResponseHeaderMetadata;
  */
 class Client implements OrdersInterface
 {
-    const SERVICE_VERSION = '2013-09-01';
+    const SERVICE_VERSION    = '2013-09-01';
     const MWS_CLIENT_VERSION = '2015-09-24';
 
     /** @var string */
@@ -587,7 +587,7 @@ class Client implements OrdersInterface
         $allHeadersStr = array();
         foreach($allHeaders as $name => $val) {
             $str = $name . ": ";
-            if(isset($val)) {
+            if (isset($val)) {
                 $str = $str . $val;
             }
             $allHeadersStr[] = $str;
@@ -603,19 +603,19 @@ class Client implements OrdersInterface
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
-        {
+
+        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
-        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null)
-        {
+
+        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
 
         $response = "";
         $response = curl_exec($ch);
 
-        if($response === false) {
+        if ($response === false) {
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -664,7 +664,7 @@ class Client implements OrdersInterface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
+        if ($body == null){
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new Exception($exProps);
@@ -880,9 +880,7 @@ class Client implements OrdersInterface
         } else {
             throw new Exception ("Non-supported signing method specified");
         }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
+        return base64_encode(hash_hmac($hash, $data, $key, true));
     }
 
     /**

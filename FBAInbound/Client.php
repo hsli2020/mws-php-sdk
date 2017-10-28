@@ -90,7 +90,7 @@ class Client implements FBAInboundInterface
      * @see ConfirmPreorderRequest
      * @return ConfirmPreorderResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function confirmPreorder($request)
     {
@@ -142,7 +142,7 @@ class Client implements FBAInboundInterface
      * @see ConfirmTransportInputRequest
      * @return ConfirmTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function confirmTransportRequest($request)
     {
@@ -190,7 +190,7 @@ class Client implements FBAInboundInterface
      * @see CreateInboundShipmentRequest
      * @return CreateInboundShipmentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function createInboundShipment($request)
     {
@@ -253,7 +253,7 @@ class Client implements FBAInboundInterface
      * @see CreateInboundShipmentPlanRequest
      * @return CreateInboundShipmentPlanResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function createInboundShipmentPlan($request)
     {
@@ -320,7 +320,7 @@ class Client implements FBAInboundInterface
      * @see EstimateTransportInputRequest
      * @return EstimateTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function estimateTransportRequest($request)
     {
@@ -366,7 +366,7 @@ class Client implements FBAInboundInterface
      * @see GetBillOfLadingRequest
      * @return GetBillOfLadingResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getBillOfLading($request)
     {
@@ -424,7 +424,7 @@ class Client implements FBAInboundInterface
      * @see GetPackageLabelsRequest
      * @return GetPackageLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPackageLabels($request)
     {
@@ -479,7 +479,7 @@ class Client implements FBAInboundInterface
      * @see GetPalletLabelsRequest
      * @return GetPalletLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPalletLabels($request)
     {
@@ -536,7 +536,7 @@ class Client implements FBAInboundInterface
      * @see GetPreorderInfoRequest
      * @return GetPreorderInfoResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPreorderInfo($request)
     {
@@ -587,7 +587,7 @@ class Client implements FBAInboundInterface
      * @see GetPrepInstructionsForASINRequest
      * @return GetPrepInstructionsForASINResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPrepInstructionsForASIN($request)
     {
@@ -641,7 +641,7 @@ class Client implements FBAInboundInterface
      * @see GetPrepInstructionsForSKURequest
      * @return GetPrepInstructionsForSKUResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getPrepInstructionsForSKU($request)
     {
@@ -694,7 +694,7 @@ class Client implements FBAInboundInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getServiceStatus($request)
     {
@@ -740,7 +740,7 @@ class Client implements FBAInboundInterface
      * @see GetTransportContentRequest
      * @return GetTransportContentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getTransportContent($request)
     {
@@ -800,7 +800,7 @@ class Client implements FBAInboundInterface
      * @see GetUniquePackageLabelsRequest
      * @return GetUniquePackageLabelsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function getUniquePackageLabels($request)
     {
@@ -863,7 +863,7 @@ class Client implements FBAInboundInterface
      * @see ListInboundShipmentItemsRequest
      * @return ListInboundShipmentItemsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentItems($request)
     {
@@ -920,7 +920,7 @@ class Client implements FBAInboundInterface
      * @see ListInboundShipmentItemsByNextTokenRequest
      * @return ListInboundShipmentItemsByNextTokenResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentItemsByNextToken($request)
     {
@@ -975,7 +975,7 @@ class Client implements FBAInboundInterface
      * @see ListInboundShipmentsRequest
      * @return ListInboundShipmentsResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipments($request)
     {
@@ -1039,7 +1039,7 @@ class Client implements FBAInboundInterface
      * @see ListInboundShipmentsByNextTokenRequest
      * @return ListInboundShipmentsByNextTokenResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function listInboundShipmentsByNextToken($request)
     {
@@ -1087,7 +1087,7 @@ class Client implements FBAInboundInterface
      * @see PutTransportContentRequest
      * @return PutTransportContentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function putTransportContent($request)
     {
@@ -1154,7 +1154,7 @@ class Client implements FBAInboundInterface
      * @see UpdateInboundShipmentRequest
      * @return UpdateInboundShipmentResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function updateInboundShipment($request)
     {
@@ -1218,7 +1218,7 @@ class Client implements FBAInboundInterface
      * @see VoidTransportInputRequest
      * @return VoidTransportRequestResponse
      *
-     * @throws Exception
+     * @throws FBAInboundException
      */
     public function voidTransportRequest($request)
     {
@@ -1469,7 +1469,6 @@ class Client implements FBAInboundInterface
 
     /**
      * Perform HTTP post with exponential retries on error 500 and 503
-     *
      */
     private function _httpPost(array $parameters)
     {
@@ -1495,9 +1494,9 @@ class Client implements FBAInboundInterface
         $allHeaders['Content-Type'] = "application/x-www-form-urlencoded; charset=utf-8"; // We need to make sure to set utf-8 encoding here
         $allHeaders['Expect'] = null; // Don't expect 100 Continue
         $allHeadersStr = array();
-        foreach($allHeaders as $name => $val) {
+        foreach ($allHeaders as $name => $val) {
             $str = $name . ": ";
-            if(isset($val)) {
+            if (isset($val)) {
                 $str = $str . $val;
             }
             $allHeadersStr[] = $str;
@@ -1525,7 +1524,7 @@ class Client implements FBAInboundInterface
         $response = "";
         $response = curl_exec($ch);
 
-        if($response === false) {
+        if ($response === false) {
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -1560,16 +1559,12 @@ class Client implements FBAInboundInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
-
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -1577,7 +1572,7 @@ class Client implements FBAInboundInterface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
+        if ($body == null){
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new Exception($exProps);
@@ -1793,9 +1788,7 @@ class Client implements FBAInboundInterface
         } else {
             throw new Exception ("Non-supported signing method specified");
         }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
+        return base64_encode(hash_hmac($hash, $data, $key, true));
     }
 
     /**

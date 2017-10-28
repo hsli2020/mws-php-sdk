@@ -70,7 +70,7 @@ class Exception extends \Exception
 
     private function arr_val($arr, $key)
     {
-        if(array_key_exists($key, $arr)) {
+        if (array_key_exists($key, $arr)) {
             return $arr[$key];
         } else {
             return null;
@@ -142,6 +142,6 @@ class Exception extends \Exception
 
     public function getResponseHeaderMetadata()
     {
-      return $this->_responseHeaderMetadata;
+        return $this->_responseHeaderMetadata;
     }
 }

@@ -21,7 +21,7 @@ class Mock implements OrdersInterface
      * @see GetOrder
      * @return GetOrderResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function getOrder($request)
     {
@@ -37,7 +37,7 @@ class Mock implements OrdersInterface
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function getServiceStatus($request)
     {
@@ -53,7 +53,7 @@ class Mock implements OrdersInterface
      * @see ListOrderItems
      * @return ListOrderItemsResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrderItems($request)
     {
@@ -70,7 +70,7 @@ class Mock implements OrdersInterface
      * @see ListOrderItemsByNextToken
      * @return ListOrderItemsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrderItemsByNextToken($request)
     {
@@ -85,7 +85,7 @@ class Mock implements OrdersInterface
      * @see ListOrders
      * @return ListOrdersResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrders($request)
     {
@@ -102,7 +102,7 @@ class Mock implements OrdersInterface
      * @see ListOrdersByNextToken
      * @return ListOrdersByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws OrdersException
      */
     public function listOrdersByNextToken($request)
     {

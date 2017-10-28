@@ -20,7 +20,7 @@ use Amazon\MWS\Finances\Model\ResponseHeaderMetadata;
  */
 class Client implements FinancesInterface
 {
-    const SERVICE_VERSION = '2015-05-01';
+    const SERVICE_VERSION    = '2015-05-01';
     const MWS_CLIENT_VERSION = '2015-09-03';
 
     /** @var string */
@@ -523,9 +523,9 @@ class Client implements FinancesInterface
         $allHeaders['Content-Type'] = "application/x-www-form-urlencoded; charset=utf-8"; // We need to make sure to set utf-8 encoding here
         $allHeaders['Expect'] = null; // Don't expect 100 Continue
         $allHeadersStr = array();
-        foreach($allHeaders as $name => $val) {
+        foreach ($allHeaders as $name => $val) {
             $str = $name . ": ";
-            if(isset($val)) {
+            if (isset($val)) {
                 $str = $str . $val;
             }
             $allHeadersStr[] = $str;
@@ -545,6 +545,7 @@ class Client implements FinancesInterface
         if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
+
         if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
@@ -552,7 +553,7 @@ class Client implements FinancesInterface
         $response = "";
         $response = curl_exec($ch);
 
-        if($response === false) {
+        if ($response === false) {
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -587,15 +588,12 @@ class Client implements FinancesInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
 
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
@@ -604,7 +602,7 @@ class Client implements FinancesInterface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
+        if ($body == null){
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new MWSFinancesService_Exception($exProps);
@@ -820,9 +818,7 @@ class Client implements FinancesInterface
         } else {
             throw new Exception ("Non-supported signing method specified");
         }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
+        return base64_encode(hash_hmac($hash, $data, $key, true));
     }
 
     /**

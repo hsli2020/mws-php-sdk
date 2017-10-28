@@ -29,7 +29,7 @@ class Exception extends \Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs MWSMerchantFulfillmentService_Exception
+     * Constructs MerchantFulfillmentException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>

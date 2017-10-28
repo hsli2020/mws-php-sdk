@@ -47,7 +47,7 @@ use Amazon\MWS\Feeds\Model\UpdateReportAcknowledgementsRequest;
 use Amazon\MWS\Feeds\Model\UpdateReportAcknowledgementsResponse;
 
 define('CONVERTED_PARAMETERS_KEY', 'PARAMETERS');
-define('CONVERTED_HEADERS_KEY', 'HEADERS');
+define('CONVERTED_HEADERS_KEY',    'HEADERS');
 
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
@@ -56,6 +56,10 @@ define('CONVERTED_HEADERS_KEY', 'HEADERS');
  */
 class Client implements FeedsInterface
 {
+    const REQUEST_TYPE       = "POST";
+    const SERVICE_VERSION    = '2009-01-01';
+    const MWS_CLIENT_VERSION = '2015-06-18';
+
     /** @var string */
     private  $awsAccessKeyId = null;
 
@@ -72,12 +76,6 @@ class Client implements FeedsInterface
         'ProxyPort'        => -1,
         'MaxErrorRetry'    => 3,
     );
-
-    const SERVICE_VERSION = '2009-01-01';
-
-    const REQUEST_TYPE = "POST";
-
-    const MWS_CLIENT_VERSION = '2015-06-18';
 
     private $defaultHeaders = array();
 

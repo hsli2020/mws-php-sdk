@@ -29,7 +29,7 @@ class Exception extends \Exception
     private $_responseHeaderMetadata = null;
 
     /**
-     * Constructs MarketplaceWebServiceOrders_Exception
+     * Constructs OrdersException
      * @param array $errorInfo details of exception.
      * Keys are:
      * <ul>

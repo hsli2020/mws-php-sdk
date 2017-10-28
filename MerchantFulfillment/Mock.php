@@ -21,7 +21,7 @@ class Mock implements MerchantFulfillmentInterface
      * @see CancelShipment
      * @return CancelShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function cancelShipment($request)
     {
@@ -37,7 +37,7 @@ class Mock implements MerchantFulfillmentInterface
      * @see CreateShipment
      * @return CreateShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function createShipment($request)
     {
@@ -54,7 +54,7 @@ class Mock implements MerchantFulfillmentInterface
      * @see GetEligibleShippingServices
      * @return GetEligibleShippingServicesResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getEligibleShippingServices($request)
     {
@@ -69,7 +69,7 @@ class Mock implements MerchantFulfillmentInterface
      * @see GetShipment
      * @return GetShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getShipment($request)
     {
@@ -79,12 +79,11 @@ class Mock implements MerchantFulfillmentInterface
     /**
      * Get Service Status
      *
-     *
      * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws MerchantFulfillmentException
      */
     public function getServiceStatus($request)
     {

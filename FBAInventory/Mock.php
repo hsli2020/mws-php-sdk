@@ -21,7 +21,7 @@ class Mock implements FBAInventoryInterface
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws FBAInventoryException
      */
     public function getServiceStatus($request)
     {
@@ -65,7 +65,7 @@ class Mock implements FBAInventoryInterface
      * @see ListInventorySupply
      * @return ListInventorySupplyResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws FBAInventoryException
      */
     public function listInventorySupply($request)
     {

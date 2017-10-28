@@ -25,7 +25,7 @@ class Mock implements SubscriptionsInterface
      * @see CreateSubscription
      * @return CreateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function createSubscription($request)
     {
@@ -40,7 +40,7 @@ class Mock implements SubscriptionsInterface
      * @see DeleteSubscription
      * @return DeleteSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function deleteSubscription($request)
     {
@@ -55,7 +55,7 @@ class Mock implements SubscriptionsInterface
      * @see DeregisterDestination
      * @return DeregisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function deregisterDestination($request)
     {
@@ -70,7 +70,7 @@ class Mock implements SubscriptionsInterface
      * @see GetSubscription
      * @return GetSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function getSubscription($request)
     {
@@ -85,7 +85,7 @@ class Mock implements SubscriptionsInterface
      * @see ListRegisteredDestinations
      * @return ListRegisteredDestinationsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function listRegisteredDestinations($request)
     {
@@ -100,7 +100,7 @@ class Mock implements SubscriptionsInterface
      * @see ListSubscriptions
      * @return ListSubscriptionsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function listSubscriptions($request)
     {
@@ -115,7 +115,7 @@ class Mock implements SubscriptionsInterface
      * @see RegisterDestination
      * @return RegisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function registerDestination($request)
     {
@@ -130,7 +130,7 @@ class Mock implements SubscriptionsInterface
      * @see SendTestNotificationToDestination
      * @return SendTestNotificationToDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function sendTestNotificationToDestination($request)
     {
@@ -145,7 +145,7 @@ class Mock implements SubscriptionsInterface
      * @see UpdateSubscription
      * @return UpdateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function updateSubscription($request)
     {
@@ -155,12 +155,11 @@ class Mock implements SubscriptionsInterface
     /**
      * Get Service Status
      *
-     *
      * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws SubscriptionsException
      */
     public function getServiceStatus($request)
     {

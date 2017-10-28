@@ -20,7 +20,7 @@ class Mock implements FinancesInterface
      * @see ListFinancialEventGroups
      * @return ListFinancialEventGroupsResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventGroups($request)
     {
@@ -37,7 +37,7 @@ class Mock implements FinancesInterface
      * @see ListFinancialEventGroupsByNextToken
      * @return ListFinancialEventGroupsByNextTokenResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventGroupsByNextToken($request)
     {
@@ -52,7 +52,7 @@ class Mock implements FinancesInterface
      * @see ListFinancialEvents
      * @return ListFinancialEventsResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEvents($request)
     {
@@ -69,7 +69,7 @@ class Mock implements FinancesInterface
      * @see ListFinancialEventsByNextToken
      * @return ListFinancialEventsByNextTokenResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function listFinancialEventsByNextToken($request)
     {
@@ -79,12 +79,11 @@ class Mock implements FinancesInterface
     /**
      * Get Service Status
      *
-     *
      * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
      * @see GetServiceStatus
      * @return GetServiceStatusResponse
      *
-     * @throws MWSFinancesService_Exception
+     * @throws FinancesException
      */
     public function getServiceStatus($request)
     {

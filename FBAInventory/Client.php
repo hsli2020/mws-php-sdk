@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\FBAInventory;
 
-use Amazon\MWS\FBAInventory\Exception;
+use Amazon\MWS\FBAInventory\Exception as FBAInventoryException;
 use Amazon\MWS\FBAInventory\Model\GetServiceStatusRequest;
 use Amazon\MWS\FBAInventory\Model\GetServiceStatusResponse;
 use Amazon\MWS\FBAInventory\Model\ListInventorySupplyByNextTokenRequest;
@@ -543,16 +543,12 @@ class Client implements FBAInventoryInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
-
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];

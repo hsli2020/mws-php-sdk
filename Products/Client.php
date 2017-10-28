@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Products;
 
-use Amazon\MWS\Products\Exception;
+use Amazon\MWS\Products\Exception as ProductsException;
 use Amazon\MWS\Products\Model\GetCompetitivePricingForASINRequest;
 use Amazon\MWS\Products\Model\GetCompetitivePricingForASINResponse;
 use Amazon\MWS\Products\Model\GetCompetitivePricingForSKURequest;

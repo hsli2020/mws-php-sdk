@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Orders;
 
-use Amazon\MWS\Orders\Exception;
+use Amazon\MWS\Orders\Exception as OrdersException;
 use Amazon\MWS\Orders\Model\GetOrderRequest;
 use Amazon\MWS\Orders\Model\GetOrderResponse;
 use Amazon\MWS\Orders\Model\GetServiceStatusRequest;

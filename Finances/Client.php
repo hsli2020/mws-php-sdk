@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Finances;
 
-use Amazon\MWS\Finances\Exception;
+use Amazon\MWS\Finances\Exception as FinancesException;
 use Amazon\MWS\Finances\Model\GetServiceStatusRequest;
 use Amazon\MWS\Finances\Model\GetServiceStatusResponse;
 use Amazon\MWS\Finances\Model\ListFinancialEventGroupsByNextTokenRequest;

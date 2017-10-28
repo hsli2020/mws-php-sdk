@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Feeds;
 
-use Amazon\MWS\Feeds\Exception;
+use Amazon\MWS\Feeds\Exception as FeedsException;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsRequest;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsResponse;
 use Amazon\MWS\Feeds\Model\CancelReportRequestsRequest;

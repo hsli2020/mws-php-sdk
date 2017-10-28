@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\Recommendations;
 
-use Amazon\MWS\Recommendations\Exception;
+use Amazon\MWS\Recommendations\Exception as RecommendationsException;
 use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsRequest;
 use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsResponse;
 use Amazon\MWS\Recommendations\Model\GetServiceStatusRequest;

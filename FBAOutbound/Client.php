@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\FBAOutbound;
 
-use Amazon\MWS\FBAOutbound\Exception;
+use Amazon\MWS\FBAOutbound\Exception as FBAOutboundException;
 use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderRequest;
 use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderResponse;
 use Amazon\MWS\FBAOutbound\Model\CreateFulfillmentOrderRequest;

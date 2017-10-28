@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
-use Amazon\MWS\MerchantFulfillment\Exception;
+use Amazon\MWS\MerchantFulfillment\Exception as MerchantFulfillmentException;
 use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentRequest;
 use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentResponse;
 use Amazon\MWS\MerchantFulfillment\Model\CreateShipmentRequest;

@@ -2,7 +2,7 @@
 
 namespace Amazon\MWS\FBAInbound;
 
-use Amazon\MWS\FBAInbound\Exception;
+use Amazon\MWS\FBAInbound\Exception as FBAInboundException;
 use Amazon\MWS\FBAInbound\Model\ConfirmPreorderRequest;
 use Amazon\MWS\FBAInbound\Model\ConfirmPreorderResponse;
 use Amazon\MWS\FBAInbound\Model\ConfirmTransportInputRequest;

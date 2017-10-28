@@ -2,6 +2,21 @@
 
 namespace Amazon\MWS\Reports;
 
+use Amazon\MWS\Reports\Model\GetReportResponse;
+use Amazon\MWS\Reports\Model\GetReportScheduleCountResponse;
+use Amazon\MWS\Reports\Model\GetReportRequestListByNextTokenResponse;
+use Amazon\MWS\Reports\Model\UpdateReportAcknowledgementsResponse;
+use Amazon\MWS\Reports\Model\GetReportCountResponse;
+use Amazon\MWS\Reports\Model\RequestReportResponse;
+use Amazon\MWS\Reports\Model\CancelReportRequestsResponse;
+use Amazon\MWS\Reports\Model\GetReportListResponse;
+use Amazon\MWS\Reports\Model\GetReportRequestListResponse;
+use Amazon\MWS\Reports\Model\GetReportScheduleListByNextTokenResponse;
+use Amazon\MWS\Reports\Model\GetReportListByNextTokenResponse;
+use Amazon\MWS\Reports\Model\ManageReportScheduleResponse;
+use Amazon\MWS\Reports\Model\GetReportRequestCountResponse;
+use Amazon\MWS\Reports\Model\GetReportScheduleListResponse;
+
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
  */
@@ -24,7 +39,6 @@ class Mock implements ReportsInterface
      */
     public function getReport($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportResponse.php');
         return GetReportResponse::fromXML($this->invoke('GetReport'));
     }
 
@@ -41,7 +55,6 @@ class Mock implements ReportsInterface
      */
     public function getReportScheduleCount($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportScheduleCountResponse.php');
         return GetReportScheduleCountResponse::fromXML($this->invoke('GetReportScheduleCount'));
     }
 
@@ -58,7 +71,6 @@ class Mock implements ReportsInterface
      */
     public function getReportRequestListByNextToken($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportRequestListByNextTokenResponse.php');
         return GetReportRequestListByNextTokenResponse::fromXML($this->invoke('GetReportRequestListByNextToken'));
     }
 
@@ -75,7 +87,6 @@ class Mock implements ReportsInterface
      */
     public function updateReportAcknowledgements($request)
     {
-        require_once ('MarketplaceWebService/Model/UpdateReportAcknowledgementsResponse.php');
         return UpdateReportAcknowledgementsResponse::fromXML($this->invoke('UpdateReportAcknowledgements'));
     }
 
@@ -94,7 +105,6 @@ class Mock implements ReportsInterface
      */
     public function getReportCount($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportCountResponse.php');
         return GetReportCountResponse::fromXML($this->invoke('GetReportCount'));
     }
 
@@ -111,7 +121,6 @@ class Mock implements ReportsInterface
      */
     public function requestReport($request)
     {
-        require_once ('MarketplaceWebService/Model/RequestReportResponse.php');
         return RequestReportResponse::fromXML($this->invoke('RequestReport'));
     }
 
@@ -129,7 +138,6 @@ class Mock implements ReportsInterface
      */
     public function cancelReportRequests($request)
     {
-        require_once ('MarketplaceWebService/Model/CancelReportRequestsResponse.php');
         return CancelReportRequestsResponse::fromXML($this->invoke('CancelReportRequests'));
     }
 
@@ -147,7 +155,6 @@ class Mock implements ReportsInterface
      */
     public function getReportList($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportListResponse.php');
         return GetReportListResponse::fromXML($this->invoke('GetReportList'));
     }
 
@@ -164,7 +171,6 @@ class Mock implements ReportsInterface
      */
     public function getReportRequestList($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportRequestListResponse.php');
         return GetReportRequestListResponse::fromXML($this->invoke('GetReportRequestList'));
     }
 
@@ -181,7 +187,6 @@ class Mock implements ReportsInterface
      */
     public function getReportScheduleListByNextToken($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportScheduleListByNextTokenResponse.php');
         return GetReportScheduleListByNextTokenResponse::fromXML($this->invoke('GetReportScheduleListByNextToken'));
     }
 
@@ -198,7 +203,6 @@ class Mock implements ReportsInterface
      */
     public function getReportListByNextToken($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportListByNextTokenResponse.php');
         return GetReportListByNextTokenResponse::fromXML($this->invoke('GetReportListByNextToken'));
     }
 
@@ -216,7 +220,6 @@ class Mock implements ReportsInterface
      */
     public function manageReportSchedule($request)
     {
-        require_once ('MarketplaceWebService/Model/ManageReportScheduleResponse.php');
         return ManageReportScheduleResponse::fromXML($this->invoke('ManageReportSchedule'));
     }
 
@@ -234,7 +237,6 @@ class Mock implements ReportsInterface
      */
     public function getReportRequestCount($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportRequestCountResponse.php');
         return GetReportRequestCountResponse::fromXML($this->invoke('GetReportRequestCount'));
     }
 
@@ -251,7 +253,6 @@ class Mock implements ReportsInterface
      */
     public function getReportScheduleList($request)
     {
-        require_once ('MarketplaceWebService/Model/GetReportScheduleListResponse.php');
         return GetReportScheduleListResponse::fromXML($this->invoke('GetReportScheduleList'));
     }
 

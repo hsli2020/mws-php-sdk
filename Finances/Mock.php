@@ -2,6 +2,12 @@
 
 namespace Amazon\MWS\Finances;
 
+use Amazon\MWS\Finances;\Model\ListFinancialEventGroupsResponse;
+use Amazon\MWS\Finances;\Model\ListFinancialEventGroupsByNextTokenResponse;
+use Amazon\MWS\Finances;\Model\ListFinancialEventsResponse;
+use Amazon\MWS\Finances;\Model\ListFinancialEventsByNextTokenResponse;
+use Amazon\MWS\Finances;\Model\GetServiceStatusResponse;
+
 class Mock implements FinancesInterface
 {
     // Public API ------------------------------------------------------------//
@@ -18,7 +24,6 @@ class Mock implements FinancesInterface
      */
     public function listFinancialEventGroups($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsResponse.php');
         return ListFinancialEventGroupsResponse::fromXML($this->_invoke('ListFinancialEventGroups'));
     }
 
@@ -36,7 +41,6 @@ class Mock implements FinancesInterface
      */
     public function listFinancialEventGroupsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenResponse.php');
         return ListFinancialEventGroupsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventGroupsByNextToken'));
     }
 
@@ -52,7 +56,6 @@ class Mock implements FinancesInterface
      */
     public function listFinancialEvents($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventsResponse.php');
         return ListFinancialEventsResponse::fromXML($this->_invoke('ListFinancialEvents'));
     }
 
@@ -70,7 +73,6 @@ class Mock implements FinancesInterface
      */
     public function listFinancialEventsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenResponse.php');
         return ListFinancialEventsByNextTokenResponse::fromXML($this->_invoke('ListFinancialEventsByNextToken'));
     }
 
@@ -86,7 +88,6 @@ class Mock implements FinancesInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 

@@ -3,7 +3,7 @@
 namespace Amazon\MWS\Subscriptions;
 
 /**
- * MWSSubscriptionsService_Client is an implementation of MWSSubscriptionsService
+ * Subscriptions\Client is an implementation of SubscriptionsInterface
  */
 class Client implements SubscriptionsInterface
 {

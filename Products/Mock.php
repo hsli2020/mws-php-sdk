@@ -2,6 +2,22 @@
 
 namespace Amazon\MWS\Products;
 
+use Amazon\MWS\Products\Model\GetCompetitivePricingForASINResponse;
+use Amazon\MWS\Products\Model\GetCompetitivePricingForSKUResponse;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForASINResponse;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForSKUResponse;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForASINResponse;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForSKUResponse;
+use Amazon\MWS\Products\Model\GetMatchingProductResponse;
+use Amazon\MWS\Products\Model\GetMatchingProductForIdResponse;
+use Amazon\MWS\Products\Model\GetMyFeesEstimateResponse;
+use Amazon\MWS\Products\Model\GetMyPriceForASINResponse;
+use Amazon\MWS\Products\Model\GetMyPriceForSKUResponse;
+use Amazon\MWS\Products\Model\GetProductCategoriesForASINResponse;
+use Amazon\MWS\Products\Model\GetProductCategoriesForSKUResponse;
+use Amazon\MWS\Products\Model\GetServiceStatusResponse;
+use Amazon\MWS\Products\Model\ListMatchingProductsResponse;
+
 class Mock implements ProductsInterface
 {
     // Public API ------------------------------------------------------------//
@@ -19,7 +35,6 @@ class Mock implements ProductsInterface
      */
     public function getCompetitivePricingForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
         return GetCompetitivePricingForASINResponse::fromXML($this->_invoke('GetCompetitivePricingForASIN'));
     }
 
@@ -36,7 +51,6 @@ class Mock implements ProductsInterface
      */
     public function getCompetitivePricingForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
         return GetCompetitivePricingForSKUResponse::fromXML($this->_invoke('GetCompetitivePricingForSKU'));
     }
 
@@ -53,7 +67,6 @@ class Mock implements ProductsInterface
      */
     public function getLowestOfferListingsForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
         return GetLowestOfferListingsForASINResponse::fromXML($this->_invoke('GetLowestOfferListingsForASIN'));
     }
 
@@ -70,7 +83,6 @@ class Mock implements ProductsInterface
      */
     public function getLowestOfferListingsForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
         return GetLowestOfferListingsForSKUResponse::fromXML($this->_invoke('GetLowestOfferListingsForSKU'));
     }
 
@@ -87,7 +99,6 @@ class Mock implements ProductsInterface
      */
     public function getLowestPricedOffersForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
         return GetLowestPricedOffersForASINResponse::fromXML($this->_invoke('GetLowestPricedOffersForASIN'));
     }
 
@@ -104,7 +115,6 @@ class Mock implements ProductsInterface
      */
     public function getLowestPricedOffersForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
         return GetLowestPricedOffersForSKUResponse::fromXML($this->_invoke('GetLowestPricedOffersForSKU'));
     }
 
@@ -121,7 +131,6 @@ class Mock implements ProductsInterface
      */
     public function getMatchingProduct($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
         return GetMatchingProductResponse::fromXML($this->_invoke('GetMatchingProduct'));
     }
 
@@ -138,7 +147,6 @@ class Mock implements ProductsInterface
      */
     public function getMatchingProductForId($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
         return GetMatchingProductForIdResponse::fromXML($this->_invoke('GetMatchingProductForId'));
     }
 
@@ -156,7 +164,6 @@ class Mock implements ProductsInterface
      */
     public function getMyFeesEstimate($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateResponse.php');
         return GetMyFeesEstimateResponse::fromXML($this->_invoke('GetMyFeesEstimate'));
     }
 
@@ -172,7 +179,6 @@ class Mock implements ProductsInterface
      */
     public function getMyPriceForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
         return GetMyPriceForASINResponse::fromXML($this->_invoke('GetMyPriceForASIN'));
     }
 
@@ -188,7 +194,6 @@ class Mock implements ProductsInterface
      */
     public function getMyPriceForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
         return GetMyPriceForSKUResponse::fromXML($this->_invoke('GetMyPriceForSKU'));
     }
 
@@ -205,7 +210,6 @@ class Mock implements ProductsInterface
      */
     public function getProductCategoriesForASIN($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
         return GetProductCategoriesForASINResponse::fromXML($this->_invoke('GetProductCategoriesForASIN'));
     }
 
@@ -222,7 +226,6 @@ class Mock implements ProductsInterface
      */
     public function getProductCategoriesForSKU($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
         return GetProductCategoriesForSKUResponse::fromXML($this->_invoke('GetProductCategoriesForSKU'));
     }
 
@@ -240,7 +243,6 @@ class Mock implements ProductsInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -257,7 +259,6 @@ class Mock implements ProductsInterface
      */
     public function listMatchingProducts($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
         return ListMatchingProductsResponse::fromXML($this->_invoke('ListMatchingProducts'));
     }
 

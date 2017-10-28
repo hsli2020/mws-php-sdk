@@ -2,6 +2,11 @@
 
 namespace Amazon\MWS\Recommendations;
 
+use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsResponse;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsResponse;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsByNextTokenResponse;
+use Amazon\MWS\Recommendations\Model\GetServiceStatusResponse;
+
 class Mock implements RecommendationsInterface
 {
     // Public API ------------------------------------------------------------//
@@ -19,7 +24,6 @@ class Mock implements RecommendationsInterface
      */
     public function getLastUpdatedTimeForRecommendations($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsResponse.php');
         return GetLastUpdatedTimeForRecommendationsResponse::fromXML($this->_invoke('GetLastUpdatedTimeForRecommendations'));
     }
 
@@ -35,7 +39,6 @@ class Mock implements RecommendationsInterface
      */
     public function listRecommendations($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListRecommendationsResponse.php');
         return ListRecommendationsResponse::fromXML($this->_invoke('ListRecommendations'));
     }
 
@@ -51,7 +54,6 @@ class Mock implements RecommendationsInterface
      */
     public function listRecommendationsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenResponse.php');
         return ListRecommendationsByNextTokenResponse::fromXML($this->_invoke('ListRecommendationsByNextToken'));
     }
 
@@ -67,7 +69,6 @@ class Mock implements RecommendationsInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 

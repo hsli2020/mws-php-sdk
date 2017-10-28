@@ -2,6 +2,13 @@
 
 namespace Amazon\MWS\Orders;
 
+use Amazon\MWS\Orders\Model\GetOrderResponse;
+use Amazon\MWS\Orders\Model\GetServiceStatusResponse;
+use Amazon\MWS\Orders\Model\ListOrderItemsResponse;
+use Amazon\MWS\Orders\Model\ListOrderItemsByNextTokenResponse;
+use Amazon\MWS\Orders\Model\ListOrdersResponse;
+use Amazon\MWS\Orders\Model\ListOrdersByNextTokenResponse;
+
 class Mock implements OrdersInterface
 {
     // Public API ------------------------------------------------------------//
@@ -18,7 +25,6 @@ class Mock implements OrdersInterface
      */
     public function getOrder($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetOrderResponse.php');
         return GetOrderResponse::fromXML($this->_invoke('GetOrder'));
     }
 
@@ -35,7 +41,6 @@ class Mock implements OrdersInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -52,7 +57,6 @@ class Mock implements OrdersInterface
      */
     public function listOrderItems($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsResponse.php');
         return ListOrderItemsResponse::fromXML($this->_invoke('ListOrderItems'));
     }
 
@@ -70,7 +74,6 @@ class Mock implements OrdersInterface
      */
     public function listOrderItemsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenResponse.php');
         return ListOrderItemsByNextTokenResponse::fromXML($this->_invoke('ListOrderItemsByNextToken'));
     }
 
@@ -86,7 +89,6 @@ class Mock implements OrdersInterface
      */
     public function listOrders($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListOrdersResponse.php');
         return ListOrdersResponse::fromXML($this->_invoke('ListOrders'));
     }
 
@@ -104,7 +106,6 @@ class Mock implements OrdersInterface
      */
     public function listOrdersByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenResponse.php');
         return ListOrdersByNextTokenResponse::fromXML($this->_invoke('ListOrdersByNextToken'));
     }
 

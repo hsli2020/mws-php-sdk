@@ -2,6 +2,10 @@
 
 namespace Amazon\MWS\Sellers;
 
+use Amazon\MWS\Sellers\Model\GetServiceStatusResponse;
+use Amazon\MWS\Sellers\Model\ListMarketplaceParticipationsResponse;
+use Amazon\MWS\Sellers\Model\ListMarketplaceParticipationsByNextTokenResponse;
+
 class Mock implements SellersInterface
 {
     // Public API ------------------------------------------------------------//
@@ -20,7 +24,6 @@ class Mock implements SellersInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -37,7 +40,6 @@ class Mock implements SellersInterface
      */
     public function listMarketplaceParticipations($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsResponse.php');
         return ListMarketplaceParticipationsResponse::fromXML($this->_invoke('ListMarketplaceParticipations'));
     }
 
@@ -55,7 +57,6 @@ class Mock implements SellersInterface
      */
     public function listMarketplaceParticipationsByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListMarketplaceParticipationsByNextTokenResponse.php');
         return ListMarketplaceParticipationsByNextTokenResponse::fromXML($this->_invoke('ListMarketplaceParticipationsByNextToken'));
     }
 

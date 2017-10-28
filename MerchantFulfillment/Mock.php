@@ -2,6 +2,12 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
+use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\CreateShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetEligibleShippingServicesResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetServiceStatusResponse;
+
 class Mock implements MerchantFulfillmentInterface
 {
     // Public API ------------------------------------------------------------//
@@ -19,7 +25,6 @@ class Mock implements MerchantFulfillmentInterface
      */
     public function cancelShipment($request)
     {
-        require_once (dirname(__FILE__) . '/Model/CancelShipmentResponse.php');
         return CancelShipmentResponse::fromXML($this->_invoke('CancelShipment'));
     }
 
@@ -36,7 +41,6 @@ class Mock implements MerchantFulfillmentInterface
      */
     public function createShipment($request)
     {
-        require_once (dirname(__FILE__) . '/Model/CreateShipmentResponse.php');
         return CreateShipmentResponse::fromXML($this->_invoke('CreateShipment'));
     }
 
@@ -54,7 +58,6 @@ class Mock implements MerchantFulfillmentInterface
      */
     public function getEligibleShippingServices($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetEligibleShippingServicesResponse.php');
         return GetEligibleShippingServicesResponse::fromXML($this->_invoke('GetEligibleShippingServices'));
     }
 
@@ -70,7 +73,6 @@ class Mock implements MerchantFulfillmentInterface
      */
     public function getShipment($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetShipmentResponse.php');
         return GetShipmentResponse::fromXML($this->_invoke('GetShipment'));
     }
 
@@ -86,7 +88,6 @@ class Mock implements MerchantFulfillmentInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 

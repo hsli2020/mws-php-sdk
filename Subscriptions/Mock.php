@@ -2,6 +2,17 @@
 
 namespace Amazon\MWS\Subscriptions;
 
+use Amazon\MWS\Subscriptions\Model\CreateSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\DeleteSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\DeregisterDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\GetSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\ListRegisteredDestinationsResponse;
+use Amazon\MWS\Subscriptions\Model\ListSubscriptionsResponse;
+use Amazon\MWS\Subscriptions\Model\RegisterDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\SendTestNotificationToDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\UpdateSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\GetServiceStatusResponse;
+
 class Mock implements SubscriptionsInterface
 {
     // Public API ------------------------------------------------------------//
@@ -18,7 +29,6 @@ class Mock implements SubscriptionsInterface
      */
     public function createSubscription($request)
     {
-        require_once (dirname(__FILE__) . '/Model/CreateSubscriptionResponse.php');
         return CreateSubscriptionResponse::fromXML($this->_invoke('CreateSubscription'));
     }
 
@@ -34,7 +44,6 @@ class Mock implements SubscriptionsInterface
      */
     public function deleteSubscription($request)
     {
-        require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionResponse.php');
         return DeleteSubscriptionResponse::fromXML($this->_invoke('DeleteSubscription'));
     }
 
@@ -50,7 +59,6 @@ class Mock implements SubscriptionsInterface
      */
     public function deregisterDestination($request)
     {
-        require_once (dirname(__FILE__) . '/Model/DeregisterDestinationResponse.php');
         return DeregisterDestinationResponse::fromXML($this->_invoke('DeregisterDestination'));
     }
 
@@ -66,7 +74,6 @@ class Mock implements SubscriptionsInterface
      */
     public function getSubscription($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetSubscriptionResponse.php');
         return GetSubscriptionResponse::fromXML($this->_invoke('GetSubscription'));
     }
 
@@ -82,7 +89,6 @@ class Mock implements SubscriptionsInterface
      */
     public function listRegisteredDestinations($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsResponse.php');
         return ListRegisteredDestinationsResponse::fromXML($this->_invoke('ListRegisteredDestinations'));
     }
 
@@ -98,7 +104,6 @@ class Mock implements SubscriptionsInterface
      */
     public function listSubscriptions($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListSubscriptionsResponse.php');
         return ListSubscriptionsResponse::fromXML($this->_invoke('ListSubscriptions'));
     }
 
@@ -114,7 +119,6 @@ class Mock implements SubscriptionsInterface
      */
     public function registerDestination($request)
     {
-        require_once (dirname(__FILE__) . '/Model/RegisterDestinationResponse.php');
         return RegisterDestinationResponse::fromXML($this->_invoke('RegisterDestination'));
     }
 
@@ -130,7 +134,6 @@ class Mock implements SubscriptionsInterface
      */
     public function sendTestNotificationToDestination($request)
     {
-        require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationResponse.php');
         return SendTestNotificationToDestinationResponse::fromXML($this->_invoke('SendTestNotificationToDestination'));
     }
 
@@ -146,7 +149,6 @@ class Mock implements SubscriptionsInterface
      */
     public function updateSubscription($request)
     {
-        require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionResponse.php');
         return UpdateSubscriptionResponse::fromXML($this->_invoke('UpdateSubscription'));
     }
 
@@ -162,7 +164,6 @@ class Mock implements SubscriptionsInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 

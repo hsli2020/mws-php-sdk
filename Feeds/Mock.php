@@ -2,6 +2,13 @@
 
 namespace Amazon\MWS\Feeds;
 
+use Amazon\MWS\Feeds\Model\SubmitFeedResponse;
+use Amazon\MWS\Feeds\Model\GetFeedSubmissionListByNextTokenResponse;
+use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsResponse;
+use Amazon\MWS\Feeds\Model\GetFeedSubmissionCountResponse;
+use Amazon\MWS\Feeds\Model\GetFeedSubmissionResultResponse;
+use Amazon\MWS\Feeds\Model\GetFeedSubmissionListResponse;
+
 /**
  * The Amazon Marketplace Web Service contain APIs for inventory and order management.
  */
@@ -26,7 +33,6 @@ class Mock implements FeedsInterface
      */
     public function submitFeed($request)
     {
-        require_once ('MarketplaceWebService/Model/SubmitFeedResponse.php');
         return SubmitFeedResponse::fromXML($this->invoke('SubmitFeed'));
     }
 
@@ -43,7 +49,6 @@ class Mock implements FeedsInterface
      */
     public function getFeedSubmissionListByNextToken($request)
     {
-        require_once ('MarketplaceWebService/Model/GetFeedSubmissionListByNextTokenResponse.php');
         return GetFeedSubmissionListByNextTokenResponse::fromXML($this->invoke('GetFeedSubmissionListByNextToken'));
     }
 
@@ -61,7 +66,6 @@ class Mock implements FeedsInterface
      */
     public function cancelFeedSubmissions($request)
     {
-        require_once ('MarketplaceWebService/Model/CancelFeedSubmissionsResponse.php');
         return CancelFeedSubmissionsResponse::fromXML($this->invoke('CancelFeedSubmissions'));
     }
 
@@ -78,7 +82,6 @@ class Mock implements FeedsInterface
      */
     public function getFeedSubmissionCount($request)
     {
-        require_once ('MarketplaceWebService/Model/GetFeedSubmissionCountResponse.php');
         return GetFeedSubmissionCountResponse::fromXML($this->invoke('GetFeedSubmissionCount'));
     }
 
@@ -95,7 +98,6 @@ class Mock implements FeedsInterface
      */
     public function getFeedSubmissionResult($request)
     {
-        require_once ('MarketplaceWebService/Model/GetFeedSubmissionResultResponse.php');
         return GetFeedSubmissionResultResponse::fromXML($this->invoke('GetFeedSubmissionResult'));
     }
 
@@ -112,7 +114,6 @@ class Mock implements FeedsInterface
      */
     public function getFeedSubmissionList($request)
     {
-        require_once ('MarketplaceWebService/Model/GetFeedSubmissionListResponse.php');
         return GetFeedSubmissionListResponse::fromXML($this->invoke('GetFeedSubmissionList'));
     }
 

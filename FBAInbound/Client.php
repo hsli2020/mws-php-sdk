@@ -1513,12 +1513,12 @@ class Client implements FBAInboundInterface
         curl_setopt($ch, CURLOPT_HTTPHEADER, $allHeadersStr);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1)
-        {
+
+        if ($config['ProxyHost'] != null && $config['ProxyPort'] != -1) {
             curl_setopt($ch, CURLOPT_PROXY, $config['ProxyHost'] . ':' . $config['ProxyPort']);
         }
-        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null)
-        {
+
+        if ($config['ProxyUsername'] != null && $config['ProxyPassword'] != null) {
             curl_setopt($ch, CURLOPT_PROXYUSERPWD, $config['ProxyUsername'] . ':' . $config['ProxyPassword']);
         }
 

@@ -2,6 +2,10 @@
 
 namespace Amazon\MWS\FBAInventory;
 
+use Amazon\MWS\FBAInventory\Model\GetServiceStatusResponse;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyResponse;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyByNextTokenResponse;
+
 class Mock implements FBAInventoryInterface
 {
     // Public API ------------------------------------------------------------//
@@ -21,7 +25,6 @@ class Mock implements FBAInventoryInterface
      */
     public function getServiceStatus($request)
     {
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -66,7 +69,6 @@ class Mock implements FBAInventoryInterface
      */
     public function listInventorySupply($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyResponse.php');
         return ListInventorySupplyResponse::fromXML($this->_invoke('ListInventorySupply'));
     }
 
@@ -86,7 +88,6 @@ class Mock implements FBAInventoryInterface
      */
     public function listInventorySupplyByNextToken($request)
     {
-        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenResponse.php');
         return ListInventorySupplyByNextTokenResponse::fromXML($this->_invoke('ListInventorySupplyByNextToken'));
     }
 

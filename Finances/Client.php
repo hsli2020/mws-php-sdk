@@ -2,6 +2,19 @@
 
 namespace Amazon\MWS\Finances;
 
+use Amazon\MWS\Finances\Exception;
+use Amazon\MWS\Finances\Model\GetServiceStatusRequest;
+use Amazon\MWS\Finances\Model\GetServiceStatusResponse;
+use Amazon\MWS\Finances\Model\ListFinancialEventGroupsByNextTokenRequest;
+use Amazon\MWS\Finances\Model\ListFinancialEventGroupsByNextTokenResponse;
+use Amazon\MWS\Finances\Model\ListFinancialEventGroupsRequest;
+use Amazon\MWS\Finances\Model\ListFinancialEventGroupsResponse;
+use Amazon\MWS\Finances\Model\ListFinancialEventsByNextTokenRequest;
+use Amazon\MWS\Finances\Model\ListFinancialEventsByNextTokenResponse;
+use Amazon\MWS\Finances\Model\ListFinancialEventsRequest;
+use Amazon\MWS\Finances\Model\ListFinancialEventsResponse;
+use Amazon\MWS\Finances\Model\ResponseHeaderMetadata;
+
 /**
  * MWSFinancesService_Client is an implementation of MWSFinancesService
  */
@@ -43,14 +56,12 @@ class Client implements FinancesInterface
     public function listFinancialEventGroups($request)
     {
         if (!($request instanceof ListFinancialEventGroupsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsRequest.php');
             $request = new ListFinancialEventGroupsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventGroups';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsResponse.php');
         $response = ListFinancialEventGroupsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -97,14 +108,12 @@ class Client implements FinancesInterface
     public function listFinancialEventGroupsByNextToken($request)
     {
         if (!($request instanceof ListFinancialEventGroupsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenRequest.php');
             $request = new ListFinancialEventGroupsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventGroupsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventGroupsByNextTokenResponse.php');
         $response = ListFinancialEventGroupsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -143,14 +152,12 @@ class Client implements FinancesInterface
     public function listFinancialEvents($request)
     {
         if (!($request instanceof ListFinancialEventsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListFinancialEventsRequest.php');
             $request = new ListFinancialEventsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEvents';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventsResponse.php');
         $response = ListFinancialEventsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -204,14 +211,12 @@ class Client implements FinancesInterface
     public function listFinancialEventsByNextToken($request)
     {
         if (!($request instanceof ListFinancialEventsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenRequest.php');
             $request = new ListFinancialEventsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListFinancialEventsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListFinancialEventsByNextTokenResponse.php');
         $response = ListFinancialEventsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -250,14 +255,12 @@ class Client implements FinancesInterface
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -442,7 +445,6 @@ class Client implements FinancesInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
                 throw new MWSFinancesService_Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
@@ -465,7 +467,6 @@ class Client implements FinancesInterface
         } catch (MWSFinancesService_Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             throw new MWSFinancesService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
@@ -492,7 +493,6 @@ class Client implements FinancesInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
         return new MWSFinancesService_Exception($exProps);
     }
 
@@ -553,7 +553,6 @@ class Client implements FinancesInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -606,7 +605,6 @@ class Client implements FinancesInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new MWSFinancesService_Exception($exProps);
@@ -673,7 +671,6 @@ class Client implements FinancesInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

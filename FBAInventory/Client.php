@@ -2,6 +2,15 @@
 
 namespace Amazon\MWS\FBAInventory;
 
+use Amazon\MWS\FBAInventory\Exception;
+use Amazon\MWS\FBAInventory\Model\GetServiceStatusRequest;
+use Amazon\MWS\FBAInventory\Model\GetServiceStatusResponse;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyByNextTokenRequest;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyByNextTokenResponse;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyRequest;
+use Amazon\MWS\FBAInventory\Model\ListInventorySupplyResponse;
+use Amazon\MWS\FBAInventory\Model\ResponseHeaderMetadata;
+
 /**
  * Client is an implementation of FBAInventoryInterface
  */
@@ -41,7 +50,7 @@ class Client implements FBAInventoryInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
@@ -116,7 +125,7 @@ class Client implements FBAInventoryInterface
      * @see ListInventorySupplyRequest
      * @return ListInventorySupplyResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws Exception
      */
     public function listInventorySupply($request)
     {
@@ -181,7 +190,7 @@ class Client implements FBAInventoryInterface
      * @see ListInventorySupplyByNextTokenRequest
      * @return ListInventorySupplyByNextTokenResponse
      *
-     * @throws FBAInventoryServiceMWS_Exception
+     * @throws Exception
      */
     public function listInventorySupplyByNextToken($request)
     {
@@ -387,7 +396,7 @@ class Client implements FBAInventoryInterface
         try {
             if (empty($this->_config['ServiceURL'])) {
                 require_once (dirname(__FILE__) . '/Exception.php');
-                throw new FBAInventoryServiceMWS_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -406,11 +415,11 @@ class Client implements FBAInventoryInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (FBAInventoryServiceMWS_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
-            throw new FBAInventoryServiceMWS_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -437,7 +446,7 @@ class Client implements FBAInventoryInterface
         }
 
         require_once (dirname(__FILE__) . '/Exception.php');
-        return new FBAInventoryServiceMWS_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -503,7 +512,7 @@ class Client implements FBAInventoryInterface
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new FBAInventoryServiceMWS_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -555,7 +564,7 @@ class Client implements FBAInventoryInterface
             require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new FBAInventoryServiceMWS_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(

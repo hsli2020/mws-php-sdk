@@ -2,6 +2,29 @@
 
 namespace Amazon\MWS\Subscriptions;
 
+use Amazon\MWS\Subscriptions\Exception;
+use Amazon\MWS\Subscriptions\Model\CreateSubscriptionInput;
+use Amazon\MWS\Subscriptions\Model\CreateSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\DeleteSubscriptionInput;
+use Amazon\MWS\Subscriptions\Model\DeleteSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\DeregisterDestinationInput;
+use Amazon\MWS\Subscriptions\Model\DeregisterDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\GetServiceStatusRequest;
+use Amazon\MWS\Subscriptions\Model\GetServiceStatusResponse;
+use Amazon\MWS\Subscriptions\Model\GetSubscriptionInput;
+use Amazon\MWS\Subscriptions\Model\GetSubscriptionResponse;
+use Amazon\MWS\Subscriptions\Model\ListRegisteredDestinationsInput;
+use Amazon\MWS\Subscriptions\Model\ListRegisteredDestinationsResponse;
+use Amazon\MWS\Subscriptions\Model\ListSubscriptionsInput;
+use Amazon\MWS\Subscriptions\Model\ListSubscriptionsResponse;
+use Amazon\MWS\Subscriptions\Model\RegisterDestinationInput;
+use Amazon\MWS\Subscriptions\Model\RegisterDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\ResponseHeaderMetadata;
+use Amazon\MWS\Subscriptions\Model\SendTestNotificationToDestinationInput;
+use Amazon\MWS\Subscriptions\Model\SendTestNotificationToDestinationResponse;
+use Amazon\MWS\Subscriptions\Model\UpdateSubscriptionInput;
+use Amazon\MWS\Subscriptions\Model\UpdateSubscriptionResponse;
+
 /**
  * Subscriptions\Client is an implementation of SubscriptionsInterface
  */
@@ -38,19 +61,17 @@ class Client implements SubscriptionsInterface
      * @see CreateSubscriptionInput
      * @return CreateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function createSubscription($request)
     {
         if (!($request instanceof CreateSubscriptionInput)) {
-            require_once (dirname(__FILE__) . '/Model/CreateSubscriptionInput.php');
             $request = new CreateSubscriptionInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CreateSubscription';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/CreateSubscriptionResponse.php');
         $response = CreateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -90,19 +111,17 @@ class Client implements SubscriptionsInterface
      * @see DeleteSubscriptionInput
      * @return DeleteSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function deleteSubscription($request)
     {
         if (!($request instanceof DeleteSubscriptionInput)) {
-            require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionInput.php');
             $request = new DeleteSubscriptionInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'DeleteSubscription';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/DeleteSubscriptionResponse.php');
         $response = DeleteSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -145,19 +164,17 @@ class Client implements SubscriptionsInterface
      * @see DeregisterDestinationInput
      * @return DeregisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function deregisterDestination($request)
     {
         if (!($request instanceof DeregisterDestinationInput)) {
-            require_once (dirname(__FILE__) . '/Model/DeregisterDestinationInput.php');
             $request = new DeregisterDestinationInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'DeregisterDestination';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/DeregisterDestinationResponse.php');
         $response = DeregisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -197,19 +214,17 @@ class Client implements SubscriptionsInterface
      * @see GetSubscriptionInput
      * @return GetSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function getSubscription($request)
     {
         if (!($request instanceof GetSubscriptionInput)) {
-            require_once (dirname(__FILE__) . '/Model/GetSubscriptionInput.php');
             $request = new GetSubscriptionInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetSubscription';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetSubscriptionResponse.php');
         $response = GetSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -252,19 +267,17 @@ class Client implements SubscriptionsInterface
      * @see ListRegisteredDestinationsInput
      * @return ListRegisteredDestinationsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function listRegisteredDestinations($request)
     {
         if (!($request instanceof ListRegisteredDestinationsInput)) {
-            require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsInput.php');
             $request = new ListRegisteredDestinationsInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListRegisteredDestinations';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListRegisteredDestinationsResponse.php');
         $response = ListRegisteredDestinationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -298,19 +311,17 @@ class Client implements SubscriptionsInterface
      * @see ListSubscriptionsInput
      * @return ListSubscriptionsResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function listSubscriptions($request)
     {
         if (!($request instanceof ListSubscriptionsInput)) {
-            require_once (dirname(__FILE__) . '/Model/ListSubscriptionsInput.php');
             $request = new ListSubscriptionsInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListSubscriptions';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListSubscriptionsResponse.php');
         $response = ListSubscriptionsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -344,19 +355,17 @@ class Client implements SubscriptionsInterface
      * @see RegisterDestinationInput
      * @return RegisterDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function registerDestination($request)
     {
         if (!($request instanceof RegisterDestinationInput)) {
-            require_once (dirname(__FILE__) . '/Model/RegisterDestinationInput.php');
             $request = new RegisterDestinationInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'RegisterDestination';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/RegisterDestinationResponse.php');
         $response = RegisterDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -396,19 +405,17 @@ class Client implements SubscriptionsInterface
      * @see SendTestNotificationToDestinationInput
      * @return SendTestNotificationToDestinationResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function sendTestNotificationToDestination($request)
     {
         if (!($request instanceof SendTestNotificationToDestinationInput)) {
-            require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationInput.php');
             $request = new SendTestNotificationToDestinationInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'SendTestNotificationToDestination';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/SendTestNotificationToDestinationResponse.php');
         $response = SendTestNotificationToDestinationResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -448,19 +455,17 @@ class Client implements SubscriptionsInterface
      * @see UpdateSubscriptionInput
      * @return UpdateSubscriptionResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function updateSubscription($request)
     {
         if (!($request instanceof UpdateSubscriptionInput)) {
-            require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionInput.php');
             $request = new UpdateSubscriptionInput($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'UpdateSubscription';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/UpdateSubscriptionResponse.php');
         $response = UpdateSubscriptionResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -500,19 +505,17 @@ class Client implements SubscriptionsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSSubscriptionsService_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -697,8 +700,7 @@ class Client implements SubscriptionsInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MWSSubscriptionsService_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -717,11 +719,10 @@ class Client implements SubscriptionsInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MWSSubscriptionsService_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MWSSubscriptionsService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -747,8 +748,7 @@ class Client implements SubscriptionsInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new MWSSubscriptionsService_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -810,11 +810,10 @@ class Client implements SubscriptionsInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MWSSubscriptionsService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -845,16 +844,12 @@ class Client implements SubscriptionsInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
-
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -862,11 +857,10 @@ class Client implements SubscriptionsInterface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
+        if ($body == null) {
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MWSSubscriptionsService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(
@@ -930,7 +924,6 @@ class Client implements SubscriptionsInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

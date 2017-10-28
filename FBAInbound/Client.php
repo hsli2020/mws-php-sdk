@@ -2,6 +2,51 @@
 
 namespace Amazon\MWS\FBAInbound;
 
+use Amazon\MWS\FBAInbound\Exception;
+use Amazon\MWS\FBAInbound\Model\ConfirmPreorderRequest;
+use Amazon\MWS\FBAInbound\Model\ConfirmPreorderResponse;
+use Amazon\MWS\FBAInbound\Model\ConfirmTransportInputRequest;
+use Amazon\MWS\FBAInbound\Model\ConfirmTransportRequestResponse;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentPlanRequest;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentPlanResponse;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentRequest;
+use Amazon\MWS\FBAInbound\Model\CreateInboundShipmentResponse;
+use Amazon\MWS\FBAInbound\Model\EstimateTransportInputRequest;
+use Amazon\MWS\FBAInbound\Model\EstimateTransportRequestResponse;
+use Amazon\MWS\FBAInbound\Model\GetBillOfLadingRequest;
+use Amazon\MWS\FBAInbound\Model\GetBillOfLadingResponse;
+use Amazon\MWS\FBAInbound\Model\GetPackageLabelsRequest;
+use Amazon\MWS\FBAInbound\Model\GetPackageLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\GetPalletLabelsRequest;
+use Amazon\MWS\FBAInbound\Model\GetPalletLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\GetPreorderInfoRequest;
+use Amazon\MWS\FBAInbound\Model\GetPreorderInfoResponse;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForASINRequest;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForASINResponse;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForSKURequest;
+use Amazon\MWS\FBAInbound\Model\GetPrepInstructionsForSKUResponse;
+use Amazon\MWS\FBAInbound\Model\GetServiceStatusRequest;
+use Amazon\MWS\FBAInbound\Model\GetServiceStatusResponse;
+use Amazon\MWS\FBAInbound\Model\GetTransportContentRequest;
+use Amazon\MWS\FBAInbound\Model\GetTransportContentResponse;
+use Amazon\MWS\FBAInbound\Model\GetUniquePackageLabelsRequest;
+use Amazon\MWS\FBAInbound\Model\GetUniquePackageLabelsResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsByNextTokenRequest;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsByNextTokenResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsRequest;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentItemsResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsByNextTokenRequest;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsByNextTokenResponse;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsRequest;
+use Amazon\MWS\FBAInbound\Model\ListInboundShipmentsResponse;
+use Amazon\MWS\FBAInbound\Model\PutTransportContentRequest;
+use Amazon\MWS\FBAInbound\Model\PutTransportContentResponse;
+use Amazon\MWS\FBAInbound\Model\ResponseHeaderMetadata;
+use Amazon\MWS\FBAInbound\Model\UpdateInboundShipmentRequest;
+use Amazon\MWS\FBAInbound\Model\UpdateInboundShipmentResponse;
+use Amazon\MWS\FBAInbound\Model\VoidTransportInputRequest;
+use Amazon\MWS\FBAInbound\Model\VoidTransportRequestResponse;
+
 /**
  * Client is an implementation of FBAInboundServiceMWS
  */
@@ -50,14 +95,12 @@ class Client implements FBAInboundInterface
     public function confirmPreorder($request)
     {
         if (!($request instanceof ConfirmPreorderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ConfirmPreorderRequest.php');
             $request = new ConfirmPreorderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ConfirmPreorder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ConfirmPreorderResponse.php');
         $response = ConfirmPreorderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -104,14 +147,12 @@ class Client implements FBAInboundInterface
     public function confirmTransportRequest($request)
     {
         if (!($request instanceof ConfirmTransportInputRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ConfirmTransportInputRequest.php');
             $request = new ConfirmTransportInputRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ConfirmTransportRequest';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ConfirmTransportRequestResponse.php');
         $response = ConfirmTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -154,14 +195,12 @@ class Client implements FBAInboundInterface
     public function createInboundShipment($request)
     {
         if (!($request instanceof CreateInboundShipmentRequest)) {
-            require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentRequest.php');
             $request = new CreateInboundShipmentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CreateInboundShipment';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentResponse.php');
         $response = CreateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -219,14 +258,12 @@ class Client implements FBAInboundInterface
     public function createInboundShipmentPlan($request)
     {
         if (!($request instanceof CreateInboundShipmentPlanRequest)) {
-            require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanRequest.php');
             $request = new CreateInboundShipmentPlanRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CreateInboundShipmentPlan';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanResponse.php');
         $response = CreateInboundShipmentPlanResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -288,14 +325,12 @@ class Client implements FBAInboundInterface
     public function estimateTransportRequest($request)
     {
         if (!($request instanceof EstimateTransportInputRequest)) {
-            require_once (dirname(__FILE__) . '/Model/EstimateTransportInputRequest.php');
             $request = new EstimateTransportInputRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'EstimateTransportRequest';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/EstimateTransportRequestResponse.php');
         $response = EstimateTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -336,14 +371,12 @@ class Client implements FBAInboundInterface
     public function getBillOfLading($request)
     {
         if (!($request instanceof GetBillOfLadingRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetBillOfLadingRequest.php');
             $request = new GetBillOfLadingRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetBillOfLading';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetBillOfLadingResponse.php');
         $response = GetBillOfLadingResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -396,14 +429,12 @@ class Client implements FBAInboundInterface
     public function getPackageLabels($request)
     {
         if (!($request instanceof GetPackageLabelsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPackageLabelsRequest.php');
             $request = new GetPackageLabelsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPackageLabels';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPackageLabelsResponse.php');
         $response = GetPackageLabelsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -453,14 +484,12 @@ class Client implements FBAInboundInterface
     public function getPalletLabels($request)
     {
         if (!($request instanceof GetPalletLabelsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPalletLabelsRequest.php');
             $request = new GetPalletLabelsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPalletLabels';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPalletLabelsResponse.php');
         $response = GetPalletLabelsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -512,14 +541,12 @@ class Client implements FBAInboundInterface
     public function getPreorderInfo($request)
     {
         if (!($request instanceof GetPreorderInfoRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPreorderInfoRequest.php');
             $request = new GetPreorderInfoRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPreorderInfo';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPreorderInfoResponse.php');
         $response = GetPreorderInfoResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -565,14 +592,12 @@ class Client implements FBAInboundInterface
     public function getPrepInstructionsForASIN($request)
     {
         if (!($request instanceof GetPrepInstructionsForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINRequest.php');
             $request = new GetPrepInstructionsForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPrepInstructionsForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINResponse.php');
         $response = GetPrepInstructionsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -621,14 +646,12 @@ class Client implements FBAInboundInterface
     public function getPrepInstructionsForSKU($request)
     {
         if (!($request instanceof GetPrepInstructionsForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKURequest.php');
             $request = new GetPrepInstructionsForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPrepInstructionsForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKUResponse.php');
         $response = GetPrepInstructionsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -676,14 +699,12 @@ class Client implements FBAInboundInterface
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -724,14 +745,12 @@ class Client implements FBAInboundInterface
     public function getTransportContent($request)
     {
         if (!($request instanceof GetTransportContentRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetTransportContentRequest.php');
             $request = new GetTransportContentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetTransportContent';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetTransportContentResponse.php');
         $response = GetTransportContentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -786,14 +805,12 @@ class Client implements FBAInboundInterface
     public function getUniquePackageLabels($request)
     {
         if (!($request instanceof GetUniquePackageLabelsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetUniquePackageLabelsRequest.php');
             $request = new GetUniquePackageLabelsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetUniquePackageLabels';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetUniquePackageLabelsResponse.php');
         $response = GetUniquePackageLabelsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -851,14 +868,12 @@ class Client implements FBAInboundInterface
     public function listInboundShipmentItems($request)
     {
         if (!($request instanceof ListInboundShipmentItemsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsRequest.php');
             $request = new ListInboundShipmentItemsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInboundShipmentItems';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsResponse.php');
         $response = ListInboundShipmentItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -910,14 +925,12 @@ class Client implements FBAInboundInterface
     public function listInboundShipmentItemsByNextToken($request)
     {
         if (!($request instanceof ListInboundShipmentItemsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenRequest.php');
             $request = new ListInboundShipmentItemsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInboundShipmentItemsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenResponse.php');
         $response = ListInboundShipmentItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -967,14 +980,12 @@ class Client implements FBAInboundInterface
     public function listInboundShipments($request)
     {
         if (!($request instanceof ListInboundShipmentsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsRequest.php');
             $request = new ListInboundShipmentsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInboundShipments';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsResponse.php');
         $response = ListInboundShipmentsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -1033,14 +1044,12 @@ class Client implements FBAInboundInterface
     public function listInboundShipmentsByNextToken($request)
     {
         if (!($request instanceof ListInboundShipmentsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenRequest.php');
             $request = new ListInboundShipmentsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListInboundShipmentsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenResponse.php');
         $response = ListInboundShipmentsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -1083,14 +1092,12 @@ class Client implements FBAInboundInterface
     public function putTransportContent($request)
     {
         if (!($request instanceof PutTransportContentRequest)) {
-            require_once (dirname(__FILE__) . '/Model/PutTransportContentRequest.php');
             $request = new PutTransportContentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'PutTransportContent';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/PutTransportContentResponse.php');
         $response = PutTransportContentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -1152,14 +1159,12 @@ class Client implements FBAInboundInterface
     public function updateInboundShipment($request)
     {
         if (!($request instanceof UpdateInboundShipmentRequest)) {
-            require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentRequest.php');
             $request = new UpdateInboundShipmentRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'UpdateInboundShipment';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentResponse.php');
         $response = UpdateInboundShipmentResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -1218,14 +1223,12 @@ class Client implements FBAInboundInterface
     public function voidTransportRequest($request)
     {
         if (!($request instanceof VoidTransportInputRequest)) {
-            require_once (dirname(__FILE__) . '/Model/VoidTransportInputRequest.php');
             $request = new VoidTransportInputRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'VoidTransportRequest';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/VoidTransportRequestResponse.php');
         $response = VoidTransportRequestResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -1413,7 +1416,6 @@ class Client implements FBAInboundInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
                 throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
@@ -1436,7 +1438,6 @@ class Client implements FBAInboundInterface
         } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
@@ -1463,7 +1464,6 @@ class Client implements FBAInboundInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
         return new Exception($exProps);
     }
 
@@ -1526,7 +1526,6 @@ class Client implements FBAInboundInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -1579,7 +1578,6 @@ class Client implements FBAInboundInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new Exception($exProps);
@@ -1646,7 +1644,6 @@ class Client implements FBAInboundInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
             $headers['x-mws-request-id'],
             $headers['x-mws-response-context'],

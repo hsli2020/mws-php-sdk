@@ -2,6 +2,21 @@
 
 namespace Amazon\MWS\Orders;
 
+use Amazon\MWS\Orders\Exception;
+use Amazon\MWS\Orders\Model\GetOrderRequest;
+use Amazon\MWS\Orders\Model\GetOrderResponse;
+use Amazon\MWS\Orders\Model\GetServiceStatusRequest;
+use Amazon\MWS\Orders\Model\GetServiceStatusResponse;
+use Amazon\MWS\Orders\Model\ListOrderItemsByNextTokenRequest;
+use Amazon\MWS\Orders\Model\ListOrderItemsByNextTokenResponse;
+use Amazon\MWS\Orders\Model\ListOrderItemsRequest;
+use Amazon\MWS\Orders\Model\ListOrderItemsResponse;
+use Amazon\MWS\Orders\Model\ListOrdersByNextTokenRequest;
+use Amazon\MWS\Orders\Model\ListOrdersByNextTokenResponse;
+use Amazon\MWS\Orders\Model\ListOrdersRequest;
+use Amazon\MWS\Orders\Model\ListOrdersResponse;
+use Amazon\MWS\Orders\Model\ResponseHeaderMetadata;
+
 /**
  * Orders\Client is an implementation of MarketplaceWebServiceOrders
  */
@@ -38,19 +53,17 @@ class Client implements OrdersInterface
      * @see GetOrderRequest
      * @return GetOrderResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function getOrder($request)
     {
         if (!($request instanceof GetOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetOrderRequest.php');
             $request = new GetOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetOrderResponse.php');
         $response = GetOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -85,19 +98,17 @@ class Client implements OrdersInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -129,19 +140,17 @@ class Client implements OrdersInterface
      * @see ListOrderItemsRequest
      * @return ListOrderItemsResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function listOrderItems($request)
     {
         if (!($request instanceof ListOrderItemsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrderItemsRequest.php');
             $request = new ListOrderItemsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItems';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsResponse.php');
         $response = ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -177,19 +186,17 @@ class Client implements OrdersInterface
      * @see ListOrderItemsByNextTokenRequest
      * @return ListOrderItemsByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function listOrderItemsByNextToken($request)
     {
         if (!($request instanceof ListOrderItemsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenRequest.php');
             $request = new ListOrderItemsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItemsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrderItemsByNextTokenResponse.php');
         $response = ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -223,19 +230,17 @@ class Client implements OrdersInterface
      * @see ListOrdersRequest
      * @return ListOrdersResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function listOrders($request)
     {
         if (!($request instanceof ListOrdersRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrdersRequest.php');
             $request = new ListOrdersRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrders';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrdersResponse.php');
         $response = ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -304,19 +309,17 @@ class Client implements OrdersInterface
      * @see ListOrdersByNextTokenRequest
      * @return ListOrdersByNextTokenResponse
      *
-     * @throws MarketplaceWebServiceOrders_Exception
+     * @throws Exception
      */
     public function listOrdersByNextToken($request)
     {
         if (!($request instanceof ListOrdersByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenRequest.php');
             $request = new ListOrdersByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrdersByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListOrdersByNextTokenResponse.php');
         $response = ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -504,8 +507,7 @@ class Client implements OrdersInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MarketplaceWebServiceOrders_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -524,11 +526,10 @@ class Client implements OrdersInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MarketplaceWebServiceOrders_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MarketplaceWebServiceOrders_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -554,8 +555,7 @@ class Client implements OrdersInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new MarketplaceWebServiceOrders_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -616,11 +616,10 @@ class Client implements OrdersInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MarketplaceWebServiceOrders_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -651,15 +650,12 @@ class Client implements OrdersInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
 
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
@@ -669,10 +665,9 @@ class Client implements OrdersInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MarketplaceWebServiceOrders_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(
@@ -736,7 +731,6 @@ class Client implements OrdersInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

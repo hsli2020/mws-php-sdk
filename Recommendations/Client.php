@@ -2,6 +2,17 @@
 
 namespace Amazon\MWS\Recommendations;
 
+use Amazon\MWS\Recommendations\Exception;
+use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsRequest;
+use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsResponse;
+use Amazon\MWS\Recommendations\Model\GetServiceStatusRequest;
+use Amazon\MWS\Recommendations\Model\GetServiceStatusResponse;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsByNextTokenRequest;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsByNextTokenResponse;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsRequest;
+use Amazon\MWS\Recommendations\Model\ListRecommendationsResponse;
+use Amazon\MWS\Recommendations\Model\ResponseHeaderMetadata;
+
 /**
  * Recommendations\Client is an implementation of RecommendationsSectionService
  */
@@ -39,19 +50,17 @@ class Client implements RecommendationsInterface
      * @see GetLastUpdatedTimeForRecommendationsRequest
      * @return GetLastUpdatedTimeForRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws Exception
      */
     public function getLastUpdatedTimeForRecommendations($request)
     {
         if (!($request instanceof GetLastUpdatedTimeForRecommendationsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsRequest.php');
             $request = new GetLastUpdatedTimeForRecommendationsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLastUpdatedTimeForRecommendations';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLastUpdatedTimeForRecommendationsResponse.php');
         $response = GetLastUpdatedTimeForRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -85,19 +94,17 @@ class Client implements RecommendationsInterface
      * @see ListRecommendationsRequest
      * @return ListRecommendationsResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws Exception
      */
     public function listRecommendations($request)
     {
         if (!($request instanceof ListRecommendationsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListRecommendationsRequest.php');
             $request = new ListRecommendationsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListRecommendations';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListRecommendationsResponse.php');
         $response = ListRecommendationsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -137,19 +144,17 @@ class Client implements RecommendationsInterface
      * @see ListRecommendationsByNextTokenRequest
      * @return ListRecommendationsByNextTokenResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws Exception
      */
     public function listRecommendationsByNextToken($request)
     {
         if (!($request instanceof ListRecommendationsByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenRequest.php');
             $request = new ListRecommendationsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListRecommendationsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListRecommendationsByNextTokenResponse.php');
         $response = ListRecommendationsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -183,19 +188,17 @@ class Client implements RecommendationsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSRecommendationsSectionService_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -380,8 +383,7 @@ class Client implements RecommendationsInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MWSRecommendationsSectionService_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -400,11 +402,10 @@ class Client implements RecommendationsInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MWSRecommendationsSectionService_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MWSRecommendationsSectionService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -430,8 +431,7 @@ class Client implements RecommendationsInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new MWSRecommendationsSectionService_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -493,11 +493,10 @@ class Client implements RecommendationsInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MWSRecommendationsSectionService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -528,15 +527,12 @@ class Client implements RecommendationsInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
 
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
@@ -546,10 +542,9 @@ class Client implements RecommendationsInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MWSRecommendationsSectionService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(
@@ -613,7 +608,6 @@ class Client implements RecommendationsInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

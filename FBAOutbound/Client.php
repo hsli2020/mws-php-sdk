@@ -2,6 +2,27 @@
 
 namespace Amazon\MWS\FBAOutbound;
 
+use Amazon\MWS\FBAOutbound\Exception;
+use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderRequest;
+use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderResponse;
+use Amazon\MWS\FBAOutbound\Model\CreateFulfillmentOrderRequest;
+use Amazon\MWS\FBAOutbound\Model\CreateFulfillmentOrderResponse;
+use Amazon\MWS\FBAOutbound\Model\GetFulfillmentOrderRequest;
+use Amazon\MWS\FBAOutbound\Model\GetFulfillmentOrderResponse;
+use Amazon\MWS\FBAOutbound\Model\GetFulfillmentPreviewRequest;
+use Amazon\MWS\FBAOutbound\Model\GetFulfillmentPreviewResponse;
+use Amazon\MWS\FBAOutbound\Model\GetPackageTrackingDetailsRequest;
+use Amazon\MWS\FBAOutbound\Model\GetPackageTrackingDetailsResponse;
+use Amazon\MWS\FBAOutbound\Model\GetServiceStatusRequest;
+use Amazon\MWS\FBAOutbound\Model\GetServiceStatusResponse;
+use Amazon\MWS\FBAOutbound\Model\ListAllFulfillmentOrdersByNextTokenRequest;
+use Amazon\MWS\FBAOutbound\Model\ListAllFulfillmentOrdersByNextTokenResponse;
+use Amazon\MWS\FBAOutbound\Model\ListAllFulfillmentOrdersRequest;
+use Amazon\MWS\FBAOutbound\Model\ListAllFulfillmentOrdersResponse;
+use Amazon\MWS\FBAOutbound\Model\ResponseHeaderMetadata;
+use Amazon\MWS\FBAOutbound\Model\UpdateFulfillmentOrderRequest;
+use Amazon\MWS\FBAOutbound\Model\UpdateFulfillmentOrderResponse;
+
 /**
  * Client is an implementation of FBAOutboundInterface
  */
@@ -41,19 +62,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see CancelFulfillmentOrderRequest
      * @return CancelFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function cancelFulfillmentOrder($request)
     {
         if (!($request instanceof CancelFulfillmentOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/CancelFulfillmentOrderRequest.php');
             $request = new CancelFulfillmentOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CancelFulfillmentOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/CancelFulfillmentOrderResponse.php');
         $response = CancelFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -139,19 +158,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see CreateFulfillmentOrderRequest
      * @return CreateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function createFulfillmentOrder($request)
     {
         if (!($request instanceof CreateFulfillmentOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/CreateFulfillmentOrderRequest.php');
             $request = new CreateFulfillmentOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'CreateFulfillmentOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/CreateFulfillmentOrderResponse.php');
         $response = CreateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -248,19 +265,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see GetFulfillmentOrderRequest
      * @return GetFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function getFulfillmentOrder($request)
     {
         if (!($request instanceof GetFulfillmentOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetFulfillmentOrderRequest.php');
             $request = new GetFulfillmentOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetFulfillmentOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetFulfillmentOrderResponse.php');
         $response = GetFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -306,19 +321,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see GetFulfillmentPreviewRequest
      * @return GetFulfillmentPreviewResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function getFulfillmentPreview($request)
     {
         if (!($request instanceof GetFulfillmentPreviewRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetFulfillmentPreviewRequest.php');
             $request = new GetFulfillmentPreviewRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetFulfillmentPreview';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetFulfillmentPreviewResponse.php');
         $response = GetFulfillmentPreviewResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -379,19 +392,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see GetPackageTrackingDetailsRequest
      * @return GetPackageTrackingDetailsResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function getPackageTrackingDetails($request)
     {
         if (!($request instanceof GetPackageTrackingDetailsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetPackageTrackingDetailsRequest.php');
             $request = new GetPackageTrackingDetailsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetPackageTrackingDetails';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetPackageTrackingDetailsResponse.php');
         $response = GetPackageTrackingDetailsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -428,19 +439,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -484,19 +493,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see ListAllFulfillmentOrdersRequest
      * @return ListAllFulfillmentOrdersResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function listAllFulfillmentOrders($request)
     {
         if (!($request instanceof ListAllFulfillmentOrdersRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersRequest.php');
             $request = new ListAllFulfillmentOrdersRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListAllFulfillmentOrders';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersResponse.php');
         $response = ListAllFulfillmentOrdersResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -543,19 +550,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see ListAllFulfillmentOrdersByNextTokenRequest
      * @return ListAllFulfillmentOrdersByNextTokenResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function listAllFulfillmentOrdersByNextToken($request)
     {
         if (!($request instanceof ListAllFulfillmentOrdersByNextTokenRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenRequest.php');
             $request = new ListAllFulfillmentOrdersByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListAllFulfillmentOrdersByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenResponse.php');
         $response = ListAllFulfillmentOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -635,19 +640,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
      * @see UpdateFulfillmentOrderRequest
      * @return UpdateFulfillmentOrderResponse
      *
-     * @throws FBAOutboundServiceMWS_Exception
+     * @throws Exception
      */
     public function updateFulfillmentOrder($request)
     {
         if (!($request instanceof UpdateFulfillmentOrderRequest)) {
-            require_once (dirname(__FILE__) . '/Model/UpdateFulfillmentOrderRequest.php');
             $request = new UpdateFulfillmentOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'UpdateFulfillmentOrder';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/UpdateFulfillmentOrderResponse.php');
         $response = UpdateFulfillmentOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -884,8 +887,7 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new FBAOutboundServiceMWS_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -904,11 +906,10 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (FBAOutboundServiceMWS_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new FBAOutboundServiceMWS_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -934,8 +935,7 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new FBAOutboundServiceMWS_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -997,11 +997,10 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new FBAOutboundServiceMWS_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -1050,10 +1049,9 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new FBAOutboundServiceMWS_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(
@@ -1117,7 +1115,6 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

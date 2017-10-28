@@ -2,6 +2,19 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
+use Amazon\MWS\MerchantFulfillment\Exception;
+use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentRequest;
+use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\CreateShipmentRequest;
+use Amazon\MWS\MerchantFulfillment\Model\CreateShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetEligibleShippingServicesRequest;
+use Amazon\MWS\MerchantFulfillment\Model\GetEligibleShippingServicesResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetServiceStatusRequest;
+use Amazon\MWS\MerchantFulfillment\Model\GetServiceStatusResponse;
+use Amazon\MWS\MerchantFulfillment\Model\GetShipmentRequest;
+use Amazon\MWS\MerchantFulfillment\Model\GetShipmentResponse;
+use Amazon\MWS\MerchantFulfillment\Model\ResponseHeaderMetadata;
+
 /**
  * MerchantFulfillment\Client is an implementation of MerchantFulfillmentService
  */
@@ -39,7 +52,7 @@ class Client implements MerchantFulfillmentInterface
      * @see CancelShipmentRequest
      * @return CancelShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws Exception
      */
     public function cancelShipment($request)
     {
@@ -86,7 +99,7 @@ class Client implements MerchantFulfillmentInterface
      * @see CreateShipmentRequest
      * @return CreateShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws Exception
      */
     public function createShipment($request)
     {
@@ -143,7 +156,7 @@ class Client implements MerchantFulfillmentInterface
      * @see GetEligibleShippingServicesRequest
      * @return GetEligibleShippingServicesResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws Exception
      */
     public function getEligibleShippingServices($request)
     {
@@ -192,7 +205,7 @@ class Client implements MerchantFulfillmentInterface
      * @see GetShipmentRequest
      * @return GetShipmentResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws Exception
      */
     public function getShipment($request)
     {
@@ -238,7 +251,7 @@ class Client implements MerchantFulfillmentInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MWSMerchantFulfillmentService_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
@@ -436,7 +449,7 @@ class Client implements MerchantFulfillmentInterface
         try {
             if (empty($this->_config['ServiceURL'])) {
                 require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MWSMerchantFulfillmentService_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -455,11 +468,11 @@ class Client implements MerchantFulfillmentInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MWSMerchantFulfillmentService_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
             require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MWSMerchantFulfillmentService_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -486,7 +499,7 @@ class Client implements MerchantFulfillmentInterface
         }
 
         require_once (dirname(__FILE__) . '/Exception.php');
-        return new MWSMerchantFulfillmentService_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -552,7 +565,7 @@ class Client implements MerchantFulfillmentInterface
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MWSMerchantFulfillmentService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -583,16 +596,12 @@ class Client implements MerchantFulfillmentInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
-
+            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -604,7 +613,7 @@ class Client implements MerchantFulfillmentInterface
             require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MWSMerchantFulfillmentService_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(

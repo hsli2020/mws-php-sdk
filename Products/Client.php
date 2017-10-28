@@ -2,6 +2,39 @@
 
 namespace Amazon\MWS\Products;
 
+use Amazon\MWS\Products\Exception;
+use Amazon\MWS\Products\Model\GetCompetitivePricingForASINRequest;
+use Amazon\MWS\Products\Model\GetCompetitivePricingForASINResponse;
+use Amazon\MWS\Products\Model\GetCompetitivePricingForSKURequest;
+use Amazon\MWS\Products\Model\GetCompetitivePricingForSKUResponse;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForASINRequest;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForASINResponse;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForSKURequest;
+use Amazon\MWS\Products\Model\GetLowestOfferListingsForSKUResponse;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForASINRequest;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForASINResponse;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForSKURequest;
+use Amazon\MWS\Products\Model\GetLowestPricedOffersForSKUResponse;
+use Amazon\MWS\Products\Model\GetMatchingProductForIdRequest;
+use Amazon\MWS\Products\Model\GetMatchingProductForIdResponse;
+use Amazon\MWS\Products\Model\GetMatchingProductRequest;
+use Amazon\MWS\Products\Model\GetMatchingProductResponse;
+use Amazon\MWS\Products\Model\GetMyFeesEstimateRequest;
+use Amazon\MWS\Products\Model\GetMyFeesEstimateResponse;
+use Amazon\MWS\Products\Model\GetMyPriceForASINRequest;
+use Amazon\MWS\Products\Model\GetMyPriceForASINResponse;
+use Amazon\MWS\Products\Model\GetMyPriceForSKURequest;
+use Amazon\MWS\Products\Model\GetMyPriceForSKUResponse;
+use Amazon\MWS\Products\Model\GetProductCategoriesForASINRequest;
+use Amazon\MWS\Products\Model\GetProductCategoriesForASINResponse;
+use Amazon\MWS\Products\Model\GetProductCategoriesForSKURequest;
+use Amazon\MWS\Products\Model\GetProductCategoriesForSKUResponse;
+use Amazon\MWS\Products\Model\GetServiceStatusRequest;
+use Amazon\MWS\Products\Model\GetServiceStatusResponse;
+use Amazon\MWS\Products\Model\ListMatchingProductsRequest;
+use Amazon\MWS\Products\Model\ListMatchingProductsResponse;
+use Amazon\MWS\Products\Model\ResponseHeaderMetadata;
+
 /**
  * MarketplaceWebServiceProducts_Client is an implementation of MarketplaceWebServiceProducts
  */
@@ -39,19 +72,17 @@ class Client implements ProductsInterface
      * @see GetCompetitivePricingForASINRequest
      * @return GetCompetitivePricingForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getCompetitivePricingForASIN($request)
     {
         if (!($request instanceof GetCompetitivePricingForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINRequest.php');
             $request = new GetCompetitivePricingForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
         $response = GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -92,19 +123,17 @@ class Client implements ProductsInterface
      * @see GetCompetitivePricingForSKURequest
      * @return GetCompetitivePricingForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getCompetitivePricingForSKU($request)
     {
         if (!($request instanceof GetCompetitivePricingForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKURequest.php');
             $request = new GetCompetitivePricingForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
         $response = GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -145,19 +174,17 @@ class Client implements ProductsInterface
      * @see GetLowestOfferListingsForASINRequest
      * @return GetLowestOfferListingsForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getLowestOfferListingsForASIN($request)
     {
         if (!($request instanceof GetLowestOfferListingsForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINRequest.php');
             $request = new GetLowestOfferListingsForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
         $response = GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -204,19 +231,17 @@ class Client implements ProductsInterface
      * @see GetLowestOfferListingsForSKURequest
      * @return GetLowestOfferListingsForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getLowestOfferListingsForSKU($request)
     {
         if (!($request instanceof GetLowestOfferListingsForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKURequest.php');
             $request = new GetLowestOfferListingsForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
         $response = GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -263,19 +288,17 @@ class Client implements ProductsInterface
      * @see GetLowestPricedOffersForASINRequest
      * @return GetLowestPricedOffersForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getLowestPricedOffersForASIN($request)
     {
         if (!($request instanceof GetLowestPricedOffersForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINRequest.php');
             $request = new GetLowestPricedOffersForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestPricedOffersForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
         $response = GetLowestPricedOffersForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -316,19 +339,17 @@ class Client implements ProductsInterface
      * @see GetLowestPricedOffersForSKURequest
      * @return GetLowestPricedOffersForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getLowestPricedOffersForSKU($request)
     {
         if (!($request instanceof GetLowestPricedOffersForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKURequest.php');
             $request = new GetLowestPricedOffersForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestPricedOffersForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
         $response = GetLowestPricedOffersForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -369,19 +390,17 @@ class Client implements ProductsInterface
      * @see GetMatchingProductRequest
      * @return GetMatchingProductResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getMatchingProduct($request)
     {
         if (!($request instanceof GetMatchingProductRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMatchingProductRequest.php');
             $request = new GetMatchingProductRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProduct';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
         $response = GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -422,19 +441,17 @@ class Client implements ProductsInterface
      * @see GetMatchingProductForIdRequest
      * @return GetMatchingProductForIdResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getMatchingProductForId($request)
     {
         if (!($request instanceof GetMatchingProductForIdRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdRequest.php');
             $request = new GetMatchingProductForIdRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProductForId';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
         $response = GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -479,19 +496,17 @@ class Client implements ProductsInterface
      * @see GetMyFeesEstimateRequest
      * @return GetMyFeesEstimateResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getMyFeesEstimate($request)
     {
         if (!($request instanceof GetMyFeesEstimateRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateRequest.php');
             $request = new GetMyFeesEstimateRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyFeesEstimate';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyFeesEstimateResponse.php');
         $response = GetMyFeesEstimateResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -528,19 +543,17 @@ class Client implements ProductsInterface
      * @see GetMyPriceForASINRequest
      * @return GetMyPriceForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getMyPriceForASIN($request)
     {
         if (!($request instanceof GetMyPriceForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINRequest.php');
             $request = new GetMyPriceForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
         $response = GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -580,19 +593,17 @@ class Client implements ProductsInterface
      * @see GetMyPriceForSKURequest
      * @return GetMyPriceForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getMyPriceForSKU($request)
     {
         if (!($request instanceof GetMyPriceForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKURequest.php');
             $request = new GetMyPriceForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
         $response = GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -633,19 +644,17 @@ class Client implements ProductsInterface
      * @see GetProductCategoriesForASINRequest
      * @return GetProductCategoriesForASINResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getProductCategoriesForASIN($request)
     {
         if (!($request instanceof GetProductCategoriesForASINRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINRequest.php');
             $request = new GetProductCategoriesForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
         $response = GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -683,19 +692,17 @@ class Client implements ProductsInterface
      * @see GetProductCategoriesForSKURequest
      * @return GetProductCategoriesForSKUResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getProductCategoriesForSKU($request)
     {
         if (!($request instanceof GetProductCategoriesForSKURequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKURequest.php');
             $request = new GetProductCategoriesForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
         $response = GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -734,19 +741,17 @@ class Client implements ProductsInterface
      * @see GetServiceStatusRequest
      * @return GetServiceStatusResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -778,19 +783,17 @@ class Client implements ProductsInterface
      * @see ListMatchingProductsRequest
      * @return ListMatchingProductsResponse
      *
-     * @throws MarketplaceWebServiceProducts_Exception
+     * @throws Exception
      */
     public function listMatchingProducts($request)
     {
         if (!($request instanceof ListMatchingProductsRequest)) {
-            require_once (dirname(__FILE__) . '/Model/ListMatchingProductsRequest.php');
             $request = new ListMatchingProductsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListMatchingProducts';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
         $response = ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -984,8 +987,7 @@ class Client implements ProductsInterface
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once (dirname(__FILE__) . '/Exception.php');
-                throw new MarketplaceWebServiceProducts_Exception(
+                throw new Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
             }
@@ -1004,11 +1006,10 @@ class Client implements ProductsInterface
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (MarketplaceWebServiceProducts_Exception $se) {
+        } catch (Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once (dirname(__FILE__) . '/Exception.php');
-            throw new MarketplaceWebServiceProducts_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -1034,8 +1035,7 @@ class Client implements ProductsInterface
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once (dirname(__FILE__) . '/Exception.php');
-        return new MarketplaceWebServiceProducts_Exception($exProps);
+        return new Exception($exProps);
     }
 
     /**
@@ -1097,11 +1097,10 @@ class Client implements ProductsInterface
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
-            throw new MarketplaceWebServiceProducts_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         curl_close($ch);
@@ -1132,15 +1131,12 @@ class Client implements ProductsInterface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0;
-                $count < count($responseComponents) && $body == null;
-                $count++) {
+        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if($responseStatus != null &&
-                    $this->_httpHeadersHaveContent($headers)){
+            if($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
 
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
@@ -1150,10 +1146,9 @@ class Client implements ProductsInterface
 
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
-            throw new MarketplaceWebServiceProducts_Exception($exProps);
+            throw new Exception($exProps);
         }
 
         return array(
@@ -1217,7 +1212,6 @@ class Client implements ProductsInterface
             }
         }
 
-        require_once(dirname(__FILE__) . '/Model/ResponseHeaderMetadata.php');
         return new ResponseHeaderMetadata(
           $headers['x-mws-request-id'],
           $headers['x-mws-response-context'],

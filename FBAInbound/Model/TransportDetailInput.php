@@ -20,10 +20,10 @@ class TransportDetailInput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PartneredSmallParcelData'    => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelDataInput'),
-            'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelDataInput'),
-            'PartneredLtlData'            => array('FieldValue' => null, 'FieldType' => 'PartneredLtlDataInput'),
-            'NonPartneredLtlData'         => array('FieldValue' => null, 'FieldType' => 'NonPartneredLtlDataInput'),
+            'PartneredSmallParcelData'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredSmallParcelDataInput'),
+            'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredSmallParcelDataInput'),
+            'PartneredLtlData'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredLtlDataInput'),
+            'NonPartneredLtlData'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredLtlDataInput'),
         );
         parent::__construct($data);
     }

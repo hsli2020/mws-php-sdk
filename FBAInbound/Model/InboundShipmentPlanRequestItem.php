@@ -27,7 +27,7 @@ class InboundShipmentPlanRequestItem extends Model
             'Condition'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Quantity'        => array('FieldValue' => null, 'FieldType' => 'int'),
             'QuantityInCase'  => array('FieldValue' => null, 'FieldType' => 'int'),
-            'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+            'PrepDetailsList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PrepDetailsList'),
         );
         parent::__construct($data);
     }

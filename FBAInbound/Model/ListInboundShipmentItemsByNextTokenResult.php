@@ -18,7 +18,7 @@ class ListInboundShipmentItemsByNextTokenResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ItemData'  => array('FieldValue' => null, 'FieldType' => 'InboundShipmentItemList'),
+            'ItemData'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InboundShipmentItemList'),
             'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

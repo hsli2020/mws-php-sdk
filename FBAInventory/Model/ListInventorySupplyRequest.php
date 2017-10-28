@@ -27,7 +27,7 @@ class ListInventorySupplyRequest extends Model
             'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerSkus'         => array('FieldValue' => null, 'FieldType' => 'SellerSkuList'),
+            'SellerSkus'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SellerSkuList'),
             'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ResponseGroup'      => array('FieldValue' => null, 'FieldType' => 'string'),
         );

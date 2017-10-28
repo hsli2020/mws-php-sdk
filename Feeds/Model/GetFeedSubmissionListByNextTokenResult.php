@@ -33,7 +33,7 @@ class GetFeedSubmissionListByNextTokenResult extends Model
         $this->fields = array (
             'NextToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'HasNext'            => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }

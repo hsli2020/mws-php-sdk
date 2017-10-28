@@ -25,7 +25,7 @@ class GetUniquePackageLabelsRequest extends Model
             'MWSAuthToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipmentId'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'PageType'             => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PackageLabelsToPrint' => array('FieldValue' => null, 'FieldType' => 'PackageIdentifiers'),
+            'PackageLabelsToPrint' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PackageIdentifiers'),
         );
         parent::__construct($data);
     }

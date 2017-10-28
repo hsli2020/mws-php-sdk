@@ -30,13 +30,13 @@ class AdvertisingRecommendation extends Model
     {
         $this->_fields = array (
             'LastUpdated'             => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemIdentifier'          => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemIdentifier'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductIdentifier'),
             'ItemName'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'BrandName'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'ProductCategory'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'SalesRank'               => array('FieldValue' => null, 'FieldType' => 'int'),
-            'YourPricePlusShipping'   => array('FieldValue' => null, 'FieldType' => 'Price'),
-            'LowestPricePlusShipping' => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'YourPricePlusShipping'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Price'),
+            'LowestPricePlusShipping' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Price'),
             'AvailableQuantity'       => array('FieldValue' => null, 'FieldType' => 'int'),
             'SalesForTheLast30Days'   => array('FieldValue' => null, 'FieldType' => 'int'),
             'RecommendationId'        => array('FieldValue' => null, 'FieldType' => 'string'),

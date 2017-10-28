@@ -17,7 +17,7 @@ class SKUOfferDetailList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Offer' => array('FieldValue' => array(), 'FieldType' => array('SKUOfferDetail')),
+            'Offer' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\SKUOfferDetail')),
         );
         parent::__construct($data);
     }

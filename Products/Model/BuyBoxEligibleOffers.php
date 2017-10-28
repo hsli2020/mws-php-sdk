@@ -17,7 +17,7 @@ class BuyBoxEligibleOffers extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'OfferCount' => array('FieldValue' => array(), 'FieldType' => array('OfferCountType')),
+            'OfferCount' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\OfferCountType')),
         );
         parent::__construct($data);
     }

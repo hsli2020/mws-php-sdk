@@ -27,13 +27,13 @@ class ShipmentRequestDetails extends Model
         $this->_fields = array (
             'AmazonOrderId'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'SellerOrderId'          => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemList'               => array('FieldValue' => array(), 'FieldType' => array('Item'), 'ListMemberName' => 'Item'),
-            'ShipFromAddress'        => array('FieldValue' => null, 'FieldType' => 'Address'),
-            'PackageDimensions'      => array('FieldValue' => null, 'FieldType' => 'PackageDimensions'),
-            'Weight'                 => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'ItemList'               => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Item'), 'ListMemberName' => 'Item'),
+            'ShipFromAddress'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
+            'PackageDimensions'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PackageDimensions'),
+            'Weight'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
             'MustArriveByDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipDate'               => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShippingServiceOptions' => array('FieldValue' => null, 'FieldType' => 'ShippingServiceOptions'),
+            'ShippingServiceOptions' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShippingServiceOptions'),
         );
         parent::__construct($data);
     }

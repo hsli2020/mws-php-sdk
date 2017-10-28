@@ -31,7 +31,7 @@ class InventoryRecommendation extends MWSRecommendationsSectionService_Model
     {
         $this->_fields = array (
             'LastUpdated'                => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemIdentifier'             => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemIdentifier'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductIdentifier'),
             'ItemName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentChannel'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'SalesForTheLast14Days'      => array('FieldValue' => null, 'FieldType' => 'int'),

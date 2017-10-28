@@ -17,7 +17,7 @@ class LowestPrices extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array('LowestPriceType')),
+            'LowestPrice' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\LowestPriceType')),
         );
         parent::__construct($data);
     }

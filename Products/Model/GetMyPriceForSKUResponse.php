@@ -19,9 +19,9 @@ class GetMyPriceForSKUResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetMyPriceForSKUResult' => array('FieldValue' => array(), 'FieldType' => array('GetMyPriceForSKUResult')),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMyPriceForSKUResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GetMyPriceForSKUResult')),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

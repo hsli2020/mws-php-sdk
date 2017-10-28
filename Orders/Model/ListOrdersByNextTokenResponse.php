@@ -19,9 +19,9 @@ class ListOrdersByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListOrdersByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListOrdersByNextTokenResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListOrdersByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListOrdersByNextTokenResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

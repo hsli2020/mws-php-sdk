@@ -17,7 +17,7 @@ class DeliveryWindowList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('DeliveryWindow')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\DeliveryWindow')),
         );
         parent::__construct($data);
     }

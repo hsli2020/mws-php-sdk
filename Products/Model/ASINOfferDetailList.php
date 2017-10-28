@@ -17,7 +17,7 @@ class ASINOfferDetailList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Offer' => array('FieldValue' => array(), 'FieldType' => array('ASINOfferDetail')),
+            'Offer' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ASINOfferDetail')),
         );
         parent::__construct($data);
     }

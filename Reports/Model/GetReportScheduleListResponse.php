@@ -31,8 +31,8 @@ class GetReportScheduleListResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetReportScheduleListResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

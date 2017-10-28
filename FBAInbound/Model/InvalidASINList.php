@@ -19,7 +19,7 @@ class InvalidASINList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'InvalidASIN' => array('FieldValue' => array(), 'FieldType' => array('InvalidASIN')),
+            'InvalidASIN' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\InvalidASIN')),
         );
         parent::__construct($data);
     }

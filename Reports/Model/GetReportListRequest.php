@@ -45,11 +45,11 @@ class GetReportListRequest extends Model
             'Merchant'            => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'MaxCount'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ReportTypeList'      => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'ReportTypeList'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TypeList'),
             'Acknowledged'        => array('FieldValue' => null, 'FieldType' => 'bool'),
             'AvailableFromDate'   => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'AvailableToDate'     => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-            'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'ReportRequestIdList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
         );
         parent::__construct($data);
     }

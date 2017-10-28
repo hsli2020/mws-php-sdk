@@ -21,7 +21,7 @@ class GetMyFeesEstimateRequest extends Model
         $this->_fields = array (
             'SellerId'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateRequestList'),
+            'FeesEstimateRequestList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeesEstimateRequestList'),
         );
         parent::__construct($data);
     }

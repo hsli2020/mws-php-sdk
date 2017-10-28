@@ -20,8 +20,8 @@ class ListMarketplaceParticipationsResult extends Model
     {
         $this->_fields = array (
             'NextToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ListParticipations' => array('FieldValue' => null, 'FieldType' => 'ListParticipations'),
-            'ListMarketplaces'   => array('FieldValue' => null, 'FieldType' => 'ListMarketplaces'),
+            'ListParticipations' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListParticipations'),
+            'ListMarketplaces'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListMarketplaces'),
         );
         parent::__construct($data);
     }

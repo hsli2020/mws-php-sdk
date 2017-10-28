@@ -25,8 +25,8 @@ class RetrochargeEvent extends Model
             'RetrochargeEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
             'AmazonOrderId'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'PostedDate'           => array('FieldValue' => null, 'FieldType' => 'string'),
-            'BaseTax'              => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'ShippingTax'          => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'BaseTax'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'ShippingTax'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
             'MarketplaceName'      => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

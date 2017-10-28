@@ -17,7 +17,7 @@ class LowestOfferListingList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'LowestOfferListing' => array('FieldValue' => array(), 'FieldType' => array('LowestOfferListingType')),
+            'LowestOfferListing' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\LowestOfferListingType')),
         );
         parent::__construct($data);
     }

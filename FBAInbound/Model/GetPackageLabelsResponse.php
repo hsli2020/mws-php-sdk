@@ -19,9 +19,9 @@ class GetPackageLabelsResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetPackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'GetPackageLabelsResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetPackageLabelsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetPackageLabelsResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

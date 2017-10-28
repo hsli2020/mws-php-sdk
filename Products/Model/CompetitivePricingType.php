@@ -20,9 +20,9 @@ class CompetitivePricingType extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => 'CompetitivePriceList'),
-            'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'NumberOfOfferListingsList'),
-            'TradeInValue'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'CompetitivePrices'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CompetitivePriceList'),
+            'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NumberOfOfferListingsList'),
+            'TradeInValue'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
         );
         parent::__construct($data);
     }

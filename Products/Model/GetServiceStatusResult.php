@@ -23,7 +23,7 @@ class GetServiceStatusResult extends Model
             'Status'    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
             'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Messages'  => array('FieldValue' => null, 'FieldType' => 'MessageList'),
+            'Messages'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MessageList'),
         );
         parent::__construct($data);
     }

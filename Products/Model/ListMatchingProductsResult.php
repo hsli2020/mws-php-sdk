@@ -17,7 +17,7 @@ class ListMatchingProductsResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
+            'Products' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductList'),
         );
         parent::__construct($data);
     }

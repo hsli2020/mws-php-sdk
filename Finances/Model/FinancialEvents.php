@@ -29,19 +29,19 @@ class FinancialEvents extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ShipmentEventList'              => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-            'RefundEventList'                => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-            'GuaranteeClaimEventList'        => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-            'ChargebackEventList'            => array('FieldValue' => array(), 'FieldType' => array('ShipmentEvent'), 'ListMemberName' => 'ShipmentEvent'),
-            'PayWithAmazonEventList'         => array('FieldValue' => array(), 'FieldType' => array('PayWithAmazonEvent'), 'ListMemberName' => 'PayWithAmazonEvent'),
-            'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array('SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
-            'RetrochargeEventList'           => array('FieldValue' => array(), 'FieldType' => array('RetrochargeEvent'), 'ListMemberName' => 'RetrochargeEvent'),
-            'RentalTransactionEventList'     => array('FieldValue' => array(), 'FieldType' => array('RentalTransactionEvent'), 'ListMemberName' => 'RentalTransactionEvent'),
-            'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array('PerformanceBondRefundEvent'), 'ListMemberName' => 'PerformanceBondRefundEvent'),
-            'ServiceFeeEventList'            => array('FieldValue' => array(), 'FieldType' => array('ServiceFeeEvent'), 'ListMemberName' => 'ServiceFeeEvent'),
-            'DebtRecoveryEventList'          => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryEvent'), 'ListMemberName' => 'DebtRecoveryEvent'),
-            'LoanServicingEventList'         => array('FieldValue' => array(), 'FieldType' => array('LoanServicingEvent'), 'ListMemberName' => 'LoanServicingEvent'),
-            'AdjustmentEventList'            => array('FieldValue' => array(), 'FieldType' => array('AdjustmentEvent'), 'ListMemberName' => 'AdjustmentEvent'),
+            'ShipmentEventList'              => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentEvent'),               'ListMemberName' => 'ShipmentEvent'),
+            'RefundEventList'                => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentEvent'),               'ListMemberName' => 'ShipmentEvent'),
+            'GuaranteeClaimEventList'        => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentEvent'),               'ListMemberName' => 'ShipmentEvent'),
+            'ChargebackEventList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentEvent'),               'ListMemberName' => 'ShipmentEvent'),
+            'PayWithAmazonEventList'         => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\PayWithAmazonEvent'),          'ListMemberName' => 'PayWithAmazonEvent'),
+            'ServiceProviderCreditEventList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\SolutionProviderCreditEvent'), 'ListMemberName' => 'SolutionProviderCreditEvent'),
+            'RetrochargeEventList'           => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\RetrochargeEvent'),            'ListMemberName' => 'RetrochargeEvent'),
+            'RentalTransactionEventList'     => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\RentalTransactionEvent'),      'ListMemberName' => 'RentalTransactionEvent'),
+            'PerformanceBondRefundEventList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\PerformanceBondRefundEvent'),  'ListMemberName' => 'PerformanceBondRefundEvent'),
+            'ServiceFeeEventList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ServiceFeeEvent'),             'ListMemberName' => 'ServiceFeeEvent'),
+            'DebtRecoveryEventList'          => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\DebtRecoveryEvent'),           'ListMemberName' => 'DebtRecoveryEvent'),
+            'LoanServicingEventList'         => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\LoanServicingEvent'),          'ListMemberName' => 'LoanServicingEvent'),
+            'AdjustmentEventList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\AdjustmentEvent'),             'ListMemberName' => 'AdjustmentEvent'),
         );
         parent::__construct($data);
     }

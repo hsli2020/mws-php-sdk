@@ -18,7 +18,7 @@ class LoanServicingEvent extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'LoanAmount'              => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'LoanAmount'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
             'SourceBusinessEventType' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

@@ -25,7 +25,7 @@ class ServiceFeeEvent extends Model
         $this->_fields = array (
             'AmazonOrderId'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'FeeReason'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeeList'        => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'FeeList'        => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
             'SellerSKU'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'FnSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'FeeDescription' => array('FieldValue' => null, 'FieldType' => 'string'),

@@ -26,8 +26,8 @@ class SKUPrepInstructions extends Model
             'ASIN'                      => array('FieldValue' => null, 'FieldType' => 'string'),
             'BarcodeInstruction'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'PrepGuidance'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PrepInstructionList'       => array('FieldValue' => null, 'FieldType' => 'PrepInstructionList'),
-            'AmazonPrepFeesDetailsList' => array('FieldValue' => null, 'FieldType' => 'AmazonPrepFeesDetailsList'),
+            'PrepInstructionList'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PrepInstructionList'),
+            'AmazonPrepFeesDetailsList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\AmazonPrepFeesDetailsList'),
         );
         parent::__construct($data);
     }

@@ -31,7 +31,7 @@ class CancelReportRequestsResult extends Model
     {
         $this->fields = array (
             'Count'             => array('FieldValue' => null, 'FieldType' => 'int'),
-            'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+            'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ReportRequestInfo')),
         );
         parent::__construct($data);
     }

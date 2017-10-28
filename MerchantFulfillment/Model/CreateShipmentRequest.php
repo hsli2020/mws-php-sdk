@@ -23,7 +23,7 @@ class CreateShipmentRequest extends Model
         $this->_fields = array (
             'SellerId'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'           => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipmentRequestDetails' => array('FieldValue' => null, 'FieldType' => 'ShipmentRequestDetails'),
+            'ShipmentRequestDetails' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShipmentRequestDetails'),
             'ShippingServiceId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShippingServiceOfferId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );

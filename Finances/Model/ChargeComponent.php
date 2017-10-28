@@ -19,7 +19,7 @@ class ChargeComponent extends Model
     {
         $this->_fields = array (
             'ChargeType'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ChargeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'ChargeAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

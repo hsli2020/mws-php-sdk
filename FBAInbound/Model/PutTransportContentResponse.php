@@ -19,9 +19,9 @@ class PutTransportContentResponse extends FBAInboundServiceMWS_Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PutTransportContentResult' => array('FieldValue' => null, 'FieldType' => 'PutTransportContentResult'),
-            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'PutTransportContentResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PutTransportContentResult'),
+            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

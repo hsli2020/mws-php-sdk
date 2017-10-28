@@ -17,7 +17,7 @@ class MessageList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Message' => array('FieldValue' => array(), 'FieldType' => array('Message')),
+            'Message' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Message')),
         );
         parent::__construct($data);
     }

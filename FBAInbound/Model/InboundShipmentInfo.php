@@ -28,14 +28,14 @@ class InboundShipmentInfo extends Model
         $this->_fields = array (
             'ShipmentId'                     => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipmentName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipFromAddress'                => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'ShipFromAddress'                => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
             'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipmentStatus'                 => array('FieldValue' => null, 'FieldType' => 'string'),
             'LabelPrepType'                  => array('FieldValue' => null, 'FieldType' => 'string'),
             'AreCasesRequired'               => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ConfirmedNeedByDate'            => array('FieldValue' => null, 'FieldType' => 'string'),
             'BoxContentsSource'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'EstimatedBoxContentsFee'        => array('FieldValue' => null, 'FieldType' => 'BoxContentsFeeDetails'),
+            'EstimatedBoxContentsFee'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\BoxContentsFeeDetails'),
         );
         parent::__construct($data);
     }

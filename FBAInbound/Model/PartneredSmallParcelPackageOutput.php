@@ -21,8 +21,8 @@ class PartneredSmallParcelPackageOutput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Dimensions'    => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-            'Weight'        => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'Dimensions'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Dimensions'),
+            'Weight'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
             'CarrierName'   => array('FieldValue' => null, 'FieldType' => 'string'),
             'TrackingId'    => array('FieldValue' => null, 'FieldType' => 'string'),
             'PackageStatus' => array('FieldValue' => null, 'FieldType' => 'string'),

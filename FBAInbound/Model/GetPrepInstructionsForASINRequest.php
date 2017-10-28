@@ -22,7 +22,7 @@ class GetPrepInstructionsForASINRequest extends Model
         $this->_fields = array (
             'SellerId'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'AsinList'          => array('FieldValue' => null, 'FieldType' => 'AsinList'),
+            'AsinList'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\AsinList'),
             'ShipToCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

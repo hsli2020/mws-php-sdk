@@ -19,9 +19,9 @@ class ListAllFulfillmentOrdersResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListAllFulfillmentOrdersResult' => array('FieldValue' => null, 'FieldType' => 'ListAllFulfillmentOrdersResult'),
-            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListAllFulfillmentOrdersResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListAllFulfillmentOrdersResult'),
+            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

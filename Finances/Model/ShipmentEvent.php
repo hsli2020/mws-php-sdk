@@ -29,19 +29,19 @@ class ShipmentEvent extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'AmazonOrderId'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerOrderId'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MarketplaceName'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'OrderChargeList'            => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-            'OrderChargeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-            'ShipmentFeeList'            => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'ShipmentFeeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'OrderFeeList'               => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'OrderFeeAdjustmentList'     => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'DirectPaymentList'          => array('FieldValue' => array(), 'FieldType' => array('DirectPayment'), 'ListMemberName' => 'DirectPayment'),
-            'PostedDate'                 => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipmentItemList'           => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
-            'ShipmentItemAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
+            'AmazonOrderId'              => array('FieldValue' => null,    'FieldType' => 'string'),
+            'SellerOrderId'              => array('FieldValue' => null,    'FieldType' => 'string'),
+            'MarketplaceName'            => array('FieldValue' => null,    'FieldType' => 'string'),
+            'OrderChargeList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'OrderChargeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'ShipmentFeeList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'ShipmentFeeAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'OrderFeeList'               => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'OrderFeeAdjustmentList'     => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'DirectPaymentList'          => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\DirectPayment'), 'ListMemberName' => 'DirectPayment'),
+            'PostedDate'                 => array('FieldValue' => null,    'FieldType' => 'string'),
+            'ShipmentItemList'           => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
+            'ShipmentItemAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShipmentItem'), 'ListMemberName' => 'ShipmentItem'),
         );
         parent::__construct($data);
     }

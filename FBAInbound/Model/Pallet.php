@@ -19,9 +19,9 @@ class Pallet extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-            'Weight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
-            'IsStacked'  => array('FieldValue' => null, 'FieldType' => 'bool'),
+            'Dimensions' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Dimensions'),
+            'Weight'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
+            'IsStacked'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\bool'),
         );
         parent::__construct($data);
     }

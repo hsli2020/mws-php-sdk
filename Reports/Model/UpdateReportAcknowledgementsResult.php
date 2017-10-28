@@ -30,7 +30,7 @@ class UpdateReportAcknowledgementsResult extends Model
     {
         $this->fields = array (
             'Count'      => array('FieldValue' => null, 'FieldType' => 'int'),
-            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
+            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ReportInfo')),
         );
         parent::__construct($data);
     }

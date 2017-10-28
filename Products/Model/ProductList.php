@@ -17,7 +17,7 @@ class ProductList extends MarketplaceWebServiceProducts_Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Product' => array('FieldValue' => array(), 'FieldType' => array('Product')),
+            'Product' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Product')),
         );
         parent::__construct($data);
     }

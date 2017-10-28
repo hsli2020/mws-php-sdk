@@ -18,8 +18,8 @@ class IdentifierType extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'ASINIdentifier'),
-            'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => 'SellerSKUIdentifier'),
+            'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ASINIdentifier'),
+            'SKUIdentifier'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SellerSKUIdentifier'),
         );
         parent::__construct($data);
     }

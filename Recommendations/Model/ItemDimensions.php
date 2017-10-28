@@ -20,10 +20,10 @@ class ItemDimensions extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Height' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-            'Width'  => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-            'Length' => array('FieldValue' => null, 'FieldType' => 'DimensionMeasure'),
-            'Weight' => array('FieldValue' => null, 'FieldType' => 'WeightMeasure'),
+            'Height' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DimensionMeasure'),
+            'Width'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DimensionMeasure'),
+            'Length' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DimensionMeasure'),
+            'Weight' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\WeightMeasure'),
         );
         parent::__construct($data);
     }

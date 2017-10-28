@@ -21,8 +21,8 @@ class FeesEstimate extends Model
     {
         $this->_fields = array (
             'TimeOfFeesEstimation' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+            'TotalFeesEstimate'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'FeeDetailList'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeeDetailList'),
         );
         parent::__construct($data);
     }

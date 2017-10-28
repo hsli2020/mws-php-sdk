@@ -24,7 +24,7 @@ class InboundShipmentHeader extends Model
     {
         $this->_fields = array (
             'ShipmentName'                   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipFromAddress'                => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'ShipFromAddress'                => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
             'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'AreCasesRequired'               => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ShipmentStatus'                 => array('FieldValue' => null, 'FieldType' => 'string'),

@@ -19,9 +19,9 @@ class ListFinancialEventGroupsByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListFinancialEventGroupsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListFinancialEventGroupsByNextTokenResult'),
-            'ResponseMetadata'                          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'                    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListFinancialEventGroupsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListFinancialEventGroupsByNextTokenResult'),
+            'ResponseMetadata'                          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'                    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

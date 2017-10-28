@@ -35,11 +35,11 @@ class GetPackageTrackingDetailsResult extends Model
             'CarrierURL'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipDate'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'EstimatedArrivalDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipToAddress'          => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
+            'ShipToAddress'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TrackingAddress'),
             'CurrentStatus'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'SignedForBy'            => array('FieldValue' => null, 'FieldType' => 'string'),
             'AdditionalLocationInfo' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'TrackingEvents'         => array('FieldValue' => null, 'FieldType' => 'TrackingEventList'),
+            'TrackingEvents'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TrackingEventList'),
         );
         parent::__construct($data);
     }

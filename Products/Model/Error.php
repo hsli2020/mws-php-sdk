@@ -24,7 +24,7 @@ class Error extends MarketplaceWebServiceProducts_Model
             'Type'    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Code'    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Message' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Detail'  => array('FieldValue' => null, 'FieldType' => 'ErrorDetail'),
+            'Detail'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ErrorDetail'),
         );
         parent::__construct($data);
     }

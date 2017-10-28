@@ -19,7 +19,7 @@ class Fee extends Model
     {
         $this->_fields = array (
             'Name'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Amount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'Amount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

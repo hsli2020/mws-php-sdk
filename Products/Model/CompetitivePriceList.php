@@ -17,7 +17,7 @@ class CompetitivePriceList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array('CompetitivePriceType')),
+            'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\CompetitivePriceType')),
         );
         parent::__construct($data);
     }

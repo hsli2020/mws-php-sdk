@@ -17,7 +17,7 @@ class ListParticipations extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Participation' => array('FieldValue' => array(), 'FieldType' => array('Participation')),
+            'Participation' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Participation')),
         );
         parent::__construct($data);
     }

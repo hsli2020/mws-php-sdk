@@ -18,8 +18,8 @@ class PartneredSmallParcelDataOutput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PackageList'       => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelPackageOutputList'),
-            'PartneredEstimate' => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
+            'PackageList'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredSmallParcelPackageOutputList'),
+            'PartneredEstimate' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredEstimate'),
         );
         parent::__construct($data);
     }

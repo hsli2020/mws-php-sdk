@@ -20,10 +20,10 @@ class TransportDetailOutput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PartneredSmallParcelData'    => array('FieldValue' => null, 'FieldType' => 'PartneredSmallParcelDataOutput'),
-            'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelDataOutput'),
-            'PartneredLtlData'            => array('FieldValue' => null, 'FieldType' => 'PartneredLtlDataOutput'),
-            'NonPartneredLtlData'         => array('FieldValue' => null, 'FieldType' => 'NonPartneredLtlDataOutput'),
+            'PartneredSmallParcelData'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredSmallParcelDataOutput'),
+            'NonPartneredSmallParcelData' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredSmallParcelDataOutput'),
+            'PartneredLtlData'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredLtlDataOutput'),
+            'NonPartneredLtlData'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredLtlDataOutput'),
         );
         parent::__construct($data);
     }

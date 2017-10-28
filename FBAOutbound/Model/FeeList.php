@@ -17,7 +17,7 @@ class FeeList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('Fee')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Fee')),
         );
         parent::__construct($data);
     }

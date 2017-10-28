@@ -31,8 +31,8 @@ class CancelFeedSubmissionsResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => 'CancelFeedSubmissionsResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CancelFeedSubmissionsResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

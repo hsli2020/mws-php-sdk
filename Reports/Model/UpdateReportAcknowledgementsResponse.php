@@ -31,8 +31,8 @@ class UpdateReportAcknowledgementsResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'UpdateReportAcknowledgementsResult' => array('FieldValue' => null, 'FieldType' => 'UpdateReportAcknowledgementsResult'),
-            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'UpdateReportAcknowledgementsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\UpdateReportAcknowledgementsResult'),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

@@ -29,7 +29,7 @@ class ErrorResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'Error'     => array('FieldValue' => array(), 'FieldType' => 'Error'),
+            'Error'     => array('FieldValue' => array(), 'FieldType' => __NAMESPACE__.'\\Error'),
             'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

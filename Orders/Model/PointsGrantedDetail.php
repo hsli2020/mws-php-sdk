@@ -19,7 +19,7 @@ class PointsGrantedDetail extends Model
     {
         $this->_fields = array (
             'PointsNumber'        => array('FieldValue' => null, 'FieldType' => 'int'),
-            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Money'),
         );
         parent::__construct($data);
     }

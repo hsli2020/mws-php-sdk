@@ -21,7 +21,7 @@ class Categories extends Model
         $this->_fields = array (
             'ProductCategoryId'   => array('FieldValue' => null, 'FieldType' => 'string'),
             'ProductCategoryName' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Parent'              => array('FieldValue' => null, 'FieldType' => 'Categories'),
+            'Parent'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Categories'),
         );
         parent::__construct($data);
     }

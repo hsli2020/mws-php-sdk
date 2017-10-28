@@ -24,13 +24,13 @@ class ListRecommendationsResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'InventoryRecommendations'      => array('FieldValue' => array(), 'FieldType' => array('InventoryRecommendation'), 'ListMemberName' => 'member'),
-            'SelectionRecommendations'      => array('FieldValue' => array(), 'FieldType' => array('SelectionRecommendation'), 'ListMemberName' => 'member'),
-            'PricingRecommendations'        => array('FieldValue' => array(), 'FieldType' => array('PricingRecommendation'), 'ListMemberName' => 'member'),
-            'FulfillmentRecommendations'    => array('FieldValue' => array(), 'FieldType' => array('FulfillmentRecommendation'), 'ListMemberName' => 'member'),
-            'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array('ListingQualityRecommendation'), 'ListMemberName' => 'member'),
-            'GlobalSellingRecommendations'  => array('FieldValue' => array(), 'FieldType' => array('GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
-            'AdvertisingRecommendations'    => array('FieldValue' => array(), 'FieldType' => array('AdvertisingRecommendation'), 'ListMemberName' => 'member'),
+            'InventoryRecommendations'      => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\InventoryRecommendation'), 'ListMemberName' => 'member'),
+            'SelectionRecommendations'      => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\SelectionRecommendation'), 'ListMemberName' => 'member'),
+            'PricingRecommendations'        => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\PricingRecommendation'), 'ListMemberName' => 'member'),
+            'FulfillmentRecommendations'    => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FulfillmentRecommendation'), 'ListMemberName' => 'member'),
+            'ListingQualityRecommendations' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ListingQualityRecommendation'), 'ListMemberName' => 'member'),
+            'GlobalSellingRecommendations'  => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GlobalSellingRecommendation'), 'ListMemberName' => 'member'),
+            'AdvertisingRecommendations'    => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\AdvertisingRecommendation'), 'ListMemberName' => 'member'),
             'NextToken'                     => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

@@ -33,8 +33,8 @@ class GetFeedSubmissionListResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionListResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetFeedSubmissionListResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

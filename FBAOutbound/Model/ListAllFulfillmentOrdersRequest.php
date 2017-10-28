@@ -25,7 +25,7 @@ class ListAllFulfillmentOrdersRequest extends Model
             'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'QueryStartDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FulfillmentMethod'  => array('FieldValue' => null, 'FieldType' => 'FulfillmentMethodList'),
+            'FulfillmentMethod'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentMethodList'),
         );
         parent::__construct($data);
     }

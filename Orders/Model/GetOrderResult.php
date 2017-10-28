@@ -17,7 +17,7 @@ class GetOrderResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
+            'Orders' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Order'), 'ListMemberName' => 'Order'),
         );
         parent::__construct($data);
     }

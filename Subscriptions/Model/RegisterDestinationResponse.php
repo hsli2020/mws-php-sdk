@@ -19,9 +19,9 @@ class RegisterDestinationResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'RegisterDestinationResult' => array('FieldValue' => null, 'FieldType' => 'RegisterDestinationResult'),
-            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'RegisterDestinationResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\RegisterDestinationResult'),
+            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

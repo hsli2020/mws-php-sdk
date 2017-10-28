@@ -28,18 +28,18 @@ class ShipmentItem extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SellerSKU'                => array('FieldValue' => null, 'FieldType' => 'string'),
-            'OrderItemId'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'OrderAdjustmentItemId'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'QuantityShipped'          => array('FieldValue' => null, 'FieldType' => 'int'),
-            'ItemChargeList'           => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-            'ItemChargeAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-            'ItemFeeList'              => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'ItemFeeAdjustmentList'    => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
-            'PromotionList'            => array('FieldValue' => array(), 'FieldType' => array('Promotion'), 'ListMemberName' => 'Promotion'),
-            'PromotionAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array('Promotion'), 'ListMemberName' => 'Promotion'),
-            'CostOfPointsGranted'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'CostOfPointsReturned'     => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'SellerSKU'                => array('FieldValue' => null,    'FieldType' => 'string'),
+            'OrderItemId'              => array('FieldValue' => null,    'FieldType' => 'string'),
+            'OrderAdjustmentItemId'    => array('FieldValue' => null,    'FieldType' => 'string'),
+            'QuantityShipped'          => array('FieldValue' => null,    'FieldType' => 'int'),
+            'ItemChargeList'           => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'ItemChargeAdjustmentList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'ItemFeeList'              => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'),    'ListMemberName' => 'FeeComponent'),
+            'ItemFeeAdjustmentList'    => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'),    'ListMemberName' => 'FeeComponent'),
+            'PromotionList'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Promotion'),       'ListMemberName' => 'Promotion'),
+            'PromotionAdjustmentList'  => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Promotion'),       'ListMemberName' => 'Promotion'),
+            'CostOfPointsGranted'      => array('FieldValue' => null,    'FieldType' => __NAMESPACE__.'\\Currency'),
+            'CostOfPointsReturned'     => array('FieldValue' => null,    'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

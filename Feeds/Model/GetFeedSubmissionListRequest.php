@@ -48,10 +48,10 @@ class GetFeedSubmissionListRequest extends Model
             'Marketplace'              => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'                 => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'             => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeedSubmissionIdList'     => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'FeedSubmissionIdList'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
             'MaxCount'                 => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeedTypeList'             => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-            'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
+            'FeedTypeList'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TypeList'),
+            'FeedProcessingStatusList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\StatusList'),
             'SubmittedFromDate'        => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'SubmittedToDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

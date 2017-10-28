@@ -29,9 +29,9 @@ class GetFulfillmentPreviewRequest extends Model
             'MWSAuthToken'                 => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'                  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId'                => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Address'                      => array('FieldValue' => null, 'FieldType' => 'Address'),
-            'Items'                        => array('FieldValue' => null, 'FieldType' => 'GetFulfillmentPreviewItemList'),
-            'ShippingSpeedCategories'      => array('FieldValue' => null, 'FieldType' => 'ShippingSpeedCategoryList'),
+            'Address'                      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
+            'Items'                        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetFulfillmentPreviewItemList'),
+            'ShippingSpeedCategories'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShippingSpeedCategoryList'),
             'IncludeCODFulfillmentPreview' => array('FieldValue' => null, 'FieldType' => 'bool'),
             'IncludeDeliveryWindows'       => array('FieldValue' => null, 'FieldType' => 'bool'),
         );

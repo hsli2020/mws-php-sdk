@@ -23,7 +23,7 @@ class ASINPrepInstructions extends Model
             'ASIN'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'BarcodeInstruction'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'PrepGuidance'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => 'PrepInstructionList'),
+            'PrepInstructionList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PrepInstructionList'),
         );
         parent::__construct($data);
     }

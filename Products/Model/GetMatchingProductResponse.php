@@ -19,9 +19,9 @@ class GetMatchingProductResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array('GetMatchingProductResult')),
-            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMatchingProductResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GetMatchingProductResult')),
+            'ResponseMetadata'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

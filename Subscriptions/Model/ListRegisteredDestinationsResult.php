@@ -17,7 +17,7 @@ class ListRegisteredDestinationsResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'DestinationList' => array('FieldValue' => null, 'FieldType' => 'DestinationList'),
+            'DestinationList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DestinationList'),
         );
         parent::__construct($data);
     }

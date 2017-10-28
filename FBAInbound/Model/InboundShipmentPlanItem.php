@@ -23,7 +23,7 @@ class InboundShipmentPlanItem extends Model
             'SellerSKU'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentNetworkSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Quantity'              => array('FieldValue' => null, 'FieldType' => 'int'),
-            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PrepDetailsList'),
         );
         parent::__construct($data);
     }

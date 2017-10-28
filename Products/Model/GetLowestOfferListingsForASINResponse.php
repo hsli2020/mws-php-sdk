@@ -20,9 +20,9 @@ class GetLowestOfferListingsForASINResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetLowestOfferListingsForASINResult' => array('FieldValue' => array(), 'FieldType' => array('GetLowestOfferListingsForASINResult')),
-            'ResponseMetadata'                    => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'              => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetLowestOfferListingsForASINResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GetLowestOfferListingsForASINResult')),
+            'ResponseMetadata'                    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

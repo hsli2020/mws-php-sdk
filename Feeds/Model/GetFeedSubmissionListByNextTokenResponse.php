@@ -30,8 +30,8 @@ class GetFeedSubmissionListByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListByNextTokenResult'),
-            'ResponseMetadata'                       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetFeedSubmissionListByNextTokenResult'),
+            'ResponseMetadata'                       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

@@ -27,7 +27,7 @@ class PutTransportContentRequest extends Model
             'ShipmentId'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'IsPartnered'      => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ShipmentType'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailInput'),
+            'TransportDetails' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportDetailInput'),
         );
         parent::__construct($data);
     }

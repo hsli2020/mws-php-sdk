@@ -29,7 +29,7 @@ class FeesEstimateIdentifier extends Model
             'IdType'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'IdValue'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'IsAmazonFulfilled'     => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => 'PriceToEstimateFees'),
+            'PriceToEstimateFees'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PriceToEstimateFees'),
             'SellerInputIdentifier' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

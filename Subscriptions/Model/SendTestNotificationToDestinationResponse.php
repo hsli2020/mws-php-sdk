@@ -19,9 +19,9 @@ class SendTestNotificationToDestinationResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => 'SendTestNotificationToDestinationResult'),
-            'ResponseMetadata'                        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'SendTestNotificationToDestinationResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SendTestNotificationToDestinationResult'),
+            'ResponseMetadata'                        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'                  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

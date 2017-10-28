@@ -19,7 +19,7 @@ class ListAllFulfillmentOrdersByNextTokenResult extends Model
     {
         $this->_fields = array (
             'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FulfillmentOrders' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderList'),
+            'FulfillmentOrders' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentOrderList'),
         );
         parent::__construct($data);
     }

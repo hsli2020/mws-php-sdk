@@ -19,9 +19,9 @@ class GetOrderResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetOrderResult'         => array('FieldValue' => null, 'FieldType' => 'GetOrderResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetOrderResult'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetOrderResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

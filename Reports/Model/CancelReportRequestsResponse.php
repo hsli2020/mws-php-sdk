@@ -29,8 +29,8 @@ class CancelReportRequestsResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'CancelReportRequestsResult'),
-            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CancelReportRequestsResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

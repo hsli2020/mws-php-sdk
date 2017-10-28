@@ -20,7 +20,7 @@ class ShippingServiceOptions extends Model
     {
         $this->_fields = array (
             'DeliveryExperience' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'DeclaredValue'      => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
+            'DeclaredValue'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CurrencyAmount'),
             'CarrierWillPickUp'  => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);

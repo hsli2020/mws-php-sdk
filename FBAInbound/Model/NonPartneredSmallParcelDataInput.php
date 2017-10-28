@@ -19,7 +19,7 @@ class NonPartneredSmallParcelDataInput extends Model
     {
         $this->_fields = array (
             'CarrierName' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PackageList' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelPackageInputList'),
+            'PackageList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredSmallParcelPackageInputList'),
         );
         parent::__construct($data);
     }

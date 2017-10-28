@@ -20,7 +20,7 @@ class PerformanceBondRefundEvent extends Model
     {
         $this->_fields = array (
             'MarketplaceCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Amount'                 => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'Amount'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
             'ProductGroupList'       => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'ProductGroup'),
         );
         parent::__construct($data);

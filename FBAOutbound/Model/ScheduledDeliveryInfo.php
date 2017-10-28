@@ -19,7 +19,7 @@ class ScheduledDeliveryInfo extends Model
     {
         $this->_fields = array (
             'DeliveryTimeZone' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'DeliveryWindows'  => array('FieldValue' => null, 'FieldType' => 'DeliveryWindowList'),
+            'DeliveryWindows'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DeliveryWindowList'),
         );
         parent::__construct($data);
     }

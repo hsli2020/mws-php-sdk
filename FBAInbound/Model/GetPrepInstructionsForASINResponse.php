@@ -19,9 +19,9 @@ class GetPrepInstructionsForASINResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetPrepInstructionsForASINResult' => array('FieldValue' => null, 'FieldType' => 'GetPrepInstructionsForASINResult'),
-            'ResponseMetadata'                 => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetPrepInstructionsForASINResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetPrepInstructionsForASINResult'),
+            'ResponseMetadata'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

@@ -21,7 +21,7 @@ class Subscription extends Model
     {
         $this->_fields = array (
             'NotificationType' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Destination'      => array('FieldValue' => null, 'FieldType' => 'Destination'),
+            'Destination'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Destination'),
             'IsEnabled'        => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);

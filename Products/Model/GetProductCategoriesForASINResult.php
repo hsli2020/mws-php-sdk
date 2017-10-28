@@ -17,7 +17,7 @@ class GetProductCategoriesForASINResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Self' => array('FieldValue' => array(), 'FieldType' => array('Categories')),
+            'Self' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Categories')),
         );
         parent::__construct($data);
     }

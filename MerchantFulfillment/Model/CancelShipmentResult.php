@@ -17,7 +17,7 @@ class CancelShipmentResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Shipment' => array('FieldValue' => null, 'FieldType' => 'Shipment'),
+            'Shipment' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Shipment'),
         );
         parent::__construct($data);
     }

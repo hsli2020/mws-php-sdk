@@ -20,9 +20,9 @@ class GetCompetitivePricingForASINResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetCompetitivePricingForASINResult' => array('FieldValue' => array(), 'FieldType' => array('GetCompetitivePricingForASINResult')),
-            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetCompetitivePricingForASINResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GetCompetitivePricingForASINResult')),
+            'ResponseMetadata'                   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

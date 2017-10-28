@@ -20,10 +20,10 @@ class PriceType extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Points'),
         );
         parent::__construct($data);
     }

@@ -17,7 +17,7 @@ class NumberOfOfferListingsList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('OfferListingCountType')),
+            'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\OfferListingCountType')),
         );
         parent::__construct($data);
     }

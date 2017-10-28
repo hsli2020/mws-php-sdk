@@ -23,7 +23,7 @@ class ListOrdersResult extends Model
             'NextToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'CreatedBefore'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Orders'            => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
+            'Orders'            => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Order'), 'ListMemberName' => 'Order'),
         );
         parent::__construct($data);
     }

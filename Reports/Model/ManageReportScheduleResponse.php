@@ -29,8 +29,8 @@ class ManageReportScheduleResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'ManageReportScheduleResult' => array('FieldValue' => null, 'FieldType' => 'ManageReportScheduleResult'),
-            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'ManageReportScheduleResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ManageReportScheduleResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

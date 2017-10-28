@@ -27,14 +27,14 @@ class FulfillmentPreview extends Model
     {
         $this->_fields = array (
             'ShippingSpeedCategory'       => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ScheduledDeliveryInfo'       => array('FieldValue' => null, 'FieldType' => 'ScheduledDeliveryInfo'),
+            'ScheduledDeliveryInfo'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ScheduledDeliveryInfo'),
             'IsFulfillable'               => array('FieldValue' => null, 'FieldType' => 'bool'),
             'IsCODCapable'                => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'EstimatedShippingWeight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
-            'EstimatedFees'               => array('FieldValue' => null, 'FieldType' => 'FeeList'),
-            'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewShipmentList'),
-            'UnfulfillablePreviewItems'   => array('FieldValue' => null, 'FieldType' => 'UnfulfillablePreviewItemList'),
-            'OrderUnfulfillableReasons'   => array('FieldValue' => null, 'FieldType' => 'StringList'),
+            'EstimatedShippingWeight'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
+            'EstimatedFees'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeeList'),
+            'FulfillmentPreviewShipments' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentPreviewShipmentList'),
+            'UnfulfillablePreviewItems'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\UnfulfillablePreviewItemList'),
+            'OrderUnfulfillableReasons'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\StringList'),
             'MarketplaceId'               => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

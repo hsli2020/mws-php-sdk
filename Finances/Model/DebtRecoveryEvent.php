@@ -22,10 +22,10 @@ class DebtRecoveryEvent extends Model
     {
         $this->_fields = array (
             'DebtRecoveryType'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'RecoveryAmount'       => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'OverPaymentCredit'    => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array('DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
-            'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array('ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
+            'RecoveryAmount'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'OverPaymentCredit'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'DebtRecoveryItemList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\DebtRecoveryItem'), 'ListMemberName' => 'DebtRecoveryItem'),
+            'ChargeInstrumentList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeInstrument'), 'ListMemberName' => 'ChargeInstrument'),
         );
         parent::__construct($data);
     }

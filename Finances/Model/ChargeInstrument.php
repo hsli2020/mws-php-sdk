@@ -21,7 +21,7 @@ class ChargeInstrument extends Model
         $this->_fields = array (
             'Description' => array('FieldValue' => null, 'FieldType' => 'string'),
             'Tail'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Amount'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'Amount'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

@@ -44,8 +44,8 @@ class CancelFeedSubmissionsRequest extends Model
             'Marketplace'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'         => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
-            'FeedTypeList'         => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
+            'FeedTypeList'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TypeList'),
             'SubmittedFromDate'    => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'SubmittedToDate'      => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

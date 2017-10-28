@@ -19,9 +19,9 @@ class GetLastUpdatedTimeForRecommendationsResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetLastUpdatedTimeForRecommendationsResult' => array('FieldValue' => null, 'FieldType' => 'GetLastUpdatedTimeForRecommendationsResult'),
-            'ResponseMetadata'                           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'                     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetLastUpdatedTimeForRecommendationsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetLastUpdatedTimeForRecommendationsResult'),
+            'ResponseMetadata'                           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'                     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

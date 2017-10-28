@@ -18,7 +18,7 @@ class PaymentExecutionDetailItem extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Payment'       => array('FieldValue' => null, 'FieldType' => 'Money'),
+            'Payment'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Money'),
             'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

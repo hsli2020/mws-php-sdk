@@ -22,7 +22,7 @@ class GetPrepInstructionsForSKURequest extends Model
         $this->_fields = array (
             'SellerId'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerSKUList'     => array('FieldValue' => null, 'FieldType' => 'SellerSKUList'),
+            'SellerSKUList'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SellerSKUList'),
             'ShipToCountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

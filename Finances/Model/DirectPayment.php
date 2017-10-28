@@ -19,7 +19,7 @@ class DirectPayment extends Model
     {
         $this->_fields = array (
             'DirectPaymentType'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'DirectPaymentAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'DirectPaymentAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

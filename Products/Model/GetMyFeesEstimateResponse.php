@@ -19,9 +19,9 @@ class GetMyFeesEstimateResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => 'GetMyFeesEstimateResult'),
-            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMyFeesEstimateResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetMyFeesEstimateResult'),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

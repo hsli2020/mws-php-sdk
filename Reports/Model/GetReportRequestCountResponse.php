@@ -29,8 +29,8 @@ class GetReportRequestCountResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestCountResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetReportRequestCountResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

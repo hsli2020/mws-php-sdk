@@ -22,10 +22,10 @@ class BuyBoxPriceType extends Model
     {
         $this->_fields = array (
             'condition'    => array('FieldValue' => null, 'FieldType' => '@string'),
-            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'ListingPrice' => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Shipping'     => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Points'       => array('FieldValue' => null, 'FieldType' => 'Points'),
+            'LandedPrice'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'ListingPrice' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'Shipping'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'Points'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Points'),
         );
         parent::__construct($data);
     }

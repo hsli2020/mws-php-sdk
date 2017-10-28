@@ -19,9 +19,9 @@ class ListOrderItemsResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListOrderItemsResult'   => array('FieldValue' => null, 'FieldType' => 'ListOrderItemsResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListOrderItemsResult'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListOrderItemsResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

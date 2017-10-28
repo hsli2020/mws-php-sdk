@@ -19,9 +19,9 @@ class GetLowestPricedOffersForSKUResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetLowestPricedOffersForSKUResult' => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersForSKUResult'),
-            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetLowestPricedOffersForSKUResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetLowestPricedOffersForSKUResult'),
+            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

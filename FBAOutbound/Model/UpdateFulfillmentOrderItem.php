@@ -33,9 +33,9 @@ class UpdateFulfillmentOrderItem extends Model
             'DisplayableComment'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentNetworkSKU'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'OrderItemDisposition'         => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PerUnitDeclaredValue'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'PerUnitPrice'                 => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'PerUnitTax'                   => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PerUnitDeclaredValue'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'PerUnitPrice'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'PerUnitTax'                   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

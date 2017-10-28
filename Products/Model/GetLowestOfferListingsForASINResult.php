@@ -22,8 +22,8 @@ class GetLowestOfferListingsForASINResult extends Model
     {
         $this->_fields = array (
             'AllOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'Product'                    => array('FieldValue' => null, 'FieldType' => 'Product'),
-            'Error'                      => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Product'                    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Product'),
+            'Error'                      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Error'),
             'ASIN'                       => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'                     => array('FieldValue' => null, 'FieldType' => '@string'),
         );

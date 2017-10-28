@@ -19,9 +19,9 @@ class GetPrepInstructionsForSKUResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetPrepInstructionsForSKUResult' => array('FieldValue' => null, 'FieldType' => 'GetPrepInstructionsForSKUResult'),
-            'ResponseMetadata'                => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetPrepInstructionsForSKUResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetPrepInstructionsForSKUResult'),
+            'ResponseMetadata'                => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

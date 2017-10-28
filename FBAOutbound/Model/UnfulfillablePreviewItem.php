@@ -23,7 +23,7 @@ class UnfulfillablePreviewItem extends Model
             'SellerSKU'                    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Quantity'                     => array('FieldValue' => null, 'FieldType' => 'int'),
             'SellerFulfillmentOrderItemId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemUnfulfillableReasons'     => array('FieldValue' => null, 'FieldType' => 'StringList'),
+            'ItemUnfulfillableReasons'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\StringList'),
         );
         parent::__construct($data);
     }

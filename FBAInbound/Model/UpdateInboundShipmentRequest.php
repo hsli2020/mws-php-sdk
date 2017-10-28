@@ -27,8 +27,8 @@ class UpdateInboundShipmentRequest extends Model
             'MWSAuthToken'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipmentId'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'InboundShipmentHeader' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentHeader'),
-            'InboundShipmentItems'  => array('FieldValue' => null, 'FieldType' => 'InboundShipmentItemList'),
+            'InboundShipmentHeader' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InboundShipmentHeader'),
+            'InboundShipmentItems'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InboundShipmentItemList'),
         );
         parent::__construct($data);
     }

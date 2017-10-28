@@ -23,7 +23,7 @@ class CreateSubscriptionInput extends Model
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Subscription'  => array('FieldValue' => null, 'FieldType' => 'Subscription'),
+            'Subscription'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Subscription'),
         );
         parent::__construct($data);
     }

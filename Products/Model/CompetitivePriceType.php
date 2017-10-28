@@ -22,7 +22,7 @@ class CompetitivePriceType extends Model
     {
         $this->_fields = array (
             'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Price'              => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'Price'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PriceType'),
             'condition'          => array('FieldValue' => null, 'FieldType' => '@string'),
             'subcondition'       => array('FieldValue' => null, 'FieldType' => '@string'),
             'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),

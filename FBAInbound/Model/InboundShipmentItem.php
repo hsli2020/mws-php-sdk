@@ -31,7 +31,7 @@ class InboundShipmentItem extends Model
             'QuantityReceived'      => array('FieldValue' => null, 'FieldType' => 'int'),
             'QuantityInCase'        => array('FieldValue' => null, 'FieldType' => 'int'),
             'ReleaseDate'           => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => 'PrepDetailsList'),
+            'PrepDetailsList'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PrepDetailsList'),
         );
         parent::__construct($data);
     }

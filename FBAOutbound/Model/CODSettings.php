@@ -22,10 +22,10 @@ class CODSettings extends Model
     {
         $this->_fields = array (
             'IsCODRequired'     => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'CODCharge'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'CODChargeTax'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'ShippingCharge'    => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'CODCharge'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'CODChargeTax'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'ShippingCharge'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'ShippingChargeTax' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

@@ -17,7 +17,7 @@ class GetSubscriptionResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Subscription' => array('FieldValue' => null, 'FieldType' => 'Subscription'),
+            'Subscription' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Subscription'),
         );
         parent::__construct($data);
     }

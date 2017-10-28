@@ -17,7 +17,7 @@ class GetTransportContentResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'TransportContent' => array('FieldValue' => null, 'FieldType' => 'TransportContent'),
+            'TransportContent' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportContent'),
         );
         parent::__construct($data);
     }

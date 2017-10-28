@@ -18,8 +18,8 @@ class Label extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Dimensions'   => array('FieldValue' => null, 'FieldType' => 'LabelDimensions'),
-            'FileContents' => array('FieldValue' => null, 'FieldType' => 'FileContents'),
+            'Dimensions'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\LabelDimensions'),
+            'FileContents' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FileContents'),
         );
         parent::__construct($data);
     }

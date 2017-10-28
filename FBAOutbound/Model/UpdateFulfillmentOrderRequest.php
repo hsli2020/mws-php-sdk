@@ -41,13 +41,13 @@ class UpdateFulfillmentOrderRequest extends Model
             'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
             'DisplayableOrderComment'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShippingSpeedCategory'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'DestinationAddress'       => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'DestinationAddress'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
             'FulfillmentAction'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentPolicy'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentMethod'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipFromCountryCode'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'NotificationEmailList'    => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
-            'Items'                    => array('FieldValue' => null, 'FieldType' => 'UpdateFulfillmentOrderItemList'),
+            'NotificationEmailList'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NotificationEmailList'),
+            'Items'                    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\UpdateFulfillmentOrderItemList'),
         );
         parent::__construct($data);
     }

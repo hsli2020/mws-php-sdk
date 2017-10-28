@@ -21,10 +21,10 @@ class LowestOfferListingType extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => 'QualifiersType'),
+            'Qualifiers'                      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\QualifiersType'),
             'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
             'SellerFeedbackCount'             => array('FieldValue' => null, 'FieldType' => 'int'),
-            'Price'                           => array('FieldValue' => null, 'FieldType' => 'PriceType'),
+            'Price'                           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PriceType'),
             'MultipleOffersAtLowestPrice'     => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

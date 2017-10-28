@@ -19,9 +19,9 @@ class ListInboundShipmentsResponse extends FBAInboundServiceMWS_Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListInboundShipmentsResult' => array('FieldValue' => null, 'FieldType' => 'ListInboundShipmentsResult'),
-            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListInboundShipmentsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListInboundShipmentsResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

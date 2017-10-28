@@ -19,9 +19,9 @@ class ListRecommendationsByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListRecommendationsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListRecommendationsByNextTokenResult'),
-            'ResponseMetadata'                     => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'               => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListRecommendationsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListRecommendationsByNextTokenResult'),
+            'ResponseMetadata'                     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

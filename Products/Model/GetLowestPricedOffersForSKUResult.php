@@ -27,9 +27,9 @@ class GetLowestPricedOffersForSKUResult extends Model
             'SKU'           => array('FieldValue' => null, 'FieldType' => '@string'),
             'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
-            'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersSkuIdentifier'),
-            'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
-            'Offers'        => array('FieldValue' => null, 'FieldType' => 'SKUOfferDetailList'),
+            'Identifier'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetLowestPricedOffersSkuIdentifier'),
+            'Summary'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Summary'),
+            'Offers'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SKUOfferDetailList'),
         );
         parent::__construct($data);
     }

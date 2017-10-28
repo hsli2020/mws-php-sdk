@@ -18,8 +18,8 @@ class PartneredSmallParcelPackageInput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Dimensions' => array('FieldValue' => null, 'FieldType' => 'Dimensions'),
-            'Weight'     => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'Dimensions' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Dimensions'),
+            'Weight'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
         );
         parent::__construct($data);
     }

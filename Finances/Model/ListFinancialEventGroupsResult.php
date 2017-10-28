@@ -19,7 +19,7 @@ class ListFinancialEventGroupsResult extends Model
     {
         $this->_fields = array (
             'NextToken'               => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FinancialEventGroupList' => array('FieldValue' => array(), 'FieldType' => array('FinancialEventGroup'), 'ListMemberName' => 'FinancialEventGroup'),
+            'FinancialEventGroupList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FinancialEventGroup'), 'ListMemberName' => 'FinancialEventGroup'),
         );
         parent::__construct($data);
     }

@@ -41,9 +41,9 @@ class FulfillmentOrderItem extends Model
             'UnfulfillableQuantity'        => array('FieldValue' => null, 'FieldType' => 'int'),
             'EstimatedShipDateTime'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'EstimatedArrivalDateTime'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PerUnitPrice'                 => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'PerUnitTax'                   => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'PerUnitDeclaredValue'         => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PerUnitPrice'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'PerUnitTax'                   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'PerUnitDeclaredValue'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

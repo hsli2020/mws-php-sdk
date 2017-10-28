@@ -19,9 +19,9 @@ class VoidTransportRequestResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'VoidTransportRequestResult' => array('FieldValue' => null, 'FieldType' => 'VoidTransportRequestResult'),
-            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'VoidTransportRequestResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\VoidTransportRequestResult'),
+            'ResponseMetadata'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

@@ -33,7 +33,7 @@ class GetReportScheduleListByNextTokenResult extends Model
         $this->fields = array (
             'NextToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'HasNext'        => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ReportSchedule')),
         );
         parent::__construct($data);
     }

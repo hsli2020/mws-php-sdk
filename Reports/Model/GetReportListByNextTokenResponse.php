@@ -29,8 +29,8 @@ class GetReportListByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportListByNextTokenResult'),
-            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetReportListByNextTokenResult'),
+            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

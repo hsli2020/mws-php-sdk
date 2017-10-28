@@ -19,7 +19,7 @@ class PartneredEstimate extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Amount'          => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'Amount'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
             'ConfirmDeadline' => array('FieldValue' => null, 'FieldType' => 'string'),
             'VoidDeadline'    => array('FieldValue' => null, 'FieldType' => 'string'),
         );

@@ -25,7 +25,7 @@ class GetMatchingProductForIdRequest extends Model
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'IdType'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'IdList'        => array('FieldValue' => null, 'FieldType' => 'IdListType'),
+            'IdList'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdListType'),
         );
         parent::__construct($data);
     }

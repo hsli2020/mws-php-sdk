@@ -18,7 +18,7 @@ class PalletList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('Pallet')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Pallet')),
         );
         parent::__construct($data);
     }

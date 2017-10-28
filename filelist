@@ -8,6 +8,9 @@
 FieldType
 require_once
 
+:nmap T cl__NAMESPACE__.'\\<esc>
+:nmap K $Bcl__NAMESPACE__.'\\<esc>
+
 /^    {
 :nmap K =%
 :nmap M yyo<esc>p0cwuse<esc>

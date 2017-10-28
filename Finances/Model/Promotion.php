@@ -21,7 +21,7 @@ class Promotion extends Model
         $this->_fields = array (
             'PromotionType'   => array('FieldValue' => null, 'FieldType' => 'string'),
             'PromotionId'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PromotionAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PromotionAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

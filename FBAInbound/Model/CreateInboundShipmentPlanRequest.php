@@ -27,11 +27,11 @@ class CreateInboundShipmentPlanRequest extends Model
             'SellerId'                        => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'                    => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'                     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipFromAddress'                 => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'ShipFromAddress'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
             'LabelPrepPreference'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipToCountryCode'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipToCountrySubdivisionCode'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'InboundShipmentPlanRequestItems' => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanRequestItemList'),
+            'InboundShipmentPlanRequestItems' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InboundShipmentPlanRequestItemList'),
         );
         parent::__construct($data);
     }

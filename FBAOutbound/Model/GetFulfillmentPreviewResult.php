@@ -17,7 +17,7 @@ class GetFulfillmentPreviewResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'FulfillmentPreviews' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewList'),
+            'FulfillmentPreviews' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentPreviewList'),
         );
         parent::__construct($data);
     }

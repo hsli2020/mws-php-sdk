@@ -29,8 +29,8 @@ class GetReportRequestListByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetReportRequestListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListByNextTokenResult'),
-            'ResponseMetadata'                      => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetReportRequestListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetReportRequestListByNextTokenResult'),
+            'ResponseMetadata'                      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

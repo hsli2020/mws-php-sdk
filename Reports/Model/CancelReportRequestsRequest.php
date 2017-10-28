@@ -42,9 +42,9 @@ class CancelReportRequestsRequest extends Model
             'Marketplace'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'                   => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'               => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ReportRequestIdList'        => array('FieldValue' => null, 'FieldType' => 'IdList'),
-            'ReportTypeList'             => array('FieldValue' => null, 'FieldType' => 'TypeList'),
-            'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => 'StatusList'),
+            'ReportRequestIdList'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
+            'ReportTypeList'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TypeList'),
+            'ReportProcessingStatusList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\StatusList'),
             'RequestedFromDate'          => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'RequestedToDate'            => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );

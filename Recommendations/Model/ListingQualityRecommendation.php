@@ -26,7 +26,7 @@ class ListingQualityRecommendation extends Model
             'QualitySet'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'DefectGroup'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'DefectAttribute'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemIdentifier'       => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemIdentifier'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductIdentifier'),
             'ItemName'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'RecommendationId'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),

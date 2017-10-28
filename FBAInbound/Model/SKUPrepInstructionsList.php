@@ -17,7 +17,7 @@ class SKUPrepInstructionsList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SKUPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('SKUPrepInstructions')),
+            'SKUPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\SKUPrepInstructions')),
         );
         parent::__construct($data);
     }

@@ -22,8 +22,8 @@ class InventorySupplyDetail extends Model
         $this->_fields = array (
             'Quantity'                => array('FieldValue' => null, 'FieldType' => 'int'),
             'SupplyType'              => array('FieldValue' => null, 'FieldType' => 'string'),
-            'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
-            'LatestAvailableToPick'   => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
+            'EarliestAvailableToPick' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Timepoint'),
+            'LatestAvailableToPick'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Timepoint'),
         );
         parent::__construct($data);
     }

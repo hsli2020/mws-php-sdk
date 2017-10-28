@@ -24,13 +24,13 @@ class Product extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Identifiers'         => array('FieldValue' => null, 'FieldType' => 'IdentifierType'),
-            'AttributeSets'       => array('FieldValue' => null, 'FieldType' => 'AttributeSetList'),
-            'Relationships'       => array('FieldValue' => null, 'FieldType' => 'RelationshipList'),
-            'CompetitivePricing'  => array('FieldValue' => null, 'FieldType' => 'CompetitivePricingType'),
-            'SalesRankings'       => array('FieldValue' => null, 'FieldType' => 'SalesRankList'),
-            'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => 'LowestOfferListingList'),
-            'Offers'              => array('FieldValue' => null, 'FieldType' => 'OffersList'),
+            'Identifiers'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdentifierType'),
+            'AttributeSets'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\AttributeSetList'),
+            'Relationships'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\RelationshipList'),
+            'CompetitivePricing'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CompetitivePricingType'),
+            'SalesRankings'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SalesRankList'),
+            'LowestOfferListings' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\LowestOfferListingList'),
+            'Offers'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\OffersList'),
         );
         parent::__construct($data);
     }

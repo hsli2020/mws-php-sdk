@@ -25,7 +25,7 @@ class ListRecommendationsRequest extends Model
             'MWSAuthToken'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'SellerId'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'RecommendationCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'CategoryQueryList'      => array('FieldValue' => array(), 'FieldType' => array('CategoryQuery'), 'ListMemberName' => 'CategoryQuery'),
+            'CategoryQueryList'      => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\CategoryQuery'), 'ListMemberName' => 'CategoryQuery'),
         );
         parent::__construct($data);
     }

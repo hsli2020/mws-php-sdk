@@ -19,9 +19,9 @@ class GetEligibleShippingServicesResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetEligibleShippingServicesResult' => array('FieldValue' => null, 'FieldType' => 'GetEligibleShippingServicesResult'),
-            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetEligibleShippingServicesResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetEligibleShippingServicesResult'),
+            'ResponseMetadata'                  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

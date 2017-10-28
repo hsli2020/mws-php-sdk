@@ -35,7 +35,7 @@ class GetReportListByNextTokenResult extends Model
         $this->fields = array (
             'NextToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'HasNext'    => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
+            'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ReportInfo')),
         );
         parent::__construct($data);
     }

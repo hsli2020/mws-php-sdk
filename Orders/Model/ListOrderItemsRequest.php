@@ -19,8 +19,8 @@ class ListOrderItemsRequest extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SellerId'      => array('FieldValue' => null, 'FieldType'      => 'string'),
-            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType'  => 'string'),
+            'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
+            'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

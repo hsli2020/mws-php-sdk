@@ -30,7 +30,7 @@ class ManageReportScheduleResult extends Model
     {
         $this->fields = array (
             'Count'          => array('FieldValue' => null, 'FieldType' => 'int'),
-            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
+            'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ReportSchedule')),
         );
         parent::__construct($data);
     }

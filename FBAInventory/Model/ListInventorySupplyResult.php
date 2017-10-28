@@ -20,7 +20,7 @@ class ListInventorySupplyResult extends Model
     {
         $this->_fields = array (
             'MarketplaceId'       => array('FieldValue' => null, 'FieldType' => 'string'),
-            'InventorySupplyList' => array('FieldValue' => null, 'FieldType' => 'InventorySupplyList'),
+            'InventorySupplyList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InventorySupplyList'),
             'NextToken'           => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

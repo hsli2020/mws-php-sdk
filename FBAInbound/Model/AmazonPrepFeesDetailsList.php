@@ -15,7 +15,7 @@ class AmazonPrepFeesDetailsList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'AmazonPrepFeesDetails' => array('FieldValue' => array(), 'FieldType' => array('AmazonPrepFeesDetails')),
+            'AmazonPrepFeesDetails' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\AmazonPrepFeesDetails')),
         );
         parent::__construct($data);
     }

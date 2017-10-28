@@ -21,7 +21,7 @@ class ListOrderItemsByNextTokenResult extends Model
         $this->_fields = array (
             'NextToken'     => array('FieldValue' => null, 'FieldType'  => 'string'),
             'AmazonOrderId' => array('FieldValue' => null, 'FieldType'  => 'string'),
-            'OrderItems'    => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'OrderItem'),
+            'OrderItems'    => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\OrderItem'), 'ListMemberName' => 'OrderItem'),
         );
         parent::__construct($data);
     }

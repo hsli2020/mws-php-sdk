@@ -21,8 +21,8 @@ class GetMatchingProductForIdResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Products' => array('FieldValue' => null, 'FieldType' => 'ProductList'),
-            'Error'    => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Products' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductList'),
+            'Error'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Error'),
             'Id'       => array('FieldValue' => null, 'FieldType' => '@string'),
             'IdType'   => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'   => array('FieldValue' => null, 'FieldType' => '@string'),

@@ -18,8 +18,8 @@ class GetPrepInstructionsForSKUResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'SKUPrepInstructionsList'),
-            'InvalidSKUList'          => array('FieldValue' => null, 'FieldType' => 'InvalidSKUList'),
+            'SKUPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SKUPrepInstructionsList'),
+            'InvalidSKUList'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InvalidSKUList'),
         );
         parent::__construct($data);
     }

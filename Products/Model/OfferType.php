@@ -23,8 +23,8 @@ class OfferType extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => 'PriceType'),
-            'RegularPrice'       => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
+            'BuyingPrice'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PriceType'),
+            'RegularPrice'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
             'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ItemCondition'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'ItemSubCondition'   => array('FieldValue' => null, 'FieldType' => 'string'),

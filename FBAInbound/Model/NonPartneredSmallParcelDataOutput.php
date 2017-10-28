@@ -17,7 +17,7 @@ class NonPartneredSmallParcelDataOutput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PackageList' => array('FieldValue' => null, 'FieldType' => 'NonPartneredSmallParcelPackageOutputList'),
+            'PackageList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NonPartneredSmallParcelPackageOutputList'),
         );
         parent::__construct($data);
     }

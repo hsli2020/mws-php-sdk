@@ -17,7 +17,7 @@ class FulfillmentShipmentItemList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('FulfillmentShipmentItem')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FulfillmentShipmentItem')),
         );
         parent::__construct($data);
     }

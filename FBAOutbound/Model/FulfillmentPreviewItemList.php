@@ -17,7 +17,7 @@ class FulfillmentPreviewItemList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('FulfillmentPreviewItem')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FulfillmentPreviewItem')),
         );
         parent::__construct($data);
     }

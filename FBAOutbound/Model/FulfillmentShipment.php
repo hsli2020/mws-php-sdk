@@ -28,8 +28,8 @@ class FulfillmentShipment extends Model
             'FulfillmentShipmentStatus'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShippingDateTime'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'EstimatedArrivalDateTime'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FulfillmentShipmentItem'    => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentItemList'),
-            'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentPackageList'),
+            'FulfillmentShipmentItem'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentShipmentItemList'),
+            'FulfillmentShipmentPackage' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentShipmentPackageList'),
         );
         parent::__construct($data);
     }

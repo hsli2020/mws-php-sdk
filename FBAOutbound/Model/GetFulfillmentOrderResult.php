@@ -19,9 +19,9 @@ class GetFulfillmentOrderResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'FulfillmentOrder'     => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrder'),
-            'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => 'FulfillmentOrderItemList'),
-            'FulfillmentShipment'  => array('FieldValue' => null, 'FieldType' => 'FulfillmentShipmentList'),
+            'FulfillmentOrder'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentOrder'),
+            'FulfillmentOrderItem' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentOrderItemList'),
+            'FulfillmentShipment'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentShipmentList'),
         );
         parent::__construct($data);
     }

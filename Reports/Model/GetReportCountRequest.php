@@ -40,7 +40,7 @@ class GetReportCountRequest extends Model
             'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ReportTypeList'    => array('FieldValue' => null, 'FieldType' => 'TypeList'),
+            'ReportTypeList'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TypeList'),
             'Acknowledged'      => array('FieldValue' => null, 'FieldType' => 'bool'),
             'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'AvailableToDate'   => array('FieldValue' => null, 'FieldType' => 'DateTime'),

@@ -24,8 +24,8 @@ class AdjustmentItem extends Model
     {
         $this->_fields = array (
             'Quantity'           => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PerUnitAmount'      => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'TotalAmount'        => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'PerUnitAmount'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'TotalAmount'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
             'SellerSKU'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'FnSKU'              => array('FieldValue' => null, 'FieldType' => 'string'),
             'ProductDescription' => array('FieldValue' => null, 'FieldType' => 'string'),

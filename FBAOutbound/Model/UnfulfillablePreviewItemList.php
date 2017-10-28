@@ -17,7 +17,7 @@ class UnfulfillablePreviewItemList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('UnfulfillablePreviewItem')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\UnfulfillablePreviewItem')),
         );
         parent::__construct($data);
     }

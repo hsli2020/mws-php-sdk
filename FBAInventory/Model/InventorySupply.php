@@ -30,8 +30,8 @@ class InventorySupply extends Model
             'Condition'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'TotalSupplyQuantity'   => array('FieldValue' => null, 'FieldType' => 'int'),
             'InStockSupplyQuantity' => array('FieldValue' => null, 'FieldType' => 'int'),
-            'EarliestAvailability'  => array('FieldValue' => null, 'FieldType' => 'Timepoint'),
-            'SupplyDetail'          => array('FieldValue' => null, 'FieldType' => 'InventorySupplyDetailList'),
+            'EarliestAvailability'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Timepoint'),
+            'SupplyDetail'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InventorySupplyDetailList'),
         );
         parent::__construct($data);
     }

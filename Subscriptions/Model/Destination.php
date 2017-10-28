@@ -19,7 +19,7 @@ class Destination extends Model
     {
         $this->_fields = array (
             'DeliveryChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'AttributeList'   => array('FieldValue' => null, 'FieldType' => 'AttributeKeyValueList'),
+            'AttributeList'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\AttributeKeyValueList'),
         );
         parent::__construct($data);
     }

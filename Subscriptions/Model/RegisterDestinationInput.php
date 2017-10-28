@@ -23,7 +23,7 @@ class RegisterDestinationInput extends Model
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Destination'   => array('FieldValue' => null, 'FieldType' => 'Destination'),
+            'Destination'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Destination'),
         );
         parent::__construct($data);
     }

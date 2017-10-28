@@ -22,9 +22,9 @@ class FeesEstimateResult extends Model
     {
         $this->_fields = array (
             'Status'                 => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => 'FeesEstimateIdentifier'),
-            'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => 'FeesEstimate'),
-            'Error'                  => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'FeesEstimateIdentifier' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeesEstimateIdentifier'),
+            'FeesEstimate'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeesEstimate'),
+            'Error'                  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Error'),
         );
         parent::__construct($data);
     }

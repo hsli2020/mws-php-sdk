@@ -17,7 +17,7 @@ class InboundShipmentPlanRequestItemList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('InboundShipmentPlanRequestItem')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\InboundShipmentPlanRequestItem')),
         );
         parent::__construct($data);
     }

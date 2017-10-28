@@ -29,12 +29,12 @@ class SelectionRecommendation extends Model
     {
         $this->_fields = array (
             'LastUpdated'             => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ItemIdentifier'          => array('FieldValue' => null, 'FieldType' => 'ProductIdentifier'),
+            'ItemIdentifier'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ProductIdentifier'),
             'ItemName'                => array('FieldValue' => null, 'FieldType' => 'string'),
             'BrandName'               => array('FieldValue' => null, 'FieldType' => 'string'),
             'ProductCategory'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'SalesRank'               => array('FieldValue' => null, 'FieldType' => 'int'),
-            'BuyboxPrice'             => array('FieldValue' => null, 'FieldType' => 'Price'),
+            'BuyboxPrice'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Price'),
             'NumberOfOffers'          => array('FieldValue' => null, 'FieldType' => 'int'),
             'AverageCustomerReview'   => array('FieldValue' => null, 'FieldType' => 'float'),
             'NumberOfCustomerReviews' => array('FieldValue' => null, 'FieldType' => 'int'),

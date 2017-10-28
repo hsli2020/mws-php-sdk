@@ -27,12 +27,12 @@ class ASINOfferDetail extends Model
     {
         $this->_fields = array (
             'SubCondition'         => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'SellerFeedbackType'),
-            'ShippingTime'         => array('FieldValue' => null, 'FieldType' => 'DetailedShippingTimeType'),
-            'ListingPrice'         => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'Points'               => array('FieldValue' => null, 'FieldType' => 'Points'),
-            'Shipping'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => 'ShipsFromType'),
+            'SellerFeedbackRating' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SellerFeedbackType'),
+            'ShippingTime'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DetailedShippingTimeType'),
+            'ListingPrice'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'Points'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Points'),
+            'Shipping'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'ShipsFrom'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShipsFromType'),
             'IsFulfilledByAmazon'  => array('FieldValue' => null, 'FieldType' => 'bool'),
             'IsBuyBoxWinner'       => array('FieldValue' => null, 'FieldType' => 'bool'),
             'IsFeaturedMerchant'   => array('FieldValue' => null, 'FieldType' => 'bool'),

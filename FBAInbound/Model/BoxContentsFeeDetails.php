@@ -20,8 +20,8 @@ class BoxContentsFeeDetails extends Model
     {
         $this->_fields = array (
             'TotalUnits' => array('FieldValue' => null, 'FieldType' => 'int'),
-            'FeePerUnit' => array('FieldValue' => null, 'FieldType' => 'Amount'),
-            'TotalFee'   => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'FeePerUnit' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
+            'TotalFee'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
         );
         parent::__construct($data);
     }

@@ -19,9 +19,9 @@ class GetUniquePackageLabelsResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => 'GetUniquePackageLabelsResult'),
-            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetUniquePackageLabelsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetUniquePackageLabelsResult'),
+            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

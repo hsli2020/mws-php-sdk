@@ -18,7 +18,7 @@ class FeesEstimateResultList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'FeesEstimateResult' => array('FieldValue' => array(), 'FieldType' => array('FeesEstimateResult')),
+            'FeesEstimateResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeesEstimateResult')),
         );
         parent::__construct($data);
     }

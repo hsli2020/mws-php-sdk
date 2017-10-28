@@ -19,7 +19,7 @@ class FeeComponent extends Model
     {
         $this->_fields = array (
             'FeeType'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeeAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'FeeAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

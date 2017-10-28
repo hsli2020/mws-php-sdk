@@ -29,8 +29,8 @@ class SubmitFeedResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'SubmitFeedResult'),
-            'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SubmitFeedResult'),
+            'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

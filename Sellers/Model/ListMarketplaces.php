@@ -17,7 +17,7 @@ class ListMarketplaces extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Marketplace' => array('FieldValue' => array(), 'FieldType' => array('Marketplace')),
+            'Marketplace' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\Marketplace')),
         );
         parent::__construct($data);
     }

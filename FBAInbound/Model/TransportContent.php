@@ -19,9 +19,9 @@ class TransportContent extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'TransportHeader'  => array('FieldValue' => null, 'FieldType' => 'TransportHeader'),
-            'TransportDetails' => array('FieldValue' => null, 'FieldType' => 'TransportDetailOutput'),
-            'TransportResult'  => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
+            'TransportHeader'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportHeader'),
+            'TransportDetails' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportDetailOutput'),
+            'TransportResult'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportResult'),
         );
         parent::__construct($data);
     }

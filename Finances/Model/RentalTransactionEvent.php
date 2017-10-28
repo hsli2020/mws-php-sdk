@@ -29,11 +29,11 @@ class RentalTransactionEvent extends Model
             'RentalEventType'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'ExtensionLength'     => array('FieldValue' => null, 'FieldType' => 'int'),
             'PostedDate'          => array('FieldValue' => null, 'FieldType' => 'string'),
-            'RentalChargeList'    => array('FieldValue' => array(), 'FieldType' => array('ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
-            'RentalFeeList'       => array('FieldValue' => array(), 'FieldType' => array('FeeComponent'), 'ListMemberName' => 'FeeComponent'),
+            'RentalChargeList'    => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ChargeComponent'), 'ListMemberName' => 'ChargeComponent'),
+            'RentalFeeList'       => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeeComponent'), 'ListMemberName' => 'FeeComponent'),
             'MarketplaceName'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'RentalInitialValue'  => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'RentalInitialValue'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'RentalReimbursement' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
         );
         parent::__construct($data);
     }

@@ -17,7 +17,7 @@ class PartneredSmallParcelPackageInputList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('PartneredSmallParcelPackageInput')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\PartneredSmallParcelPackageInput')),
         );
         parent::__construct($data);
     }

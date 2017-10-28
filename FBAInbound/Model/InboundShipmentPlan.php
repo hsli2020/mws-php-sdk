@@ -26,8 +26,8 @@ class InboundShipmentPlan extends Model
             'DestinationFulfillmentCenterId' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipToAddress'                  => array('FieldValue' => null, 'FieldType' => 'Address'),
             'LabelPrepType'                  => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Items'                          => array('FieldValue' => null, 'FieldType' => 'InboundShipmentPlanItemList'),
-            'EstimatedBoxContentsFee'        => array('FieldValue' => null, 'FieldType' => 'BoxContentsFeeDetails'),
+            'Items'                          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InboundShipmentPlanItemList'),
+            'EstimatedBoxContentsFee'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\BoxContentsFeeDetails'),
         );
         parent::__construct($data);
     }

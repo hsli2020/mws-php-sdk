@@ -20,8 +20,8 @@ class DebtRecoveryItem extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'OriginalAmount' => array('FieldValue' => null, 'FieldType' => 'Currency'),
+            'RecoveryAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'OriginalAmount' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
             'GroupBeginDate' => array('FieldValue' => null, 'FieldType' => 'string'),
             'GroupEndDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
         );

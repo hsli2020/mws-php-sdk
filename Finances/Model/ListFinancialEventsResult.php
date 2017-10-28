@@ -19,7 +19,7 @@ class ListFinancialEventsResult extends Model
     {
         $this->_fields = array (
             'NextToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FinancialEvents' => array('FieldValue' => null, 'FieldType' => 'FinancialEvents'),
+            'FinancialEvents' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FinancialEvents'),
         );
         parent::__construct($data);
     }

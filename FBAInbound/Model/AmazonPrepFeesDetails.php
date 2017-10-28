@@ -17,7 +17,7 @@ class AmazonPrepFeesDetails extends Model
     {
         $this->_fields = array (
             'PrepInstruction' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeePerUnit'      => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'FeePerUnit'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
         );
         parent::__construct($data);
     }

@@ -19,9 +19,9 @@ class GetEligibleShippingServicesResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ShippingServiceList'                      => array('FieldValue' => array(), 'FieldType' => array('ShippingService'), 'ListMemberName' => 'ShippingService'),
-            'TemporarilyUnavailableCarrierList'        => array('FieldValue' => array(), 'FieldType' => array('TemporarilyUnavailableCarrier'), 'ListMemberName' => 'TemporarilyUnavailableCarrier'),
-            'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array('TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
+            'ShippingServiceList'                      => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ShippingService'),                      'ListMemberName' => 'ShippingService'),
+            'TemporarilyUnavailableCarrierList'        => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\TemporarilyUnavailableCarrier'),        'ListMemberName' => 'TemporarilyUnavailableCarrier'),
+            'TermsAndConditionsNotAcceptedCarrierList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\TermsAndConditionsNotAcceptedCarrier'), 'ListMemberName' => 'TermsAndConditionsNotAcceptedCarrier'),
         );
         parent::__construct($data);
     }

@@ -25,7 +25,7 @@ class FulfillmentPreviewShipment extends Model
             'LatestShipDate'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'EarliestArrivalDate'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'LatestArrivalDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => 'FulfillmentPreviewItemList'),
+            'FulfillmentPreviewItems' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FulfillmentPreviewItemList'),
         );
         parent::__construct($data);
     }

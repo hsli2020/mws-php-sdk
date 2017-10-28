@@ -20,8 +20,8 @@ class GetMatchingProductResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Product' => array('FieldValue' => null, 'FieldType' => 'Product'),
-            'Error'   => array('FieldValue' => null, 'FieldType' => 'Error'),
+            'Product' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Product'),
+            'Error'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Error'),
             'ASIN'    => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'  => array('FieldValue' => null, 'FieldType' => '@string'),
         );

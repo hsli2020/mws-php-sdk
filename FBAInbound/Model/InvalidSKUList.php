@@ -19,7 +19,7 @@ class InvalidSKUList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'InvalidSKU' => array('FieldValue' => array(), 'FieldType' => array('InvalidSKU')),
+            'InvalidSKU' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\InvalidSKU')),
         );
         parent::__construct($data);
     }

@@ -27,7 +27,7 @@ class RequestReportResult extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'ReportRequestInfo'),
+            'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ReportRequestInfo'),
         );
         parent::__construct($data);
     }

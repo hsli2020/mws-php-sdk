@@ -17,7 +17,7 @@ class BuyBoxPrices extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'BuyBoxPrice' => array('FieldValue' => array(), 'FieldType' => array('BuyBoxPriceType')),
+            'BuyBoxPrice' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\BuyBoxPriceType')),
         );
         parent::__construct($data);
     }

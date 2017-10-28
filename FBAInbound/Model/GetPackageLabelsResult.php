@@ -17,7 +17,7 @@ class GetPackageLabelsResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'TransportDocument' => array('FieldValue' => null, 'FieldType' => 'TransportDocument'),
+            'TransportDocument' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportDocument'),
         );
         parent::__construct($data);
     }

@@ -32,8 +32,8 @@ class ShippingService extends Model
             'ShipDate'                      => array('FieldValue' => null, 'FieldType' => 'string'),
             'EarliestEstimatedDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
             'LatestEstimatedDeliveryDate'   => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Rate'                          => array('FieldValue' => null, 'FieldType' => 'CurrencyAmount'),
-            'ShippingServiceOptions'        => array('FieldValue' => null, 'FieldType' => 'ShippingServiceOptions'),
+            'Rate'                          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CurrencyAmount'),
+            'ShippingServiceOptions'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShippingServiceOptions'),
         );
         parent::__construct($data);
     }

@@ -26,7 +26,7 @@ class QualifiersType extends MarketplaceWebServiceProducts_Model
             'ItemSubcondition'             => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentChannel'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShipsDomestically'            => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => 'ShippingTimeType'),
+            'ShippingTime'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShippingTimeType'),
             'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

@@ -17,7 +17,7 @@ class SalesRankList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'SalesRank' => array('FieldValue' => array(), 'FieldType' => array('SalesRankType')),
+            'SalesRank' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\SalesRankType')),
         );
         parent::__construct($data);
     }

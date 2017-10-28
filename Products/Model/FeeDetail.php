@@ -24,11 +24,11 @@ class FeeDetail extends Model
     {
         $this->_fields = array (
             'FeeType'               => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeeAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'FeePromotion'          => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'TaxAmount'             => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'FinalFee'              => array('FieldValue' => null, 'FieldType' => 'MoneyType'),
-            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => 'FeeDetailList'),
+            'FeeAmount'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'FeePromotion'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'TaxAmount'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'FinalFee'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\MoneyType'),
+            'IncludedFeeDetailList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeeDetailList'),
         );
         parent::__construct($data);
     }

@@ -17,7 +17,7 @@ class PutTransportContentResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'TransportResult' => array('FieldValue' => null, 'FieldType' => 'TransportResult'),
+            'TransportResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TransportResult'),
         );
         parent::__construct($data);
     }

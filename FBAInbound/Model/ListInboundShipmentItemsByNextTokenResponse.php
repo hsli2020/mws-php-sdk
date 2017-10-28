@@ -19,9 +19,9 @@ class ListInboundShipmentItemsByNextTokenResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListInboundShipmentItemsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'ListInboundShipmentItemsByNextTokenResult'),
-            'ResponseMetadata'                          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'                    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListInboundShipmentItemsByNextTokenResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListInboundShipmentItemsByNextTokenResult'),
+            'ResponseMetadata'                          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'                    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

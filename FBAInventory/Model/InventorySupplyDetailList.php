@@ -17,7 +17,7 @@ class InventorySupplyDetailList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('InventorySupplyDetail')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\InventorySupplyDetail')),
         );
         parent::__construct($data);
     }

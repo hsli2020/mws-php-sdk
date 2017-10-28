@@ -20,7 +20,7 @@ class TrackingEvent extends Model
     {
         $this->_fields = array (
             'EventDate'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'EventAddress' => array('FieldValue' => null, 'FieldType' => 'TrackingAddress'),
+            'EventAddress' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\TrackingAddress'),
             'EventCode'    => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

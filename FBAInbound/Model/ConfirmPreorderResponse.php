@@ -19,9 +19,9 @@ class ConfirmPreorderResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ConfirmPreorderResult'  => array('FieldValue' => null, 'FieldType' => 'ConfirmPreorderResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ConfirmPreorderResult'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ConfirmPreorderResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

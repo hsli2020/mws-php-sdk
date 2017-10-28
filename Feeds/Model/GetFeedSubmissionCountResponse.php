@@ -29,8 +29,8 @@ class GetFeedSubmissionCountResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionCountResult'),
-            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+            'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetFeedSubmissionCountResult'),
+            'ResponseMetadata'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
         );
         parent::__construct($data);
     }

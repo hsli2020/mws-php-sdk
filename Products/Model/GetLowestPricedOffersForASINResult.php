@@ -27,9 +27,9 @@ class GetLowestPricedOffersForASINResult extends Model
             'ASIN'          => array('FieldValue' => null, 'FieldType' => '@string'),
             'ItemCondition' => array('FieldValue' => null, 'FieldType' => '@string'),
             'status'        => array('FieldValue' => null, 'FieldType' => '@string'),
-            'Identifier'    => array('FieldValue' => null, 'FieldType' => 'GetLowestPricedOffersAsinIdentifier'),
-            'Summary'       => array('FieldValue' => null, 'FieldType' => 'Summary'),
-            'Offers'        => array('FieldValue' => null, 'FieldType' => 'ASINOfferDetailList'),
+            'Identifier'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetLowestPricedOffersAsinIdentifier'),
+            'Summary'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Summary'),
+            'Offers'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ASINOfferDetailList'),
         );
         parent::__construct($data);
     }

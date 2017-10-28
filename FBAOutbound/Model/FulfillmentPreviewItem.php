@@ -24,7 +24,7 @@ class FulfillmentPreviewItem extends Model
             'SellerSKU'                       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Quantity'                        => array('FieldValue' => null, 'FieldType' => 'int'),
             'SellerFulfillmentOrderItemId'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'EstimatedShippingWeight'         => array('FieldValue' => null, 'FieldType' => 'Weight'),
+            'EstimatedShippingWeight'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
             'ShippingWeightCalculationMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

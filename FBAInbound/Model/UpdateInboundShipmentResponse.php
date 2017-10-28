@@ -20,9 +20,9 @@ class UpdateInboundShipmentResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'UpdateInboundShipmentResult' => array('FieldValue' => null, 'FieldType' => 'UpdateInboundShipmentResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'UpdateInboundShipmentResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\UpdateInboundShipmentResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

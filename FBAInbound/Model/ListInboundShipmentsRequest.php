@@ -26,8 +26,8 @@ class ListInboundShipmentsRequest extends Model
             'SellerId'           => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Marketplace'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ShipmentStatusList' => array('FieldValue' => null, 'FieldType' => 'ShipmentStatusList'),
-            'ShipmentIdList'     => array('FieldValue' => null, 'FieldType' => 'ShipmentIdList'),
+            'ShipmentStatusList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShipmentStatusList'),
+            'ShipmentIdList'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ShipmentIdList'),
             'LastUpdatedBefore'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'LastUpdatedAfter'   => array('FieldValue' => null, 'FieldType' => 'string'),
         );

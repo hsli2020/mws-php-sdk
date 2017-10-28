@@ -36,7 +36,7 @@ class UpdateReportAcknowledgementsRequest extends Model
             'Marketplace'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'ReportIdList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
             'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);

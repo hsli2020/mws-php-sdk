@@ -42,7 +42,7 @@ class RequestReportRequest extends Model
             'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
             'ReportType'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'StartDate'         => array('FieldValue' => null, 'FieldType' => 'DateTime'),
             'EndDate'           => array('FieldValue' => null, 'FieldType' => 'DateTime'),

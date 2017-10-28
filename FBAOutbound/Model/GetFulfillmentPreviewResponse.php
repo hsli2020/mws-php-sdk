@@ -19,9 +19,9 @@ class GetFulfillmentPreviewResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetFulfillmentPreviewResult' => array('FieldValue' => null, 'FieldType' => 'GetFulfillmentPreviewResult'),
-            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetFulfillmentPreviewResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetFulfillmentPreviewResult'),
+            'ResponseMetadata'            => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'      => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

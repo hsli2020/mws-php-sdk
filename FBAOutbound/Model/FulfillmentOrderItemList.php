@@ -17,7 +17,7 @@ class FulfillmentOrderItemList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'member' => array('FieldValue' => array(), 'FieldType' => array('FulfillmentOrderItem')),
+            'member' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FulfillmentOrderItem')),
         );
         parent::__construct($data);
     }

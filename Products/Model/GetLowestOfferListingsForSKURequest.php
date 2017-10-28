@@ -25,7 +25,7 @@ class GetLowestOfferListingsForSKURequest extends Model
             'SellerId'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerSKUList' => array('FieldValue' => null, 'FieldType' => 'SellerSKUListType'),
+            'SellerSKUList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\SellerSKUListType'),
             'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
             'ExcludeMe'     => array('FieldValue' => null, 'FieldType' => 'bool'),
         );

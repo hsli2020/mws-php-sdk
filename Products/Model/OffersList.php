@@ -17,7 +17,7 @@ class OffersList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Offer' => array('FieldValue' => array(), 'FieldType' => array('OfferType')),
+            'Offer' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\OfferType')),
         );
         parent::__construct($data);
     }

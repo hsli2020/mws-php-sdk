@@ -17,7 +17,7 @@ class ASINPrepInstructionsList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ASINPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array('ASINPrepInstructions')),
+            'ASINPrepInstructions' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\ASINPrepInstructions')),
         );
         parent::__construct($data);
     }

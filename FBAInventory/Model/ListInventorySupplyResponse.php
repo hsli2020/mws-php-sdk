@@ -19,9 +19,9 @@ class ListInventorySupplyResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListInventorySupplyResult' => array('FieldValue' => null, 'FieldType' => 'ListInventorySupplyResult'),
-            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListInventorySupplyResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListInventorySupplyResult'),
+            'ResponseMetadata'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

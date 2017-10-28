@@ -17,7 +17,7 @@ class PrepDetailsList extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'PrepDetails' => array('FieldValue' => array(), 'FieldType' => array('PrepDetails')),
+            'PrepDetails' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\PrepDetails')),
         );
         parent::__construct($data);
     }

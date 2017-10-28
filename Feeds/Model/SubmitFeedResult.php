@@ -29,7 +29,7 @@ class SubmitFeedResult extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-            'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'FeedSubmissionInfo'),
+            'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\FeedSubmissionInfo'),
         );
         parent::__construct($data);
     }

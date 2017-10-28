@@ -31,20 +31,20 @@ class PartneredLtlDataOutput extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'Contact'                 => array('FieldValue' => null, 'FieldType' => 'Contact'),
+            'Contact'                 => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Contact'),
             'BoxCount'                => array('FieldValue' => null, 'FieldType' => 'int'),
             'SellerFreightClass'      => array('FieldValue' => null, 'FieldType' => 'string'),
             'FreightReadyDate'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PalletList'              => array('FieldValue' => null, 'FieldType' => 'PalletList'),
-            'TotalWeight'             => array('FieldValue' => null, 'FieldType' => 'Weight'),
-            'SellerDeclaredValue'     => array('FieldValue' => null, 'FieldType' => 'Amount'),
-            'AmazonCalculatedValue'   => array('FieldValue' => null, 'FieldType' => 'Amount'),
+            'PalletList'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PalletList'),
+            'TotalWeight'             => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Weight'),
+            'SellerDeclaredValue'     => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
+            'AmazonCalculatedValue'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Amount'),
             'PreviewPickupDate'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'PreviewDeliveryDate'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'PreviewFreightClass'     => array('FieldValue' => null, 'FieldType' => 'string'),
             'AmazonReferenceId'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'IsBillOfLadingAvailable' => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'PartneredEstimate'       => array('FieldValue' => null, 'FieldType' => 'PartneredEstimate'),
+            'PartneredEstimate'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\PartneredEstimate'),
             'CarrierName'             => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);

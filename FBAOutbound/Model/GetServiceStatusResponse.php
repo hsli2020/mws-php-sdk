@@ -19,9 +19,9 @@ class GetServiceStatusResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'GetServiceStatusResult'),
-            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\GetServiceStatusResult'),
+            'ResponseMetadata'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

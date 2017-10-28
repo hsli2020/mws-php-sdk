@@ -19,9 +19,9 @@ class GetMyPriceForASINResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'GetMyPriceForASINResult' => array('FieldValue' => array(), 'FieldType' => array('GetMyPriceForASINResult')),
-            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'GetMyPriceForASINResult' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\GetMyPriceForASINResult')),
+            'ResponseMetadata'        => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'  => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

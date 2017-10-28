@@ -19,9 +19,9 @@ class ListInboundShipmentItemsResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ListInboundShipmentItemsResult' => array('FieldValue' => null, 'FieldType' => 'ListInboundShipmentItemsResult'),
-            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'         => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'ListInboundShipmentItemsResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ListInboundShipmentItemsResult'),
+            'ResponseMetadata'               => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'         => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

@@ -32,7 +32,7 @@ class CancelFeedSubmissionsResult extends Model
     {
         $this->fields = array (
             'Count'              => array('FieldValue' => null, 'FieldType' => 'int'),
-            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
+            'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }

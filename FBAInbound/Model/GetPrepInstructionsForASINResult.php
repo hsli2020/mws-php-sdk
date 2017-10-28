@@ -18,8 +18,8 @@ class GetPrepInstructionsForASINResult extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'ASINPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => 'ASINPrepInstructionsList'),
-            'InvalidASINList'          => array('FieldValue' => null, 'FieldType' => 'InvalidASINList'),
+            'ASINPrepInstructionsList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ASINPrepInstructionsList'),
+            'InvalidASINList'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\InvalidASINList'),
         );
         parent::__construct($data);
     }

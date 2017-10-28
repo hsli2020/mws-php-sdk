@@ -19,9 +19,9 @@ class CreateInboundShipmentPlanResponse extends Model
     public function __construct($data = null)
     {
         $this->_fields = array (
-            'CreateInboundShipmentPlanResult' => array('FieldValue' => null, 'FieldType' => 'CreateInboundShipmentPlanResult'),
-            'ResponseMetadata'                => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
-            'ResponseHeaderMetadata'          => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
+            'CreateInboundShipmentPlanResult' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CreateInboundShipmentPlanResult'),
+            'ResponseMetadata'                => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseMetadata'),
+            'ResponseHeaderMetadata'          => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\ResponseHeaderMetadata'),
         );
         parent::__construct($data);
     }

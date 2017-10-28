@@ -38,16 +38,16 @@ class FulfillmentOrder extends Model
             'DisplayableOrderDateTime' => array('FieldValue' => null, 'FieldType' => 'string'),
             'DisplayableOrderComment'  => array('FieldValue' => null, 'FieldType' => 'string'),
             'ShippingSpeedCategory'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'DeliveryWindow'           => array('FieldValue' => null, 'FieldType' => 'DeliveryWindow'),
-            'DestinationAddress'       => array('FieldValue' => null, 'FieldType' => 'Address'),
+            'DeliveryWindow'           => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\DeliveryWindow'),
+            'DestinationAddress'       => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Address'),
             'FulfillmentAction'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentPolicy'        => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentMethod'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'CODSettings'              => array('FieldValue' => null, 'FieldType' => 'CODSettings'),
+            'CODSettings'              => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\CODSettings'),
             'ReceivedDateTime'         => array('FieldValue' => null, 'FieldType' => 'string'),
             'FulfillmentOrderStatus'   => array('FieldValue' => null, 'FieldType' => 'string'),
             'StatusUpdatedDateTime'    => array('FieldValue' => null, 'FieldType' => 'string'),
-            'NotificationEmailList'    => array('FieldValue' => null, 'FieldType' => 'NotificationEmailList'),
+            'NotificationEmailList'    => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\NotificationEmailList'),
         );
         parent::__construct($data);
     }

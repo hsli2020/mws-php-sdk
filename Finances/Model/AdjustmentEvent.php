@@ -20,8 +20,8 @@ class AdjustmentEvent extends Model
     {
         $this->_fields = array (
             'AdjustmentType'     => array('FieldValue' => null, 'FieldType' => 'string'),
-            'AdjustmentAmount'   => array('FieldValue' => null, 'FieldType' => 'Currency'),
-            'AdjustmentItemList' => array('FieldValue' => array(), 'FieldType' => array('AdjustmentItem'), 'ListMemberName' => 'AdjustmentItem'),
+            'AdjustmentAmount'   => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\Currency'),
+            'AdjustmentItemList' => array('FieldValue' => array(), 'FieldType' => array(__NAMESPACE__.'\\AdjustmentItem'), 'ListMemberName' => 'AdjustmentItem'),
         );
         parent::__construct($data);
     }

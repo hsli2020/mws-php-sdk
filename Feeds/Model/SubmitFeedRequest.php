@@ -49,12 +49,12 @@ class SubmitFeedRequest extends Model
             'Marketplace'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'Merchant'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'MWSAuthToken'      => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => __NAMESPACE__.'\\IdList'),
             'FeedContent'       => array('FieldValue' => null, 'FieldType' => 'string'),
             'FeedType'          => array('FieldValue' => null, 'FieldType' => 'string'),
             'PurgeAndReplace'   => array('FieldValue' => null, 'FieldType' => 'bool'),
             'ContentMd5'        => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ContentType'       => array('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'ContentType')
+            'ContentType'       => array('FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => __NAMESPACE__.'\\ContentType')
         );
 
         parent::__construct($data);

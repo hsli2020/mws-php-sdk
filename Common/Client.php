@@ -208,10 +208,10 @@ abstract class Client
                 throw $this->_reportAnyErrors($response['ResponseBody'],
                     $status, $response['ResponseHeaderMetadata']);
             }
-        } catch (Exception $se) {
+        } catch (Exception $se) { // Amazon\MWS\Common\Exception
             throw $se;
-        } catch (Exception $t) {
-            throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+        } catch (\Exception $t) {
+            throw new \Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
 
@@ -237,7 +237,7 @@ abstract class Client
             $exProps["Message"] = "Internal Error";
         }
 
-        return new Exception($exProps);
+        return new Exception($exProps); // Amazon\MWS\Common\Exception
     }
 
     /**

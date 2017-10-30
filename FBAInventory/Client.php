@@ -210,66 +210,7 @@ class Client extends BaseClient implements FBAInventoryInterface
     // Private API ------------------------------------------------------------//
 
     /**
-     * Invoke request and return response
-     */
-    private function _invoke(array $parameters)
-    {
-        try {
-            if (empty($this->_config['ServiceURL'])) {
-                throw new FBAInventoryException(
-                    array ('ErrorCode' => 'InvalidServiceURL',
-                           'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
-            }
-            $parameters = $this->_addRequiredParameters($parameters);
-            $retries = 0;
-            for (;;) {
-                $response = $this->_httpPost($parameters);
-                $status = $response['Status'];
-                if ($status == 200) {
-                    return array('ResponseBody' => $response['ResponseBody'],
-                      'ResponseHeaderMetadata' => $response['ResponseHeaderMetadata']);
-                }
-                if ($status == 500 && $this->_pauseOnRetry(++$retries)) {
-                    continue;
-                }
-                throw $this->_reportAnyErrors($response['ResponseBody'],
-                    $status, $response['ResponseHeaderMetadata']);
-            }
-        } catch (Exception $se) {
-            throw $se;
-        } catch (Exception $t) {
-            throw new FBAInventoryException(array('Exception' => $t, 'Message' => $t->getMessage()));
-        }
-    }
-
-    /**
-     * Look for additional error strings in the response and return formatted exception
-     */
-    private function _reportAnyErrors($responseBody, $status, $responseHeaderMetadata, Exception $e =  null)
-    {
-        $exProps = array();
-        $exProps["StatusCode"] = $status;
-        $exProps["ResponseHeaderMetadata"] = $responseHeaderMetadata;
-
-        libxml_use_internal_errors(true);  // Silence XML parsing errors
-        $xmlBody = simplexml_load_string($responseBody);
-
-        if ($xmlBody !== false) {  // Check XML loaded without errors
-            $exProps["XML"] = $responseBody;
-            $exProps["ErrorCode"] = $xmlBody->Error->Code;
-            $exProps["Message"] = $xmlBody->Error->Message;
-            $exProps["ErrorType"] = !empty($xmlBody->Error->Type) ? $xmlBody->Error->Type : "Unknown";
-            $exProps["RequestId"] = !empty($xmlBody->RequestID) ? $xmlBody->RequestID : $xmlBody->RequestId; // 'd' in RequestId is sometimes capitalized
-        } else { // We got bad XML in response, just throw a generic exception
-            $exProps["Message"] = "Internal Error";
-        }
-
-        return new FBAInventoryException($exProps);
-    }
-
-    /**
      * Perform HTTP post with exponential retries on error 500 and 503
-     *
      */
     private function _httpPost(array $parameters)
     {

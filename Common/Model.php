@@ -277,7 +277,7 @@ abstract class Model
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
-            if (!is_null($fieldValue) && $field['FieldType'] != "ResponseHeaderMetadata") {
+            if (!is_null($fieldValue) && basename($field['FieldType']) != "ResponseHeaderMetadata") {
                 $fieldType = $field['FieldType'];
                 if (is_array($fieldType)) {
                     if ($fieldType[0] == "object") {

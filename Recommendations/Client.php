@@ -23,26 +23,6 @@ class Client extends BaseClient implements RecommendationsInterface
     const SERVICE_VERSION    = '2013-04-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array (
-            'ServiceURL'       => null,
-            'UserAgent'        => 'MWSRecommendationsSectionService PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Get Last Updated Time For Recommendations
      * Retrieving last updated time for all recommendation categories for the given marketplace and seller.

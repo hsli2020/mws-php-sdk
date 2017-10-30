@@ -50,23 +50,6 @@ class Client extends BaseClient implements ReportsInterface
     const SERVICE_VERSION    = '2009-01-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
-    /** @var string */
-    private  $awsAccessKeyId = null;
-
-    /** @var string */
-    private  $awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $config = array(
-        'ServiceURL'       => null,
-        'UserAgent'        => 'PHP Client Library/2015-06-18 (Language=PHP5)',
-        'SignatureVersion' => 2,
-        'SignatureMethod'  => 'HmacSHA256',
-        'ProxyHost'        => null,
-        'ProxyPort'        => -1,
-        'MaxErrorRetry'    => 3,
-    );
-
     private $defaultHeaders = array();
 
     private $responseBodyContents;

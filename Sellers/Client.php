@@ -21,26 +21,6 @@ class Client extends BaseClient implements SellersInterface
     const SERVICE_VERSION    = '2011-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'MarketplaceWebServiceSellers PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Get Service Status
      * Returns the service status of a particular MWS API section. The operation

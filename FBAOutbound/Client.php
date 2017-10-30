@@ -33,26 +33,6 @@ class Client extends BaseClient implements FBAOutboundInterface
     const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2016-02-01';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'FBAOutboundServiceMWS PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Cancel Fulfillment Order
      * Request for Amazon to no longer attempt to fulfill an existing

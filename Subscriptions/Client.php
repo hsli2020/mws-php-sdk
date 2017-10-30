@@ -35,26 +35,6 @@ class Client extends BaseClient implements SubscriptionsInterface
     const SERVICE_VERSION    = '2013-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'MWSSubscriptionsService PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Create Subscription
      * Create a new subscription.

@@ -21,26 +21,6 @@ class Client extends BaseClient implements FBAInventoryInterface
     const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2014-09-30';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'FBAInventoryServiceMWS PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Get Service Status
      * Gets the status of the service.

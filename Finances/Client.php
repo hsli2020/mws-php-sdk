@@ -25,26 +25,6 @@ class Client extends BaseClient implements FinancesInterface
     const SERVICE_VERSION    = '2015-05-01';
     const MWS_CLIENT_VERSION = '2015-09-03';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'MWSFinancesService PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * List Financial Event Groups
      * ListFinancialEventGroups can be used to find financial event groups that meet filter criteria.

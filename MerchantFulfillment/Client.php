@@ -25,26 +25,6 @@ class Client extends BaseClient implements MerchantFulfillmentInterface
     const SERVICE_VERSION    = '2015-06-01';
     const MWS_CLIENT_VERSION = '2016-03-30';
 
-    /** @var string */
-    private  $_awsAccessKeyId = null;
-
-    /** @var string */
-    private  $_awsSecretAccessKey = null;
-
-    /** @var array */
-    private  $_config = array(
-            'ServiceURL'       => null,
-            'UserAgent'        => 'MWSMerchantFulfillmentService PHP5 Library',
-            'SignatureVersion' => 2,
-            'SignatureMethod'  => 'HmacSHA256',
-            'ProxyHost'        => null,
-            'ProxyPort'        => -1,
-            'ProxyUsername'    => null,
-            'ProxyPassword'    => null,
-            'MaxErrorRetry'    => 3,
-            'Headers'          => array()
-        );
-
     /**
      * Cancel Shipment
      * Cancels an existing shipment.  This will only succeed if the cancellation window has not passed and if the shipment

@@ -365,7 +365,7 @@ abstract class Model
      * Escape special XML characters
      * @return string with escaped XML characters
      */
-    private function _escapeXML($str)
+    protected function _escapeXML($str)
     {
         $from = array( "&", "<", ">", "'", "\"");
         $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
@@ -377,7 +377,7 @@ abstract class Model
      *
      * @param string $fieldType field type name
      */
-    private function _isComplexType($fieldType)
+    protected function _isComplexType($fieldType)
     {
         return preg_match("/^Amazon\\MWS\\/", $fieldType);
     }
@@ -388,7 +388,7 @@ abstract class Model
     * @param mixed $var
     * @return TRUE if passed variable is an associative array
     */
-    private function _isAssociativeArray($var)
+    protected function _isAssociativeArray($var)
     {
         return is_array($var) && array_keys($var) !== range(0, sizeof($var) - 1);
     }
@@ -399,7 +399,7 @@ abstract class Model
     * @param mixed $var
     * @return TRUE if passed variable is DOMElement
     */
-    private function _isDOMElement($var)
+    protected function _isDOMElement($var)
     {
         return $var instanceof DOMElement;
     }

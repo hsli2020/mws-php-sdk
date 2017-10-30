@@ -445,7 +445,7 @@ class Client extends BaseClient implements ReportsInterface
             }
 
             /* Add required request parameters */
-            $parameters = $this->addRequiredParameters($parameters);
+            $parameters = $this->_addRequiredParameters($parameters);
             $converted[CONVERTED_PARAMETERS_KEY] = $parameters;
 
             $shouldRetry = false;
@@ -470,7 +470,7 @@ class Client extends BaseClient implements ReportsInterface
                             ? false : true;
 
                         if ($shouldRetry && $retries <= $this->config['MaxErrorRetry']) {
-                            $this->pauseOnRetry(++$retries);
+                            $this->_pauseOnRetry(++$retries);
                         } else {
                             throw $this->reportAnyErrors($response['ResponseBody'], $response['Status'], $response['ResponseHeaderMetadata']);
                         }
@@ -789,89 +789,6 @@ class Client extends BaseClient implements ReportsInterface
     }
 
     /**
-     * Exponential sleep on failed request
-     * @param retries current retry
-     */
-    private function pauseOnRetry($retries)
-    {
-        $delay = (int) (pow(4, $retries) * 100000) ;
-        usleep($delay);
-    }
-
-    /**
-     * Add authentication related and version parameters
-     */
-    private function addRequiredParameters(array $parameters)
-    {
-        $parameters['AWSAccessKeyId'] = $this->awsAccessKeyId;
-        $parameters['Timestamp'] = $this->getFormattedTimestamp(new DateTime('now', new DateTimeZone('UTC')));
-        $parameters['Version'] = self::SERVICE_VERSION;
-        $parameters['SignatureVersion'] = $this->config['SignatureVersion'];
-        if ($parameters['SignatureVersion'] > 1) {
-            $parameters['SignatureMethod'] = $this->config['SignatureMethod'];
-        }
-        $parameters['Signature'] = $this->signParameters($parameters, $this->awsSecretAccessKey);
-
-        return $parameters;
-    }
-
-    /**
-     * Convert paremeters to Url encoded query string
-     */
-    private function getParametersAsString(array $parameters)
-    {
-        $queryParameters = array();
-        foreach ($parameters as $key => $value) {
-            $queryParameters[] = $key . '=' . $this->urlencode($value);
-        }
-        return implode('&', $queryParameters);
-    }
-
-    /**
-     * Computes RFC 2104-compliant HMAC signature for request parameters
-     * Implements AWS Signature, as per following spec:
-     *
-     * Signature Version 0: This is not supported in the Marketplace Web Service.
-     *
-     * Signature Version 1: This is not supported in the Marketplace Web Service.
-     *
-     * Signature Version is 2, string to sign is based on following:
-     *
-     *    1. The HTTP Request Method followed by an ASCII newline (%0A)
-     *    2. The HTTP Host header in the form of lowercase host, followed by an ASCII newline.
-     *    3. The URL encoded HTTP absolute path component of the URI
-     *       (up to but not including the query string parameters);
-     *       if this is empty use a forward '/'. This parameter is followed by an ASCII newline.
-     *    4. The concatenation of all query string components (names and values)
-     *       as UTF-8 characters which are URL encoded as per RFC 3986
-     *       (hex characters MUST be uppercase), sorted using lexicographic byte ordering.
-     *       Parameter names are separated from their values by the '=' character
-     *       (ASCII character 61), even if the value is empty.
-     *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
-     *
-     */
-    private function signParameters(array $parameters, $key)
-    {
-        $signatureVersion = $parameters['SignatureVersion'];
-        $algorithm = "HmacSHA1";
-        $stringToSign = null;
-        if (0 === $signatureVersion) {
-            throw new InvalidArgumentException(
-                'Signature Version 0 is no longer supported. Only Signature Version 2 is supported.');
-        } else if (1 === $signatureVersion) {
-            throw new InvalidArgumentException(
-                'Signature Version 1 is no longer supported. Only Signature Version 2 is supported.');
-        } else if (2 === $signatureVersion) {
-            $algorithm = $this->config['SignatureMethod'];
-            $parameters['SignatureMethod'] = $algorithm;
-            $stringToSign = $this->calculateStringToSignV2($parameters);
-        } else {
-            throw new Exception("Invalid Signature Version specified");
-        }
-        return $this->sign($stringToSign, $key, $algorithm);
-    }
-
-    /**
      * Calculate String to Sign for SignatureVersion 2
      * @param array $parameters request parameters
      * @return String to Sign
@@ -893,35 +810,13 @@ class Client extends BaseClient implements ReportsInterface
         } else {
             $uri = "/";
         }
-        $uriencoded = implode("/", array_map(array($this, "urlencode"), explode("/", $uri)));
+        $uriencoded = implode("/", array_map(array($this, "_urlencode"), explode("/", $uri)));
         $data .= $uriencoded;
         $data .= "\n";
         uksort($parameters, 'strcmp');
-        $data .= $this->getParametersAsString($parameters);
+        $data .= $this->_getParametersAsString($parameters);
 
         return $data;
-    }
-
-    private function urlencode($value)
-    {
-        return str_replace('%7E', '~', rawurlencode($value));
-    }
-
-    /**
-     * Computes RFC 2104-compliant HMAC signature
-     */
-    private function sign($data, $key, $algorithm)
-    {
-        if ($algorithm === 'HmacSHA1') {
-            $hash = 'sha1';
-        } else if ($algorithm === 'HmacSHA256') {
-            $hash = 'sha256';
-        } else {
-            throw new Exception ("Non-supported signing method specified");
-        }
-        return base64_encode(
-            hash_hmac($hash, $data, $key, true)
-        );
     }
 
     /**

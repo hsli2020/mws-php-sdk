@@ -1,30 +1,12 @@
 <?php
 
-namespace Amazon\MWS\Orders;
-
-use Amazon\MWS\Orders\Exception as OrdersException;
-use Amazon\MWS\Orders\Model\GetOrderRequest;
-use Amazon\MWS\Orders\Model\GetOrderResponse;
-use Amazon\MWS\Orders\Model\GetServiceStatusRequest;
-use Amazon\MWS\Orders\Model\GetServiceStatusResponse;
-use Amazon\MWS\Orders\Model\ListOrderItemsByNextTokenRequest;
-use Amazon\MWS\Orders\Model\ListOrderItemsByNextTokenResponse;
-use Amazon\MWS\Orders\Model\ListOrderItemsRequest;
-use Amazon\MWS\Orders\Model\ListOrderItemsResponse;
-use Amazon\MWS\Orders\Model\ListOrdersByNextTokenRequest;
-use Amazon\MWS\Orders\Model\ListOrdersByNextTokenResponse;
-use Amazon\MWS\Orders\Model\ListOrdersRequest;
-use Amazon\MWS\Orders\Model\ListOrdersResponse;
-use Amazon\MWS\Orders\Model\ResponseHeaderMetadata;
+namespace Amazon\MWS\Common;
 
 /**
- * Orders\Client is an implementation of MarketplaceWebServiceOrders
+ * Client - base class for all client classes
  */
-class Client implements OrdersInterface
+abstract class Client
 {
-    const SERVICE_VERSION    = '2013-09-01';
-    const MWS_CLIENT_VERSION = '2015-09-24';
-
     /** @var string */
     private  $_awsAccessKeyId = null;
 
@@ -34,7 +16,7 @@ class Client implements OrdersInterface
     /** @var array */
     private  $_config = array(
             'ServiceURL'       => null,
-            'UserAgent'        => 'MarketplaceWebServiceOrders PHP5 Library',
+            'UserAgent'        => 'FBAInboundServiceMWS PHP5 Library',
             'SignatureVersion' => 2,
             'SignatureMethod'  => 'HmacSHA256',
             'ProxyHost'        => null,
@@ -44,306 +26,6 @@ class Client implements OrdersInterface
             'MaxErrorRetry'    => 3,
             'Headers'          => array()
         );
-
-    /**
-     * Get Order
-     * This operation takes up to 50 order ids and returns the corresponding orders.
-     *
-     * @param mixed $request array of parameters for GetOrder request or GetOrder object itself
-     * @see GetOrderRequest
-     * @return GetOrderResponse
-     *
-     * @throws Exception
-     */
-    public function getOrder($request)
-    {
-        if (!($request instanceof GetOrderRequest)) {
-            $request = new GetOrderRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'GetOrder';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = GetOrderResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert GetOrderRequest to name value pairs
-     */
-    private function _convertGetOrder($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetOrder';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-        if ($request->isSetAmazonOrderId()) {
-            $parameters['AmazonOrderId'] =  $request->getAmazonOrderId();
-        }
-
-        return $parameters;
-    }
-
-    /**
-     * Get Service Status
-     * Returns the service status of a particular MWS API section. The operation
-     * 		takes no input.
-     *
-     * @param mixed $request array of parameters for GetServiceStatus request or GetServiceStatus object itself
-     * @see GetServiceStatusRequest
-     * @return GetServiceStatusResponse
-     *
-     * @throws Exception
-     */
-    public function getServiceStatus($request)
-    {
-        if (!($request instanceof GetServiceStatusRequest)) {
-            $request = new GetServiceStatusRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'GetServiceStatus';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert GetServiceStatusRequest to name value pairs
-     */
-    private function _convertGetServiceStatus($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetServiceStatus';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-
-        return $parameters;
-    }
-
-    /**
-     * List Order Items
-     * This operation can be used to list the items of the order indicated by the
-     *         given order id (only a single Amazon order id is allowed).
-     *
-     * @param mixed $request array of parameters for ListOrderItems request or ListOrderItems object itself
-     * @see ListOrderItemsRequest
-     * @return ListOrderItemsResponse
-     *
-     * @throws Exception
-     */
-    public function listOrderItems($request)
-    {
-        if (!($request instanceof ListOrderItemsRequest)) {
-            $request = new ListOrderItemsRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'ListOrderItems';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert ListOrderItemsRequest to name value pairs
-     */
-    private function _convertListOrderItems($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'ListOrderItems';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-        if ($request->isSetAmazonOrderId()) {
-            $parameters['AmazonOrderId'] =  $request->getAmazonOrderId();
-        }
-
-        return $parameters;
-    }
-
-    /**
-     * List Order Items By Next Token
-     * If ListOrderItems cannot return all the order items in one go, it will
-     *         provide a nextToken. That nextToken can be used with this operation to
-     *         retrive the next batch of items for that order.
-     *
-     * @param mixed $request array of parameters for ListOrderItemsByNextToken request or ListOrderItemsByNextToken object itself
-     * @see ListOrderItemsByNextTokenRequest
-     * @return ListOrderItemsByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function listOrderItemsByNextToken($request)
-    {
-        if (!($request instanceof ListOrderItemsByNextTokenRequest)) {
-            $request = new ListOrderItemsByNextTokenRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'ListOrderItemsByNextToken';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert ListOrderItemsByNextTokenRequest to name value pairs
-     */
-    private function _convertListOrderItemsByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'ListOrderItemsByNextToken';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-
-        return $parameters;
-    }
-
-    /**
-     * List Orders
-     * ListOrders can be used to find orders that meet the specified criteria.
-     *
-     * @param mixed $request array of parameters for ListOrders request or ListOrders object itself
-     * @see ListOrdersRequest
-     * @return ListOrdersResponse
-     *
-     * @throws Exception
-     */
-    public function listOrders($request)
-    {
-        if (!($request instanceof ListOrdersRequest)) {
-            $request = new ListOrdersRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'ListOrders';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert ListOrdersRequest to name value pairs
-     */
-    private function _convertListOrders($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'ListOrders';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-        if ($request->isSetCreatedAfter()) {
-            $parameters['CreatedAfter'] =  $request->getCreatedAfter();
-        }
-        if ($request->isSetCreatedBefore()) {
-            $parameters['CreatedBefore'] =  $request->getCreatedBefore();
-        }
-        if ($request->isSetLastUpdatedAfter()) {
-            $parameters['LastUpdatedAfter'] =  $request->getLastUpdatedAfter();
-        }
-        if ($request->isSetLastUpdatedBefore()) {
-            $parameters['LastUpdatedBefore'] =  $request->getLastUpdatedBefore();
-        }
-        if ($request->isSetOrderStatus()) {
-            $parameters['OrderStatus'] =  $request->getOrderStatus();
-        }
-        if ($request->isSetMarketplaceId()) {
-            $parameters['MarketplaceId'] =  $request->getMarketplaceId();
-        }
-        if ($request->isSetFulfillmentChannel()) {
-            $parameters['FulfillmentChannel'] =  $request->getFulfillmentChannel();
-        }
-        if ($request->isSetPaymentMethod()) {
-            $parameters['PaymentMethod'] =  $request->getPaymentMethod();
-        }
-        if ($request->isSetBuyerEmail()) {
-            $parameters['BuyerEmail'] =  $request->getBuyerEmail();
-        }
-        if ($request->isSetSellerOrderId()) {
-            $parameters['SellerOrderId'] =  $request->getSellerOrderId();
-        }
-        if ($request->isSetMaxResultsPerPage()) {
-            $parameters['MaxResultsPerPage'] =  $request->getMaxResultsPerPage();
-        }
-        if ($request->isSetTFMShipmentStatus()) {
-            $parameters['TFMShipmentStatus'] =  $request->getTFMShipmentStatus();
-        }
-
-        return $parameters;
-    }
-
-    /**
-     * List Orders By Next Token
-     * If ListOrders returns a nextToken, thus indicating that there are more orders
-     *         than returned that matched the given filter criteria, ListOrdersByNextToken
-     *         can be used to retrieve those other orders using that nextToken.
-     *
-     * @param mixed $request array of parameters for ListOrdersByNextToken request or ListOrdersByNextToken object itself
-     * @see ListOrdersByNextTokenRequest
-     * @return ListOrdersByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function listOrdersByNextToken($request)
-    {
-        if (!($request instanceof ListOrdersByNextTokenRequest)) {
-            $request = new ListOrdersByNextTokenRequest($request);
-        }
-        $parameters = $request->toQueryParameterArray();
-        $parameters['Action'] = 'ListOrdersByNextToken';
-        $httpResponse = $this->_invoke($parameters);
-
-        $response = ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Convert ListOrdersByNextTokenRequest to name value pairs
-     */
-    private function _convertListOrdersByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'ListOrdersByNextToken';
-        if ($request->isSetSellerId()) {
-            $parameters['SellerId'] =  $request->getSellerId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-
-        return $parameters;
-    }
 
     /**
      * Construct new Client
@@ -388,7 +70,7 @@ class Client implements OrdersInterface
 
     private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
     {
-        if (is_null($applicationName) || $applicationName === "") {
+        if (is_null($applicationName) || $applicationName === ""){
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
 
@@ -406,7 +88,7 @@ class Client implements OrdersInterface
         $userAgent .= '; ';
         $userAgent .= 'Platform=' . php_uname('s') . '/' . php_uname('m') . '/' . php_uname('r');
         $userAgent .= '; ';
-        $userAgent .= 'MWSClientVersion=' . self::MWS_CLIENT_VERSION;
+        $userAgent .= 'MWSClientVersion=' . static::MWS_CLIENT_VERSION;
 
         foreach ($attributes as $key => $value) {
             if (empty($value)) {
@@ -585,7 +267,7 @@ class Client implements OrdersInterface
         $allHeaders['Content-Type'] = "application/x-www-form-urlencoded; charset=utf-8"; // We need to make sure to set utf-8 encoding here
         $allHeaders['Expect'] = null; // Don't expect 100 Continue
         $allHeadersStr = array();
-        foreach($allHeaders as $name => $val) {
+        foreach ($allHeaders as $name => $val) {
             $str = $name . ": ";
             if (isset($val)) {
                 $str = $str . $val;
@@ -656,7 +338,6 @@ class Client implements OrdersInterface
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
             if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)){
-
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -732,12 +413,12 @@ class Client implements OrdersInterface
         }
 
         return new ResponseHeaderMetadata(
-          $headers['x-mws-request-id'],
-          $headers['x-mws-response-context'],
-          $headers['x-mws-timestamp'],
-          $headers['x-mws-quota-max'],
-          $headers['x-mws-quota-remaining'],
-          $headers['x-mws-quota-resetsOn']);
+            $headers['x-mws-request-id'],
+            $headers['x-mws-response-context'],
+            $headers['x-mws-timestamp'],
+            $headers['x-mws-quota-max'],
+            $headers['x-mws-quota-remaining'],
+            $headers['x-mws-quota-resetsOn']);
     }
 
     /**
@@ -772,7 +453,7 @@ class Client implements OrdersInterface
     {
         $parameters['AWSAccessKeyId'] = $this->_awsAccessKeyId;
         $parameters['Timestamp'] = $this->_getFormattedTimestamp();
-        $parameters['Version'] = self::SERVICE_VERSION;
+        $parameters['Version'] = static::SERVICE_VERSION;
         $parameters['SignatureVersion'] = $this->_config['SignatureVersion'];
         if ($parameters['SignatureVersion'] > 1) {
             $parameters['SignatureMethod'] = $this->_config['SignatureMethod'];
@@ -794,4 +475,108 @@ class Client implements OrdersInterface
         return implode('&', $queryParameters);
     }
 
+    /**
+     * Computes RFC 2104-compliant HMAC signature for request parameters
+     * Implements AWS Signature, as per following spec:
+     *
+     * If Signature Version is 0, it signs concatenated Action and Timestamp
+     *
+     * If Signature Version is 1, it performs the following:
+     *
+     * Sorts all  parameters (including SignatureVersion and excluding Signature,
+     * the value of which is being created), ignoring case.
+     *
+     * Iterate over the sorted list and append the parameter name (in original case)
+     * and then its value. It will not URL-encode the parameter values before
+     * constructing this string. There are no separators.
+     *
+     * If Signature Version is 2, string to sign is based on following:
+     *
+     *    1. The HTTP Request Method followed by an ASCII newline (%0A)
+     *    2. The HTTP Host header in the form of lowercase host, followed by an ASCII newline.
+     *    3. The URL encoded HTTP absolute path component of the URI
+     *       (up to but not including the query string parameters);
+     *       if this is empty use a forward '/'. This parameter is followed by an ASCII newline.
+     *    4. The concatenation of all query string components (names and values)
+     *       as UTF-8 characters which are URL encoded as per RFC 3986
+     *       (hex characters MUST be uppercase), sorted using lexicographic byte ordering.
+     *       Parameter names are separated from their values by the '=' character
+     *       (ASCII character 61), even if the value is empty.
+     *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
+     *
+     */
+    private function _signParameters(array $parameters, $key)
+    {
+        $signatureVersion = $parameters['SignatureVersion'];
+        $algorithm = "HmacSHA1";
+        $stringToSign = null;
+        if (2 == $signatureVersion) {
+            $algorithm = $this->_config['SignatureMethod'];
+            $parameters['SignatureMethod'] = $algorithm;
+            $stringToSign = $this->_calculateStringToSignV2($parameters);
+        } else {
+            throw new Exception("Invalid Signature Version specified");
+        }
+        return $this->_sign($stringToSign, $key, $algorithm);
+    }
+
+    /**
+     * Calculate String to Sign for SignatureVersion 2
+     * @param array $parameters request parameters
+     * @return String to Sign
+     */
+    private function _calculateStringToSignV2(array $parameters)
+    {
+        $data = 'POST';
+        $data .= "\n";
+        $endpoint = parse_url ($this->_config['ServiceURL']);
+        $data .= $endpoint['host'];
+        $data .= "\n";
+        $uri = array_key_exists('path', $endpoint) ? $endpoint['path'] : null;
+        if (!isset ($uri)) {
+            $uri = "/";
+        }
+        $uriencoded = implode("/", array_map(array($this, "_urlencode"), explode("/", $uri)));
+        $data .= $uriencoded;
+        $data .= "\n";
+        uksort($parameters, 'strcmp');
+        $data .= $this->_getParametersAsString($parameters);
+        return $data;
+    }
+
+    private function _urlencode($value)
+    {
+        return str_replace('%7E', '~', rawurlencode($value));
+    }
+
+    /**
+     * Computes RFC 2104-compliant HMAC signature.
+     */
+    private function _sign($data, $key, $algorithm)
+    {
+        if ($algorithm === 'HmacSHA1') {
+            $hash = 'sha1';
+        } else if ($algorithm === 'HmacSHA256') {
+            $hash = 'sha256';
+        } else {
+            throw new Exception ("Non-supported signing method specified");
+        }
+        return base64_encode(hash_hmac($hash, $data, $key, true));
+    }
+
+    /**
+     * Formats date as ISO 8601 timestamp
+     */
+    private function _getFormattedTimestamp()
+    {
+        return gmdate("Y-m-d\TH:i:s.\\0\\0\\0\\Z", time());
+    }
+
+    /**
+     * Formats date as ISO 8601 timestamp
+     */
+    private function getFormattedTimestamp($dateTime)
+    {
+        return $dateTime->format(DATE_ISO8601);
+    }
 }

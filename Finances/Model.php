@@ -11,64 +11,6 @@ abstract class Model extends BaseModel
 {
 
     /**
-    * Convert to query parameters suitable for POSTing.
-    * @return array of query parameters
-    */
-    public function toQueryParameterArray()
-    {
-        return $this->_toQueryParameterArray("");
-    }
-
-    protected function _toQueryParameterArray($prefix)
-    {
-        $arr = array();
-        foreach($this->_fields as $fieldName => $fieldAttrs) {
-            $fieldType = $fieldAttrs['FieldType'];
-            $fieldValue = $fieldAttrs['FieldValue'];
-            $newPrefix = $prefix . $fieldName . '.';
-            $currentArr = $this->__toQueryParameterArray($newPrefix, $fieldType, $fieldValue, $fieldAttrs);
-            $arr = array_merge($arr, $currentArr);
-        }
-        return $arr;
-    }
-
-    private function __toQueryParameterArray($prefix, $fieldType, $fieldValue, $fieldAttrs)
-    {
-        $arr = array();
-        if (is_array($fieldType)) {
-            if (isset($fieldAttrs['ListMemberName'])) {
-                $listMemberName = $fieldAttrs['ListMemberName'];
-                $itemPrefix = $prefix . $listMemberName . '.';
-            } else {
-                $itemPrefix = $prefix;
-            }
-
-            for ($i = 1; $i <= count($fieldValue); $i++) {
-                $indexedPrefix = $itemPrefix . $i . '.';
-                $memberType = $fieldType[0];
-                $arr = array_merge($arr,
-                    $this->__toQueryParameterArray($indexedPrefix,
-                    $memberType, $fieldValue[$i - 1], null));
-            }
-
-        } else if ($this->_isComplexType($fieldType)) {
-            // Struct
-            if (isset($fieldValue)) {
-                $arr = array_merge($arr, $fieldValue->_toQueryParameterArray($prefix));
-            }
-        } else {
-            // Primitive
-            if ($fieldValue!==null && $fieldValue!=="") {
-                if ($fieldType=='bool') {
-                    $fieldValue = ($fieldValue)?'true':'false';
-                }
-                $arr[rtrim($prefix, '.')] = $fieldValue;
-            }
-        }
-        return $arr;
-    }
-
-    /**
      * XML fragment representation of this object
      * Note, name of the root determined by caller
      * This fragment returns inner fields representation only

@@ -209,9 +209,9 @@ abstract class Model
     }
 
     /**
-    * Convert to query parameters suitable for POSTing.
-    * @return array of query parameters
-    */
+     * Convert to query parameters suitable for POSTing.
+     * @return array of query parameters
+     */
     public function toQueryParameterArray()
     {
         return $this->_toQueryParameterArray("");

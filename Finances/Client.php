@@ -625,39 +625,4 @@ class Client extends BaseClient implements FinancesInterface
                 1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
     }
 
-    /**
-    *  extract a ResponseHeaderMetadata object from the raw headers
-    */
-    private function _extractResponseHeaderMetadata($rawHeaders)
-    {
-        $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
-        $headers = array();
-        $headers['x-mws-request-id'] = null;
-        $headers['x-mws-response-context'] = null;
-        $headers['x-mws-timestamp'] = null;
-        $headers['x-mws-quota-max'] = null;
-        $headers['x-mws-quota-remaining'] = null;
-        $headers['x-mws-quota-resetsOn'] = null;
-
-        foreach ($inputHeaders as $currentHeader) {
-            $keyValue = explode (': ', $currentHeader);
-            if (isset($keyValue[1])) {
-                list ($key, $value) = $keyValue;
-                if (isset($headers[$key]) && $headers[$key]!==null) {
-                    $headers[$key] = $headers[$key] . "," . $value;
-                } else {
-                    $headers[$key] = $value;
-                }
-            }
-        }
-
-        return new ResponseHeaderMetadata(
-          $headers['x-mws-request-id'],
-          $headers['x-mws-response-context'],
-          $headers['x-mws-timestamp'],
-          $headers['x-mws-quota-max'],
-          $headers['x-mws-quota-remaining'],
-          $headers['x-mws-quota-resetsOn']);
-    }
-
 }

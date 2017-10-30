@@ -46,7 +46,7 @@ abstract class Client
      * <li>MaxErrorRetry</li>
      * </ul>
      */
-    public function __construct($awsAccessKeyId, $awsSecretAccessKey, $applicationName, $applicationVersion, $config = null)
+    public function __construct($awsAccessKeyId, $awsSecretAccessKey, $applicationName, $applicationVersion, $config = null, $attributes = null)
     {
         iconv_set_encoding('output_encoding', 'UTF-8');
         iconv_set_encoding('input_encoding', 'UTF-8');
@@ -55,7 +55,7 @@ abstract class Client
         $this->_awsAccessKeyId = $awsAccessKeyId;
         $this->_awsSecretAccessKey = $awsSecretAccessKey;
         if (!is_null($config)) $this->_config = array_merge($this->_config, $config);
-        $this->setUserAgentHeader($applicationName, $applicationVersion);
+        $this->setUserAgentHeader($applicationName, $applicationVersion, $attributes);
     }
 
     private function setUserAgentHeader($applicationName, $applicationVersion, $attributes = null)

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Feeds;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Feeds\Exception as FeedsException;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsRequest;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsResponse;
@@ -54,7 +56,7 @@ define('CONVERTED_HEADERS_KEY',    'HEADERS');
  *
  * Feeds\Client is an implementation of MarketplaceWebService
  */
-class Client implements FeedsInterface
+class Client extends BaseClient implements FeedsInterface
 {
     const REQUEST_TYPE       = "POST";
     const SERVICE_VERSION    = '2009-01-01';

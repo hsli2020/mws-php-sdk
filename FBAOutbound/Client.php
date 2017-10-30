@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAOutbound;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\FBAOutbound\Exception as FBAOutboundException;
 use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderRequest;
 use Amazon\MWS\FBAOutbound\Model\CancelFulfillmentOrderResponse;
@@ -26,7 +28,7 @@ use Amazon\MWS\FBAOutbound\Model\UpdateFulfillmentOrderResponse;
 /**
  * Client is an implementation of FBAOutboundInterface
  */
-class Client implements FBAOutboundInterface
+class Client extends BaseClient implements FBAOutboundInterface
 {
     const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2016-02-01';

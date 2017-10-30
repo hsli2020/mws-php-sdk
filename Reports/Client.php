@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Reports;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Reports\Exception as ReportsException;
 use Amazon\MWS\Reports\Model\CancelFeedSubmissionsRequest;
 use Amazon\MWS\Reports\Model\CancelFeedSubmissionsResponse;
@@ -54,7 +56,7 @@ define('CONVERTED_HEADERS_KEY',    'HEADERS');
  *
  * MarketplaceWebService_Client is an implementation of MarketplaceWebService
  */
-class Client implements ReportsInterface
+class Client extends BaseClient implements ReportsInterface
 {
     const REQUEST_TYPE       = "POST";
     const SERVICE_VERSION    = '2009-01-01';

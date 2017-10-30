@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInbound;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\FBAInbound\Exception as FBAInboundException;
 use Amazon\MWS\FBAInbound\Model\ConfirmPreorderRequest;
 use Amazon\MWS\FBAInbound\Model\ConfirmPreorderResponse;
@@ -50,7 +52,7 @@ use Amazon\MWS\FBAInbound\Model\VoidTransportRequestResponse;
 /**
  * Client is an implementation of FBAInboundServiceMWS
  */
-class Client implements FBAInboundInterface
+class Client extends BaseClient implements FBAInboundInterface
 {
     const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2016-07-01';

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Products;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Products\Exception as ProductsException;
 use Amazon\MWS\Products\Model\GetCompetitivePricingForASINRequest;
 use Amazon\MWS\Products\Model\GetCompetitivePricingForASINResponse;
@@ -38,7 +40,7 @@ use Amazon\MWS\Products\Model\ResponseHeaderMetadata;
 /**
  * MarketplaceWebServiceProducts_Client is an implementation of MarketplaceWebServiceProducts
  */
-class Client implements ProductsInterface
+class Client extends BaseClient implements ProductsInterface
 {
     const SERVICE_VERSION    = '2011-10-01';
     const MWS_CLIENT_VERSION = '2016-06-01';

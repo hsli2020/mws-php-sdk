@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Orders;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Orders\Exception as OrdersException;
 use Amazon\MWS\Orders\Model\GetOrderRequest;
 use Amazon\MWS\Orders\Model\GetOrderResponse;
@@ -20,7 +22,7 @@ use Amazon\MWS\Orders\Model\ResponseHeaderMetadata;
 /**
  * Orders\Client is an implementation of MarketplaceWebServiceOrders
  */
-class Client implements OrdersInterface
+class Client extends BaseClient implements OrdersInterface
 {
     const SERVICE_VERSION    = '2013-09-01';
     const MWS_CLIENT_VERSION = '2015-09-24';

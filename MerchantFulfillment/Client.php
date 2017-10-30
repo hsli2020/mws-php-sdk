@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\MerchantFulfillment;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\MerchantFulfillment\Exception as MerchantFulfillmentException;
 use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentRequest;
 use Amazon\MWS\MerchantFulfillment\Model\CancelShipmentResponse;
@@ -18,7 +20,7 @@ use Amazon\MWS\MerchantFulfillment\Model\ResponseHeaderMetadata;
 /**
  * MerchantFulfillment\Client is an implementation of MerchantFulfillmentService
  */
-class Client implements MerchantFulfillmentInterface
+class Client extends BaseClient implements MerchantFulfillmentInterface
 {
     const SERVICE_VERSION    = '2015-06-01';
     const MWS_CLIENT_VERSION = '2016-03-30';

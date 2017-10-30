@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Subscriptions;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Subscriptions\Exception as SubscriptionsException;
 use Amazon\MWS\Subscriptions\Model\CreateSubscriptionInput;
 use Amazon\MWS\Subscriptions\Model\CreateSubscriptionResponse;
@@ -28,7 +30,7 @@ use Amazon\MWS\Subscriptions\Model\UpdateSubscriptionResponse;
 /**
  * Subscriptions\Client is an implementation of SubscriptionsInterface
  */
-class Client implements SubscriptionsInterface
+class Client extends BaseClient implements SubscriptionsInterface
 {
     const SERVICE_VERSION    = '2013-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';

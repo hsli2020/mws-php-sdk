@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Recommendations;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Recommendations\Exception as RecommendationsException;
 use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsRequest;
 use Amazon\MWS\Recommendations\Model\GetLastUpdatedTimeForRecommendationsResponse;
@@ -16,7 +18,7 @@ use Amazon\MWS\Recommendations\Model\ResponseHeaderMetadata;
 /**
  * Recommendations\Client is an implementation of RecommendationsSectionService
  */
-class Client implements RecommendationsInterface
+class Client extends BaseClient implements RecommendationsInterface
 {
     const SERVICE_VERSION    = '2013-04-01';
     const MWS_CLIENT_VERSION = '2015-06-18';

@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Finances;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Finances\Exception as FinancesException;
 use Amazon\MWS\Finances\Model\GetServiceStatusRequest;
 use Amazon\MWS\Finances\Model\GetServiceStatusResponse;
@@ -18,7 +20,7 @@ use Amazon\MWS\Finances\Model\ResponseHeaderMetadata;
 /**
  * MWSFinancesService_Client is an implementation of MWSFinancesService
  */
-class Client implements FinancesInterface
+class Client extends BaseClient implements FinancesInterface
 {
     const SERVICE_VERSION    = '2015-05-01';
     const MWS_CLIENT_VERSION = '2015-09-03';

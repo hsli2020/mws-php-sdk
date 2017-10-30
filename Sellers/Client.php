@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\Sellers;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\Sellers\Exception as SellersException;
 use Amazon\MWS\Sellers\Model\GetServiceStatusRequest;
 use Amazon\MWS\Sellers\Model\GetServiceStatusResponse;
@@ -14,7 +16,7 @@ use Amazon\MWS\Sellers\Model\ResponseHeaderMetadata;
 /**
  * MarketplaceWebServiceSellers_Client is an implementation of MarketplaceWebServiceSellers
  */
-class Client implements SellersInterface
+class Client extends BaseClient implements SellersInterface
 {
     const SERVICE_VERSION    = '2011-07-01';
     const MWS_CLIENT_VERSION = '2015-06-18';

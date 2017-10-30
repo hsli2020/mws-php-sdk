@@ -2,6 +2,8 @@
 
 namespace Amazon\MWS\FBAInventory;
 
+use Amazon\MWS\Client as BaseClient;
+
 use Amazon\MWS\FBAInventory\Exception as FBAInventoryException;
 use Amazon\MWS\FBAInventory\Model\GetServiceStatusRequest;
 use Amazon\MWS\FBAInventory\Model\GetServiceStatusResponse;
@@ -14,7 +16,7 @@ use Amazon\MWS\FBAInventory\Model\ResponseHeaderMetadata;
 /**
  * Client is an implementation of FBAInventoryInterface
  */
-class Client implements FBAInventoryInterface
+class Client extends BaseClient implements FBAInventoryInterface
 {
     const SERVICE_VERSION    = '2010-10-01';
     const MWS_CLIENT_VERSION = '2014-09-30';

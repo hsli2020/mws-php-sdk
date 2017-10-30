@@ -10,6 +10,9 @@
 :nmap K =%
 :nmap M yyo<esc>p0cwuse<esc>
 
+./Common/Client.php
+./Common/Model.php
+
 ./FBAInbound/Client.php
 ./FBAInbound/Model.php
 

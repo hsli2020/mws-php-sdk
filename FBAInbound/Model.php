@@ -2,10 +2,12 @@
 
 namespace Amazon\MWS\FBAInbound;
 
+use Amazon\MWS\Common\Model as BaseModel;
+
 /**
- * Model - base class for all model classes
+ * FBAInbound\Model - base class for all model classes
  */
-abstract class Model
+abstract class Model extends BaseModel
 {
     /** @var array */
     protected $_fields = array ();

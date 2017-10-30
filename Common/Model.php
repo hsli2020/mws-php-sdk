@@ -1,13 +1,11 @@
 <?php
 
-namespace Amazon\MWS\Products;
-
-use Amazon\MWS\Common\Model as BaseModel;
+namespace Amazon\MWS\Common;
 
 /**
- * Products\Model - base class for all model classes
+ * Model - base class for all model classes
  */
-abstract class Model extends BaseModel
+abstract class Model
 {
     /** @var array */
     protected $_fields = array ();
@@ -138,10 +136,14 @@ abstract class Model extends BaseModel
                             }
                         }
                     } else {
-                        $element = $xpath->query("./*[local-name()='$fieldName']/text()", $dom);
-                        if ($element->length == 1) {
-                            $this->_fields[$fieldName]['FieldValue'] = $element->item(0)->data;
-                        }
+                       if ($fieldType[0] == ".") {
+                           $element = $xpath->query("./text()", $dom);
+                       } else {
+                            $element = $xpath->query("./*[local-name()='$fieldName']/text()", $dom);
+                       }
+                       if ($element->length == 1) {
+                                $this->_fields[$fieldName]['FieldValue'] = $element->item(0)->data;
+                       }
                     }
 
                     $attribute = $xpath->query("./@$fieldName", $dom);
@@ -159,7 +161,6 @@ abstract class Model extends BaseModel
 
     /**
      * Construct from Associative Array
-     *
      *
      * @param array $array associative array to construct from
      */
@@ -208,9 +209,9 @@ abstract class Model extends BaseModel
     }
 
     /**
-     * Convert to query parameters suitable for POSTing.
-     * @return array of query parameters
-     */
+    * Convert to query parameters suitable for POSTing.
+    * @return array of query parameters
+    */
     public function toQueryParameterArray()
     {
         return $this->_toQueryParameterArray("");
@@ -219,7 +220,7 @@ abstract class Model extends BaseModel
     protected function _toQueryParameterArray($prefix)
     {
         $arr = array();
-        foreach($this->_fields as $fieldName => $fieldAttrs) {
+        foreach ($this->_fields as $fieldName => $fieldAttrs) {
             $fieldType = $fieldAttrs['FieldType'];
             $fieldValue = $fieldAttrs['FieldValue'];
             $newPrefix = $prefix . $fieldName . '.';
@@ -332,6 +333,8 @@ abstract class Model extends BaseModel
                         $xml .= ">";
                         $xml .= $fieldValue->_toXMLFragment();
                         $xml .= "</$fieldName>";
+                    } else if ($fieldType[0] == ".") {
+                         $xml .= $this->_escapeXML($fieldValue);
                     } else if ($fieldType[0] != "@") {
                         $xml .= "<$fieldName>";
                         $xml .= $this->_escapeXML($fieldValue);
@@ -374,7 +377,7 @@ abstract class Model extends BaseModel
      *
      * @param string $fieldType field type name
      */
-    private function _isComplexType ($fieldType)
+    private function _isComplexType($fieldType)
     {
         return preg_match("/^Amazon\\MWS\\/", $fieldType);
     }

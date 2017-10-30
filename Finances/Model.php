@@ -2,10 +2,12 @@
 
 namespace Amazon\MWS\Finances;
 
+use Amazon\MWS\Common\Model as BaseModel;
+
 /**
- * MWSFinancesService_Model - base class for all model classes
+ * Finances\Model - base class for all model classes
  */
-abstract class MWSFinancesService_Model
+abstract class Model extends BaseModel
 {
     /** @var array */
     protected $_fields = array ();

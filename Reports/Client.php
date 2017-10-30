@@ -5,19 +5,9 @@ namespace Amazon\MWS\Reports;
 use Amazon\MWS\Client as BaseClient;
 
 use Amazon\MWS\Reports\Exception as ReportsException;
-use Amazon\MWS\Reports\Model\CancelFeedSubmissionsRequest;
-use Amazon\MWS\Reports\Model\CancelFeedSubmissionsResponse;
 use Amazon\MWS\Reports\Model\CancelReportRequestsRequest;
 use Amazon\MWS\Reports\Model\CancelReportRequestsResponse;
 use Amazon\MWS\Reports\Model\ErrorResponse;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionCountRequest;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionCountResponse;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionListByNextTokenRequest;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionListByNextTokenResponse;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionListRequest;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionListResponse;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionResultRequest;
-use Amazon\MWS\Reports\Model\GetFeedSubmissionResultResponse;
 use Amazon\MWS\Reports\Model\GetReportCountRequest;
 use Amazon\MWS\Reports\Model\GetReportCountResponse;
 use Amazon\MWS\Reports\Model\GetReportListByNextTokenRequest;
@@ -43,8 +33,6 @@ use Amazon\MWS\Reports\Model\ManageReportScheduleResponse;
 use Amazon\MWS\Reports\Model\RequestReportRequest;
 use Amazon\MWS\Reports\Model\RequestReportResponse;
 use Amazon\MWS\Reports\Model\ResponseHeaderMetadata;
-use Amazon\MWS\Reports\Model\SubmitFeedRequest;
-use Amazon\MWS\Reports\Model\SubmitFeedResponse;
 use Amazon\MWS\Reports\Model\UpdateReportAcknowledgementsRequest;
 use Amazon\MWS\Reports\Model\UpdateReportAcknowledgementsResponse;
 
@@ -367,33 +355,6 @@ class Client extends BaseClient implements ReportsInterface
     }
 
     /**
-     * Submit Feed
-     * Uploads a file for processing together with the necessary
-     * metadata to process the file, such as which type of feed it is.
-     * PurgeAndReplace if true means that your existing e.g. inventory is
-     * wiped out and replace with the contents of this feed - use with
-     * caution (the default is false).
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}SubmitFeed.html
-     * @param mixed $request array of parameters for SubmitFeedRequest request
-     * or SubmitFeedRequest object itself
-     * @see SubmitFeed
-     * @return SubmitFeedResponse SubmitFeedResponse
-     *
-     * @throws Exception
-     */
-    public function submitFeed($request)
-    {
-        if (!$request instanceof SubmitFeedRequest) {
-            $request = new SubmitFeedRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertSubmitFeed($request), $request->getFeedContent(), $request->getContentMd5());
-        $response = SubmitFeedResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
      * Get Report Count
      * returns a count of reports matching your criteria;
      * by default, the number of reports generated in the last 90 days,
@@ -419,53 +380,6 @@ class Client extends BaseClient implements ReportsInterface
     }
 
     /**
-     * Get Feed Submission List By Next Token
-     * retrieve the next batch of list items and if there are more items to retrieve
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionListByNextToken.html
-     * @param mixed $request array of parameters for GetFeedSubmissionListByNextTokenRequest request
-     * or GetFeedSubmissionListByNextTokenRequest object itself
-     * @see GetFeedSubmissionListByNextToken
-     * @return GetFeedSubmissionListByNextTokenResponse GetFeedSubmissionListByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function getFeedSubmissionListByNextToken($request)
-    {
-        if (!$request instanceof GetFeedSubmissionListByNextTokenRequest) {
-            $request = new GetFeedSubmissionListByNextTokenRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetFeedSubmissionListByNextToken($request));
-        $response = GetFeedSubmissionListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Cancel Feed Submissions
-     * cancels feed submissions - by default all of the submissions of the
-     * last 30 days that have not started processing
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}CancelFeedSubmissions.html
-     * @param mixed $request array of parameters for CancelFeedSubmissionsRequest request
-     * or CancelFeedSubmissionsRequest object itself
-     * @see CancelFeedSubmissions
-     * @return CancelFeedSubmissionsResponse CancelFeedSubmissionsResponse
-     *
-     * @throws Exception
-     */
-    public function cancelFeedSubmissions($request)
-    {
-        if (!$request instanceof CancelFeedSubmissionsRequest) {
-            $request = new CancelFeedSubmissionsRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertCancelFeedSubmissions($request));
-        $response = CancelFeedSubmissionsResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
      * Request Report
      * requests the generation of a report
      *
@@ -484,29 +398,6 @@ class Client extends BaseClient implements ReportsInterface
         }
         $httpResponse = $this->invoke($this->convertRequestReport($request));
         $response = RequestReportResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Get Feed Submission Count
-     * returns the number of feeds matching all of the specified criteria
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionCount.html
-     * @param mixed $request array of parameters for GetFeedSubmissionCountRequest request
-     * or GetFeedSubmissionCountRequest object itself
-     * @see GetFeedSubmissionCount
-     * @return GetFeedSubmissionCountResponse GetFeedSubmissionCountResponse
-     *
-     * @throws Exception
-     */
-    public function getFeedSubmissionCount($request)
-    {
-        if (!$request instanceof GetFeedSubmissionCountRequest) {
-            $request = new GetFeedSubmissionCountRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetFeedSubmissionCount($request));
-        $response = GetFeedSubmissionCountResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -555,52 +446,6 @@ class Client extends BaseClient implements ReportsInterface
         }
         $httpResponse = $this->invoke($this->convertGetReportList($request));
         $response = GetReportListResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Get Feed Submission Result
-     * retrieves the feed processing report
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionResult.html
-     * @param mixed $request array of parameters for GetFeedSubmissionResultRequest request
-     * or GetFeedSubmissionResultRequest object itself
-     * @see GetFeedSubmissionResult
-     * @return GetFeedSubmissionResultResponse GetFeedSubmissionResultResponse
-     *
-     * @throws Exception
-     */
-    public function getFeedSubmissionResult($request)
-    {
-        if (!$request instanceof GetFeedSubmissionResultRequest) {
-            $request = new GetFeedSubmissionResultRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetFeedSubmissionResult($request), $request->getFeedSubmissionResult());
-        $response = GetFeedSubmissionResultResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-
-    /**
-     * Get Feed Submission List
-     * returns a list of feed submission identifiers and their associated metadata
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetFeedSubmissionList.html
-     * @param mixed $request array of parameters for GetFeedSubmissionListRequest request
-     * or GetFeedSubmissionListRequest object itself
-     * @see GetFeedSubmissionList
-     * @return GetFeedSubmissionListResponse GetFeedSubmissionListResponse
-     *
-     * @throws Exception
-     */
-    public function getFeedSubmissionList($request)
-    {
-        if (!$request instanceof GetFeedSubmissionListRequest) {
-            $request = new GetFeedSubmissionListRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetFeedSubmissionList($request));
-        $response = GetFeedSubmissionListResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -1397,41 +1242,6 @@ class Client extends BaseClient implements ReportsInterface
     }
 
     /**
-     * Convert SubmitFeedRequest to name value pairs
-     */
-    private function convertSubmitFeed($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'SubmitFeed';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetMarketplaceIdList()) {
-            $marketplaceIdList = $request->getMarketplaceIdList();
-            foreach  ($marketplaceIdList->getId() as $idIndex => $id) {
-                $parameters['MarketplaceIdList.Id.'.($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetFeedType()) {
-            $parameters['FeedType'] =  $request->getFeedType();
-        }
-        if ($request->isSetPurgeAndReplace()) {
-            $parameters['PurgeAndReplace'] =  $request->getPurgeAndReplace() ? "true" : "false";
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        $headers = array();
-        array_push($headers, "Content-Type: " . $request->getContentType()->toString());
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $headers);
-    }
-
-    /**
      * Convert GetReportCountRequest to name value pairs
      */
     private function convertGetReportCount($request)
@@ -1460,69 +1270,6 @@ class Client extends BaseClient implements ReportsInterface
         if ($request->isSetAvailableToDate()) {
             $parameters['AvailableToDate'] =
                 $this->getFormattedTimestamp($request->getAvailableToDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-
-    /**
-     * Convert GetFeedSubmissionListByNextTokenRequest to name value pairs
-     */
-    private function convertGetFeedSubmissionListByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetFeedSubmissionListByNextToken';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-
-    /**
-     * Convert CancelFeedSubmissionsRequest to name value pairs
-     */
-    private function convertCancelFeedSubmissions($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'CancelFeedSubmissions';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetFeedSubmissionIdList()) {
-            $feedSubmissionIdList = $request->getFeedSubmissionIdList();
-            foreach  ($feedSubmissionIdList->getId() as $idIndex => $id) {
-                $parameters['FeedSubmissionIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetFeedTypeList()) {
-            $feedTypeList = $request->getFeedTypeList();
-            foreach  ($feedTypeList->getType() as $typeIndex => $type) {
-                $parameters['FeedTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetSubmittedFromDate()) {
-            $parameters['SubmittedFromDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedFromDate());
-        }
-        if ($request->isSetSubmittedToDate()) {
-            $parameters['SubmittedToDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedToDate());
         }
         if ($request->isSetMWSAuthToken()) {
             $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
@@ -1563,46 +1310,6 @@ class Client extends BaseClient implements ReportsInterface
         }
         if ($request->isSetReportOptions()) {
             $parameters['ReportOptions'] =  $request->getReportOptions();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-
-    /**
-     * Convert GetFeedSubmissionCountRequest to name value pairs
-     */
-    private function convertGetFeedSubmissionCount($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetFeedSubmissionCount';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetFeedTypeList()) {
-            $feedTypeList = $request->getFeedTypeList();
-            foreach  ($feedTypeList->getType() as $typeIndex => $type) {
-                $parameters['FeedTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetFeedProcessingStatusList()) {
-            $feedProcessingStatusList = $request->getFeedProcessingStatusList();
-            foreach  ($feedProcessingStatusList->getStatus() as $statusIndex => $status) {
-                $parameters['FeedProcessingStatusList' . '.' . 'Status' . '.'  . ($statusIndex + 1)] =  $status;
-            }
-        }
-        if ($request->isSetSubmittedFromDate()) {
-            $parameters['SubmittedFromDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedFromDate());
-        }
-        if ($request->isSetSubmittedToDate()) {
-            $parameters['SubmittedToDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedToDate());
         }
         if ($request->isSetMWSAuthToken()) {
             $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
@@ -1695,78 +1402,6 @@ class Client extends BaseClient implements ReportsInterface
             foreach  ($reportRequestIdList->getId() as $idIndex => $id) {
                 $parameters['ReportRequestIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
             }
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-
-    /**
-     * Convert GetFeedSubmissionResultRequest to name value pairs
-     */
-    private function convertGetFeedSubmissionResult($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetFeedSubmissionResult';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetFeedSubmissionId()) {
-            $parameters['FeedSubmissionId'] =  $request->getFeedSubmissionId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-
-    /**
-     * Convert GetFeedSubmissionListRequest to name value pairs
-     */
-    private function convertGetFeedSubmissionList($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetFeedSubmissionList';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetFeedSubmissionIdList()) {
-            $feedSubmissionIdList = $request->getFeedSubmissionIdList();
-            foreach  ($feedSubmissionIdList->getId() as $idIndex => $id) {
-                $parameters['FeedSubmissionIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetMaxCount()) {
-            $parameters['MaxCount'] =  $request->getMaxCount();
-        }
-        if ($request->isSetFeedTypeList()) {
-            $feedTypeList = $request->getFeedTypeList();
-            foreach  ($feedTypeList->getType() as $typeIndex => $type) {
-                $parameters['FeedTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetFeedProcessingStatusList()) {
-            $feedProcessingStatusList = $request->getFeedProcessingStatusList();
-            foreach  ($feedProcessingStatusList->getStatus() as $statusIndex => $status) {
-                $parameters['FeedProcessingStatusList' . '.' . 'Status' . '.'  . ($statusIndex + 1)] =  $status;
-            }
-        }
-        if ($request->isSetSubmittedFromDate()) {
-            $parameters['SubmittedFromDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedFromDate());
-        }
-        if ($request->isSetSubmittedToDate()) {
-            $parameters['SubmittedToDate'] =
-                $this->getFormattedTimestamp($request->getSubmittedToDate());
         }
         if ($request->isSetMWSAuthToken()) {
             $parameters['MWSAuthToken'] = $request->getMWSAuthToken();

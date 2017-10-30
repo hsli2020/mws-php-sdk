@@ -7,8 +7,6 @@ use Amazon\MWS\Client as BaseClient;
 use Amazon\MWS\Feeds\Exception as FeedsException;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsRequest;
 use Amazon\MWS\Feeds\Model\CancelFeedSubmissionsResponse;
-use Amazon\MWS\Feeds\Model\CancelReportRequestsRequest;
-use Amazon\MWS\Feeds\Model\CancelReportRequestsResponse;
 use Amazon\MWS\Feeds\Model\ErrorResponse;
 use Amazon\MWS\Feeds\Model\GetFeedSubmissionCountRequest;
 use Amazon\MWS\Feeds\Model\GetFeedSubmissionCountResponse;
@@ -18,35 +16,9 @@ use Amazon\MWS\Feeds\Model\GetFeedSubmissionListRequest;
 use Amazon\MWS\Feeds\Model\GetFeedSubmissionListResponse;
 use Amazon\MWS\Feeds\Model\GetFeedSubmissionResultRequest;
 use Amazon\MWS\Feeds\Model\GetFeedSubmissionResultResponse;
-use Amazon\MWS\Feeds\Model\GetReportCountRequest;
-use Amazon\MWS\Feeds\Model\GetReportCountResponse;
-use Amazon\MWS\Feeds\Model\GetReportListByNextTokenRequest;
-use Amazon\MWS\Feeds\Model\GetReportListByNextTokenResponse;
-use Amazon\MWS\Feeds\Model\GetReportListRequest;
-use Amazon\MWS\Feeds\Model\GetReportListResponse;
-use Amazon\MWS\Feeds\Model\GetReportRequest;
-use Amazon\MWS\Feeds\Model\GetReportRequestCountRequest;
-use Amazon\MWS\Feeds\Model\GetReportRequestCountResponse;
-use Amazon\MWS\Feeds\Model\GetReportRequestListByNextTokenRequest;
-use Amazon\MWS\Feeds\Model\GetReportRequestListByNextTokenResponse;
-use Amazon\MWS\Feeds\Model\GetReportRequestListRequest;
-use Amazon\MWS\Feeds\Model\GetReportRequestListResponse;
-use Amazon\MWS\Feeds\Model\GetReportResponse;
-use Amazon\MWS\Feeds\Model\GetReportScheduleCountRequest;
-use Amazon\MWS\Feeds\Model\GetReportScheduleCountResponse;
-use Amazon\MWS\Feeds\Model\GetReportScheduleListByNextTokenRequest;
-use Amazon\MWS\Feeds\Model\GetReportScheduleListByNextTokenResponse;
-use Amazon\MWS\Feeds\Model\GetReportScheduleListRequest;
-use Amazon\MWS\Feeds\Model\GetReportScheduleListResponse;
-use Amazon\MWS\Feeds\Model\ManageReportScheduleRequest;
-use Amazon\MWS\Feeds\Model\ManageReportScheduleResponse;
-use Amazon\MWS\Feeds\Model\RequestReportRequest;
-use Amazon\MWS\Feeds\Model\RequestReportResponse;
 use Amazon\MWS\Feeds\Model\ResponseHeaderMetadata;
 use Amazon\MWS\Feeds\Model\SubmitFeedRequest;
 use Amazon\MWS\Feeds\Model\SubmitFeedResponse;
-use Amazon\MWS\Feeds\Model\UpdateReportAcknowledgementsRequest;
-use Amazon\MWS\Feeds\Model\UpdateReportAcknowledgementsResponse;
 
 define('CONVERTED_PARAMETERS_KEY', 'PARAMETERS');
 define('CONVERTED_HEADERS_KEY',    'HEADERS');
@@ -235,7 +207,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $quotedString;
     }
-  
+
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
      * and '=' characters from a string.
@@ -251,7 +223,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $quotedString;
     }
-  
+
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape ';', '\',
      * and ')' characters from a string.
@@ -268,104 +240,9 @@ class Client extends BaseClient implements FeedsInterface
 
         return $quotedString;
     }
-  
-    // Public API ------------------------------------------------------------//
-  
-    /**
-     * Get Report
-     * The GetReport operation returns the contents of a report. Reports can potentially be
-     * very large (>100MB) which is why we only return one report at a time, and in a
-     * streaming fashion.
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReport.html
-     * @param mixed $request array of parameters for GetReportRequest request
-     * or GetReportRequest object itself
-     * @see GetReport
-     * @return GetReportResponse GetReportResponse
-     *
-     * @throws Exception
-     */
-    public function getReport($request)
-    {
-        if (!$request instanceof GetReportRequest) {
-            $request = new GetReportRequest($request);
-        }
 
-        $httpResponse = $this->invoke($this->convertGetReport($request), $request->getReport());
-        $response = GetReportResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report Schedule Count
-     * returns the number of report schedules
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleCount.html
-     * @param mixed $request array of parameters for GetReportScheduleCountRequest request
-     * or GetReportScheduleCountRequest object itself
-     * @see GetReportScheduleCount
-     * @return GetReportScheduleCountResponse GetReportScheduleCountResponse
-     *
-     * @throws Exception
-     */
-    public function getReportScheduleCount($request)
-    {
-        if (!$request instanceof GetReportScheduleCountRequest) {
-            $request = new GetReportScheduleCountRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportScheduleCount($request));
-        $response = GetReportScheduleCountResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report Request List By Next Token
-     * retrieve the next batch of list items and if there are more items to retrieve
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestListByNextToken.html
-     * @param mixed $request array of parameters for GetReportRequestListByNextTokenRequest request
-     * or GetReportRequestListByNextTokenRequest object itself
-     * @see GetReportRequestListByNextToken
-     * @return GetReportRequestListByNextTokenResponse GetReportRequestListByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function getReportRequestListByNextToken($request)
-    {
-        if (!$request instanceof GetReportRequestListByNextTokenRequest) {
-            $request = new GetReportRequestListByNextTokenRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportRequestListByNextToken($request));
-        $response = GetReportRequestListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Update Report Acknowledgements
-     * The UpdateReportAcknowledgements operation updates the acknowledged status of one or more reports.
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}UpdateReportAcknowledgements.html
-     * @param mixed $request array of parameters for UpdateReportAcknowledgementsRequest request
-     * or UpdateReportAcknowledgementsRequest object itself
-     * @see UpdateReportAcknowledgements
-     * @return UpdateReportAcknowledgementsResponse UpdateReportAcknowledgementsResponse
-     *
-     * @throws Exception
-     */
-    public function updateReportAcknowledgements($request)
-    {
-        if (!$request instanceof UpdateReportAcknowledgementsRequest) {
-            $request = new UpdateReportAcknowledgementsRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertUpdateReportAcknowledgements($request));
-        $response = UpdateReportAcknowledgementsResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
+    // Public API ------------------------------------------------------------//
+
     /**
      * Submit Feed
      * Uploads a file for processing together with the necessary
@@ -392,32 +269,7 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
-    /**
-     * Get Report Count
-     * returns a count of reports matching your criteria;
-     * by default, the number of reports generated in the last 90 days,
-     * regardless of acknowledgement status
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportCount.html
-     * @param mixed $request array of parameters for GetReportCountRequest request
-     * or GetReportCountRequest object itself
-     * @see GetReportCount
-     * @return GetReportCountResponse GetReportCountResponse
-     *
-     * @throws Exception
-     */
-    public function getReportCount($request)
-    {
-        if (!$request instanceof GetReportCountRequest) {
-            $request = new GetReportCountRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportCount($request));
-        $response = GetReportCountResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
+
     /**
      * Get Feed Submission List By Next Token
      * retrieve the next batch of list items and if there are more items to retrieve
@@ -440,7 +292,7 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
+
     /**
      * Cancel Feed Submissions
      * cancels feed submissions - by default all of the submissions of the
@@ -464,30 +316,7 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
-    /**
-     * Request Report
-     * requests the generation of a report
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}RequestReport.html
-     * @param mixed $request array of parameters for RequestReportRequest request
-     * or RequestReportRequest object itself
-     * @see RequestReport
-     * @return RequestReportResponse RequestReportResponse
-     *
-     * @throws Exception
-     */
-    public function requestReport($request)
-    {
-        if (!$request instanceof RequestReportRequest) {
-            $request = new RequestReportRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertRequestReport($request));
-        $response = RequestReportResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
+
     /**
      * Get Feed Submission Count
      * returns the number of feeds matching all of the specified criteria
@@ -510,55 +339,7 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
-    /**
-     * Cancel Report Requests
-     * cancels report requests that have not yet started processing,
-     * by default all those within the last 90 days
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}CancelReportRequests.html
-     * @param mixed $request array of parameters for CancelReportRequestsRequest request
-     * or CancelReportRequestsRequest object itself
-     * @see CancelReportRequests
-     * @return CancelReportRequestsResponse CancelReportRequestsResponse
-     *
-     * @throws Exception
-     */
-    public function cancelReportRequests($request)
-    {
-        if (!$request instanceof CancelReportRequestsRequest) {
-            $request = new CancelReportRequestsRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertCancelReportRequests($request));
-        $response = CancelReportRequestsResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report List
-     * returns a list of reports; by default the most recent ten reports,
-     * regardless of their acknowledgement status
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportList.html
-     * @param mixed $request array of parameters for GetReportListRequest request
-     * or GetReportListRequest object itself
-     * @see GetReportList
-     * @return GetReportListResponse GetReportListResponse
-     *
-     * @throws Exception
-     */
-    public function getReportList($request)
-    {
-        if (!$request instanceof GetReportListRequest) {
-            $request = new GetReportListRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportList($request));
-        $response = GetReportListResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
+
     /**
      * Get Feed Submission Result
      * retrieves the feed processing report
@@ -581,7 +362,7 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
+
     /**
      * Get Feed Submission List
      * returns a list of feed submission identifiers and their associated metadata
@@ -604,149 +385,9 @@ class Client extends BaseClient implements FeedsInterface
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-  
-    /**
-     * Get Report Request List
-     * returns a list of report requests ids and their associated metadata
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestList.html
-     * @param mixed $request array of parameters for GetReportRequestListRequest request
-     * or GetReportRequestListRequest object itself
-     * @see GetReportRequestList
-     * @return GetReportRequestListResponse GetReportRequestListResponse
-     *
-     * @throws Exception
-     */
-    public function getReportRequestList($request)
-    {
-        if (!$request instanceof GetReportRequestListRequest) {
-            $request = new GetReportRequestListRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportRequestList($request));
-        $response = GetReportRequestListResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report Schedule List By Next Token
-     * retrieve the next batch of list items and if there are more items to retrieve
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleListByNextToken.html
-     * @param mixed $request array of parameters for GetReportScheduleListByNextTokenRequest request
-     * or GetReportScheduleListByNextTokenRequest object itself
-     * @see GetReportScheduleListByNextToken
-     * @return GetReportScheduleListByNextTokenResponse GetReportScheduleListByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function getReportScheduleListByNextToken($request)
-    {
-        if (!$request instanceof GetReportScheduleListByNextTokenRequest) {
-            $request = new GetReportScheduleListByNextTokenRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportScheduleListByNextToken($request));
-        $response = GetReportScheduleListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report List By Next Token
-     * retrieve the next batch of list items and if there are more items to retrieve
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportListByNextToken.html
-     * @param mixed $request array of parameters for GetReportListByNextTokenRequest request
-     * or GetReportListByNextTokenRequest object itself
-     * @see GetReportListByNextToken
-     * @return GetReportListByNextTokenResponse GetReportListByNextTokenResponse
-     *
-     * @throws Exception
-     */
-    public function getReportListByNextToken($request)
-    {
-        if (!$request instanceof GetReportListByNextTokenRequest) {
-            $request = new GetReportListByNextTokenRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportListByNextToken($request));
-        $response = GetReportListByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Manage Report Schedule
-     * Creates, updates, or deletes a report schedule
-     * for a given report type, such as order reports in particular.
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}ManageReportSchedule.html
-     * @param mixed $request array of parameters for ManageReportScheduleRequest request
-     * or ManageReportScheduleRequest object itself
-     * @see ManageReportSchedule
-     * @return ManageReportScheduleResponse ManageReportScheduleResponse
-     *
-     * @throws Exception
-     */
-    public function manageReportSchedule($request)
-    {
-        if (!$request instanceof ManageReportScheduleRequest) {
-            $request = new ManageReportScheduleRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertManageReportSchedule($request));
-        $response = ManageReportScheduleResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report Request Count
-     * returns a count of report requests; by default all the report
-     * requests in the last 90 days
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportRequestCount.html
-     * @param mixed $request array of parameters for GetReportRequestCountRequest request
-     * or GetReportRequestCountRequest object itself
-     * @see GetReportRequestCount
-     * @return GetReportRequestCountResponse GetReportRequestCountResponse
-     *
-     * @throws Exception
-     */
-    public function getReportRequestCount($request)
-    {
-        if (!$request instanceof GetReportRequestCountRequest) {
-            $request = new GetReportRequestCountRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportRequestCount($request));
-        $response = GetReportRequestCountResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
-    /**
-     * Get Report Schedule List
-     * returns the list of report schedules
-     *
-     * @see http://docs.amazonwebservices.com/${docPath}GetReportScheduleList.html
-     * @param mixed $request array of parameters for GetReportScheduleListRequest request
-     * or GetReportScheduleListRequest object itself
-     * @see GetReportScheduleList
-     * @return GetReportScheduleListResponse GetReportScheduleListResponse
-     *
-     * @throws Exception
-     */
-    public function getReportScheduleList($request)
-    {
-        if (!$request instanceof GetReportScheduleListRequest) {
-            $request = new GetReportScheduleListRequest($request);
-        }
-        $httpResponse = $this->invoke($this->convertGetReportScheduleList($request));
-        $response = GetReportScheduleListResponse::fromXML($httpResponse['ResponseBody']);
-        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
-        return $response;
-    }
-  
+
     // Private API ------------------------------------------------------------//
-  
+
     /**
      * Get the base64 encoded md5 value of $data. If $data is a memory or temp file stream, this
      * method dumps the contents into a string before calculating the md5. Hence, this method
@@ -774,7 +415,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return base64_encode($md5Hash);
     }
-  
+
     /**
      * Invoke request and return response
      */
@@ -847,7 +488,7 @@ class Client extends BaseClient implements FeedsInterface
         }
         return array('ResponseBody' => $response['ResponseBody'], 'ResponseHeaderMetadata' => $response['ResponseHeaderMetadata']);
     }
-  
+
     /**
      * Look for additional error strings in the response and return formatted exception
      */
@@ -872,7 +513,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return new Exception($exProps);
     }
-  
+
     /**
      * Setup and execute the request via cURL and return the server response.
      *
@@ -931,12 +572,12 @@ class Client extends BaseClient implements FeedsInterface
             'ResponseBody' => $httpResponse,
             'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
-  
+
     private function getParsedHeader($parsedHeader, $key)
     {
         return $parsedHeader[strtolower($key)];
     }
-  
+
     /**
      * Compares the received Content-MD5 Hash value from the response with a locally calculated
      * value based on the contents of the response body. If the received hash value doesn't match
@@ -959,7 +600,7 @@ class Client extends BaseClient implements FeedsInterface
                     'ErrorCode' => 'ContentMD5DoesNotMatch'));
         }
     }
-  
+
     /**
      * Build an associative array of an HTTP Header lines. For requests, the HTTP request line
      * is not contained in the array, nor is the HTTP status line for response headers.
@@ -986,7 +627,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $parsedHeader;
     }
-  
+
     /**
      * cURL callback to write the response HTTP body into a stream. This is only intended to be used
      * with RequestType::POST_DOWNLOAD request types, since the responses can potentially become
@@ -1011,7 +652,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return fwrite($responseHandle, $string);
     }
-  
+
     /**
      * cURL callback to write the response HTTP header into a stream.
      *
@@ -1024,7 +665,7 @@ class Client extends BaseClient implements FeedsInterface
         $bytesWritten = fwrite($this->headerContents, $string);
         return $bytesWritten;
     }
-  
+
     /**
      * Gets cURL options common to all MWS requests.
      * @return unknown_type
@@ -1041,7 +682,7 @@ class Client extends BaseClient implements FeedsInterface
             CURLOPT_SSL_VERIFYHOST => 2
         );
     }
-  
+
     /**
      * Configures specific curl options based on the request type.
      *
@@ -1108,7 +749,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $curlOptions;
     }
-  
+
     /**
      * For RequestType::POST_DOWNLOAD actions, construct a response containing the Amazon Request ID
      * and Content MD5 header value.
@@ -1138,7 +779,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $response;
     }
-  
+
     /**
      * Exponential sleep on failed request
      * @param retries current retry
@@ -1148,7 +789,7 @@ class Client extends BaseClient implements FeedsInterface
         $delay = (int) (pow(4, $retries) * 100000) ;
         usleep($delay);
     }
-  
+
     /**
      * Add authentication related and version parameters
      */
@@ -1165,7 +806,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $parameters;
     }
-  
+
     /**
      * Convert paremeters to Url encoded query string
      */
@@ -1177,7 +818,7 @@ class Client extends BaseClient implements FeedsInterface
         }
         return implode('&', $queryParameters);
     }
-  
+
     /**
      * Computes RFC 2104-compliant HMAC signature for request parameters
      * Implements AWS Signature, as per following spec:
@@ -1221,7 +862,7 @@ class Client extends BaseClient implements FeedsInterface
         }
         return $this->sign($stringToSign, $key, $algorithm);
     }
-  
+
     /**
      * Calculate String to Sign for SignatureVersion 2
      * @param array $parameters request parameters
@@ -1252,12 +893,12 @@ class Client extends BaseClient implements FeedsInterface
 
         return $data;
     }
-  
+
     private function urlencode($value)
     {
         return str_replace('%7E', '~', rawurlencode($value));
     }
-  
+
     /**
      * Computes RFC 2104-compliant HMAC signature
      */
@@ -1274,7 +915,7 @@ class Client extends BaseClient implements FeedsInterface
             hash_hmac($hash, $data, $key, true)
         );
     }
-  
+
     /**
      * Returns a ISO 8601 formatted string from a DateTime instance.
      */
@@ -1294,108 +935,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return $dateTime->format(DATE_ISO8601);
     }
-  
-    /**
-     * Convert GetReportRequest to name value pairs
-     */
-    private function convertGetReport($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReport';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportId()) {
-            $parameters['ReportId'] =  $request->getReportId();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
 
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert GetReportScheduleCountRequest to name value pairs
-     */
-    private function convertGetReportScheduleCount($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportScheduleCount';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert GetReportRequestListByNextTokenRequest to name value pairs
-     */
-    private function convertGetReportRequestListByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportRequestListByNextToken';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert UpdateReportAcknowledgementsRequest to name value pairs
-     */
-    private function convertUpdateReportAcknowledgements($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'UpdateReportAcknowledgements';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportIdList()) {
-            $reportIdList = $request->getReportIdList();
-            foreach  ($reportIdList->getId() as $idIndex => $id) {
-                $parameters['ReportIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetAcknowledged()) {
-            $parameters['Acknowledged'] =  $request->getAcknowledged() ? "true" : "false";
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
     /**
      * Convert SubmitFeedRequest to name value pairs
      */
@@ -1430,44 +970,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $headers);
     }
-  
-    /**
-     * Convert GetReportCountRequest to name value pairs
-     */
-    private function convertGetReportCount($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportCount';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetAcknowledged()) {
-            $parameters['Acknowledged'] =  $request->getAcknowledged() ? "true" : "false";
-        }
-        if ($request->isSetAvailableFromDate()) {
-            $parameters['AvailableFromDate'] =
-                $this->getFormattedTimestamp($request->getAvailableFromDate());
-        }
-        if ($request->isSetAvailableToDate()) {
-            $parameters['AvailableToDate'] =
-                $this->getFormattedTimestamp($request->getAvailableToDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
 
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
     /**
      * Convert GetFeedSubmissionListByNextTokenRequest to name value pairs
      */
@@ -1490,7 +993,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
-  
+
     /**
      * Convert CancelFeedSubmissionsRequest to name value pairs
      */
@@ -1530,47 +1033,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
-  
-    /**
-     * Convert RequestReportRequest to name value pairs
-     */
-    private function convertRequestReport($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'RequestReport';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetMarketplaceIdList()) {
-            $marketplaceIdList = $request->getMarketplaceIdList();
-            foreach  ($marketplaceIdList->getId() as $idIndex => $id) {
-                $parameters['MarketplaceIdList.Id.'.($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetReportType()) {
-            $parameters['ReportType'] =  $request->getReportType();
-        }
-        if ($request->isSetStartDate()) {
-            $parameters['StartDate'] =
-                $this->getFormattedTimestamp($request->getStartDate());
-        }
-        if ($request->isSetEndDate()) {
-            $parameters['EndDate'] =
-                $this->getFormattedTimestamp($request->getEndDate());
-        }
-        if ($request->isSetReportOptions()) {
-            $parameters['ReportOptions'] =  $request->getReportOptions();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
 
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
     /**
      * Convert GetFeedSubmissionCountRequest to name value pairs
      */
@@ -1610,99 +1073,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
-  
-    /**
-     * Convert CancelReportRequestsRequest to name value pairs
-     */
-    private function convertCancelReportRequests($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'CancelReportRequests';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportRequestIdList()) {
-            $reportRequestIdList = $request->getReportRequestIdList();
-            foreach  ($reportRequestIdList->getId() as $idIndex => $id) {
-                $parameters['ReportRequestIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetReportProcessingStatusList()) {
-            $reportProcessingStatusList = $request->getReportProcessingStatusList();
-            foreach  ($reportProcessingStatusList->getStatus() as $statusIndex => $status) {
-                $parameters['ReportProcessingStatusList' . '.' . 'Status' . '.'  . ($statusIndex + 1)] =  $status;
-            }
-        }
-        if ($request->isSetRequestedFromDate()) {
-            $parameters['RequestedFromDate'] =
-                $this->getFormattedTimestamp($request->getRequestedFromDate());
-        }
-        if ($request->isSetRequestedToDate()) {
-            $parameters['RequestedToDate'] =
-                $this->getFormattedTimestamp($request->getRequestedToDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
 
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert GetReportListRequest to name value pairs
-     */
-    private function convertGetReportList($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportList';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetMaxCount()) {
-            $parameters['MaxCount'] =  $request->getMaxCount();
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetAcknowledged()) {
-            $parameters['Acknowledged'] =  $request->getAcknowledged() ? "true" : "false";
-        }
-        if ($request->isSetAvailableFromDate()) {
-            $parameters['AvailableFromDate'] =
-                $this->getFormattedTimestamp($request->getAvailableFromDate());
-        }
-        if ($request->isSetAvailableToDate()) {
-            $parameters['AvailableToDate'] =
-                $this->getFormattedTimestamp($request->getAvailableToDate());
-        }
-        if ($request->isSetReportRequestIdList()) {
-            $reportRequestIdList = $request->getReportRequestIdList();
-            foreach  ($reportRequestIdList->getId() as $idIndex => $id) {
-                $parameters['ReportRequestIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
     /**
      * Convert GetFeedSubmissionResultRequest to name value pairs
      */
@@ -1725,7 +1096,7 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
-  
+
     /**
      * Convert GetFeedSubmissionListRequest to name value pairs
      */
@@ -1774,198 +1145,5 @@ class Client extends BaseClient implements FeedsInterface
 
         return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
     }
-  
-    /**
-     * Convert GetReportRequestListRequest to name value pairs
-     */
-    private function convertGetReportRequestList($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportRequestList';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportRequestIdList()) {
-            $reportRequestIdList = $request->getReportRequestIdList();
-            foreach  ($reportRequestIdList->getId() as $idIndex => $id) {
-                $parameters['ReportRequestIdList' . '.' . 'Id' . '.'  . ($idIndex + 1)] =  $id;
-            }
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetReportProcessingStatusList()) {
-            $reportProcessingStatusList = $request->getReportProcessingStatusList();
-            foreach  ($reportProcessingStatusList->getStatus() as $statusIndex => $status) {
-                $parameters['ReportProcessingStatusList' . '.' . 'Status' . '.'  . ($statusIndex + 1)] =  $status;
-            }
-        }
-        if ($request->isSetMaxCount()) {
-            $parameters['MaxCount'] =  $request->getMaxCount();
-        }
-        if ($request->isSetRequestedFromDate()) {
-            $parameters['RequestedFromDate'] =
-                $this->getFormattedTimestamp($request->getRequestedFromDate());
-        }
-        if ($request->isSetRequestedToDate()) {
-            $parameters['RequestedToDate'] =
-                $this->getFormattedTimestamp($request->getRequestedToDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
 
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-  
-    /**
-     * Convert GetReportScheduleListByNextTokenRequest to name value pairs
-     */
-    private function convertGetReportScheduleListByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportScheduleListByNextToken';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-  
-    /**
-     * Convert GetReportListByNextTokenRequest to name value pairs
-     */
-    private function convertGetReportListByNextToken($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportListByNextToken';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetNextToken()) {
-            $parameters['NextToken'] =  $request->getNextToken();
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-  
-    /**
-     * Convert ManageReportScheduleRequest to name value pairs
-     */
-    private function convertManageReportSchedule($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'ManageReportSchedule';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportType()) {
-            $parameters['ReportType'] =  $request->getReportType();
-        }
-        if ($request->isSetSchedule()) {
-            $parameters['Schedule'] =  $request->getSchedule();
-        }
-        if ($request->isSetScheduleDate()) {
-            $parameters['ScheduleDate'] =
-                $this->getFormattedTimestamp($request->getScheduleDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert GetReportRequestCountRequest to name value pairs
-     */
-    private function convertGetReportRequestCount($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportRequestCount';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetReportProcessingStatusList()) {
-            $reportProcessingStatusList = $request->getReportProcessingStatusList();
-            foreach  ($reportProcessingStatusList->getStatus() as $statusIndex => $status) {
-                $parameters['ReportProcessingStatusList' . '.' . 'Status' . '.'  . ($statusIndex + 1)] =  $status;
-            }
-        }
-        if ($request->isSetRequestedFromDate()) {
-            $parameters['RequestedFromDate'] =
-                $this->getFormattedTimestamp($request->getRequestedFromDate());
-        }
-        if ($request->isSetRequestedToDate()) {
-            $parameters['RequestedToDate'] =
-                $this->getFormattedTimestamp($request->getRequestedToDate());
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
-  
-    /**
-     * Convert GetReportScheduleListRequest to name value pairs
-     */
-    private function convertGetReportScheduleList($request)
-    {
-        $parameters = array();
-        $parameters['Action'] = 'GetReportScheduleList';
-        if ($request->isSetMarketplace()) {
-            $parameters['Marketplace'] =  $request->getMarketplace();
-        }
-        if ($request->isSetMerchant()) {
-            $parameters['Merchant'] =  $request->getMerchant();
-        }
-        if ($request->isSetReportTypeList()) {
-            $reportTypeList = $request->getReportTypeList();
-            foreach  ($reportTypeList->getType() as $typeIndex => $type) {
-                $parameters['ReportTypeList' . '.' . 'Type' . '.'  . ($typeIndex + 1)] =  $type;
-            }
-        }
-        if ($request->isSetMWSAuthToken()) {
-            $parameters['MWSAuthToken'] = $request->getMWSAuthToken();
-        }
-
-        return array(CONVERTED_PARAMETERS_KEY => $parameters, CONVERTED_HEADERS_KEY => $this->defaultHeaders);
-    }
 }

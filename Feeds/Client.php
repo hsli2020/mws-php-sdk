@@ -268,13 +268,13 @@ class Client extends BaseClient implements FeedsInterface
                         if ($shouldRetry && $retries <= $this->config['MaxErrorRetry']) {
                             $this->_pauseOnRetry(++$retries);
                         } else {
-                            throw $this->reportAnyErrors($response['ResponseBody'], $response['Status'], $response['ResponseHeaderMetadata']);
+                            throw $this->_reportAnyErrors($response['ResponseBody'], $response['Status'], $response['ResponseHeaderMetadata']);
                         }
                         break;
 
                     default:
                         $shouldRetry = false;
-                        throw $this->reportAnyErrors($response['ResponseBody'], $response['Status'], $response['ResponseHeaderMetadata']);
+                        throw $this->_reportAnyErrors($response['ResponseBody'], $response['Status'], $response['ResponseHeaderMetadata']);
                         break;
                     }
 
@@ -291,31 +291,6 @@ class Client extends BaseClient implements FeedsInterface
             throw new Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
         return array('ResponseBody' => $response['ResponseBody'], 'ResponseHeaderMetadata' => $response['ResponseHeaderMetadata']);
-    }
-
-    /**
-     * Look for additional error strings in the response and return formatted exception
-     */
-    private function reportAnyErrors($responseBody, $status, $responseHeaderMetadata)
-    {
-        $exProps = array();
-        $exProps["StatusCode"] = $status;
-        $exProps["ResponseHeaderMetadata"] = $responseHeaderMetadata;
-
-        libxml_use_internal_errors(true);  // Silence XML parsing errors
-        $xmlBody = simplexml_load_string($responseBody);
-
-        if ($xmlBody !== false) {  // Check XML loaded without errors
-            $exProps["XML"] = $responseBody;
-            $exProps["ErrorCode"] = $xmlBody->Error->Code;
-            $exProps["Message"] = $xmlBody->Error->Message;
-            $exProps["ErrorType"] = !empty($xmlBody->Error->Type) ? $xmlBody->Error->Type : "Unknown";
-            $exProps["RequestId"] = !empty($xmlBody->RequestID) ? $xmlBody->RequestID : $xmlBody->RequestId; // 'd' in RequestId is sometimes capitalized
-        } else { // We got bad XML in response, just throw a generic exception
-            $exProps["Message"] = "Internal Error";
-        }
-
-        return new Exception($exProps);
     }
 
     /**

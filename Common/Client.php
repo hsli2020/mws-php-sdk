@@ -218,7 +218,7 @@ abstract class Client
     /**
      * Look for additional error strings in the response and return formatted exception
      */
-    private function _reportAnyErrors($responseBody, $status, $responseHeaderMetadata, Exception $e =  null)
+    private function _reportAnyErrors($responseBody, $status, $responseHeaderMetadata)
     {
         $exProps = array();
         $exProps["StatusCode"] = $status;

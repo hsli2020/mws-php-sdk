@@ -32,7 +32,7 @@ abstract class Model extends BaseModel
                     } else {
                         foreach ($fieldValue as $item) {
                             $xml .= "<$fieldName>";
-                            $xml .= $this->escapeXML($item);
+                            $xml .= $this->_escapeXML($item);
                             $xml .= "</$fieldName>";
                         }
                     }
@@ -43,24 +43,13 @@ abstract class Model extends BaseModel
                         $xml .= "</$fieldName>";
                     } else {
                         $xml .= "<$fieldName>";
-                        $xml .= $this->escapeXML($fieldValue);
+                        $xml .= $this->_escapeXML($fieldValue);
                         $xml .= "</$fieldName>";
                     }
                 }
             }
         }
         return $xml;
-    }
-
-    /**
-     * Escape special XML characters
-     * @return string with escaped XML characters
-     */
-    private function escapeXML($str)
-    {
-        $from = array( "&", "<", ">", "'", "\"");
-        $to = array( "&amp;", "&lt;", "&gt;", "&#039;", "&quot;");
-        return str_replace($from, $to, $str);
     }
 
     /**

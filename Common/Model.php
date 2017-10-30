@@ -81,7 +81,7 @@ abstract class Model
      *
      * @param DOMElement $dom XML element to construct from
      */
-    private function _fromDOMElement(DOMElement $dom)
+    protected function _fromDOMElement(DOMElement $dom)
     {
         $xpath = new DOMXPath($dom->ownerDocument);
 
@@ -164,7 +164,7 @@ abstract class Model
      *
      * @param array $array associative array to construct from
      */
-    private function _fromAssociativeArray(array $array)
+    protected function _fromAssociativeArray(array $array)
     {
         foreach ($this->_fields as $fieldName => $field) {
             $fieldType = $field['FieldType'];

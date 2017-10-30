@@ -484,33 +484,4 @@ class Client extends BaseClient implements SellersInterface
                 'ResponseHeaderMetadata' => $responseHeaderMetadata);
     }
 
-    /**
-     * parse the status line of a header string for the proper format and
-     * return the status code
-     *
-     * Example: HTTP/1.1 200 OK
-     * ...
-     * returns String statusCode or null if the status line can't be parsed
-     */
-    private function _extractHttpStatusCode($headers)
-    {
-    	$statusCode = null;
-        if (1 === preg_match("/(\\S+) +(\\d+) +([^\n\r]+)(?:\r?\n|\r)/", $headers, $matches)) {
-        	//The matches array [entireMatchString, protocol, statusCode, the rest]
-            $statusCode = $matches[2];
-        }
-        return $statusCode;
-    }
-
-    /**
-     * Tries to determine some valid headers indicating this response
-     * has content.  In this case
-     * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
-     */
-    private function _httpHeadersHaveContent($headers)
-    {
-        return (1 === preg_match("/[cC]ontent-[lL]ength: +(?:\\d+)(?:\\r?\\n|\\r|$)/", $headers) ||
-                1 === preg_match("/Transfer-Encoding: +(?!identity[\r\n;= ])(?:[^\r\n]+)(?:\r?\n|\r|$)/i", $headers));
-    }
-
 }

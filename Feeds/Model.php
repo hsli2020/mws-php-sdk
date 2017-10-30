@@ -246,7 +246,7 @@ abstract class Model
      */
     private function isComplexType ($fieldType)
     {
-        return preg_match('/^/', $fieldType);
+        return preg_match("/^Amazon\\MWS\\/", $fieldType);
     }
 
    /**

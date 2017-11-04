@@ -3,48 +3,41 @@
 # - Fulfillment Outbound Shipment (FBAOutbound)
 # x Off-Amazon Payments
 
-:nmap T cl__NAMESPACE__.'\\<esc>
-:nmap K $Bcl__NAMESPACE__.'\\<esc>
-
-/^    {
-:nmap K =%
-:nmap M yyo<esc>p0cwuse<esc>
-
 ./Common/Client.php
 ./Common/Model.php
 
 ./FBAInbound/Client.php
-./FBAInbound/Model.php
+#/FBAInbound/Model.php
 
 ./FBAInventory/Client.php
 ./FBAInventory/Model.php
 
 ./FBAOutbound/Client.php
-./FBAOutbound/Model.php
+#/FBAOutbound/Model.php
 
 ./Feeds/Client.php
 ./Feeds/Model.php
 
 ./Finances/Client.php
-./Finances/Model.php
+#/Finances/Model.php
 
 ./MerchantFulfillment/Client.php
-./MerchantFulfillment/Model.php
+#/MerchantFulfillment/Model.php
 
 ./Orders/Client.php
-./Orders/Model.php
+#/Orders/Model.php
 
 ./Products/Client.php
-./Products/Model.php
+#/Products/Model.php
 
 ./Recommendations/Client.php
-./Recommendations/Model.php
+#/Recommendations/Model.php
 
 ./Reports/Client.php
 ./Reports/Model.php
 
 ./Sellers/Client.php
-./Sellers/Model.php
+#/Sellers/Model.php
 
 ./Subscriptions/Client.php
-./Subscriptions/Model.php
+#/Subscriptions/Model.php
